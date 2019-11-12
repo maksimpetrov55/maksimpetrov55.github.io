@@ -1,0 +1,232 @@
+* {
+  font-family: sans-serif;
+}
+
+.room {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.room__dark-matter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.7;
+  display: none;
+  z-index: 1;
+}
+
+.room__img__main {
+  position: relative;
+}
+
+.room__img__locker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.room__hover__locker {
+  cursor: pointer;
+  position: absolute;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 13%;
+  height: 32%;
+  top: 18%;
+  left: 31.5%;
+  -webkit-transform: rotate(-2deg);
+          transform: rotate(-2deg);
+}
+
+.room__hover__locker::before {
+  position: absolute;
+  content: "";
+  display: block;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(2, 0, 36, 0)), color-stop(50%, rgba(255, 255, 255, 0.5)), to(rgba(0, 212, 255, 0)));
+  background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(0, 212, 255, 0) 100%);
+  /* box-shadow: 0px 0px 20px 3px rgba(255,255,255,0.4) */
+  width: 90%;
+  height: 150%;
+  left: -120%;
+  top: -40%;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+  -webkit-animation: blink 3.6s infinite ease-in-out;
+          animation: blink 3.6s infinite ease-in-out;
+}
+
+.room__popup__locker {
+  width: 34%;
+  height: 64%;
+  background: #fff url("../img/locker_open.jpg");
+  background-size: 100% 100%;
+  position: absolute;
+  top: 10%;
+  left: 33%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
+  display: none;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.room__popup__locker::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/copter_shadow.png");
+  background-size: 100% 100%;
+  opacity: 0;
+  -webkit-animation: copter-blink 3.1s infinite ease-in-out 1.5s;
+          animation: copter-blink 3.1s infinite ease-in-out 1.5s;
+}
+
+.room__popup__locker__flex {
+  position: relative;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.room__popup__locker__flex__note {
+  padding: 45px 20px 20px 20px;
+  width: 420px;
+  height: 420px;
+  margin: 10px 0 0 0;
+  background: url("../img/talk3.png") no-repeat;
+  background-size: cover;
+  display: none;
+  z-index: 1;
+}
+
+.room__popup__locker__flex__copter {
+  cursor: pointer;
+  width: 20%;
+  height: 12%;
+  position: absolute;
+  left: 40%;
+  top: 12%;
+  z-index: 2;
+}
+
+.room__popup__locker__flex__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 35px 0 0 0;
+}
+
+.room__popup__locker__flex__title {
+  font-size: 28px;
+  color: #111;
+  font-weight: 600;
+  margin: 15px 0 15px 0;
+  text-align: center;
+}
+
+.room__popup__locker__flex__text {
+  font-size: 22px;
+  color: #444;
+  font-weight: 400;
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+
+.room__popup__locker__flex__price {
+  font-size: 20px;
+  color: #444;
+  font-weight: 400;
+  text-align: center;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    left: -150%;
+  }
+  25% {
+    left: 170%;
+    top: -10%;
+  }
+  100% {
+    left: 170%;
+    top: -10%;
+  }
+}
+
+@keyframes blink {
+  0% {
+    left: -150%;
+  }
+  25% {
+    left: 170%;
+    top: -10%;
+  }
+  100% {
+    left: 170%;
+    top: -10%;
+  }
+}
+
+@-webkit-keyframes copter-blink {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.9;
+  }
+  40% {
+    opacity: 0.9;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes copter-blink {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.9;
+  }
+  40% {
+    opacity: 0.9;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */
