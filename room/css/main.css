@@ -114,8 +114,8 @@
 
 .room__popup__locker__flex__note {
   padding: 45px 20px 20px 20px;
-  width: 420px;
-  height: 420px;
+  width: 60%;
+  height: 57%;
   margin: 10px 0 0 0;
   background: url("../img/talk3.png") no-repeat;
   background-size: cover;
@@ -140,11 +140,11 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 35px 0 0 0;
+  margin: 25px 0 0 0;
 }
 
 .room__popup__locker__flex__title {
-  font-size: 28px;
+  font-size: 170%;
   color: #111;
   font-weight: 600;
   margin: 15px 0 15px 0;
@@ -152,7 +152,7 @@
 }
 
 .room__popup__locker__flex__text {
-  font-size: 22px;
+  font-size: 120%;
   color: #444;
   font-weight: 400;
   margin: 0 0 15px 0;
@@ -160,7 +160,7 @@
 }
 
 .room__popup__locker__flex__price {
-  font-size: 20px;
+  font-size: 120%;
   color: #444;
   font-weight: 400;
   text-align: center;
