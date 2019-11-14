@@ -108,7 +108,7 @@
   min-width: 60%;
   max-width: 620px;
   max-height: 60%;
-  min-height: 200px;
+  min-height: 250px;
   margin: 23% auto 0 auto;
   background: rgba(255, 255, 255, 0.8);
   background-size: cover;
@@ -181,24 +181,24 @@
 }
 
 .room__popup__locker__flex__title {
-  font-size: 170%;
-  color: #111;
-  font-weight: 600;
-  margin: 0 0 5% 0;
+  font-size: 160%;
+  color: #555;
+  font-weight: 400;
+  margin: 5% 0 0 0;
   text-align: center;
 }
 
 .room__popup__locker__flex__text {
   font-size: 150%;
-  color: #444;
+  color: #000;
   font-weight: 400;
-  margin: 0 0 5% 0;
+  margin: 0 0 10% 0;
   text-align: center;
 }
 
 .room__popup__locker__flex__price {
   font-size: 150%;
-  color: #444;
+  color: #555;
   font-weight: 400;
   text-align: center;
 }
