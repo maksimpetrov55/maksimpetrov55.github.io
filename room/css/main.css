@@ -68,13 +68,13 @@
 }
 
 .room__popup__locker {
-  width: 34%;
-  height: 64%;
+  width: 46%;
+  height: 80%;
   background: #fff url("../img/locker_big3.jpg");
   background-size: 100% 100%;
   position: absolute;
   top: 10%;
-  left: 33%;
+  left: 27%;
   border-radius: 10px;
   -webkit-box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
@@ -106,10 +106,11 @@
   position: relative;
   padding: 5%;
   min-width: 60%;
-  max-width: 420px;
+  max-width: 620px;
   max-height: 60%;
-  margin: 30% auto 0 auto;
-  background: rgba(255, 255, 255, 0.7);
+  min-height: 200px;
+  margin: 23% auto 0 auto;
+  background: rgba(255, 255, 255, 0.8);
   background-size: cover;
   border-radius: 30px;
   display: none;
@@ -127,7 +128,36 @@
   margin: -30px 0 0 -30px;
   background: url("../img/triangle.png");
   background-size: 100% 100%;
-  opacity: 0.7;
+  opacity: 0.8;
+}
+
+.room__popup__locker__flex__note--left {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.room__popup__locker__flex__note--right {
+  width: 60%;
+  padding: 0 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .room__popup__locker__flex__copter {
@@ -159,7 +189,7 @@
 }
 
 .room__popup__locker__flex__text {
-  font-size: 120%;
+  font-size: 150%;
   color: #444;
   font-weight: 400;
   margin: 0 0 5% 0;
@@ -167,7 +197,7 @@
 }
 
 .room__popup__locker__flex__price {
-  font-size: 120%;
+  font-size: 150%;
   color: #444;
   font-weight: 400;
   text-align: center;

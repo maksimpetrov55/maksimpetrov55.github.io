@@ -10,13 +10,18 @@ $(document).ready(function() {
 		$(".room__popup__locker").delay(400).fadeIn(350);
 		/* $(".room__hover-locker__point").delay(400).animate({opacity: "1"},{queue:false, duration: 100}); */
 	});
-	$(".room__popup__locker").mouseleave(function(){
+/* 	$(".room__popup__locker").mouseleave(function(){
 		$(".room__dark-matter").fadeOut(400);
+		$(".room__popup__locker").fadeOut(400);
+	}); */
+
+	$(".room__dark-matter").click(function(){
+		$(this).fadeOut(400);
 		$(".room__popup__locker").fadeOut(400);
 	});
 	
 	$(".room__popup__locker__flex__copter").mouseenter(function(){
-		$(".room__popup__locker__flex__note").fadeIn(300).css({display: "block"});
+		$(".room__popup__locker__flex__note").fadeIn(300).css({display: "flex"});
 	});
 
 	$(".room__popup__locker__flex__copter").mouseleave(function(){
