@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+	
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/datepicker.min.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+
+	<script src="js/datepicker.min.js"></script>
+
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=a939a3a3-da01-4096-b0fe-457cdc8a8dbf" type="text/javascript"></script>
+
+	<script src="js/scripts.js"></script>
+
+</head>
+<body>
+
+	<div class="newCalc">
+
+		<h2 class="newCalc__title">Стоимость заказа для частных лиц и организаций</h2>
+
+		<div class="newCalc__body">
+
+			<div class="newCalc__body__left">
+
+				<p class="newCalc__body__left__text">Ваш город</p>
+				<!-- <input class="newCalc__body__left__input" type="text"> -->
+				<select class="newCalc__body__left__input" name="citySelect" id="citySelect" onchange="search()">
+						<option value="Москва">Москва</option>
+						<option value="Санкт-Петербург">Санкт-Петербург</option>
+						<option value="Ангарск">Ангарск</option>
+						<option value="Архангельск">Архангельск</option>
+						<option value="Астрахань">Астрахань</option>
+						<option value="Барнаул">Барнаул</option>
+						<option value="Белгород">Белгород</option>
+						<option value="Благовещенск">Благовещенск</option>
+						<option value="Братск">Братск</option>
+						<option value="Брянск">Брянск</option>
+						<option value="Великий Новгород">Великий Новгород</option>
+						<option value="Владивосток">Владивосток</option>
+						<option value="Владимир">Владимир</option>
+						<option value="Волгоград">Волгоград</option>
+						<option value="Вологда">Вологда</option>
+						<option value="Воронеж">Воронеж</option>
+						<option value="Волжский">Волжский</option>
+						<option value="Горячий ключ">Горячий ключ</option>
+						<option value="Дзержинск">Дзержинск</option>
+						<option value="Екатеринбург">Екатеринбург</option>
+						<option value="Иваново">Иваново</option>
+						<option value="Ижевск">Ижевск</option>
+						<option value="Иркутск">Иркутск</option>
+						<option value="Калининград">Калининград</option>
+						<option value="Калуга">Калуга</option>
+						<option value="Казань">Казань</option>
+						<option value="Кемерово">Кемерово</option>
+						<option value="Киров">Киров</option>
+						<option value="Комсомольск-на-Амуре">Комсомольск-на-Амуре</option>
+						<option value="Кострома">Кострома</option>
+						<option value="Краснодар">Краснодар</option>
+						<option value="Красноярск">Красноярск</option>
+						<option value="Курск">Курск</option>
+						<option value="Курган">Курган</option>
+						<option value="Йошкар-Ола">Йошкар-Ола</option>
+						<option value="Липецк">Липецк</option>
+						<option value="Магнитогорск">Магнитогорск</option>
+						<option value="Мурманск">Мурманск</option>
+						<option value="Набережные Челны">Набережные Челны</option>
+						<option value="Нальчик">Нальчик</option>
+						<option value="Новороссийск">Новороссийск</option>
+						<option value="Новосибирск">Новосибирск</option>
+						<option value="Новокузнецк">Новокузнецк</option>
+						<option value="Нижний Новгород">Нижний Новгород</option>
+						<option value="Нижний Тагил">Нижний Тагил</option>
+						<option value="Нижнекамск">Нижнекамск</option>
+						<option value="Омск">Омск</option>
+						<option value="Оренбург">Оренбург</option>
+						<option value="Орел">Орел</option>
+						<option value="Орск">Орск</option>
+						<option value="Петрозаводск">Петрозаводск</option>
+						<option value="Пенза">Пенза</option>
+						<option value="Пермь">Пермь</option>
+						<option value="Псков">Псков</option>
+						<option value="Ростов-На-Дону">Ростов-На-Дону</option>
+						<option value="Рязань">Рязань</option>
+						<option value="Самара">Самара</option>
+						<option value="Саратов">Саратов</option>
+						<option value="Саранск">Саранск</option>
+						<option value="Севастополь">Севастополь</option>
+						<option value="Симферополь">Симферополь</option>
+						<option value="Смоленск">Смоленск</option>
+						<option value="Старый Оскол">Старый Оскол</option>
+						<option value="Сочи">Сочи</option>
+						<option value="Ставрополь">Ставрополь</option>
+						<option value="Сургут">Сургут</option>
+						<option value="Сыктывкар">Сыктывкар</option>
+						<option value="Таганрог">Таганрог</option>
+						<option value="Тамбов">Тамбов</option>
+						<option value="Тверь">Тверь</option>
+						<option value="Тольятти">Тольятти</option>
+						<option value="Томск">Томск</option>
+						<option value="Тула">Тула</option>
+						<option value="Ульяновск">Ульяновск</option>
+						<option value="Улан-Удэ">Улан-Удэ</option>
+						<option value="Уфа">Уфа</option>
+						<option value="Хабаровск">Хабаровск</option>
+						<option value="Чебоксары">Чебоксары</option>
+						<option value="Череповец">Череповец</option>
+						<option value="Челябинск">Челябинск</option>
+						<option value="Чита">Чита</option>
+						<option value="Шахты">Шахты</option>
+						<option value="Энгельс">Энгельс</option>
+						<option value="Якутск">Якутск</option>
+						<option value="Ярославль">Ярославль</option>
+						<option value="Тюмень">Тюмень</option>
+				</select>
+
+				<p class="newCalc__body__left__text">Адрес, куда нужны грузчики</p>
+				<input class="newCalc__body__left__input" id="suggest1" type="text" onchange="search2()">
+
+				<p class="newCalc__body__left__text">Номер квартиры</p>
+				<input class="newCalc__body__left__input newCalc__body__left__input--short" id="flat" type="text">
+
+				<p class="newCalc__body__left__text">Количество грузчиков</p>
+				<div class="newCalc__body__left__flex">
+					<!-- <input class="newCalc__body__left__input newCalc__body__left__input--short" type="text"> -->
+					<select class="newCalc__body__left__input newCalc__body__left__input--short" name="workers" id="workers">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+					</select>
+					<a class="newCalc__body__left__flex__link" href="#">Как узнать сколько грузчиков нужно?</a>
+				</div>
+
+				<p class="newCalc__body__left__text">Дата, когда нужны грузчики</p>
+				<input value="" class="newCalc__body__left__input datepicker-here" id="startDate" type="text">
+
+				<p class="newCalc__body__left__text">Время, когда нужны грузчики</p>
+				<div class="newCalc__body__left__flex">
+					<!-- <input class="newCalc__body__left__input newCalc__body__left__input--short" type="text"> -->
+					<select class="newCalc__body__left__input newCalc__body__left__input--short" name="startTime" id="startTime">
+						<option value="8:00">8:00</option>
+						<option value="9:00">9:00</option>
+						<option value="10:00">10:00</option>
+						<option value="11:00">11:00</option>
+						<option value="12:00">12:00</option>
+						<option value="13:00">13:00</option>
+						<option value="14:00">14:00</option>
+						<option value="15:00">15:00</option>
+						<option value="16:00">16:00</option>
+						<option value="17:00">17:00</option>
+						<option value="18:00">18:00</option>
+					</select>
+					<p class="newCalc__body__left__note">Для Вас действует ночной тариф. Минимальное время заказа - 8 часов.</p>
+				</div>
+
+				<p class="newCalc__body__left__text">На сколько часов нужны грузчики</p>
+				<div class="newCalc__body__left__flex">
+<!-- 					<input class="newCalc__body__left__input newCalc__body__left__input--short" type="text"> -->
+					<select class="newCalc__body__left__input newCalc__body__left__input--short" name="workTime" id="workTime">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+					</select>
+					<a class="newCalc__body__left__flex__link" href="#">Как правильно рассчитать время?</a>
+				</div>
+
+			</div>
+
+			<div class="newCalc__body__right">
+				<div class="newCalc__body__right__map" id="map"></div>
+			</div>
+
+		</div>
+
+		<div class="newCalc__line"></div>
+
+		<div class="newCalc__body2">
+
+			<div class="newCalc__body2__left">
+
+				<h2 class="newCalc__body2__left__title">Оформить заказ</h2>
+
+				<p class="newCalc__body__left__text">Телефон*</p>
+				<input class="newCalc__body__left__input" type="tel" placeholder="+7 (___) ___-__-__" required minlength="10">
+
+				<p class="newCalc__body__left__text">Имя</p>
+				<input class="newCalc__body__left__input" type="text" placeholder="Как к Вам обращаться?">
+
+				<div class="newCalc__body2__left__poly">
+					<input type="checkbox" name="newCalcPoly" id="newCalcPoly">
+					<label class="newCalc__body__left__checkbox" for="newCalcPoly">Я согласен с политикой обработки персональных данных</label>
+				</div>
+
+				<div class="newCalc__body2__left__btn">Оформить заказ</div>
+
+
+			</div>
+
+			<div class="newCalc__body2__right">
+
+				<div class="newCalc__body2__right__black"></div>
+
+				<div class="newCalc__body2__right__check">
+					<div class="newCalc__body2__right__check__address"></div>
+					<div class="newCalc__body2__right__check__flat"></div>
+					<div class="newCalc__body2__right__check__workers"></div>
+					<div class="newCalc__body2__right__check__date"></div>
+					<div class="newCalc__body2__right__check__time"></div>
+					<div class="newCalc__body2__right__check__hours"></div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+</html>
