@@ -139,8 +139,8 @@ $(document).ready(function() {
 		$(".newCalc__body2__right__check__date").html( "Дата заказа: " + printDate );
 		$(".newCalc__body2__right__check__time").html( "Время начала работы: " + printTime );
 		$(".newCalc__body2__right__check__hours").html( "Количество часов: " + printHours );
-		$(".newCalc__body2__right__check__note").html( 
-			"Стоимость указанная в калькуляторе является приоритетным! Возможно уменьшение или увлечение после звонка Вам менеджера. Спасибо!");
+/* 		$(".newCalc__body2__right__check__note").html( 
+			"Стоимость указанная в калькуляторе является приоритетным! Возможно уменьшение или увлечение после звонка Вам менеджера. Спасибо!"); */
 
 	}
 

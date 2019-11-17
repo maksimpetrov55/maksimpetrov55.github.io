@@ -6,7 +6,7 @@
 	<title>Web Mockup</title>
 	
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/main.css?v1">
 	<link rel="stylesheet" href="css/datepicker.min.css">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
@@ -15,7 +15,7 @@
 
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=a939a3a3-da01-4096-b0fe-457cdc8a8dbf"></script>
 
-	<script src="js/scripts.js"></script>
+	<script src="js/scripts.js?v1"></script>
 
 </head>
 <body>
@@ -167,7 +167,7 @@
 						<option value="17:00">17:00</option>
 						<option value="18:00">18:00</option>
 					</select></div>
-					<p class="newCalc__body__left__note">Для Вас действует ночной тариф. Минимальное время заказа - 8 часов.</p>
+					<p class="newCalc__body__left__note">Стандартное время прибытия работника 1.5 часа при шаговой доступности от метро.</p>
 				</div>
 
 				<p class="newCalc__body__left__text">На сколько часов нужны грузчики</p>
@@ -177,7 +177,7 @@
 						<option value="1">1</option>
 						<option value="2">2</option>
 						<option value="3">3</option>
-						<option value="4">4</option>
+						<option selected value="4">4</option>
 						<option value="5">5</option>
 						<option value="6">6</option>
 						<option value="7">7</option>
@@ -194,6 +194,11 @@
 				<div class="newCalc__body__right__map" id="map"></div>
 			</div>
 
+		</div>
+
+		<div class="newCalc__note">
+			<div class="newCalc__note__sign">!</div>
+			<div class="newCalc__note__text">Обратите внимание: Мы предоставляем только услуги грузчиков. Без грузовика.<br>Минимальный заказ в ночное время - 8 часов</div>
 		</div>
 
 		<div class="newCalc__line"></div>
@@ -231,7 +236,7 @@
 					<div class="newCalc__body2__right__check__flat"></div>
 					<div class="newCalc__body2__right__check__workers"></div>
 					<div class="newCalc__body2__right__check__hours"></div>
-					<div class="newCalc__body2__right__check__note"></div>
+					<div class="newCalc__body2__right__check__note">Стоимость указанная в калькуляторе является приоритетным! Возможно уменьшение или увлечение после звонка Вам менеджера. Спасибо!</div>
 				</div>
 
 			</div>
