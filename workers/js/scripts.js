@@ -27,7 +27,46 @@ function init () {
 		searchControlProvider: 'yandex#search'
 	});
 
-	var suggestView1 = new ymaps.SuggestView('suggest1');
+/*     myRectangle = new ymaps.Rectangle([
+        // Задаем координаты диагональных углов прямоугольника.
+        [55.5, 37.5],
+        [55.6, 37.6]
+    ], {
+        //Свойства
+        hintContent: 'Меня перетаскивать нельзя!',
+        balloonContent: 'Прямоугольник 1'
+    }, {
+        // Опции.
+        // Цвет и прозрачность заливки.
+        fillColor: '#7df9ff33',
+        // Дополнительная прозрачность заливки..
+        // Итоговая прозрачность будет не #33(0.2), а 0.1(0.2*0.5).
+        fillOpacity: 0.5,
+        // Цвет обводки.
+        strokeColor: '#0000FF',
+        // Прозрачность обводки.
+        strokeOpacity: 0.5,
+        // Ширина линии.
+        strokeWidth: 2,
+        // Радиус скругления углов.
+        // Данная опция принимается только прямоугольником.
+        borderRadius: 6
+	});
+	
+	myMap.geoObjects.add(myRectangle); */
+
+
+
+	var suggestView1 = new ymaps.SuggestView('suggest1' 
+ 		,{
+			results: 8
+			/*boundedBy:
+			[
+			[55.66, 37.60],
+			[55.71, 37.69]
+			]*/
+		}
+	);
 }
 
 
@@ -39,12 +78,15 @@ function setCenter () {
 function search() {
 
 	var citySelect = $("#citySelect").val();
+	$("#suggest1").val(citySelect);
+
 	ymaps.geocode( citySelect , {
 		results: 1
 	}).then(function (res) {
 		var firstGeoObject = res.geoObjects.get(0),
 			coords = firstGeoObject.geometry.getCoordinates(),
 			bounds = firstGeoObject.properties.get('boundedBy');
+			/* console.log(coords[0]); */
 
 		firstGeoObject.options.set('preset', 'islands#darkBlueDotIconWithCaption');
 		firstGeoObject.properties.set('iconCaption', firstGeoObject.getAddressLine());
@@ -97,6 +139,8 @@ $(document).ready(function() {
 		$(".newCalc__body2__right__check__date").html( "Дата заказа: " + printDate );
 		$(".newCalc__body2__right__check__time").html( "Время начала работы: " + printTime );
 		$(".newCalc__body2__right__check__hours").html( "Количество часов: " + printHours );
+		$(".newCalc__body2__right__check__note").html( 
+			"Стоимость указанная в калькуляторе является приоритетным! Возможно уменьшение или увлечение после звонка Вам менеджера. Спасибо!");
 
 	}
 
