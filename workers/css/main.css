@@ -84,6 +84,9 @@ body {
 }
 
 .newCalc__body__left__input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   width: 100%;
   max-width: 362px;
   -webkit-box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.13);
