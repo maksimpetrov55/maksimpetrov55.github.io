@@ -80,8 +80,6 @@ function search2() {
 	});
 }
 
-
-
 $(document).ready(function() {
 
 	function print() {
@@ -109,4 +107,23 @@ $(document).ready(function() {
 		print();
 	});
 
+	$("#suggest1").focusout(function() {
+		setTimeout(function(){
+			search2();
+			print();
+		},200);
+	});
+
+	$("#suggest1").focusin(function() {
+		$(document).keypress(function(e) {
+			if(e.which == 13) {
+				setTimeout(function(){
+					search2();
+					print();
+				},200);
+			}
+		});
+	});
 });
+
+
