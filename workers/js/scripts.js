@@ -133,14 +133,39 @@ $(document).ready(function() {
 		var printTime = $("#startTime").val();
 		var printHours = $("#workTime").val();
 
+
+		if ( printHours == 1 ) { var printSumm = +1000 * +printWorkers } else {
+			if ( printHours == 2 ) { var printSumm = +1000 * +printWorkers } else {
+				if ( printHours == 3 ) { var printSumm = +1050 * +printWorkers } else {
+					if ( printHours == 4 ) { var printSumm = +1200 * +printWorkers } else {
+						if ( printHours == 5 ) { var printSumm = +1500 * +printWorkers } else {
+							if ( printHours == 6 ) { var printSumm = +1800 * +printWorkers } else {
+								if ( printHours == 7 ) { var printSumm = +2100 * +printWorkers } else {
+									if ( printHours == 8 ) { var printSumm = +2000 * +printWorkers } else {
+										if ( printHours == 9 ) { var printSumm = +2250 * +printWorkers } else {
+											if ( printHours == 10 ) { var printSumm = +2500 * +printWorkers } else {
+												if ( printHours == 11 ) { var printSumm = +2530 * +printWorkers } else {
+													if ( printHours == 12 ) { var printSumm = +2760 * +printWorkers }
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+
 		$(".newCalc__body2__right__check__address").html( "Ваш адрес: " + printAddress );
 		$(".newCalc__body2__right__check__flat").html( "Номер квартиры: " + printFlat );
 		$(".newCalc__body2__right__check__workers").html( "Количество грузчиков: " + printWorkers );
 		$(".newCalc__body2__right__check__date").html( "Дата заказа: " + printDate );
 		$(".newCalc__body2__right__check__time").html( "Время начала работы: " + printTime );
 		$(".newCalc__body2__right__check__hours").html( "Количество часов: " + printHours );
-/* 		$(".newCalc__body2__right__check__note").html( 
-			"Стоимость указанная в калькуляторе является приоритетным! Возможно уменьшение или увлечение после звонка Вам менеджера. Спасибо!"); */
+		$(".newCalc__body2__right__check__summ").html( "Стоимость заказа: " + printSumm + " руб." );
 
 	}
 
@@ -168,6 +193,31 @@ $(document).ready(function() {
 			}
 		});
 	});
+
+	$(".newCalc__popup__close, .black-wall").click(function(){
+		$(".newCalc__popup, .black-wall, .newCalc__popup__one, .newCalc__popup__two").fadeOut(200);
+	});
+
+	$("#newCalc_link_1").click(function(){
+		$(".newCalc__popup, .black-wall, .newCalc__popup__one").fadeIn(200);
+	});
+
+	$("#newCalc_link_2").click(function(){
+		$(".newCalc__popup, .black-wall, .newCalc__popup__two").fadeIn(200);
+	});
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
 
 

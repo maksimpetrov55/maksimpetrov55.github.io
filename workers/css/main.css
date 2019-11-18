@@ -2,10 +2,21 @@ body {
   background: #E1EEF2;
 }
 
+.black-wall {
+  display: none;
+  position: fixed;
+  top: -10%;
+  left: -10%;
+  background: rgba(0, 0, 0, 0.7);
+  width: 120%;
+  height: 120%;
+  z-index: 199;
+}
+
 .newCalc {
   background: #fff;
   width: 1140px;
-  height: 1000px;
+  height: 1100px;
   padding: 25px 35px 20px 35px;
   margin: 50px auto;
   border: 2px solid #d1d1d1;
@@ -73,7 +84,7 @@ body {
   font-family: "DejaVu Sans Condensed", sans-serif;
   margin: 10px 0 0 0;
   color: #c8c8c8;
-  max-width: 230px;
+  max-width: 300px;
 }
 
 .newCalc__body__left__checkbox {
@@ -88,7 +99,7 @@ body {
      -moz-appearance: none;
           appearance: none;
   width: 100%;
-  max-width: 362px;
+  max-width: 400px;
   -webkit-box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.13);
           box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.13);
   height: 30px;
@@ -351,7 +362,7 @@ body {
   background-size: 100% auto;
 }
 
-.newCalc__body2__right__check__address, .newCalc__body2__right__check__flat, .newCalc__body2__right__check__workers, .newCalc__body2__right__check__date, .newCalc__body2__right__check__time, .newCalc__body2__right__check__hours {
+.newCalc__body2__right__check__address, .newCalc__body2__right__check__flat, .newCalc__body2__right__check__workers, .newCalc__body2__right__check__date, .newCalc__body2__right__check__time, .newCalc__body2__right__check__hours, .newCalc__body2__right__check__summ {
   font-size: 18px;
   font-family: "Montserrat" ,sans-serif;
   margin: 10px 0 0 0;
@@ -365,5 +376,48 @@ body {
   text-align: justify;
   padding: 20px 0 0 0;
   border-top: 1px dashed #bbb;
+}
+
+.newCalc__popup {
+  position: fixed;
+  display: none;
+  top: 50%;
+  left: 50%;
+  z-index: 200;
+  background: #fff;
+  margin: -290px 0 0 -200px;
+  width: 400px;
+  height: 580px;
+  border-radius: 2px;
+  padding: 40px;
+}
+
+.newCalc__popup__close {
+  font-family: sans-serif;
+  font-size: 34px;
+  color: #d1d1d1;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  cursor: pointer;
+}
+
+.newCalc__popup__close:hover {
+  color: #A50000;
+}
+
+.newCalc__popup__one {
+  display: none;
+}
+
+.newCalc__popup__two {
+  display: none;
+}
+
+.newCalc__popup__text {
+  font-size: 16px;
+  font-family: "DejaVu Sans Condensed", sans-serif;
+  margin: 20px 0 20px 0;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */

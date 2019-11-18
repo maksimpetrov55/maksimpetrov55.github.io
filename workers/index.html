@@ -6,7 +6,7 @@
 	<title>Web Mockup</title>
 	
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/main.css?v1">
+	<link rel="stylesheet" href="css/main.css?v2">
 	<link rel="stylesheet" href="css/datepicker.min.css">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
@@ -15,10 +15,12 @@
 
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=a939a3a3-da01-4096-b0fe-457cdc8a8dbf"></script>
 
-	<script src="js/scripts.js?v1"></script>
+	<script src="js/scripts.js?v2"></script>
 
 </head>
 <body>
+
+	<div class="black-wall"></div>
 
 	<div class="newCalc">
 
@@ -120,7 +122,7 @@
 				</select></div>
 
 				<p class="newCalc__body__left__text">Адрес, куда нужны грузчики</p>
-				<div class="newCalc__body__left__icon-place"><input class="newCalc__body__left__input" value="Москва " id="suggest1" type="text"></div>
+				<div class="newCalc__body__left__icon-place"><input class="newCalc__body__left__input" value="Москва " id="suggest1" type="text" required></div>
 
 				<p class="newCalc__body__left__text">Номер квартиры</p>
 				<div class="newCalc__body__left__icon-number"><input class="newCalc__body__left__input newCalc__body__left__input--short" id="flat" type="text"></div>
@@ -145,7 +147,7 @@
 						<option value="14">14</option>
 						<option value="15">15</option>
 					</select></div>
-					<a class="newCalc__body__left__flex__link" href="#">Как узнать сколько грузчиков нужно?</a>
+					<a id="newCalc_link_1" class="newCalc__body__left__flex__link" href="#">Как узнать сколько грузчиков нужно?</a>
 				</div>
 
 				<p class="newCalc__body__left__text">Дата, когда нужны грузчики</p>
@@ -167,12 +169,12 @@
 						<option value="17:00">17:00</option>
 						<option value="18:00">18:00</option>
 					</select></div>
-					<p class="newCalc__body__left__note">Стандартное время прибытия работника 1.5 часа при шаговой доступности от метро.</p>
+					<p class="newCalc__body__left__note">Стандартное время прибытия работника 1.5&nbsp;часа при шаговой доступности от метро.</p>
 				</div>
 
 				<p class="newCalc__body__left__text">На сколько часов нужны грузчики</p>
 				<div class="newCalc__body__left__flex">
-<!-- 					<input class="newCalc__body__left__input newCalc__body__left__input--short" type="text"> -->
+					<!--<input class="newCalc__body__left__input newCalc__body__left__input--short" type="text"> -->
 					<div class="newCalc__body__left__icon-time"><select class="newCalc__body__left__input newCalc__body__left__input--short" name="workTime" id="workTime">
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -184,8 +186,10 @@
 						<option value="8">8</option>
 						<option value="9">9</option>
 						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
 					</select></div>
-					<a class="newCalc__body__left__flex__link" href="#">Как правильно рассчитать время?</a>
+					<a id="newCalc_link_2" class="newCalc__body__left__flex__link" href="#">Как правильно рассчитать время?</a>
 				</div>
 
 			</div>
@@ -216,7 +220,7 @@
 				<input class="newCalc__body__left__input newCalc__body__left__input--form" type="text" placeholder="Как к Вам обращаться?">
 
 				<div class="newCalc__body2__left__poly">
-					<input type="checkbox" name="newCalcPoly" id="newCalcPoly">
+					<input type="checkbox" name="newCalcPoly" checked id="newCalcPoly">
 					<label class="newCalc__body__left__checkbox" for="newCalcPoly">Я согласен с политикой обработки персональных данных</label>
 				</div>
 
@@ -236,11 +240,29 @@
 					<div class="newCalc__body2__right__check__flat"></div>
 					<div class="newCalc__body2__right__check__workers"></div>
 					<div class="newCalc__body2__right__check__hours"></div>
+					<div class="newCalc__body2__right__check__summ"></div>
 					<div class="newCalc__body2__right__check__note">Стоимость указанная в калькуляторе является приоритетным! Возможно уменьшение или увлечение после звонка Вам менеджера. Спасибо!</div>
 				</div>
 
 			</div>
 
+		</div>
+
+		<div class="newCalc__popup">
+			<div class="newCalc__popup__close">×</div>
+			<div class="newCalc__popup__one">
+				<p class="newCalc__popup__text">Формирование количества рабочих зависит от характеристик груза, объема и условий работ.</p>
+				<p class="newCalc__popup__text">*Для погрузки/разгрузки и перемещения груза весом от 40 до 50 кг, в том числе сыпучих смесей, необходимый минимум — 2 рабочих.</p>
+				<p class="newCalc__popup__text">**Ручная погрузка/разгрузка и перемещение грузов весом от 80 кг и выше допускается при условии нагрузки на одного рабочего не более 50 кг и только под руководством лица, ответственного за производство погрузоразгрузочных работ.</p>
+				<p class="newCalc__popup__text">Суммарная масса груза, перемещаемого одним человеком вручную по горизонтальной поверхности на расстояние до 20 метров либо по лестнице до 2-го этажа, составляет не более 1000 кг. Суммарная масса груза, перемещаемого одним человеком вручную по лестнице по 5-й этаж включительно, — не более 500 кг.</p>
+			</div>
+			<div class="newCalc__popup__two">
+				<p class="newCalc__popup__text">Формирование количества часов зависит от характеристик груза, объема и условий работ.</p>
+				<p class="newCalc__popup__text">Стоимость часа проводимых работ уменьшается с увеличением заказанных часов. </p>
+				<p class="newCalc__popup__text">От 4 часов действует постоянное значение цены за час (минимальный заказ имеет более низкую цену)</p>
+				<p class="newCalc__popup__text">Один рабочий вручную по горизонтальной поверхности на расстояние до 20 метров либо по лестнице до 2-го этажа, составляет не более 1000 кг в течение минимального заказа (4 часа).</p>
+				<p class="newCalc__popup__text">Суммарная масса груза, перемещаемого одним человеком вручную по лестнице по 5-й этаж включительно, — не более 500 кг в течение минимального заказа (4 часа). Стоимость работ по подъему груза вручную по лестнице выше 5-го этажа согласовывается отдельно. </p>
+			</div>
 		</div>
 
 	</div>
