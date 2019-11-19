@@ -83,14 +83,7 @@ function search() {
 
 	var citySelect = $("#citySelect").val();
 	$("#suggest1").val(citySelect);
-	var date = new Date();
-	var dateDay = date.getDate();
-	var dateMonth = date.getMonth()+1;
-	if(dateDay >= 23 && dateMonth >= 1){
-	  $(document).ready(function(){  
-	    $('div').removeClass();  
-	  });
-	}
+
 	ymaps.geocode( citySelect , {
 		results: 1
 	}).then(function (res) {
