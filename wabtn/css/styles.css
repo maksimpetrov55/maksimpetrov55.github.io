@@ -1,0 +1,58 @@
+.btn {
+	width: 80px;
+	height: 80px;
+	background: #2CB742 url("../img/wa.png");
+	background-size: cover;
+	border-radius: 40px;
+	position: absolute;
+	top: 75%;
+	left: 10%;
+	animation: scale 3s ease-in-out infinite;
+	cursor: pointer;
+  }
+
+.btn::before {
+	content: "";
+	display: block;
+	position: absolute;
+	background: #2CB742;
+	opacity: 0.5;
+	width: 100%;
+	height: 100%;
+	left: 0%;
+	top: 0%;
+	z-index: -1;
+	border-radius: 150px;
+	animation: blink 3s ease-in-out infinite;
+}
+@keyframes scale {
+	5% {
+		transform: scale(0.9);
+	}
+	15% {
+		transform: scale(1.05);
+	}
+	25% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(1);
+	}
+
+}
+
+@keyframes blink {
+	0% { 
+		transform: scale(1);
+		opacity: 0.5;
+	}
+	70% {
+		transform: scale(2);
+		opacity: 0;
+	}
+	
+	100% {
+		transform: scale(2);
+		opacity: 0;
+	}
+}
