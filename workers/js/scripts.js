@@ -165,8 +165,8 @@ $(document).ready(function() {
 		$(".newCalc__body2__right__check__date").html( "Дата заказа: " + printDate );
 		$(".newCalc__body2__right__check__time").html( "Время начала работы: " + printTime );
 		$(".newCalc__body2__right__check__hours").html( "Количество часов: " + printHours );
-		$(".newCalc__body2__right__check__summ").html( "Стоимость заказа: " + printSumm + " руб." );
-
+		$(".newCalc__body2__right__check__summ").html( "Стоимость заказа: " );
+		$(".newCalc__body2__right__check__red").html( printSumm + " руб." );
 	}
 
 	$("#startDate").blur(function(){
@@ -194,8 +194,8 @@ $(document).ready(function() {
 		});
 	});
 
-	$(".newCalc__popup__close, .black-wall").click(function(){
-		$(".newCalc__popup, .black-wall, .newCalc__popup__one, .newCalc__popup__two").fadeOut(200);
+	$(".newCalc__popup__close, .black-wall, .newCalc__tnks__close").click(function(){
+		$(".newCalc__popup, .black-wall, .newCalc__popup__one, .newCalc__popup__two, .newCalc__tnks").fadeOut(200);
 	});
 
 	$("#newCalc_link_1").click(function(){
@@ -206,8 +206,9 @@ $(document).ready(function() {
 		$(".newCalc__popup, .black-wall, .newCalc__popup__two").fadeIn(200);
 	});
 
-
-
+	$(".newCalc__body2__left__btn").click(function(){
+		$(".newCalc__tnks, .black-wall").fadeIn(200);
+	});
 
 
 

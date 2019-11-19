@@ -121,13 +121,13 @@
 						<!--<option value="Тюмень">Тюмень</option>-->
 				</select></div>
 
-				<p class="newCalc__body__left__text">Адрес, куда нужны грузчики</p>
+				<p class="newCalc__body__left__text">Адрес, куда нужны рабочие</p>
 				<div class="newCalc__body__left__icon-place"><input class="newCalc__body__left__input" value="Москва " id="suggest1" type="text" required></div>
 
 				<p class="newCalc__body__left__text">Номер квартиры</p>
 				<div class="newCalc__body__left__icon-number"><input class="newCalc__body__left__input newCalc__body__left__input--short" id="flat" type="text"></div>
 
-				<p class="newCalc__body__left__text">Количество грузчиков</p>
+				<p class="newCalc__body__left__text">Количество рабочих</p>
 				<div class="newCalc__body__left__flex">
 					<!-- <input class="newCalc__body__left__input newCalc__body__left__input--short" type="text"> -->
 					<div class="newCalc__body__left__icon-workers"><select class="newCalc__body__left__input newCalc__body__left__input--short" name="workers" id="workers">
@@ -147,32 +147,52 @@
 						<option value="14">14</option>
 						<option value="15">15</option>
 					</select></div>
-					<a id="newCalc_link_1" class="newCalc__body__left__flex__link" href="#">Как узнать сколько грузчиков нужно?</a>
+					<a id="newCalc_link_1" class="newCalc__body__left__flex__link" href="#">Как узнать сколько рабочих нужно?</a>
 				</div>
 
-				<p class="newCalc__body__left__text">Дата, когда нужны грузчики</p>
+				<p class="newCalc__body__left__text">Дата, когда нужны рабочие</p>
 				<div class="newCalc__body__left__icon-date"><input value="" class="newCalc__body__left__input datepicker-here" id="startDate" type="text"></div>
 
-				<p class="newCalc__body__left__text">Время, когда нужны грузчики</p>
+				<p class="newCalc__body__left__text">Время, когда нужны рабочие</p>
 				<div class="newCalc__body__left__flex">
 					<!-- <input class="newCalc__body__left__input newCalc__body__left__input--short" type="text"> -->
 					<div class="newCalc__body__left__icon-time"><select class="newCalc__body__left__input newCalc__body__left__input--short" name="startTime" id="startTime">
 						<option value="8:00">8:00</option>
+						<option value="8:00">8:30</option>
 						<option value="9:00">9:00</option>
+						<option value="9:00">9:30</option>
 						<option value="10:00">10:00</option>
+						<option value="10:00">10:30</option>
 						<option value="11:00">11:00</option>
+						<option value="11:00">11:30</option>
 						<option value="12:00">12:00</option>
+						<option value="12:00">12:30</option>
 						<option value="13:00">13:00</option>
+						<option value="13:00">13:30</option>
 						<option value="14:00">14:00</option>
+						<option value="14:00">14:30</option>
 						<option value="15:00">15:00</option>
+						<option value="15:00">15:30</option>
 						<option value="16:00">16:00</option>
+						<option value="16:00">16:30</option>
 						<option value="17:00">17:00</option>
-						<option value="18:00">18:00</option>
+						<option value="17:00">17:30</option>
+						<option value="19:00">19:00</option>
+						<option value="19:00">19:30</option>
+						<option value="20:00">20:00</option>
+						<option value="20:00">20:30</option>
+						<option value="21:00">21:00</option>
+						<option value="21:00">21:30</option>
+						<option value="22:00">22:00</option>
+						<option value="22:00">22:30</option>
+						<option value="23:00">23:00</option>
+						<option value="23:00">23:30</option>
+						<option value="24:00">24:00</option>
 					</select></div>
 					<p class="newCalc__body__left__note">Стандартное время прибытия работника 1.5&nbsp;часа при шаговой доступности от метро.</p>
 				</div>
 
-				<p class="newCalc__body__left__text">На сколько часов нужны грузчики</p>
+				<p class="newCalc__body__left__text">На сколько часов нужны рабочие</p>
 				<div class="newCalc__body__left__flex">
 					<!--<input class="newCalc__body__left__input newCalc__body__left__input--short" type="text"> -->
 					<div class="newCalc__body__left__icon-time"><select class="newCalc__body__left__input newCalc__body__left__input--short" name="workTime" id="workTime">
@@ -202,7 +222,8 @@
 
 		<div class="newCalc__note">
 			<div class="newCalc__note__sign">!</div>
-			<div class="newCalc__note__text">Обратите внимание: Мы предоставляем только услуги грузчиков. Без грузовика.<br>Минимальный заказ в ночное время - 8 часов</div>
+			<div class="newCalc__note__text">Обратите внимание: Мы предоставляем услуги грузчиков и разнорабочих Круглосуточно.<br>
+				Ночная смена начинается от 22:00. Минимальный заказ в ночное время - 8 часов</div>
 		</div>
 
 		<div class="newCalc__line"></div>
@@ -241,6 +262,7 @@
 					<div class="newCalc__body2__right__check__workers"></div>
 					<div class="newCalc__body2__right__check__hours"></div>
 					<div class="newCalc__body2__right__check__summ"></div>
+					<div class="newCalc__body2__right__check__red"></div>
 					<div class="newCalc__body2__right__check__note">Стоимость указанная в калькуляторе является приоритетным! Возможно уменьшение или увлечение после звонка Вам менеджера. Спасибо!</div>
 				</div>
 
@@ -263,6 +285,11 @@
 				<p class="newCalc__popup__text">Один рабочий вручную по горизонтальной поверхности на расстояние до 20 метров либо по лестнице до 2-го этажа, составляет не более 1000 кг в течение минимального заказа (4 часа).</p>
 				<p class="newCalc__popup__text">Суммарная масса груза, перемещаемого одним человеком вручную по лестнице по 5-й этаж включительно, — не более 500 кг в течение минимального заказа (4 часа). Стоимость работ по подъему груза вручную по лестнице выше 5-го этажа согласовывается отдельно. </p>
 			</div>
+		</div>
+		<div class="newCalc__tnks">
+			<div class="newCalc__tnks__text">Cпасибо, что сделали заказ!</div>
+			<div class="newCalc__tnks__text">Менеджер свяжется с вами в ближайшее время!</div>
+			<div class="newCalc__tnks__close">✔</div>
 		</div>
 
 	</div>
