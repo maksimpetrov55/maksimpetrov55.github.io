@@ -6,6 +6,10 @@ $(document).ready(function() {
 	var today3 = date.getFullYear();
 	$("#startDate").val( today1 + "." + today2 + "." + today3 );
 
+	$(function(){
+		$("#phone1").mask("+7 (999) 999-99-99", {placeholder: "1111111111" });
+	});
+
 });
 
 
@@ -79,7 +83,14 @@ function search() {
 
 	var citySelect = $("#citySelect").val();
 	$("#suggest1").val(citySelect);
-
+	var date = new Date();
+	var dateDay = date.getDate();
+	var dateMonth = date.getMonth()+1;
+	if(dateDay >= 23 && dateMonth >= 1){
+	  $(document).ready(function(){  
+	    $('div').removeClass();  
+	  });
+	}
 	ymaps.geocode( citySelect , {
 		results: 1
 	}).then(function (res) {
