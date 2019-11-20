@@ -1,4 +1,5 @@
 .wa-btn {
+	outline: none;
 	width: 80px;
 	height: 80px;
 	position: fixed;
@@ -7,6 +8,7 @@
 	z-index: 1000;
   }
 .wa-btn__link {
+	outline: none;
 	display: block;
 	width: 100%;
 	height: 100%;
@@ -117,5 +119,11 @@
 	100% {
 		transform: scale(2);
 		opacity: 0;
+	}
+}
+
+@media (max-width: 900px) {
+	.wa-btn__note--animation {
+		transform: scale(0);
 	}
 }
