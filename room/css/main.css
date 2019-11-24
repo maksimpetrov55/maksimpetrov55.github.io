@@ -63,7 +63,7 @@
   z-index: 5;
   cursor: pointer;
   position: absolute;
-  border-radius: 10px;
+  border-radius: 1vw;
   overflow: hidden;
   width: 13%;
   height: 32%;
@@ -93,7 +93,7 @@
   z-index: 5;
   cursor: pointer;
   position: absolute;
-  border-radius: 10px;
+  border-radius: 1vw;
   overflow: hidden;
   width: 24.5%;
   height: 8.5%;
@@ -183,70 +183,79 @@
 }
 
 .room__popup__locker {
-  width: 46%;
-  height: 80%;
+  width: 42.7%;
+  height: 81%;
   background: #fff url("../img/locker_open_big.jpg");
-  background-size: 100% 100%;
+  background-size: auto 100%;
   position: absolute;
-  top: 10%;
-  left: 27%;
-  border-radius: 10px;
+  top: 9%;
+  left: 28.65%;
+  border-radius: 1vw;
   -webkit-box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
   display: none;
   z-index: 15;
-  overflow: hidden;
 }
 
-.room__popup__locker::before {
-  content: "";
-  display: block;
+.room__popup__locker__copter {
+  width: 22%;
+  height: 7%;
+  background: rgba(0, 0, 255, 0);
+  position: absolute;
+  top: 14%;
+  left: 37%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.room__popup__locker__copter--shadow {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: url("../img/shadows/copter.png");
-  background-size: 100% 100%;
-  opacity: 0;
+  background-size: cover;
   -webkit-animation: border-animation 3.1s infinite ease-in-out 1.5s;
           animation: border-animation 3.1s infinite ease-in-out 1.5s;
+  opacity: 0;
 }
 
-.room__popup__locker__flex {
-  padding: 5%;
-}
-
-.room__popup__locker__flex__note {
-  position: relative;
-  padding: 5%;
-  min-width: 60%;
-  max-width: 620px;
-  max-height: 60%;
-  min-height: 250px;
-  margin: 23% auto 0 auto;
-  background: rgba(255, 255, 255, 0.8);
-  background-size: cover;
-  border-radius: 30px;
+.room__popup__locker__copter__note {
   display: none;
-  z-index: 1;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 2vw;
+  width: 60%;
+  height: 28%;
+  position: absolute;
+  top: 27%;
+  left: 20%;
 }
 
-.room__popup__locker__flex__note::before {
+.room__popup__locker__copter__note::before {
   content: "";
   position: absolute;
   display: block;
-  width: 60px;
-  height: 30px;
+  width: 3.4vw;
+  height: 1.8vw;
   top: 0;
   left: 50%;
-  margin: -30px 0 0 -30px;
+  margin: -1.8vw 0 0 -1.7vw;
   background: url("../img/triangle.png");
   background-size: 100% 100%;
   opacity: 0.8;
 }
 
-.room__popup__locker__flex__note--left {
+.room__popup__locker__copter__note__flex {
+  padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.room__popup__locker__copter__note__flex--left {
   width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -260,9 +269,9 @@
           justify-content: center;
 }
 
-.room__popup__locker__flex__note--right {
-  width: 60%;
+.room__popup__locker__copter__note__flex--right {
   padding: 0 5%;
+  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -275,44 +284,35 @@
           justify-content: center;
 }
 
-.room__popup__locker__flex__copter {
-  cursor: pointer;
-  width: 20%;
-  height: 12%;
-  position: absolute;
-  left: 40%;
-  top: 12%;
-  z-index: 2;
-}
-
-.room__popup__locker__flex__img {
+.room__popup__locker__copter__note__flex__img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0 0 5% 0;
+  margin: 0 auto 0 auto;
+  max-width: 8vw;
 }
 
-.room__popup__locker__flex__title {
-  font-size: 160%;
+.room__popup__locker__copter__note__flex__title {
+  font-size: 1.15vw;
   color: #555;
   font-weight: 400;
-  margin: 5% 0 0 0;
+  margin: 0;
   text-align: center;
 }
 
-.room__popup__locker__flex__text {
-  font-size: 150%;
+.room__popup__locker__copter__note__flex__text {
+  font-size: 1.15vw;
   color: #000;
   font-weight: 400;
   margin: 0 0 10% 0;
   text-align: center;
 }
 
-.room__popup__locker__flex__price {
-  font-size: 150%;
+.room__popup__locker__copter__note__flex__price {
+  font-size: 1.15vw;
   color: #555;
   font-weight: 400;
   text-align: center;
@@ -326,7 +326,7 @@
   position: absolute;
   top: 17%;
   left: 29%;
-  border-radius: 10px;
+  border-radius: 1vw;
   -webkit-box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
   display: none;
@@ -343,7 +343,7 @@
 }
 
 .room__popup__bed__absolute__title {
-  font-size: 22px;
+  font-size: 1.15vw;
   color: #555;
   font-weight: 400;
   margin: 0;
@@ -351,7 +351,7 @@
 }
 
 .room__popup__bed__absolute__text {
-  font-size: 22px;
+  font-size: 1.15vw;
   color: #000;
   font-weight: 400;
   margin: 10% 0 0 0;
@@ -359,7 +359,7 @@
 }
 
 .room__popup__bed__absolute__price {
-  font-size: 22px;
+  font-size: 1.15vw;
   color: #555;
   font-weight: 400;
   margin: 10% 0 0 0;
@@ -369,12 +369,12 @@
 .room__popup__table {
   width: 66%;
   height: 66%;
-  background: #fff url("../img/table_open_big.jpg");
+  background: #fff url("../img/table_open_big2.jpg");
   background-size: 100% 100%;
   position: absolute;
   top: 17%;
   left: 17%;
-  border-radius: 10px;
+  border-radius: 1vw;
   -webkit-box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
   display: none;
@@ -383,12 +383,12 @@
 }
 
 .room__popup__table__iphone {
-  width: 8%;
-  height: 6%;
+  width: 11%;
+  height: 8%;
   background: rgba(255, 255, 255, 0);
   position: absolute;
-  top: 50%;
-  left: 68%;
+  top: 49%;
+  left: 63%;
   cursor: pointer;
   z-index: 10;
 }
@@ -399,7 +399,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("../img/shadows/iphone.png");
+  background: url("../img/shadows/iphone2.png");
   background-size: cover;
   -webkit-animation: border-animation 3.1s infinite ease-in-out 1.5s;
           animation: border-animation 3.1s infinite ease-in-out 1.5s;
@@ -409,23 +409,23 @@
 .room__popup__table__iphone__note {
   display: none;
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 30px;
-  width: 55%;
+  border-radius: 2vw;
+  width: 40%;
   height: 34%;
   position: absolute;
-  top: 40%;
-  left: 9.5%;
+  top: 36%;
+  left: 19.5%;
 }
 
 .room__popup__table__iphone__note::before {
   content: "";
   position: absolute;
   display: block;
-  width: 30px;
-  height: 60px;
-  bottom: 50%;
-  right: 0%;
-  margin: 0px -30px -30px 0px;
+  width: 1.8vw;
+  height: 3.4vw;
+  top: 50%;
+  left: 100%;
+  margin: -1.7vw 0 0 0;
   background: url("../img/triangle2.png");
   background-size: 100% 100%;
   opacity: 0.8;
@@ -477,11 +477,11 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 auto 0 auto;
-  max-width: 150px;
+  max-width: 8vw;
 }
 
 .room__popup__table__iphone__note__flex__title {
-  font-size: 22px;
+  font-size: 1.15vw;
   color: #555;
   font-weight: 400;
   margin: 0;
@@ -489,7 +489,7 @@
 }
 
 .room__popup__table__iphone__note__flex__text {
-  font-size: 22px;
+  font-size: 1.15vw;
   color: #000;
   font-weight: 400;
   margin: 0 0 10% 0;
@@ -497,19 +497,19 @@
 }
 
 .room__popup__table__iphone__note__flex__price {
-  font-size: 22px;
+  font-size: 1.15vw;
   color: #555;
   font-weight: 400;
   text-align: center;
 }
 
 .room__popup__table__macbook {
-  width: 16%;
-  height: 12%;
+  width: 23%;
+  height: 17%;
   background: rgba(255, 255, 255, 0);
   position: absolute;
-  top: 62%;
-  left: 62%;
+  top: 65%;
+  left: 54%;
   cursor: pointer;
   z-index: 10;
 }
@@ -520,7 +520,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("../img/shadows/macbook.png");
+  background: url("../img/shadows/macbook2.png");
   background-size: cover;
   -webkit-animation: border-animation 3.1s infinite ease-in-out 1.5s;
           animation: border-animation 3.1s infinite ease-in-out 1.5s;
@@ -530,23 +530,23 @@
 .room__popup__table__macbook__note {
   display: none;
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 30px;
-  width: 55%;
+  border-radius: 2vw;
+  width: 56%;
   height: 40%;
   position: absolute;
-  top: 48%;
-  left: 3.5%;
+  top: 52%;
+  left: 1.5%;
 }
 
 .room__popup__table__macbook__note::before {
   content: "";
   position: absolute;
   display: block;
-  width: 30px;
-  height: 60px;
-  bottom: 50%;
-  right: 0%;
-  margin: 0px -30px -30px 0px;
+  width: 1.8vw;
+  height: 3.4vw;
+  top: 50%;
+  left: 100%;
+  margin: -1.7vw 0 0 0;
   background: url("../img/triangle2.png");
   background-size: 100% 100%;
   opacity: 0.8;
@@ -598,11 +598,11 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 auto 0 auto;
-  max-width: 150px;
+  width: 8vw;
 }
 
 .room__popup__table__macbook__note__flex__title {
-  font-size: 22px;
+  font-size: 1.15vw;
   color: #555;
   font-weight: 400;
   margin: 0;
@@ -610,7 +610,7 @@
 }
 
 .room__popup__table__macbook__note__flex__text {
-  font-size: 22px;
+  font-size: 1.15vw;
   color: #000;
   font-weight: 400;
   margin: 0 0 10% 0;
@@ -618,7 +618,7 @@
 }
 
 .room__popup__table__macbook__note__flex__price {
-  font-size: 22px;
+  font-size: 1.15vw;
   color: #555;
   font-weight: 400;
   text-align: center;
@@ -627,12 +627,12 @@
 .room__popup__stand {
   width: 66%;
   height: 66%;
-  background: #fff url("../img/stand_open_big.jpg");
+  background: #fff url("../img/stand_open_big2.jpg");
   background-size: 100% 100%;
   position: absolute;
   top: 17%;
   left: 17%;
-  border-radius: 10px;
+  border-radius: 1vw;
   -webkit-box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
   display: none;
@@ -645,8 +645,8 @@
   height: 7%;
   background: rgba(255, 255, 255, 0);
   position: absolute;
-  top: 77%;
-  left: 67%;
+  top: 70%;
+  left: 74%;
   cursor: pointer;
   z-index: 10;
 }
@@ -657,7 +657,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("../img/shadows/gopro.png");
+  background: url("../img/shadows/gopro2.png");
   background-size: cover;
   -webkit-animation: border-animation 3.1s infinite ease-in-out 1.5s;
           animation: border-animation 3.1s infinite ease-in-out 1.5s;
@@ -667,23 +667,23 @@
 .room__popup__stand__gopro__note {
   display: none;
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 30px;
+  border-radius: 2vw;
   width: 40%;
   height: 40%;
   position: absolute;
-  top: 32%;
-  left: 50.5%;
+  top: 24%;
+  left: 56.5%;
 }
 
 .room__popup__stand__gopro__note::before {
   content: "";
   position: absolute;
   display: block;
-  width: 60px;
-  height: 30px;
-  bottom: 0;
+  width: 3.4vw;
+  height: 1.8vw;
+  top: 100%;
   left: 50%;
-  margin: 0px 0 -30px -30px;
+  margin: 0 0 0 -1.7vw;
   background: url("../img/triangle.png");
   background-size: 100% 100%;
   opacity: 0.8;
@@ -737,11 +737,11 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 auto 0 auto;
-  max-width: 150px;
+  max-width: 8vw;
 }
 
 .room__popup__stand__gopro__note__flex__title {
-  font-size: 22px;
+  font-size: 1.15vw;
   color: #555;
   font-weight: 400;
   margin: 0;
@@ -749,7 +749,7 @@
 }
 
 .room__popup__stand__gopro__note__flex__text {
-  font-size: 22px;
+  font-size: 1.15vw;
   color: #000;
   font-weight: 400;
   margin: 0 0 10% 0;
@@ -757,19 +757,19 @@
 }
 
 .room__popup__stand__gopro__note__flex__price {
-  font-size: 22px;
+  font-size: 1.15vw;
   color: #555;
   font-weight: 400;
   text-align: center;
 }
 
 .room__popup__stand__photocam {
-  width: 10%;
-  height: 15%;
+  width: 15%;
+  height: 20%;
   background: rgba(255, 255, 255, 0);
   position: absolute;
-  top: 69%;
-  left: 52%;
+  top: 60%;
+  left: 50%;
   cursor: pointer;
   z-index: 10;
 }
@@ -780,7 +780,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("../img/shadows/photocam.png");
+  background: url("../img/shadows/photocam2.png");
   background-size: cover;
   -webkit-animation: border-animation 3.1s infinite ease-in-out 1.5s;
           animation: border-animation 3.1s infinite ease-in-out 1.5s;
@@ -790,23 +790,23 @@
 .room__popup__stand__photocam__note {
   display: none;
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 30px;
+  border-radius: 2vw;
   width: 60%;
   height: 45%;
   position: absolute;
-  top: 18%;
-  left: 25.5%;
+  top: 8%;
+  left: 27.5%;
 }
 
 .room__popup__stand__photocam__note::before {
   content: "";
   position: absolute;
   display: block;
-  width: 60px;
-  height: 30px;
-  bottom: 0;
+  width: 3.4vw;
+  height: 1.8vw;
+  top: 100%;
   left: 50%;
-  margin: 0px 0 -30px -30px;
+  margin: 0 0 0 -1.7vw;
   background: url("../img/triangle.png");
   background-size: 100% 100%;
   opacity: 0.8;
@@ -860,11 +860,11 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 auto 0 auto;
-  max-width: 150px;
+  max-width: 8vw;
 }
 
 .room__popup__stand__photocam__note__flex__title {
-  font-size: 22px;
+  font-size: 1.15vw;
   color: #555;
   font-weight: 400;
   margin: 0;
@@ -872,7 +872,7 @@
 }
 
 .room__popup__stand__photocam__note__flex__text {
-  font-size: 22px;
+  font-size: 1.15vw;
   color: #000;
   font-weight: 400;
   margin: 0 0 10% 0;
@@ -880,7 +880,7 @@
 }
 
 .room__popup__stand__photocam__note__flex__price {
-  font-size: 22px;
+  font-size: 1.15vw;
   color: #555;
   font-weight: 400;
   text-align: center;
@@ -930,7 +930,7 @@
   padding: 2%;
   z-index: 10;
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 30px;
+  border-radius: 2vw;
   width: 20%;
   height: 27%;
   position: absolute;
@@ -942,11 +942,11 @@
   content: "";
   position: absolute;
   display: block;
-  width: 60px;
-  height: 30px;
-  bottom: 0;
+  width: 3.4vw;
+  height: 1.8vw;
+  top: 100%;
   left: 50%;
-  margin: 0px 0 -30px -30px;
+  margin: 0 0 0 -1.7vw;
   background: url("../img/triangle.png");
   background-size: 100% 100%;
   opacity: 0.8;
@@ -955,7 +955,7 @@
 }
 
 .room__things__piano__note__title {
-  font-size: 22px;
+  font-size: 1.15vw;
   color: #555;
   font-weight: 400;
   margin: 0;
@@ -963,7 +963,7 @@
 }
 
 .room__things__piano__note__text {
-  font-size: 22px;
+  font-size: 1.15vw;
   color: #000;
   font-weight: 400;
   margin: 7% 0 0 0;
@@ -971,7 +971,7 @@
 }
 
 .room__things__piano__note__price {
-  font-size: 22px;
+  font-size: 1.15vw;
   color: #555;
   font-weight: 400;
   margin: 7% 0 0 0;
@@ -999,7 +999,7 @@
 .room__things__telescope__hover {
   z-index: 5;
   position: absolute;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(0, 255, 0, 0);
   width: 8%;
   height: 30%;
   cursor: pointer;
@@ -1012,7 +1012,7 @@
   padding: 2%;
   z-index: 10;
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 30px;
+  border-radius: 2vw;
   width: 24%;
   height: 25%;
   position: absolute;
@@ -1024,18 +1024,18 @@
   content: "";
   position: absolute;
   display: block;
-  width: 30px;
-  height: 60px;
+  width: 1.8vw;
+  height: 3.4vw;
   bottom: 50%;
   left: 100%;
-  margin: 0px 0 -30px 0px;
+  margin: 0px 0 -1.7vw 0px;
   background: url("../img/triangle2.png");
   background-size: 100% 100%;
   opacity: 0.8;
 }
 
 .room__things__telescope__note__title {
-  font-size: 22px;
+  font-size: 1.15vw;
   color: #555;
   font-weight: 400;
   margin: 0;
@@ -1043,7 +1043,7 @@
 }
 
 .room__things__telescope__note__text {
-  font-size: 22px;
+  font-size: 1.15vw;
   color: #000;
   font-weight: 400;
   margin: 7% 0 0 0;
@@ -1051,7 +1051,7 @@
 }
 
 .room__things__telescope__note__price {
-  font-size: 22px;
+  font-size: 1.15vw;
   color: #555;
   font-weight: 400;
   margin: 7% 0 0 0;
@@ -1107,30 +1107,30 @@
   padding: 2%;
   z-index: 10;
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 30px;
-  width: 24%;
+  border-radius: 2vw;
+  width: 25%;
   height: 25%;
   position: absolute;
-  top: 55%;
-  left: 56%;
+  top: 65%;
+  left: 52%;
 }
 
 .room__things__run__note::before {
   content: "";
   position: absolute;
   display: block;
-  width: 30px;
-  height: 60px;
+  width: 1.8vw;
+  height: 3.4vw;
   bottom: 50%;
   left: 100%;
-  margin: 0px 0 -30px 0px;
+  margin: 0 0 -1.7vw 0;
   background: url("../img/triangle2.png");
   background-size: 100% 100%;
   opacity: 0.8;
 }
 
 .room__things__run__note__title {
-  font-size: 22px;
+  font-size: 1.15vw;
   color: #555;
   font-weight: 400;
   margin: 0;
@@ -1138,7 +1138,7 @@
 }
 
 .room__things__run__note__text {
-  font-size: 22px;
+  font-size: 1.15vw;
   color: #000;
   font-weight: 400;
   margin: 7% 0 0 0;
@@ -1146,7 +1146,7 @@
 }
 
 .room__things__run__note__price {
-  font-size: 22px;
+  font-size: 1.15vw;
   color: #555;
   font-weight: 400;
   margin: 7% 0 0 0;
@@ -1174,7 +1174,7 @@
 .room__things__sound__hover1 {
   z-index: 5;
   position: absolute;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(255, 0, 0, 0);
   width: 8%;
   height: 18%;
   cursor: pointer;
@@ -1185,7 +1185,7 @@
 .room__things__sound__hover2 {
   z-index: 5;
   position: absolute;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(255, 0, 0, 0);
   width: 8%;
   height: 24%;
   cursor: pointer;
@@ -1198,7 +1198,7 @@
   padding: 2%;
   z-index: 10;
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 30px;
+  border-radius: 2vw;
   width: 22%;
   height: 25%;
   position: absolute;
@@ -1210,18 +1210,18 @@
   content: "";
   position: absolute;
   display: block;
-  width: 30px;
-  height: 60px;
+  width: 1.8vw;
+  height: 3.4vw;
   bottom: 50%;
   left: 100%;
-  margin: 0px 0 -30px 0px;
+  margin: 0 0 -1.7vw 0;
   background: url("../img/triangle2.png");
   background-size: 100% 100%;
   opacity: 0.8;
 }
 
 .room__things__sound__note__title {
-  font-size: 22px;
+  font-size: 1.15vw;
   color: #555;
   font-weight: 400;
   margin: 0;
@@ -1229,7 +1229,7 @@
 }
 
 .room__things__sound__note__text {
-  font-size: 22px;
+  font-size: 1.15vw;
   color: #000;
   font-weight: 400;
   margin: 7% 0 0 0;
@@ -1237,7 +1237,90 @@
 }
 
 .room__things__sound__note__price {
-  font-size: 22px;
+  font-size: 1.15vw;
+  color: #555;
+  font-weight: 400;
+  margin: 7% 0 0 0;
+  text-align: center;
+}
+
+.room__things__scooter {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.room__things__scooter__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../img/shadows/scooter2.png");
+  background-size: cover;
+  opacity: 0;
+  -webkit-animation: border-animation2 4s infinite ease-in-out 1.5s;
+          animation: border-animation2 4s infinite ease-in-out 1.5s;
+  z-index: 2;
+}
+
+.room__things__scooter__hover {
+  z-index: 5;
+  position: absolute;
+  background: rgba(255, 0, 0, 0);
+  width: 28%;
+  height: 18%;
+  cursor: pointer;
+  top: 81%;
+  left: 8%;
+}
+
+.room__things__scooter__note {
+  display: none;
+  padding: 2%;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 2vw;
+  width: 24%;
+  height: 28%;
+  position: absolute;
+  top: 55%;
+  left: 15%;
+}
+
+.room__things__scooter__note::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 3.4vw;
+  height: 1.8vw;
+  top: 100%;
+  left: 50%;
+  margin: 0 0 0 -1.7vw;
+  background: url("../img/triangle.png");
+  background-size: 100% 100%;
+  opacity: 0.8;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.room__things__scooter__note__title {
+  font-size: 1.15vw;
+  color: #555;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+}
+
+.room__things__scooter__note__text {
+  font-size: 1.15vw;
+  color: #000;
+  font-weight: 400;
+  margin: 7% 0 0 0;
+  text-align: center;
+}
+
+.room__things__scooter__note__price {
+  font-size: 1.15vw;
   color: #555;
   font-weight: 400;
   margin: 7% 0 0 0;
