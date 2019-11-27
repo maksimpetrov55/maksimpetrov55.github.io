@@ -2,6 +2,29 @@
   font-family: sans-serif;
 }
 
+.wrap-room {
+  overflow: auto;
+  width: 100%;
+  border-bottom: 0px solid #444;
+}
+
+.wrap-room::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+  background: #e0e0e0;
+  padding: 5px;
+}
+
+.wrap-room::-webkit-scrollbar-thumb {
+  background: -webkit-gradient(linear, left top, left bottom, from(#505050), color-stop(80%, #6e6e6e));
+  background: linear-gradient(180deg, #505050 0%, #6e6e6e 80%);
+}
+
+.wrap-room::-webkit-scrollbar-button {
+  background: #e0e0e0;
+  width: 10px;
+}
+
 .room {
   position: relative;
   display: -webkit-box;
@@ -15,6 +38,8 @@
       -ms-flex-direction: column;
           flex-direction: column;
   overflow: hidden;
+  width: 100%;
+  min-width: 1340px;
 }
 
 .room__dark-matter {
