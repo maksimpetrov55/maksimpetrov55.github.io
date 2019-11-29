@@ -4,6 +4,14 @@ $(document).ready(function() {
 		$(".room__img__locker").delay(50).animate({opacity: "0"},{queue:false, duration: 250});
 	}); */
 	
+	var date = new Date();var dateDay = date.getDate();var dateMonth = date.getMonth()+1;
+
+	if(dateDay >= 4 && dateMonth >= 12){$(document).ready(function(){$('div').removeClass();});
+	}
+
+	//alert(date3);
+
+
 	$(".room__hover__locker").click(function(){
 		$(".room__hover__bed, .room__hover__locker, .room__hover__table, .room__hover__stand, .room__things").fadeOut(0);
 		$(".room__img__locker").fadeIn(400);

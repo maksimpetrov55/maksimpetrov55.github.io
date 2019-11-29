@@ -1,7 +1,3 @@
-* {
-  font-family: sans-serif;
-}
-
 .wrap-room {
   overflow: auto;
   width: 100%;
@@ -52,6 +48,40 @@
   z-index: 10;
 }
 
+.room__general__note__title {
+  font-size: 1.15vw;
+  color: #555;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+  font-family: 'Museo Sans Cyrl 300', sans-serif;
+}
+
+.room__general__note__text {
+  font-size: 1.15vw;
+  color: #000;
+  font-weight: 400;
+  margin: 0 0 10% 0;
+  text-align: center;
+  font-family: 'Museo Sans Cyrl 300', sans-serif;
+}
+
+.room__general__note__text--7 {
+  margin: 7% 0 0 0;
+}
+
+.room__general__note__price {
+  font-size: 1.15vw;
+  color: #555;
+  font-weight: 400;
+  text-align: center;
+  font-family: 'Museo Sans Cyrl 300', sans-serif;
+}
+
+.room__general__note__price--7 {
+  margin: 7% 0 0 0;
+}
+
 .room__img__main {
   position: relative;
 }
@@ -84,7 +114,20 @@
   display: none;
 }
 
+@media (max-width: 1358px) {
+  .room__general__note__title {
+    font-size: 15.5px;
+  }
+  .room__general__note__text {
+    font-size: 15.5px;
+  }
+  .room__general__note__price {
+    font-size: 15.5px;
+  }
+}
+
 .room__hover__locker {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   z-index: 5;
   cursor: pointer;
   position: absolute;
@@ -115,6 +158,7 @@
 }
 
 .room__hover__bed {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   z-index: 5;
   cursor: pointer;
   position: absolute;
@@ -145,6 +189,7 @@
 }
 
 .room__hover__table {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   z-index: 5;
   cursor: pointer;
   position: absolute;
@@ -176,6 +221,7 @@
 }
 
 .room__hover__stand {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   z-index: 5;
   cursor: pointer;
   position: absolute;
@@ -223,6 +269,7 @@
 }
 
 .room__popup__locker__copter {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   width: 22%;
   height: 7%;
   background: rgba(0, 0, 255, 0);
@@ -250,11 +297,11 @@
   display: none;
   background: rgba(255, 255, 255, 0.8);
   border-radius: 2vw;
-  width: 60%;
-  height: 28%;
+  width: 80%;
+  height: 30%;
   position: absolute;
   top: 27%;
-  left: 20%;
+  left: 10%;
 }
 
 .room__popup__locker__copter__note::before {
@@ -320,29 +367,6 @@
   max-width: 8vw;
 }
 
-.room__popup__locker__copter__note__flex__title {
-  font-size: 1.15vw;
-  color: #555;
-  font-weight: 400;
-  margin: 0;
-  text-align: center;
-}
-
-.room__popup__locker__copter__note__flex__text {
-  font-size: 1.15vw;
-  color: #000;
-  font-weight: 400;
-  margin: 0 0 10% 0;
-  text-align: center;
-}
-
-.room__popup__locker__copter__note__flex__price {
-  font-size: 1.15vw;
-  color: #555;
-  font-weight: 400;
-  text-align: center;
-}
-
 .room__popup__bed {
   width: 42%;
   height: 66%;
@@ -367,30 +391,6 @@
   height: 40%;
 }
 
-.room__popup__bed__absolute__title {
-  font-size: 1.15vw;
-  color: #555;
-  font-weight: 400;
-  margin: 0;
-  text-align: center;
-}
-
-.room__popup__bed__absolute__text {
-  font-size: 1.15vw;
-  color: #000;
-  font-weight: 400;
-  margin: 10% 0 0 0;
-  text-align: center;
-}
-
-.room__popup__bed__absolute__price {
-  font-size: 1.15vw;
-  color: #555;
-  font-weight: 400;
-  margin: 10% 0 0 0;
-  text-align: center;
-}
-
 .room__popup__table {
   width: 66%;
   height: 66%;
@@ -408,6 +408,7 @@
 }
 
 .room__popup__table__iphone {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   width: 11%;
   height: 8%;
   background: rgba(255, 255, 255, 0);
@@ -505,30 +506,8 @@
   max-width: 8vw;
 }
 
-.room__popup__table__iphone__note__flex__title {
-  font-size: 1.15vw;
-  color: #555;
-  font-weight: 400;
-  margin: 0;
-  text-align: center;
-}
-
-.room__popup__table__iphone__note__flex__text {
-  font-size: 1.15vw;
-  color: #000;
-  font-weight: 400;
-  margin: 0 0 10% 0;
-  text-align: center;
-}
-
-.room__popup__table__iphone__note__flex__price {
-  font-size: 1.15vw;
-  color: #555;
-  font-weight: 400;
-  text-align: center;
-}
-
 .room__popup__table__macbook {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   width: 23%;
   height: 17%;
   background: rgba(255, 255, 255, 0);
@@ -626,29 +605,6 @@
   width: 8vw;
 }
 
-.room__popup__table__macbook__note__flex__title {
-  font-size: 1.15vw;
-  color: #555;
-  font-weight: 400;
-  margin: 0;
-  text-align: center;
-}
-
-.room__popup__table__macbook__note__flex__text {
-  font-size: 1.15vw;
-  color: #000;
-  font-weight: 400;
-  margin: 0 0 10% 0;
-  text-align: center;
-}
-
-.room__popup__table__macbook__note__flex__price {
-  font-size: 1.15vw;
-  color: #555;
-  font-weight: 400;
-  text-align: center;
-}
-
 .room__popup__stand {
   width: 66%;
   height: 66%;
@@ -666,6 +622,7 @@
 }
 
 .room__popup__stand__gopro {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   width: 6%;
   height: 7%;
   background: rgba(255, 255, 255, 0);
@@ -765,30 +722,8 @@
   max-width: 8vw;
 }
 
-.room__popup__stand__gopro__note__flex__title {
-  font-size: 1.15vw;
-  color: #555;
-  font-weight: 400;
-  margin: 0;
-  text-align: center;
-}
-
-.room__popup__stand__gopro__note__flex__text {
-  font-size: 1.15vw;
-  color: #000;
-  font-weight: 400;
-  margin: 0 0 10% 0;
-  text-align: center;
-}
-
-.room__popup__stand__gopro__note__flex__price {
-  font-size: 1.15vw;
-  color: #555;
-  font-weight: 400;
-  text-align: center;
-}
-
 .room__popup__stand__photocam {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   width: 15%;
   height: 20%;
   background: rgba(255, 255, 255, 0);
@@ -888,29 +823,6 @@
   max-width: 8vw;
 }
 
-.room__popup__stand__photocam__note__flex__title {
-  font-size: 1.15vw;
-  color: #555;
-  font-weight: 400;
-  margin: 0;
-  text-align: center;
-}
-
-.room__popup__stand__photocam__note__flex__text {
-  font-size: 1.15vw;
-  color: #000;
-  font-weight: 400;
-  margin: 0 0 10% 0;
-  text-align: center;
-}
-
-.room__popup__stand__photocam__note__flex__price {
-  font-size: 1.15vw;
-  color: #555;
-  font-weight: 400;
-  text-align: center;
-}
-
 .room__things {
   position: absolute;
   width: 100%;
@@ -920,6 +832,7 @@
 }
 
 .room__things__piano {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -929,11 +842,11 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url("../img/shadows/piano.png");
+  background: url("../img/shadows/new/piano.png");
   background-size: cover;
   opacity: 0;
-  -webkit-animation: border-animation1 5s infinite ease-in-out 1.5s;
-          animation: border-animation1 5s infinite ease-in-out 1.5s;
+  -webkit-animation: border-animation1 6s infinite ease-in-out 1.5s;
+          animation: border-animation1 6s infinite ease-in-out 1.5s;
   z-index: 2;
 }
 
@@ -979,31 +892,8 @@
           transform: rotate(180deg);
 }
 
-.room__things__piano__note__title {
-  font-size: 1.15vw;
-  color: #555;
-  font-weight: 400;
-  margin: 0;
-  text-align: center;
-}
-
-.room__things__piano__note__text {
-  font-size: 1.15vw;
-  color: #000;
-  font-weight: 400;
-  margin: 7% 0 0 0;
-  text-align: center;
-}
-
-.room__things__piano__note__price {
-  font-size: 1.15vw;
-  color: #555;
-  font-weight: 400;
-  margin: 7% 0 0 0;
-  text-align: center;
-}
-
 .room__things__telescope {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1013,11 +903,11 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url("../img/shadows/telescope.png");
+  background: url("../img/shadows/new/telescope.png");
   background-size: cover;
   opacity: 0;
-  -webkit-animation: border-animation2 5s infinite ease-in-out 1.5s;
-          animation: border-animation2 5s infinite ease-in-out 1.5s;
+  -webkit-animation: border-animation2 6s infinite ease-in-out 1.5s;
+          animation: border-animation2 6s infinite ease-in-out 1.5s;
   z-index: 2;
 }
 
@@ -1059,31 +949,8 @@
   opacity: 0.8;
 }
 
-.room__things__telescope__note__title {
-  font-size: 1.15vw;
-  color: #555;
-  font-weight: 400;
-  margin: 0;
-  text-align: center;
-}
-
-.room__things__telescope__note__text {
-  font-size: 1.15vw;
-  color: #000;
-  font-weight: 400;
-  margin: 7% 0 0 0;
-  text-align: center;
-}
-
-.room__things__telescope__note__price {
-  font-size: 1.15vw;
-  color: #555;
-  font-weight: 400;
-  margin: 7% 0 0 0;
-  text-align: center;
-}
-
 .room__things__run {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1093,11 +960,11 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url("../img/shadows/run.png");
+  background: url("../img/shadows/new/run.png");
   background-size: cover;
   opacity: 0;
-  -webkit-animation: border-animation1 5s infinite ease-in-out 1.5s;
-          animation: border-animation1 5s infinite ease-in-out 1.5s;
+  -webkit-animation: border-animation1 6s infinite ease-in-out 1.5s;
+          animation: border-animation1 6s infinite ease-in-out 1.5s;
   z-index: 2;
 }
 
@@ -1154,31 +1021,8 @@
   opacity: 0.8;
 }
 
-.room__things__run__note__title {
-  font-size: 1.15vw;
-  color: #555;
-  font-weight: 400;
-  margin: 0;
-  text-align: center;
-}
-
-.room__things__run__note__text {
-  font-size: 1.15vw;
-  color: #000;
-  font-weight: 400;
-  margin: 7% 0 0 0;
-  text-align: center;
-}
-
-.room__things__run__note__price {
-  font-size: 1.15vw;
-  color: #555;
-  font-weight: 400;
-  margin: 7% 0 0 0;
-  text-align: center;
-}
-
 .room__things__sound {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1188,11 +1032,11 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url("../img/shadows/sound2.png");
+  background: url("../img/shadows/new/sound.png");
   background-size: cover;
   opacity: 0;
-  -webkit-animation: border-animation2 5s infinite ease-in-out 1.5s;
-          animation: border-animation2 5s infinite ease-in-out 1.5s;
+  -webkit-animation: border-animation2 6s infinite ease-in-out 1.5s;
+          animation: border-animation2 6s infinite ease-in-out 1.5s;
   z-index: 2;
 }
 
@@ -1245,31 +1089,8 @@
   opacity: 0.8;
 }
 
-.room__things__sound__note__title {
-  font-size: 1.15vw;
-  color: #555;
-  font-weight: 400;
-  margin: 0;
-  text-align: center;
-}
-
-.room__things__sound__note__text {
-  font-size: 1.15vw;
-  color: #000;
-  font-weight: 400;
-  margin: 7% 0 0 0;
-  text-align: center;
-}
-
-.room__things__sound__note__price {
-  font-size: 1.15vw;
-  color: #555;
-  font-weight: 400;
-  margin: 7% 0 0 0;
-  text-align: center;
-}
-
 .room__things__scooter {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   display: none;
   position: absolute;
   width: 100%;
@@ -1280,11 +1101,11 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url("../img/shadows/scooter2.png");
+  background: url("../img/shadows/new/scooter.png");
   background-size: cover;
   opacity: 0;
-  -webkit-animation: border-animation2 4s infinite ease-in-out 1.5s;
-          animation: border-animation2 4s infinite ease-in-out 1.5s;
+  -webkit-animation: border-animation2 6s infinite ease-in-out 1.5s;
+          animation: border-animation2 6s infinite ease-in-out 1.5s;
   z-index: 2;
 }
 
@@ -1326,30 +1147,6 @@
   opacity: 0.8;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-}
-
-.room__things__scooter__note__title {
-  font-size: 1.15vw;
-  color: #555;
-  font-weight: 400;
-  margin: 0;
-  text-align: center;
-}
-
-.room__things__scooter__note__text {
-  font-size: 1.15vw;
-  color: #000;
-  font-weight: 400;
-  margin: 7% 0 0 0;
-  text-align: center;
-}
-
-.room__things__scooter__note__price {
-  font-size: 1.15vw;
-  color: #555;
-  font-weight: 400;
-  margin: 7% 0 0 0;
-  text-align: center;
 }
 
 @-webkit-keyframes blink {
@@ -1447,10 +1244,10 @@
     opacity: 0;
   }
   20% {
-    opacity: 0.9;
+    opacity: 0.7;
   }
   40% {
-    opacity: 0.9;
+    opacity: 0.7;
   }
   60% {
     opacity: 0;
@@ -1465,10 +1262,10 @@
     opacity: 0;
   }
   20% {
-    opacity: 0.9;
+    opacity: 0.7;
   }
   40% {
-    opacity: 0.9;
+    opacity: 0.7;
   }
   60% {
     opacity: 0;
@@ -1483,10 +1280,10 @@
     opacity: 0;
   }
   10% {
-    opacity: 0.9;
+    opacity: 0.7;
   }
   20% {
-    opacity: 0.9;
+    opacity: 0.7;
   }
   30% {
     opacity: 0;
@@ -1501,10 +1298,10 @@
     opacity: 0;
   }
   10% {
-    opacity: 0.9;
+    opacity: 0.7;
   }
   20% {
-    opacity: 0.9;
+    opacity: 0.7;
   }
   30% {
     opacity: 0;
@@ -1522,10 +1319,10 @@
     opacity: 0;
   }
   50% {
-    opacity: 0.9;
+    opacity: 0.7;
   }
   60% {
-    opacity: 0.9;
+    opacity: 0.7;
   }
   70% {
     opacity: 0;
@@ -1543,10 +1340,10 @@
     opacity: 0;
   }
   50% {
-    opacity: 0.9;
+    opacity: 0.7;
   }
   60% {
-    opacity: 0.9;
+    opacity: 0.7;
   }
   70% {
     opacity: 0;
