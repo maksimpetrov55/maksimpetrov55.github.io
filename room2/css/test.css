@@ -1,0 +1,32 @@
+.pilsing {
+
+    position: absolute;
+    z-index: 100;
+    width: 40px;
+    height: 40px;
+    left: 50%;
+    top: 50%;
+    margin: -20px 0 0 -20px;
+
+}
+.pilsing div:nth-child(1) {
+
+    animation: pulse 2s infinite;
+}
+.pilsing div:nth-child(2) {
+
+    animation: pulse 2s infinite .3s;
+}
+.pilsing div {
+
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fff;
+}

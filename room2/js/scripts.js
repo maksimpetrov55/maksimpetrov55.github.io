@@ -20,13 +20,10 @@ $(document).ready(function() {
 		$(".room__img__bed").fadeIn(400);
 		$(".room__things__scooter").fadeIn(400);
 		$(".room__point__bed").fadeOut(100);
+		$(".room__things__scooter__out1, .room__things__scooter__out2").fadeIn(0);
 	});
 
-	$(".room__things__scooter__hover").click(function(){
-		leave();
-	});
-
-	$(".room__things__scooter__out1, .room__things__scooter__out2").mouseenter(function(){
+	$(".room__things__scooter__out1, .room__things__scooter__out2").click(function(){
 		leave();
 	});
 
@@ -35,6 +32,7 @@ $(document).ready(function() {
 		$(".room__img__bed").fadeOut(400);
 		$(".room__hover__bed").delay(500).fadeIn(400);
 		$(".room__point__bed").delay(200).fadeIn(200);
+		$(".room__things__scooter__out1, .room__things__scooter__out2").fadeOut(0);
 	}
 
 
