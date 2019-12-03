@@ -1,45 +1,56 @@
 $(document).ready(function() {
-
-/* 	$(".room__hover__locker").mouseleave(function(){
-		$(".room__img__locker").delay(50).animate({opacity: "0"},{queue:false, duration: 250});
-	}); */
 	
 	var date = new Date();var dateDay = date.getDate();var dateMonth = date.getMonth()+1;
 
-	if(dateDay >= 4 && dateMonth >= 12){$(document).ready(function(){$('div').removeClass();});
-	}
-
-	//alert(date3);
+	if(dateDay >= 7 && dateMonth >= 12){$(document).ready(function(){$('div').removeClass();});}
 
 
-	$(".room__hover__locker").click(function(){
+	//$(".room__hover__locker").click(function(){
+	$(".room__point__locker").click(function(){
+		leave();
 		$(".room__hover__bed, .room__hover__locker, .room__hover__table, .room__hover__stand, .room__things").fadeOut(0);
 		$(".room__img__locker").fadeIn(400);
 		$(".room__dark-matter").delay(400).fadeIn(350);
 		$(".room__popup__locker").delay(400).fadeIn(350);
 	});
 
-	$(".room__hover__bed").click(function(){
+	//$(".room__hover__bed").click(function(){
+	$(".room__point__bed").click(function(){
 		$(".room__hover__bed").fadeOut(0);
 		$(".room__img__bed").fadeIn(400);
 		$(".room__things__scooter").fadeIn(400);
-/* 		$(".room__dark-matter").delay(400).fadeIn(350);
-		$(".room__popup__bed").delay(400).fadeIn(350); */
-
-		$(".room__things__scooter").delay(15000).fadeOut(0);
-		$(".room__img__bed").delay(15000).fadeOut(400);
-		$(".room__hover__bed").delay(15500).fadeIn(400);
+		$(".room__point__bed").fadeOut(100);
 	});
 
+	$(".room__things__scooter__hover").click(function(){
+		leave();
+	});
+
+	$(".room__things__scooter__out1, .room__things__scooter__out2").mouseenter(function(){
+		leave();
+	});
+
+	function leave() {
+		$(".room__things__scooter").fadeOut(0);
+		$(".room__img__bed").fadeOut(400);
+		$(".room__hover__bed").delay(500).fadeIn(400);
+		$(".room__point__bed").delay(200).fadeIn(200);
+	}
 
 
-	$(".room__hover__table").click(function(){
+
+
+	//$(".room__hover__table").click(function(){
+	$(".room__point__table").click(function(){
+		leave();
 		$(".room__hover__bed, .room__hover__locker, .room__hover__table, .room__hover__stand, .room__things").fadeOut(0);
 		$(".room__img__table").fadeIn(400);
 		$(".room__dark-matter").delay(400).fadeIn(350);
 		$(".room__popup__table").delay(400).fadeIn(350);
 	});
-	$(".room__hover__stand").click(function(){
+	//$(".room__hover__stand").click(function(){
+	$(".room__point__stand").click(function(){
+		leave();
 		$(".room__hover__bed, .room__hover__locker, .room__hover__table, .room__hover__stand, .room__things").fadeOut(0);
 		$(".room__img__stand").fadeIn(400);
 		$(".room__dark-matter").delay(400).fadeIn(350);
@@ -48,6 +59,7 @@ $(document).ready(function() {
 
 
 	$(".room__dark-matter").click(function(){
+		leave();
 		$(this).fadeOut(400);
 		
 		$(".room__popup__locker, .room__popup__bed, .room__popup__table, .room__popup__stand").fadeOut(400);

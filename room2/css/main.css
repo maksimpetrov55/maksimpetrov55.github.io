@@ -129,7 +129,6 @@
 .room__hover__locker {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   z-index: 5;
-  cursor: pointer;
   position: absolute;
   border-radius: 1vw;
   overflow: hidden;
@@ -139,28 +138,22 @@
   left: 31.5%;
   -webkit-transform: rotate(-2deg);
           transform: rotate(-2deg);
-}
-
-.room__hover__locker::before {
-  position: absolute;
-  content: "";
-  display: block;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(2, 0, 36, 0)), color-stop(50%, rgba(255, 255, 255, 0.5)), to(rgba(0, 212, 255, 0)));
-  background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(0, 212, 255, 0) 100%);
-  width: 90%;
-  height: 150%;
-  left: -120%;
-  top: -40%;
-  -webkit-transform: rotate(20deg);
-          transform: rotate(20deg);
-  -webkit-animation: blink 2.9s infinite ease-in-out;
-          animation: blink 2.9s infinite ease-in-out;
+  /*&::before
+                position: absolute
+                content: ""
+                display: block
+                background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(255,255,255,0.25) 50%, rgba(0,212,255,0) 100%)
+                width: 90%
+                height: 150%
+                left: -120%
+                top: -40%
+                transform: rotate(20deg)
+                animation: blink 2.9s infinite ease-in-out*/
 }
 
 .room__hover__bed {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   z-index: 5;
-  cursor: pointer;
   position: absolute;
   border-radius: 1vw;
   overflow: hidden;
@@ -170,28 +163,22 @@
   left: 13.1%;
   -webkit-transform: skewX(7deg);
           transform: skewX(7deg);
-}
-
-.room__hover__bed::before {
-  position: absolute;
-  content: "";
-  display: block;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(2, 0, 36, 0)), color-stop(50%, rgba(255, 255, 255, 0.5)), to(rgba(0, 212, 255, 0)));
-  background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(0, 212, 255, 0) 100%);
-  width: 20%;
-  height: 250%;
-  left: -120%;
-  top: -60%;
-  -webkit-transform: rotate(20deg);
-          transform: rotate(20deg);
-  -webkit-animation: blink 2.9s infinite ease-in-out;
-          animation: blink 2.9s infinite ease-in-out;
+  /*&::before
+                position: absolute
+                content: ""
+                display: block
+                background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(255,255,255,0.25) 50%, rgba(0,212,255,0) 100%)
+                width: 20%
+                height: 250%
+                left: -120%
+                top: -60%
+                transform: rotate(20deg)
+                animation: blink 2.9s infinite ease-in-out*/
 }
 
 .room__hover__table {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   z-index: 5;
-  cursor: pointer;
   position: absolute;
   overflow: hidden;
   width: 4.8%;
@@ -202,28 +189,22 @@
           transform: rotate(1.1deg);
   -webkit-transform: skewX(-10deg);
           transform: skewX(-10deg);
-}
-
-.room__hover__table::before {
-  position: absolute;
-  content: "";
-  display: block;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(2, 0, 36, 0)), color-stop(50%, rgba(255, 255, 255, 0.5)), to(rgba(0, 212, 255, 0)));
-  background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(0, 212, 255, 0) 100%);
-  width: 120%;
-  height: 250%;
-  left: -120%;
-  top: -100%;
-  -webkit-transform: rotate(20deg);
-          transform: rotate(20deg);
-  -webkit-animation: blink 2.9s infinite ease-in-out;
-          animation: blink 2.9s infinite ease-in-out;
+  /*&::before
+                position: absolute
+                content: ""
+                display: block
+                background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(255,255,255,0.25) 50%, rgba(0,212,255,0) 100%)
+                width: 120%
+                height: 250%
+                left: -120%
+                top: -100%
+                transform: rotate(20deg)
+                animation: blink 2.9s infinite ease-in-out*/
 }
 
 .room__hover__stand {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   z-index: 5;
-  cursor: pointer;
   position: absolute;
   overflow: hidden;
   width: 8.8%;
@@ -235,22 +216,105 @@
   -webkit-transform: skewY(36deg);
           transform: skewY(36deg);
   border-radius: 5px;
+  /*&::before
+                position: absolute
+                content: ""
+                display: block
+                background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(255,255,255,0.25) 50%, rgba(0,212,255,0) 100%)
+                width: 120%
+                height: 250%
+                left: -120%
+                top: -100%
+                transform: rotate(20deg)
+                animation: blink 2.9s infinite ease-in-out*/
 }
 
-.room__hover__stand::before {
+.room__point__locker {
+  cursor: pointer;
+  z-index: 6;
   position: absolute;
-  content: "";
-  display: block;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(2, 0, 36, 0)), color-stop(50%, rgba(255, 255, 255, 0.5)), to(rgba(0, 212, 255, 0)));
-  background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(0, 212, 255, 0) 100%);
-  width: 120%;
-  height: 250%;
-  left: -120%;
-  top: -100%;
-  -webkit-transform: rotate(20deg);
-          transform: rotate(20deg);
-  -webkit-animation: blink 2.9s infinite ease-in-out;
-          animation: blink 2.9s infinite ease-in-out;
+  top: 32%;
+  left: 38%;
+  width: 28px;
+  height: 28px;
+  border-radius: 100px;
+  border: 6px solid #fff;
+  background: #5555FF;
+  -webkit-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.room__point__locker:hover {
+  border: 7px solid #5555FF;
+  background: #fff;
+}
+
+.room__point__bed {
+  cursor: pointer;
+  z-index: 6;
+  position: absolute;
+  top: 84%;
+  left: 24%;
+  width: 28px;
+  height: 28px;
+  border-radius: 100px;
+  border: 6px solid #fff;
+  background: #5555FF;
+  -webkit-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.room__point__bed:hover {
+  border: 7px solid #5555FF;
+  background: #fff;
+}
+
+.room__point__table {
+  cursor: pointer;
+  z-index: 6;
+  position: absolute;
+  top: 49%;
+  left: 74%;
+  width: 28px;
+  height: 28px;
+  border-radius: 100px;
+  border: 6px solid #fff;
+  background: #5555FF;
+  -webkit-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.room__point__table:hover {
+  border: 7px solid #5555FF;
+  background: #fff;
+}
+
+.room__point__stand {
+  cursor: pointer;
+  z-index: 6;
+  position: absolute;
+  top: 63%;
+  left: 79%;
+  width: 28px;
+  height: 28px;
+  border-radius: 100px;
+  border: 6px solid #fff;
+  background: #5555FF;
+  -webkit-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.room__point__stand:hover {
+  border: 7px solid #5555FF;
+  background: #fff;
 }
 
 .room__popup__locker {
@@ -308,11 +372,11 @@
   content: "";
   position: absolute;
   display: block;
-  width: 3.4vw;
-  height: 1.8vw;
-  top: 0;
-  left: 50%;
-  margin: -1.8vw 0 0 -1.7vw;
+  width: 12%;
+  height: 15%;
+  top: -15%;
+  left: 44%;
+  margin: 0;
   background: url("../img/triangle.png");
   background-size: 100% 100%;
   opacity: 0.8;
@@ -447,11 +511,11 @@
   content: "";
   position: absolute;
   display: block;
-  width: 1.8vw;
-  height: 3.4vw;
-  top: 50%;
+  width: 7%;
+  height: 26%;
+  top: 37%;
   left: 100%;
-  margin: -1.7vw 0 0 0;
+  margin: 0;
   background: url("../img/triangle2.png");
   background-size: 100% 100%;
   opacity: 0.8;
@@ -546,11 +610,11 @@
   content: "";
   position: absolute;
   display: block;
-  width: 1.8vw;
-  height: 3.4vw;
-  top: 50%;
+  width: 6%;
+  height: 24%;
+  top: 38%;
   left: 100%;
-  margin: -1.7vw 0 0 0;
+  margin: 0;
   background: url("../img/triangle2.png");
   background-size: 100% 100%;
   opacity: 0.8;
@@ -661,11 +725,11 @@
   content: "";
   position: absolute;
   display: block;
-  width: 3.4vw;
-  height: 1.8vw;
+  width: 14%;
+  height: 13%;
   top: 100%;
-  left: 50%;
-  margin: 0 0 0 -1.7vw;
+  left: 43%;
+  margin: 0;
   background: url("../img/triangle.png");
   background-size: 100% 100%;
   opacity: 0.8;
@@ -754,7 +818,7 @@
   width: 60%;
   height: 45%;
   position: absolute;
-  top: 8%;
+  top: 7%;
   left: 27.5%;
 }
 
@@ -762,11 +826,11 @@
   content: "";
   position: absolute;
   display: block;
-  width: 3.4vw;
-  height: 1.8vw;
+  width: 10%;
+  height: 12%;
   top: 100%;
-  left: 50%;
-  margin: 0 0 0 -1.7vw;
+  left: 45%;
+  margin: 0;
   background: url("../img/triangle.png");
   background-size: 100% 100%;
   opacity: 0.8;
@@ -1137,16 +1201,36 @@
   content: "";
   position: absolute;
   display: block;
-  width: 3.4vw;
-  height: 1.8vw;
+  width: 14%;
+  height: 11%;
   top: 100%;
-  left: 50%;
-  margin: 0 0 0 -1.7vw;
+  left: 43%;
+  margin: 0;
   background: url("../img/triangle.png");
   background-size: 100% 100%;
   opacity: 0.8;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.room__things__scooter__out1 {
+  z-index: 4;
+  position: absolute;
+  background: rgba(220, 220, 0, 0.5);
+  width: 47%;
+  height: 9%;
+  top: 63%;
+  left: 0%;
+}
+
+.room__things__scooter__out2 {
+  z-index: 4;
+  position: absolute;
+  background: rgba(220, 0, 220, 0.5);
+  width: 5%;
+  height: 30%;
+  bottom: 0;
+  left: 42%;
 }
 
 @-webkit-keyframes blink {
