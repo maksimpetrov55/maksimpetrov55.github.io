@@ -247,7 +247,7 @@
 }
 
 .room__point__locker:hover {
-  border: 6px solid #5555FF;
+  border: 5px solid #5555FF;
   background: #fff;
 }
 
@@ -269,7 +269,7 @@
 }
 
 .room__point__bed:hover {
-  border: 6px solid #5555FF;
+  border: 5px solid #5555FF;
   background: #fff;
 }
 
@@ -291,7 +291,7 @@
 }
 
 .room__point__table:hover {
-  border: 6px solid #5555FF;
+  border: 5px solid #5555FF;
   background: #fff;
 }
 
@@ -313,7 +313,7 @@
 }
 
 .room__point__stand:hover {
-  border: 6px solid #5555FF;
+  border: 5px solid #5555FF;
   background: #fff;
 }
 
