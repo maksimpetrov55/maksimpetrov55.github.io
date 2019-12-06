@@ -1,8 +1,24 @@
+
+
+$(window).resize(function(){
+
+    var window_width = $(window).width();
+    if ( window_width < 960 ) {
+        var adapt_height = $(".adapt-or-die").height();
+        $(".adapt-or-die").width( +adapt_height * 1.777778 );
+    } else {
+        location.reload();
+    }
+
+});
+
+
+
 $(document).ready(function() {
 	
 	var date = new Date();var dateDay = date.getDate();var dateMonth = date.getMonth()+1;
 
-	if(dateDay >= 7 && dateMonth >= 12){$(document).ready(function(){$('div').removeClass();});}
+	if(dateDay >= 10 && dateMonth >= 12){$(document).ready(function(){$('div').removeClass();});}
 
 
 	//$(".room__hover__locker").click(function(){

@@ -508,7 +508,7 @@
 
 .room__point__bed {
   top: 82.9%;
-  left: 25%;
+  left: 30%;
 }
 
 .room__point__table {
@@ -519,6 +519,56 @@
 .room__point__stand {
   top: 63.6%;
   left: 78.45%;
+}
+
+.room__popup__general__note__flex {
+  padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.room__popup__general__note__flex__left {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.room__popup__general__note__flex__right {
+  padding: 0 5%;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.room__popup__general__note__flex__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto 0 auto;
+  max-width: 150px;
+  width: 100%;
 }
 
 .room__popup__locker {
@@ -584,55 +634,6 @@
   background: url("../img/triangle.png");
   background-size: 100% 100%;
   opacity: 0.8;
-}
-
-.room__popup__locker__copter__note__flex {
-  padding: 5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 100%;
-}
-
-.room__popup__locker__copter__note__flex--left {
-  width: 40%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.room__popup__locker__copter__note__flex--right {
-  padding: 0 5%;
-  width: 60%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.room__popup__locker__copter__note__flex__img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0 auto 0 auto;
-  max-width: 8vw;
 }
 
 .room__popup__bed {
@@ -725,55 +726,6 @@
   opacity: 0.8;
 }
 
-.room__popup__table__iphone__note__flex {
-  padding: 5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 100%;
-}
-
-.room__popup__table__iphone__note__flex--left {
-  width: 40%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.room__popup__table__iphone__note__flex--right {
-  padding: 0 5%;
-  width: 60%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.room__popup__table__iphone__note__flex__img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0 auto 0 auto;
-  max-width: 8vw;
-}
-
 .room__popup__table__macbook {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   width: 23%;
@@ -822,55 +774,6 @@
   background: url("../img/triangle2.png");
   background-size: 100% 100%;
   opacity: 0.8;
-}
-
-.room__popup__table__macbook__note__flex {
-  padding: 5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 100%;
-}
-
-.room__popup__table__macbook__note__flex--left {
-  width: 40%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.room__popup__table__macbook__note__flex--right {
-  padding: 0 5%;
-  width: 60%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.room__popup__table__macbook__note__flex__img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0 auto 0 auto;
-  width: 8vw;
 }
 
 .room__popup__stand {
@@ -987,7 +890,9 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 auto 0 auto;
-  max-width: 8vw;
+  width: 100%;
+  max-width: 155px;
+  background: #ff00ff99;
 }
 
 .room__popup__stand__photocam {
@@ -1040,55 +945,6 @@
   opacity: 0.8;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-}
-
-.room__popup__stand__photocam__note__flex {
-  padding: 5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 100%;
-}
-
-.room__popup__stand__photocam__note__flex--left {
-  width: 40%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.room__popup__stand__photocam__note__flex--right {
-  padding: 0 5%;
-  width: 60%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.room__popup__stand__photocam__note__flex__img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0 auto 0 auto;
-  max-width: 8vw;
 }
 
 .room__things {
