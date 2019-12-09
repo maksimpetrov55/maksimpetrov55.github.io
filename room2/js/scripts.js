@@ -8,8 +8,7 @@ $(document).ready(function() {
 	function adapt() {
 
 		var win_width = window.innerWidth;
-	
-		//var window_width = $(window).width();
+
 
 		if ( +win_width > 1300 ) {
 
@@ -50,6 +49,10 @@ $(document).ready(function() {
 			$(".room__general__note__title, .room__general__note__text, .room__general__note__price").css({
 				fontSize: adapt_fz
 			});
+
+			var window_width = $(window).width();
+
+			$(".wrap-room").scrollLeft( (+b_adapt_width / 2) * (1 - (+window_width / +b_adapt_width))  );
 	
 		}
 	
