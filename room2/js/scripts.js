@@ -44,6 +44,12 @@ $(document).ready(function() {
 				width: b_adapt_width,
 				height: "100%"
 			});
+
+			var adapt_fz = +a_height * 0.02;
+
+			$(".room__general__note__title, .room__general__note__text, .room__general__note__price").css({
+				fontSize: adapt_fz
+			});
 	
 		}
 	
