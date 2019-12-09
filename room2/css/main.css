@@ -340,16 +340,15 @@
   position: absolute;
   width: 2.2%;
   height: 3.911116%;
+  background: #00000066;
 }
 
 .room__point__pulse div {
   border-radius: 50%;
   position: absolute;
   margin: auto;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: -5%;
+  left: -5%;
   width: 110%;
   height: 110%;
   border: 2px solid #fff;
@@ -372,7 +371,7 @@
 
 .room__point__locker {
   top: 31.8%;
-  left: 36.9%;
+  left: 37.05%;
 }
 
 .room__point__bed {
