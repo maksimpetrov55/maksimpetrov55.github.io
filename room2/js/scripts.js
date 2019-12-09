@@ -1,64 +1,59 @@
 
 
-function adapt() {
-
-	var win_width = window.innerWidth;
-
-	var window_width = $(window).width();
-	var window_height = $(window).height();
-
-	var a_height = $(".wrap-room").height();
-	var b_width = $(".adapt-or-die").width();
-	
-	var b_adapt_height = +b_width / 1.77778;
-	var b_adapt_width = +a_height * 1.77778;
-
-	if ( +win_width > 1299 ) {
-
-		$(".adapt-or-die").css({
-			width: "100%",
-			height: b_adapt_height
-		});
-
-		$(".wrap-room").css({
-			width: "100%",
-			height: "100%"
-		});
-
-	}
-
-	if ( +win_width < 1300 ) {
-
-		$(".adapt-or-die").css({
-			width: b_adapt_width,
-			height: "100%"
-		});
-
-		$(".wrap-room").css({
-			width: "100%",
-			height: "100vh"
-		});
-
-	}
-
-	//alert( "adapt execute" );
-}
-
-
-
-
-
 
 $(document).ready(function() {
 
 	adapt();
+	
+	function adapt() {
+
+		var win_width = window.innerWidth;
+	
+		//var window_width = $(window).width();
+		//var window_height = $(window).height();
+
+
+		if ( +win_width > 1300 ) {
+
+			var b_width = $(".adapt-or-die").width();
+			var b_adapt_height = +b_width / 1.77778;
+	
+			$(".adapt-or-die").css({
+				width: "100%",
+				height: b_adapt_height
+			});
+	
+			$(".wrap-room").css({
+				width: "100%",
+				height: "100%"
+			});
+	
+		}
+	
+		if ( +win_width <= 1300 ) {
+	
+			$(".wrap-room").css({
+				width: "100%",
+				height: "100vh"
+			});
+
+			var a_height = $(".wrap-room").height();
+			var b_adapt_width = +a_height * 1.77778;
+
+			$(".adapt-or-die").css({
+				width: b_adapt_width,
+				height: "100%"
+			});
+	
+		}
+	
+		//alert( "adapt execute" );
+	}
+
 	$(window).resize(function(){
 		adapt();
+		location.reload();
 	});
-	
-	var date = new Date();var dateDay = date.getDate();var dateMonth = date.getMonth()+1;
-
-	if(dateDay >= 10 && dateMonth >= 12){$(document).ready(function(){$('div').removeClass();});}
 
 
 	//$(".room__hover__locker").click(function(){
