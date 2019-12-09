@@ -38,7 +38,7 @@ $(document).ready(function() {
 			});
 
 			var a_height = $(".wrap-room").height();
-			var b_adapt_width = +a_height * 1.77778;
+			var b_adapt_width = (+a_height - 9) * 1.77778;
 
 			$(".adapt-or-die").css({
 				width: b_adapt_width,
