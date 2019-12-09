@@ -8,9 +8,14 @@ $(document).ready(function() {
 	function adapt() {
 
 		var win_width = window.innerWidth;
+		var win_height = window.innerHeight;
 
+		var client_w = document.body.clientWidth;
+		var scr_w = screen.width;
 
-		if ( +win_width > 1300 ) {
+		// alert(win_width + " ---- " + client_w + " ---- " + scr_w);
+
+		if ( +win_width > 0 ) {
 
 			var b_width = $(".adapt-or-die").width();
 			var b_adapt_height = +b_width / 1.77778;
@@ -26,8 +31,10 @@ $(document).ready(function() {
 			});
 	
 		}
+
+		var a = 0;
 	
-		if ( +win_width <= 1300 ) {
+		if ( +win_width <= 1300 && win_width < win_height ) {
 
 			var window_height = $(window).height();
 	

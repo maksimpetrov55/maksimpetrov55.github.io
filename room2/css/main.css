@@ -1,3 +1,8 @@
+.just-block {
+  height: 600px;
+  background: #f0f0f0;
+}
+
 .wrap-room {
   overflow: auto;
 }
@@ -65,6 +70,10 @@
   margin: 7% 0 0 0;
 }
 
+.room__general__note__price__r {
+  font-family: "arial", sans-serif;
+}
+
 .room__img__general {
   position: absolute;
   top: 0;
@@ -95,6 +104,12 @@
   background: url("../img/room_png/stand_open2.png");
   background-size: cover;
   display: none;
+}
+
+@media (max-width: 950px) {
+  .just-block {
+    background: #000;
+  }
 }
 
 @-webkit-keyframes blink {
@@ -340,7 +355,6 @@
   position: absolute;
   width: 2.2%;
   height: 3.911116%;
-  background: #00000066;
 }
 
 .room__point__pulse div {
