@@ -10,8 +10,6 @@ $(document).ready(function() {
 		var win_width = window.innerWidth;
 	
 		//var window_width = $(window).width();
-		//var window_height = $(window).height();
-
 
 		if ( +win_width > 1300 ) {
 
@@ -31,10 +29,12 @@ $(document).ready(function() {
 		}
 	
 		if ( +win_width <= 1300 ) {
+
+			var window_height = $(window).height();
 	
 			$(".wrap-room").css({
 				width: "100%",
-				height: "100vh"
+				height: window_height
 			});
 
 			var a_height = $(".wrap-room").height();
