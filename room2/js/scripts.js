@@ -52,7 +52,7 @@ $(document).ready(function() {
 			});
 
 			var a_height = $(".wrap-room").height();
-			var calc2 = (+a_height - 9) * 1.77778;
+			var calc2 = (+a_height) * 1.77778;
 			var b_adapt_width = calc2.toFixed();
 
 			$(".adapt-or-die").css({

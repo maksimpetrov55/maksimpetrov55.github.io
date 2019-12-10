@@ -3,6 +3,17 @@
   background: #f0f0f0;
 }
 
+.stone-line {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  height: 3px;
+  width: 300px;
+  background: #00f;
+  z-index: 55;
+  margin: -3px 0 0 0;
+}
+
 .info {
   background: #eeeeeeAA;
   position: absolute;
