@@ -3,6 +3,58 @@
   background: #f0f0f0;
 }
 
+.info {
+  background: #eeeeeeAA;
+  position: absolute;
+  padding: 10px 20px;
+  z-index: 55;
+  top: 3%;
+}
+
+.info * {
+  font-size: 2.3vh;
+}
+
+.info__width {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.info__width__name {
+  margin: 0 10px 10px 0;
+}
+
+.info__height {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.info__height__name {
+  margin: 0 10px 10px 0;
+}
+
+.info__width-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.info__width-block__name {
+  margin: 0 10px 10px 0;
+}
+
+.info__height-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.info__height-block__name {
+  margin: 0 10px 0 0;
+}
+
 .wrap-room {
   overflow: auto;
 }

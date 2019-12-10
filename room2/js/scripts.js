@@ -18,7 +18,8 @@ $(document).ready(function() {
 		if ( +win_width > 0 ) {
 
 			var b_width = $(".adapt-or-die").width();
-			var b_adapt_height = +b_width / 1.77778;
+			var calc1 = +b_width / 1.77778;
+			var b_adapt_height = calc1.toFixed();
 	
 			$(".adapt-or-die").css({
 				width: "100%",
@@ -30,9 +31,16 @@ $(document).ready(function() {
 				height: "100%"
 			});
 	
+			$(".info__width__value").html(win_width);
+
+			$(".info__height__value").html(win_height);
+
+			$(".info__width-block__value").html(b_width);
+
+			$(".info__height-block__value").html(b_adapt_height);
+
 		}
 
-		var a = 0;
 	
 		if ( +win_width <= 1300 && win_width < win_height ) {
 
@@ -44,7 +52,8 @@ $(document).ready(function() {
 			});
 
 			var a_height = $(".wrap-room").height();
-			var b_adapt_width = (+a_height - 9) * 1.77778;
+			var calc2 = (+a_height - 9) * 1.77778;
+			var b_adapt_width = calc2.toFixed();
 
 			$(".adapt-or-die").css({
 				width: b_adapt_width,
@@ -60,6 +69,16 @@ $(document).ready(function() {
 			var window_width = $(window).width();
 
 			$(".wrap-room").scrollLeft( (+b_adapt_width / 2) * (1 - (+window_width / +b_adapt_width))  );
+
+
+
+			$(".info__width__value").html(window_width);
+
+			$(".info__height__value").html(window_height);
+
+			$(".info__width-block__value").html(b_adapt_width);
+
+			$(".info__height-block__value").html(a_height);
 	
 		}
 	
