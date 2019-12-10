@@ -70,8 +70,10 @@
   margin: 7% 0 0 0;
 }
 
-.room__general__note__price__r {
-  font-family: "roboto", sans-serif;
+.room__general__note__price--rub {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #777;
 }
 
 .room__img__general {
