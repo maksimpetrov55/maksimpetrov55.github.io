@@ -70,18 +70,6 @@
   overflow: auto;
 }
 
-.wrap-room::-webkit-scrollbar {
-  width: 9px;
-  height: 9px;
-  background: #e0e0e0;
-  padding: 5px;
-}
-
-.wrap-room::-webkit-scrollbar-thumb {
-  background: -webkit-gradient(linear, left top, left bottom, from(#505050), color-stop(80%, #6e6e6e));
-  background: linear-gradient(180deg, #505050 0%, #6e6e6e 80%);
-}
-
 .room {
   position: relative;
   margin: 0 auto;
