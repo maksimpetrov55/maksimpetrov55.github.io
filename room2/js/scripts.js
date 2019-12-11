@@ -13,8 +13,6 @@ $(document).ready(function() {
 		var client_w = document.body.clientWidth;
 		var scr_w = screen.width;
 
-		// alert(win_width + " ---- " + client_w + " ---- " + scr_w);
-
 		if ( +win_width > 0 ) {
 
 			var b_width = $(".adapt-or-die").width();
@@ -31,13 +29,13 @@ $(document).ready(function() {
 				height: "100%"
 			});
 	
-			$(".info__width__value").html(win_width);
+			// $(".info__width__value").html(win_width);
 
-			$(".info__height__value").html(win_height);
+			// $(".info__height__value").html(win_height);
 
-			$(".info__width-block__value").html(b_width);
+			// $(".info__width-block__value").html(b_width);
 
-			$(".info__height-block__value").html(b_adapt_height);
+			// $(".info__height-block__value").html(b_adapt_height);
 
 		}
 
@@ -70,15 +68,13 @@ $(document).ready(function() {
 
 			$(".wrap-room").scrollLeft( (+b_adapt_width / 2) * (1 - (+window_width / +b_adapt_width))  );
 
+			// $(".info__width__value").html(window_width);
 
+			// $(".info__height__value").html(window_height);
 
-			$(".info__width__value").html(window_width);
+			// $(".info__width-block__value").html(b_adapt_width);
 
-			$(".info__height__value").html(window_height);
-
-			$(".info__width-block__value").html(b_adapt_width);
-
-			$(".info__height-block__value").html(a_height);
+			// $(".info__height-block__value").html(a_height);
 	
 		}
 	
