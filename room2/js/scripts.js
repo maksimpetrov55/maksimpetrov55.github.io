@@ -42,9 +42,9 @@ $(document).ready(function() {
 	
 		if ( +win_width <= 1300 && win_width < win_height ) {
 
-			$(".wrap-room__rotate").fadeIn(400);
-			$(".wrap-room__rotate__note__img").delay(400).fadeIn(300);
-			$(".wrap-room__rotate__note__text").delay(800).fadeIn(400);
+			$(".wrap-room__rotate").delay(400).fadeIn(400);
+			$(".wrap-room__rotate__note__img").delay(800).fadeIn(300);
+			$(".wrap-room__rotate__note__text").delay(1200).fadeIn(400);
 
 			var window_height = $(window).height();
 	
