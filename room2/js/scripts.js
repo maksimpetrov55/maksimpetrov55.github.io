@@ -91,7 +91,7 @@ $(document).ready(function() {
 
 	$(window).resize(function(){
 		adapt();
-		//location.reload();
+		location.reload();
 	});
 
 
