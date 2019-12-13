@@ -57,6 +57,10 @@
   z-index: 10;
 }
 
+.room__general__note__border {
+  border-radius: 3vh;
+}
+
 .room__general__note__title {
   font-size: 1.15vw;
   color: #555;
@@ -75,7 +79,7 @@
   font-family: 'Museo Sans Cyrl 300', sans-serif;
 }
 
-.room__general__note__text--7 {
+.room__general__note--7 {
   margin: 7% 0 0 0;
 }
 
@@ -543,7 +547,6 @@
 .room__popup__locker__copter__note {
   display: none;
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 30px;
   width: 80%;
   height: 30%;
   position: absolute;
@@ -633,7 +636,6 @@
 .room__popup__table__iphone__note {
   display: none;
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 30px;
   width: 40%;
   height: 34%;
   position: absolute;
@@ -683,7 +685,6 @@
 .room__popup__table__macbook__note {
   display: none;
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 30px;
   width: 56%;
   height: 40%;
   position: absolute;
@@ -747,7 +748,6 @@
 .room__popup__stand__gopro__note {
   display: none;
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 30px;
   width: 40%;
   height: 40%;
   position: absolute;
@@ -797,7 +797,6 @@
 .room__popup__stand__photocam__note {
   display: none;
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 30px;
   width: 60%;
   height: 47%;
   position: absolute;
@@ -867,7 +866,6 @@
   padding: 2%;
   z-index: 10;
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 30px;
   width: 24%;
   height: 27%;
   position: absolute;
@@ -926,7 +924,6 @@
   padding: 2%;
   z-index: 10;
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 30px;
   width: 24%;
   height: 25%;
   position: absolute;
@@ -998,7 +995,6 @@
   padding: 2%;
   z-index: 10;
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 30px;
   width: 25%;
   height: 25%;
   position: absolute;
@@ -1066,7 +1062,6 @@
   padding: 2%;
   z-index: 10;
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 30px;
   width: 22%;
   height: 25%;
   position: absolute;
@@ -1124,7 +1119,6 @@
   padding: 2%;
   z-index: 10;
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 30px;
   width: 24%;
   height: 28%;
   position: absolute;
