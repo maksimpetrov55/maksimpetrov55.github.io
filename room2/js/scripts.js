@@ -42,6 +42,10 @@ $(document).ready(function() {
 	
 		if ( +win_width <= 1300 && win_width < win_height ) {
 
+			$(".wrap-room__rotate").fadeIn(400);
+			$(".wrap-room__rotate__note__img").delay(400).fadeIn(300);
+			$(".wrap-room__rotate__note__text").delay(800).fadeIn(400);
+
 			var window_height = $(window).height();
 	
 			$(".wrap-room").css({
@@ -56,6 +60,10 @@ $(document).ready(function() {
 			$(".adapt-or-die").css({
 				width: b_adapt_width,
 				height: "100%"
+			});
+
+			$(".wrap-room__rotate").css({
+				width: b_adapt_width
 			});
 
 			var adapt_fz = +a_height * 0.02;
