@@ -3,95 +3,76 @@
 
 $(document).ready(function() {
 
-	adapt();
 	
 	function adapt() {
 
-		var win_width = window.innerWidth;
-		var win_height = window.innerHeight;
-
-		var client_w = document.body.clientWidth;
-		var scr_w = screen.width;
+		var win_width_full = window.innerWidth;
+		var win_height_full = window.innerHeight;
+		var win_width = $(window).width(); // без учета скроллов
+		var win_height = $(window).height(); // без учета скроллов
 
 		if ( +win_width > 0 ) {
 
-			var b_width = $(".adapt-or-die").width();
-			var calc1 = +b_width / 1.77778;
-			var b_adapt_height = calc1.toFixed();
+			var calc1 = +win_width / 1.77778;
+			var adapt_height = calc1.toFixed();
 	
 			$(".adapt-or-die").css({
 				width: "100%",
-				height: b_adapt_height
+				height: adapt_height
 			});
 	
 			$(".wrap-room").css({
 				width: "100%",
 				height: "100%"
 			});
-	
-			// $(".info__width__value").html(win_width);
-
-			// $(".info__height__value").html(win_height);
-
-			// $(".info__width-block__value").html(b_width);
-
-			// $(".info__height-block__value").html(b_adapt_height);
 
 		}
 
-	
 		if ( +win_width <= 1300 && win_width < win_height ) {
 
-			$(".wrap-room__rotate").delay(400).fadeIn(400);
-			$(".wrap-room__rotate__note__img").delay(800).fadeIn(300);
-			$(".wrap-room__rotate__note__text").delay(1200).fadeIn(400);
-
-			var window_height = $(window).height();
-	
 			$(".wrap-room").css({
 				width: "100%",
-				height: window_height
+				height: win_height
 			});
 
-			var a_height = $(".wrap-room").height();
-			var calc2 = (+a_height) * 1.77778;
-			var b_adapt_width = calc2.toFixed();
+			var calc2 = (+win_height) * 1.77778;
+			var adapt_width = calc2.toFixed();
 
 			$(".adapt-or-die").css({
-				width: b_adapt_width,
+				width: adapt_width,
 				height: "100%"
 			});
 
-			$(".wrap-room__rotate").css({
-				width: b_adapt_width
-			});
-
-			var adapt_fz = +a_height * 0.02;
-
+			var adapt_fz = +win_height * 0.02;
 			$(".room__general__note__title, .room__general__note__text, .room__general__note__price").css({
 				fontSize: adapt_fz
 			});
 
-			var window_width = $(window).width();
+			$(".wrap-room").scrollLeft( (+adapt_width / 2) * (1 - (+win_width / +adapt_width))  );
 
-			$(".wrap-room").scrollLeft( (+b_adapt_width / 2) * (1 - (+window_width / +b_adapt_width))  );
-
-			// $(".info__width__value").html(window_width);
-
-			// $(".info__height__value").html(window_height);
-
-			// $(".info__width-block__value").html(b_adapt_width);
-
-			// $(".info__height-block__value").html(a_height);
-	
 		}
-	
-		//alert( "adapt execute" );
+
+		if ( win_width < win_height ) {
+			$(".wrap-room__rotate").delay(100).fadeIn(400);
+			// $(".wrap-room__rotate__note__img").delay(800).fadeIn(300);
+			// $(".wrap-room__rotate__note__text").delay(1200).fadeIn(400);
+			$(".wrap-room__rotate").css({
+				width: adapt_width
+			});
+		} else {
+			$(".wrap-room__rotate").css({
+				width: "100%"
+			});
+			$(".wrap-room__rotate").fadeOut(200);
+		}
+
 	}
+
+	adapt();
 
 	$(window).resize(function(){
 		adapt();
-		location.reload();
+		//location.reload();
 	});
 
 
