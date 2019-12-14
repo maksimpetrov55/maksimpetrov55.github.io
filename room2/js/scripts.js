@@ -26,6 +26,10 @@ $(document).ready(function() {
 				height: "100%"
 			});
 
+			$(".room__general__note__title, .room__general__note__text, .room__general__note__price").css({
+				fontSize: "1.15vw"
+			});
+
 		}
 
 		if ( +win_width <= 1300 && win_width < win_height ) {
