@@ -13,33 +13,42 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .wrap-room__rotate__note {
   width: 100%;
-  height: 450px;
+  height: 40%;
   position: absolute;
-  margin: 6% 0;
+  margin: 15% 0 0 0;
 }
 
 .wrap-room__rotate__note__img {
-  height: 75%;
+  height: 70%;
   background: url("../img/rotate.png") no-repeat;
   background-size: contain;
   background-position: 50% 0;
-  opacity: 1;
 }
 
 .wrap-room__rotate__note__text {
   position: absolute;
   color: #fff;
-  font-size: 24px;
+  font-size: 20px;
+  line-height: 1.4;
   text-transform: uppercase;
   font-family: 'Museo Sans Cyrl 300', sans-serif;
   text-align: center;
   width: 100%;
-  margin: 40px 0 0 0;
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .room {
