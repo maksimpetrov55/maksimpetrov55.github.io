@@ -1,0 +1,27 @@
+/* стиль поля */
+.edit_f{
+    color: rgb(200, 200, 200);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(200, 200, 200);
+    height: 16px;
+    padding: 5px 10px;
+    width: 220px;
+    border-radius: 4px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+ }
+
+/* стиль поля по умолчанию */
+.edit_f_te{color: rgb(0, 0, 0);}
+
+/* Ошибка ввода */
+.edit_f_error{background-color: #E01B1E !important;}
+  
+/* Стиль кнопки */
+.sendbtn { cursor: hand; cursor: pointer;	margin-top: 15px;}
+
+.label_sndok{
+	text-align:center;
+    padding-top: 40px;
+}

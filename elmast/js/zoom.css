@@ -1,0 +1,31 @@
+/* zoom any image */
+.zoom {display:inline-block; }
+#zoomLoading {position:absolute; display:block; opacity:0.5; filter:alpha(opacity=50);}
+.zoomX {position:absolute; top:50px; left:50px; width:34px; height:34px; background:url(../images/close.png)no-repeat; cursor:pointer;   z-index: 400; }
+* html .zoomX {background-image:url(../zoom/zoom-x.html);}
+.zoomPic {position:absolute; display:block; top:-9999px; left:0; cursor:pointer; z-index: 350;}
+.zoomShadow {position:absolute; left:0; top:-9999px;}
+.zoomShadow table {width:auto; height:auto; border:0; border-collapse:collapse; border-spacing:0;}
+.zoomShadow td {margin:0; padding:0; border:0;}
+.zoomShadow b {display:block; width:10px; height:10px; overflow:hidden;}
+.zoomBase {position:relative; width:10px; height:10px; margin:0; padding:0; background:#000;}
+.zs1 {width:10px; height:10px;}
+* html .zs1 {}
+.zs2 {width:10px; height:10px; }
+* html .zs2 {}
+.zs3 {width:10px; height:10px;}
+* html .zs3 {}
+.zs4 {width:10px; height:10px; }
+* html .zs4 {}
+.zh1 {height:10px; }
+* html .zh1 {}
+.zh2 {height:10px;}
+* html .zh2 {}
+.zv1 {width:10px;}
+* html .zv1 {}
+.zv2 {width:10px; }
+* html .zv2 {}
+
+* html .selOff {visibility:hidden;}
+
+.bigGrey {position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:0.8; filter:alpha(opacity=80);}

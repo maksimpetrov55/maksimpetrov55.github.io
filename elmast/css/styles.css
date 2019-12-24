@@ -1,0 +1,2058 @@
+/*----------------------------------------------------------------------------------*/
+/*------------------------------RESET DEFAULT STYLES--------------------------------*/
+/*----------------------------------------------------------------------------------*/
+html,body                       { width:100%; height:100%; }
+body                            { padding:0; margin:0; font:16px "HelveticaNeueCyr-Roman"; color: #695343; background:#fff}
+div,p,a,span,em,strong,img,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,input,textarea {
+  padding:0;
+  margin:0;
+  outline:none;
+  list-style: none;}
+select, input, textarea        { font:15px "HelveticaNeueCyr-Roman"; color: #695343; vertical-align:middle; cursor: pointer;}
+textarea                       { vertical-align:top; }
+:focus                         { outline:none; }
+input[type=submit]             { cursor:pointer; }
+img, fieldset                  { border:0; }
+table                          { border-collapse:collapse; border-spacing:0;}
+a:link, a:visited              { font:18px "MuseoSansCyrl-100"; color:#333;  text-decoration:none; }
+a:hover                        { color:#fff; text-decoration:none;}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------DEFAULT CLASSES------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.float-r                       { float:right !important; }
+.float-l                       { float:left !important; }
+.no-float                      { float:none !important; }
+.no-border                     { border:0 !important; }
+.no-bg                         { background:none !important; }
+.no-margin                     { margin:0 !important; }
+.no-padding                    { padding:0 !important; }
+.no-display                    { display:none !important; }
+.display                       { display:block !important; }
+.inline                        { display:inline !important; }
+.overflow                      { overflow:hidden !important; }
+.align-r                       { text-align:right !important; }
+.align-l                       { text-align:left !important; }
+.align-c                       { text-align:center !important; }
+.clear                         { clear:both; }
+/*-------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------*/
+.wrapper{
+  width: 960px;
+  margin: 0 auto;
+}
+.main-block{
+  background: url("../images/bg-main.jpg")no-repeat center;
+  height: 718px;
+  color: #fff;
+}
+.main-block img{
+  float: left;
+  margin-top: 12px;
+}
+header {
+  height: 110px;
+}
+header .right-block img{
+  margin-top: 0;
+  margin-right: 7px;
+}
+header .right-block {
+  float: right;
+  font: 18px "HelveticaNeueCyr-Roman";
+}
+/*header .right-block ul {
+  width: 187px;
+}*/
+header .right-block ul li {
+  margin-left: 6px;
+  display: block;
+  margin-top: 12px;
+  text-align: right;
+}
+#slide1, #slide2{background-attachment: scroll;}
+header .right-block ul li span{
+  font-size: 20px;
+}
+.button{
+  border: 2px solid #fff;
+  background: none;
+  color: #fff;
+}
+header .right-block .small {
+  width: 140px;
+  height: 24px;
+  display: block;
+  margin: 10px auto;
+  cursor: pointer;
+  font-size: 16px;
+}
+header .right-block .small:hover{
+  background: #fff;
+  color: #000;
+}
+.title{
+  background: rgba(1,1,1,0.5);
+  padding: 2em 0; 
+}
+.main-block .title h1{
+  font: 60px "BebasNeueBold";
+  text-align: center;
+  text-transform: uppercase;
+  margin: 64px 0 17px;
+}
+.main-block .title span{
+  font: 24px "Bebas";
+  text-align: center;
+  display: block;
+  text-transform: uppercase;
+}
+.main-block .title span.span-padding{
+  padding: 10px 0;
+}
+.main-block .title div{
+  margin: 60px auto 0;
+}
+.main-block .title div .big-button {
+  width: 214px;
+  height: 47px;
+  font-size: 19px;
+  margin: 0 62px 0 151px;
+  cursor: pointer;
+}
+.main-block .title div .big-button:hover{
+  background: #fff;
+  color: #000;
+}
+/*--------------------------------------------------------------------------------*/
+.nav-menu{
+  width: 100%;
+  height: 54px;
+  background: #FFD700;
+  position: relative;
+  z-index: 100;
+}
+.nav-menu ul {
+  text-align: center;
+}
+.nav-menu ul li{
+  color: #000;
+  background: url("../images/line.png")no-repeat right;
+  height: 32px;
+  width: auto;
+  display: inline-block;
+  font: 17px "BebasNeueBold";
+  padding: 16px 11px 6px 9px;
+  cursor: pointer;
+}
+.nav-menu ul li:hover{
+  box-shadow: inset -4px -6px 10px 0 #e1be01;
+  background: none;
+}
+.nav-menu ul li.none{
+  background: none;
+}
+/*------------------------------------------------------------------------------------*/
+.stop-cost{
+  background: url(../banner-bg.png);
+  background-size: cover;
+}
+.stop-cost .wrapper{
+  
+}
+.stop-cost_image{
+  background: url(../banner.png) left no-repeat;
+  height: 305px;
+  width: 662px;
+  float: left;
+  position: relative;
+}
+.stop-cost_image .text{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 420px;
+  height: 215px;
+  text-align: center;
+}
+.stop-cost_image .text h2{
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: #000;
+  font-family: "BebasNeueBold";
+  margin-top: 30px;
+}
+.stop-cost_image .text h3{
+  color: #007985;
+  font-size: 26px;
+}
+.stop-cost_image h4{
+  margin-top: 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #000;
+}
+.stop-cost .stop-cost_form{
+  width: 296px;
+  height: 400px;
+  float: right;
+}
+.stop-cost_form form{
+  border: 8px solid #FFD700;
+  margin-top: 55px;
+  padding: 10px;
+  background: #fff;
+  color: #000;
+}
+.stop-cost_form h2{
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.stop-cost_form h2 b{
+  font-size: 23px;
+  font-weight: bold;
+}
+.stop-cost_form h2 span{
+  font-family: "BebasNeueBold";
+  font-size: 24px;
+}
+@media (min-width: 1200px){
+	.stop-cost-mobile .container,
+	.stop-cost .container{
+		width: 970px;
+	}
+}
+
+
+.stop-cost-mobile{
+  background-color: #d5d5d5;
+  position: relative;
+  padding: 20px 0;
+}
+.stop-cost-mobile .text{
+  text-align: center;
+}
+.stop-cost-mobile .text h2{
+  margin-bottom: 10px;
+  font-size: 42px;
+  color: inherit;
+  font-family: "BebasNeueBold";
+  margin-top: 30px;
+}
+.stop-cost-mobile .text h3{
+  color: #007985;
+  font-size: 26px;
+  font-family: "BebasNeueBold";
+}
+.stop-cost-mobile h4{
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: "BebasNeueBold";
+  text-transform: uppercase;
+  color: inherit;
+}
+.stop-cost-mobile .top{
+	margin-bottom: 20px;
+}
+.stop-cost-mobile .stop-cost_form{
+  text-align: center;
+}
+.stop-cost-mobile .stop-cost_form form{
+  border: 8px solid #FFD700;
+  margin-top: 55px;
+  padding: 10px;
+  display: inline-block;
+}
+.stop-cost-mobile .stop-cost_form input[type=text]{
+	width: 300px;
+	height: 30px;
+	margin-bottom: 20px;
+}
+.stop-cost-mobile input[type=button]{
+  position: relative;
+  top: 15px;
+  background: yellow;
+  color: #000;
+  height: 40px;
+  padding-top: 7px;
+}
+.stop-cost-mobile .stop-cost_form h2{
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.stop-cost-mobile .stop-cost_form h2 b{
+  font-size: 23px;
+  font-weight: bold;
+}
+#order12 h2{
+	font-size: 20px;
+	text-align: center;
+	margin-top: 10px;
+}
+@media (max-width: 768px){
+	.stop-cost-mobile .stop-cost-graph{
+	text-align: center;
+	margin-top: 20px;
+	}
+}
+@media screen and (max-width: 32em){
+label {
+	font-size: 16px;
+}
+}
+
+.stop-cost-mobile{
+	
+}
+.stop-cost-mobile div{
+	padding: 0;
+}
+.block-2{
+  background: url("../images/block-2-2.jpg") left no-repeat;
+  height: 790px;
+}
+.block-1, .block-2, .block-3{ 
+background-position-x: -400px !important; 
+}
+.block-2 h2{
+  color: #FFD700;
+  font: 48px "BebasNeueBold";
+  text-align: center;
+  padding: 20px 0;
+  margin-left: 15px;
+	
+}
+.block-2 .title-with-line{
+  text-align: right;
+  margin-top: 36px;
+}
+.block-2 .shape{
+  background: url("../images/shape.png") no-repeat;
+  height: 124px;
+  width: 217px;
+  position: absolute;
+  top: 32px;
+  right: 91px;
+}
+hr{
+  background: url("../images/for-title.png") no-repeat;
+  height: 7px;
+  width: 94px;
+  display: inline-block;
+  border: none;
+}
+.block-2 .title-with-line h3{
+  font: 30px "BebasNeueBold";
+  display: inline-block;
+  margin-bottom: 40px;
+}
+.block-2 ul{
+  width: 720px;
+  float: right;
+  margin-right: 26px;
+  text-align: center;
+  margin-top: 36px;
+}
+.block-2 ul li{
+  width: 250px;
+  height: auto;
+  display: inline-block;
+  padding:0 0 17px 90px;
+  vertical-align: top;
+
+}
+.block-2 ul li div{
+  height: 62px;
+  width: 96px;
+  margin: 0 auto;
+}
+.block-2 ul li .icon-1{ background: url("../images/sprite.png") no-repeat -319px -9px;}
+.block-2 ul li .icon-2{ background: url("../images/sprite.png") no-repeat -97px -269px;}
+.block-2 ul li .icon-3{ background: url("../images/sprite.png") no-repeat -319px -93px;}
+.block-2 ul li .icon-4{ background: url("../images/sprite.png") no-repeat -101px -352px ;}
+.block-2 ul li .icon-5{ background: url("../images/sprite.png") no-repeat 11px -235px;}
+.block-2 ul li .icon-6{ background: url("../images/sprite.png") no-repeat -318px -387px;}
+.block-2 ul li .icon-7{ background: url("../images/sprite.png") no-repeat -318px -278px;}
+.block-2 ul li .icon-8{ background: url("../images/sprite.png") no-repeat -220px -429px;}
+.block-2 ul li span{
+  font-size: 16px;
+  line-height: 22px;
+  padding-bottom: 17px;
+}
+/*----------------------------------------------------------------*/
+.block-3{
+  background: url("../images/block-3.jpg") left no-repeat;
+  height: 824px;
+}
+.block-3 .title-with-line{
+  text-align: right;
+  margin-top: -4px;
+  padding-top: 70px;
+  margin-right: 95px;
+}
+.block-3 .title-with-line h3{
+  font: 30px "BebasNeueBold";
+  display: inline-block;
+}
+.block-3 ul{
+  width: 720px;
+  float: right;
+  margin-right: 26px;
+  text-align: center;
+  margin-top: 36px;
+}
+.block-3 ul li{
+  width: 291px;
+  height: auto;
+  display: inline-block;
+  padding: 0 0 10px 61px;
+  vertical-align: top;
+
+}
+.block-3 ul li div{
+  height: 65px;
+  width: 96px;
+  margin: 0 auto;
+}
+.block-3 ul li .icon-1{ background: url("../images/sprite.png") no-repeat -91px -7px;}
+.block-3 ul li .icon-2{ background: url("../images/sprite.png") no-repeat -319px -7px;}
+.block-3 ul li .icon-3{ background: url("../images/sprite.png") no-repeat -92px -76px;}
+.block-3 ul li .icon-4{ background: url("../images/sprite.png") no-repeat -318px -276px;}
+.block-3 ul li .icon-5{ background: url("../images/sprite.png") no-repeat -90px -174px;}
+.block-3 ul li .icon-6{ background: url("../images/sprite.png") no-repeat -316px -183px;}
+.block-3 ul li .icon-7{ background: url("../images/sprite.png") no-repeat 9px -414px;}
+.block-3 ul li .icon-8{ background: url("../images/sprite.png") no-repeat -154px -521px;}
+.block-3 ul li .icon-9{ background: url("../images/sprite.png") no-repeat -7px -514px;}
+.block-3 ul li span{
+  font-size: 16px;
+  line-height: 22px;
+  padding-bottom: 17px;
+}
+.block-3 ul li.last-li{
+  float: left;
+  padding-left: 73px;
+}
+/*--------------------------------------------------------------------------------------*/
+.block-4{
+  background: url("../images/block-4.jpg") center no-repeat;
+  height: 770px;
+}
+.block-4 h2{
+  color: #FFD700;
+  font: 48px "BebasNeueBold";
+  text-align: center;
+  padding: 87px 0 40px;
+}
+.block-4 ul{
+  width: 100%;
+  margin-top: 6px;
+  margin-left: 80px;
+}
+.block-4 ul li{
+  height: auto;
+  display: inline-block;
+  vertical-align: top;
+  width: 42%;
+  margin-bottom: 40px;
+  padding-left: 70px;
+  position: relative;
+}
+.block-4 ul li.animate{
+  opacity: 0;
+}
+.block-4 ul li::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+}
+.block-4 ul li:nth-child(1)::before{
+  background: url('../images/block-4_sprite.png') -18px -10px;
+}
+.block-4 ul li:nth-child(2)::before{
+  background: url('../images/block-4_sprite.png') -478px -16px;
+}
+.block-4 ul li:nth-child(3)::before{
+  background: url('../images/block-4_sprite.png') -549px -13px;
+}
+.block-4 ul li:nth-child(4)::before{
+  background: url('../images/block-4_sprite.png') -622px -17px;
+}
+.block-4 ul li:nth-child(5)::before{
+  background: url('../images/block-4_sprite.png') -694px -13px;
+}
+.block-4 ul li:nth-child(6)::before{
+  background: url('../images/block-4_sprite.png') -772px -20px;
+}
+.block-4 ul li:nth-child(7)::before{
+  background: url('../images/block-4_sprite.png') -847px -17px;
+}
+.block-4 ul li:nth-child(8)::before{
+  background: url('../images/block-4_sprite.png') -921px -15px;
+}
+.block-4 ul li:nth-child(9)::before{
+  background: url('../images/block-4_sprite.png') -999px -13px;
+}
+.block-4 ul li:nth-child(10)::before{
+  background: url('../images/block-4_sprite.png') -103px -17px;
+}
+.block-4 ul li:nth-child(11)::before{
+  background: url('../images/block-4_sprite.png') -181px -15px;
+}
+.block-4 ul li:nth-child(12)::before{
+  background: url('../images/block-4_sprite.png') -258px -12px;
+}
+.block-4 ul li:nth-child(13)::before{
+  background: url('../images/block-4_sprite.png') -330px -15px;
+}
+.block-4 ul li:nth-child(14)::before{
+  background: url('../images/block-4_sprite.png') -405px -18px;
+}
+/*------------------------------------------------------------------------------------------*/
+.block-5 {
+  background: url("../images/block-5.jpg") center no-repeat;
+  height: 644px;
+  color: #fff;
+}
+.block-5 .block-with-form{
+  width: 781px;
+  height: 441px;
+  background: rgba(1, 1, 1, 0.5);
+  margin: 0 auto;
+}
+.block-5 .wrapper {
+  padding-top: 78px;
+  position: relative;
+}
+.block-5 .block-with-form .information{
+  width: 437px;
+  padding-top: 70px;
+  float: left;
+}
+.information-form{
+	overflow: hidden;
+	max-width: 100%;
+	display: block;
+}
+.information-form input{
+	max-width: 100%;
+}
+.block-5 .block-with-form .information h4{
+  font: 60px "BebasNeueBold";
+  text-transform: uppercase;
+  text-align: center;
+}
+.block-5 .block-with-form .information span{
+  text-transform: uppercase;
+  font: 28px "Bebas";
+  display: block;
+  text-align: center;
+  padding-top: 55px;
+}
+.block-5 .block-with-form .information .shape{
+  background: url("../images/shape.png") no-repeat;
+  height: 124px;
+  width: 217px;
+  position: absolute;
+  bottom: 100px;
+  left: 271px;
+}
+.block-5 .block-with-form .form-block{
+  width: 290px;
+  height: 245px;
+  border: 8px solid #FFD700;
+  float: right;
+  margin: 106px 30px 0 0;
+  background: none;
+}
+.block-5 .block-with-form .form-block label {
+  margin: 28px 0 0 25px;
+  display: block;
+  font-size: 14px;
+}
+.button_f{
+  background: url("../images/buttons.png")no-repeat -4px 0;
+  height: 57px;
+  width: 246px;
+  border: none;
+  color: #000;
+  display: block;
+  margin: 14px auto;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+.button_f:hover{
+  background: url("../images/buttons.png")no-repeat -3px -65px;
+}
+/*---------------------------------------------------------------------*/
+.block-6{
+  background: url("../images/block-6.jpg") center no-repeat;
+  height: 392px;
+  color: #fff;
+}
+.block-6 span{
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  font: 38px "BebasNeueBook-Regular";
+}
+.block-6 span b{
+  font-family: "BebasNeueBold";
+}
+.block-6 span.text-transf{
+  font: 50px "BebasNeueBold";
+  padding-top: 113px;
+}
+/*-----------------------------------------------------------------------*/
+.block-7{
+  background: #fff;
+  height: 860px;
+}
+.block-7 .wrapper {
+  position: relative;
+}
+.block-7 h2 {
+  color: #FFD700;
+  font: 48px "BebasNeueBold";
+  text-align: center;
+  padding: 75px 0 40px;
+}
+
+.block-7 .shape{
+  background: url("../images/shape.png") no-repeat;
+  height: 124px;
+  width: 217px;
+  position: absolute;
+  top: 170px;
+  right: 300px;
+}
+.block-7 ul{
+  text-align: center;
+  margin-top: 46px;
+}
+.block-7 ul li{
+  display: inline-block;
+  vertical-align: top;
+  width: 210px;
+  margin-bottom: 30px;
+}
+.block-7 ul li div{
+  height: 134px;
+  width: 140px;
+  margin: 0 auto;
+}
+.block-7 ul li .icon-1{ background: url("../images/sprite2.png") no-repeat 0 0;}
+.block-7 ul li .icon-2{ background: url("../images/sprite2.png") no-repeat -232px 0;}
+.block-7 ul li .icon-3{ background: url("../images/sprite2.png") no-repeat -473px 0;}
+.block-7 ul li .icon-4{ background: url("../images/sprite2.png") no-repeat -706px 0;}
+.block-7 ul li .icon-5{ background: url("../images/sprite2.png") no-repeat -119px -255px;}
+.block-7 ul li .icon-6{ background: url("../images/sprite2.png") no-repeat -358px -255px;}
+.block-7 ul li .icon-7{ background: url("../images/sprite2.png") no-repeat -587px -255px;}
+.block-7 ul li span {
+  font: 18px "Plumb-Light";
+}
+.block-7 ul li span b {
+  font: 18px "Plumb-Medium";
+}
+/*--------------------------------------------------------------------------------*/
+.block-8{
+  background: url("../images/block-8.jpg") center no-repeat;
+  height: 880px;
+}
+.block-8 .title-with-line{
+  text-align: center;
+}
+.block-8 .title-with-line h3 {
+  font: 45px "BebasNeueBold";
+  display: inline-block;
+  text-align: center;
+  padding-top: 0;
+}
+.block-8  h3 {
+  font: 45px "BebasNeueBold";
+  text-align: center;
+  padding-top: 60px;
+}
+.block-8 ul{
+  text-align: center;
+  margin-top: 46px;
+
+}
+.block-8 ul li{
+  display: inline-block;
+  vertical-align: top;
+  width: 160px;
+  height: 221px;
+  margin-bottom: 20px;
+  background: url("../images/frame.png") no-repeat;
+  padding: 4px 36px 38px 23px;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  background-size: cover;
+  cursor: pointer;
+}
+.block-8 ul li:hover{
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -o-transform: scale(1.3);
+  z-index: 10;
+}
+.block-8 ul li div{
+  height: 88px;
+  width: 86px;
+  margin: 0 auto;
+}
+.block-8 ul li .icon-1{ background: url("../images/sprite.png") no-repeat -571px -215px;padding-bottom: 10px;}
+.block-8 ul li .icon-2{ background: url("../images/sprite.png") no-repeat -560px -102px;padding-bottom: 15px;}
+.block-8 ul li .icon-3{ background: url("../images/sprite.png") no-repeat -560px 2px;padding-bottom: 15px;}
+.block-8 ul li .icon-4{ background: url("../images/sprite.png") no-repeat -447px 0;padding-bottom: 15px;}
+.block-8 ul li .icon-5{ background: url("../images/sprite.png") no-repeat -585px -325px;padding-bottom: 15px;}
+.block-8 ul li .icon-6{ background: url("../images/sprite.png") no-repeat -454px -326px;padding-bottom: 15px;}
+.block-8 ul li .icon-7{ background: url("../images/sprite.png") no-repeat -446px -102px;padding-bottom: 15px;}
+.block-8 ul li .icon-8{ background: url("../images/sprite.png") no-repeat -450px -215px;}
+.block-8 ul li span{
+  font-size: 16px;
+  display: block;
+  line-height: 18px;
+}
+.button-big {
+  background: url("../images/buttons.png")no-repeat -262px 0;
+  width: 364px;
+  height: 66px;
+  display: block;
+  margin: 0 0 0 189px;
+  border: none;
+  color: #000;
+  text-align: center;
+  font-size: 17px;
+  cursor: pointer;
+}
+.button-big:hover {
+  background: url("../images/buttons.png")no-repeat -262px -67px;
+}
+/*-----------------------------------------------------------------------*/
+.block-9{
+  background: url("../images/block-9.jpg") center no-repeat;
+  height: 650px;
+  color: #fff;
+}
+.block-9 .block-with-form{
+  width: 781px;
+  height: 441px;
+  background: rgba(1, 1, 1, 0.5);
+  margin: 0 auto;
+}
+.block-9 .wrapper {
+  padding-top: 78px;
+  position: relative;
+}
+.block-9 .block-with-form .information{
+  width: 437px;
+  padding-top: 70px;
+  float: left;
+}
+.block-9 .block-with-form .information h4{
+  font: 60px "BebasNeueBold";
+  text-transform: uppercase;
+  text-align: center;
+}
+.block-9 .block-with-form .information span{
+  text-transform: uppercase;
+  font: 28px "Bebas";
+  display: block;
+  text-align: center;
+  padding-top: 23px;
+}
+.block-9 .block-with-form .information .shape{
+  background: url("../images/shape.png") no-repeat;
+  height: 124px;
+  width: 217px;
+  position: absolute;
+  bottom: 57px;
+  left: 271px;
+}
+.block-9 .block-with-form .form-block{
+  width: 290px;
+  height: 313px;
+  border: 8px solid #FFD700;
+  float: right;
+  margin: 57px 30px 0 0;
+  background: none;
+}
+.block-9 .block-with-form .form-block label {
+  margin: 28px 0 0 25px;
+  display: block;
+  font-size: 14px;
+}
+/*---------------------------------------------------------------------*/
+.block-10{
+  height: 510px;
+}
+.block-10 .wrapper {
+  position: relative;
+}
+.block-10 h2 {
+  color: #FFD700;
+  font: 50px "BebasNeueBold";
+  text-align: center;
+  padding: 0 0 71px;
+}
+.block-10 .shape{
+  background: url("../images/shape.png") no-repeat;
+  height: 124px;
+  width: 217px;
+  position: absolute;
+  top: 44px;
+  right: 300px;
+}
+.block-10 .video{
+  float: left;
+  width: 500px;
+}
+.block-10 .right-info{
+  overflow: hidden;
+}
+.block-10 .right-info h4 {
+  font: 30px "BebasNeueBold"
+}
+.block-10 .right-info p {
+  font-size: 16px;
+  line-height: 20px;
+}
+/*--------------------------------------------------------------------------------------*/
+.block-11{
+  background: url("../images/block-11.jpg")no-repeat center;
+  height: 1140px;
+}
+.block-11 .wrapper{
+  position: relative;
+}
+.block-11 .title-with-line{
+  text-align: center;
+}
+.block-11 .title-with-line h3 {
+  font: 35px "BebasNeueBook-Regular";
+  display: inline-block;
+  text-align: center;
+  padding-top: 0;
+
+}
+.block-11 h3 {
+  font: 47px "BebasNeueBold";
+  text-align: center;
+  padding-top: 115px;
+  text-shadow: 0 0 3px #fff;
+}
+.block-11 ul {
+  padding-top: 49px;
+}
+.block-11 ul li{
+  display: inline-block;
+  vertical-align: top;
+  width: 49%;
+  height: 139px;
+  padding-bottom: 37px;
+}
+.block-11 ul li span{
+  float: left;
+  text-transform: uppercase;
+}
+.block-11 ul li span.number{
+  font: 138px "HelveticaNeue-Thin";
+  float: left;
+}
+.block-11 ul li span.bold-text{
+  font: 34px "HelveticaNeueCyr-Roman";
+  color: #424242;
+  width: 44%;
+}
+.block-11 ul li span.text{
+  font: 19px "HelveticaNeueCyr-Roman";
+  width: 44%;
+}
+.block-11 ul li:nth-child(1){ width: 44%;}
+.block-11 ul li:nth-child(1) span.bold-text{
+  padding-top: 71px;
+}
+.block-11 ul li:nth-child(2){ width: 55%}
+.block-11 ul li:nth-child(2) span.bold-text{
+  width: 35%;
+  padding-top: 51px;
+}
+.block-11 ul li:nth-child(2) span.text{
+  width: 35%;
+}
+.block-11 ul li:nth-child(3){}
+.block-11 ul li:nth-child(3) span.text{
+  padding-top: 77px;
+}
+.block-11 ul li:nth-child(4){
+  width: 44%;
+  padding-left: 32px;
+}
+.block-11 ul li:nth-child(4) span.text{
+  padding-top: 77px;
+}
+.block-11 ul li:nth-child(5){}
+.block-11 ul li:nth-child(5) span.bold-text{
+  padding-top: 71px;
+  width: 29%;
+}
+.block-11 ul li:nth-child(5) span.text{
+  width: 29%;
+}
+.block-11 ul li:nth-child(6){
+  padding-left: 56px;
+  width: 44%;
+}
+.block-11 ul li:nth-child(6) span.bold-text {
+  padding-top: 28px;
+}
+.block-11 ul li:nth-child(6) span.text {
+  width: 58%;
+}
+.block-11 ul li:nth-child(7){
+  width: 60%;
+  position: relative;
+}
+.block-11 ul li:nth-child(7) span.bold-text{
+  width: 32%;
+  padding-top: 50px;
+}
+.block-11 ul li:nth-child(7) span.text{
+  width: 28%
+}
+.block-11 ul li:nth-child(8){
+  position: absolute;
+  width: 41%;
+}
+.block-11 ul li:nth-child(8) span.bold-text{
+  width: 51%;
+  padding-top: 31px;
+}
+.block-11 ul li:nth-child(8) span.text{
+  width: 71%;
+  font-size: 18px;
+}
+/*---------------------------------------------------------------------------*/
+.block-12{
+  height: 1203px;
+  background: #eeeeee;
+}
+.block-12 .wrapper {
+  position: relative;
+}
+.block-12 h2 {
+  color: #FFD700;
+  font: 50px "BebasNeueBold";
+  text-align: center;
+  padding: 12px 0 71px;
+}
+.block-12 .shape{
+  background: url("../images/shape.png") no-repeat;
+  height: 124px;
+  width: 217px;
+  position: absolute;
+  top: 53px;
+  right: 360px;
+}
+.block-12 ul{
+  text-align: center;
+
+}
+.block-12 ul li{
+  text-align: center;
+  width: 456px;
+  vertical-align: top;
+  display: inline-block;
+  padding-bottom: 35px;
+  position: relative;
+}
+.block-12 span{
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 23px;
+  line-height: 33px;
+}
+.block-12 ul li div span {
+  padding-top: 30px;
+
+}
+.block-12 ul li div .big-button-w{
+  width: 310px;
+  height: 59px;
+  border-width: 4px;
+  position: absolute;
+  bottom: 20px;
+  left: 38px;
+  font: 23px "BebasNeueBook-Regular";
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.block-12 ul li div .big-button-w:hover{
+  background: #fff;
+  color: #000;
+}
+.view1, .view2, .view3, .view4, .view5, .view6{
+  height: 242px;
+  width: 383px;
+  position: absolute;
+  -moz-transition: all 0.5s 0.1s ease-in;
+  -o-transition: all 0.5s 0.1s ease-in;
+  -webkit-transition: all 0.5s 0.1s ease-in;
+  cursor: pointer;
+  opacity: 0;
+  left: 36px;
+  z-index: 2;
+  top: 0;
+  color: #fff;
+}
+.view1:hover { background: rgba(98, 78, 46, 0.63); opacity: 1;}
+.view2:hover { background: rgba(98, 78, 46, 0.63); opacity: 1;}
+.view3:hover { background: rgba(98, 78, 46, 0.63); opacity: 1;}
+.view4:hover { background: rgba(98, 78, 46, 0.63); opacity: 1;}
+.view5:hover { background: rgba(98, 78, 46, 0.63); opacity: 1;}
+.view6:hover { background: rgba(98, 78, 46, 0.63); opacity: 1;}
+.segue{
+  background: url("../images/segue.jpg")no-repeat center;
+  height: 50px;
+}
+/*---------------------------------------------------------------------------*/
+.block-13{
+  height: 850px;
+  background: #fff;
+}
+.block-13 .title-with-line{
+  text-align: center;
+}
+.block-13 .title-with-line h3 {
+  font: 36px "BebasNeueBook-Regular";
+  display: inline-block;
+  text-align: center;
+  padding-top: 0;
+
+}
+.block-13 h3 {
+  font: 52px "BebasNeueBold";
+  text-align: center;
+  padding-top: 51px;
+  text-shadow: 0 0 3px #fff;
+}
+.block-13 .monitor{
+  background: url("../images/monitor.png")no-repeat center;
+  height: 701px;
+  width: 961px;
+}
+/*---------------------------------------------------------------------------------*/
+.block-14{
+  background: url("../images/block-14.jpg")no-repeat center;
+  height: 719px;
+}
+.block-14 .title-with-line{
+  text-align: center;
+}
+.block-14 .title-with-line h3 {
+  font: 36px "BebasNeueBook-Regular";
+  display: inline-block;
+  text-align: center;
+  padding-top: 0;
+
+}
+.block-14 h3 {
+  font: 52px "BebasNeueBold";
+  text-align: center;
+  padding-top: 110px;
+  text-shadow: 0 0 3px #fff;
+}
+.review{
+  height: 261px;
+  width:  184px;
+  background: #fff;
+}
+/*--------------------------------------------------------------------------------------*/
+.block-15{
+  height: 770px;
+}
+.block-15 h2 {
+  color: #FFD700;
+  font: 50px "BebasNeueBold";
+  text-align: center;
+  padding: 12px 0 71px;
+}
+.block-15 .shape{
+  background: url("../images/shape.png") no-repeat;
+  height: 124px;
+  width: 217px;
+  position: absolute;
+  top: 53px;
+  right: 360px;
+}
+.block-15 ul{
+  background: url("../images/bold-line.png")no-repeat 0 59px;
+  height: 465px;
+  width: 717px;
+  margin: 0 auto;
+  text-align: center;
+}
+.block-15 ul li{
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #000;
+  display: inline-block;
+  padding: 40px 81px 19px 60px;
+  vertical-align: top;
+}
+.block-15 ul li span{
+  display: block;
+}
+.block-15 ul li .low{
+  padding-top: 40px;
+}
+.block-15 ul li .small-button{
+  background: url("../images/buttons.png")no-repeat -832px -13px;
+  height: 39px;
+  width: 163px;
+  border: none;
+  margin-top: 44px;
+  color: #331503;
+  text-shadow: 0 0 3px #fff;
+  cursor: pointer;
+}
+.block-15 ul li .small-button:hover{
+  background: url("../images/buttons.png")no-repeat -832px -65px;
+}
+.block-15 ul li:nth-child(3) {
+  padding: 40px 33px 40px 93px;
+}
+.block-15 ul li:nth-child(5) {
+  padding: 60px 174px 0 0;
+}
+.block-15 .red-button-small{
+  background: url("../images/buttons.png")no-repeat -635px -11px;
+  height: 41px;
+  width: 183px;
+  border: none;
+  color: #000;
+  text-shadow: 0 0 3px #fff;
+  cursor: pointer;
+  position: relative;
+  bottom: 81px;
+  left: 589px;
+}
+.block-15 .red-button-small:hover{
+  background: url("../images/buttons.png")no-repeat -635px -64px;
+}
+/*----------------------------------------------------------------------------------*/
+.block-16{
+  background: url("../images/block-16.jpg")no-repeat center;
+  height: 686px;
+  color: #fff;
+}
+.block-16 .block-with-form{
+  width: 781px;
+  height: 441px;
+  background: rgba(1, 1, 1, 0.5);
+  margin: 0 auto;
+}
+.block-16 .wrapper {
+  padding-top: 122px;
+  position: relative;
+}
+.block-16 .block-with-form .information{
+  width: 437px;
+  padding-top: 70px;
+  float: left;
+}
+.block-16 .block-with-form .information h4{
+  font: 60px "BebasNeueBold";
+  text-transform: uppercase;
+  text-align: center;
+}
+.block-16 .block-with-form .information span{
+  text-transform: uppercase;
+  font: 28px "Bebas";
+  display: block;
+  text-align: center;
+  padding-top: 23px;
+}
+.block-16 .block-with-form .information .shape{
+  background: url("../images/shape.png") no-repeat;
+  height: 124px;
+  width: 217px;
+  position: absolute;
+  bottom: 140px;
+  left: 270px;
+}
+.block-16 .block-with-form .form-block{
+  width: 290px;
+  height: 316px;
+  border: 8px solid #FFD700;
+  float: right;
+  margin: 53px 30px 0 0;
+  background: none;
+}
+.block-16 .block-with-form .form-block h3{
+  font: 24px "BebasNeueBold";
+  text-align: center;
+  padding-top: 20px;
+}
+.block-16 .block-with-form .form-block span{
+  font-size: 17px;
+  text-align: center;
+  display: block;
+}
+.block-16 .block-with-form .form-block label {
+  margin: 20px 0 0 25px;
+  display: block;
+  font-size: 14px;
+}
+/*----------------------------------------------------------------------*/
+.block-17{
+  background: #fdf6e4;
+  height: 617px;
+}
+.block-17 .title-with-line{
+  text-align: center;
+}
+.block-17 .title-with-line h3 {
+  font: 52px "BebasNeueBold";
+  display: inline-block;
+  text-align: center;
+  padding-top: 0;
+
+}
+.block-17 h3 {
+  font: 52px "BebasNeueBold";
+  text-align: center;
+  padding-top: 45px;
+  text-shadow: 0 0 3px #fff;
+}
+.block-17 ul{
+  text-align: center;
+  margin-top: 25px;
+}
+.block-17 ul li{
+   display: inline-block;
+   vertical-align: top;
+  width: 312px;
+  height: 400px;
+}
+.segue-yellow{
+  background: url("../images/segue-yellow.png")no-repeat center;
+  height: 53px;
+  position: relative;
+  z-index: 1;
+}
+/*--------------------------------------------------------------------------*/
+.block-18 #map {
+  width: 100%;
+  height: 838px;
+  margin-top: -169px;
+  overflow: inherit !important;
+}
+.block-18 .wrapper{
+  position: relative;
+}
+.block-18 .title-with-line{
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+.block-18 .title-with-line h3 {
+  font: 46px "BebasNeueBold";
+  display: inline-block;
+  text-align: center;
+  padding-top: 69px;
+}
+.block-18 .info{
+  width: 390px;
+  height: 313px;
+  background: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  z-index: 10;
+  margin-top: 130px;
+  padding-top: 14px;
+}
+.block-18 .info span{
+  font: 24px "Bebas";
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+}
+/*------------------------------------------------------------------------------*/
+footer{
+  background: #fff;
+  height: 110px;
+}
+footer .logo {
+  margin-top: 32px;
+}
+footer .right-block img{
+  margin-top: 0;
+}
+footer .right-block {
+  float: right;
+  font: 18px "HelveticaNeueCyr-Roman";
+}
+footer .right-block ul {
+  width: 374px;
+}
+footer .right-block ul li {
+  margin-left: 6px;
+  display: inline-block;
+  margin-top: 12px;
+
+}
+footer .right-block ul li span{
+  float: right;
+}
+footer .right-block{
+  float: right;
+  width: 372px;
+  color: #FFD700;
+  margin-top: 32px;
+}
+footer .right-block .button-small{
+  float: right;
+  border-color: #FFD700;
+  color: #FFD700;
+  width: 132px;
+  height: 25px;
+  margin-top: 8px;
+}
+footer .right-block .button-small:hover{
+  background: #FFD700;
+  color: #fff;
+}
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  100% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  100% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+}
+
+.pulse {
+  -webkit-animation: pulse 1.5s  infinite;
+  -o-animation: pulse 1.5s  infinite;
+  -moz-animation: pulse 1.5s  infinite;
+  -ms-animation:pulse 1.5s infinite;
+  animation: pulse 1.5s infinite;
+}
+/* _________________________________________________________________________*/
+.mob1{
+  background: url("../images/bg-main2.jpg") no-repeat;
+  background-size: cover;
+}
+.mob1 .navbar-brand{
+  margin-top: 10px;
+  display: inline-block;
+}
+.mob0 .navbar-brand{
+  /* margin-top: 10px; */
+  display: inline-block;
+}
+.mob1 .title>div{
+  padding-bottom: 20px;
+  border-bottom: solid #fff 2px;
+  margin-bottom: 50px;
+}
+.right-contacts{
+  font: 18px "HelveticaNeueCyr-Roman";
+  color: #fff;
+  text-align: center;
+  float: right;
+}
+.right-contacts a{
+  color: #fff;
+  font: 20px "HelveticaNeueCyr-Roman";
+  text-decoration: underline;
+}
+.right-contacts a:hover{
+  color: #fff;
+  text-decoration: underline;
+}
+.right-contacts ul{
+  margin-top: 10px;
+}
+.mob1 .right-contacts ul li{
+  margin-left: -26px;
+}
+.mob0 .right-contacts ul li{
+  margin-left: -26px;
+}
+.right-contacts ul li img.mts{
+  margin-left: 3px;
+  margin-right: 2px;
+}
+.right-contacts input{
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.mob1 .title{
+  color: #fff;
+  padding-bottom: 30px;
+}
+.mob1 .title h1{
+  font: 39px "BebasNeueBold";
+  text-align: center;
+  text-transform: uppercase;
+  margin: 32px 0 17px;
+}
+.mob1 .title span{
+  font: 18px "Bebas";
+  text-align: center;
+  display: block;
+  text-transform: uppercase;
+}
+.mob1 .title span.span-padding{
+  padding: 10px 0;
+}
+.mob1 .navbar-brand{
+  width: 100%;
+  text-align: center;
+}
+.mob0 .navbar-brand{
+  width: 100%;
+  text-align: center;
+}
+.mob0{
+  margin-bottom: 20px;
+}
+.mob0 .right-contacts a{
+  color: #3ea6ef;
+  font: 20px "HelveticaNeueCyr-Roman";
+  text-decoration: underline;
+}
+.mob0 .button {
+  border: 2px solid yellow;
+  background: yellow;;
+  color: black;
+}
+.right-contacts{
+  float: none;
+  margin-top: 30px;
+}
+
+
+.mob2 .information{
+  padding-top: 30px;
+  color: #fff;
+}
+.mob2 .information h4{
+  font: 42px "BebasNeueBold";
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.mob2{
+  background-color: #FFD700;
+}
+.mob2 div.form-block{
+  float: none;
+  margin: 0 auto;
+  background-color: transparent;
+  border: none;
+  height: auto;
+  /* height: 300px; */
+}
+.mob2 .button_f{
+  border: 2px solid yellow;
+  background: yellow;
+  color: black;
+  font-size: 16px;
+  width: auto;
+  height: auto;
+  padding: 5px 10px;
+}
+
+.mob3{
+  background: url("../images/block-11.jpg")no-repeat center;
+}
+.mob3 .col-sm-12.col-xs-12{
+  vertical-align: middle;
+}
+
+.mob3 .col-sm-12.col-xs-12{
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.mob3 span{
+  text-transform: uppercase;
+}
+.mob3 span{
+  float: left;
+  text-transform: uppercase;
+}
+.mob3 span.number{
+  font: 138px "HelveticaNeue-Thin";
+  float: left;
+}
+.mob3 span.bold-text{
+  font: 34px "HelveticaNeueCyr-Roman";
+  color: #424242;
+  float: right;
+}
+.mob3 span.text{
+  float: right;
+  font: 19px "HelveticaNeueCyr-Roman";   
+}
+
+.mob4>.container>h4{
+  font: 42px "BebasNeueBold";
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.mob4 .panel-group .panel-collapse{
+  font: 16px "HelveticaNeueCyr-Roman";
+}
+.mob4 .panel-group .panel-body h4{
+  margin:15px 0;
+}
+.mob4 .panel-group ul{
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+.mob4 .panel-group ul li{
+  list-style-type: disc;
+}
+.panel-title a{
+  font: 16px "HelveticaNeueCyr-Roman";
+  color: #f00;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.panel-title a.collapsed{
+  color: #000;
+}
+.mob5 .container>h4{
+  font: 42px "BebasNeueBold";
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.mob5 ul{
+  text-align: center;
+  margin-top: 46px;
+}
+.mob5 ul li {
+  display: inline-block;
+  vertical-align: top;
+  width: 109px;
+  height: 181px;
+  margin-bottom: 20px;
+  background: url("../images/frame.png") no-repeat;
+  padding: 4px 36px 38px 23px;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  background-size: cover;
+  cursor: pointer;
+}
+.mob5 ul li:hover{
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -o-transform: scale(1.3);
+  z-index: 10;
+}
+.mob5 ul li div{
+  height: 88px;
+  width: 86px;
+  margin: 0 auto;
+}
+.mob5 ul li .icon-1{ background: url("../images/sprite.png") no-repeat -571px -215px;padding-bottom: 10px;}
+.mob5 ul li .icon-2{ background: url("../images/sprite.png") no-repeat -560px -102px;padding-bottom: 15px;}
+.mob5 ul li .icon-3{ background: url("../images/sprite.png") no-repeat -560px 2px;padding-bottom: 15px;}
+.mob5 ul li .icon-4{ background: url("../images/sprite.png") no-repeat -447px 0;padding-bottom: 15px;}
+.mob5 ul li .icon-5{ background: url("../images/sprite.png") no-repeat -585px -325px;padding-bottom: 15px;}
+.mob5 ul li .icon-6{ background: url("../images/sprite.png") no-repeat -454px -326px;padding-bottom: 15px;}
+.mob5 ul li .icon-7{ background: url("../images/sprite.png") no-repeat -446px -102px;padding-bottom: 15px;}
+.mob5 ul li .icon-8{ background: url("../images/sprite.png") no-repeat -450px -215px;}
+.mob5 ul li span{
+    font-size: 12px;
+    display: block;
+    line-height: 14px;
+}
+.mob6>.container>h3{
+  font: 42px "BebasNeueBold";
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+a.thumbnail{
+  padding: 0;
+  margin: 0;
+}
+.mob6 .col-sm-4.col-xs-4{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.mob6 .row{
+  margin-bottom: 20px;
+}
+.mob7{
+  background: url("../images/block-5.jpg") center no-repeat;
+}
+.mob7 div.form-block {
+  float: none;
+  margin: 0 auto;
+  background-color: transparent;
+  border: none;
+  height: 240px;
+}
+.mob7 .information {
+  padding-top: 30px;
+  color: #fff;
+}
+.mob7 .information h4 {
+  font: 42px "BebasNeueBold";
+  text-transform: uppercase;
+  text-align: center;
+}
+.mob7 .information span {
+  font-size: 18px;
+  text-align: center;
+  display: block;
+}
+.mob8 .navbar-brand {
+    width: 100%;
+    text-align: center;
+}
+.mob8 .navbar-brand {
+    margin-top: 10px;
+    display: inline-block;
+}
+.mob8 .right-contacts.xs-pull-left.right-block{
+  color: #f00;
+}
+.mob8 input{
+    border: 2px solid #f2db01;
+    background: #f2db01;
+    color: #fff;
+    margin: 20px auto 22px auto; 
+}
+.mob8 .right-contacts ul li{
+  margin-left: 0;
+}
+.mob8 .right-contacts a{
+  color: #3ea6ef;
+}
+@media screen and (max-width: 480px){
+  .right-contacts{
+  float: none;
+  margin-top: 30px;
+  }
+  .mob1 .navbar-brand{
+  width: 100%;
+  text-align: center;
+  }
+  .md-modal.md-effect-1.md-show div.form-block {
+  width: 257px !important;
+  }
+  .md-modal.md-effect-1.md-show div.md-close{
+  right: 18px !important;
+  }
+  .label_sndok{
+  font-size: 20px;
+  }
+}
+
+.col-sm-6, .col-sm-12, .col-xs-6, .col-xs-12{
+  -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+      box-sizing: border-box;
+}
+/* .md-modal.md-effect-1.mobile.md-show{
+  height: 100%;
+  width: 100%;
+  top: 50% !important;
+}
+.md-modal.md-effect-1.mobile.md-show .form-block{
+  border: none;
+  width: 100% !important;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+} */
+.mob2 .label_sndok{
+  margin-bottom: 40px;
+}
+.panel-title a>span{
+  vertical-align: middle;
+  color: #44aee2;
+}
+#formspan{
+  /* display: block; */
+  margin: 20px auto 0px auto;
+  text-align: center;
+}
+.mob9 .col-sm-4.col-xs-4{
+  -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+      box-sizing: border-box;
+}
+.mob9 .thumbnail{
+  border: none !important;
+  -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+      box-shadow: none;
+}
+.mob9{
+  margin-bottom: 40px;
+}
+.mob9 h4{
+  font: 40px "BebasNeueBold";
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.mob10{
+  background-color: #f00;
+}
+.mob11{
+  background-color: #f00;
+  background-image: url(../images/podlozhka2.png); 
+  text-align: center;
+}
+.mob11 .button {
+  border: 2px solid yellow;
+  background: yellow;
+  color: black;
+  font-size: 20px;
+  width: auto;
+  height: auto;
+  padding: 7px 15px;
+  margin-bottom: 20px;
+}
+.mob11 h4{
+  font: 42px "BebasNeueBold";
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  margin: 20px 0;
+}
+.mob11 .desc{
+/*   text-align: left; */
+  margin-bottom: 20px;
+  width: 350px;
+  background: rgba(1,1,1,0.3);
+  display: table-cell;
+  vertical-align: middle;
+}
+.halva-img{
+  width: 400px;
+  height: 178px;
+  float: left;
+  text-align: right;
+}
+.halva .wrapper{
+  display: table;
+  margin-bottom: 30px;
+  width: 700px;
+}
+@media (max-width: 990px){
+	.mob11 .desc{
+		height: 120px;
+		width: 90%;
+		padding-top: 30px;
+		display: block;
+		margin: 0 auto 20px;
+	}
+}
+.mob11 img{
+  margin-bottom: 20px;
+  max-width: 100%;
+}
+.mob11 span{
+  font-size: 17px;
+  text-align: left;
+  color: #fff;
+}
+.mob9 img{
+  padding-left: 20px;
+}
+.navbar{
+  background: #FFD700;
+  position: relative;
+  z-index: 100;
+}
+.navbar-default .navbar-toggle{
+  border-color: #f00;
+}
+.navbar-default .navbar-toggle .icon-bar{
+  background-color: #f00;
+}
+.navbar.mobile.navbar-default .navbar-nav > li > a{
+     color: #fff;
+    font: 40px "Bebas" !important;
+}
+.navbar-default .navbar-nav > li > a{
+     color: #fff;
+    font: 20px "Bebas";
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #fff;
+}
+/* box-shadow: inset -4px -6px 10px 0 #c11415; */
+.navbar-toggle.pull-left{
+  margin-right: 0px;
+  margin-left: 15px;
+}
+.navbar-header .tel span{
+  line-height: 50px;
+  font: 20px "Bebas";
+  color: #fff;
+}
+.navbar-header .tel{
+  margin-top: 10px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.telico{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#bfd255+0,8eb92a+50,72aa00+51,9ecb2d+100;Green+Gloss */
+background: #bfd255; /* Old browsers */
+background: -moz-linear-gradient(top, #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfd255', endColorstr='#9ecb2d',GradientType=0 ); /* IE6-9 */
+  /* border: solid #fff 1px; */
+  vertical-align: middle;
+  /* border-radius: 50%; */
+  padding: 16px 7px;
+  margin-top: 7px;
+  margin-right: 15px;
+ /*  background-color: #6ff361; */
+  text-align: center;
+  border-radius: 7px;
+  margin-right: 10%;
+  -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+      box-sizing: border-box;
+}
+.telico a{
+  font: 22px "Bebas";
+  color: #fff;
+}
+.telico span{
+  font-size: 25px;
+  color: #fff;
+  vertical-align: top;
+  padding-left: 7px;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .active > a{
+  background: #fff;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+  background: #fff;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+  color: #f00;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+  border-top: none;
+}
+.btn:after {
+  font-family: "Glyphicons Halflings";
+  content: "\e093";
+  color: #44aee2;
+  margin-left: 15px;
+  float: right;
+}
+.btn{
+  width: 100%;
+  -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+      box-sizing: border-box;
+}
+.btn.collapsed:after {
+  font-family: "Glyphicons Halflings";
+  color: #44aee2;
+  margin-left: 15px;
+  content: "\e094";
+  float: right;
+  }
+.panel-heading{
+  padding: 5px;
+}
+
+.navbar.mobile #navbar{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-color: #FFD700;
+  height: 100%;
+  text-align: center;
+  display: block;
+}
+.navbar.mobile .navbar-collapse.collapse{
+  display: none !important;
+}
+.navbar.mobile .navbar-collapse.collapse.in{
+  display: block !important;
+}
+.navbar.mobile .navbar-nav{
+  margin: 0;
+}
+.navbar-toggle{
+  background-color: #fff;
+}
+.navbar-default .navbar-toggle .icon-bar{
+  background-color: #f00;
+}
+.navbar-header span.pull-left{
+  font-size: 15px;
+  color: #fff;
+  margin-right: 0px;
+  margin-left: 15px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  position: absolute;
+  top: 51px;
+  left: 1px;
+}
+.navbar-toggle{
+  padding: 12px 13px;
+  margin-bottom: 22px;
+}
+div.adrr{
+  font-size: 15px;
+  color:black;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.mob7 .button_f{
+  height: 32px;
+  padding: 0 12px;
+  border: 2px solid yellow;
+  background: yellow;
+  color: black;
+  width: auto !important;
+}
+.closem{
+  font-size: 30px;
+  color: #fff;
+}
+.block-9.duplicate{
+  background: none;
+  background-color: red;
+  height: 650px;
+  color: #fff;
+}
+.mob11.hidden-sm.hidden-xs .desc span{
+ font-size: 25px;
+}
+header.mega{
+  padding: 10px 0;
+}
+header .headering ul li{
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+header .headering ul li img{
+  vertical-align: top;
+}
+header.mega{
+  height: auto;
+}
+header .right-block .small{
+  background: #0066ff;
+  height: auto;
+  width: auto;
+  border: solid #0047b2 1px;
+  padding: 7px 5px 5px;
+  border-radius: 2px;
+}
+header .right-block .small:hover{
+  color: #0047b2;
+  border: solid #0066ff 1px;
+}
+.wrapper.pzdc{
+  width: 50%;
+  float: right;
+}
+.wrapper.pzdc .title{
+  background: transparent;
+}
+.wrapper.pzdc .title span,
+.wrapper.pzdc .title h2,
+.wrapper.pzdc .title h1{
+  text-align: left;
+}
+.wrapper.pzdc .title h1{
+  margin-top: 40px;
+}
+.title{
+  background: transparent;
+}
+.wrapper.pzdc .title div .big-button{
+  margin: 0;
+  border-radius: 25px;
+  text-transform: uppercase;
+  width: auto;
+  height: auto;
+  padding: 10px 25px;
+  font-size: 17px
+}
+.wrapper.pzdc .title div .big-button:first-child{
+  margin-right: 10px;
+}
+.main-block.asd{
+  background-size: cover;
+}
+.mega img{
+  margin-top: 12px;
+}
+
+
+/* -------------------------------------------- */
+
+.calc-btn {
+  background: #ff4400 !important;
+  color: #f0f0f0 !important;
+}
