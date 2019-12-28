@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+	
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+	<div class="calc">
+
+		<div class="calc__title">Калькулятор расчета стоимости теплого пола</div>
+
+		<div class="calc__separator"></div>
+		<div class="calc__separator"></div>
+		<div class="calc__separator calc__separator--line"></div>
+		<div class="calc__separator"></div>
+		<div class="calc__separator"></div>
+
+		<div class="calc__row">
+			<div class="calc__row__text">Площадь 1-го этажа</div>
+			<div class="calc__row__input">
+				<input id="input_S" type="number" required placeholder="... введите значение">
+			</div>
+		</div>
+
+		<div class="calc__row">
+			<div class="calc__row__text">Этажность</div>
+			<div class="calc__row__input calc__row__select">
+				<select name="calc__row__select__option" id="select_1">
+					<option value="0">1 этаж</option>
+					<option value="6">2 этажа</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="calc__row">
+			<div class="calc__row__text">Материал стен</div>
+			<div class="calc__row__input calc__row__select">
+				<select name="calc__row__select__option" id="select_2">
+					<option value="0">Каркас (утепление стен 200 мм и более)</option>
+					<option value="7">Дерево-массив (бревно, брус)</option>
+					<option value="0">Газо/пено-бетон (с наружным утеплением стен)</option>
+					<option value="5">Кирпич</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="calc__row">
+			<div class="calc__row__text">Утепление кровли</div>
+			<div class="calc__row__input calc__row__select">
+				<select name="calc__row__select__option" id="select_3">
+					<option value="9">200 мм и менее</option>
+					<option value="5">250 мм</option>
+					<option value="0">300 мм и более</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="calc__row">
+			<div class="calc__row__text">Окна</div>
+			<div class="calc__row__input calc__row__select">
+				<select name="calc__row__select__option" id="select_4">
+					<option value="8">Однокамерные стеклопакеты</option>
+					<option value="4">Двухкамерные стеклопакеты</option>
+					<option value="0">Энергосберегающие стеклопакеты</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="calc__separator"></div>
+		<div class="calc__separator calc__separator--line"></div>
+		<div class="calc__separator"></div>
+
+		<div class="calc__row">
+			<div class="calc__row__text calc__row__text--radio">Есть ли в доме сауна</div>
+			<div class="calc__row__radio">
+				<input type="radio" name="radio_sauna" value="5" id="radio_sauna_yes">
+				<label for="radio_sauna_yes">Да</label>
+				<input type="radio" name="radio_sauna" value="0" id="radio_sauna_no" checked>
+				<label for="radio_sauna_no">Нет</label>
+			</div>
+		</div>
+
+		<div class="calc__row">
+			<div class="calc__row__text calc__row__text--radio">Есть ли в доме камин или печь</div>
+			<div class="calc__row__radio">
+				<input type="radio" name="radio_kamin" value="5" id="radio_kamin_yes">
+				<label for="radio_kamin_yes">Да</label>
+				<input type="radio" name="radio_kamin" value="0" id="radio_kamin_no" checked>
+				<label for="radio_kamin_no">Нет</label>
+			</div>
+		</div>
+
+		<div class="calc__row">
+			<div class="calc__row__text calc__row__text--radio">Есть ли в доме холодные кладовки</div>
+			<div class="calc__row__radio">
+				<input type="radio" name="radio_kladovka" value="5" id="radio_kladovka_yes">
+				<label for="radio_kladovka_yes">Да</label>
+				<input type="radio" name="radio_kladovka" value="0" id="radio_kladovka_no" checked>
+				<label for="radio_kladovka_no">Нет</label>
+			</div>
+		</div>
+
+		<div class="calc__row">
+			<div class="calc__row__text calc__row__text--radio">Есть ли помещения без тёплого пола</div>
+			<div class="calc__row__radio">
+				<input type="radio" name="radio_pomeshenie" value="5" id="radio_pomeshenie_yes">
+				<label for="radio_pomeshenie_yes">Да</label>
+				<input type="radio" name="radio_pomeshenie" value="0" id="radio_pomeshenie_no" checked>
+				<label for="radio_pomeshenie_no">Нет</label>
+			</div>
+		</div>
+
+		<div class="calc__separator"></div>
+		<div class="calc__separator calc__separator--line"></div>
+		<div class="calc__separator"></div>
+		<div class="calc__separator"></div>
+
+		<div class="calc__btn">Рассчитать</div>
+
+		<div class="calc__row calc__row--itog">
+			<div class="calc__row__itog">Расчётная стоимость стержневой системы отопления EcoOndol:</div>
+			<div id="result_1" class="calc__row__itog-value">0</div>
+		</div>
+
+		<div class="calc__row calc__row--itog">
+			<div class="calc__row__itog">Сколько Вы будете платить за электроэнергию:</div>
+			<div id="result_2" class="calc__row__itog-value">0</div>
+		</div>
+
+
+
+	</div>
+
+
+</body>
+</html>
