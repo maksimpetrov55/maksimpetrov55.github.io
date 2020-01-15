@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+	<!-- <div class="div" style="width: 100%; height: 300px; background: #000;"></div> -->
+
+	<div class="calc">
+
+		<div class="calc__section">
+
+			<div class="calc__section__title">1. Выберите материал:</div>
+
+			<div class="calc__section__flex">
+
+				<input class="calc__section__flex__radio" type="radio" name="material" id="material_1" checked>
+				<label class="calc__section__flex__block" for="material_1">
+					<img class="calc__section__flex__block__img" src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/Grandex_logo_medium.jpg" alt="">
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" name="material" id="material_2">
+				<label class="calc__section__flex__block" for="material_2">
+					<img class="calc__section__flex__block__img" src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/3.png" alt="">
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" name="material" id="material_3">
+				<label class="calc__section__flex__block" for="material_3">
+					<img class="calc__section__flex__block__img" src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/LGHi-Macs.jpg" alt="">
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" name="material" id="material_4">
+				<label class="calc__section__flex__block" for="material_4">
+					<img class="calc__section__flex__block__img" src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/corian.jpg" alt="">
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" name="material" id="material_5">
+				<label class="calc__section__flex__block" for="material_5">
+					<img class="calc__section__flex__block__img" src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/hanex.jpg" alt="">
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" name="material" id="material_6">
+				<label class="calc__section__flex__block" for="material_6">
+					<img class="calc__section__flex__block__img" src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/tristone.jpg" alt="">
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" name="material" id="material_7">
+				<label class="calc__section__flex__block" for="material_7">
+					<img class="calc__section__flex__block__img" src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/Neomarm-Atrio.jpg" alt="">
+				</label>
+
+			</div>
+
+		</div>
+		<!-- /.calc__section -->
+
+		<div class="calc__section">
+
+			<div class="calc__section__title">2. Выберите вид камня:</div>
+
+			<div class="calc__section__flex calc__section__flex--kamen1">
+
+				<input class="calc__section__flex__radio" type="radio" value="14850" name="kamen-1" id="kamen-1_1" checked>
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-1_1">
+					<div>Adventure</div>
+					<div>14 850 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="14850" name="kamen-1" id="kamen-1_2">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-1_2">
+					<div class="calc__section__flex__block__name">Delicious Edit</div>
+					<div>14 850 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="20900" name="kamen-1" id="kamen-1_3">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-1_3">
+					<div class="calc__section__flex__block__name">Explorer</div>
+					<div>20 900 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="17600" name="kamen-1" id="kamen-1_4">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-1_4">
+					<div class="calc__section__flex__block__name">Jewel</div>
+					<div>17 600 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="13200" name="kamen-1" id="kamen-1_5">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-1_5">
+					<div class="calc__section__flex__block__name">Pure color</div>
+					<div>13 200 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="13200" name="kamen-1" id="kamen-1_6">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-1_6">
+					<div class="calc__section__flex__block__name">Send and Sky</div>
+					<div>13 200 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="20900" name="kamen-1" id="kamen-1_7">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-1_7">
+					<div class="calc__section__flex__block__name">Marble Ocean</div>
+					<div>20 900 руб./п.м</div>
+				</label>
+
+			</div>
+
+
+
+			<div class="calc__section__flex calc__section__flex--kamen2">
+
+				<input class="calc__section__flex__radio" type="radio" value="14850" name="kamen-2" id="kamen-2_1" checked>
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-2_1">
+					<div>Pebble</div>
+					<div>14 850 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="14300" name="kamen-2" id="kamen-2_2">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-2_2">
+					<div>Aspen</div>
+					<div>14 300 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="14850" name="kamen-2" id="kamen-2_3">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-2_3">
+					<div>Metallic</div>
+					<div>14 850 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="20900" name="kamen-2" id="kamen-2_4">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-2_4">
+					<div>Quarry</div>
+					<div>20 900 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="13200" name="kamen-2" id="kamen-2_5">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-2_5">
+					<div>Sanded</div>
+					<div>13 200 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="13200" name="kamen-2" id="kamen-2_6">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-2_6">
+					<div>Solid</div>
+					<div>13 200 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="24200" name="kamen-2" id="kamen-2_7">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-2_7">
+					<div>Tempest</div>
+					<div>24 200 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="24200" name="kamen-2" id="kamen-2_8">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-2_8">
+					<div>Suprime</div>
+					<div>24 200 руб./п.м</div>
+				</label>
+
+			</div>
+
+
+
+			<div class="calc__section__flex calc__section__flex--kamen3">
+
+				<input class="calc__section__flex__radio" type="radio" value="24200" name="kamen-3" id="kamen-3_1" checked>
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-3_1">
+					<div>Galaxy</div>
+					<div>24 200 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="14850" name="kamen-3" id="kamen-3_2">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-3_2">
+					<div>Granite</div>
+					<div>14 850 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="16000" name="kamen-3" id="kamen-3_3">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-3_3">
+					<div>Lucent</div>
+					<div>16 000 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="24200" name="kamen-3" id="kamen-3_4">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-3_4">
+					<div>Marmo</div>
+					<div>24 200 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="19800" name="kamen-3" id="kamen-3_5">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-3_5">
+					<div>Perna</div>
+					<div>19 800 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="14850" name="kamen-3" id="kamen-3_6">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-3_6">
+					<div>Quartz</div>
+					<div>14 850 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="14850" name="kamen-3" id="kamen-3_7">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-3_7">
+					<div>Sand</div>
+					<div>14 850 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="13200" name="kamen-3" id="kamen-3_8">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-3_8">
+					<div>Solid</div>
+					<div>13 200 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="23100" name="kamen-3" id="kamen-3_9">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-3_9">
+					<div>Volcanics</div>
+					<div>23 100 руб./п.м</div>
+				</label>
+
+			</div>
+
+
+
+			<div class="calc__section__flex calc__section__flex--kamen4">
+
+				<input class="calc__section__flex__radio" type="radio" value="20400" name="kamen-4" id="kamen-4_1" checked>
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-4_1">
+					<div>Montelli Ultra</div>
+					<div>20 400 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="20400" name="kamen-4" id="kamen-4_2">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-4_2">
+					<div>Montelli Basic</div>
+					<div>20 400 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="26950" name="kamen-4" id="kamen-4_3">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-4_3">
+					<div>Corian</div>
+					<div>26 950 руб./п.м</div>
+				</label>
+
+			</div>
+
+
+
+			<div class="calc__section__flex calc__section__flex--kamen5">
+
+				<input class="calc__section__flex__radio" type="radio" value="14850" name="kamen-5" id="kamen-5_1" checked>
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-5_1">
+					<div>Cubic</div>
+					<div>14 850 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="13200" name="kamen-5" id="kamen-5_2">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-5_2">
+					<div>Duo</div>
+					<div>13 200 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="19800" name="kamen-5" id="kamen-5_3">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-5_3">
+					<div>Galleria</div>
+					<div>19 800 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="20900" name="kamen-5" id="kamen-5_4">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-5_4">
+					<div>Glittering</div>
+					<div>20 900 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="13200" name="kamen-5" id="kamen-5_5">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-5_5">
+					<div>Magic</div>
+					<div>13 200 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="13750" name="kamen-5" id="kamen-5_6">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-5_6">
+					<div>Pearl</div>
+					<div>13 750 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="13200" name="kamen-5" id="kamen-5_7">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-5_7">
+					<div>Solo</div>
+					<div>13 200 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="14850" name="kamen-5" id="kamen-5_8">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-5_8">
+					<div>Trio</div>
+					<div>14 850 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="22000" name="kamen-5" id="kamen-5_9">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-5_9">
+					<div>Belassimo</div>
+					<div>22 000 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="24200" name="kamen-5" id="kamen-5_10">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-5_10">
+					<div>Nativo</div>
+					<div>24 200 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="14850" name="kamen-5" id="kamen-5_11">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-5_11">
+					<div>Therapy</div>
+					<div>14 850 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="21450" name="kamen-5" id="kamen-5_12">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-5_12">
+					<div>Brionne</div>
+					<div>21 450 руб./п.м</div>
+				</label>
+
+			</div>
+
+
+
+			<div class="calc__section__flex calc__section__flex--kamen6">
+
+				<input class="calc__section__flex__radio" type="radio" value="10700" name="kamen-6" id="kamen-6_1" checked>
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-6_1">
+					<div>Modern</div>
+					<div>10 700 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="11500" name="kamen-6" id="kamen-6_2">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-6_2">
+					<div>Сlassical</div>
+					<div>11 500 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="12700" name="kamen-6" id="kamen-6_3">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-6_3">
+					<div>Reneissans</div>
+					<div>12 700 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="12700" name="kamen-6" id="kamen-6_4">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-6_4">
+					<div>Romantik</div>
+					<div>12 700 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="15000" name="kamen-6" id="kamen-6_5">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-6_5">
+					<div>B aroque</div>
+					<div>15 000 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="16400" name="kamen-6" id="kamen-6_6">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-6_6">
+					<div>Romanesqoue</div>
+					<div>16 400 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="17800" name="kamen-6" id="kamen-6_7">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-6_7">
+					<div>Bisantini</div>
+					<div>17 800 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="19500" name="kamen-6" id="kamen-6_8">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-6_8">
+					<div>Avant garde</div>
+					<div>19 500 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="24200" name="kamen-6" id="kamen-6_9">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-6_9">
+					<div>Nativo</div>
+					<div>24 200 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="14850" name="kamen-6" id="kamen-6_10">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-6_10">
+					<div>Therapy</div>
+					<div>14 850 руб./п.м</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="21450" name="kamen-6" id="kamen-6_11">
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-6_11">
+					<div>Brionne</div>
+					<div>21 450 руб./п.м</div>
+				</label>
+
+			</div>
+
+
+
+			<div class="calc__section__flex calc__section__flex--kamen7">
+
+				<input class="calc__section__flex__radio" type="radio" value="19000" name="kamen-7" id="kamen-7_1" checked>
+				<label class="calc__section__flex__block calc__section__flex__block--small" for="kamen-7_1">
+					<div>neomarm</div>
+					<div>19 000 руб/п.м</div>
+				</label>
+
+			</div>
+
+		</div>
+		<!-- /.calc__section -->
+
+		<div class="calc__section">
+
+			<div class="calc__section__title">3. Выберите тип столешницы:</div>
+
+			<div class="calc__section__flex">
+
+				<input class="calc__section__flex__radio" type="radio" name="type" id="type_1" checked>
+				<label class="calc__section__flex__block calc__section__flex__block--big" for="type_1">
+					<img class="calc__section__flex__block__img" src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/pram.jpg" alt="">
+					<div class="calc__section__flex__block__title">Прямая</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" name="type" id="type_2">
+				<label class="calc__section__flex__block calc__section__flex__block--big" for="type_2">
+					<img class="calc__section__flex__block__img" src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/g.jpg" alt="">
+					<div class="calc__section__flex__block__title">Г-образная</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" name="type" id="type_3">
+				<label class="calc__section__flex__block calc__section__flex__block--big" for="type_3">
+					<img class="calc__section__flex__block__img" src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/p.jpg" alt="">
+					<div class="calc__section__flex__block__title">П-образная</div>
+				</label>
+
+			</div>
+
+		</div>
+		<!-- /.calc__section -->
+
+		<div class="calc__section">
+
+			<div class="calc__section__title">4. Укажите размер столешницы в мм:</div>
+
+			<div class="calc__section__sizes calc__section__sizes--1">
+				<div class="calc__section__sizes__block">
+
+					<img class="calc__section__sizes__block__img" src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/stol1.png" alt="">
+
+					<div class="calc__section__sizes__block__flex">
+
+						<div class="calc__section__sizes__block__flex__part">
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__r" type="checkbox" id="radio_stol-1_1">
+								<label class="calc__section__sizes__block__label" for="radio_stol-1_1">скругленный угол R1</label>
+							</div>
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__r" type="checkbox" id="radio_stol-1_2">
+								<label class="calc__section__sizes__block__label" for="radio_stol-1_2">скругленный угол R2</label>
+							</div>
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__r" type="checkbox" id="radio_stol-1_3">
+								<label class="calc__section__sizes__block__label" for="radio_stol-1_3">скругленный угол R3</label>
+							</div>
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__r" type="checkbox" id="radio_stol-1_4">
+								<label class="calc__section__sizes__block__label" for="radio_stol-1_4">скругленный угол R4</label>
+							</div>
+
+						</div>
+
+						<div class="calc__section__sizes__block__flex__part">
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__inp" type="number" id="input_stol-1_1">
+								<div>Размер A</div>
+							</div>
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__inp" type="number" id="input_stol-1_2">
+								<div>Размер B</div>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+			<div class="calc__section__sizes calc__section__sizes--2">
+				<div class="calc__section__sizes__block">
+
+					<img class="calc__section__sizes__block__img" src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/stol2.png" alt="">
+					
+					<div class="calc__section__sizes__block__flex">
+
+						<div class="calc__section__sizes__block__flex__part">
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__r" type="checkbox" id="radio_stol-2_1">
+								<label for="radio_stol-2_1" class="calc__section__sizes__block__label">скругленный угол R1</label>
+							</div>
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__r" type="checkbox" id="radio_stol-2_2">
+								<label for="radio_stol-2_2" class="calc__section__sizes__block__label">скругленный угол R2</label>
+							</div>
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__r" type="checkbox" id="radio_stol-2_3">
+								<label for="radio_stol-2_3" class="calc__section__sizes__block__label">скругленный угол R3</label>
+							</div>
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__r" type="checkbox" id="radio_stol-2_4">
+								<label for="radio_stol-2_4" class="calc__section__sizes__block__label">скругленный угол R4</label>
+							</div>
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__r" type="checkbox" id="radio_stol-2_5">
+								<label for="radio_stol-2_5" class="calc__section__sizes__block__label">скругленный угол R5</label>
+							</div>
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__r" type="checkbox" id="radio_stol-2_6">
+								<label for="radio_stol-2_6" class="calc__section__sizes__block__label">скругленный угол R6</label>
+							</div>
+
+						</div>
+
+						<div class="calc__section__sizes__block__flex__part">
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__inp" type="number" id="input_stol-2_1">
+								<div>Размер A</div>
+							</div>
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__inp" type="number" id="input_stol-2_2">
+								<div>Размер B</div>
+							</div>
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__inp" type="number" id="input_stol-2_3">
+								<div>Размер C</div>
+							</div>
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__inp" type="number" id="input_stol-2_4">
+								<div>Размер D</div>
+							</div>
+
+						</div>
+
+					</div>
+
+
+					
+
+				</div>
+			</div>
+
+			<div class="calc__section__sizes calc__section__sizes--3">
+				<div class="calc__section__sizes__block">
+
+					<img class="calc__section__sizes__block__img" src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/stol3.png" alt="">
+					
+					<div class="calc__section__sizes__block__flex">
+
+						<div class="calc__section__sizes__block__flex__part">
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__r" type="checkbox" id="radio_stol-3_1">
+								<label class="calc__section__sizes__block__label" for="radio_stol-3_1">скругленный угол R1</label>
+							</div>
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__r" type="checkbox" id="radio_stol-3_2">
+								<label class="calc__section__sizes__block__label" for="radio_stol-3_2">скругленный угол R2</label>
+							</div>
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__r" type="checkbox" id="radio_stol-3_3">
+								<label class="calc__section__sizes__block__label" for="radio_stol-3_3">скругленный угол R3</label>
+							</div>
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__r" type="checkbox" id="radio_stol-3_4">
+								<label class="calc__section__sizes__block__label" for="radio_stol-3_4">скругленный угол R4</label>
+							</div>
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__r" type="checkbox" id="radio_stol-3_5">
+								<label class="calc__section__sizes__block__label" for="radio_stol-3_5">скругленный угол R5</label>
+							</div>
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__r" type="checkbox" id="radio_stol-3_6">
+								<label class="calc__section__sizes__block__label" for="radio_stol-3_6">скругленный угол R6</label>
+							</div>
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__r" type="checkbox" id="radio_stol-3_7">
+								<label class="calc__section__sizes__block__label" for="radio_stol-3_7">скругленный угол R7</label>
+							</div>
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__r" type="checkbox" id="radio_stol-3_8">
+								<label class="calc__section__sizes__block__label" for="radio_stol-3_8">скругленный угол R8</label>
+							</div>
+
+
+						</div>
+
+						<div class="calc__section__sizes__block__flex__part">
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__inp" type="number" id="input_stol-3_1">
+								<div>Размер A</div>
+							</div>
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__inp" type="number" id="input_stol-3_2">
+								<div>Размер B</div>
+							</div>
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__inp" type="number" id="input_stol-3_3">
+								<div>Размер C</div>
+							</div>
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__inp" type="number" id="input_stol-3_4">
+								<div>Размер D</div>
+							</div>
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__inp" type="number" id="input_stol-3_5">
+								<div>Размер E</div>
+							</div>
+
+							<div class="calc__section__sizes__block__flex__line">
+								<input class="calc__section__sizes__block__inp" type="number" id="input_stol-3_6">
+								<div>Размер F</div>
+							</div>
+
+
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+			<div class="calc__section__half">
+
+				<div class="calc__section__half__left">
+					
+					<div class="calc__section__half__title">Дополнительные вырезы</div>
+
+					<div class="calc__section__half__left__line">
+						<input class="calc__section__sizes__block__r" type="checkbox" name="stol_addons_1" id="stol_addons_1">
+						<label for="stol_addons_1">Вырез под смеситель</label>
+					</div>
+
+					<div class="calc__section__half__left__line">
+						<input class="calc__section__sizes__block__r" type="checkbox" name="stol_addons_1" id="stol_addons_1">
+						<label for="stol_addons_1">Вырез под мойку</label>
+					</div>
+
+					<div class="calc__section__half__left__line">
+						<input class="calc__section__sizes__block__r" type="checkbox" name="stol_addons_1" id="stol_addons_1">
+						<label for="stol_addons_1">Вырез под варку</label>
+					</div>
+
+					<div class="calc__section__half__left__line">
+						<input class="calc__section__sizes__block__r" type="checkbox" name="stol_addons_1" id="stol_addons_1">
+						<label for="stol_addons_1">Мойка из камня</label>
+					</div>
+
+				</div>
+
+				<div class="calc__section__half__right">
+
+					<div class="calc__section__half__title">Расположение стен</div>
+
+					<div class="calc__section__half__right__block calc__section__half__right__block--1">
+
+						<img src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/wall1.jpg" alt="">
+
+						<input class="calc__section__half__right__block__checkbox calc__section__half__right__block__checkbox-1_1" type="checkbox" name="walls-1_1" id="walls-1_1">
+						<input class="calc__section__half__right__block__checkbox calc__section__half__right__block__checkbox-1_2" type="checkbox" name="walls-1_2" id="walls-1_2">
+						<input class="calc__section__half__right__block__checkbox calc__section__half__right__block__checkbox-1_3" type="checkbox" name="walls-1_3" id="walls-1_3">
+
+						<div class="calc__section__half__right__block__border-1_1"></div>
+						<div class="calc__section__half__right__block__border-1_2"></div>
+						<div class="calc__section__half__right__block__border-1_3"></div>
+
+					</div>
+
+					<div class="calc__section__half__right__block calc__section__half__right__block--2">
+
+						<img src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/wall2.jpg" alt="">
+
+						<input class="calc__section__half__right__block__checkbox calc__section__half__right__block__checkbox-2_1" type="checkbox" name="walls-2_1" id="walls-2_1">
+						<input class="calc__section__half__right__block__checkbox calc__section__half__right__block__checkbox-2_2" type="checkbox" name="walls-2_2" id="walls-2_2">
+						<input class="calc__section__half__right__block__checkbox calc__section__half__right__block__checkbox-2_3" type="checkbox" name="walls-2_3" id="walls-2_3">
+						<input class="calc__section__half__right__block__checkbox calc__section__half__right__block__checkbox-2_4" type="checkbox" name="walls-2_4" id="walls-2_4">
+
+						<div class="calc__section__half__right__block__border-2_1"></div>
+						<div class="calc__section__half__right__block__border-2_2"></div>
+						<div class="calc__section__half__right__block__border-2_3"></div>
+						<div class="calc__section__half__right__block__border-2_4"></div>
+
+
+					</div>
+
+					<div class="calc__section__half__right__block calc__section__half__right__block--3">
+
+						<img src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/wall3.jpg" alt="">
+
+						<input class="calc__section__half__right__block__checkbox calc__section__half__right__block__checkbox-3_1" type="checkbox" name="walls-3_1" id="walls-3_1">
+						<input class="calc__section__half__right__block__checkbox calc__section__half__right__block__checkbox-3_2" type="checkbox" name="walls-3_2" id="walls-3_2">
+						<input class="calc__section__half__right__block__checkbox calc__section__half__right__block__checkbox-3_3" type="checkbox" name="walls-3_3" id="walls-3_3">
+						<input class="calc__section__half__right__block__checkbox calc__section__half__right__block__checkbox-3_4" type="checkbox" name="walls-3_4" id="walls-3_4">
+						<input class="calc__section__half__right__block__checkbox calc__section__half__right__block__checkbox-3_5" type="checkbox" name="walls-3_5" id="walls-3_5">
+
+						<div class="calc__section__half__right__block__border-3_1"></div>
+						<div class="calc__section__half__right__block__border-3_2"></div>
+						<div class="calc__section__half__right__block__border-3_3"></div>
+						<div class="calc__section__half__right__block__border-3_4"></div>
+						<div class="calc__section__half__right__block__border-3_5"></div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+		<!-- /.calc__section -->
+
+		<div class="calc__section">
+
+			<div class="calc__section__title">5. Выберите профиль края:</div>
+
+			<div class="calc__section__flex">
+
+				<input class="calc__section__flex__radio" type="radio" value="0" name="profile" id="profile_1" checked>
+				<label class="calc__section__flex__block calc__section__flex__block--profile" for="profile_1">
+					<img src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/m1.png" alt="">
+					<div class="calc__section__flex__block__text--profile">Прямая</div>
+					<div>0 руб</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="1800" name="profile" id="profile_2">
+				<label class="calc__section__flex__block calc__section__flex__block--profile" for="profile_2">
+					<img src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/m2.png" alt="">
+					<div class="calc__section__flex__block__text--profile">Закругленный сверху с подгибом</div>
+					<div>1800 руб</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="0" name="profile" id="profile_3">
+				<label class="calc__section__flex__block calc__section__flex__block--profile" for="profile_3">
+					<img src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/m3.png" alt="">
+					<div class="calc__section__flex__block__text--profile">Закругленный сверху</div>
+					<div>0 руб</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="0" name="profile" id="profile_4">
+				<label class="calc__section__flex__block calc__section__flex__block--profile" for="profile_4">
+					<img src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/m4.png" alt="">
+					<div class="calc__section__flex__block__text--profile">Закругленный сверху и снизу</div>
+					<div>0 руб</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="1800" name="profile" id="profile_5">
+				<label class="calc__section__flex__block calc__section__flex__block--profile" for="profile_5">
+					<img src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/m5.png" alt="">
+					<div class="calc__section__flex__block__text--profile">Закругленный сверху и снизу с подгибом</div>
+					<div>1800 руб</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="1500" name="profile" id="profile_6">
+				<label class="calc__section__flex__block calc__section__flex__block--profile" for="profile_6">
+					<img src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/m6.png" alt="">
+					<div class="calc__section__flex__block__text--profile">Круглый</div>
+					<div>1500 руб</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="1500" name="profile" id="profile_7">
+				<label class="calc__section__flex__block calc__section__flex__block--profile" for="profile_7">
+					<img src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/m7.png" alt="">
+					<div class="calc__section__flex__block__text--profile">Фигурный</div>
+					<div>1500 руб</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="1500" name="profile" id="profile_8">
+				<label class="calc__section__flex__block calc__section__flex__block--profile" for="profile_8">
+					<img src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/m8.png" alt="">
+					<div class="calc__section__flex__block__text--profile">Антиперелив</div>
+					<div>1500 руб</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="1800" name="profile" id="profile_9">
+				<label class="calc__section__flex__block calc__section__flex__block--profile" for="profile_9">
+					<img src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/m9.png" alt="">
+					<div class="calc__section__flex__block__text--profile">Антиперелив с подгибом</div>
+					<div>1800 руб</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="2000" name="profile" id="profile_10">
+				<label class="calc__section__flex__block calc__section__flex__block--profile" for="profile_10">
+					<img src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/m10.png" alt="">
+					<div class="calc__section__flex__block__text--profile">Фигурный выступающий</div>
+					<div>2000 руб</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="2000" name="profile" id="profile_11">
+				<label class="calc__section__flex__block calc__section__flex__block--profile" for="profile_11">
+					<img src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/m11.png" alt="">
+					<div class="calc__section__flex__block__text--profile">Треугольный выступающий</div>
+					<div>2000 руб</div>
+				</label>
+
+			</div>
+
+		</div>
+		<!-- /.calc__section -->
+
+		<div class="calc__section">
+
+			<div class="calc__section__title">6. Выберите тип отбортовочного плинтуса:</div>
+
+			<div class="calc__section__flex">
+
+				<input class="calc__section__flex__radio" type="radio" value="0" name="plintus" id="plintus_1" checked>
+				<label class="calc__section__flex__block calc__section__flex__block--profile" for="plintus_1">
+					<img src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/p1.jpg" alt="">
+					<div class="calc__section__flex__block__text--profile">Приставной (90°)</div>
+					<div>0 руб</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="2000" name="plintus" id="plintus_2">
+				<label class="calc__section__flex__block calc__section__flex__block--profile" for="plintus_2">
+					<img src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/p2.jpg" alt="">
+					<div class="calc__section__flex__block__text--profile">Плавный радиусный</div>
+					<div>2000 руб</div>
+				</label>
+
+				<input class="calc__section__flex__radio" type="radio" value="0" name="plintus" id="plintus_3">
+				<label class="calc__section__flex__block calc__section__flex__block--profile" for="plintus_3">
+					<img src="https://столешница77.рф/wp-content/themes/artgallery/assets/img/p4.jpg" alt="">
+					<div class="calc__section__flex__block__text--profile">Без плинтуса</div>
+					<div>0 руб</div>
+				</label>
+
+			</div>
+
+		</div>
+		<!-- /.calc__section -->
+
+		<div class="calc__section">
+
+			<div class="calc__section__flex">
+				<div class="calc__section__btn">Рассчитать</div>
+			</div>
+
+			<div class="calc__section__flex">
+				<div class="calc__section__itogo">Итого:</div>
+			</div>
+
+			<div class="calc__section__flex">
+				<div class="calc__section__itogo-value">0 руб.</div>
+			</div>
+
+		</div>
+		<!-- /.calc__section -->
+
+	</div>
+
+</body>
+</html>
