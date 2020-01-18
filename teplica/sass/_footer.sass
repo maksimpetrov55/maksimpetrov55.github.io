@@ -1,0 +1,201 @@
+
+
+.footer
+    margin: 0 0 0 0
+    background: #f9f9f9
+    padding: 50px 0
+
+    &__logo
+        margin: 0 0 30px 0
+
+    &__text
+        font-size: 10px
+        color: #cecece
+        line-height: 1.1
+        max-width: 300px
+
+    &__menu
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+        &__link
+            display: inline-block
+            box-sizing: border-box
+            font-size: 20px
+            line-height: 17px
+            margin: 8px 0 8px 0
+            color: #333300
+            border-bottom: 2px solid #333300
+            transition-duration: 0.2s
+
+            &:hover
+                color: #67a926
+                border-bottom: 2px solid #67a926
+                text-decoration: none
+    
+    &__social
+        width: 140px
+        display: flex
+        justify-content: space-between
+
+        &__text
+            font-size: 24px
+            margin: 15px 0 5px 0
+
+    &__develop
+        font-size: 15px
+        color: #cecece
+        text-align: right
+        margin: 30px 0 0 0
+
+    &__develop-logo
+        display: flex
+        justify-content: flex-end
+
+    &__poly
+        margin: 50px 0 0 auto
+        display: flex
+        justify-content: flex-end
+
+        &__link
+            font-size: 15px
+            color: #cecece
+            line-height: 12px
+            border-bottom: 1px solid #cecece
+            display: inline-block
+            cursor: pointer
+            transition-duration: 0.2s
+
+            &:hover
+                color: #a5a5a5
+                border-bottom: 1px solid #a5a5a5
+                text-decoration: none
+
+
+
+    &-mobile
+        display: none
+        margin: 0 0 0 0
+        background: #f9f9f9
+        padding: 50px 0
+
+        &__social
+            height: 60px
+            display: flex
+            justify-content: space-around
+            align-items: center
+
+        &__menu
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+            &--center
+                justify-content: center
+
+            &__link
+                margin: 20px 5px
+                display: inline-block
+                box-sizing: border-box
+                font-size: 20px
+                line-height: 17px
+                color: #333300
+                border-bottom: 2px solid transparent
+                transition-duration: 0.2s
+
+                &:hover
+                    color: #67a926
+                    border-bottom: 2px solid #67a926
+                    text-decoration: none
+
+        &__develop
+            font-size: 15px
+            color: #cecece
+            text-align: center
+            display: flex
+            align-items: center
+            margin: 20px 20px 20px 0
+
+        &__develop-logo
+            display: flex
+            margin: 20px 0 20px 0
+
+        &__text
+            font-size: 15px
+            color: #cecece
+            line-height: 1.1
+            text-align: justify
+            margin: 20px 10px
+
+        &__poly
+            margin: 70px 0 40px 0
+            display: flex
+            justify-content: center
+
+            &__link
+                font-size: 25px
+                color: #cecece
+                line-height: 1
+                border-bottom: 2px solid #cecece
+                display: inline-block
+                cursor: pointer
+                transition-duration: 0.2s
+
+                &:hover
+                    color: #a5a5a5
+                    border-bottom: 2px solid #a5a5a5
+                    text-decoration: none
+
+
+
+@media ( max-width: 991px )
+    .footer
+        display: none
+    .footer-mobile
+        display: block
+
+
+@media ( max-width: 479px )
+    .footer
+        &__logo
+            img
+                width: 110px
+                height: 40px
+
+    .footer-mobile
+        &__social
+            height: 40px
+            img
+                width: 40px
+                height: 40px
+
+        &__menu
+
+            &__link
+                font-size: 14px
+                margin: 10px 5px
+
+        &__develop
+            font-size: 13px
+            margin: 20px 20px 20px 0
+
+        &__develop-logo
+            margin: 20px 0 20px 0
+            img
+                width: 109px
+                height: 24px
+
+        &__text
+            font-size: 10px
+
+        &__poly
+            margin: 40px 0 20px 0
+            display: flex
+            justify-content: center
+
+            &__link
+                font-size: 16px
+                border-bottom: 1px solid #cecece
+
+                &:hover
+                    border-bottom: 1px solid #a5a5a5

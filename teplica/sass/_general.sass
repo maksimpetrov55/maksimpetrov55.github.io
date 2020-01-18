@@ -1,0 +1,166 @@
+
+*
+    font-family: "CirceRounded", sans-serif
+    font-weight: 300
+    color: #333300
+
+body
+    overflow-x: hidden
+    background: url("../img/bg2.png")
+
+.mw1140
+    max-width: 1140px
+
+.por
+    position: relative
+
+.g-title
+    font-size: 58px
+    font-weight: 500
+    line-height: 1.25
+    text-align: center
+
+.g-btn
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background: #ff00ff77
+    height: 90px
+    cursor: pointer
+    box-shadow: 0 0 26px #dedede, inset 0 -4px 0 #67a926
+    border-radius: 45px
+    background-color: #71b62e
+    background-image: linear-gradient(to top, #71b62e 0%, #a3eb5c 100%)
+    font-size: 20px
+    color: #fff
+    display: flex
+    align-items: center
+    justify-content: center
+    font-weight: 200
+    text-shadow: 0 0 2px rgba(255,255,255,0.8), 0px 1px 4px rgba(0,0,0,0.2)
+    user-select: none
+    transition-duration: 0.3s
+
+    &:hover
+        box-shadow: 0 0 26px #75ba31, inset 0 -4px 0 #59931f
+        background-color: #71b62e
+        background-image: linear-gradient(to top, #61a022 0%, #96e04d 100%)
+
+    &:active
+        box-shadow: 0 0 26px #dedede, inset 0 -3px 0 #67a926
+        background-color: #71b62e
+        background-image: linear-gradient(to top, #71b62e 0%, #a3eb5c 100%)
+
+
+    &--small
+        height: 62px
+        width: 250px
+        margin: 10px auto
+
+
+.popup-video
+    display: none
+    position: fixed
+    width: 100%
+    height: 100%
+    z-index: 99
+    background: rgba(0,0,0,0.8)
+
+    &__content
+        margin: 20vh 0
+        position: relative
+        padding-bottom: 56.25%
+        height: 0
+        overflow: hidden
+
+        iframe
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            border-width: 0
+            outline-width: 0
+
+.popup-poly
+    display: none
+    position: fixed
+    width: 100%
+    height: 100%
+    z-index: 99
+    background: rgba(0,0,0,0.8)
+
+    &__block
+        position: relative
+        margin: 5vh 0
+        width: 100%
+        max-height: 90vh
+        background: #fff
+        padding: 30px 40px
+        overflow: auto
+        border-radius: 2px
+
+        &__close
+            font-size: 40px
+            position: absolute
+            top: -5px
+            right: 10px
+            color: #a5a5a5
+            cursor: pointer
+            transition-duration: 0.3s
+
+            &:hover
+                color: #ff4400
+
+        &__title
+            font-size: 24px
+            text-align: center
+            margin: 0 0 20px 0
+
+        &__text
+            font-size: 15px
+            text-align: justify
+            margin: 0 0 10px 0
+
+
+
+
+
+
+.bg1
+    background: #0000ff55
+.bg2
+    background: #ff000055
+.bg3
+    background: #00ff0055
+
+.some
+    width: 100%
+    height: 200px
+
+.slider-dots
+    width: 10px
+    height: 10px
+    background: #000
+
+.techwindow,
+.techwindow2
+    position: fixed
+    background: #fff
+    font-size: 20px
+    top: 0
+    left: 0
+
+
+
+@media ( max-width: 571px )
+    .g-title
+        font-size: 47px
+        line-height: 1.1
+
+@media ( max-width: 479px )
+    .g-title
+        font-size: 33px
+        line-height: 1.1
+
+    .g-btn
+        font-size: 18px
+

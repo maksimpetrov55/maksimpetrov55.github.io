@@ -1,0 +1,181 @@
+
+.header
+    width: 100%
+    height: 180px
+
+    &__content
+        width: 100%
+        height: 100%
+        max-width: 1140px
+        margin: 0 auto
+        padding: 52px 15px 23px 15px
+        display: flex
+        justify-content: space-between
+
+        &__logo
+            width: 290px
+            height: 105px
+
+        &__menu
+            display: flex
+            justify-content: space-between
+            width: 350px
+
+            &__link
+                display: inline-block
+                box-sizing: border-box
+                font-size: 20px
+                line-height: 17px
+                margin: 8px 0 8px 0
+                color: #333300
+                border-bottom: 2px solid #333300
+                transition-duration: 0.2s
+
+                &:hover
+                    color: #67a926
+                    border-bottom: 2px solid #67a926
+                    text-decoration: none
+
+        &__contacts
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+
+            &__phone
+                text-align: center
+                font-size: 39px
+                font-weight: 900
+                line-height: 1
+
+            &__messenger
+                font-size: 19px
+                text-align: center
+
+                &--viber
+                    display: inline-block
+                    color: #6721a7
+                    font-weight: 500
+                    text-decoration: underline
+                    &:hover
+                        color: #8943c9
+
+                &--whatsapp
+                    display: inline-block
+                    color: #5aa814
+                    font-weight: 500
+                    text-decoration: underline
+                    &:hover
+                        color: #7cca36
+
+                &--telegram
+                    display: inline-block
+                    color: #278cd3
+                    font-weight: 500
+                    text-decoration: underline
+                    &:hover
+                        color: #49aef5
+
+            &__text
+                text-align: center
+                font-size: 19px
+
+        &__mobile
+            display: flex
+
+            &__phone,
+            &__menu
+                display: none
+                width: 80px
+                height: 100%
+                margin: 0
+                justify-content: center
+                align-items: center
+                cursor: pointer
+
+
+
+
+@media ( max-width: 1100px )
+    .header
+        height: 150px
+
+        &__content
+            padding: 40px 10px 23px 10px
+        
+            &__logo
+                width: 235px
+                height: 87px
+
+            &__menu
+                width: 310px
+
+                &__link
+                    margin: 5px 0
+
+            &__contacts
+
+                &__phone
+                    font-size: 30px
+                &__text
+                    font-size: 16px
+
+@media ( max-width: 890px )
+    .header
+
+        &__content
+            position: relative
+
+            &__menu
+                flex-direction: column
+                position: absolute
+                right: 0
+                top: 30px
+                background: #fff
+                padding: 100px 55px 60px 55px
+                border-radius: 5px
+                box-shadow: 0 5px 20px 2px rgba(0,0,0,0.1)
+                z-index: 10
+                transition-duration: 0.3s
+                transform-origin: 100% 0
+                opacity: 1
+
+                &--hide
+                    transform: scaleX(0)
+                    transition-duration: 0.3s
+                    transform-origin: 100% 0
+                    opacity: 0
+
+                &__link
+                    margin: 12px 0
+
+            &__contacts
+                display: none
+
+            &__mobile__phone
+                display: flex
+
+            &__mobile__menu
+                display: flex
+                z-index: 11
+
+@media ( max-width: 479px )
+    .header
+        height: 130px
+
+        &__content
+
+            &__logo
+                width: 180px
+                height: 67px
+
+            &__mobile
+                display: flex
+                justify-content: space-between
+                width: 100%
+                max-width: 120px
+                margin: 0 0 0 10px
+
+                &__phone,
+                &__menu
+                    width: auto
+                    height: 100%
