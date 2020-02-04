@@ -8,10 +8,10 @@
 	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
 	
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/main.css?v1">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/scripts.js"></script>
+	<script src="js/scripts.js?v1"></script>
 	<script src="js/SmoothScroll.js"></script>
 
 	<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700,900&display=swap" rel="stylesheet">
@@ -51,13 +51,13 @@
 							order-1
 							order-lg-2">
 					<div class="form__content">
-						<form action="">
+						<form action="!mail.php" method="POST">
 							
 							<div class="form__content__title">Оставьте заявку</div>
 							<div class="form__content__text">Заполните форму и мы свяжемся с Вами в ближайшее время</div>
 			
-							<input class="form__content__input" type="text" placeholder="Ваше Имя" required>
-							<input class="form__content__input" type="text" placeholder="Ваш телефон" required>
+							<input class="form__content__input" name="form_name" type="text" placeholder="Ваше Имя" required>
+							<input class="form__content__input" name="form_phone" type="text" placeholder="Ваш телефон" required>
 			
 							<div class="form__content__btn g-btn">Отправить</div>
 			
@@ -346,21 +346,24 @@
 						<div class="footer__mail">info@gorod-sad.ru</div>
 
 						<div class="footer__flex">
-							<a href="#" class="footer__social footer__inst">
+							<a href="https://www.instagram.com/_garden_city/" target="_blank" class="footer__social footer__inst">
 								<img class="footer__img w100" src="img/icons/inst-big.png" alt="">
 							</a>
-							<a href="#" class="footer__social footer__vk">
+							<a href="https://vk.com/toplandscape" target="_blank" class="footer__social footer__vk">
 								<img class="footer__img w100" src="img/icons/vk-big.png" alt="">
 							</a>
-							<a href="#" class="footer__social footer__what">
+							<a href="https://wa.me/79507999912" target="_blank" class="footer__social footer__what">
 								<img class="footer__img w100" src="img/icons/what-big.png" alt="">
+							</a>
+							<a href="https://www.houzz.ru/professionaly/landshaftnye-dizaynery/studiya-ozeleneniya-gorod-sad-pfvwru-pf~1454308016" target="_blank" class="footer__social footer__houzz">
+								<img class="footer__img w100" src="img/icons/houzz-big.png" alt="">
 							</a>
 						</div>
 
 						<div class="footer__office">Наш адрес: Булатова, 100​, офис №6, 3 этаж</div>
 						<div class="footer__office">Работаем ежедневно с 09:00 до 20:00</div>
 
-						<div class="footer__btn g-btn form-order">Оставить заявку</div>
+						<!-- <div class="footer__btn g-btn form-order">Оставить заявку</div> -->
 					</div>
 
 					<!-- <div class="footer__logo"><img class="w100" src="img/logo-gray.png" alt=""></div> -->

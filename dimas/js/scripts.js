@@ -83,6 +83,9 @@ $(document).ready(function() {
     $(".header__burger").click(function(){
         $(".header__menu").toggleClass("header__menu--show");
     });
+    $(".header__link").click(function(){
+        $(".header__menu").removeClass("header__menu--show");
+    });
     //бургер меню
 
 });

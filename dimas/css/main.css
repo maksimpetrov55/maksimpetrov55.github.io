@@ -412,7 +412,7 @@ body * {
 
 .first {
   position: relative;
-  background: #98c538 url("../img/wall-2.jpg") no-repeat;
+  background: #ffffff url("../img/wall-2.jpg") no-repeat;
   background-size: cover;
   background-position: 100% 0;
   height: 100vh;
@@ -935,6 +935,11 @@ body * {
 
 .footer__what {
   background: url("../img/icons/what-big-gray.png");
+  background-size: cover;
+}
+
+.footer__houzz {
+  background: url("../img/icons/houzz-big-gray.png");
   background-size: cover;
 }
 
