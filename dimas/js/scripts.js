@@ -38,6 +38,12 @@ $(document).ready(function() {
     });
     //открытие-закрытие формы
 
+    //отправка формы
+    $(".form__content__btn").click(function(){
+        $( "form" ).submit();
+    });
+    //отправка формы
+
     //появление заголовка
     setTimeout(function(){
         $(".first__title").animate({opacity: "1"}, 1000);
@@ -88,4 +94,41 @@ $(document).ready(function() {
     });
     //бургер меню
 
+    //выбор города
+    $(".first__city__current, .first__city__select--omsk, .first__city__select--tumen, .first__city__select--mariup").click(function(){
+        $(".first__city__select").toggleClass("first__city__select--show");
+    });
+    $(".first__city__select--omsk").click(function(){
+        $(".first__city__current").html("Омск")
+    });
+    $(".first__city__select--tumen").click(function(){
+        $(".first__city__current").html("Тюмень")
+    });
+    $(".first__city__select--mariup").click(function(){
+        $(".first__city__current").html("Мариуполь")
+    });
+    //выбор города
+
+    //раскрытие услуги
+
+    $(".serv__block").click(function(){
+        if( $(".serv__block").hasClass("serv__block--open") ) {
+            $(".serv__block").not($(this)).removeClass("serv__block--open");
+            $(".serv__block__text").not($(this).children(".serv__block__text")).slideUp(300);
+        }
+        $(this).toggleClass("serv__block--open");
+        $(this).children(".serv__block__text").slideToggle(300);
+    });
+
+    $(".serv__block").hover(function(e){
+        $(this).toggleClass("serv__block--hover");
+    });
+
+    // $(".serv__block").mouseleave(function(e){
+    //     $(this).animate({height: "60px"},{queue:false, duration:150});
+    //     $(this).children( ".serv__block__text" ).fadeOut(150);
+    // });
+    //раскрытие услуги
+
 });
+

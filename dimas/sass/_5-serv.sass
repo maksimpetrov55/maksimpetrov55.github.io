@@ -3,7 +3,7 @@
 .serv
     position: relative
     padding: 100px 0 100px 0
-    background: #fffffff url(../img/bg2.png)
+    background: #ffffff url(../img/bg2.png)
 
     &::before
         content: ""
@@ -17,67 +17,94 @@
         background-size: 100% auto
         background-position: 0 100%
 
-    &__card
-        position: relative
-        padding: 8px 15px 8px 0
-        margin: 10px 0
+    &__row
+        justify-content: flex-end
+        @media ( max-width: 991px )
+            justify-content: center
+
+    &__space
         width: 100%
-        min-height: 90px
-        background: #ffffff
-        border: 2px solid #cccccc
-        border-radius: 10px
-        box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1)
-        transition-duration: 0.3s
-        cursor: pointer
+        height: 70px
+
+    &__block
+        position: relative
+        margin: 0 auto
+        width: 100%
+        max-width: 960px
+        height: auto
+        min-height: 60px
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #fff 30%,  #fff 70%, rgba(255,255,255,0) 100%)
         display: flex
         align-items: center
-        user-select: none
+        justify-content: center
+        flex-direction: column
+        cursor: pointer
+        padding: 20px 0
 
-        &:hover
-            box-shadow: 0 0 0 0 rgba(0,0,0,0)
-            transform: translateY(6px)
-            border: 2px solid $green
+        &--hover
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #fafafa 30%, #fafafa 70%, rgba(255,255,255,0) 100%)
 
-        &__img
-            position: relative
-            height: 60%
-            margin: 0 30px 0 20px
-            opacity: 0.8
-            img
-                height: 50px
+        &--open
+
+        &::after
+            content: ""
+            position: absolute
+            top: 0
+            height: 3px
+            width: 100%
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, $green 30%, $green 70%, rgba(255,255,255,0) 100%)
+            display: block
+
+        &--last
+
+            &::before
+                content: ""
+                position: absolute
+                bottom: 0
+                height: 3px
+                width: 100%
+                background: linear-gradient(90deg, rgba(255,255,255,0) 0%, $green 30%,  $green 60%, rgba(255,255,255,0) 100%)
+                display: block
 
         &__title
-            font-size: 20px
-            font-family: 'Nunito', sans-serif
+            user-select: none
+            position: relative
+            text-align: center
+            color: $brown
+            font-size: 18px
+            letter-spacing: 1px
+
+            // &:after
+            //     content: ""
+            //     border-right: 2px solid $green
+            //     border-bottom: 2px solid $green
+            //     width: 12px
+            //     height: 12px
+            //     display: block
+            //     position: absolute
+            //     top: 4px
+            //     right: -25px
+            //     transform: rotate(45deg)
 
         &__text
-            color: $brown-light
+            user-select: none
+            display: none
+            position: relative
+            margin: 20px 0 0 0
+            padding: 0 50px
+            color: $brown
+            width: 100%
+            text-align: justify
+
+            &--span
+                //text-decoration: underline
+                color: $green-deep
+                letter-spacing: 0.2px
+
+            &--ul
+                margin: 10px 0 0 0
 
 
-    // &__card
-    //     display: flex
-    //     align-items: center
-    //     justify-content: center
-    //     background: url(../img/uzor.png) no-repeat, linear-gradient(100.96deg, #def6d9 4.69%, #e1e7d8 97.81%)
-    //     background-size: cover
-    //     width: 100%
-    //     max-width: 350px
-    //     height: 80px
-    //     margin: 20px auto
-    //     border-radius: 20px
-    //     cursor: pointer
-    //     transition-duration: 0.2s
-    //     //box-shadow: 0 5px 20px 2px rgba(0,0,0,0.1)
 
-    //     &:hover
-    //         box-shadow: 0 5px 20px 1px rgba(0,0,0,0.1)
-    //         transform: translateY(-5px)
 
-    //     &__title
-    //         font-size: 22px
-    //         color: $brown
-    //         text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5), 0px 3px 8px rgba(0, 0, 0, 0.2)
-    //         text-align: center
-    //         max-width: 220px
-    //         line-height: 1
-    //         margin: -2px 0 0 0
+

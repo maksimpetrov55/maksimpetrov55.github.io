@@ -8,13 +8,17 @@
 	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
 	
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/main.css?v1">
+	<link rel="stylesheet" href="css/main.css?v2">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/scripts.js?v1"></script>
+	<script src="js/scripts.js?v2"></script>
 	<script src="js/SmoothScroll.js"></script>
 
 	<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,700&display=swap&subset=cyrillic" rel="stylesheet">
 
 </head>
 <body>
@@ -115,6 +119,25 @@
 
 
 	<div id="first" class="first">
+
+		<div class="first__city">
+
+			<div class="first__city__current">Омск</div>
+
+			<div class="first__city__select">
+				<div class="first__city__select--omsk">Омск</div>
+				<div class="first__city__select--tumen">Тюмень</div>
+				<div class="first__city__select--mariup">Мариуполь</div>
+			</div>
+
+		</div>
+
+		<!-- <select class="first__city" name="" id="">
+			<option value="Омск" selected>Омск</option>
+			<option value="1231">1231</option>
+			<option value="4561">4561</option>
+		</select> -->
+
 		<div class="first__shine first__shine-1"></div>
 		<!-- <div class="first__shine first__shine-2"></div> -->
 		<div class="container-fluid">
@@ -147,67 +170,85 @@
 				</div>
 			</div>
 
-			<div class="row justify-content-center">
-				<div class="col-12 col-sm-10 col-md-8 col-lg-6">
-					<div class="serv__card">
-						<div class="serv__card__img"><img class="h100" src="img/trees.png" alt=""></div>
+			<div class="serv__space"></div>
 
-						<div>
-							<div class="serv__card__title">Ландшафтное проетирование</div>
-							<div class="serv__card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, assumenda.</div>
+			<div class="row">
+				<div class="col-12">
+
+						<div class="serv__block">
+							<div class="serv__block__title">Ландшафтное проетирование</div>
+							<div class="serv__block__text"><span class="serv__block__text--span">Выезд на участок ландшафтного дизайнера и инженера:</span class="span"> обсуждение стилистики, предпочитаемых цветов, кустарников, замеры участка, фотофиксация, образцы почвы. Заполнение Технического задания.</div>
+							<div class="serv__block__text"><span class="serv__block__text--span">Эскиз участка в нескольких вариантах - зонирование территории:</span> разбивка участка на функциональные зоны в соответствии с заданием.</div>
+							<div class="serv__block__text"><span class="serv__block__text--span">Подготовка и презентация Генерального плана участка:</span> Визуализация нескольких точек участка. Окончательное согласование.</div>
+							<div class="serv__block__text"><span class="serv__block__text--span">Подбор и размещение растений на плане:</span> указание характеристик, высот и количества растений. Ассортиментная ведомость (список). Фотоподборка растений используемых в проекте.</div>
+							<div class="serv__block__text"><span class="serv__block__text--span">Подготовка и презентация (по необходимости):</span>
+								<ul class="serv__block__text--ul">
+									<li>схема дренажной системы (водоотвод участка)</li>
+									<li>схема системы полива (расчет площади, подбор оборудования)</li>
+									<li>схема освещения участка (расстановка приборов, контуры)</li>
+									<li>план покрытий (дорожки, парковки, отмостки, газон и т.п.)</li>
+								</ul>
+							</div>
+							<div class="serv__block__text"><span class="serv__block__text--span">Подготовка сметы:</span> cтоимость работ и материалов в предварительном виде. Согласование.</div>
+						</div>
+						<div class="serv__block">
+							<div class="serv__block__title">Устройство газона</div>
+							<div class="serv__block__text"><span class="serv__block__text--span">Создание рулонного и посевного газона.</span> Гарантия приживаемости - 100% (или вернем деньги).</div>
+							<div class="serv__block__text"><span class="serv__block__text--span">Наши услуги по газону:</span> Устройство газона. Посевного (с подбором травосмеси исходя из условий участка), рулонного, разнотравья. Реставрация, частичная замена, подсев газона, землевание, пескование и прочее. Комплекс работ по стрижке, внесение удобрений в почву, аэрация газона и прочие мероприятия для здоровья Вашей лужайки.</div>
+						</div>
+						<div class="serv__block">
+							<div class="serv__block__title">Озеленение</div>
+							<div class="serv__block__text">Этап, включающий в себя посадку растений, устройство цветников, миксбордеров, декоративных групп. Грамотный подбор ассортимента в соответствии с экологией растений, а так же квалифицированный подход к его посадке является главным фактором для дальнейшего развития сада. Мы используем только качественный посадочный материал из Российских и Европейских питомников.</div>
+						</div>
+						<div class="serv__block">
+							<div class="serv__block__title">Содержание сада</div>
+							<div class="serv__block__text">Мы специализируемся на обслуживании жилых и коммерческих садов. Комплекс работ по уходу может проводиться как в виде разовых выездов, так и регулярно на основании договора. В нашей компании работают квалифицированные садовники и опытные рабочие, которые обеспечат качественный и своевременный уход.</div>
+						</div>
+						<div class="serv__block">
+							<div class="serv__block__title">Посадка крупномерных деревьев</div>
+							<div class="serv__block__text">Пересадка взрослых деревьев - достаточно сложный и трудоемкий процесс, так как большинство из них имеют весьма объемную крону и мощную корневую систему. Мы советуем высаживать деревья от 2 до 5 метров, поскольку в этом диапазоне роста наблюдается наилучшая приживаемость. К тому же, все растения, которые мы высаживаем привезены из лучших Российских и Европейских питомников.</div>
+						</div>
+						<div class="serv__block">
+							<div class="serv__block__title">Система автополива</div>
+							<div class="serv__block__text">Необходима для тщательного полива всего зеленого массива в рассчитанном объеме и в определенное время. Вариантов полива много: от самого простого РУЧНОГО до полной автоматической системы с датчиком влажности почвы и управлением со смартфона.</div>
+						</div>
+						<div class="serv__block">
+							<div class="serv__block__title">Дренажные системы</div>
+							<div class="serv__block__text">Главная инженерная сеть вашего участка. Несет важнейшую функцию защиты строений и растений от воды. Очень важно рассчитать объем дренажного колодца, угол уклона сточных труб, связки ливневых выводов вокруг дома и прочее.</div>
+						</div>
+						<div class="serv__block">
+							<div class="serv__block__title">Альпийские горки, рокарии, цветники</div>
+							<div class="serv__block__text">Мы разрабатываем собственные рецепты цветников, которые цветут весь сезон. А с помощью альпинариев и рокариев растениям для произрастания обеспечиваются наилучшие и разнообразные условия. Крупные элементы объединяют в единую композицию различные элементы горных образований: скальных ущелий, выходов, плато, впадин, водных каскадов, т.е. таких природных уголков, где горные растения чувствуют себя лучше всего.</div>
+						</div>
+						<div class="serv__block">
+							<div class="serv__block__title">Мощение дорожек</div>
+							<div class="serv__block__text">Всего три главных элемента ландшафтного дизайна которые действительно придают участку стиль и завершенность. Это мощение, ухоженный газон и посадки. Мы выполняем работу по мощению всех типов твердых и мягких покрытий на участках. Чтобы узнать о данной услуге и получить расчет стоимости оставьте заявку на консультацию.</div>
+						</div>
+						<div class="serv__block">
+							<div class="serv__block__title">Малые архитектурные формы</div>
+							<div class="serv__block__text">Создание малых архитектурных форм и арт-объектов происходит по индивидуальному заказу и на основании типовых решений. Вы можете заказать у нас скамьи, качели, беседки, арки, вазоны, цветочные модули, мостики и садовые скульптуры. При реализации проектов, современные надежные конструкции из искусственных и природных материалов позволяют добиться функциональности, завершенности и приятной эксклюзивности.</div>
+						</div>
+						<div class="serv__block">
+							<div class="serv__block__title">Садовое освещение</div>
+							<div class="serv__block__text"><ul>
+								<li>повседневное (или функциональное освещение).</li>
+								<li>декоративное (придающее особые формы деревьям, цветные вставки в брусчатку и т.д.),</li>
+								<li>праздничное (новогодние инсталляции, подсветка гирляндами деревьев).</li>
+							</ul></div>
+						</div>
+						<div class="serv__block">
+							<div class="serv__block__title">Создание водоемов</div>
+							<div class="serv__block__text">Стоячая вода придает саду впечатление спокойствия и безмятежности, но иногда бывает необходимо придать ему живость, динамику. Журчащие ручьи создадут ощущение дикой природы, дают возможность "очистить себя". Но с практической точки зрения - нужно продумать ночной покой (и, возможно, поставить датчик света на насос). Чтобы водная затея действительно оправдала свои надежды, нужно понять, в каком качестве вы хотели бы видеть воду в своем саду: ручей, фонтан, бассейн для купания, пруд или маленький водоем. Мы разрабатываем концепцию, делаем чертежи (со всеми расчетами) и подбираем оборудование для каждого проекта индивидуально.</div>
+						</div>
+						<div class="serv__block">
+							<div class="serv__block__title">Снос и кронирование деревьев</div>
+							<div class="serv__block__text">В зависимости от задания и технологии производства работ, поможем выбрать наиболее подходящие способы удаления деревьев и подскажем как минимизировать все риски при производстве работ.</div>
+						</div>
+						<div class="serv__block serv__block--last">
+							<div class="serv__block__title">Озеленение интерьеров</div>
+							<div class="serv__block__text">Большую часть своего времени мы с вами проводим в закрытых помещениях, работаем в них, спим и воспитываем детей, при этом не уделяя должного внимания экологии собственной квартиры, дома или офиса, а ведь это крайне важно там, где окружающая среда, к сожалению, с каждым днем становится все менее чистой и комфортной. Горшечные растения, фитостены, зимние сады, цветочные витрины и оранжереи - создайте чистый воздух там, где живете и работайте, это важно для здоровья.</div>
 						</div>
 
-					</div>
-				</div>
-				<div class="col-12 col-sm-10 col-md-8 col-lg-6">
-					<div class="serv__card">
-						<div class="serv__card__img"><img class="h100" src="img/trees.png" alt=""></div>
-						
-						<div>
-							<div class="serv__card__title">Устройство газона</div>
-							<div class="serv__card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, assumenda.</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-12 col-sm-10 col-md-8 col-lg-6">
-					<div class="serv__card">
-						<div class="serv__card__img"><img class="h100" src="img/trees.png" alt=""></div>
-						
-						<div>
-							<div class="serv__card__title">Дренажные системы</div>
-							<div class="serv__card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, assumenda.</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-12 col-sm-10 col-md-8 col-lg-6">
-					<div class="serv__card">
-						<div class="serv__card__img"><img class="h100" src="img/trees.png" alt=""></div>
-						
-						<div>
-							<div class="serv__card__title">Создание водоемов</div>
-							<div class="serv__card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, assumenda.</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-12 col-sm-10 col-md-8 col-lg-6">
-					<div class="serv__card">
-						<div class="serv__card__img"><img class="h100" src="img/trees.png" alt=""></div>
-						
-						<div>
-							<div class="serv__card__title">Дорожно-тропиночная сеть</div>
-							<div class="serv__card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, assumenda.</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-12 col-sm-10 col-md-8 col-lg-6">
-					<div class="serv__card">
-						<div class="serv__card__img"><img class="h100" src="img/trees.png" alt=""></div>
-						
-						<div>
-							<div class="serv__card__title">Благоустройство</div>
-							<div class="serv__card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, assumenda.</div>
-						</div>
-					</div>
 				</div>
 			</div>
 
@@ -220,58 +261,41 @@
 			<div class="row justify-content-center">
 				<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
 					<div class="about__card">
-						<div class="about__img"></div>
-						<div class="about__text">Эксклюзивные проектные решения</div>
+						<div class="about__img"><img class="w100" src="img/goods/route.png" alt=""></div>
+						<div class="about__text">Бесплатный выезд дизайнера / архитектора / агронома</div>
 					</div>
 				</div>
 				<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
 					<div class="about__card">
-						<div class="about__img"></div>
-						<div class="about__text">Бесплатный выезд дизайнера/архитектора/агронома</div>
+						<div class="about__img"><img class="w100" src="img/goods/camera.png" alt=""></div>
+						<div class="about__text">Промежуточные фото / видео отчеты</div>
 					</div>
 				</div>
 				<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
 					<div class="about__card">
-						<div class="about__img"></div>
-						<div class="about__text">Промежуточные фото/видео отчеты</div>
-					</div>
-				</div>
-				<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-					<div class="about__card">
-						<div class="about__img"></div>
-						<div class="about__text">100% ответственность за результат закрепленная договором</div>
-					</div>
-				</div>
-				<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-					<div class="about__card">
-						<div class="about__img"></div>
+						<div class="about__img"><img class="w100" src="img/goods/wallet.png" alt=""></div>
 						<div class="about__text">Работаем в рамках вашего бюджета</div>
 					</div>
 				</div>
 				<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
 					<div class="about__card">
-						<div class="about__img"></div>
-						<div class="about__text">100% приживаемость растений</div>
-					</div>
-				</div>
-				<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-					<div class="about__card">
-						<div class="about__img"></div>
+						<div class="about__img"><img class="w100" src="img/goods/phone.png" alt=""></div>
 						<div class="about__text">Личный менеджер на связи любым удобным способом</div>
 					</div>
 				</div>
 				<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
 					<div class="about__card">
-						<div class="about__img"></div>
-						<div class="about__text">Различные формы оплаты</div>
+						<div class="about__img"><img class="w100" src="img/goods/trees.png" alt=""></div>
+						<div class="about__text">100% приживаемость газона и посадок</div>
 					</div>
 				</div>
 				<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
 					<div class="about__card">
-						<div class="about__img"></div>
-						<div class="about__text">Используем 100% потенциала участка</div>
+						<div class="about__img"><img class="w100" src="img/goods/contract.png" alt=""></div>
+						<div class="about__text">100% ответственность за результат закрепленная договором</div>
 					</div>
 				</div>
+
 			</div>
 
 			<div class="row">
@@ -281,7 +305,7 @@
 	</div>
 	<!-- /.about -->
 
-	<div id="proud" class="proud">
+	<!-- <div id="proud" class="proud">
 		<div class="container-fluid mw1440">
 			<div class="row">
 				<div class="col-4">
@@ -304,7 +328,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<!-- /.proud -->
 
 	<div id="gallery" class="gallery">

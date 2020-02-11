@@ -13,12 +13,75 @@
     align-items: center
     padding: 95px 0
 
-    &__social
-
-        &__inst
-
     &__city
-        color: #ffffff
+        z-index: 89
+        position: absolute
+        top: 90px
+        right: 0
+        width: 150px
+        padding: 20px 10px 0 0
+        display: flex
+        align-items: center
+        flex-direction: column
+
+        &__current
+            user-select: none
+            position: relative
+            color: #fff
+            font-size: 16px
+            text-shadow: 0 3px 15px rgba(0,0,0,0.2)
+            border-bottom: 1px dotted #ffffff
+            cursor: pointer
+            transition-duration: 0.2s
+            margin: 0 0 15px 0
+
+            &:hover
+                color: #eeeeee
+                border-bottom: 1px dotted #eeeeee
+
+            &::before
+                content: ""
+                position: absolute
+                background: url("../img/location.png") no-repeat
+                background-size: auto 100%
+                width: 17px
+                height: 17px
+                left: -22px
+                top: 4px
+
+            // &::after
+            //     content: ""
+            //     position: absolute
+            //     border-bottom: 2px solid #fff
+            //     border-right: 2px solid #fff
+            //     width: 9px
+            //     height: 9px
+            //     right: -21px
+            //     top: 6px
+            //     transform: rotate(45deg)
+
+        &__select
+            user-select: none
+            position: relative
+            background: #fff
+            font-size: 16px
+            display: none
+            flex-direction: column
+            align-items: center
+            padding: 20px 20px 20px 20px
+            border-radius: 10px
+            box-shadow: 0 5px 20px 1px rgba(0,0,0,0.2)
+
+            div
+                margin: 3px 0
+                cursor: pointer
+                transition-duration: 0.2s
+
+                &:hover
+                    color: $green
+
+            &--show
+                display: flex
 
     &__title
         opacity: 0
