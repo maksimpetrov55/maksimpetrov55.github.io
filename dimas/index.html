@@ -3,16 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Web Mockup</title>
+	<title>Эксклюзивный ландшафтный дизайн под ключ | ГОРОД-САД</title>
 
 	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
 	
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/main.css?v2">
+	<link rel="stylesheet" href="css/main.css?v3">
+	<link rel="stylesheet" href="slick/slick.css">
+	<link rel="stylesheet" href="slick/slick-theme.css">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/scripts.js?v2"></script>
+	<script src="js/scripts.js?v3"></script>
 	<script src="js/SmoothScroll.js"></script>
+	<script src="slick/slick.min.js"></script>
 
 	<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700,900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900&display=swap" rel="stylesheet">
@@ -27,6 +30,8 @@
 		<div class="info__width">111</div>
 		<div class="info__width2">111</div>
 	</div>
+
+	<div class="font"></div>
 
 
 	<div class="form">
@@ -53,15 +58,19 @@
 							col-lg-6
 							col-xl-5
 							order-1
-							order-lg-2">
+							order-lg-2
+							pl-1
+							pr-1">
 					<div class="form__content">
-						<form action="!mail.php" method="POST">
+						<form action="!mail.php" method="POST" enctype="multipart/form-data">
 							
 							<div class="form__content__title">Оставьте заявку</div>
 							<div class="form__content__text">Заполните форму и мы свяжемся с Вами в ближайшее время</div>
 			
 							<input class="form__content__input" name="form_name" type="text" placeholder="Ваше Имя" required>
 							<input class="form__content__input" name="form_phone" type="text" placeholder="Ваш телефон" required>
+							<textarea class="form__content__msg" name="form_msg" placeholder="Сообщение" rows="2"></textarea>
+							<input class="form__content__file" type="file" name="userfile[]" multiple="multiple">
 			
 							<div class="form__content__btn g-btn">Отправить</div>
 			
@@ -92,11 +101,11 @@
 
 				<div class="header__menu">
 
-					<a class="header__link" href="#serv">Услуги</a>
-					<a class="header__link" href="#">Преимущества</a>
-					<a class="header__link" href="#about">О компании</a>
-					<a class="header__link" href="#gallery">Фото работ</a>
-					<a class="header__link" href="#footer">Контакты</a>
+					<a class="header__link g-font" href="#serv">Услуги</a>
+					<a class="header__link g-font" href="#">Преимущества</a>
+					<a class="header__link g-font" href="#about">О компании</a>
+					<a class="header__link g-font" href="#gallery">Фото работ</a>
+					<a class="header__link g-font" href="#footer">Контакты</a>
 
 				</div>
 
@@ -132,21 +141,27 @@
 
 		</div>
 
-		<!-- <select class="first__city" name="" id="">
-			<option value="Омск" selected>Омск</option>
-			<option value="1231">1231</option>
-			<option value="4561">4561</option>
-		</select> -->
-
 		<div class="first__shine first__shine-1"></div>
 		<!-- <div class="first__shine first__shine-2"></div> -->
 		<div class="container-fluid">
 
 			<div class="row">
 				<div class="col-12">
-					<h1 class="first__title">Эксклюзивный ландшафтный дизайн под ключ с&nbsp;фиксированной ценой и&nbsp;соблюдением сроков</h1>
+					<h1 class="first__title g-font">Эксклюзивный ландшафтный дизайн под ключ с&nbsp;фиксированной ценой и&nbsp;соблюдением сроков</h1>
 				</div>
 			</div>
+
+			<!-- <div class="row first__row">
+				<div class="col-4">
+					<div class="some bg3"></div>
+				</div>
+				<div class="col-4">
+					<div class="some bg3"></div>
+				</div>
+				<div class="col-4">
+					<div class="some bg3"></div>
+				</div>
+			</div> -->
 
 			<div class="row">
 				<div class="col-12">
@@ -161,12 +176,43 @@
 	</div>
 	<!-- /.first -->
 
+	<div id="proud" class="proud">
+		<div class="container-fluid mw1140">
+			<!-- <div class="row justify-content-center">
+				<div class="col-12">
+					<div class="g-title g-font">Ключевые показатели компании</div>
+				</div>
+			</div> -->
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-4">
+					<div class="proud__block proud__block--1">
+						<div class="proud__img"><img class="h100" src="img/grass.png" alt=""></div>
+						<div class="proud__text g-font"><span class="g-font proud__text--span">Каждый 2-й</span><br>клиент клиент рекомендует нас своим друзьям и&nbsp;близким</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="proud__block proud__block--2">
+						<div class="proud__img"><img class="h100" src="img/grass.png" alt=""></div>
+						<div class="proud__text g-font"><span class="g-font proud__text--span">75% клиентов</span><br>после реализации проекта просят остаться на обслуживание участка</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="proud__block proud__block--3">
+						<div class="proud__img"><img class="h100" src="img/grass.png" alt=""></div>
+						<div class="proud__text g-font"><span class="g-font proud__text--span">1/3 постоянных</span><br>клиентов нашей компании перешли к нам от конкурентов</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- /.proud -->
 
 	<div id="serv" class="serv">
 		<div class="container-fluid mw1440">
 			<div class="row">
 				<div class="col-12">
-					<div class="serv__title g-title">Наши услуги</div>
+					<div class="serv__title g-title g-font">Наши услуги</div>
 				</div>
 			</div>
 
@@ -298,44 +344,37 @@
 
 			</div>
 
-			<div class="row">
-				<div class="first__btn g-btn form-order">Обсудить проект</div>
-			</div>
 		</div>
 	</div>
 	<!-- /.about -->
 
-	<!-- <div id="proud" class="proud">
-		<div class="container-fluid mw1440">
-			<div class="row">
-				<div class="col-4">
-					<div class="proud__block">
-						<div class="proud__title">50%</div>
-						<div class="proud__text">наших клиентов рекомендуют нас своим друзьям и&nbsp;близким</div>
+	<div class="reviews">
+		<div class="container-fluid mw1140">
+			<div class="row justify-content-center">
+				<div class="col-12 col-md-10 col-lg-6">
+					<div class="reviews__wrap">
+						<div class="reviews__title g-font">Отзывы наших клиентов, которыми мы гордимся!</div>
 					</div>
 				</div>
-				<div class="col-4">
-					<div class="proud__block">
-						<div class="proud__title">75%</div>
-						<div class="proud__text">клиентов после реализации проекта просят остаться на обслуживание участка</div>
-					</div>
-				</div>
-				<div class="col-4">
-					<div class="proud__block">
-						<div class="proud__title">30%</div>
-						<div class="proud__text">наших постоянных клиентов перешли к нам от компаний&#8209;конкурентов</div>
+				<div class="col-12 col-sm-10 col-md-8 col-lg-6">
+					<div class="single-item">
+						<div class="reviews__item"><img class="reviews__img" src="img/screenshot.jpg" alt=""></div>
+						<div class="reviews__item"><img class="reviews__img" src="img/screenshot.jpg" alt=""></div>
+						<div class="reviews__item"><img class="reviews__img" src="img/screenshot.jpg" alt=""></div>
+						<div class="reviews__item"><img class="reviews__img" src="img/screenshot.jpg" alt=""></div>
+						<div class="reviews__item"><img class="reviews__img" src="img/screenshot.jpg" alt=""></div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div> -->
-	<!-- /.proud -->
+	</div>
+	<!-- /.reviews -->
 
 	<div id="gallery" class="gallery">
 		<div class="container-fluid mw1440">
 			<div class="row">
 				<div class="col-12">
-					<div class="gallery__title g-title">Фото работ</div>
+					<div class="gallery__title g-title g-font">Фото работ</div>
 				</div>
 			</div>
 
@@ -357,6 +396,23 @@
 	</div>
 	<!-- /.gallery -->
 
+	<div class="order">
+		<div class="container-fluid mw1440">
+			<div class="row">
+				<div class="col-md-10 col-lg-8 col--xl-6">
+					<div class="order__title g-font">Оставьте заявку на бесплатный выезд специалиста к вам на участок</div>
+				</div>
+				<div class="col-12">
+					<div class="order__flex">
+						<div class="order__btn g-btn form-order">Оставить заявку</div>
+						<div class="order__arrow"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.order -->
+
 	<div id="footer" class="footer">
 		<div class="container-fluid mw1440">
 			<div class="row footer__line justify-content-center">
@@ -365,9 +421,9 @@
 							col-lg-6
 							col-xl-5">
 					<div class="footer__contacts">
-						<div class="footer__phone">+7 (950) 799 99-12</div>
+						<div class="footer__phone g-font">+7 (950) 799 99-12</div>
 						
-						<div class="footer__mail">info@gorod-sad.ru</div>
+						<div class="footer__mail g-font">info@gorod-sad.ru</div>
 
 						<div class="footer__flex">
 							<a href="https://www.instagram.com/_garden_city/" target="_blank" class="footer__social footer__inst">
@@ -384,8 +440,8 @@
 							</a>
 						</div>
 
-						<div class="footer__office">Наш адрес: Булатова, 100​, офис №6, 3 этаж</div>
-						<div class="footer__office">Работаем ежедневно с 09:00 до 20:00</div>
+						<div class="footer__office g-font">Наш адрес: Булатова, 100​, офис №6, 3 этаж</div>
+						<div class="footer__office g-font footer__address">Работаем ежедневно с 09:00 до 20:00</div>
 
 						<!-- <div class="footer__btn g-btn form-order">Оставить заявку</div> -->
 					</div>

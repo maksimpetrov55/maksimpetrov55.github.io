@@ -110,7 +110,6 @@ $(document).ready(function() {
     //выбор города
 
     //раскрытие услуги
-
     $(".serv__block").click(function(){
         if( $(".serv__block").hasClass("serv__block--open") ) {
             $(".serv__block").not($(this)).removeClass("serv__block--open");
@@ -123,12 +122,62 @@ $(document).ready(function() {
     $(".serv__block").hover(function(e){
         $(this).toggleClass("serv__block--hover");
     });
-
-    // $(".serv__block").mouseleave(function(e){
-    //     $(this).animate({height: "60px"},{queue:false, duration:150});
-    //     $(this).children( ".serv__block__text" ).fadeOut(150);
-    // });
     //раскрытие услуги
+
+    //спасибо за заявку
+    // if ( window.location.hash == '#tnks' ) {
+    //     $(".form-tnks").fadeIn(0);
+    // }
+    // $(".form__close--tnks").click(function(){
+    //     $(".form-tnks").fadeOut(300);
+    //     setTimeout(function(){
+    //         window.location = "index.html";
+    //     }, 250);
+    // });
+    //спасибо за заявку
+
+    //включение slick slider
+    $('.single-item').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: true,
+      //dotsClass: 'dots',
+      prevArrow: "<div class='arrow prev'></div>",
+      nextArrow: "<div class='arrow next'></div>",
+    });
+    //включение slick slider
+
+    //смена шрифта
+    $(".font").click(function(){
+        font_change();
+    });
+    function font_change(){
+        var font_value = prompt();
+        //alert(font_value);
+        if (font_value == 1) {
+            $(".g-font").removeClass("g-font--1");
+            $(".g-font").removeClass("g-font--2");
+            $(".g-font").removeClass("g-font--3");
+            $(".g-font").addClass("g-font--1");
+        } else {
+            if (font_value == 2) {
+                $(".g-font").removeClass("g-font--1");
+                $(".g-font").removeClass("g-font--2");
+                $(".g-font").removeClass("g-font--3");
+                $(".g-font").addClass("g-font--2");
+            } else {
+                if (font_value == 3) {
+                    $(".g-font").removeClass("g-font--1");
+                    $(".g-font").removeClass("g-font--2");
+                    $(".g-font").removeClass("g-font--3");
+                    $(".g-font").addClass("g-font--3");
+                }
+            }
+        }
+
+    }
+    //смена шрифта
 
 });
 

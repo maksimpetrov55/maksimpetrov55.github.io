@@ -6,6 +6,7 @@ $mail->CharSet = 'utf-8';
 
 $name = $_POST['form_name'];
 $phone = $_POST['form_phone'];
+$message = $_POST['form_msg'];
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
@@ -25,16 +26,25 @@ $mail->addAddress('maksimpetrov55@yandex.ru');     // Кому будет ухо
 //$mail->addBCC('bcc@example.com');
 //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+    for ($ct = 0; $ct < count($_FILES['userfile']['tmp_name']); $ct++) {
+        $uploadfile = tempnam(sys_get_temp_dir(), sha1($_FILES['userfile']['name'][$ct]));
+        $filename = $_FILES['userfile']['name'][$ct];
+        if (move_uploaded_file($_FILES['userfile']['tmp_name'][$ct], $uploadfile)) {
+            $mail->addAttachment($uploadfile, $filename);
+        } else {
+            $msg .= 'Failed to move file to ' . $uploadfile;
+        }
+    }
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Заявка с сайта Дачный Сезон';
-$mail->Body    = '<br>Имя: ' .$name. '<br>Телефон: ' .$phone. '<br>';
+$mail->Subject = 'Заявка с сайта ГОРОД-САД';
+$mail->Body    = '<br>Имя: ' .$name. '<br>Телефон: ' .$phone. '<br>Сообщение: ' .$message. '<br>';
 $mail->AltBody = '';
 
 if(!$mail->send()) {
     echo 'Error';
 } else {
-    //header('location: index.html#tnks');
-    header('location: index.html');
+    header('location: index.html#tnks');
+    //header('location: index.html');
 }
 ?>

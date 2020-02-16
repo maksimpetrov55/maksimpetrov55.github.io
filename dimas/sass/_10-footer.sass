@@ -39,13 +39,18 @@
         margin: 10px 0
         font-size: 20px
         color: $gray-dark
-        font-family: 'Nunito', sans-serif
         @media ( max-width: 991px )
             text-align: center
+            margin: 5px 0
         @media ( max-width: 470px )
             font-size: 16px
         @media ( max-width: 370px )
             padding: 0 30px
+
+    &__address
+        margin: 0
+        @media ( max-width: 991px )
+            margin: 0 0 20px 0
 
     &__contacts
         display: flex
@@ -60,7 +65,6 @@
         margin: 10px 0 0 0
         font-size: 46px
         font-weight: 900
-        font-family: 'Nunito', sans-serif
         color: $brown
         background: $gray-dark
         background: linear-gradient(111.04deg, $blue 12.36%, $green 90.63%)
@@ -76,7 +80,6 @@
         margin: 10px 0 10px 0
         font-size: 26px
         font-weight: 900
-        font-family: 'Nunito', sans-serif
         @media ( max-width: 470px )
             font-size: 20px
 
@@ -94,6 +97,8 @@
         background: #000
         @media ( max-width: 991px )
             margin: 15px
+        @media (max-width: 399px)
+            margin: 15px 5px
 
     &__inst
         background: url("../img/icons/inst-big-gray.png")
