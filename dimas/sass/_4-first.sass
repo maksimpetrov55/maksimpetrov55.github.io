@@ -5,24 +5,42 @@
     background: #ffffff url("../img/wall-2.jpg") no-repeat
     background-size: cover
     background-position: 100% 0
+
     height: 100vh
     max-height: 1000px
     min-height: 600px
+
     overflow: hidden
-    display: flex
-    align-items: center
-    padding: 95px 0
+    padding: 95px 0 120px 0
+    @media ( max-width: 991px )
+        padding: 95px 0
+
+    &__flex
+        height: 100%
+        max-height: 60vh
+        display: flex
+        justify-content: space-between
+        flex-direction: column
+        @media ( max-width: 991px )
+            max-height: 1000px
+
+    &__row
+        height: 60px
 
     &__city
-        z-index: 89
         position: absolute
-        top: 90px
-        right: 0
-        width: 150px
-        padding: 20px 10px 0 0
+        z-index: 89
+        width: 120px
+        top: 0
+        right: 20px
+        padding: 20px 0px 0 0
         display: flex
         align-items: center
         flex-direction: column
+        @media ( max-width: 576px )
+            width: 100%
+            right: 0
+            padding: 20px 0 0 0
 
         &__current
             user-select: none
@@ -49,20 +67,9 @@
                 left: -22px
                 top: 4px
 
-            // &::after
-            //     content: ""
-            //     position: absolute
-            //     border-bottom: 2px solid #fff
-            //     border-right: 2px solid #fff
-            //     width: 9px
-            //     height: 9px
-            //     right: -21px
-            //     top: 6px
-            //     transform: rotate(45deg)
-
         &__select
             user-select: none
-            position: relative
+            position: absolute
             background: #fff
             font-size: 16px
             display: none
@@ -71,6 +78,10 @@
             padding: 20px 20px 20px 20px
             border-radius: 10px
             box-shadow: 0 5px 20px 1px rgba(0,0,0,0.2)
+            z-index: 29
+            top: 60px
+            width: 120px
+
 
             div
                 margin: 3px 0
@@ -121,9 +132,10 @@
         max-width: 260px
         height: 70px
         font-size: 20px
-        margin: 100px auto 10px auto
+        margin: 30px auto 30px auto
         z-index: 29
         box-shadow: 0 5px 20px 3px rgba(0,0,0,0.3)
+
 
 
     &__shine
@@ -141,22 +153,7 @@
             top: -20%
             left: 25%
             animation: shine-move 15s infinite
-        &-2
-            top: -20%
-            left: -20%
-            animation: shine-move-2 15s infinite
-            animation-delay: 5s
 
-    // &__frame
-    //     z-index: 19
-    //     background: url(../img/frame.png) no-repeat
-    //     background-size: 100% auto
-    //     background-position: 0 100%
-    //     position: absolute
-    //     bottom: 0
-    //     left: 0
-    //     height: 120px
-    //     width: 100%
 
     &__pls-scroll
         z-index: 29

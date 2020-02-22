@@ -2,9 +2,19 @@
 
 .order
     position: relative
-    padding: 70px 0
+    padding: 70px 0 70px 50px
     background: linear-gradient(172deg, rgba(6,91,16,1) 0%, rgba(55,255,4,1) 100%)
     z-index: 9
+    @media (max-width: 991px)
+        padding: 70px 0 70px 20px
+    @media (max-width: 730px)
+        padding: 70px 0 70px 0
+
+    &__anchor
+        position: absolute
+        width: 100px
+        height: 80px
+        top: -80px
 
     &::before
         content: ""
@@ -27,14 +37,16 @@
 
     &__title
         font-size: 38px
+        max-width: 900px
         color: #fff
         font-weight: 600
         line-height: 1.2
         z-index: 29
         @media (max-width: 730px)
             text-align: center
+            font-size: 33px
         @media (max-width: 399px)
-            font-size: 32px
+            font-size: 28px
 
     &__flex
         display: flex

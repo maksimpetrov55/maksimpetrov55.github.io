@@ -131,13 +131,62 @@
         box-shadow: 0 5px 20px 1px rgba(0,0,0,0.1)
 
     &__2020
+        line-height: 24px
         color: $gray-dark
         font-size: 16px
         letter-spacing: 0.5s
-        margin: 20px 0 0 0
+        margin: 30px 0 10px 0
         opacity: 0.5
         @media ( max-width: 991px )
             text-align: center
+            margin: 20px 0 10px 0
+
+    &__wrap
+        position: relative
+        margin: 30px 0 10px 0
+        display: flex
+        justify-content: flex-end
+        @media ( max-width: 991px )
+            justify-content: center
+            margin: 5px 0 10px 0
+
+    &__develop
+        line-height: 24px
+        position: relative
+        color: $gray-dark
+        font-size: 16px
+        letter-spacing: 0.5s
+        opacity: 0.5
+        padding: 0 70px 0 0
+        @media ( max-width: 350px )
+            padding: 0 60px 0 0
+
+        &::after
+            content: ""
+            display: block
+            height: 1px
+            width: 40px
+            background: $gray-dark
+            position: absolute
+            top: 50%
+            right: 15px
+            margin: -1px 0 0 0
+            @media ( max-width: 350px )
+                width: 30px
+
+    &__eskel
+        font-size: 22px
+        line-height: 24px
+        font-weight: 600
+        letter-spacing: 2px
+        transition-duration: 0.3s
+        display: block
+
+        &:hover
+            color: #007BFF
+            text-decoration: none
+            text-shadow: 1px 1px 0px #00137F, 2px 2px 0px #00137F, 3px 3px 0px #00137F
+            transform: translate(-2px,-2px)
 
     &__btn
         max-width: 240px

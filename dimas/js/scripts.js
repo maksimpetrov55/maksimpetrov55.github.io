@@ -24,7 +24,7 @@ $(document).ready(function() {
     }
     $(".form__close").click(function(){
         form_close();
-        $(".form__content__title").html("Оставьте заявку");
+        $(".form__content__title").html("Оставить заявку");
     });
 
 
@@ -33,7 +33,7 @@ $(document).ready(function() {
         form_open();
     });
     $(".form-order").click(function(){
-        $(".form__content__title").html("Обсудить проект");
+        $(".form__content__title").html("Оставить заявку");
         form_open();
     });
     //открытие-закрытие формы
@@ -95,45 +95,51 @@ $(document).ready(function() {
     //бургер меню
 
     //выбор города
-    $(".first__city__current, .first__city__select--omsk, .first__city__select--tumen, .first__city__select--mariup").click(function(){
+    $(".first__city__current, .first__city__select--omsk, .first__city__select--tumen, .first__city__select--tobol").click(function(){
         $(".first__city__select").toggleClass("first__city__select--show");
     });
     $(".first__city__select--omsk").click(function(){
+        $(".first, .serv").fadeOut(50).delay(100).fadeIn(200);
         $(".first__city__current").html("Омск")
     });
     $(".first__city__select--tumen").click(function(){
+        $(".first, .serv").fadeOut(50).delay(100).fadeIn(200);
         $(".first__city__current").html("Тюмень")
     });
-    $(".first__city__select--mariup").click(function(){
-        $(".first__city__current").html("Мариуполь")
+    $(".first__city__select--tobol").click(function(){
+        $(".first, .serv").fadeOut(50).delay(100).fadeIn(200);
+        $(".first__city__current").html("Тобольск")
     });
     //выбор города
 
     //раскрытие услуги
-    $(".serv__block").click(function(){
-        if( $(".serv__block").hasClass("serv__block--open") ) {
-            $(".serv__block").not($(this)).removeClass("serv__block--open");
-            $(".serv__block__text").not($(this).children(".serv__block__text")).slideUp(300);
-        }
-        $(this).toggleClass("serv__block--open");
-        $(this).children(".serv__block__text").slideToggle(300);
-    });
+    // $(".serv__block").click(function(){
+    //     if( $(".serv__block").hasClass("serv__block--open") ) {
+    //         $(".serv__block").not($(this)).removeClass("serv__block--open");
+    //         $(".serv__block__text").not($(this).children(".serv__block__text")).slideUp(300);
+    //     }
+    //     $(this).toggleClass("serv__block--open");
+    //     $(this).children(".serv__block__text").slideToggle(300);
+    // });
 
     $(".serv__block").hover(function(e){
-        $(this).toggleClass("serv__block--hover");
+        $(this).children(".serv__wrap").stop().slideToggle(400);
+        $(this).children(".serv__shadow").toggleClass("serv__shadow--hover");
+        $(this).children(".serv__block__title").toggleClass("serv__block__title--hover");
     });
+
+    // $(".serv__block").hover(function(e){
+    //     $(this).toggleClass("serv__block--hover");
+    // });
     //раскрытие услуги
 
     //спасибо за заявку
-    // if ( window.location.hash == '#tnks' ) {
-    //     $(".form-tnks").fadeIn(0);
-    // }
-    // $(".form__close--tnks").click(function(){
-    //     $(".form-tnks").fadeOut(300);
-    //     setTimeout(function(){
-    //         window.location = "index.html";
-    //     }, 250);
-    // });
+    if ( window.location.hash == '#tnks' ) {
+        $(".tnks").removeClass("tnks--hide");
+    }
+    $(".tnks, .tnks__close").click(function(){
+        window.location = "index.html";
+    });
     //спасибо за заявку
 
     //включение slick slider
@@ -178,6 +184,12 @@ $(document).ready(function() {
 
     }
     //смена шрифта
+
+    //маска ввода
+    $(function(){
+		$("#form_phone").mask("+7 (999) 999-99-99", {placeholder: "__________" });
+	});
+    //маска ввода
 
 });
 
