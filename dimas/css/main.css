@@ -2418,6 +2418,20 @@ body * {
           align-items: center;
 }
 
+.steps2__hexagon::after {
+  content: "";
+  display: block;
+  width: 160px;
+  height: 140px;
+  background: #000;
+  position: absolute;
+  border-radius: 30%;
+  top: 24%;
+  z-index: -1;
+  -webkit-box-shadow: 0px 30px 35px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 30px 35px 10px rgba(0, 0, 0, 0.15);
+}
+
 .steps2__img {
   position: relative;
   width: 30%;
