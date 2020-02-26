@@ -122,15 +122,15 @@ $(document).ready(function() {
     //     $(this).children(".serv__block__text").slideToggle(300);
     // });
 
+    // if( $(".serv__block").hasClass("serv__block--open") ) {
+    // }
+
     $(".serv__block").hover(function(e){
-        $(this).children(".serv__wrap").stop().slideToggle(400);
+        $(this).toggleClass("serv__block--hover");
+        $(this).children(".serv__wrap").stop().slideToggle(450);
         $(this).children(".serv__shadow").toggleClass("serv__shadow--hover");
         $(this).children(".serv__block__title").toggleClass("serv__block__title--hover");
     });
-
-    // $(".serv__block").hover(function(e){
-    //     $(this).toggleClass("serv__block--hover");
-    // });
     //раскрытие услуги
 
     //спасибо за заявку

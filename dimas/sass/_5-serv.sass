@@ -13,15 +13,7 @@
         @media ( max-width: 768px )
             height: 0
 
-    &__shadow
-        position: absolute
-        width: 100%
-        height: 100%
-        top: 0
-        left: 0
-        z-index: 9
-        display: none
-
+    &__bg
         &--1
             background: url("../img/uslugi/proekt.png") no-repeat
             background-position: 50% 50%
@@ -29,19 +21,19 @@
                 background-size: auto 100%
         &--2
             background: url("../img/uslugi/gazon.jpg") no-repeat
-            background-position: 50% 50%
+            background-position: 50% 10%
         &--3
             background: url("../img/uslugi/ozelen.jpg") no-repeat
-            background-position: 50% 50%
+            background-position: 50% 60%
         &--4
             background: url("../img/uslugi/sad.jpg") no-repeat
-            background-position: 50% 50%
+            background-position: 50% 40%
         &--5
             background: url("../img/uslugi/posadka.jpg") no-repeat
-            background-position: 50% 50%
+            background-position: 50% 40%
         &--6
             background: url("../img/uslugi/poliv.jpg") no-repeat
-            background-position: 50% 50%
+            background-position: 50% 100%
         &--7
             background: url("../img/uslugi/drenaj.jpg") no-repeat
             background-position: 50% 50%
@@ -67,8 +59,16 @@
             background: url("../img/uslugi/inter.jpg") no-repeat
             background-position: 50% 50%
 
-        &--hover
-            display: block
+    &__wrap
+        position: relative
+        display: none
+        z-index: 21
+        width: 100%
+        margin: 25px 0 0px 0
+        padding: 45px 0 70px 0
+        //background: #444444
+        // background: #000 url("https://avatars.mds.yandex.net/get-pdb/1058492/6ed09ed7-e57d-49fe-bfd7-aa113a5df54f/s1200?webp=false") no-repeat
+        // background-size: 100% auto
 
         &::before
             content: ""
@@ -76,72 +76,45 @@
             position: absolute
             width: 100%
             height: 100%
+            background: #2B4D1B88
             top: 0
             left: 0
-            background: rgba(23,40,14,0.65)
-
+            z-index: 1
         &::after
             content: ""
             display: block
             position: absolute
             width: 100%
             height: 100%
-            top: 0
+            background: linear-gradient(180deg, rgba(2,5,1,0.7) 0%, rgba(0,0,0,0) 80%, rgba(0,0,0,0) 100%)
+            top: 0px
             left: 0
-            background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,0) 90%, rgba(0,0,0,1) 100%)
-            //background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(255,255,255,1) 100%)
-
-    &__wrap
-        position: relative
-        display: none
-        z-index: 21
-        margin: 20px 0 30px 0
-
-    // &__bg
-    //     position: relative
-    //     width: 100%
-    //     z-index: -1
-    //     bottom: 0
+            z-index: 2
 
     &__block
         overflow: hidden
         z-index: 19
         position: relative
-        margin: 0 auto
+        margin: 20px auto
         width: 100%
         max-width: 960px
         height: auto
         min-height: 60px
-        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #fff 30%,  #fff 70%, rgba(255,255,255,0) 100%)
+        background: #ffffff
         display: flex
         align-items: center
         justify-content: center
         flex-direction: column
         cursor: pointer
         padding: 20px 0
+        border: 2px solid #A5CC52
+        border-radius: 3px
+        transition-duration: 0.4s
 
         &--hover
-            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #fafafa 30%, #fafafa 70%, rgba(255,255,255,0) 100%)
-
-        &::after
-            content: ""
-            position: absolute
-            top: 0
-            height: 3px
-            width: 100%
-            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, $green 30%, $green 70%, rgba(255,255,255,0) 100%)
-            display: block
-
-        &--last
-
-            &::before
-                content: ""
-                position: absolute
-                bottom: 0
-                height: 3px
-                width: 100%
-                background: linear-gradient(90deg, rgba(255,255,255,0) 0%, $green 30%,  $green 60%, rgba(255,255,255,0) 100%)
-                display: block
+            background: linear-gradient(130deg, rgba(137,230,92,1) 0%, rgba(0,105,21,1) 100%)
+            padding: 25px 0 0 0
+            border: 2px solid #fff
 
         &__title
             z-index: 22
@@ -150,14 +123,19 @@
             text-align: center
             color: $brown
             font-size: 18px
+            padding: 0 20px
             letter-spacing: 1px
+            transition-duration: 0.4s
             @media ( max-width: 450px )
                 font-size: 16px
 
             &--hover
                 color: #fff
+                text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.20)
+                letter-spacing: 3px
 
         &__text
+            z-index: 22
             user-select: none
             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
             position: relative

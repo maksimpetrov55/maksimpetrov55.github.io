@@ -1,0 +1,183 @@
+
+
+.serv
+    position: relative
+    padding: 100px 0 100px 0
+    //background: #ffffff url(../img/bg2.png)
+    @media ( max-width: 768px )
+        padding: 50px 0
+
+    &__space
+        width: 100%
+        height: 70px
+        @media ( max-width: 768px )
+            height: 0
+
+    &__shadow
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        z-index: 9
+        display: none
+
+        // &--1
+        //     background: url("../img/uslugi/proekt.png") no-repeat
+        //     background-position: 50% 50%
+        //     @media ( max-width: 678px )
+        //         background-size: auto 100%
+        // &--2
+        //     background: url("../img/uslugi/gazon.jpg") no-repeat
+        //     background-position: 50% 50%
+        // &--3
+        //     background: url("../img/uslugi/ozelen.jpg") no-repeat
+        //     background-position: 50% 50%
+        // &--4
+        //     background: url("../img/uslugi/sad.jpg") no-repeat
+        //     background-position: 50% 50%
+        // &--5
+        //     background: url("../img/uslugi/posadka.jpg") no-repeat
+        //     background-position: 50% 50%
+        // &--6
+        //     background: url("../img/uslugi/poliv.jpg") no-repeat
+        //     background-position: 50% 50%
+        // &--7
+        //     background: url("../img/uslugi/drenaj.jpg") no-repeat
+        //     background-position: 50% 50%
+        // &--8
+        //     background: url("../img/uslugi/gorka.jpg") no-repeat
+        //     background-position: 50% 50%
+        // &--9
+        //     background: url("../img/uslugi/dorojki.jpg") no-repeat
+        //     background-position: 50% 50%
+        // &--10
+        //     background: url("../img/uslugi/fomi.png") no-repeat
+        //     background-position: 50% 50%
+        // &--11
+        //     background: url("../img/uslugi/svet.jpg") no-repeat
+        //     background-position: 50% 50%
+        // &--12
+        //     background: url("../img/uslugi/voda.jpg") no-repeat
+        //     background-position: 50% 50%
+        // &--13
+        //     background: url("../img/uslugi/crona.jpg") no-repeat
+        //     background-position: 50% 50%
+        // &--14
+        //     background: url("../img/uslugi/inter.jpg") no-repeat
+        //     background-position: 50% 50%
+
+        &--hover
+            display: block
+
+        &::before
+            content: ""
+            display: block
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            background: rgba(23,40,14,0.65)
+
+        &::after
+            content: ""
+            display: block
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,0) 90%, rgba(0,0,0,1) 100%)
+            //background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,0,0,0) 5%, rgba(0,0,0,0) 95%, rgba(255,255,255,1) 100%)
+
+    &__wrap
+        position: relative
+        display: none
+        z-index: 21
+        margin: 20px 0 30px 0
+
+    // &__bg
+    //     position: relative
+    //     width: 100%
+    //     z-index: -1
+    //     bottom: 0
+
+    &__block
+        overflow: hidden
+        z-index: 19
+        position: relative
+        margin: 0 auto
+        width: 100%
+        max-width: 960px
+        height: auto
+        min-height: 60px
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #fff 30%,  #fff 70%, rgba(255,255,255,0) 100%)
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        cursor: pointer
+        padding: 20px 0
+
+        &--hover
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #fafafa 30%, #fafafa 70%, rgba(255,255,255,0) 100%)
+
+        &::after
+            content: ""
+            position: absolute
+            top: 0
+            height: 3px
+            width: 100%
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, $green 30%, $green 70%, rgba(255,255,255,0) 100%)
+            display: block
+
+        &--last
+
+            &::before
+                content: ""
+                position: absolute
+                bottom: 0
+                height: 3px
+                width: 100%
+                background: linear-gradient(90deg, rgba(255,255,255,0) 0%, $green 30%,  $green 60%, rgba(255,255,255,0) 100%)
+                display: block
+
+        &__title
+            z-index: 22
+            user-select: none
+            position: relative
+            text-align: center
+            color: $brown
+            font-size: 18px
+            letter-spacing: 1px
+            @media ( max-width: 450px )
+                font-size: 16px
+
+            &--hover
+                color: #fff
+
+        &__text
+            user-select: none
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+            position: relative
+            margin: 20px 0 0 0
+            padding: 0 80px
+            color: #fff
+            width: 100%
+            text-align: justify
+            @media ( max-width: 599px )
+                padding: 0 10px
+
+            &--span
+                //text-decoration: underline
+                color: $green-deep
+                letter-spacing: 0.2px
+
+            &--ul
+                margin: 10px 0 0 0
+
+
+
+
+
