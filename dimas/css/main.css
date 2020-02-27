@@ -773,6 +773,7 @@ body * {
 .serv {
   position: relative;
   padding: 100px 0 100px 0;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
@@ -808,6 +809,12 @@ body * {
 .serv__bg--1 {
   background: url("../img/uslugi/proekt2.jpg") no-repeat;
   background-position: 50% 50%;
+}
+
+@media (max-width: 440px) {
+  .serv__bg--1 {
+    background-size: auto 100%;
+  }
 }
 
 .serv__bg--2 {
