@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+	
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+	<div class="calc">
+
+		<div class="calc__flex calc__flex--aic">
+			<div class="calc__notation">Текущий год:</div>
+			<input class="calc__input" type="text" id="calc_year-today" disabled>
+		</div>
+		<div class="calc__flex calc__flex--aic">
+			<div class="calc__notation">Ваш возраст сейчас:</div>
+			<input class="calc__input" type="text" id="calc_age-today">
+		</div>
+
+		<div class="calc-space-30"></div>
+
+		<div class="calc__flex calc__flex--aic">
+			<div class="calc__notation">Какую сумму в месяц вы хотите получать в будущем?</div>
+			<input class="calc__input" type="text" id="calc_profit">
+		</div>
+		<div class="calc__flex calc__flex--aic">
+			<div class="calc__notation">Сколько лет планируете жить на эти деньги?</div>
+			<input class="calc__input" type="text" id="calc_lifetime">
+		</div>
+
+		<div class="calc-space-30"></div>
+
+		<div class="calc__flex calc__flex--aic">
+			<div class="calc__notation">Это в месяцах</div>
+			<input class="calc__input" type="text" id="calc_months" disabled>
+		</div>
+		<div class="calc__flex calc__flex--aic">
+			<div class="calc__notation">минимум*</div>
+			<input class="calc__input" type="text" id="calc_money-min" disabled>
+		</div>
+		<div class="calc__flex calc__flex--aic">
+			<div class="calc__notation">максимум</div>
+			<input class="calc__input" type="text" id="calc_money-max" disabled>
+		</div>
+
+		<div class="calc-space-30"></div>
+
+		<div class="calc__flex calc__flex--aic">
+			<div class="calc__notation">Через сколько лет вы перестанете накапливать капитал и начнете его распределять?</div>
+			<input class="calc__input" type="text" id="calc_years-stop">
+		</div>
+		<div class="calc__flex calc__flex--aic">
+			<div class="calc__notation">Ваш возраст составит, лет:</div>
+			<input class="calc__input" type="text" id="calc_age-stop" disabled>
+		</div>
+
+		<div class="calc-space-30"></div>
+
+		<div class="calc__flex calc__flex--aic">
+			<div class="calc__notation">Справочно: вероятная будущая стоимость этих денег с учетом инфляции, какая была в прошлом:</div>
+			<input class="calc__input" type="text" id="calc_maybe-percent" disabled>
+		</div>
+		<div class="calc__flex calc__flex--aic">
+			<div class="calc__notation">минимум*</div>
+			<input class="calc__input" type="text" id="calc_maybe-min" disabled>
+		</div>
+		<div class="calc__flex calc__flex--aic">
+			<div class="calc__notation">максимум</div>
+			<input class="calc__input" type="text" id="calc_maybe-max" disabled>
+		</div>
+
+		<div class="calc-space-30"></div>
+
+		<div class="calc__flex calc__flex--aic">
+			<div class="calc__notation">Возраст достижения цели</div>
+			<input class="calc__input" type="text" id="calc_age-goal" disabled>
+		</div>
+		<div class="calc__flex calc__flex--aic">
+			<div class="calc__notation">Год достижения цели</div>
+			<input class="calc__input" type="text" id="calc_year-goal" disabled>
+		</div>
+		<div class="calc__flex calc__flex--aic">
+			<div class="calc__notation">Конечный возраст для жизни на свой капитал</div>
+			<input class="calc__input" type="text" id="calc_age-last" disabled>
+		</div>
+		<div class="calc__flex calc__flex--aic">
+			<div class="calc__notation">Последний год для жизни на свой капитал</div>
+			<input class="calc__input" type="text" id="calc_year-last" disabled>
+		</div>
+
+		<div class="calc-space-30"></div>
+
+		<div class="calc__flex calc__flex--aic">
+			<div class="calc__notation">* - Исходя из номинальной (бумажной) доходности инвестиционного портфеля в год, %:</div>
+			<input class="calc__input" type="text" id="calc_profit-percent" disabled>
+		</div>
+		<div class="calc__flex calc__flex--aic">
+			<div class="calc__notation">с учетом инфляции это</div>
+			<input class="calc__input" type="text" id="calc_profit-inflation" disabled>
+		</div>
+
+	</div>
+
+</body>
+</html>
