@@ -1,4 +1,6 @@
 $(document).ready(function(){
+	
+	$(".tech").click();
 
 	$(".calc-btn, .tech").click(function(){
 		$(".blackcat").css({display: "block"});
