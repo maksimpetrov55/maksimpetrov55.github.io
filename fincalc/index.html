@@ -7,10 +7,10 @@
 
 	<link rel="stylesheet" href="fonts/bebasneue/bebasneue.css">
 	<link rel="stylesheet" href="fonts/montserrat/montserrat.css">
-	<link rel="stylesheet" href="css/main.css?v1">
+	<link rel="stylesheet" href="css/main.css?v2">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/scripts.js?v1"></script>	
+	<script src="js/scripts.js?v2"></script>	
 
 </head>
 <body>
@@ -29,7 +29,7 @@
 		</div>
 		<div class="calc__flex calc__flex--aic calc__flex--jcc calc__flex--wrap-900">
 			<div class="calc__notation">Ваш возраст сейчас:</div>
-			<input class="calc__input" type="text" id="calc_age-today">
+			<div class="calc__pencil"><input class="calc__input" type="text" id="calc_age-today"></div>
 			<div class="calc__description"></div>
 		</div>
 
@@ -52,15 +52,15 @@
 		</div>
 		<div class="calc__flex calc__flex--aic calc__flex--jcc calc__flex--wrap-900">
 			<div class="calc__notation">Какую сумму в месяц вы хотите получать в будущем?</div>
-			<div>
+			<div class="calc__por">
 				<div class="calc__currency">$</div>
-				<input class="calc__input calc__input--currency" type="text" id="calc_profit">
+				<div class="calc__pencil"><input class="calc__input calc__input--currency" type="text" id="calc_profit"></div>
 			</div>
 			<div class="calc__description">В расчете используется расчет на 12 таких&nbsp;платежей&nbsp;в&nbsp;год.</div>
 		</div>
 		<div class="calc__flex calc__flex--aic calc__flex--jcc calc__flex--wrap-900">
 			<div class="calc__notation">Сколько лет планируете жить на эти деньги?</div>
-			<input class="calc__input" type="text" id="calc_lifetime">
+			<div class="calc__pencil"><input class="calc__input" type="text" id="calc_lifetime"></div>
 			<div class="calc__description">Расчет работает на сроках от 10 лет, на более коротких интервалах точность не гарантируется</div>
 		</div>
 
@@ -83,7 +83,7 @@
 		<div class="calc__flex calc__flex--aic calc__flex--jcc calc__flex--wrap-900">
 			<div class="calc__notation">минимум*</div>
 			<div>
-				<div class="calc__currency">$</div>
+				<div class="calc__currency calc__currency--disabled">$</div>
 				<input class="calc__input calc__input--currency" type="text" id="calc_money-min" disabled>
 			</div>
 			<div class="calc__description">При наличии знаний, достаточной терпимости к риску и грамотно составленного портфеля на брокерском счете (фондовый рынок)</div>
@@ -91,7 +91,7 @@
 		<div class="calc__flex calc__flex--aic calc__flex--jcc calc__flex--wrap-900">
 			<div class="calc__notation">максимум</div>
 			<div>
-				<div class="calc__currency">$</div>
+				<div class="calc__currency calc__currency--disabled">$</div>
 				<input class="calc__input calc__input--currency" type="text" id="calc_money-max" disabled>
 			</div>
 			<div class="calc__description">При минимальном риске и применении простейшего инструмента - банковского валютного вклада. Бумажная доходность равна инфляции, реальная доходность 0%, инвестиционный ускоритель отсутствует.</div>
@@ -101,7 +101,7 @@
 
 		<div class="calc__flex calc__flex--aic calc__flex--jcc calc__flex--wrap-900">
 			<div class="calc__notation">Через сколько лет вы перестанете накапливать капитал и начнете&nbsp;его&nbsp;распределять?</div>
-			<input class="calc__input" type="text" id="calc_years-stop">
+			<div class="calc__pencil"><input class="calc__input" type="text" id="calc_years-stop"></div>
 			<div class="calc__description">За какое время вы планируете создать такой капитал</div>
 		</div>
 		<div class="calc__flex calc__flex--aic calc__flex--jcc calc__flex--wrap-900">
@@ -120,7 +120,7 @@
 		<div class="calc__flex calc__flex--aic calc__flex--jcc calc__flex--wrap-900">
 			<div class="calc__notation">минимум*</div>
 			<div>
-				<div class="calc__currency">$</div>
+				<div class="calc__currency calc__currency--disabled">$</div>
 				<input class="calc__input calc__input--currency" type="text" id="calc_maybe-min" disabled>
 			</div>
 			<div class="calc__description"></div>
@@ -128,7 +128,7 @@
 		<div class="calc__flex calc__flex--aic calc__flex--jcc calc__flex--wrap-900">
 			<div class="calc__notation">максимум</div>
 			<div>
-				<div class="calc__currency">$</div>
+				<div class="calc__currency calc__currency--disabled">$</div>
 				<input class="calc__input calc__input--currency" type="text" id="calc_maybe-max" disabled>
 			</div>
 			<div class="calc__description"></div>

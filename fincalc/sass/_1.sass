@@ -3,6 +3,14 @@ body
     background: #fafafa
     position: relative
 
+$color1: #d8f1ed //фон инпута
+$color2: #111111 //текст инпута
+$color3: #56B1BF //рамка инпута
+
+$color4: #08708A //текст неактивный
+$color5: #D0D3C5 //рамка неактивная
+$color6: transparent
+
 *
     padding: 0
     margin: 0
@@ -18,6 +26,9 @@ body
 .calc-space-30
     height: 30px
     width: 100%
+
+.calc__por
+    position: relative
 
 .calc-center
     display: none
@@ -152,13 +163,14 @@ body
         display: none
 
         &:checked + .calc__label
-            background: #58968B
-            border: 2px solid #58968B
-            color: #fff
+            background: $color1
+            border: 2px solid $color3
+            color: $color2
+            font-weight: 600
 
     &__label
         font-family: 'roboto', sans-serif
-        border: 2px solid #ccc
+        border: 1px solid #cecece
         margin: 10px 5px
         height: 46px
         width: 105px
@@ -169,12 +181,15 @@ body
         user-select: none
         cursor: pointer
         font-size: 18px
+        color: $color4
         // letter-spacing: 1px
 
         &--margin
             //margin: 5px 10px 5px 0
 
     &__input
+        position: relative
+        z-index: 19
         width: 30%
         max-width: 220px
         min-width: 220px
@@ -185,12 +200,17 @@ body
         font-size: 18px
         border-radius: 5px
         background: #fff
-        border: 2px solid #ccc
+        border: 2px solid $color3
         font-weight: 600
-        color: #555
+        color: $color2
+        background: $color6
+        letter-spacing: 0.5px
 
         &:disabled
-            border: 1px dashed #cecece
+            border: 1px dashed $color5
+            background: #fff
+            color: $color4
+            font-weight: 400
 
         &--currency
             padding: 0 15px 0 25px
@@ -232,8 +252,12 @@ body
         font-weight: 600
         line-height: 66px
         margin: 0 0 0 25px
-        color: #555
+        color: $color2
         user-select: none
+
+        &--disabled
+            color: $color4
+            font-weight: 400
 
     &__note
         font-size: 16px
@@ -292,3 +316,32 @@ body
             @media ( max-width: 440px )
                 margin: 0
                 font-size: 17px
+
+    &__pencil
+        position: relative
+        z-index: 9
+
+        &::before
+            margin: 10px 10px
+            position: absolute
+            z-index: 10
+            content: ""
+            display: block
+            background: $color1
+            width: 220px
+            height: 46px
+            top: 0
+            left: 0
+
+        &::after
+            z-index: 11
+            content: ""
+            display: block
+            width: 21px
+            height: 26px
+            background: url(../img/pencil.png)
+            background-size: 100% 100%
+            position: absolute
+            right: 23px
+            top: 20px
+            opacity: 0.15

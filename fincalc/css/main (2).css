@@ -26,10 +26,6 @@ body {
   width: 100%;
 }
 
-.calc__por {
-  position: relative;
-}
-
 .calc-center {
   display: none;
   height: 100%;
@@ -238,15 +234,14 @@ body {
 }
 
 .calc__radio:checked + .calc__label {
-  background: #d8f1ed;
-  border: 2px solid #56B1BF;
-  color: #111111;
-  font-weight: 600;
+  background: #58968B;
+  border: 2px solid #58968B;
+  color: #fff;
 }
 
 .calc__label {
   font-family: 'roboto', sans-serif;
-  border: 1px solid #cecece;
+  border: 2px solid #ccc;
   margin: 10px 5px;
   height: 46px;
   width: 105px;
@@ -266,12 +261,9 @@ body {
           user-select: none;
   cursor: pointer;
   font-size: 18px;
-  color: #08708A;
 }
 
 .calc__input {
-  position: relative;
-  z-index: 19;
   width: 30%;
   max-width: 220px;
   min-width: 220px;
@@ -282,18 +274,16 @@ body {
   font-size: 18px;
   border-radius: 5px;
   background: #fff;
-  border: 2px solid #56B1BF;
+  border: 2px solid #BAD7D2;
   font-weight: 600;
-  color: #111111;
-  background: transparent;
+  color: #000;
+  background: #cbe9e4;
   letter-spacing: 0.5px;
 }
 
 .calc__input:disabled {
-  border: 1px dashed #D0D3C5;
   background: #fff;
   color: #08708A;
-  font-weight: 400;
 }
 
 .calc__input--currency {
@@ -357,7 +347,7 @@ body {
   font-weight: 600;
   line-height: 66px;
   margin: 0 0 0 25px;
-  color: #111111;
+  color: #000;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -366,7 +356,6 @@ body {
 
 .calc__currency--disabled {
   color: #08708A;
-  font-weight: 400;
 }
 
 .calc__note {
@@ -469,37 +458,5 @@ body {
     margin: 0;
     font-size: 17px;
   }
-}
-
-.calc__pencil {
-  position: relative;
-  z-index: 9;
-}
-
-.calc__pencil::before {
-  margin: 10px 10px;
-  position: absolute;
-  z-index: 10;
-  content: "";
-  display: block;
-  background: #d8f1ed;
-  width: 220px;
-  height: 46px;
-  top: 0;
-  left: 0;
-}
-
-.calc__pencil::after {
-  z-index: 11;
-  content: "";
-  display: block;
-  width: 21px;
-  height: 26px;
-  background: url(../img/pencil.png);
-  background-size: 100% 100%;
-  position: absolute;
-  right: 23px;
-  top: 20px;
-  opacity: 0.15;
 }
 /*# sourceMappingURL=main.css.map */
