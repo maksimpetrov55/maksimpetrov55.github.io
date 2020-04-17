@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+	
+	<link rel="stylesheet" href="../css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>
+
+
+
+</head>
+<body>
+
+	<div class="calc__wrap">
+		
+		<div class="calc__card">
+
+			<div class="t28">Характеристики объекта</div>
+
+			<!-- <div class="b-sp-20"></div> -->
+
+			<div class="calc__flex
+						calc__flex--jcsb
+						calc__flex--wrap">
+
+				<div class="calc__flex__radio">
+
+					<div class="t20">Выберите объект</div>
+					<div class="b-sp-20"></div>
+					<div>
+						<input type="radio" class="calc__input__radio" name="1" id="radio1" value="1" checked>
+						<label class="t18" for="radio1">Новостройка</label>
+					</div>
+		
+					<div class="b-sp-10"></div>
+		
+					<div>
+						<input type="radio" class="calc__input__radio" name="1" id="radio2" value="2">
+						<label class="t18" for="radio2">Старый фонд</label>
+					</div>
+				</div>
+
+		
+				<div class="b-sp-20"></div>
+		
+				<div class="calc__flex__radio">
+
+					<div class="t20">Местоположение</div>
+					<div class="b-sp-20"></div>
+					<div>
+						<input type="radio" class="calc__input__radio" name="2" id="radio3" checked value="1">
+						<label class="t18" for="radio3">Санкт-Петербург</label>
+					</div>
+		
+					<div class="b-sp-10"></div>
+		
+					<div>
+						<input type="radio" class="calc__input__radio" name="2" id="radio4" value="2">
+						<label class="t18" for="radio4">Ленинградская область</label>
+					</div>
+
+				</div>
+
+				<div class="b-sp-20"></div>
+
+				<div class="calc__flex__radio">
+
+					<div class="t20">Высота потолка</div>
+					<div class="calc__flex__radio__input">
+						<input oninput="this.value=this.value.replace(',', '.')" class="calc__input__in" type="text" id="input1" >
+						<div class="t20 m-l-20 mw38"> м</div>
+					</div>
+
+				</div>
+				
+			</div>
+		
+			<div class="b-sp-20"></div>
+	
+		</div>
+
+		<div class="b-sp-40"></div>
+
+		<div class="calc__card">
+			<div>
+
+				<div class="t28">Укажите примерную площадь штукатурных работ</div>
+	
+				
+				<div class="calc__card__line">
+
+					<div class="calc__card__line__text t20 m-r-20">Штукатурка стен машинным способом гипсовой смесью</div>
+
+					<div class="calc__card__line__input">
+
+						<input oninput="this.value=this.value.replace(',', '.')" class="calc__input__in" type="text" id="input2">
+						<div class="t20 m-l-20 mw38">м2</div>
+
+					</div>
+
+				</div>
+
+				
+				<div class="calc__card__line">
+
+					<div class="calc__card__line__text t20 m-r-20">Штукатурка стен машинным способом ЦПС (цементно-песчаной смесью - подходит для влажных помещений)</div>
+
+					<div class="calc__card__line__input">
+
+						<input oninput="this.value=this.value.replace(',', '.')" class="calc__input__in" type="text" id="input3">
+						<div class="t20 m-l-20 mw38"> м2</div>
+
+					</div>
+
+				</div>
+
+				
+				<div class="calc__card__line">
+
+					<div class="calc__card__line__text t20 m-r-20">Штукатурка откосов, колонн, выступов шириной менее 50 см</div>
+
+					<div class="calc__card__line__input">
+
+						<input oninput="this.value=this.value.replace(',', '.')" class="calc__input__in" type="text" id="input4">
+						<div class="t20 m-l-20 mw38"> м.п.</div>
+
+					</div>
+
+				</div>
+
+				
+				<div class="calc__card__line">
+
+					<div class="calc__card__line__text t20 m-r-20">Штукатурка потолка</div>
+
+					<div class="calc__card__line__input">
+
+						<input oninput="this.value=this.value.replace(',', '.')" class="calc__input__in" type="text" id="input5">
+						<div class="t20 m-l-20 mw38"> м2</div>
+
+					</div>
+
+				</div>
+
+								
+				<div class="calc__card__line">
+
+					<div class="calc__card__line__text t20 m-r-20">Монтаж штукатурной стеклотканевой сетки</div>
+
+					<div class="calc__card__line__input">
+
+						<input oninput="this.value=this.value.replace(',', '.')" class="calc__input__in" type="text" id="input6">
+						<div class="t20 m-l-20 mw38"> м2</div>
+
+					</div>
+
+				</div>
+
+				<div class="b-sp-20"></div>
+				<div class="calc-flex">
+					<div class="t28 m-r-20">Стоимость штукатурных работ:</div>
+					
+					<div id="result1" class="calc__out">###</div>
+					<!-- <input class="calc__input__out" type="text" id="result1" disabled> -->
+				</div>
+			</div>
+		</div>
+
+		<div class="b-sp-40"></div>
+
+		<div class="calc__card">
+
+			<div class="calc-flex-column">
+					<div class="t28 m-r-20">Посчитать стоимость материалов:</div>
+					<div class="b-sp-20"></div>
+					<div>
+						<input type="radio" class="calc__input__radio" name="3" id="radio5"value="1">
+						<label class="t18" for="radio5">Да</label>
+					</div>
+		
+					<div class="b-sp-10"></div>
+		
+					<div>
+						<input type="radio" class="calc__input__radio" name="3" id="radio6"value="2" checked>
+						<label class="t18" for="radio6">Нет</label>
+					</div>
+				</div>
+
+
+			<div class="b-sp-30"></div>
+	
+			<div>
+			<div class="calc-flex">
+				<div class="t28 m-r-20">Примерная стоимость материалов:</div>
+				
+				<div id="result2" class="calc__out">###</div>
+				<!-- <input class="calc__input__out" type="text" id="result2" disabled> -->
+			</div>
+
+			</div>
+
+
+
+		</div>
+
+		<div class="b-sp-40"></div>
+
+		<div class="calc__card">
+
+			<!-- <div class="b-sp-20"></div> -->
+
+			<div class="calc-flex">
+				<div class="t28 m-r-20">Итого полная стоимость:</div>
+				
+				<div id="result3" class="calc__out">###</div>
+				<!-- <input class="calc__input__out" type="text" id="result3" disabled> -->
+			</div>
+
+		</div>
+
+		<div class="b-sp-50"></div>
+
+		<!-- <div class="calc-btn" id="make-log">
+			Сделать лог
+		</div> -->
+
+		<div class="calc__btn" id="go-print">
+			Распечатать результаты
+		</div>
+
+	</div>
+	<!-- /.calc-wrap -->
+
+
+
+</body>
+</html>
