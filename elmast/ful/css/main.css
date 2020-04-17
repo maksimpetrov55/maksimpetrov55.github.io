@@ -304,16 +304,11 @@ body {
 }
 
 .g-form__input {
-  width: 70%;
-  margin: 10px auto;
+  width: 80%;
+  margin: 0 auto;
   display: block;
   text-align: center;
   height: 50px;
-  font-size: 22px;
-}
-
-.g-form__input--hidden {
-  display: none;
 }
 
 .g-form__files {

@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
 
 	$(".calc-btn, .tech").click(function(){
@@ -81,47 +82,47 @@ $(document).ready(function(){
 		}
 
 		if ( f1 == "flat_kirpich" ) {
-			var ff3 = 910;
-			var ff4 = 910;
-			var ff5 = 910;
-			var ff6 = 910;
+			var ff3 = 700;
+			var ff4 = 700;
+			var ff5 = 700;
+			var ff6 = 700;
 		} else {
 			if ( f1 == "flat_beton" ) {
-				var ff3 = 910;
-				var ff4 = 910;
-				var ff5 = 910;
-				var ff6 = 910;
+				var ff3 = 700;
+				var ff4 = 700;
+				var ff5 = 700;
+				var ff6 = 700;
 			} else {
 				if ( f1 == "flat_bloki" ) {
-					var ff3 = 650;
-					var ff4 = 650;
-					var ff5 = 650;
-					var ff6 = 650;
+					var ff3 = 500;
+					var ff4 = 500;
+					var ff5 = 500;
+					var ff6 = 500;
 				}
 			}
 		}
 
-		var ff7 = 650;
-		var ff8 = 325;
+		var ff7 = 500;
+		var ff8 = 250;
 
 		if ( f9 == "flat_shitok_inside" ) {
-			var ff9 = 9100;
+			var ff9 = 7000;
 			var fff9 = 150;
 		} else {
 			if ( f9 == "flat_shitok_podezd" ) {
-				var ff9 = 3900;
+				var ff9 = 3000;
 				var fff9 = 100;
 			}
 		}
 		
 		if ( f10 == "flat_zvonok" ) {
-			var ff10 = 325;
+			var ff10 = 250;
 		} else {
 			var ff10 = 0;
 		}
 
 		if ( f11 == "flat_domofon" ) {
-			var ff11 = 650;
+			var ff11 = 500;
 		} else {
 			var ff11 = 0;
 		}
@@ -136,31 +137,12 @@ $(document).ready(function(){
 		var flat_itog_work = ( +f3 * +ff3 ) + ( +f4 * +ff4 ) + ( +f5 * +ff5 ) + ( +f6 * +ff6) + ( +f7 * +ff7 ) + ( +f8 * +ff8 ) + +ff9 + +ff10 + +ff11;
 		var flat_itog_material = ( +f2 * +fff3 ) + ( +f2 * +fff4 ) + ( +f2 * +fff5 ) + ( +f2 * +fff6 ) + ( +f2 * +fff7 ) + ( +f2 * +fff8 ) + ( +f2 * +fff9 );
 
-		var flat_result_1 = +flat_itog_work * +ff2;
-		var flat_result_2 = +flat_itog_work * ( 1 - +ff2 );
-		var flat_result_3 = +flat_itog_material;
-		var flat_result_4 = (+flat_itog_work * ( 1 - +ff2 )) + +flat_itog_material;
+		$(".g-results__skidka").html( +flat_itog_work * +ff2 );
+		$(".g-results__raboti").html( +flat_itog_work * ( 1 - +ff2 ) );
+		$(".g-results__materials").html( +flat_itog_material );
+		$(".g-results__itogo").html( (+flat_itog_work * ( 1 - +ff2 )) + +flat_itog_material );
 
-		$(".g-results__skidka").html( flat_result_1.toFixed(2) );
-		$(".g-results__raboti").html( flat_result_2.toFixed(2) );
-		$(".g-results__materials").html( flat_result_3.toFixed(2) );
-		$(".g-results__itogo").html( flat_result_4.toFixed(2) );
-
-
-		$("#g-form_var1" ).val( f1 );			// Тип
-		$("#g-form_var2" ).val( f2 );			// Квадратура
-		$("#g-form_var3" ).val( f3 );			// Выключатели
-		$("#g-form_var4" ).val( f4 );			// Розетки (220 V)
-		$("#g-form_var5" ).val( f5 );			// Розетки ТВ
-		$("#g-form_var6" ).val( f6 );			// Розетки телефон, интернет
-		$("#g-form_var7" ).val( f7 );			// Люстра, светильник, бра
-		$("#g-form_var8" ).val( f8 );			// Точечный свет
-		$("#g-form_var9" ).val( f9 );			// Щиток
-		$("#g-form_var10").val( f10 );			// Звонок
-		$("#g-form_var11").val( f11 );			// Домофон
-		$("#g-form_var12").val( "" );			// Заземление
-		$("#g-form_var13").val( flat_result_2.toFixed(2) );			// Стоимость работ со скидкой
-		$("#g-form_var14").val( flat_result_3.toFixed(2) );			// Стоимость материалов
+		//console.log(ff2);
 
 	}
 
@@ -199,54 +181,54 @@ $(document).ready(function(){
 		}
 
 		if ( h1 == "house_derevo" ) {
-			var hh3 = 910;
-			var hh4 = 910;
-			var hh5 = 910;
-			var hh6 = 910;
+			var hh3 = 700;
+			var hh4 = 700;
+			var hh5 = 700;
+			var hh6 = 700;
 		} else {
 			if ( h1 == "house_karkas" ) {
-				var hh3 = 650;
-				var hh4 = 650;
-				var hh5 = 650;
-				var hh6 = 650;
+				var hh3 = 500;
+				var hh4 = 500;
+				var hh5 = 500;
+				var hh6 = 500;
 			} else {
 				if ( h1 == "house_bloki" ) {
-					var hh3 = 650;
-					var hh4 = 650;
-					var hh5 = 650;
-					var hh6 = 650;
+					var hh3 = 500;
+					var hh4 = 500;
+					var hh5 = 500;
+					var hh6 = 500;
 				} else {
 					if ( h1 == "house_kirpich" ) {
-						var hh3 = 910;
-						var hh4 = 910;
-						var hh5 = 910;
-						var hh6 = 910;
+						var hh3 = 700;
+						var hh4 = 700;
+						var hh5 = 700;
+						var hh6 = 700;
 					}
 				}
 			}
 		}
 
-		var hh7 = 650;
-		var hh8 = 325;
+		var hh7 = 500;
+		var hh8 = 250;
 
 		if ( h9 == "house_shitok_inside" ) {
-			var hh9 = 9100;
+			var hh9 = 7000;
 			var hhh9 = 150;
 		} else {
 			if ( h9 == "house_shitok_ulitsa" ) {
-				var hh9 = 5200;
+				var hh9 = 4000;
 				var hhh9 = 150;
 			}
 		}
 
 		if ( h10 == "house_zvonok" ) {
-			var hh10 = 325;
+			var hh10 = 250;
 		} else {
 			var hh10 = 0;
 		}
 
 		if ( h11 == "house_zazemlenie" ) {
-			var hh11 = 10400;
+			var hh11 = 8000;
 			var hhh11 = 100;
 		} else {
 			var hh11 = 0;
@@ -263,31 +245,10 @@ $(document).ready(function(){
 		var house_itog_work = ( +h3 * +hh3 ) + ( +h4 * +hh4 ) + ( +h5 * +hh5 ) + ( +h6 * +hh6) + ( +h7 * +hh7 ) + ( +h8 * +hh8 ) + +hh9 + +hh10 + +hh11;
 		var house_itog_material = ( +h2 * +hhh3 ) + ( +h2 * +hhh4 ) + ( +h2 * +hhh5 ) + ( +h2 * +hhh6 ) + ( +h2 * +hhh7 ) + ( +h2 * +hhh8 ) + ( +h2 * +hhh9 ) + ( +h2 * +hhh11 );
 
-		var house_result_1 = +house_itog_work * +hh2;
-		var house_result_2 = +house_itog_work * ( 1 - +hh2 );
-		var house_result_3 = +house_itog_material;
-		var house_result_4 = (+house_itog_work * ( 1 - +hh2 )) + +house_itog_material;
-
-		$(".g-results__skidka").html( house_result_1.toFixed(2) );
-		$(".g-results__raboti").html( house_result_2.toFixed(2) );
-		$(".g-results__materials").html( house_result_3.toFixed(2) );
-		$(".g-results__itogo").html( house_result_4.toFixed(2) );
-
-
-		$("#g-form_var1" ).val( h1 );			// Тип
-		$("#g-form_var2" ).val( h2 );			// Квадратура
-		$("#g-form_var3" ).val( h3 );			// Выключатели
-		$("#g-form_var4" ).val( h4 );			// Розетки (220 V)
-		$("#g-form_var5" ).val( h5 );			// Розетки ТВ
-		$("#g-form_var6" ).val( h6 );			// Розетки телефон, интернет
-		$("#g-form_var7" ).val( h7 );			// Люстра, светильник, бра
-		$("#g-form_var8" ).val( h8 );			// Точечный свет
-		$("#g-form_var9" ).val( h9 );			// Щиток
-		$("#g-form_var10").val( h10 );			// Звонок
-		$("#g-form_var11").val( "" );			// Домофон
-		$("#g-form_var12").val( h11 );			// Заземление
-		$("#g-form_var13").val( house_result_2.toFixed(2) );			// Стоимость работ со скидкой
-		$("#g-form_var14").val( house_result_3.toFixed(2) );			// Стоимость материалов
+		$(".g-results__skidka").html( +house_itog_work * +hh2 );
+		$(".g-results__raboti").html( +house_itog_work * ( 1 - +hh2 ) );
+		$(".g-results__materials").html( +house_itog_material );
+		$(".g-results__itogo").html( (+house_itog_work * ( 1 - +hh2 )) + +house_itog_material );
 
 	}
 
@@ -324,48 +285,48 @@ $(document).ready(function(){
 		}
 
 		if ( o1 == "office_beton" ) {
-			var oo3 = 910;
-			var oo4 = 910;
-			var oo5 = 910;
-			var oo6 = 910;
+			var oo3 = 700;
+			var oo4 = 700;
+			var oo5 = 700;
+			var oo6 = 700;
 		} else {
 			if ( o1 == "office_kirpich" ) {
-				var oo3 = 910;
-				var oo4 = 910;
-				var oo5 = 910;
-				var oo6 = 910;
+				var oo3 = 700;
+				var oo4 = 700;
+				var oo5 = 700;
+				var oo6 = 700;
 			} else {
 				if ( o1 == "office_bloki" ) {
-					var oo3 = 650;
-					var oo4 = 650;
-					var oo5 = 650;
-					var oo6 = 650;
+					var oo3 = 500;
+					var oo4 = 500;
+					var oo5 = 500;
+					var oo6 = 500;
 				} else {
 					if ( o1 == "office_gipsokarton" ) {
-						var oo3 = 520;
-						var oo4 = 520;
-						var oo5 = 520;
-						var oo6 = 520;
+						var oo3 = 400;
+						var oo4 = 400;
+						var oo5 = 400;
+						var oo6 = 400;
 					}
 				}
 			}
 		}
 	
-		var oo7 = 650;
-		var oo8 = 325;
+		var oo7 = 500;
+		var oo8 = 250;
 	
 		if ( o9 == "office_shitok_inside" ) {
-			var oo9 = 9100;
+			var oo9 = 7000;
 			var ooo9 = 150;
 		} else {
 			if ( o9 == "office_shitok_podezd" ) {
-				var oo9 = 3900;
+				var oo9 = 3000;
 				var ooo9 = 100;
 			}
 		}
 	
 		if ( o10 == "office_zvonok" ) {
-			var oo10 = 325;
+			var oo10 = 250;
 		} else {
 			var oo10 = 0;
 		}
@@ -380,38 +341,11 @@ $(document).ready(function(){
 		var office_itog_work = ( +o3 * +oo3 ) + ( +o4 * +oo4 ) + ( +o5 * +oo5 ) + ( +o6 * +oo6) + ( +o7 * +oo7 ) + ( +o8 * +oo8 ) + +oo9 + +oo10;
 		var office_itog_material = ( +o2 * +ooo3 ) + ( +o2 * +ooo4 ) + ( +o2 * +ooo5 ) + ( +o2 * +ooo6 ) + ( +o2 * +ooo7 ) + ( +o2 * +ooo8 ) + ( +o2 * +ooo9 );
 
-		var office_result_1 = +office_itog_work * +oo2;
-		var office_result_2 = +office_itog_work * ( 1 - +oo2 );
-		var office_result_3 = +office_itog_material;
-		var office_result_4 = (+office_itog_work * ( 1 - +oo2 )) + +office_itog_material;
-
-		$(".g-results__skidka").html( office_result_1.toFixed(2) );
-		$(".g-results__raboti").html( office_result_2.toFixed(2) );
-		$(".g-results__materials").html( office_result_3.toFixed(2) );
-		$(".g-results__itogo").html( office_result_4.toFixed(2) );
-
-
-		$("#g-form_var1" ).val( o1 );			// Тип
-		$("#g-form_var2" ).val( o2 );			// Квадратура
-		$("#g-form_var3" ).val( o3 );			// Выключатели
-		$("#g-form_var4" ).val( o4 );			// Розетки (220 V)
-		$("#g-form_var5" ).val( o5 );			// Розетки ТВ
-		$("#g-form_var6" ).val( o6 );			// Розетки телефон, интернет
-		$("#g-form_var7" ).val( o7 );			// Люстра, светильник, бра
-		$("#g-form_var8" ).val( o8 );			// Точечный свет
-		$("#g-form_var9" ).val( o9 );			// Щиток
-		$("#g-form_var10").val( o10 );			// Звонок
-		$("#g-form_var11").val( "" );			// Домофон
-		$("#g-form_var12").val( "" );			// Заземление
-		$("#g-form_var13").val( office_result_2.toFixed(2) );			// Стоимость работ со скидкой
-		$("#g-form_var14").val( office_result_3.toFixed(2) );			// Стоимость материалов
+		$(".g-results__skidka").html( +office_itog_work * +oo2 );
+		$(".g-results__raboti").html( +office_itog_work * ( 1 - +oo2 ) );
+		$(".g-results__materials").html( +office_itog_material );
+		$(".g-results__itogo").html( (+office_itog_work * ( 1 - +oo2 )) + +office_itog_material );
 
 	}
-
-
-
-	$(".g-form__btn").click(function(){
-		$("#calc_form").submit();
-	});
 
 });
