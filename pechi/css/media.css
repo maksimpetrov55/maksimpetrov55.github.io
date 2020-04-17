@@ -1,0 +1,9 @@
+@media (max-width: 768px) {
+	.quiz__header__logo {
+		display: none;
+	}
+	.quiz__header__empty1 {
+		display: none;
+	}
+}
+

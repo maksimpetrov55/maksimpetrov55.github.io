@@ -1,0 +1,52 @@
+.quiz__block input,
+.quiz__block__map input,
+.quiz__block__time input {
+	display: none;
+}
+
+
+.quiz__block label,
+.quiz__block__map label,
+.quiz__block__time label {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.quiz__block label:before {
+	content:"";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 250px;
+	height: 240px;	
+}
+.quiz__block__map label:before {
+	content:"";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 250px;
+	height: 140px;	
+}
+.quiz__block__time label:before {
+	content:"";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 300px;
+	height: 70px;	
+}
+
+input[type=radio]:checked + label:before {
+	content:"";
+	background: rgba(0,0,0,.35);
+}
+input[type=checkbox]:checked + label:before {
+	content:"";
+	background: rgba(0,0,0,.35);
+}
+
