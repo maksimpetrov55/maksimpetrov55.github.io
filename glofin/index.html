@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+	
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery-ui-touch.js"></script>
+
+</head>
+<body>
+
+
+	<div class="calc">
+
+		<div class="calc__left">
+			<div class="calc__left__title">Расчет доходности</div>
+			<div class="calc__left__text">Выберете сумму для инвестирования, чтобы мы смогли рассчитать вашу ориентировочную доходность и подсказать подходящий тариф. Расчет приводится для периода в 3 месяца.</div>
+			<div class="calc__left__slider" id="calc_slider"></div>
+			<div class="calc__left__flex">
+				<div class="calc__left__flex__part">
+					<div class="calc__left__flex__summ">Сумма&nbsp;инвестиций:</div>
+					<div class="calc__left__flex__input"><input id="calc_slider_input" readonly type="text"></div>
+				</div>
+				<div class="calc__left__flex__part calc__left__flex__part--hide">
+					<div class="calc__left__flex__currency">Валюта:</div>
+					<div class="dispflex">
+						<div class="calc__left__flex__choice calc__left__flex__choice-left calc__left__flex__choice--active">Рубли</div>
+						<div class="calc__left__flex__choice calc__left__flex__choice-right ">Доллары</div>
+					</div>
+				</div>
+				<div class="calc__left__flex__radio">
+					<input type="radio" name="1" id="calc_radio_rub" value="1">
+					<input type="radio" name="1" id="calc_radio_usd" value="2" checked>
+				</div>
+			</div>
+			<div class="calc__left__note">Данный инструмент расчёта потенциальной доходности отображает приблизительные значения, основанные на результатах за предыдущий статистический период, и не гарантирует подобной прибыли в будущем.</div>
+		</div>
+
+		<div class="calc__right">
+			<div class="calc__right__column">
+				<div class="calc__right__column__grow">
+					<div class="calc__right__column__grow__label">Доход за 3 месяца составит:</div>
+					<div class="calc__right__column__grow__itog" id="calc_itog">50000</div>
+				</div>
+				<div class="calc__right__column__tarif">
+					<div class="calc__right__column__tarif__label">Тариф:</div>
+					<div class="calc__right__column__tarif__result"></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+</body>
+</html>
