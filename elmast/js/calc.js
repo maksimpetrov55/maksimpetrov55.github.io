@@ -1,5 +1,5 @@
 
-//$(document).ready(function(){
+$(document).ready(function(){
 
 	$(".calc-btn, .tech").click(function(){
 		$(".blackcat").css({display: "block"});
@@ -348,4 +348,4 @@
 
 	}
 
-//});
+});
