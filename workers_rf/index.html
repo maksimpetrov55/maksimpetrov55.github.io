@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/dejavu.css">
+	<link rel="stylesheet" href="css/main.css?v6">
+	<link rel="stylesheet" href="css/datepicker.min.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/datepicker.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=a939a3a3-da01-4096-b0fe-457cdc8a8dbf"></script>
+	<script src="js/scripts.js?v6"></script>	
+
+</head>
+<body>
+
+	<!-- <div class="temp-val">
+		<div class="temp-val--1">55.1</div>
+		<div class="temp-val--2">73.1</div>
+		<div class="temp-val--3">54.8</div>
+		<div class="temp-val--4">73.6</div>
+		<input id="city" type="text" value="Москва">
+	</div> -->
+
+	<div class="calc">
+
+		<div class="calc__blind"></div>
+
+		<div class="calc__map calc__map--hide">
+			<div class="calc__map__close">×</div>
+			<div id="map" class="calc__map__cont"></div>
+		</div>
+
+		<div class="calc__header">Стоимость заказа для частных лиц и организаций</div>
+
+		<div class="calc-flex calc-flex--jcsb calc-flex--wrap calc-flex--jcc1240">
+
+			<div class="calc__block calc__block--short">
+
+				<div class="calc-flex calc-flex--aic">
+
+					<div class="calc__number">1</div>
+					<!-- /.calc__number -->
+
+					<div>
+						<div class="calc__step">Шаг 1</div>
+						<div class="calc__step calc__step--bot">Адрес и контакты</div>
+					</div>
+					<!-- /.calc__step -->
+
+				</div>
+				<!-- /.calc-flex -->
+
+				<!-- <div class="calc__title">Маршрут</div> -->
+
+				<div class="calc__mark-disable"></div>
+				<div id="map_open_1" class="calc__mark"></div>
+				<div class="calc__arrow"></div>
+
+				<input id="citySelect" type="text" class="calc__input calc__input--addr" placeholder="Город" required>
+				<div class="calc__cities calc__cities--hide">
+					<div class="calc__cities__item">Москва</div>
+					<div class="calc__cities__item">Санкт-Петербург</div>
+					<div class="calc__cities__item">Волгоград</div>
+					<div class="calc__cities__item">Воронеж</div>
+					<div class="calc__cities__item">Екатеринбург</div>
+					<div class="calc__cities__item">Казань</div>
+					<div class="calc__cities__item">Краснодар</div>
+					<div class="calc__cities__item">Красноярск</div>
+					<div class="calc__cities__item">Новосибирск</div>
+					<div class="calc__cities__item">Нижний Новгород</div>
+					<div class="calc__cities__item">Омск</div>
+					<div class="calc__cities__item">Пермь</div>
+					<div class="calc__cities__item">Ростов-На-Дону</div>
+					<div class="calc__cities__item">Самара</div>
+					<div class="calc__cities__item">Уфа</div>
+					<div class="calc__cities__item">Челябинск</div>
+				</div>
+
+				<div id="map_open_2" class="calc__mark"></div>
+				<input id="suggest" type="text" class="calc__input calc__input--addr" placeholder="Улица" required disabled>
+
+				<!-- <div class="calc__mark">
+					<div class="calc__close">×</div>
+					<input id="sugest2" type="text" class="calc__input" placeholder="Улица" required>
+				</div>
+
+				<div class="calc__mark">
+					<div class="calc__close">×</div>
+					<input id="sugest2" type="text" class="calc__input" placeholder="Улица" required>
+				</div> -->
+
+				<div class="calc-space-30"></div>
+
+				<div class="calc-flex calc-flex--aic calc-flex--jcsb">
+					<div class="calc__title">Ваше&nbsp;имя</div>
+					<input id="calc_name" type="text" class="calc__input" placeholder="Представьтесь" required>
+				</div>
+
+				<div class="calc-flex calc-flex--aic calc-flex--jcsb">
+					<div class="calc__title">Телефон</div>
+					<input id="calc_phone" type="text" class="calc__input" placeholder="Ваш номер" required>
+				</div>
+
+				<div class="calc__gobtn">Продолжить</div>
+
+			</div>
+			<!-- /.block -->
+
+			<div class="calc__block calc__block--short">
+
+				<div class="calc-flex calc-flex--aic">
+
+					<div class="calc__number">2</div>
+					<!-- /.calc__number -->
+
+					<div>
+						<div class="calc__step">Шаг 2</div>
+						<div class="calc__step calc__step--bot">Подбор рабочих</div>
+					</div>
+
+				</div>
+				<!-- /.calc-flex -->
+
+				<!-- <div class="calc__title">Выберите работника</div> -->
+
+				<div class="calc__select">Разнорабочий</div>
+
+				<div class="calc__select-list calc__select-list--hide">
+					<div class="calc__select-list__item">Разнорабочий</div>
+					<div class="calc__select-list__item">Грузчик</div>
+					<div class="calc__select-list__item">Складской рабочий</div>
+					<div class="calc__select-list__item">Такелажник</div>
+					<div class="calc__select-list__item">Комплектовщик</div>
+					<div class="calc__select-list__item">Другая специальность</div>
+				</div>
+
+				<div class="calc-space-10"></div>
+
+				<div class="calc__title">Количество человек</div>
+
+				<div class="calc__sausage">
+					<div id="workers_select" class="calc__sausage__select"></div>
+					<input type="radio" name="calc_workers" id="calc_workers_1" value="1" checked>
+					<label class="calc__sausage__item" for="calc_workers_1">1</label>
+					<input type="radio" name="calc_workers" id="calc_workers_2" value="2">
+					<label class="calc__sausage__item" for="calc_workers_2">2</label>
+					<input type="radio" name="calc_workers" id="calc_workers_3" value="3">
+					<label class="calc__sausage__item" for="calc_workers_3">3</label>
+					<input type="radio" name="calc_workers" id="calc_workers_4" value="4">
+					<label class="calc__sausage__item" for="calc_workers_4">4</label>
+					<input type="radio" name="calc_workers" id="calc_workers_5" value="5">
+					<label class="calc__sausage__item" for="calc_workers_5">5</label>
+					<input type="radio" name="calc_workers" id="calc_workers_6" value="6">
+					<label class="calc__sausage__item" for="calc_workers_6">6</label>
+					<input type="radio" name="calc_workers" id="calc_workers_7" value="7">
+					<label class="calc__sausage__item" for="calc_workers_7">7</label>
+					<input type="radio" name="calc_workers" id="calc_workers_8" value="8">
+					<label class="calc__sausage__item" for="calc_workers_8">8</label>
+				</div>
+
+				<div class="calc-flex calc-flex--aic">
+					<div class="calc__title">Выбрать количество</div>
+					<input id="workers_hand_input" type="number" class="calc__input calc__input--digit" value="1">
+				</div>
+
+				<div class="calc-space-20"></div>
+
+				<div class="calc__title">Количество часов</div>
+
+				<div class="calc__sausage">
+					<div id="worktime_select" class="calc__sausage__select"></div>
+					<input type="radio" name="calc_worktime" id="calc_worktime_1" value="1" checked>
+					<label class="calc__sausage__item" for="calc_worktime_1">1</label>
+					<input type="radio" name="calc_worktime" id="calc_worktime_2" value="2">
+					<label class="calc__sausage__item" for="calc_worktime_2">2</label>
+					<input type="radio" name="calc_worktime" id="calc_worktime_3" value="3">
+					<label class="calc__sausage__item" for="calc_worktime_3">3</label>
+					<input type="radio" name="calc_worktime" id="calc_worktime_4" value="4">
+					<label class="calc__sausage__item" for="calc_worktime_4">4</label>
+					<input type="radio" name="calc_worktime" id="calc_worktime_5" value="5">
+					<label class="calc__sausage__item" for="calc_worktime_5">5</label>
+					<input type="radio" name="calc_worktime" id="calc_worktime_6" value="6">
+					<label class="calc__sausage__item" for="calc_worktime_6">6</label>
+					<input type="radio" name="calc_worktime" id="calc_worktime_7" value="7">
+					<label class="calc__sausage__item" for="calc_worktime_7">7</label>
+					<input type="radio" name="calc_worktime" id="calc_worktime_8" value="8">
+					<label class="calc__sausage__item" for="calc_worktime_8">8</label>
+				</div>
+
+				<div class="calc-flex calc-flex--aic">
+					<div class="calc__title">Выбрать количество</div>
+					<input id="worktime_hand_input" type="number" class="calc__input calc__input--digit" value="1">
+				</div>
+
+				<div class="calc-space-20"></div>
+			</div>
+			<!-- /.block -->
+
+			<div class="calc__block calc__block--short">
+
+				<div class="calc-flex calc-flex--aic">
+
+					<div class="calc__number">3</div>
+					<!-- /.calc__number -->
+
+					<div>
+						<div class="calc__step">Шаг 3</div>
+						<div class="calc__step calc__step--bot">Время и длительность</div>
+					</div>
+					<!-- /.calc__step -->
+
+				</div>
+				<!-- /.calc-flex -->
+
+				<div class="calc-flex calc-flex--jcsb">
+
+					<div class="calc__half">
+
+						<!-- <div class="calc__title">Дата подачи</div> -->
+
+						<div class="calc__mark--date">
+							<input id="calc_date" type="text" class="calc__input datepicker-here">
+						</div>
+
+					</div>
+
+					<div class="calc__half">
+
+						<!-- <div class="calc__title">Время подачи</div> -->
+
+						<div id="calc_time" type="text" class="calc__input calc__input--time calc__mark--time">
+							<div class="calc__input-time__hours"></div>
+							:
+							<div class="calc__input-time__min"></div>
+						</div>
+
+						<input style="position: absolute; z-index: 999; top: -130px;" id="form_time" name="form_name_time" type="text">
+
+						<div class="calc__clock calc__clock--hide">
+							<div class="calc__clock__wrap">
+								<div class="calc-flex">
+									<div class="calc__clock__hours">
+										<div class="calc__clock__hours__item">00</div>
+										<div class="calc__clock__hours__item">01</div>
+										<div class="calc__clock__hours__item">02</div>
+										<div class="calc__clock__hours__item">03</div>
+										<div class="calc__clock__hours__item">04</div>
+										<div class="calc__clock__hours__item">05</div>
+										<div class="calc__clock__hours__item">06</div>
+										<div class="calc__clock__hours__item">07</div>
+										<div class="calc__clock__hours__item">08</div>
+										<div class="calc__clock__hours__item">09</div>
+										<div class="calc__clock__hours__item">10</div>
+										<div class="calc__clock__hours__item">11</div>
+										<div class="calc__clock__hours__item">12</div>
+										<div class="calc__clock__hours__item">13</div>
+										<div class="calc__clock__hours__item">14</div>
+										<div class="calc__clock__hours__item">15</div>
+										<div class="calc__clock__hours__item">16</div>
+										<div class="calc__clock__hours__item">17</div>
+										<div class="calc__clock__hours__item">18</div>
+										<div class="calc__clock__hours__item">19</div>
+										<div class="calc__clock__hours__item">20</div>
+										<div class="calc__clock__hours__item">21</div>
+										<div class="calc__clock__hours__item">22</div>
+										<div class="calc__clock__hours__item">23</div>
+									</div>
+									<div class="calc__clock__min">
+										<div class="calc__clock__min__item">00</div>
+										<div class="calc__clock__min__item">05</div>
+										<div class="calc__clock__min__item">10</div>
+										<div class="calc__clock__min__item">15</div>
+										<div class="calc__clock__min__item">20</div>
+										<div class="calc__clock__min__item">25</div>
+										<div class="calc__clock__min__item">30</div>
+										<div class="calc__clock__min__item">35</div>
+										<div class="calc__clock__min__item">40</div>
+										<div class="calc__clock__min__item">45</div>
+										<div class="calc__clock__min__item">50</div>
+										<div class="calc__clock__min__item">55</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+				<!-- /.calc-flex -->
+
+				<div class="calc-space-20"></div>
+				<div class="calc-space-30"></div>
+
+				<!-- <div class="calc-flex">
+
+					<div class="calc__title">Длительность<br>подачи</div>
+
+					<input id="calc_quahours" type="text" class="calc__input">
+
+				</div> -->
+				<!-- /.calc-flex -->
+
+				<a id="calc_comment_link" href="#" class="calc__link">Примечания к заказу</a>
+
+				<textarea class="calc__input calc__input--textarea calc__input--hide" id="calc_comment" placeholder="Комментарий"></textarea>
+
+			</div>
+			<!-- /.block -->
+
+		</div>
+		<!-- /.calc-flex -->
+
+		<div class="calc-space-10"></div>
+
+		<div class="calc-flex calc-flex--wrap calc-flex--jcc1240">
+
+			<div class="calc__info">
+
+				<div class="calc__step calc__step--info">Ваш заказ:</div>
+
+				<div class="calc__info__flex">
+
+					<div>
+
+						<div class="calc__info-date">Дата: 
+							<span class="calc__info-date--span">- - -</span>
+						</div>
+
+						<div class="calc__info-time">Время: 
+							<span class="calc__info-time--span">
+								<span class="calc__info-time--span1">- -</span>:<span class="calc__info-time--span2"> -</span>
+							</span>
+						</div>
+
+						<div class="calc__info-addr">Адрес: 
+							<span class="calc__info-addr--span1"></span>
+							<span class="calc__info-addr--span">- - -</span>
+							<span class="calc__info-addr--span2"></span>
+						</div>
+
+						<div class="calc__info-type">Работники: 
+							<span class="calc__info-type--span">- - -</span>
+						</div>
+
+					</div>
+
+					<div>
+
+						<div class="calc__info-workers">Количество человек: 
+							<span class="calc__info-workers--span">- - -</span>
+						</div>
+
+						<div class="calc__info-worktime">Количество часов: 
+							<span class="calc__info-worktime--span">- - -</span>
+						</div>
+
+						<div class="calc__info-name">Ваше имя: 
+							<span class="calc__info-name--span">- - -</span>
+						</div>
+
+						<div class="calc__info-phone">Телефон: 
+							<span class="calc__info-phone--span">- - -</span>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="calc__info__note"><span class="calc__info__note--blue">Обратите внимание:</span> Мы предоставляем услуги грузчиков и разнорабочих Круглосуточно. Ночная смена начинается от 22:00. Минимальный заказ в ночное время - 8 часов</div>
+
+			</div>
+
+			<div class="calc__sums">
+
+				<div class="calc__sums-price">Обычная цена: <span class="calc__sums-price--span">0 руб</span></div>
+
+				<div class="calc__sums-economy">Экономия 30%: <span class="calc__sums-economy--span">0 руб</span></div>
+
+				<div class="calc__sums-itog">Итог: <span class="calc__sums-itog--span">0 руб</span></div>
+
+				<div class="calc__sums__btn">Оформить заказ</div>
+
+			</div>
+
+		</div>
+		<!-- /.calc-flex -->
+
+	</div>
+	<!-- /.calc -->
+
+
+</body>
+</html>
