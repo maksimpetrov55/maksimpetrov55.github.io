@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/dejavu.css">
+	<link rel="stylesheet" href="css/main.css?v13">
+	<link rel="stylesheet" href="css/datepicker.min.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/datepicker.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=a939a3a3-da01-4096-b0fe-457cdc8a8dbf"></script>
+	<script src="js/scripts.js?v13"></script>
+
+</head>
+<body>
+
+	<div class="moving">
+		<div class="moving__blind"></div>
+		<div class="moving__title">Заказ грузового такси</div>
+		<!-- /.moving__title -->
+		<div class="moving__content">
+			<div class="moving__block">
+				<div class="moving__step">
+					<div class="moving__step__number">1</div>
+					<div class="moving__step__title">
+						<div class="moving__step__title__first">Шаг 1</div>
+						<div class="moving__step__title__second">Маршрут и контакты</div>
+					</div>
+				</div>
+				<!-- /.moving__step -->
+				<div class="moving__address__arrow"></div>
+				<div class="moving__address">
+					<input id="suggest1" type="text" class="moving__input" placeholder="Улица">
+					<!-- <input type="text" class="moving__input moving__input--small" placeholder="Дом"> -->
+					<!-- <input type="text" class="moving__input moving__input--small" placeholder="Пар."> -->
+					<div id="map_point_1" class="moving__address__point"></div>
+				</div>
+				<!-- /.moving__adress -->
+				<div class="moving__address">
+					<input id="suggest2" type="text" class="moving__input" placeholder="Улица">
+					<!-- <input type="text" class="moving__input moving__input--small" placeholder="Дом"> -->
+					<!-- <input type="text" class="moving__input moving__input--small" placeholder="Пар."> -->
+					<div id="map_point_2" class="moving__address__point"></div>
+				</div>
+				<!-- /.moving__adress -->
+				<div class="moving__address moving__address--hide">
+					<div id="addr_close_3" class="moving__address__close">×</div>
+					<input id="suggest3" type="text" class="moving__input" placeholder="Улица">
+					<!-- <input type="text" class="moving__input moving__input--small" placeholder="Дом"> -->
+					<!-- <input type="text" class="moving__input moving__input--small" placeholder="Пар."> -->
+					<div id="map_point_3" class="moving__address__point"></div>
+				</div>
+				<!-- /.moving__adress -->
+				<div class="moving__address moving__address--hide">
+					<div id="addr_close_4" class="moving__address__close">×</div>
+					<input id="suggest4" type="text" class="moving__input" placeholder="Улица">
+					<!-- <input type="text" class="moving__input moving__input--small" placeholder="Дом"> -->
+					<!-- <input type="text" class="moving__input moving__input--small" placeholder="Пар."> -->
+					<div id="map_point_4" class="moving__address__point"></div>
+				</div>
+				<!-- /.moving__adress -->
+				<div class="moving__address moving__address--hide">
+					<div id="addr_close_5" class="moving__address__close">×</div>
+					<input id="suggest5" type="text" class="moving__input" placeholder="Улица">
+					<!-- <input type="text" class="moving__input moving__input--small" placeholder="Дом"> -->
+					<!-- <input type="text" class="moving__input moving__input--small" placeholder="Пар."> -->
+					<div id="map_point_5" class="moving__address__point"></div>
+				</div>
+				<!-- /.moving__adress -->
+				<div class="moving__address moving__address--hide">
+					<div id="addr_close_6" class="moving__address__close">×</div>
+					<input id="suggest6" type="text" class="moving__input" placeholder="Улица">
+					<!-- <input type="text" class="moving__input moving__input--small" placeholder="Дом"> -->
+					<!-- <input type="text" class="moving__input moving__input--small" placeholder="Пар."> -->
+					<div id="map_point_6" class="moving__address__point"></div>
+				</div>
+				<!-- /.moving__adress -->
+				<a href="#" id="address_add" class="moving__address__add moving__address__add--mrg">Дополнительный адрес</a>
+				<div class="moving__contacts">
+					<div class="moving__name">
+						<div class="moving__text">Имя</div>
+						<input id="moving_name" type="text" class="moving__input moving__input--big" placeholder="Представьтесь">
+					</div>
+					<div class="moving__phone">
+						<div class="moving__text">Телефон</div>
+						<input id="moving_phone" type="text" class="moving__input moving__input--big" placeholder="Ваш номер">
+					</div>
+				</div>
+				<!-- /.moving__contacts -->
+				<div class="moving__btn-go">Продолжить</div>
+			</div>
+			<!-- /.moving__block -->
+
+			<div class="moving__map moving__map--hide">
+				<div class="moving__map__close">×</div>
+				<div id="map" class="moving__map__cont"></div>
+			</div>
+
+
+			<div class="moving__block">
+				<div class="moving__step">
+					<div class="moving__step__number">2</div>
+					<div class="moving__step__title">
+						<div class="moving__step__title__first">Шаг 2</div>
+						<div class="moving__step__title__second">Подбор машины</div>
+					</div>
+				</div>
+				<!-- /.moving__step -->
+				<div class="moving__params">
+					<div class="moving__bodytype">
+						<div class="moving__text moving__text--14 moving__text--up moving__text--390">Кузов</div>
+						<div>
+							<div class="moving__slide">
+								<div class="moving__select"></div>
+								<input class="moving__radio" value="1" type="radio" name="bodytype_height" id="bodytype_height_1" checked>
+								<label class="moving__label" for="bodytype_height_1">Высокий</label>
+								<input class="moving__radio" value="2" type="radio" name="bodytype_height" id="bodytype_height_2" >
+								<label class="moving__label" for="bodytype_height_2">Низкий</label>
+							</div>
+							<div class="moving__slide">
+								<div class="moving__select"></div>
+								<input class="moving__radio" value="1" type="radio" name="bodytype_length" id="bodytype_length_1" checked>
+								<label class="moving__label" for="bodytype_length_1">Длинный</label>
+								<input class="moving__radio" value="2" type="radio" name="bodytype_length" id="bodytype_length_2">
+								<label class="moving__label" for="bodytype_length_2">Короткий</label>
+							</div>
+							<div class="moving__slide moving__slide--long">
+								<div class="moving__select"></div>
+								<input class="moving__radio" value="1" type="radio" name="bodytype_roof" id="bodytype_roof_1" checked>
+								<label class="moving__label" for="bodytype_roof_1">Жесткий</label>
+								<input class="moving__radio" value="2" type="radio" name="bodytype_roof" id="bodytype_roof_2">
+								<label class="moving__label" for="bodytype_roof_2">Тент</label>
+								<input class="moving__radio" value="3" type="radio" name="bodytype_roof" id="bodytype_roof_3">
+								<label class="moving__label" for="bodytype_roof_3">Открытый</label>
+							</div>
+						</div>
+					</div>
+					<!-- /.moving__bodytype -->
+					<div class="moving__passengers">
+						<div class="moving__text moving__text--14 moving__text--390">Пассажиры</div>
+						<div>
+							<div class="moving__slide moving__slide--long">
+								<div class="moving__select moving__select--pass"></div>
+								<input class="moving__radio" value="0" type="radio" name="passengers" id="passengers_0" checked>
+								<label class="moving__label moving__label--pass" for="passengers_0">0</label>
+								<input class="moving__radio" value="1" type="radio" name="passengers" id="passengers_1">
+								<label class="moving__label moving__label--pass" for="passengers_1">1</label>
+								<input class="moving__radio" value="2" type="radio" name="passengers" id="passengers_2">
+								<label class="moving__label moving__label--pass" for="passengers_2">2</label>
+								<input class="moving__radio" value="3" type="radio" name="passengers" id="passengers_3">
+								<label class="moving__label moving__label--pass" for="passengers_3">3</label>
+								<input class="moving__radio" value="4" type="radio" name="passengers" id="passengers_4">
+								<label class="moving__label moving__label--pass" for="passengers_4">4</label>
+								<input class="moving__radio" value="5" type="radio" name="passengers" id="passengers_5">
+								<label class="moving__label moving__label--pass" for="passengers_5">5</label>
+							</div>
+						</div>
+					</div>
+					<!-- /.moving__passengers -->
+					<div class="moving__workers">
+						<div class="moving__text moving__text--14 moving__text--390">Грузчики</div>
+						<div>
+							<div class="moving__slide">
+								<div class="moving__select moving__select--workers"></div>
+								<input class="moving__radio" value="0" type="radio" name="workers" id="workers_0" checked>
+								<label class="moving__label moving__label--workers" for="workers_0">Нет</label>
+								<input class="moving__radio" value="1" type="radio" name="workers" id="workers_1">
+								<label class="moving__label moving__label--workers" for="workers_1">1</label>
+								<input class="moving__radio" value="2" type="radio" name="workers" id="workers_2">
+								<label class="moving__label moving__label--workers" for="workers_2">2</label>
+							</div>
+						</div>
+						<input id="moving_hand_workers" class="moving__input moving__input--workers" type="text">
+					</div>
+					<!-- /.moving__workers -->
+				</div>
+				<!-- /.moving__params -->
+				<!-- <div class="moving__car-result">
+					<div class="moving__car-result__img"></div>
+					<div>
+						<div class="moving__car-result__title">Вам подходит</div>
+						<div class="moving__car-result__name">Фургон 4 метра</div>
+						<a href="#" class="moving__car-result__expert">Переключиться в&nbsp;экспертный режим</a>
+					</div>
+				</div> -->
+				<!-- /.moving__car-result -->
+
+				<!-- <div class="moving__expert dnone">
+					<div class="moving__flex moving__flex--aic">
+						<div class="moving__expert__head">
+							<div class="moving__expert__title">Вы выбрали</div>
+							<div class="moving__expert__name">Пока не выбрано</div>
+						</div>
+					</div>
+					<div class="moving__flex moving__flex--jcsb moving__expert__container">
+						<div class="moving__expert__workers">Грузчики</div>
+						<div class="moving__flex moving__flex--aic">
+							<input class="moving__expert__radio" value="0" type="radio" name="expert_workers" id="expert_workers_0" checked>
+							<label class="moving__expert__label" for="expert_workers_0">Нет</label>
+							<input class="moving__expert__radio" value="1" type="radio" name="expert_workers" id="expert_workers_1">
+							<label class="moving__expert__label" for="expert_workers_1">1</label>
+							<input class="moving__expert__radio" value="2" type="radio" name="expert_workers" id="expert_workers_2">
+							<label class="moving__expert__label" for="expert_workers_2">2</label>
+						</div>
+					</div>
+					<div class="moving__expert__search">
+						<input id="expert_search" class="moving__expert__search__inp" type="text">
+					</div>
+					<div class="moving__expert__box">
+						<ul id="search-items">
+							<li>
+								<input name="expert__car" type="radio" id="expert__car1">
+								<label class="moving__expert__carlabel" for="expert__car1">Фургон 3 метра</label>
+							</li>
+							<li>
+								<input name="expert__car" type="radio" id="expert__car2">
+								<label class="moving__expert__carlabel" for="expert__car2">Тент 3 метра</label>
+							</li>
+							<li>
+								<input name="expert__car" type="radio" id="expert__car3">
+								<label class="moving__expert__carlabel" for="expert__car3">Евротент 3 метра</label>
+							</li>
+							<li>
+								<input name="expert__car" type="radio" id="expert__car4">
+								<label class="moving__expert__carlabel" for="expert__car4">Фургон 4 метра</label>
+							</li>
+							<li>
+								<input name="expert__car" type="radio" id="expert__car5">
+								<label class="moving__expert__carlabel" for="expert__car5">Тент 4 метра</label>
+							</li>
+							<li>
+								<input name="expert__car" type="radio" id="expert__car6">
+								<label class="moving__expert__carlabel" for="expert__car6">Евротент 4 метра</label>
+							</li>
+							<li>
+								<input name="expert__car" type="radio" id="expert__car7">
+								<label class="moving__expert__carlabel" for="expert__car7">Евротент фермер</label>
+							</li>
+							<li>
+								<input name="expert__car" type="radio" id="expert__car8">
+								<label class="moving__expert__carlabel" for="expert__car8">Тент Фермер</label>
+							</li>
+							<li>
+								<input name="expert__car" type="radio" id="expert__car9">
+								<label class="moving__expert__carlabel" for="expert__car9">Тент Фермер LUX 4&nbsp;метра</label>
+							</li>
+							<li>
+								<input name="expert__car" type="radio" id="expert__car10">
+								<label class="moving__expert__carlabel" for="expert__car10">Газель Бортовая 3&nbsp;метра</label>
+							</li>
+							<li>
+								<input name="expert__car" type="radio" id="expert__car11">
+								<label class="moving__expert__carlabel" for="expert__car11">Газель Бортовая 4&nbsp;метра</label>
+							</li>
+							<li>
+								<input name="expert__car" type="radio" id="expert__car12">
+								<label class="moving__expert__carlabel" for="expert__car12">Газель "Пирамида" 4&nbsp;метра</label>
+							</li>
+							<li>
+								<input name="expert__car" type="radio" id="expert__car13">
+								<label class="moving__expert__carlabel" for="expert__car13">Газель с рефрижератором 3&nbsp;метра</label>
+							</li>
+							<li>
+								<input name="expert__car" type="radio" id="expert__car14">
+								<label class="moving__expert__carlabel" for="expert__car14">Изотермический фургон 4&nbsp;метра</label>
+							</li>
+							<li>
+								<input name="expert__car" type="radio" id="expert__car15">
+								<label class="moving__expert__carlabel" for="expert__car15">Газель Катюша 4&nbsp;метра</label>
+							</li>
+							<li>
+								<input name="expert__car" type="radio" id="expert__car16">
+								<label class="moving__expert__carlabel" for="expert__car16">Каблук 1.7 метра</label>
+							</li>
+							<li>
+								<input name="expert__car" type="radio" id="expert__car17">
+								<label class="moving__expert__carlabel" for="expert__car17">Газель с рефрижератором 4&nbsp;метра</label>
+							</li>
+							<li>
+								<input name="expert__car" type="radio" id="expert__car18">
+								<label class="moving__expert__carlabel" for="expert__car18">Фургон 5 метров</label>
+							</li>
+							<li>
+								<input name="expert__car" type="radio" id="expert__car19">
+								<label class="moving__expert__carlabel" for="expert__car19">Любая газель</label>
+							</li>
+						</ul>
+					</div>
+					<a href="#" class="moving__expert__return">Вернуться в обычный режим</a>
+				</div> -->
+
+			</div>
+
+			<!-- /.moving__block -->
+			<div class="moving__block">
+				<div class="moving__step">
+					<div class="moving__step__number">3</div>
+					<div class="moving__step__title">
+						<div class="moving__step__title__first">Шаг 3</div>
+						<div class="moving__step__title__second">Время и длительность</div>
+					</div>
+				</div>
+				<!-- /.moving__step -->
+				
+				<!-- <div class="moving__when">
+					<div class="moving__text moving__text--big">Время подачи</div>
+					<div class="moving__text moving__text--big moving__text--170">Дата подачи</div>
+				</div> -->
+
+				
+
+				<div class="moving__time-date">
+					<div class="moving__date-icon">
+						<input class="moving__input-date datepicker-here" type="text">
+					</div>
+					<div class="moving__input-time moving__time-icon">
+						<div class="moving__input-time__hours"></div>
+						:
+						<div class="moving__input-time__min"></div>
+					</div>
+				</div>
+
+				<div class="moving__clock moving__clock--hide">
+					<div class="moving__clock__wrap">
+						<div class="moving__flex">
+							<div class="moving__clock__hours">
+								<div class="moving__clock__hours__item">00</div>
+								<div class="moving__clock__hours__item">01</div>
+								<div class="moving__clock__hours__item">02</div>
+								<div class="moving__clock__hours__item">03</div>
+								<div class="moving__clock__hours__item">04</div>
+								<div class="moving__clock__hours__item">05</div>
+								<div class="moving__clock__hours__item">06</div>
+								<div class="moving__clock__hours__item">07</div>
+								<div class="moving__clock__hours__item">08</div>
+								<div class="moving__clock__hours__item">09</div>
+								<div class="moving__clock__hours__item">10</div>
+								<div class="moving__clock__hours__item">11</div>
+								<div class="moving__clock__hours__item">12</div>
+								<div class="moving__clock__hours__item">13</div>
+								<div class="moving__clock__hours__item">14</div>
+								<div class="moving__clock__hours__item">15</div>
+								<div class="moving__clock__hours__item">16</div>
+								<div class="moving__clock__hours__item">17</div>
+								<div class="moving__clock__hours__item">18</div>
+								<div class="moving__clock__hours__item">19</div>
+								<div class="moving__clock__hours__item">20</div>
+								<div class="moving__clock__hours__item">21</div>
+								<div class="moving__clock__hours__item">22</div>
+								<div class="moving__clock__hours__item">23</div>
+								<!-- <div class="moving__clock__hours__item">24</div> -->
+							</div>
+							<div class="moving__clock__min">
+								<div class="moving__clock__min__item">00</div>
+								<div class="moving__clock__min__item">05</div>
+								<div class="moving__clock__min__item">10</div>
+								<div class="moving__clock__min__item">15</div>
+								<div class="moving__clock__min__item">20</div>
+								<div class="moving__clock__min__item">25</div>
+								<div class="moving__clock__min__item">30</div>
+								<div class="moving__clock__min__item">35</div>
+								<div class="moving__clock__min__item">40</div>
+								<div class="moving__clock__min__item">45</div>
+								<div class="moving__clock__min__item">50</div>
+								<div class="moving__clock__min__item">55</div>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="moving__clock__btn">✔</div> -->
+				</div>
+				
+				<div class="moving__when">
+					<div class="moving__text moving__text--big">Длительность подачи</div>
+					<div class="moving__open">
+						<div id="moving_duration" class="moving__open__selected">1 час</div>
+						<ul class="moving__open__list">
+							<li class="moving__open__list__li">1 час</li>
+							<li class="moving__open__list__li">2 часа</li>
+							<li class="moving__open__list__li">3 часа</li>
+						</ul>
+					</div>
+				</div>
+				<!-- /.moving__when -->
+
+				<a href="#" id="moving_textarea_btn" class="moving__address__add">Примечания к заказу</a>
+				<textarea class="moving__textarea" name="" id="moving_textarea"></textarea>
+
+				<!-- <div class="moving__itog">
+					<div class="moving__flex moving__flex--jcsb">
+						<div class="moving__itog__sale">Обычная цена</div>
+						<div class="moving__itog__sale__price">0 р.</div>
+					</div>
+					<div class="moving__flex moving__flex--jcsb">
+						<div class="moving__itog__economy">Экономия 30%</div>
+						<div class="moving__itog__economy__price">0 р.</div>
+					</div>
+					<div class="moving__flex moving__flex--jcsb">
+						<div class="moving__itog__result">Итого</div>
+						<div class="moving__itog__result__price">0 р.</div>
+					</div>
+					<div class="moving__itog__btn">Оформить заказ</div>
+				</div> -->
+				<!-- /.moving__itog -->
+
+			</div>
+			<!-- /.moving__block -->
+
+
+			<div class="moving__info-sums">
+
+				<div class="moving__info">
+
+					<div class="moving__info__title">Ваш заказ</div>
+
+					<div class="moving__info__flex">
+
+						<div>
+
+							<div class="moving__info__str moving__info__date">Дата: <span class="moving__info__date--span">- - -</span></div>
+							<div class="moving__info__str moving__info__time">Время: 
+								<span class="moving__info__time--span"><span class="moving__info__time--span1"></span>:<span class="moving__info__time--span2"></span></span>
+							</div>
+							<div class="moving__info__str moving__info__addr1">Адрес №1: <span class="moving__info__addr1--span">- - -</span></div>
+							<div class="moving__info__str moving__info__addr2">Адрес №2: <span class="moving__info__addr2--span">- - -</span></div>
+							<div class="moving__info__str moving__info__addr3 moving__info__str--hide">Дополнительный адрес: <span class="moving__info__addr3--span">- - -</span></div>
+							<div class="moving__info__str moving__info__addr4 moving__info__str--hide">Дополнительный адрес: <span class="moving__info__addr4--span">- - -</span></div>
+							<div class="moving__info__str moving__info__addr5 moving__info__str--hide">Дополнительный адрес: <span class="moving__info__addr5--span">- - -</span></div>
+							<div class="moving__info__str moving__info__addr6 moving__info__str--hide">Дополнительный адрес: <span class="moving__info__addr6--span">- - -</span></div>
+
+						</div>
+
+						<div>
+
+							<div class="moving__info__str moving__info__name">Ваше имя: <span class="moving__info__name--span">- - -</span></div>
+							<div class="moving__info__str moving__info__phone">Телефон: <span class="moving__info__phone--span">- - -</span></div>
+							<div class="moving__info__str moving__info__type">Кузов: 
+								<span class="moving__info__type--span1">- </span>
+								<span class="moving__info__type--span2">- </span>
+								<span class="moving__info__type--span3">-</span>
+							</div>
+							<div class="moving__info__str moving__info__pass">Количество пассажиров: <span class="moving__info__pass--span">- - -</span></div>
+							<div class="moving__info__str moving__info__workers">Количество грузчиков: <span class="moving__info__workers--span">- - -</span></div>
+							<div class="moving__info__str moving__info__hours">Длительность подачи: <span class="moving__info__hours--span">1 час</span></div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="moving__sums">
+
+					<div class="moving__sums__str">Обычная цена:  <span class="moving__sums__price">0 руб.</span></div>
+					<div class="moving__sums__str">Экономия 30%:  <span class="moving__sums__economy">0 руб.</span></div>
+					<div class="moving__sums__str">Итог: <span class="moving__sums__itog">0 руб.</span></div>
+
+					<div class="moving__sums__btn">Оформить заказ</div>
+
+				</div>
+
+			</div>
+
+
+		</div>
+		<!-- /.moving__content -->
+	</div>
+	<!-- /.moving -->	
+
+	<script src="js/conditions.js"></script>
+
+</body>
+</html>

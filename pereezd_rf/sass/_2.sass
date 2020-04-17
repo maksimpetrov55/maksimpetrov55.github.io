@@ -1,0 +1,240 @@
+
+
+.moving
+
+    &__bodytype,
+    &__passengers,
+    &__workers
+        display: flex
+        @media ( max-width: 390px )
+            flex-wrap: wrap
+            margin: 15px 0
+
+    &__slide
+        width: 180px
+        height: 44px
+        background-color: #e6e6e6
+        border-radius: 100px
+        align-items: center
+        display: flex
+        margin: 7px 0
+        position: relative
+        z-index: 10
+        
+
+        &--long
+            width: 270px
+
+    &__radio
+        display: none
+
+        &:checked + label
+            color: #fff
+
+    &__label
+        width: 90px
+        text-align: center
+        font-size: 14px
+        color: #222222
+        font-weight: 400
+        cursor: pointer
+        height: 44px
+        line-height: 44px
+
+        &--pass
+            width: 54px
+        &--workers
+            width: 60px
+
+    &__select
+        background: #3195d1
+        width: 90px
+        height: 44px
+        border-radius: 50px
+        position: absolute
+        z-index: -1
+        transition-duration: 0.3s
+
+        &--pass
+            width: 45px
+        &--workers
+            width: 60px
+
+        &--gray
+            background: #bbb
+
+        &--pos2
+            transform: translateX(100%)
+        &--pos3
+            transform: translateX(200%)
+        &--pos4
+            transform: translateX(300%)
+        &--pos5
+            transform: translateX(400%)
+        &--pos6
+            transform: translateX(500%)
+
+    &__car-result
+        height: auto
+        min-height: 146px
+        width: 100%
+        background: #e6e6e6
+        margin: 20px 0
+        border-radius: 4px
+        display: flex
+        align-items: center
+        padding: 5px 0 10px 0
+
+        &__img
+            width: 160px
+            height: 120px
+            background: url("../img/car1.png") no-repeat
+            background-position: 50% 50%
+            margin: 0 5px 0 0
+            @media ( max-width: 390px )
+                width: 110px
+                height: 70px
+                background: url("../img/car1.png") no-repeat
+                background-size: contain
+                margin: 0 10px
+
+        &__title
+            font-size: 14px
+            font-weight: 600
+            color: #222222
+            line-height: 1.4
+            margin: 10px 0 5px 0
+
+        &__name
+            color: #222222
+            font-size: 19px
+            font-weight: 900
+            line-height: 1.2
+            margin: 5px 0 10px 0
+            max-width: 195px
+            @media ( max-width: 390px )
+                font-size: 16px
+
+        &__expert
+            display: block
+            font-size: 14px
+            font-weight: 600
+            line-height: 1.4
+            margin: 5px 0
+            max-width: 200px
+
+
+    &__expert
+        width: 100%
+        background: #E6E6E6
+        border-radius: 4px
+        height: auto
+        padding: 10px 0 20px 0
+
+        &__img
+            width: 160px
+            height: 120px
+            background: url("../img/car1.png") no-repeat
+            background-position: 50% 50%
+
+        &__head
+            padding: 10px 20px
+            @media ( max-width: 390px )
+                padding: 10px 15px
+
+        &__title
+            font-size: 14px
+            font-weight: 600
+            color: #222222
+            line-height: 1.4
+
+        &__name
+            color: #222222
+            font-size: 19px
+            font-weight: 900
+            line-height: 1.2
+            margin: 7px 0
+
+        &__container
+            max-width: 320px
+            margin: 10px auto
+            @media ( max-width: 390px )
+                width: 260px 
+
+        &__workers
+            font-size: 20px
+            font-weight: 400
+
+        &__radio
+            margin: 0 0 0 20px
+            width: 20px
+            height: 20px
+            @media ( max-width: 390px )
+                margin: 0 0 0 10px
+
+        &__label
+            margin: 0 0 0 7px
+            min-width: 15px
+            text-align: center
+
+        &__search
+            position: relative
+
+            &__inp
+                display: block
+                border: none
+                border: 1px solid #bbbbbb
+                margin: 30px auto 10px auto
+                background: #fff
+                border-radius: 4px
+                width: 90%
+                height: 50px
+                font-size: 18px
+                padding: 0 20px
+
+            &::before
+                z-index: 29
+                content: ""
+                width: 20px
+                height: 20px
+                background: url("../img/search.png") no-repeat
+                background-size: 100% 100%
+                position: absolute
+                right: 30px
+                top: 15px
+                opacity: 0.3
+
+        &__box
+            display: block
+            border: none
+            border: 1px solid #bbbbbb
+            background: #fff
+            border-radius: 4px
+            width: 90%
+            margin: 10px auto
+            overflow-y: scroll
+            overflow-x: hidden
+            height: 360px
+
+            li
+                display: flex
+                align-items: center
+                list-style-type: none
+                &:hover
+                    background: #eee
+
+            input
+                display: none
+
+        &__carlabel
+            display: flex
+            align-items: center
+            padding: 0 30px 0 10px
+            height: 60px
+            line-height: 1.2
+            margin: 0 0 0 15px
+            width: 100%
+            cursor: pointer
+
+        &__return
+            margin: 0 20px
