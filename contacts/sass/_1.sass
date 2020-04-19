@@ -1,0 +1,106 @@
+
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+body
+    position: relative
+    background: rgb(208,206,223)
+    background: linear-gradient(142deg, rgba(208,206,223,1) 0%, rgba(0,64,105,1) 100%)
+
+.wrap
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 100vh
+
+.block
+    position: relative
+    width: 600px
+    height: 400px
+    background: #fff
+    border-radius: 20px
+    box-shadow: 0px 10px 20px 3px rgba(0,0,0,0.1)
+    margin: 70px 0 90px 0
+    padding: 20px
+    @media ( max-width: 399px )
+        padding: 20px 10px
+
+.avatar
+    position: absolute
+    background: #eeeeee url(../img/logo.png)
+    background-position: 50% 50%
+    background-size: 100% 100%
+    border: 3px solid #6C6C87
+    box-shadow: 0px 10px 30px 3px rgba(0,0,0,0.05)
+    width: 140px
+    height: 140px
+    border-radius: 100px
+    margin: -70px 0 0 -70px
+    top: 0
+    left: 50%
+
+.name
+    position: relative
+    font-size: 30px
+    color: #333333
+    font-weight: 300
+    font-family: "montserrat", sans-serif
+    letter-spacing: 1px
+    margin: 80px auto 20px auto
+    text-align: center
+
+.about
+    font-size: 16px
+    letter-spacing: 0.5px
+    font-family: sans-serif
+    color: #bbb
+    text-align: center
+    margin: 7px 0
+    @media ( max-width: 399px )
+        font-size: 14px
+
+.contacts
+    height: 150px
+    width: 100%
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+
+    &__btn
+        display: block
+        width: 90px
+        height: 90px
+        border-radius: 100px
+        opacity: 0.7
+        transition-duration: 0.3s
+        cursor: pointer
+        margin: 0 20px
+        @media ( max-width: 460px )
+            margin: 0 10px
+        @media ( max-width: 460px )
+            width: 70px
+            height: 70px
+
+        &:hover
+            opacity: 1
+
+    &__vk
+        background: #1E88E5 url(../img/vk.png) no-repeat
+        background-position: 49% 50%
+        background-size: 60% 60%
+
+    &__whatsapp
+        background: #00DF72 url(../img/wp.png) no-repeat
+        background-position: 52% 48%
+        background-size: 57% 57%
+
+    &__telegram
+        background: #2CA5E0 url(../img/tm.png) no-repeat
+        background-position: 42% 52%
+        background-size: 50% 50%
+
