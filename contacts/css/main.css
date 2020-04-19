@@ -29,12 +29,18 @@ body {
   position: relative;
   width: 600px;
   height: 400px;
-  background: #fff;
+  background: #f9f9f9;
   border-radius: 20px;
   -webkit-box-shadow: 0px 10px 20px 3px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 10px 20px 3px rgba(0, 0, 0, 0.1);
   margin: 70px 0 90px 0;
   padding: 20px;
+}
+
+@media (max-width: 640px) {
+  .block {
+    margin: 70px 20px 90px 20px;
+  }
 }
 
 @media (max-width: 399px) {
@@ -74,7 +80,7 @@ body {
   font-size: 16px;
   letter-spacing: 0.5px;
   font-family: sans-serif;
-  color: #bbb;
+  color: #968F6A;
   text-align: center;
   margin: 7px 0;
 }
@@ -138,7 +144,7 @@ body {
 .contacts__vk {
   background: #1E88E5 url(../img/vk.png) no-repeat;
   background-position: 49% 50%;
-  background-size: 60% 60%;
+  background-size: 57% 57%;
 }
 
 .contacts__whatsapp {
