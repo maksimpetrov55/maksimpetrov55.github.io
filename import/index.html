@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+	
+	<link rel="stylesheet" href="css/main.css">
+	
+	<script src="https://www.cbr-xml-daily.ru/daily_json.js"></script>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+
+</head>
+<body>
+
+	<div class="calc">
+
+		<h2 class="calc__header">Калькулятор импорта</h2>
+
+		<div class="calc__flex">
+
+			<div class="calc__title">Объект</div>
+
+			<input type="text" class="calc__input calc__input--big">
+
+		</div>
+
+		<div class="calc__flex">
+
+			<div class="calc__title">Контракт</div>
+
+			<input type="text" class="calc__input calc__input--big">
+
+		</div>
+
+		<div class="calc__flex">
+
+			<div class="calc__title">Дата</div>
+
+			<input type="text" class="calc__input calc__input--big">
+
+		</div>
+
+		<div class="calc__flex">
+
+			<div class="calc__title">Курс евро</div>
+
+			<input type="text" class="calc__input calc__input--small" id="inp_euro" value="81">
+
+			<!-- <div class="calc__title calc__title--course">Официальный курс: <span class="calc__title--span">85,00</span></div> -->
+
+		</div>
+
+		<div class="calc__space"></div>
+		
+		<div class="calc__flex">
+
+			<div class="calc__title"></div>
+
+			<div class="calc__eur">Евро</div>
+
+			<div class="calc__rub">Рубли</div>
+
+		</div>
+
+		<div class="calc__flex">
+
+			<div class="calc__title">Стоимость закупки</div>
+
+
+				<div class="calc__por"><div class="calc__eurolabel">€</div><input type="text" class="calc__input calc__input--euro" id="inp_e_zakup" value="50000"></div>
+				<input type="text" class="calc__input calc__input--disabled" disabled id="inp_r_zakup">
+
+
+		</div>
+
+		<div class="calc__flex">
+
+			<div class="calc__title">Размер скидки, %</div>
+
+			<input type="text" class="calc__input calc__input--small" id="inp_sale" value="1">
+
+		</div>
+
+		<div class="calc__flex">
+
+			<div class="calc__title">Скидка</div>
+
+			<div class="calc__por"><div class="calc__eurolabel">€</div><input type="text" class="calc__input calc__input--euro calc__input--disabled" disabled id="inp_e_sale"></div>
+
+			<input type="text" class="calc__input calc__input--disabled" disabled id="inp_r_sale">
+
+		</div>
+
+		<div class="calc__flex">
+
+			<div class="calc__title">Стоимость с учетом скидки</div>
+
+			<div class="calc__por"><div class="calc__eurolabel">€</div><input type="text" class="calc__input calc__input--euro calc__input--disabled" disabled id="inp_e_zakupsale1"></div>
+
+			<input type="text" class="calc__input calc__input--disabled" disabled id="inp_r_zakupsale1">
+
+		</div>
+
+		<div class="calc__flex">
+
+			<div class="calc__title">Размер пошлины, %</div>
+
+			<input type="text" class="calc__input calc__input--small" id="inp_posh" value="10">
+
+		</div>
+
+		<div class="calc__flex">
+
+			<div class="calc__title">Пошлина</div>
+
+			<div class="calc__por"><div class="calc__eurolabel">€</div><input type="text" class="calc__input calc__input--euro calc__input--disabled" disabled id="inp_e_posh"></div>
+
+			<input type="text" class="calc__input calc__input--disabled" disabled id="inp_r_posh">
+
+		</div>
+
+		<div class="calc__flex">
+
+			<div class="calc__title">Доставка Led</div>
+
+			<div class="calc__por"><div class="calc__eurolabel">€</div><input type="text" class="calc__input calc__input--euro calc__input--disabled" disabled id="inp_e_led"></div>
+
+			<input type="text" class="calc__input calc__input--disabled" disabled id="inp_r_led">
+
+		</div>
+
+		<div class="calc__flex">
+
+			<div class="calc__title">Стоимость с пошлиной и доставкой</div>
+
+			<div class="calc__por"><div class="calc__eurolabel">€</div><input type="text" class="calc__input calc__input--euro calc__input--disabled" disabled id="inp_e_price1"></div>
+
+			<input type="text" class="calc__input calc__input--disabled" disabled id="inp_r_price1">
+
+		</div>
+
+		<div class="calc__flex">
+
+			<div class="calc__title">НДС 20%</div>
+
+			<div class="calc__por"><div class="calc__eurolabel">€</div><input type="text" class="calc__input calc__input--euro calc__input--disabled" disabled id="inp_e_nds"></div>
+
+			<input type="text" class="calc__input calc__input--disabled" disabled id="inp_r_nds">
+
+		</div>
+
+		<div class="calc__flex">
+
+			<div class="calc__title">Стоимость с пошлиной, доставкой и НДС</div>
+
+			<div class="calc__por"><div class="calc__eurolabel">€</div><input type="text" class="calc__input calc__input--euro calc__input--disabled" disabled id="inp_e_price1nds"></div>
+
+			<input type="text" class="calc__input calc__input--disabled" disabled id="inp_r_price1nds">
+
+		</div>
+
+		<div class="calc__flex">
+
+			<div class="calc__title">РМРС</div>
+
+			<div class="calc__por"><div class="calc__eurolabel">€</div><input type="text" class="calc__input calc__input--euro calc__input--disabled" disabled id="inp_e_rmrs"></div>
+
+			<input type="text" class="calc__input calc__input--disabled" disabled id="inp_r_rmrs">
+
+		</div>
+
+		<div class="calc__flex">
+
+			<div class="calc__title">Сертификаты</div>
+
+			<div class="calc__por"><div class="calc__eurolabel">€</div><input type="text" class="calc__input calc__input--euro calc__input--disabled" disabled id="inp_e_certif"></div>
+
+			<input type="text" class="calc__input calc__input--disabled" disabled id="inp_r_certif">
+
+		</div>
+
+		<div class="calc__flex">
+
+			<div class="calc__title">Брокер</div>
+
+			<div class="calc__por"><div class="calc__eurolabel">€</div><input type="text" class="calc__input calc__input--euro calc__input--disabled" disabled id="inp_e_broker"></div>
+
+			<input type="text" class="calc__input calc__input--disabled" disabled id="inp_r_broker">
+
+		</div>
+
+		<div class="calc__space"></div>
+
+		<div class="calc__flex calc__flex--itog">
+
+			<div class="calc__title">Сумма на 1-ом этапе</div>
+
+			<div class="calc__por"><div class="calc__eurolabel">€</div><input type="text" class="calc__input calc__input--euro calc__input--itog" disabled id="inp_e_fullprice1"></div>
+
+			<input type="text" class="calc__input calc__input--itog" disabled id="inp_r_fullprice1">
+
+		</div>
+
+		<div class="calc__flex calc__flex--itog">
+
+			<div class="calc__title">Доп. расходы на 1-ом этапе</div>
+
+			<div class="calc__por"><div class="calc__eurolabel">€</div><input type="text" class="calc__input calc__input--euro calc__input--itog" disabled id="inp_e_fullprice1dop"></div>
+
+			<input type="text" class="calc__input calc__input--itog" disabled id="inp_r_fullprice1dop">
+
+		</div>
+
+		<div class="calc__space"></div>
+
+		<div class="calc__flex">
+
+			<div class="calc__title">Доставка Россия</div>
+
+			<div class="calc__por"><div class="calc__eurolabel">€</div><input type="text" class="calc__input calc__input--euro calc__input--disabled" id="inp_e_delivery" value="5000"></div>
+
+			<input type="text" class="calc__input calc__input--disabled" disabled id="inp_r_delivery">
+
+		</div>
+
+		<div class="calc__flex">
+
+			<div class="calc__title">Участие</div>
+
+			<div class="calc__por"><div class="calc__eurolabel">€</div><input type="text" class="calc__input calc__input--euro calc__input--disabled" id="inp_e_uchastie" value="5000"></div>
+
+			<input type="text" class="calc__input calc__input--disabled" disabled id="inp_r_uchastie">
+
+		</div>
+
+		<div class="calc__flex">
+
+			<div class="calc__title">Банк гарантия</div>
+
+			<div class="calc__por"><div class="calc__eurolabel">€</div><input type="text" class="calc__input calc__input--euro calc__input--disabled" id="inp_e_bank" value="5000"></div>
+
+			<input type="text" class="calc__input calc__input--disabled" disabled id="inp_r_bank">
+
+		</div>
+
+		<div class="calc__flex">
+
+			<div class="calc__title">% за деньги и разница</div>
+
+			<div class="calc__por"><div class="calc__eurolabel">€</div><input type="text" class="calc__input calc__input--euro calc__input--disabled" id="inp_e_percent" value="5000"></div>
+
+			<input type="text" class="calc__input calc__input--disabled" disabled id="inp_r_percent">
+
+		</div>
+
+		<div class="calc__space"></div>
+
+		<div class="calc__flex calc__flex--itog">
+
+			<div class="calc__title">Доп. расходы на 2-ом этапе</div>
+
+			<div class="calc__por"><div class="calc__eurolabel">€</div><input type="text" class="calc__input calc__input--euro calc__input--itog" disabled id="inp_e_fullprice2dop"></div>
+
+			<input type="text" class="calc__input calc__input--itog" disabled id="inp_r_fullprice2dop">
+
+		</div>
+
+		<div class="calc__flex calc__flex--itog">
+
+			<div class="calc__title">Сумма на 2-ом этапе</div>
+
+			<div class="calc__por"><div class="calc__eurolabel">€</div><input type="text" class="calc__input calc__input--euro calc__input--itog" disabled id="inp_e_fullprice2"></div>
+
+			<input type="text" class="calc__input calc__input--itog" disabled id="inp_r_fullprice2">
+
+		</div>
+
+		<div class="calc__space"></div>
+
+		<div class="calc__flex">
+
+			<div class="calc__title">Если наценка 25%</div>
+
+			<div class="calc__por"><div class="calc__eurolabel">€</div><input type="text" class="calc__input calc__input--euro calc__input--disabled" disabled id="inp_e_up25"></div>
+
+			<input type="text" class="calc__input calc__input--disabled" disabled id="inp_r_up25">
+
+		</div>
+
+		<div class="calc__flex">
+
+			<div class="calc__title">Если наценка 50%</div>
+
+			<div class="calc__por"><div class="calc__eurolabel">€</div><input type="text" class="calc__input calc__input--euro calc__input--disabled" disabled id="inp_e_up50"></div>
+
+			<input type="text" class="calc__input calc__input--disabled" disabled id="inp_r_up50">
+
+		</div>
+
+		<div class="calc__flex">
+
+			<div class="calc__title">Если наценка 100%</div>
+
+			<div class="calc__por"><div class="calc__eurolabel">€</div><input type="text" class="calc__input calc__input--euro calc__input--disabled" disabled id="inp_e_up100"></div>
+
+			<input type="text" class="calc__input calc__input--disabled" disabled id="inp_r_up100">
+
+		</div>
+
+		<div class="calc__flex">
+
+			<div class="calc__title">Маржа при наценке 25%</div>
+
+			<div class="calc__por"><div class="calc__eurolabel">€</div><input type="text" class="calc__input calc__input--euro calc__input--disabled" disabled id="inp_e_margin25"></div>
+
+			<input type="text" class="calc__input calc__input--disabled" disabled id="inp_r_margin25">
+
+		</div>
+
+		<div class="calc__flex">
+
+			<div class="calc__title">Маржа при наценке 50%</div>
+
+			<div class="calc__por"><div class="calc__eurolabel">€</div><input type="text" class="calc__input calc__input--euro calc__input--disabled" disabled id="inp_e_margin50"></div>
+
+			<input type="text" class="calc__input calc__input--disabled" disabled id="inp_r_margin50">
+
+		</div>
+
+		<div class="calc__flex">
+
+			<div class="calc__title">Маржа при наценке 100%</div>
+
+			<div class="calc__por"><div class="calc__eurolabel">€</div><input type="text" class="calc__input calc__input--euro calc__input--disabled" disabled id="inp_e_margin100"></div>
+
+			<input type="text" class="calc__input calc__input--disabled" disabled id="inp_r_margin100">
+
+		</div>
+
+		<div class="calc__space"></div>
+
+		<div class="calc__space"></div>
+
+		<div class="calc__space"></div>
+
+
+
+
+	</div>
+
+</body>
+</html>
