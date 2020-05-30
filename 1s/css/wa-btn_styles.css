@@ -1,0 +1,133 @@
+.wa-btn {
+	outline: none;
+	width: 80px;
+	height: 80px;
+	position: fixed;
+	bottom: 15%;
+	left: 10%;
+	z-index: 189;
+	border-radius: 70px;
+  }
+.wa-btn__link {
+	outline: none;
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background: #2CB742 url("../img/wa3.png") no-repeat;
+	background-size: 60% 60%;
+	background-position: 50% 50%;
+	transition-duration: 0.3s;
+	box-shadow: 0 0 20px 3px rgba(0,0,0,0.1);
+	border-radius: 70px;
+	animation: scale 3s ease-in-out infinite;
+}
+.wa-btn__link:active, 
+.wa-btn__link:focus {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.wa-btn__link:hover {
+	background: rgb(33, 141, 49) url("../img/wa3.png") no-repeat;
+	background-size: 60% 60%;
+	background-position: 50% 50%;
+}
+.wa-btn__ring {
+	display: block;
+	position: absolute;
+	background: #2CB742;
+	opacity: 0.5;
+	width: 100%;
+	height: 100%;
+	left: 0%;
+	top: 0%;
+	z-index: -2;
+	border-radius: 150px;
+	animation: blink 3s ease-in-out infinite;
+}
+.wa-btn__note {
+	position: absolute;
+	background: #fff;
+	height: 80px;
+	width: 180px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 15px;
+	padding: 10px 10px;
+	margin: 0 0 0 -90px;
+	font-family: "Lato", sans-serif;
+	font-size: 1.2rem;
+	font-weight: 600;
+	text-shadow: 0 1px 5px rgba(0,0,0,0.1);
+	top: 0%;
+	left: 50%;
+	z-index: -1;
+	box-shadow: 0 5px 20px 3px rgba(0,0,0,0.1);
+	transform: scale(0);
+	transition-duration: 0.5s;
+	opacity: 0;
+}
+.wa-btn__note--animation {
+	transform: scale(1);
+	top: -170%;
+	opacity: 1;
+}
+
+.block1 {
+ width: 100%;
+ height: 500px;
+ background: #7FC9FF;
+}
+.block2 {
+ width: 100%;
+ height: 500px;
+ background: #FFD9C1;
+}
+.block3 {
+ width: 100%;
+ height: 500px;
+ background: #CBE2C0;
+}
+
+
+
+
+
+
+
+
+@keyframes scale {
+	5% {
+		transform: scale(0.9);
+	}
+	15% {
+		transform: scale(1.05);
+	}
+	25% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes blink {
+	0% { 
+		transform: scale(1);
+		opacity: 0.5;
+	}
+	70% {
+		transform: scale(2);
+		opacity: 0;
+	}
+	
+	100% {
+		transform: scale(2);
+		opacity: 0;
+	}
+}
+
+@media (max-width: 900px) {
+	.wa-btn__note--animation {
+		transform: scale(0);
+	}
+}
