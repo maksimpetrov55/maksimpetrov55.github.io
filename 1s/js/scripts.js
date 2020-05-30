@@ -11,10 +11,10 @@ $(document).ready(function() {
 	//плавный скролл до якоря
 
 	//экран загрузки
-	$(".loading__logo").delay(100).fadeOut(100);
-	$(".loading").delay(200).fadeOut(130);
-	// $(".loading__logo").delay(1000).fadeOut(1000);
-	// $(".loading").delay(2000).fadeOut(1300);
+	//$(".loading__logo").delay(100).fadeOut(100);
+	//$(".loading").delay(200).fadeOut(130);
+	$(".loading__logo").delay(1000).fadeOut(1000);
+	$(".loading").delay(2000).fadeOut(1300);
 	//экран загрузки
 
 	//открытие формы
