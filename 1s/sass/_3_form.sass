@@ -1,0 +1,180 @@
+
+
+.form
+    position: fixed
+    min-height: 100vh
+    width: 100%
+    //background: linear-gradient(115.74deg, #0e0b5cdd 10.66%, #050527dd 88.06%)
+    background: #000029dd
+    z-index: 199
+    display: flex
+    justify-content: center
+    align-items: center
+
+    &--hidden
+        display: none
+
+    &__block
+        position: relative
+        width: 450px
+        background: #fff
+        border-radius: 4px
+        box-shadow: 0 10px 30px 4px rgba(0,0,0,0.2)
+        padding: 0 0 20px 0
+        margin: 80px 0
+        @media ( max-width: 960px )
+            margin: 20px 0 0 0
+        @media ( max-width: 479px )
+            width: 94%
+            margin: 20px auto
+        @media ( max-width: 399px )
+            width: 98%
+            margin: 10px auto
+
+        &--hidden
+            display: none
+
+    &__close
+        position: absolute
+        width: 30px
+        height: 30px
+        //top: -60px
+        top: 5px
+        right: 5px
+        margin: 0 0 0 0px
+        display: flex
+        align-items: center
+        justify-content: center
+        transition-duration: 0.3s
+        cursor: pointer
+        z-index: 209
+
+        &--1
+            position: absolute
+            height: 100%
+            width: 2px
+            background: #fff
+            transform: rotate(45deg)
+
+        &--2
+            position: absolute
+            height: 100%
+            width: 2px
+            background: #fff
+            transform: rotate(-45deg)
+
+        &:hover
+            opacity: 0.6
+
+    &__header
+        position: relative
+        font-size: 24px
+        line-height: 1.3
+        font-weight: 600
+        text-transform: uppercase
+        text-align: center
+        margin: 0 0 30px 0
+        height: 120px
+        display: flex
+        align-items: center
+        justify-content: center
+        background: $blue
+        color: #fff
+        border-radius: 4px 4px 0 0
+        text-shadow: 2px 3px 5px rgba(0,0,0,0.05)
+        @media ( max-width: 479px )
+            font-size: 18px
+            padding: 0 20px
+            margin: 0 0 20px 0
+
+    &__shadow
+        width: 100%
+        height: 30px
+        background: linear-gradient(180deg, rgba(51, 51, 51, 0) 0%, rgba(51, 51, 51, 0.3) 100%)
+        position: absolute
+        left: 0
+        top: 110px
+
+    &__descr
+        font-size: 16px
+        text-align: center
+        line-height: 1.5
+        letter-spacing: 0.5px
+        width: 320px
+        margin: 0 auto 40px auto
+        @media ( max-width: 399px )
+            font-size: 14px
+            width: 100%
+            max-width: 290px
+            margin: 0 auto 20px auto
+
+    &__title
+        width: 320px
+        margin: 0 auto
+        padding: 0 0 0 3px
+        color: $blue-gray
+        @media ( max-width: 399px )
+            max-width: 290px
+            font-size: 14px
+
+    &__input
+        display: block
+        border: none
+        border: 2px solid $gray-light
+        color: $blue-gray
+        border-radius: 4px
+        width: 320px
+        margin: 0 auto 10px auto
+        height: 52px
+        font-size: 18px
+        transition-duration: 0.3s
+        padding: 0 10px
+        @media ( max-width: 399px )
+            max-width: 290px
+            height: 48px
+            font-size: 16px
+        
+        &:focus
+            border: 2px solid $blue
+
+    &__btn
+        background: $yellow
+        font-size: 20px
+        line-height: 1.2
+        font-weight: 600
+        text-transform: uppercase
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        width: 320px
+        height: 60px
+        border-radius: 4px
+        text-shadow: 2px 3px 5px rgba(0,0,0,0.05)
+        box-shadow: 0 7px 25px 0px rgba(0,0,0,0.09)
+        transition-duration: 0.3s
+        cursor: pointer
+        margin: 30px auto 20px auto
+        letter-spacing: 1px
+        user-select: none
+        @media ( max-width: 399px )
+            width: 100%
+            max-width: 290px
+            margin: 20px auto 15px auto
+
+        &:hover
+            //background: $blue-light
+            transform: translateY(5px)
+            box-shadow: 0 3px 10px 0px rgba(0,0,0,0.1)
+
+        &:active
+            opacity: 0.1
+
+    &__note
+        font-size: 12px
+        width: 320px
+        margin: 15px auto 5px auto
+        color: $gray
+        text-align: justify
+        @media ( max-width: 399px )
+            max-width: 290px

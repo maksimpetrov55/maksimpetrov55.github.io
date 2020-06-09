@@ -1,0 +1,136 @@
+
+
+.whom
+    position: relative
+    background: #fff
+    overflow: hidden
+
+    &__anchor
+        position: absolute
+        top: -70px
+
+    &__picture
+        z-index: 19
+        position: absolute
+        height: 100%
+        width: 50%
+        max-width: 960px
+        //left: 50%
+        left: 0
+        background: url("../img/office.jpg") no-repeat
+        background-size: auto 100%
+        background-position: 50% 50%
+        display: flex
+        align-items: center
+        @media ( max-width: 960px )
+            left: 0
+            width: 100%
+            height: 220px
+            background-size: 100% auto
+            background-position: 50% 70%
+            align-items: center
+
+        &::after
+            content: ""
+            z-index: -1
+            display: block
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            background: linear-gradient(90deg, rgba(0, 0, 20, 0.9) 0%, rgba(0, 0, 34, 0.8) 29.69%, rgba(0, 0, 85, 0.45) 100%)
+
+    &__wrap
+        position: relative
+        height: 100%
+        max-width: 1440px
+        margin: 0 auto
+        z-index: 9
+        background: #d9f8f8
+
+        &::before
+            content: ""
+            display: block
+            position: absolute
+            top: 0
+            //left: -240px
+            left: 100%
+            width: 240px
+            height: 100%
+            background: #d9f8f8
+
+    &__title
+        font-size: 70px
+        font-weight: 600
+        line-height: 1.4
+        color: #fff
+        text-transform: uppercase
+        text-align: right
+        max-width: 600px
+        margin: 0 auto
+        text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5)
+        @media ( max-width: 1299px )
+            font-size: 50px
+            max-width: 400px
+        @media ( max-width: 960px )
+            font-size: 36px
+            max-width: 400px
+            text-align: center
+        @media ( max-width: 850px )
+            max-width: 80%
+            margin: 0 auto
+        @media ( max-width: 409px )
+            font-size: 26px
+            max-width: 250px
+
+
+    &__content
+        width: 50%
+        height: 100%
+        margin: 0 0 0 50%
+        padding: 110px 30px 110px 60px
+        @media ( max-width: 1299px )
+            padding: 70px 40px 70px 40px
+        @media ( max-width: 960px )
+            width: 100%
+            height: auto
+            max-width: 650px
+            padding: 270px 10px 60px 80px
+            margin: 0 auto
+        @media ( max-width: 699px )
+            padding: 270px 20px 60px 40px
+        @media ( max-width: 409px )
+            padding: 270px 20px 60px 20px
+
+    &__string
+        position: relative
+        display: flex
+        margin: 0 0 30px 0
+        @media ( max-width: 960px )
+            margin: 0 0 15px 0
+
+    &__question
+        flex-shrink: 0
+        margin: 0px 0px 20px 0
+        width: 30px
+        height: 30px
+        font-size: 30px
+        font-weight: 600
+        color: #000055
+        display: flex
+        align-items: center
+        @media ( max-width: 1299px )
+            height: 25px
+            font-size: 25px
+            margin: 0 0 15px 0
+
+    &__text
+        font-size: 20px
+        color: $blue-gray
+        padding: 0 0 0 10px
+        @media ( max-width: 1299px )
+            font-size: 16px
+        @media ( max-width: 409px )
+            font-size: 14px
+            padding: 0 10px 0 10px

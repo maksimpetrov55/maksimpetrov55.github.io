@@ -6,24 +6,17 @@
 	<title>Услуги программиста 1С в Омске</title>
 	
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/main.css?v2">
 	<link rel="stylesheet" href="css/wa-btn_styles.css">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/scripts.js"></script>
-	<script src="js/wa-btn_script.js"></script>	
+	<script src="js/scripts.js?v2"></script>
+	<script src="js/wa-btn_script.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
 
 </head>
 <body>
-
-	<div class="wa-btn">
-		<a class="wa-btn__link" target="_blank" href="https://wa.me/79135553377?text=Здравствуйте!%20Я%20с%20сайта%201С.Программист"></a>
-		<div class="wa-btn__ring"></div>
-		<div class="wa-btn__note">Написать в WhatsApp!</div>
-	</div>
-
-	<div class="tech">11111</div>
 
 	<div class="loading">
 		
@@ -31,6 +24,14 @@
 
 	</div>
 	<!-- /.loading -->
+
+	<div class="wa-btn">
+		<a class="wa-btn__link" target="_blank" href="https://wa.me/79514272512?text=Здравствуйте!%20Я%20с%20сайта%201С.Программист"></a>
+		<div class="wa-btn__ring"></div>
+		<div class="wa-btn__note">Написать в WhatsApp!</div>
+	</div>
+
+	<!-- <div class="tech">11111</div> -->
 
 	<div class="form form--hidden">
 
@@ -51,11 +52,15 @@
 
 				<div class="form__title">Ваше имя: *</div>
 
-				<input class="form__input" type="text">
+				<input class="form__input" type="text" required>
 
-				<div class="form__title">Ваш телефон: *</div>
+				<div class="form__title">Ваша почта: *</div>
 
-				<input class="form__input" type="text">
+				<input class="form__input" type="text" required>
+
+				<div class="form__title">Ваш телефон:</div>
+
+				<input class="form__input phone-mask" type="text">
 
 			</form>
 
@@ -78,16 +83,23 @@
 
 			<div class="header__separator"></div>
 
-			<div class="header__menu">
-				<a class="header__link hover" href="#about">О компании</a>
-				<a class="header__link hover" href="#price">Услуги</a>
-				<a class="header__link hover" href="#whom">Кому подойдет</a>
-				<a class="header__link hover" href="#">Сертификаты</a>
-				<a class="header__link hover" href="#">Контакты</a>
-				<a class="header__link hover" href="#">Задать вопрос</a>
+			<div class="header__burger">
+				<div class="header__burger-line"></div>
+				<div class="header__burger-line"></div>
+				<div class="header__burger-line"></div>
 			</div>
 
-			<div class="header__phone hover form--open form--phone">+7 (999) 745-23-17</div>
+			<div class="header__menu">
+				<a class="header__link hover" href="#about">О компании</a>
+				<a class="header__link hover" href="#price">Услуги и цены</a>
+				<a class="header__link hover" href="#whom">Кому подойдет</a>
+				<!-- <a class="header__link hover" href="#">Сертификаты</a> -->
+				<a class="header__link hover" href="#ask">Задать вопрос</a>
+				<a class="header__link hover" href="#footer">Контакты</a>
+			</div>
+
+			<div class="header__icon form--open form--phone"></div>
+			<div class="header__phone hover form--open form--phone">+7 (951) 427-25-12</div>
 
 		</div>
 
@@ -106,7 +118,7 @@
 
 			
 
-			<div class="dflex dflex--aic">
+			<div class="dflex dflex--aic dflex--wrap">
 
 				<div class="f-screen__btn form--open form--consult">Бесплатная консультация специалиста</div>
 
@@ -151,14 +163,14 @@
 				<span></span>
 			</div>
 
-			<div class="about__text about__text--partners">Мы успешно работаем с&nbsp;компаниями из&nbsp;различных отраслей — от&nbsp;небольших фирм до крупных холдингов.</div>
+			<div class="about__text about__text--partners">Мы успешно работаем с&nbsp;компаниями из&nbsp;различных отраслей — от&nbsp;небольших фирм до&nbsp;крупных&nbsp;холдингов.</div>
 
 			<div class="about__slider">
-				<div class="about__company"></div>
-				<div class="about__company"></div>
-				<div class="about__company"></div>
-				<div class="about__company"></div>
-				<div class="about__company"></div>
+				<div class="about__company"><img class="about__img" src="img/logos/5.png" alt=""></div>
+				<div class="about__company"><img class="about__img" src="img/logos/2.png" alt=""></div>
+				<div class="about__company"><img class="about__img" src="img/logos/3.png" alt=""></div>
+				<div class="about__company"><img class="about__img" src="img/logos/4.png" alt=""></div>
+				<div class="about__company"><img class="about__img" src="img/logos/1.png" alt=""></div>
 			</div>
 
 		</div>
@@ -178,80 +190,194 @@
 
 			<h3 class="price__title">Услуги, которые мы оказываем</h3>
 
-			<div class="price__card form--open">
-				<div class="price__imac"></div>
-				<div>
-					<div class="price__text">Первоначальная установка и настройка программ 1С</div>
-					<div class="price__price">от 1200 руб.</div>
-				</div>
-				<div class="price__circle">
-					<div class="price__arrow"></div>
-				</div>
-			</div>
+			<div class="dflex dflex--jcc dflex--wrap">
+				<div class="price__card form--open">
 
-			<div class="price__card form--open">
-				<div class="price__imac"></div>
-				<div>
+					<div class="price__imac"></div>
+	
+					<div class="price__text">Первоначальная установка и&nbsp;настройка программ&nbsp;1С</div>
+	
+					<div class="price__line"></div>
+	
+					<div class="dflex dflex--jcb">
+						<div class="price__time">Время</div>
+						<div class="price__time">от 1 часа</div>
+					</div>
+	
+					<div class="dflex dflex--jcb">
+						<div class="price__price">Стоимость</div>
+						<div class="price__price">от 1200 руб</div>
+					</div>
+	
+					<div class="price__line"></div>
+	
+					<div class="dflex dflex--aic">
+						<div class="price__order">Заказать</div>
+						<div class="price__arrow"></div>
+					</div>
+	
+				</div>
+	
+				<div class="price__card form--open">
+	
+					<div class="price__imac"></div>
+	
 					<div class="price__text">Обновление 1С</div>
-					<div class="price__price">от 600 руб.</div>
+	
+					<div class="price__line"></div>
+	
+					<div class="dflex dflex--jcb">
+						<div class="price__time">Время</div>
+						<div class="price__time">от 0.5 часа</div>
+					</div>
+	
+					<div class="dflex dflex--jcb">
+						<div class="price__price">Стоимость</div>
+						<div class="price__price">от 600 руб</div>
+					</div>
+	
+					<div class="price__line"></div>
+	
+					<div class="dflex dflex--aic">
+						<div class="price__order">Заказать</div>
+						<div class="price__arrow"></div>
+					</div>
+	
 				</div>
-				<div class="price__circle">
-					<div class="price__arrow"></div>
+	
+				<div class="price__card form--open">
+	
+					<div class="price__imac"></div>
+	
+					<div class="price__text">Создание обработок и&nbsp;отчётов&nbsp;1С</div>
+	
+					<div class="price__line"></div>
+	
+					<div class="dflex dflex--jcb">
+						<div class="price__time">Время</div>
+						<div class="price__time">от 2 часов</div>
+					</div>
+	
+					<div class="dflex dflex--jcb">
+						<div class="price__price">Стоимость</div>
+						<div class="price__price">от 2400 руб</div>
+					</div>
+	
+					<div class="price__line"></div>
+	
+					<div class="dflex dflex--aic">
+						<div class="price__order">Заказать</div>
+						<div class="price__arrow"></div>
+					</div>
+	
 				</div>
-			</div>
-
-			<div class="price__card form--open">
-				<div class="price__imac"></div>
-				<div>
-					<div class="price__text">Создание обработок и отчётов 1С</div>
-					<div class="price__price">от 2400 руб.</div>
+	
+				<div class="price__card form--open">
+	
+					<div class="price__imac"></div>
+	
+					<div class="price__text">Доработка и создание новых&nbsp;печатных&nbsp;форм</div>
+	
+					<div class="price__line"></div>
+	
+					<div class="dflex dflex--jcb">
+						<div class="price__time">Время</div>
+						<div class="price__time">от 1 часа</div>
+					</div>
+	
+					<div class="dflex dflex--jcb">
+						<div class="price__price">Стоимость</div>
+						<div class="price__price">от 1200 руб</div>
+					</div>
+	
+					<div class="price__line"></div>
+	
+					<div class="dflex dflex--aic">
+						<div class="price__order">Заказать</div>
+						<div class="price__arrow"></div>
+					</div>
+	
 				</div>
-				<div class="price__circle">
-					<div class="price__arrow"></div>
+	
+				<div class="price__card form--open">
+	
+					<div class="price__imac"></div>
+	
+					<div class="price__text">Настройка обменов перенос данных&nbsp;между&nbsp;базами</div>
+	
+					<div class="price__line"></div>
+	
+					<div class="dflex dflex--jcb">
+						<div class="price__time">Время</div>
+						<div class="price__time">от 2 часов</div>
+					</div>
+	
+					<div class="dflex dflex--jcb">
+						<div class="price__price">Стоимость</div>
+						<div class="price__price">от 2400 руб</div>
+					</div>
+	
+					<div class="price__line"></div>
+	
+					<div class="dflex dflex--aic">
+						<div class="price__order">Заказать</div>
+						<div class="price__arrow"></div>
+					</div>
+	
 				</div>
-			</div>
-
-			<div class="price__card form--open">
-				<div class="price__imac"></div>
-				<div>
-					<div class="price__text">Доработка и создание новых печатных форм</div>
-					<div class="price__price">от 1200 руб.</div>
+	
+				<div class="price__card form--open">
+	
+					<div class="price__imac"></div>
+	
+					<div class="price__text">Настройка прав&nbsp;доступа</div>
+	
+					<div class="price__line"></div>
+	
+					<div class="dflex dflex--jcb">
+						<div class="price__time">Время</div>
+						<div class="price__time">от 1 часа</div>
+					</div>
+	
+					<div class="dflex dflex--jcb">
+						<div class="price__price">Стоимость</div>
+						<div class="price__price">от 1200 руб</div>
+					</div>
+	
+					<div class="price__line"></div>
+	
+					<div class="dflex dflex--aic">
+						<div class="price__order">Заказать</div>
+						<div class="price__arrow"></div>
+					</div>
+	
 				</div>
-				<div class="price__circle">
-					<div class="price__arrow"></div>
-				</div>
-			</div>
-
-			<div class="price__card form--open">
-				<div class="price__imac"></div>
-				<div>
-					<div class="price__text">Настройка обменов перенос данных между базами</div>
-					<div class="price__price">от 2400 руб.</div>
-				</div>
-				<div class="price__circle">
-					<div class="price__arrow"></div>
-				</div>
-			</div>
-
-			<div class="price__card form--open">
-				<div class="price__imac"></div>
-				<div>
-					<div class="price__text">Настройка прав доступа</div>
-					<div class="price__price">от 1200 руб.</div>
-				</div>
-				<div class="price__circle">
-					<div class="price__arrow"></div>
-				</div>
-			</div>
-
-			<div class="price__card form--open">
-				<div class="price__imac"></div>
-				<div>
-					<div class="price__text">Исправление ошибок, оптимизация 1С</div>
-					<div class="price__price">от 1200 руб.</div>
-				</div>
-				<div class="price__circle">
-					<div class="price__arrow"></div>
+	
+				<div class="price__card form--open">
+	
+					<div class="price__imac"></div>
+	
+					<div class="price__text">Исправление ошибок, оптимизация&nbsp;1С</div>
+	
+					<div class="price__line"></div>
+	
+					<div class="dflex dflex--jcb">
+						<div class="price__time">Время</div>
+						<div class="price__time">от 1 часа</div>
+					</div>
+	
+					<div class="dflex dflex--jcb">
+						<div class="price__price">Стоимость</div>
+						<div class="price__price">от 1200 руб</div>
+					</div>
+	
+					<div class="price__line"></div>
+	
+					<div class="dflex dflex--aic">
+						<div class="price__order">Заказать</div>
+						<div class="price__arrow"></div>
+					</div>
+	
 				</div>
 			</div>
 
@@ -343,19 +469,77 @@
 	</div>
 	<!-- /.whom -->
 
-	<div class="order">
+	<div class="ask">
 
+		<div id="ask" class="ask__anchor"></div>
 
+		<div class="ask__wrap maw1440">
+
+			<h3 class="ask__title">У вас остались вопросы?</h3>
+
+			<div class="ask__subtitle">Ответим на них с радостью!</div>
+
+			<div class="ask__form">
+
+				<div class="ask__text">Заполните форму, чтобы мы могли&nbsp;Вам&nbsp;ответить</div>
+
+				<form action="">
+
+					<input type="text" class="ask__input" placeholder="Ваше Имя">
+
+					<input type="text" class="ask__input" placeholder="Ваш Email *" required>
+
+					<textarea class="ask__textarea" name="" id="" placeholder="Задайте Ваш вопрос *" required></textarea>
+
+					<div class="ask__btn">Отправить</div>
+
+					<div class="ask__note">* – поле обязательно для заполнения</div>
+
+					<div class="ask__note">Нажимая кнопку “Отправить” вы соглашаетесь на обработку персональных данных</div>
+
+				</form>
+
+			</div>
+
+		</div>
 
 	</div>
 	<!-- /.order -->
 
+	<div id="footer" class="footer">
 
-	<div class="space"></div>
+		<div class="footer__wrap maw1440">
 
-	<div class="footer">
+			<div class="footer__img"></div>
 
+			<div>
+				<div class="footer__logo">1С.<span class="footer__logo--span">ПРОГРАММИСТ</div>
+				<div class="footer__note">Официальный франчайзи фирмы «1С» с&nbsp;2017&nbsp;года</div>
+			</div>
+			
+			<div>
+				<div class="dflex dflex--jce dflex--aic">
+					<div class="footer__contacts">+7 (951) 427-25-12</div>
+					<img src="img/icons/call.png" alt="" class="footer__icon">
+				</div>
 
+				<div class="dflex dflex--jce dflex--aic">
+					<div class="footer__contacts">Пн - Пт: с 8:00 до 16:00 (Мск)</div>
+					<img src="img/icons/clock.png" alt="" class="footer__icon">
+				</div>
+
+				<div class="dflex dflex--jce dflex--aic">
+					<div class="footer__contacts">freesupport1c@yandex.ru</div>
+					<img src="img/icons/email.png" alt="" class="footer__icon">
+				</div>
+
+				<div class="dflex dflex--jce dflex--aic">
+					<div class="footer__contacts">Омск, Фрунзе, 1 к4</div>
+					<img src="img/icons/point.png" alt="" class="footer__icon">
+				</div>
+			</div>
+
+		</div>
 
 	</div>
 	<!-- /.footer -->
