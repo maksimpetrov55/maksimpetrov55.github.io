@@ -1,0 +1,493 @@
+
+$color1: #003B3B
+$color2: #58968B
+$color3: #D8F1ED
+
+*
+    padding: 0
+    margin: 0
+    font-family: sans-serif
+    box-sizing: border-box
+
+body
+    position: relative
+    background: #CCCCCC
+
+.calc2
+    position: relative
+
+    &__container
+        padding: 50px 20px 90px 20px
+        position: relative
+        background: #ffffff
+        margin: 50px auto
+        width: 100%
+        max-width: 1000px
+        box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.08)
+        border-radius: 30px
+        @media ( max-width: 1020px )
+            width: 96%
+        @media ( max-width: 550px )
+            padding: 50px 10px 90px 10px
+        @media ( max-width: 399px )
+            padding: 50px 5px 90px 5px
+
+    &__head
+        font-family: Beba, 'Bebas Neue', sans-serif
+        color: $color1
+        font-size: 30px
+        text-align: center
+        margin: 0 auto 30px auto
+
+    &__description
+        font-size: 19px
+        line-height: 1.4
+        font-weight: 400
+        text-align: center
+        margin: 0 auto 50px
+        position: relative
+        max-width: 700px
+        @media ( max-width: 450px )
+            font-size: 17px
+        @media ( max-width: 399px )
+            font-size: 15px
+
+    &__goal
+        position: relative
+        margin: 0 auto 30px auto
+        width: 100%
+        max-width: 500px
+        display: flex
+        align-items: center
+        flex-direction: column
+
+    &__name
+        font-size: 19px
+        margin: 0 auto 10px auto 
+        position: relative
+        text-align: center
+        max-width: 500px
+        z-index: 19
+
+        &--margintop
+            margin: 70px auto 30px auto
+
+    &__textarea
+        position: relative
+        width: 100%
+        height: 70px
+        border: 2px solid $color2
+        border-radius: 5px
+        font-size: 18px
+        color: $color1
+        padding: 5px 10px
+        margin: 0 0 10px 0
+        transition-duration: 0.4s
+
+        &:focus
+            background: $color2
+            color: #fff
+
+    &__note
+        font-size: 13px
+        color: #777777
+
+    &__currency
+        margin: 0 auto 40px auto
+        width: 310px
+        display: flex
+        justify-content: center
+        align-items: center
+        @media ( max-width: 450px )
+            width: 100%
+
+    &__radio
+        display: none
+
+        &:checked + .calc2__label
+            background: $color2
+            color: #fff
+            border: 2px solid $color1
+
+    &__label
+        padding: 5px 15px
+        border: 2px solid $color2
+        border-radius: 5px
+        font-size: 18px
+        color: $color1
+        cursor: pointer
+        margin: 5px 5px
+        transition-duration: 0.4s
+        user-select: none
+        @media ( max-width: 550px )
+            font-size: 17px
+        @media ( max-width: 399px )
+            font-size: 16px
+
+    &__line
+        display: flex
+        align-items: center
+        justify-content: center
+        margin: 5px 0
+        @media ( max-width: 720px )
+            flex-wrap: wrap
+
+    &__title
+        margin: 0 10px 0 0
+        width: 340px
+        text-align: right
+        @media ( max-width: 720px )
+            position: relative
+            width: 100%
+            text-align: center
+            margin: 5px 0 5px 0
+
+    &__alert
+        width: 340px
+        margin: 0 0 0 10px
+        color: #aa0000
+        font-size: 14px
+        @media ( max-width: 720px )
+            width: 100%
+            position: relative
+            margin: 0 auto
+            padding: 0 100px
+            text-align: center
+        @media ( max-width: 570px )
+            padding: 0 40px
+        @media ( max-width: 450px )
+            padding: 0
+
+    &__input
+        padding: 0 23px 0 10px
+        height: 42px
+        border-radius: 5px
+        border: 2px solid $color2
+        font-size: 18px
+        color: $color1
+        width: 190px
+        text-align: right
+        transition-duration: 0.4s
+        @media ( max-width: 720px )
+            margin: 5px 0
+
+        &--year
+            padding: 0 10px
+
+        &--error
+            border: 2px solid #ff0000 !important
+            background: #ff9595 !important
+            color: #fff !important
+
+        &:disabled
+            border: 2px solid #fff
+            background: #fff
+            height: 34px
+
+        &--disabled
+            border: 2px solid #fff
+            background: #fff
+            display: flex
+            align-items: center
+            justify-content: flex-end
+            height: 34px
+
+        &:focus
+            background: $color2
+            color: #fff
+
+    &__symb
+        position: relative
+
+    &__rub
+        position: absolute
+        font-size: 18px
+        color: $color1
+        display: flex
+        align-items: center
+        height: 100%
+        width: 20px
+        top: 0
+        right: 0
+        transition-duration: 0.4s
+
+        &--prc
+            width: 23px
+
+        &--focus
+            color: #fff
+
+        // &::after
+        //     content: "₽"
+        //     position: absolute
+        //     font-size: 18px
+        //     color: $color1
+        //     display: flex
+        //     align-items: center
+        //     height: 100%
+        //     width: 20px
+        //     top: 0
+        //     right: 0
+
+
+
+    &__wrap
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        width: 100%
+        position: relative
+
+    &__card
+        position: relative
+        width: 600px
+        height: 260px
+        background: #fff
+        border: 2px solid $color3
+        border-radius: 25px
+        margin: 50px 8px 20px 8px
+        @media ( max-width: 510px )
+            height: 300px
+        @media ( max-width: 450px )
+            height: auto
+        @media ( max-width: 399px )
+            margin: 30px 4px 20px 4px
+
+    &__hat
+        position: relative
+        width: 100%
+        height: 76px
+        background: $color2
+        border-radius: 25px 25px 0 0
+        border-bottom: 1px solid $color3
+        display: flex
+        align-items: center
+        padding: 0 20px 0 140px
+        margin: -2px 0 0 0
+        @media ( max-width: 510px )
+            padding: 0 20px 0 110px
+        @media ( max-width: 399px )
+            padding: 0 15px 0 100px
+
+    &__variant
+        font-size: 16px
+        color: #fff
+        text-shadow: 1px 1px 6px rgba(0,0,0,0.3)
+        letter-spacing: 0.4px
+        line-height: 1.4
+        @media ( max-width: 510px )
+            line-height: 1.2
+        @media ( max-width: 399px )
+            font-size: 14px
+
+        &--bold
+            font-weight: 600
+
+    &__icon2
+        position: absolute
+        width: 80px
+        height: 80px
+        background: #fff
+        border-radius: 50px
+        box-shadow: 0 5px 15px 0px rgba(0,0,0,0.12)
+        border: 1px solid $color3
+        display: flex
+        align-items: center
+        justify-content: center
+        left: 30px
+        top: -30px
+        @media ( max-width: 510px )
+            left: 15px
+        @media ( max-width: 399px )
+            width: 70px
+            height: 70px
+            top: -20px
+
+        img
+            position: relative
+            width: 65%
+            height: 65%
+
+    &__block
+        width: 100%
+        padding: 20px 5px 10px 5px
+        @media ( max-width: 510px )
+            padding: 10px 5px
+
+    &__line2
+        display: flex
+        margin: 14px 0
+        align-items: flex-end
+        @media ( max-width: 510px )
+            flex-wrap: wrap
+
+    &__text
+        font-size: 16px
+        text-align: right
+        width: 340px
+        margin: 0 10px 0 0
+        color: #999
+        font-weight: 600
+        @media ( max-width: 630px )
+            width: 300px
+            font-size: 14px
+        @media ( max-width: 550px )
+            width: 280px
+        @media ( max-width: 510px )
+            width: 100%
+            text-align: center
+            margin: 0
+        @media ( max-width: 399px )
+            font-weight: 400
+
+    &__result
+        font-size: 18px
+        font-weight: 600
+        @media ( max-width: 630px )
+            font-size: 16px
+        @media ( max-width: 510px )
+            text-align: center
+            width: 100%
+            margin: 7px 0 0 0
+
+    &__note2
+        font-size: 12px
+        color: #888
+        text-align: center
+        margin: 20px auto 0 auto
+        max-width: 90%
+
+    &__note3
+        text-align: justify
+        font-size: 16px
+        color: $color1
+        margin: 20px auto
+        width: 90%
+        max-width: 800px
+        line-height: 1.5
+        @media ( max-width: 450px )
+            font-size: 14px
+
+        &--tac
+            text-align: center
+            margin: 50px auto 10px auto
+            font-weight: 600
+
+    &__btn
+        margin: 20px auto
+        background: $color2
+        color: #fff
+        width: 180px
+        height: 50px
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 18px
+        border-radius: 5px
+        transition-duration: 0.2s
+        cursor: pointer
+        box-shadow: 0 5px 20px 0 rgba(0,0,0,0.15)
+
+        &:hover
+            background: #007259
+            color: #fff
+
+
+
+
+
+
+
+
+
+
+
+    // &__table
+    //     position: relative
+    //     width: 100%
+    //     max-width: 800px
+    //     margin: 120px auto 50px auto
+
+    // &__row
+    //     position: relative
+    //     display: flex
+
+    // &__cell
+    //     position: relative
+    //     width: 200px
+    //     height: 80px
+    //     background: #fff
+    //     display: flex
+    //     justify-content: center
+    //     align-items: center
+    //     padding: 5px
+    //     text-align: center
+    //     font-size: 14px
+    //     color: $color1
+
+    //     &--bg
+    //         background: $color2
+    //         color: #fff
+    //         letter-spacing: 0.3px
+
+    //     &--border-t
+    //         border-top: 1px solid #dddddd
+    //     &--border-r
+    //         border-right: 1px solid #dddddd
+    //     &--border-b
+    //         border-bottom: 1px solid #dddddd
+    //     &--border-l
+    //         border-left: 1px solid #dddddd
+
+    //     &--radius-t-l
+    //         border-top-left-radius: 25px
+    //     &--radius-t-r
+    //         border-top-right-radius: 25px
+    //     &--radius-b-l
+    //         border-bottom-left-radius: 25px
+    //     &--radius-b-r
+    //         border-bottom-right-radius: 25px
+
+    // &__icon
+    //     width: 70px
+    //     height: 70px
+    //     background: #fff
+    //     position: absolute
+    //     border-radius: 50px
+    //     top: -60px
+    //     box-shadow: 0 5px 20px 0px rgba(0,0,0,0.07)
+    //     border: 1px solid #eee
+    //     display: flex
+    //     align-items: center
+    //     justify-content: center
+
+    //     img
+    //         position: relative
+    //         width: 60%
+    //         height: 60%
+
+    // &__row
+    //     display: flex
+    //     justify-content: center
+
+    // &__cell1
+    //     width: 150px
+    //     height: 100px
+    //     border: 1px solid #ddd
+    //     font-size: 12px
+    //     display: flex
+    //     align-items: center
+    //     text-align: center
+    //     justify-content: center
+    //     padding: 5px
+
+    // &__cell2
+    //     width: 130px
+    //     height: 100px
+    //     border: 1px solid #ddd
+    //     font-size: 12px
+    //     display: flex
+    //     align-items: center
+    //     text-align: center
+    //     justify-content: center
+    //     padding: 5px

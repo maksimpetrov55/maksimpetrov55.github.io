@@ -2,18 +2,15 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Web Mockup</title>
 	
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/styles.css">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" href="fonts/bebasneue/bebasneue.css">
+	<link rel="stylesheet" href="css/main.css?v1">
+
 
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/scripts.js"></script>	
+	<script src="js/scripts.js?v1"></script>	
 
 </head>
 <body>
@@ -22,72 +19,298 @@
 
 		<div class="calc2__container">
 
-			<div class="calc2__line">
-				<div class="calc2__title">Текущая цель</div>
-				<input id="in1" type="text" class="calc2__input" value="10000000">
+			<h2 class="calc2__head">Онлайн калькулятор "Будущая стоимость цели"</h2>
+
+			<h3 class="calc2__description">Рассчитайте будущую стоимость своей долгосрочной цели и&nbsp;получите 4&nbsp;типовых варианта накоплений на нее.</h3>
+
+			<div class="calc2__goal">
+
+				<div class="calc2__name">Цель (результат):</div>
+
+				<textarea name="" id="" class="calc2__textarea"></textarea>
+
+				<div class="calc2__note">(напишите название цели и чез какой конкретно результат вы ее достигнете)</div>
+
+			</div>
+
+			<div class="calc2__name">Выберите валюту:</div>
+
+			<div class="calc2__currency">
+
+				<input class="calc2__radio" type="radio" name="calc2_currency" id="radio_rub" value="₽" checked>
+				<label class="calc2__label" for="radio_rub">Рубль</label>
+
+				<input class="calc2__radio" type="radio" name="calc2_currency" id="radio_dollar" value="$">
+				<label class="calc2__label" for="radio_dollar">Доллар</label>
+
+				<input class="calc2__radio" type="radio" name="calc2_currency" id="radio_euro" value="€">
+				<label class="calc2__label" for="radio_euro">Евро</label>
+
 			</div>
 
 			<div class="calc2__line">
-				<div class="calc2__title">Через 5 лет это будет:</div>
-				<input id="in2" type="text" class="calc2__input" value="10000000">
+				<div class="calc2__title">Сейчас на это требуется (дефицит):</div>
+				<div class="calc2__symb">
+					<input id="in1" type="text" class="calc2__input" value="5000000">
+					<div class="calc2__rub">₽</div>
+				</div>
+				<div class="calc2__alert"></div>
 			</div>
 
 			<div class="calc2__line">
-				<div class="calc2__title">Рост цен %</div>
-				<input id="in3" type="text" class="calc2__input" value="4">
+				<div class="calc2__title">Срок накопления, лет:</div>
+				<div class="calc2__symb">
+					<input id="in5" type="text" class="calc2__input calc2__input--year" value="10">
+					<!-- <div class="calc2__rub">л</div> -->
+				</div>
+				<div id="calc2_error" class="calc2__alert"></div>
+			</div>
+			
+			<div class="calc2__line">
+				<div class="calc2__title">Рост цен на данный вид активов в год:</div>
+				<div class="calc2__symb">
+					<input id="in3" type="text" class="calc2__input" value="4">
+					<div class="calc2__rub calc2__rub--prc">%</div>
+				</div>
+				<div class="calc2__alert"></div>
 			</div>
 
-			<div class="calc2__line">
-				<div class="calc2__title">За 10 лет рост цен на, %</div>
-				<input id="in4" type="text" class="calc2__input" value="0">
-			</div>
+
 
 			<div class="calc2__line">
-				<div class="calc2__title">Срок накопления, N лет:</div>
-				<input id="in5" type="text" class="calc2__input" value="5">
+				<div class="calc2__title">Будущая стоимость цели:</div>
+				<div class="calc2__symb">
+					<input id="in2" type="text" class="calc2__input" value="" disabled>
+					<div class="calc2__rub">₽</div>
+				</div>
+				<div class="calc2__alert"></div>
 			</div>
 
-			<div class="calc2__line">
+			<!-- <div class="calc2__line">
 				<div class="calc2__title">Стартовый капитал:</div>
-				<input id="in6" type="text" class="calc2__input" value="0">
+				<div class="calc2__symb">
+					<input id="in6" type="text" class="calc2__input" value="0">
+					<div class="calc2__rub">₽</div>
+				</div>
+			</div> -->
+
+			<div class="calc2__line">
+				<div class="calc2__title">За <span class="calc2__replace">10</span> лет рост цен на:</div>
+				<div class="calc2__symb">
+					<input id="in4" type="text" class="calc2__input" value="0" disabled>
+					<div class="calc2__rub calc2__rub--prc">%</div>
+				</div>
+				<div class="calc2__alert"></div>
 			</div>
 
-			<div class="calc2__table">
-				<div class="calc2__row">
-					<div class="calc2__cell1">Как будем сохранять / инвестировать:</div>
-					<div class="calc2__cell2">Номинальная или бумажная доходность, %</div>
-					<div class="calc2__cell2">Стартовый капитал через 5 лет</div>
-					<div class="calc2__cell2">Остается накопить (новые сбережения)</div>
-					<div class="calc2__cell2">Сколько нужно откладывать в месяц</div>
-					<div class="calc2__cell2">Справочно: общая сумма новых сбережений за 5 лет</div>
+
+			<div class="calc2__name calc2__name--margintop">Варианты управления сбережениями:</div>
+
+
+			<div class="calc2__wrap">
+
+				<div class="calc2__card">
+
+					<div class="calc2__hat">
+						<div class="calc2__variant"><span class="calc2__variant--bold">Вариант&nbsp;1.</span><br>В фиатных (наличных) деньгах</div>
+						<div class="calc2__icon2"><img src="img/money.png" alt=""></div>
+					</div>
+
+					<div class="calc2__block">
+
+						<div class="calc2__line2">
+							<div class="calc2__text">Процент / доходность*:</div>
+							<div id="cell-1-0" class="calc2__result"></div>
+						</div>
+						<div class="calc2__line2">
+							<div class="calc2__text">Сколько нужно откладывать в месяц:</div>
+							<div id="cell-1-3" class="calc2__result"></div>
+						</div>
+						<div class="calc2__line2">
+							<div class="calc2__text">Сумма новых сбережений за <span class="calc2__replace">10</span> лет:</div>
+							<div id="cell-1-4" class="calc2__result"></div>
+						</div>
+
+					</div>
+
 				</div>
-				<div class="calc2__row">
-					<div class="calc2__cell1">Как все на депозите в крупном банке из топ-10</div>
-					<div id="cell-1-0" class="calc2__cell2">6</div>
-					<div id="cell-1-1" class="calc2__cell2"></div>
-					<div id="cell-1-2" class="calc2__cell2"></div>
-					<div id="cell-1-3" class="calc2__cell2"></div>
-					<div id="cell-1-4" class="calc2__cell2"></div>
+
+				<div class="calc2__card">
+
+					<div class="calc2__hat">
+						<div class="calc2__variant"><span class="calc2__variant--bold">Вариант&nbsp;2.</span><br>На депозите в крупном банке&nbsp;из&nbsp;топ-10</div>
+						<div class="calc2__icon2"><img src="img/vault.png" alt=""></div>
+					</div>
+
+					<div class="calc2__block">
+
+						<div class="calc2__line2">
+							<div class="calc2__text">Процент / доходность*:</div>
+							<div id="cell-2-0" class="calc2__result"></div>
+						</div>
+						<div class="calc2__line2">
+							<div class="calc2__text">Сколько нужно откладывать в месяц:</div>
+							<div id="cell-2-3" class="calc2__result"></div>
+						</div>
+						<div class="calc2__line2">
+							<div class="calc2__text">Сумма новых сбережений за <span class="calc2__replace">10</span> лет:</div>
+							<div id="cell-2-4" class="calc2__result"></div>
+						</div>
+
+						<div class="calc2__note2">Важно! Застрахованы только 1,4 м.р. на один паспорт и банк</div>
+
+					</div>
+
 				</div>
-				<div class="calc2__row">
-					<div class="calc2__cell1">В наличных рублях</div>
-					<div id="cell-2-0" class="calc2__cell2">0</div>
-					<div id="cell-2-1" class="calc2__cell2"></div>
-					<div id="cell-2-2" class="calc2__cell2"></div>
-					<div id="cell-2-3" class="calc2__cell2"></div>
-					<div id="cell-2-4" class="calc2__cell2"></div>
+
+				<div class="calc2__card">
+
+					<div class="calc2__hat">
+						<div class="calc2__variant"><span class="calc2__variant--bold">Вариант&nbsp;3.</span><br>Пассивные инвестиции (умеренный&nbsp;риск)**</div>
+						<div class="calc2__icon2"><img src="img/profits.png" alt=""></div>
+					</div>
+
+					<div class="calc2__block">
+
+						<div class="calc2__line2">
+							<div class="calc2__text">Процент / доходность*:</div>
+							<div id="cell-3-0" class="calc2__result"></div>
+						</div>
+						<div class="calc2__line2">
+							<div class="calc2__text">Сколько нужно откладывать в месяц:</div>
+							<div id="cell-3-3" class="calc2__result"></div>
+						</div>
+						<div class="calc2__line2">
+							<div class="calc2__text">Сумма новых сбережений за <span class="calc2__replace">10</span> лет:</div>
+							<div id="cell-3-4" class="calc2__result"></div>
+						</div>
+
+						<div class="calc2__note2">Брокерский счет у российского брокера, портфель</div>
+
+					</div>
+
 				</div>
-				<div class="calc2__row">
-					<div class="calc2__cell1">Пассивные инвестиции (умеренный/средний риск)*</div>
-					<div id="cell-3-0" class="calc2__cell2">11.5</div>
-					<div id="cell-3-1" class="calc2__cell2"></div>
-					<div id="cell-3-2" class="calc2__cell2"></div>
-					<div id="cell-3-3" class="calc2__cell2"></div>
-					<div id="cell-3-4" class="calc2__cell2"></div>
+
+				<div class="calc2__card">
+
+					<div class="calc2__hat">
+						<div class="calc2__variant"><span class="calc2__variant--bold">Вариант&nbsp;4.</span><br>В кредит</div>
+						<div class="calc2__icon2"><img src="img/bank.png" alt=""></div>
+					</div>
+
+					<div class="calc2__block">
+
+						<div class="calc2__line2">
+							<div class="calc2__text">Процент / доходность*:</div>
+							<div id="cell-4-0" class="calc2__result"></div>
+						</div>
+						<div class="calc2__line2">
+							<div class="calc2__text">Сколько нужно откладывать в месяц:</div>
+							<div id="cell-4-3" class="calc2__result"></div>
+						</div>
+						<div class="calc2__line2">
+							<div class="calc2__text">Сумма новых сбережений за <span class="calc2__replace">10</span> лет:</div>
+							<div id="cell-4-4" class="calc2__result"></div>
+						</div>
+
+						<div class="calc2__note2">Под среднюю кредитную ставку</div>
+
+					</div>
+
 				</div>
+
 			</div>
 
-			<div class="calc2__btn">Рассчитать</div>
+			<div class="calc2__note3">
+			* - Она же "бумажная" доходность (до вычета инфляции), в варианте с кредитом - процент по кредиту.
+			</div>
+
+			<div class="calc2__note3">
+			** - Доходность в примере по риск-профилю "умеренный", поскольку горизонт больше 5 лет. Для определения подходящей доходности нужно заполнить Риск-Профиль, т.е. сначала определиться с уровнем риска, ибо доходность это производная от срока и риска и она всегда вторична.
+			</div>
+
+			<div class="calc2__note3 calc2__note3--tac">
+			Обязательно сохраните или распечатайте расчет себе на память!
+			</div>
+
+			<div class="calc2__btn">Распечатать</div>
+
+
+			<!-- <div class="calc2__table">
+
+				<div class="calc2__row">
+
+					<div class="calc2__cell calc2__cell--bg calc2__cell--border-t calc2__cell--border-l calc2__cell--radius-t-l">Как будем сохранять / инвестировать:</div>
+					<div class="calc2__cell calc2__cell--border-t calc2__cell--border-l">
+						В наличных рублях
+						<div class="calc2__icon"><img src="img/money.png" alt=""></div>
+					</div>
+					<div class="calc2__cell calc2__cell--border-t calc2__cell--border-l">
+						На депозите в крупном банке из топ-10
+						<div class="calc2__icon"><img src="img/bank.png" alt=""></div>
+					</div>
+					<div class="calc2__cell calc2__cell--border-t calc2__cell--border-l calc2__cell--border-r calc2__cell--radius-t-r">
+						Пассивные инвестиции (умеренный / средний&nbsp;риск)*
+						<div class="calc2__icon"><img src="img/profits.png" alt=""></div>
+					</div>
+
+				</div>
+
+				<div class="calc2__row">
+
+					<div class="calc2__cell calc2__cell--border-t calc2__cell--border-l calc2__cell--bg">Номинальная или бумажная доходность,&nbsp;%</div>
+					<div id="cell-1-0" class="calc2__cell calc2__cell--border-t calc2__cell--border-l">0 %</div>
+					<div id="cell-2-0" class="calc2__cell calc2__cell--border-t calc2__cell--border-l">6 %</div>
+					<div id="cell-3-0" class="calc2__cell calc2__cell--border-t calc2__cell--border-l calc2__cell--border-r">11.5 %</div>
+
+				</div>
+
+				<div class="calc2__row">
+
+					<div class="calc2__cell calc2__cell--border-t calc2__cell--border-l calc2__cell--bg">Стартовый капитал через&nbsp;5&nbsp;лет</div>
+					<div id="cell-1-1" class="calc2__cell calc2__cell--border-t calc2__cell--border-l"></div>
+					<div id="cell-2-1" class="calc2__cell calc2__cell--border-t calc2__cell--border-l"></div>
+					<div id="cell-3-1" class="calc2__cell calc2__cell--border-t calc2__cell--border-l calc2__cell--border-r"></div>
+
+				</div>
+
+				<div class="calc2__row">
+
+					<div class="calc2__cell calc2__cell--border-t calc2__cell--border-l calc2__cell--bg">Остается накопить (новые&nbsp;сбережения)</div>
+					<div id="cell-1-2" class="calc2__cell calc2__cell--border-t calc2__cell--border-l"></div>
+					<div id="cell-2-2" class="calc2__cell calc2__cell--border-t calc2__cell--border-l"></div>
+					<div id="cell-3-2" class="calc2__cell calc2__cell--border-t calc2__cell--border-l calc2__cell--border-r"></div>
+
+				</div>
+
+				<div class="calc2__row">
+
+					<div class="calc2__cell calc2__cell--border-t calc2__cell--border-l calc2__cell--bg">Сколько нужно откладывать в&nbsp;месяц</div>
+					<div id="cell-1-3" class="calc2__cell calc2__cell--border-t calc2__cell--border-l"></div>
+					<div id="cell-2-3" class="calc2__cell calc2__cell--border-t calc2__cell--border-l"></div>
+					<div id="cell-3-3" class="calc2__cell calc2__cell--border-t calc2__cell--border-l calc2__cell--border-r"></div>
+
+				</div>
+
+				<div class="calc2__row">
+
+					<div class="calc2__cell calc2__cell--border-t calc2__cell--border-l calc2__cell--bg">Справочно: общая сумма новых сбережений за&nbsp;5&nbsp;лет</div>
+					<div id="cell-1-4" class="calc2__cell calc2__cell--border-t calc2__cell--border-l"></div>
+					<div id="cell-2-4" class="calc2__cell calc2__cell--border-t calc2__cell--border-l"></div>
+					<div id="cell-3-4" class="calc2__cell calc2__cell--border-t calc2__cell--border-l calc2__cell--border-r"></div>
+
+				</div>
+
+				<div class="calc2__row">
+
+					<div class="calc2__cell calc2__cell--border-t calc2__cell--border-l calc2__cell--border-b calc2__cell--bg calc2__cell--radius-b-l">Примечание</div>
+					<div class="calc2__cell calc2__cell--border-t calc2__cell--border-l calc2__cell--border-b"></div>
+					<div class="calc2__cell calc2__cell--border-t calc2__cell--border-l calc2__cell--border-b">Важно! Застрахованы только 1,4 м.р. на один паспорт и банк</div>
+					<div class="calc2__cell calc2__cell--border-t calc2__cell--border-l calc2__cell--border-b calc2__cell--border-r calc2__cell--radius-b-r">Брокерский счет у российского брокера, портфель на основе ETF	</div>
+
+				</div>
+
+			</div> -->
 
 		</div>
 
