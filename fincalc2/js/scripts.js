@@ -176,19 +176,19 @@ $(document).ready(function() {
 
 
 
-		var cell_1_3 = cell_1_2 / (val5 * 12);
+		var cell_1_3 = +(cell_1_2 / (val5 * 12)).toFixed(0);
 		$('#cell-1-3').html( cell_1_3.toLocaleString('ru') + " " + currency );
 
-		var cell_2_3 = ( cell_2_2 * ( prcnt2 / 100 / 12 ) ) / ( (( 1 + ( prcnt2 / 100 / 12 ) ) ** ( 12 * val5 )) - 1 );
+		var cell_2_3 = +(( cell_2_2 * ( prcnt2 / 100 / 12 ) ) / ( (( 1 + ( prcnt2 / 100 / 12 ) ) ** ( 12 * val5 )) - 1 )).toFixed(0);
 		$('#cell-2-3').html( cell_2_3.toLocaleString('ru') + " " + currency );
 
-		var cell_3_3 = ( cell_3_2 * ( prcnt3 / 100 / 12 ) ) / ( (( 1 + ( prcnt3 / 100 / 12 ) ) ** ( 12 * val5 )) - 1 );
+		var cell_3_3 = +(( cell_3_2 * ( prcnt3 / 100 / 12 ) ) / ( (( 1 + ( prcnt3 / 100 / 12 ) ) ** ( 12 * val5 )) - 1 )).toFixed(0);
 		$('#cell-3-3').html( cell_3_3.toLocaleString('ru') + " " + currency );
 
 		// var cell_4_3 = ( cell_4_2 * ( prcnt4 / 100 / 12 ) ) / ( (( 1 + ( prcnt4 / 100 / 12 ) ) ** ( 12 * val5 )) - 1 );
 		// $('#cell-4-3').html( cell_4_3.toLocaleString('ru') + " " + currency );
 
-		var cell_4_3 = val1 * ( ( prcnt4 / 100 / 12 * -1 ) + ( ( prcnt4 / 100 / 12 * -1 ) / ( ( 1 + ( prcnt4 / 100 / 12 * -1 ) ) ** ( val5 * 12 ) - 1 ) ) );
+		var cell_4_3 = +(val1 * ( ( prcnt4 / 100 / 12 * -1 ) + ( ( prcnt4 / 100 / 12 * -1 ) / ( ( 1 + ( prcnt4 / 100 / 12 * -1 ) ) ** ( val5 * 12 ) - 1 ) ) )).toFixed(0);
 		$('#cell-4-3').html( cell_4_3.toLocaleString('ru') + " " + currency );
 
 

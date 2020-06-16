@@ -171,6 +171,10 @@ body
         @media ( max-width: 720px )
             margin: 5px 0
 
+        &--short
+            width: 90px
+            margin: 0 0 0 100px
+
         &--year
             padding: 0 10px
 
@@ -279,6 +283,9 @@ body
             line-height: 1.2
         @media ( max-width: 399px )
             font-size: 14px
+        @media print
+            text-shadow: none
+            color: #111111
 
         &--bold
             font-weight: 600

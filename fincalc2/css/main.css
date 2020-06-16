@@ -270,6 +270,11 @@ body {
   }
 }
 
+.calc2__input--short {
+  width: 90px;
+  margin: 0 0 0 100px;
+}
+
 .calc2__input--year {
   padding: 0 10px;
 }
@@ -423,6 +428,13 @@ body {
 @media (max-width: 399px) {
   .calc2__variant {
     font-size: 14px;
+  }
+}
+
+@media print {
+  .calc2__variant {
+    text-shadow: none;
+    color: #111111;
   }
 }
 
