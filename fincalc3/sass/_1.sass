@@ -1,0 +1,539 @@
+
+$color1: #003B3B
+$color2: #58968B
+$color3: #D8F1ED
+
+*
+    padding: 0
+    margin: 0
+    font-family: 'roboto', sans-serif
+    box-sizing: border-box
+
+*:active, 
+*:focus
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+
+#anchor1
+    @media ( max-width: 599px )
+        height: 0 !important
+
+body
+    position: relative
+    background: #ccc
+    @media ( max-width: 999px )
+        background: $color1
+
+.calc3
+    position: relative
+    background: $color1
+    width: 100%
+    max-width: 1000px
+    margin: 100px auto
+    border-radius: 30px
+    padding: 10px 10px 50px 10px
+    box-shadow: 0px 22px 30px 0 rgba(0, 0, 0, 0.12)
+    overflow: hidden
+    @media print
+        padding: 0 10px
+        box-shadow: none
+    @media ( max-width: 999px )
+        margin: 50px auto
+        box-shadow: none
+    @media ( max-width: 599px )
+        border-radius: 20px
+
+    &__container
+        padding: 40px 20px 40px 20px
+        position: relative
+        background: #ffffff
+        margin: 0 auto
+        width: 100%
+        box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.08)
+        border-radius: 30px
+        overflow: hidden
+        @media print
+            box-shadow: none
+            padding: 0 20px
+        @media ( max-width: 650px )
+            padding: 0 5px
+        @media ( max-width: 599px )
+            border-radius: 20px
+
+        &--1
+            transition-duration: 1s
+            transition-delay: 0.7s
+            transform: translateY(-500px)
+            opacity: 0
+
+        &--2
+            transition-duration: 1s
+            transition-delay: 0.7s
+            transform: translateY(-400px)
+
+        &--appear
+            transform: translateY(0px)
+            opacity: 1
+
+    &__space
+        position: relative
+        width: 100%
+        @media print
+            display: none
+
+        &--50
+            height: 50px
+
+        &--10
+            height: 10px
+
+    &__logo
+        width: 100%
+        background: $color1
+        border-radius: 30px 30px 0 0
+        height: 120px
+        transition-duration: 1s
+        transition-delay: 0.7s
+        @media print
+            display: none
+        @media ( max-width: 599px )
+            border-radius: 20px
+
+        &--appear
+            transform: translateY(0px)
+
+    &__img
+        position: relative
+        height: 80px
+        margin: 20px auto
+        display: block
+        opacity: 0
+        transition-duration: 1s
+        transition-delay: 1.7s
+        //transform: translateY(-300px)
+
+        &--show
+            opacity: 1
+
+        &--appear
+            transform: translateY(0px)
+
+    &__head
+        font-family: Beba, 'Bebas Neue', sans-serif
+        color: $color1
+        font-size: 34px
+        text-align: center
+        margin: 20px auto 30px auto
+        letter-spacing: 0.5px
+        max-width: 710px
+        transition-duration: 0.9s
+        transition-delay: 0.9s
+        //transform: translateY(-100px)
+        @media ( max-width: 520px )
+            font-size: 28px
+        @media ( max-width: 430px )
+            font-size: 24px
+
+        &--appear
+            transform: translateY(0px)
+
+    &__description
+        font-size: 18px
+        line-height: 1.4
+        font-weight: 400
+        text-align: center
+        margin: 0 auto 10px auto
+        position: relative
+        max-width: 700px
+        color: $color2
+        letter-spacing: 0.3px
+        @media ( max-width: 520px )
+            font-size: 16px
+        @media ( max-width: 430px )
+            font-size: 14px
+
+    &__block
+        width: 100%
+        max-width: 660px
+        padding: 30px 20px 0px 20px
+        margin: 0px auto
+        @media ( max-width: 520px )
+            padding: 30px 10px
+
+        &--1
+        &--2
+        &--3
+        &--4
+            display: none
+        &--5
+            display: none
+        &--6
+            display: none
+        &--7
+            display: none
+        &--8
+            display: none
+
+    &__question
+        font-size: 18px
+        border-bottom: 2px solid $color3
+        padding: 0 0 20px 110px
+        @media ( max-width: 760px )
+            padding: 0 0 20px 0
+            text-align: center
+        @media ( max-width: 430px )
+            font-size: 16px
+
+    &__inner
+        width: 100%
+        padding: 20px 0px 20px 130px
+        margin: 0px auto
+        @media ( max-width: 760px )
+            padding: 20px 0px
+            width: 440px
+        @media ( max-width: 520px )
+            width: 100%
+
+    &__answer
+        margin: 8px 0
+        display: flex
+        align-items: center
+
+    &__radio
+        transition-duration: 0.5s
+        display: none
+        outline: none !important
+
+        &:checked + .calc3__label
+            color: #4274ff
+
+        // &:checked + .calc3__label::before
+        //     background: #4274ff
+        //     content: '•'
+        //     box-shadow: inset 0 0 15px 2px rgba(0,0,0,0)
+        &:checked + .calc3__label::after
+            flex-shrink: 0
+            content: ''
+            position: absolute
+            width: 14px
+            height: 14px
+            background: #fff
+            border-radius: 20px
+            margin: 0 0 0 5px
+
+    &__label
+        outline: none !important
+        cursor: pointer
+        font-size: 17px
+        user-select: none
+        display: flex
+        align-items: center
+        @media ( max-width: 430px )
+            font-size: 15px
+        
+        &::before
+            flex-shrink: 0
+            content: ''
+            color: #fff
+            font-size: 54px
+            display: flex
+            line-height: 24px
+            text-align: center
+            width: 24px
+            height: 24px
+            border-radius: 20px
+            margin: 0 10px 0 0
+            background: $color2
+            box-shadow: inset 0 0 15px 2px rgba(0,0,0,0.4)
+
+    &__print
+        margin: 30px auto
+        font-size: 20px
+        font-weight: 600
+        text-align: center
+        display: none
+        @media print
+            display: block
+
+    &__title
+        font-family: Beba, 'Bebas Neue', sans-serif
+        text-align: center
+        font-size: 26px
+        font-weight: 600
+        color: $color1
+        margin: 50px 0 20px 0
+        letter-spacing: 1px
+        display: none
+        @media print
+            display: none !important
+
+        &--show
+            display: block
+
+
+    &__sos
+        position: relative
+        width: 100%
+        height: 240px
+        //background: linear-gradient(95.23deg, #00DA30 -7.29%, #FFFF00 25.26%, #FFBB00 54.19%, #F56900 81.31%, #E90000 108.44%)
+        border-radius: 30px
+        background: $color1
+        box-shadow: 0px 7px 15px 0 rgba(0, 0, 0, 0.12)
+        overflow: hidden
+        padding: 0 15px
+        display: none
+        @media print
+            display: none !important
+        @media ( max-width: 870px )
+            border-radius: 15px
+        @media ( max-width: 650px )
+            padding: 0 10px
+
+        &--show
+            display: block
+
+    &__temp
+        position: relative
+        width: 100%
+        height: 130px
+        border-radius: 10px
+        padding: 0 15px
+        background: linear-gradient(95.23deg, #00DA30 -7.29%, #FFFF00 25.26%, #FFBB00 54.19%, #F56900 81.31%, #E90000 108.44%)
+        transform: translateX(-1500px)
+        transform: scaleX(0)
+        transform-origin: left
+        transition-duration: 1s
+
+        &--grow
+            //transform: translateX(0px)
+            transform: scaleX(1)
+
+    //mark1
+    &__select
+        position: absolute
+        height: 140px
+        top: -5px
+        left: 5px
+        width: 22px
+        margin: 0 6px
+        background: rgba(0,0,0,0.4)
+        border: 2px solid #fff
+        border-radius: 5px
+        transform: translateX(-1500px)
+        transition-duration: 0.7s
+        transition-delay: 0.1s
+        opacity: 0
+
+        &--show
+            //transform: translateX(0px)
+            transform: translateX(0px)
+            opacity: 1
+
+
+        &::after
+            content: ""
+            display: block
+            background: #fff
+            position: absolute
+            width: 100%
+            height: 3px
+            top: 0
+            left: 0
+
+        &::before
+            content: ""
+            display: block
+            background: #fff
+            position: absolute
+            width: 100%
+            height: 3px
+            top: 100%
+            left: 0
+            margin: -3px 0 0 0
+
+    &__corners-top
+        position: absolute
+        width: 18px
+        height: 4px
+        background: url("../img/corners-top.png")
+        background-size: 100% 100%
+        top: 3px
+        left: 0px
+    &__corners-bot
+        position: absolute
+        width: 18px
+        height: 4px
+        background: url("../img/corners-bot.png")
+        background-size: 100% 100%
+        top: 129px
+        left: 0px
+
+    &__scale
+        display: flex
+        align-items: center
+        width: 100%
+        height: 50px
+        padding: 0 5px
+        top: 0
+        text-shadow: 0px 1px 1px rgba(0,0,0,0.4)
+        @media ( max-width: 999px )
+            justify-content: center
+
+
+    &__dig
+        font-size: 16px
+        width: 36px
+        text-align: center
+        color: #fff
+
+        &--hide1
+            @media ( max-width: 610px )
+                opacity: 0
+            @media ( max-width: 469px )
+                display: none
+        &--hide2
+            @media ( max-width: 350px )
+                opacity: 0
+
+        // &--c1
+        //     color: #555
+        // &--c2
+        //     color: #999
+        // &--c3
+        //     color: #bbb
+        // &--c4
+        //     color: #ddd
+        // &--c5
+        //     color: #fff
+
+    &__types
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+        height: 60px
+        padding: 4px 0
+
+    &__type
+        //background: #00000044
+        position: relative
+        width: 20%
+        padding: 0 15px
+        font-size: 15px
+        height: 100%
+        text-align: center
+        display: flex
+        align-items: center
+        justify-content: center
+        color: #777
+        @media ( max-width: 629px )
+            display: none
+
+        &--select
+            color: #fff
+
+    &__oneway
+        color: #fff
+        text-align: center
+        width: 100%
+        position: relative
+        letter-spacing: 0.5px
+        display: none
+        @media ( max-width: 629px )
+            display: block
+
+    &__dashes
+        position: absolute
+        width: 100%
+        height: 100%
+        display: flex
+        padding: 20px 0
+
+    &__sep
+        width: 20%
+        border-right: 1px dashed #111111aa
+
+        &--1
+            width: 21%
+        &--2
+            width: 19.5%
+        &--3
+            width: 19.3%
+        &--4
+            width: 19.6%
+
+
+    &__investor
+        font-size: 20px
+        margin: 50px auto 30px auto
+        text-align: center
+        display: none
+
+        &--show
+            display: block
+
+    &__textarea
+        font-size: 16px
+        padding: 5px 10px
+        width: 500px
+        height: 140px
+        margin: 30px auto
+        border-radius: 10px
+        border: 2px solid $color2
+        display: none
+        @media ( max-width: 560px )
+            width: 100%
+
+        &--show
+            display: block
+
+
+    &__note
+        text-align: justify
+        font-size: 15px
+        color: $color1
+        margin: 10px auto 20px auto
+        width: 90%
+        text-align: center
+        display: none
+        @media print
+            display: none
+
+        &--show
+            display: block
+
+    &__btn
+        outline: none
+        margin: 10px auto 50px auto
+        background: $color2
+        color: #fff
+        width: 180px
+        height: 50px
+        display: none
+        justify-content: center
+        align-items: center
+        font-size: 18px
+        border-radius: 5px
+        transition-duration: 0.2s
+        cursor: pointer
+        box-shadow: 0 5px 20px 0 rgba(0,0,0,0.15)
+        @media print
+            display: none !important
+
+        &--show
+            display: flex
+
+        &:hover
+            background: #007259
+            color: #fff
+
+    &__tip
+        color: #999999
+        font-size: 16px
+        text-align: center
+        margin: 10px auto
+        @media print
+            display: none !important
+        @media ( max-width: 650px )
+            margin: 10px auto 50px auto
+        @media ( max-width: 599px )
+            margin: 50px auto
