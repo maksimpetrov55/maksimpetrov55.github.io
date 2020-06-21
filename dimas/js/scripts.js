@@ -39,8 +39,24 @@ $(document).ready(function() {
     //открытие-закрытие формы
 
     //отправка формы
+    $('.capcha__radio').change(function(){
+        var capchaValue = $('input[name=capcha_radio]:checked').val();
+        if ( capchaValue == 0 ) {
+            $('.capcha-stop').addClass("capcha-stop--hide");
+        } else {
+            $('.capcha-stop').removeClass("capcha-stop--hide");
+        }
+    });
+
     $(".form__content__btn").click(function(){
-        $( "form" ).submit();
+        var capchaValue = $('input[name=capcha_radio]:checked').val();
+        
+        if ( capchaValue == 0 ) {
+            //alert(capchaValue);
+            $( "form" ).submit();
+        } else {
+            document.location.href = "http://www.yandex.ru";
+        }
     });
     //отправка формы
 
