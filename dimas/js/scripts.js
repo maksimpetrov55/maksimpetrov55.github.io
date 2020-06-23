@@ -39,20 +39,25 @@ $(document).ready(function() {
     //открытие-закрытие формы
 
     //отправка формы
+    $('input[name=form_capcha]').val( 100500 );
     $('.capcha__radio').change(function(){
         var capchaValue = $('input[name=capcha_radio]:checked').val();
+        $('input[name=form_capcha]').val(capchaValue);
+
         if ( capchaValue == 0 ) {
             $('.capcha-stop').addClass("capcha-stop--hide");
+            $('.form__content__btn').removeClass("form__content__btn--hidden")
         } else {
             $('.capcha-stop').removeClass("capcha-stop--hide");
+            $('.form__content__btn').addClass("form__content__btn--hidden")
         }
     });
 
     $(".form__content__btn").click(function(){
-        var capchaValue = $('input[name=capcha_radio]:checked').val();
-        
+        var capchaValue = 1;
+        capchaValue = $('input[name=capcha_radio]:checked').val();
+
         if ( capchaValue == 0 ) {
-            //alert(capchaValue);
             $( "form" ).submit();
         } else {
             document.location.href = "http://www.yandex.ru";

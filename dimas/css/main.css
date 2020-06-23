@@ -1783,6 +1783,10 @@ body * {
           transition-duration: 0.2s;
 }
 
+.form__content__input--hidden {
+  display: none;
+}
+
 .form__content__input:focus {
   border-bottom: 2px solid #00B712;
 }
@@ -1861,6 +1865,10 @@ body * {
   height: 55px;
   margin: 30px auto 0 auto;
   font-size: 20px;
+}
+
+.form__content__btn--hidden {
+  display: none !important;
 }
 
 .tnks {

@@ -6,6 +6,7 @@ $mail->CharSet = 'utf-8';
 
 $name = $_POST['form_name'];
 $phone = $_POST['form_phone'];
+$capcha = $_POST['form_capcha'];
 $message = $_POST['form_msg'];
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
@@ -39,7 +40,7 @@ $mail->addAddress('toplandscape@yandex.ru');
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'Заявка с сайта ГОРОД-САД';
-$mail->Body    = '<br>Имя: ' .$name. '<br>Телефон: ' .$phone. '<br>Сообщение: ' .$message. '<br>';
+$mail->Body    = '<br>Имя: ' .$name. '<br>Телефон: ' .$phone. '<br>Сообщение: ' .$message. '<br>Капча:' .$capcha. '<br>' ;
 $mail->AltBody = '';
 
 if(!$mail->send()) {
