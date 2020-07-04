@@ -1,0 +1,50 @@
+.calc5 {
+  width: 870px;
+  margin: 100px auto;
+  padding: 0 30px;
+}
+
+.calc5 input {
+  width: 200px;
+}
+
+.calc5__btn {
+  background: #7774a0;
+  width: 200px;
+  height: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  margin: 30px 0;
+  cursor: pointer;
+}
+
+.calc5__table, .calc5__row {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.calc5__block {
+  position: relative;
+  width: 27%;
+}
+
+.calc5__block--small {
+  width: 19%;
+}
+
+.calc5__cell {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+/*# sourceMappingURL=main.css.map */
