@@ -356,6 +356,8 @@ body {
 
 .calc5__chart__block--margin2 {
   margin: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .calc5__chart__block:hover {

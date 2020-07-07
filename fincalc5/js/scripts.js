@@ -129,9 +129,9 @@ $(document).ready(function() {
 			var chartColor2 = "#003B3B";
 			var chartColor3 = "#00C967";
 			//var height1 = 150 / period * ( period - i + 1);
-			var height1 = set * addition * ( period - i + 1);
+			var height1 = set * addition * ( period - i + 1) + 0.5;
 			var height2 = cash * set;
-			var height3 = set * reverseProfit;
+			var height3 = set * reverseProfit + 0.5;
 			var htmlCode1 = "<div id='chart_block_" + (period - i + 1) + "' class='calc5__chart__block'><div style='height:" + height3 +"px; background:" + chartColor3 + "'></div><div style='height:" + height1 +"px; background:" + chartColor1 + "'></div><div style='height:" + height2 +"px; background:" + chartColor2 + "'></div></div>";
 			chart.insertAdjacentHTML('afterBegin', htmlCode1);
 
@@ -143,16 +143,21 @@ $(document).ready(function() {
 		}
 
 		
-		if ( period > 150 ) {
-			$('.calc5__chart__block').addClass("calc5__chart__block--margin1");
+		if ( period > 250 ) {
+			$('.calc5__chart__block').removeClass("calc5__chart__block--margin1");
+			$('.calc5__chart__block').removeClass("calc5__chart__block--margin2");
+			$('.calc5__chart__block').addClass("calc5__chart__block--margin2");
 		} else {
-			if ( period > 250 ) {
-				$('.calc5__chart__block').addClass("calc5__chart__block--margin2");
+			if ( period > 150 ) {
+				$('.calc5__chart__block').removeClass("calc5__chart__block--margin1");
+				$('.calc5__chart__block').removeClass("calc5__chart__block--margin2");
+				$('.calc5__chart__block').addClass("calc5__chart__block--margin1");
 			} else {
 				$('.calc5__chart__block').removeClass("calc5__chart__block--margin1");
 				$('.calc5__chart__block').removeClass("calc5__chart__block--margin2");
 			}
 		}
+
 
 		//console.log( arr_addition );
 		
