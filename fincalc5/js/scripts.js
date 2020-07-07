@@ -37,10 +37,10 @@ $(document).ready(function() {
 
 		var rate = 1 + (+percent / 100 / 12);
 
-		$('#result_add').html( (+period * +addition).toFixed(2) );
-		$('#result_profit').html( ((( +addition * 12 / (+percent / 100) ) * ( (rate ** +period) - 1 ) + ( +cash * ( rate ** +period ) ) - +cash - +period * +addition )).toFixed(2) );
-		var total = ( ( +addition * 12 / (+percent / 100) ) * ( (rate ** +period) - 1 ) + ( +cash * ( rate ** +period ) ) ).toFixed(2);
-		$('#result_summ').html( total );
+		$('#result_add').html( (+(+period * +addition).toFixed(0)).toLocaleString("ru") );
+		$('#result_profit').html( (+((( +addition * 12 / (+percent / 100) ) * ( (rate ** +period) - 1 ) + ( +cash * ( rate ** +period ) ) - +cash - +period * +addition )).toFixed(0)).toLocaleString("ru") );
+		var total = ( ( +addition * 12 / (+percent / 100) ) * ( (rate ** +period) - 1 ) + ( +cash * ( rate ** +period ) ) ).toFixed(0);
+		$('#result_summ').html( (+total).toLocaleString("ru") );
 
 		var set = 290 / total;
 
@@ -76,9 +76,9 @@ $(document).ready(function() {
 			var blockNumber = $(this).attr('id').split("_");
 			
 			$('.calc5__chart__cloud__text--mnth').html( "Месяц №" + blockNumber[2] );
-			$('.calc5__chart__cloud__text--add').html( "Пополнений на: " + blockNumber[2] * addition );
-			$('.calc5__chart__cloud__text--perc').html( "Проценты: " + ((( +addition * 12 / (+percent / 100) ) * ( (rate ** blockNumber[2]) - 1 ) + ( +cash * ( rate ** blockNumber[2] ) ) - +cash - blockNumber[2] * +addition )).toFixed(2) );
-			$('.calc5__chart__cloud__text--full').html( "Полная сумма: " + ( ( +addition * 12 / (+percent / 100) ) * ( (rate ** blockNumber[2]) - 1 ) + ( +cash * ( rate ** blockNumber[2] ) ) ).toFixed(2) );
+			$('.calc5__chart__cloud__text--add').html( "Пополнений на: " + (blockNumber[2] * addition).toLocaleString("ru") );
+			$('.calc5__chart__cloud__text--perc').html( "Проценты: " + (+((( +addition * 12 / (+percent / 100) ) * ( (rate ** blockNumber[2]) - 1 ) + ( +cash * ( rate ** blockNumber[2] ) ) - +cash - blockNumber[2] * +addition )).toFixed(0)).toLocaleString("ru") );
+			$('.calc5__chart__cloud__text--full').html( "Полная сумма: " + (+( ( +addition * 12 / (+percent / 100) ) * ( (rate ** blockNumber[2]) - 1 ) + ( +cash * ( rate ** blockNumber[2] ) ) ).toFixed(0)).toLocaleString("ru") );
 
 			$('.calc5__chart__cloud').addClass("calc5__chart__cloud--show");
 		});
@@ -96,20 +96,20 @@ $(document).ready(function() {
 			numberDiv.appendChild(div1);
 
 			let div2 = document.createElement('div');
-			div2.innerHTML = (+i * +addition).toFixed(2);
+			div2.innerHTML = (+(+i * +addition).toFixed(0)).toLocaleString("ru");
 			arr_addition.push(i);
 			div2.className = "calc5__cell";
 			additionDiv.appendChild(div2);
 
 			let div3 = document.createElement('div');
-			var profit = ( (( +addition * 12 / (+percent / 100) ) * ( (rate ** i) - 1 ) + ( +cash * ( rate ** i ) ) - +cash - i * +addition ) ).toFixed(2);
-			var reverseProfit = ( (( +addition * 12 / (+percent / 100) ) * ( (rate ** (period - i +1)) - 1 ) + ( +cash * ( rate ** (period - i +1) ) ) - +cash - (period - i +1) * +addition ) ).toFixed(2);
+			var profit = (+( (( +addition * 12 / (+percent / 100) ) * ( (rate ** i) - 1 ) + ( +cash * ( rate ** i ) ) - +cash - i * +addition ) ).toFixed(0)).toLocaleString("ru");
+			var reverseProfit = ( (( +addition * 12 / (+percent / 100) ) * ( (rate ** (period - i +1)) - 1 ) + ( +cash * ( rate ** (period - i +1) ) ) - +cash - (period - i +1) * +addition ) ).toFixed(0);
 			div3.innerHTML = profit;
 			div3.className = "calc5__cell";
 			profitDiv.appendChild(div3);
 
 			let div4 = document.createElement('div');
-			div4.innerHTML = ( ( +addition * 12 / (+percent / 100) ) * ( (rate ** i) - 1 ) + ( +cash * ( rate ** i ) ) ).toFixed(2) ;
+			div4.innerHTML = (+( ( +addition * 12 / (+percent / 100) ) * ( (rate ** i) - 1 ) + ( +cash * ( rate ** i ) ) ).toFixed(0)).toLocaleString("ru") ;
 			div4.className = "calc5__cell";
 			summDiv.appendChild(div4);
 
