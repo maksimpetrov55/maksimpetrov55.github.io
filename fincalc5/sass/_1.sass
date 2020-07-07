@@ -1,23 +1,164 @@
+$color1: #003B3B
+$color2: #58968B
+$color3: #D8F1ED
 
+
+*
+    margin: 0
+    padding: 0
+    font-family: sans-serif
+    box-sizing: border-box
+
+body
+    background: #cccccc
+    position: relative
 
 .calc5
-    width: 870px
+    position: relative
+    width: 100%
+    max-width: 870px
     margin: 100px auto
-    padding: 0 30px
+    padding: 50px 60px
+    background: #ffffff
+    border-radius: 30px
+    @media ( max-width: 899px )
+        width: 96%
+        padding: 50px 50px
+    @media ( max-width: 649px )
+        padding: 50px 30px
+    @media ( max-width: 530px )
+        padding: 50px 20px
 
-    input
-        width: 200px
 
-    &__btn
-        background: #7774a0
-        width: 200px
-        height: 42px
+    &__h1
+        font-family: Beba, 'Bebas Neue', sans-serif
+        color: $color1
+        font-size: 30px
+        text-align: center
+        letter-spacing: 1px
+        margin: 10px auto 50px auto
+
+    &__description
+        font-size: 19px
+        line-height: 1.4
+        font-weight: 400
+        text-align: center
+        margin: 0 auto 50px
+        position: relative
+        max-width: 700px
+        @media ( max-width: 649px )
+            font-size: 18px
+        @media ( max-width: 530px )
+            font-size: 17px
+        @media ( max-width: 399px )
+            font-size: 15px
+
+    &__flex
         display: flex
-        align-items: center
-        justify-content: center
-        color: #fff
-        margin: 30px 0
-        cursor: pointer
+
+        &--aic
+            align-items: center
+
+        &--jcc
+            justify-content: center
+
+        &--wrap530
+            @media ( max-width: 530px )
+                flex-wrap: wrap
+
+    &__line
+        width: 240px
+        margin: 8px 16px 8px 0
+        text-align: right
+        @media ( max-width: 530px )
+            width: 100%
+            text-align: center
+            margin: 5px 0
+
+    &__input
+        padding: 0 10px 0 10px
+        margin: 5px 80px 5px 0
+        height: 42px
+        border-radius: 5px
+        border: 2px solid $color2
+        font-size: 18px
+        color: $color1
+        width: 170px
+        text-align: right
+        transition-duration: 0.4s
+        @media ( max-width: 649px )
+            margin: 5px 0
+        @media ( max-width: 530px )
+            margin: 5px 0 15px 0
+
+        &:focus
+            background: $color3
+
+    &__result
+        display: flex
+        justify-content: space-between
+        margin: 60px auto 20px auto
+        max-width: 500px
+        @media ( max-width: 470px )
+            margin: 20px 0
+            flex-wrap: wrap
+            justify-content: center
+            div
+                position: relative
+                width: 100%
+                margin: 0 auto 10px auto
+
+    &__text
+        font-size: 16px
+        width: 100%
+        position: relative
+        text-align: center
+        color: $color2
+
+        &--bold
+            font-weight: 600
+            color: $color1
+            margin: 8px 0 0 0
+            font-size: 18px
+
+    &__space
+        position: relative
+        height: 30px
+        width: 100%
+
+    &__note
+        font-size: 14px
+        color: $color2
+        text-align: center
+        display: none
+        margin: 10px 0
+        @media ( max-width: 580px )
+            display: block
+
+    &__slider
+        position: relative
+        width: 100%
+        overflow: auto
+
+    &__shadow
+        position: relative
+
+        &::after
+            content: ""
+            display: none
+            position: absolute
+            right: 0
+            top: 0
+            width: 50px
+            height: 100%
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 60%)
+            @media ( max-width: 580px )
+                display: block
+
+    &__overflow
+        position: relative
+        min-width: 520px
+
 
     &__table,
     &__row
@@ -27,11 +168,30 @@
 
     &__block
         position: relative
-        width: 27%
+        width: 25%
+        @media ( max-width: 530px )
+            width: 26%
 
         &--small
-            width: 19%
+            width: 20%
+            @media ( max-width: 530px )
+                width: 16%
+
+        &--big
+            width: 30%
+            @media ( max-width: 530px )
+                width: 32%
 
     &__cell
-        padding: 10px
+        font-size: 17px
+        padding: 14px 10px
         border-bottom: 1px solid #ccc
+        @media ( max-width: 530px )
+            font-size: 15px
+            padding: 14px 3px
+
+        &--header
+            @media ( max-width: 899px )
+                height: 70px
+                display: flex
+                align-items: center

@@ -6,14 +6,17 @@
 	<meta name="viewport" content="width=device-width">
 	<title>Web Mockup</title>
 	
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="fonts/bebasneue/bebasneue.css">
 	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" href="css/chart.css">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/scripts.js"></script>	
+	<script src="js/scripts.js"></script>
+
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
 </head>
 <body>
@@ -21,53 +24,157 @@
 
 	<div class="calc5">
 
-		<div>
-			<div>Ставка депозита</div>
-			<input type="text" id="in1" value="10">
+		<h1 class="calc5__h1">Калькулятор Сбережений</h1>
+
+		<div class="calc5__description">Калькулятор cбережений позволяет посчитать доход, который приносят инвестиции за определенный срок, с учетом дополнительного пополнения&nbsp;суммы&nbsp;депозита.</div>
+
+		<div class="calc5__flex calc5__flex--aic calc5__flex--jcc calc5__flex--wrap530">
+			<div class="calc5__line">Ставка, % годовых</div>
+			<input class="calc5__input" type="text" id="in1" value="10">
 		</div>
 
-		<div>
-			<div>Начальная сумма</div>
-			<input type="text" id="in2" value="10000">
+		<div class="calc5__flex calc5__flex--aic calc5__flex--jcc calc5__flex--wrap530">
+			<div class="calc5__line">Начальная сумма</div>
+			<input class="calc5__input" type="text" id="in2" value="10000">
 		</div>
 
-		<div>
-			<div>Пополнения</div>
-			<input type="text" id="in3" value="1000">
+		<div class="calc5__flex calc5__flex--aic calc5__flex--jcc calc5__flex--wrap530">
+			<div class="calc5__line">Сумма пополнения в месяц</div>
+			<input class="calc5__input" type="text" id="in3" value="1000">
 		</div>
 
-		<div>
-			<div>Срок вклада</div>
-			<input type="text" id="in4" value="12">
+		<div class="calc5__flex calc5__flex--aic calc5__flex--jcc calc5__flex--wrap530">
+			<div class="calc5__line">Период сбережений, месяцев</div>
+			<input class="calc5__input" type="text" id="in4" value="24">
 		</div>
-
-		<div class="calc5__btn">Считать</div>
 
 		<div id="result" class="calc5__result">
-
-		</div>
-
-		<div class="calc5__row">
-			<div class="calc5__block calc5__block--small">
-				<div class="calc5__cell">Месяц</div>
+			<div>
+				<div class="calc5__text">Всего пополнений</div>
+				<div id="result_add" class="calc5__text calc5__text--bold">1000</div>
 			</div>
-			<div class="calc5__block">
-				<div class="calc5__cell">Добавленные средства</div>
+			<div>
+				<div class="calc5__text">Всего доход</div>
+				<div id="result_profit" class="calc5__text calc5__text--bold">1000</div>
 			</div>
-			<div class="calc5__block">
-				<div class="calc5__cell">Прибыль</div>
-			</div>
-			<div class="calc5__block">
-				<div class="calc5__cell">Итоговая сумма</div>
+			<div>
+				<div class="calc5__text">Итоговая сумма</div>
+				<div id="result_summ" class="calc5__text calc5__text--bold">1000</div>
 			</div>
 		</div>
 
-		<div class="calc5__table">
-			<div id="table1" class="calc5__block calc5__block--small"></div>
-			<div id="table2" class="calc5__block"></div>
-			<div id="table3" class="calc5__block"></div>
-			<div id="table4" class="calc5__block"></div>
+		<div class="calc5__space"></div>
+
+		<div class="calc5__note">график можно прокрутить</div>
+
+		<div class="calc5__slider">
+
+			<div class="calc5__overflow">
+
+				<div class="calc5__chart">
+
+					<div class="calc5__chart__cloud">
+						<div class="calc5__chart__cloud__text calc5__chart__cloud__text--mnth">11111</div>
+						<div class="calc5__chart__cloud__text calc5__chart__cloud__text--add">11111</div>
+						<div class="calc5__chart__cloud__text calc5__chart__cloud__text--perc">11111</div>
+						<div class="calc5__chart__cloud__text calc5__chart__cloud__text--full">11111</div>
+					</div>
+		
+					<div class="calc5__chart__scaleY">
+						<div>0</div>
+						<div class="calc5__chart__scaleY__1">10000</div>
+						<div class="calc5__chart__scaleY__2">20000</div>
+						<div class="calc5__chart__scaleY__3">30000</div>
+						<div class="calc5__chart__scaleY__4">40000</div>
+					</div>
+		
+					<div class="calc5__chart__lines">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+		
+					<div class="calc5__chart__wrap" id="chart"></div>
+		
+					<!-- <figure class="highcharts-figure">
+						<div id="container"></div>
+						<p class="highcharts-description">
+						</p>
+					</figure> -->
+		
+					<!-- <div class="calc5__chart__scaleX">
+						<div class="calc5__chart__scaleX__1">1</div>
+						<div class="calc5__chart__scaleX__2">2</div>
+						<div class="calc5__chart__scaleX__3">3</div>
+						<div class="calc5__chart__scaleX__4">4</div>
+						<div class="calc5__chart__scaleX__5">5</div>
+						<div class="calc5__chart__scaleX__6">6</div>
+						<div class="calc5__chart__scaleX__7">7</div>
+						<div class="calc5__chart__scaleX__8">8</div>
+						<div class="calc5__chart__scaleX__9">9</div>
+						<div class="calc5__chart__scaleX__10">10</div>
+						<div class="calc5__chart__scaleX__11">11</div>
+						<div class="calc5__chart__scaleX__12">12</div>
+					</div> -->
+		
+					<div class="calc5__chart__legend">
+						<div class="calc5__chart__name calc5__chart__name--black">Начальная сумма</div>
+						<div class="calc5__chart__name calc5__chart__name--blue">Пополнение</div>
+						<div class="calc5__chart__name calc5__chart__name--green">Проценты</div>
+					</div>
+		
+				</div>
+
+			</div>
+
 		</div>
+
+		
+
+		<div class="calc5__space"></div>
+
+		<div class="calc5__note">таблицу можно прокрутить</div>
+
+		<!-- <div class="calc5__shadow"> -->
+
+			<div class="calc5__slider">
+
+				<div class="calc5__overflow">
+
+					<div class="calc5__row">
+						<div class="calc5__block calc5__block--small">
+							<div class="calc5__cell calc5__cell--header">Месяц</div>
+						</div>
+						<div class="calc5__block">
+							<div class="calc5__cell calc5__cell--header">Пополнение</div>
+						</div>
+						<div class="calc5__block">
+							<div class="calc5__cell calc5__cell--header">Проценты</div>
+						</div>
+						<div class="calc5__block calc5__block--big">
+							<div class="calc5__cell calc5__cell--header">Итого на конец месяца</div>
+						</div>
+					</div>
+			
+					<div class="calc5__table">
+						<div id="table1" class="calc5__block calc5__block--small"></div>
+						<div id="table2" class="calc5__block"></div>
+						<div id="table3" class="calc5__block"></div>
+						<div id="table4" class="calc5__block calc5__block--big"></div>
+					</div>
+
+				</div>
+
+			</div>
+
+		<!-- </div> -->
+
+		<div class="calc5__space"></div>
+		<div class="calc5__space"></div>
+		<div class="calc5__space"></div>
+		<div class="calc5__space"></div>
 		
 	</div>
 
