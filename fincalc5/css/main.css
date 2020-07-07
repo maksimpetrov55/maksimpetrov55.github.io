@@ -350,6 +350,14 @@ body {
   cursor: pointer;
 }
 
+.calc5__chart__block--margin1 {
+  margin: 0 0.5px;
+}
+
+.calc5__chart__block--margin2 {
+  margin: 0;
+}
+
 .calc5__chart__block:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);

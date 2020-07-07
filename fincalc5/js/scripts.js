@@ -142,6 +142,18 @@ $(document).ready(function() {
 
 		}
 
+		
+		if ( period > 150 ) {
+			$('.calc5__chart__block').addClass("calc5__chart__block--margin1");
+		} else {
+			if ( period > 250 ) {
+				$('.calc5__chart__block').addClass("calc5__chart__block--margin2");
+			} else {
+				$('.calc5__chart__block').removeClass("calc5__chart__block--margin1");
+				$('.calc5__chart__block').removeClass("calc5__chart__block--margin2");
+			}
+		}
+
 		//console.log( arr_addition );
 		
 		// var a = 3;
