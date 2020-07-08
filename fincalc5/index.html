@@ -7,11 +7,11 @@
 	<title>Web Mockup</title>
 	
 	<link rel="stylesheet" href="fonts/bebasneue/bebasneue.css">
-	<link rel="stylesheet" href="css/main.css?v4">
+	<link rel="stylesheet" href="css/main.css?v5">
 	<link rel="stylesheet" href="css/chart.css">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/scripts.js?v4"></script>
+	<script src="js/scripts.js?v5"></script>
 
 	<script src="https://code.highcharts.com/highcharts.js"></script>
 	<script src="https://code.highcharts.com/modules/exporting.js"></script>
@@ -26,7 +26,7 @@
 
 		<h1 class="calc5__h1">Калькулятор Сбережений</h1>
 
-		<div class="calc5__description">Калькулятор cбережений позволяет посчитать доход, который приносят инвестиции за определенный срок, с учетом дополнительного пополнения&nbsp;суммы&nbsp;депозита.</div>
+		<div class="calc5__description">Позволяет рассчитать будущий размер первоначальной суммы сбережений, а также всех равных ежемесячных пополнений за определенный срок. В качестве ставки процента вы можете использовать как номинальную, так и реальные ставку, даже отрицательную.</div>
 
 		<div class="calc5__flex calc5__flex--aic calc5__flex--jcc calc5__flex--wrap530">
 			<div class="calc5__line">Ставка, % годовых</div>
@@ -44,7 +44,7 @@
 		</div>
 
 		<div class="calc5__flex calc5__flex--aic calc5__flex--jcc calc5__flex--wrap530">
-			<div class="calc5__line">Период сбережений, месяцев</div>
+			<div class="calc5__line">Период, месяцев</div>
 			<input class="calc5__input" type="text" id="in4" value="24">
 		</div>
 
@@ -121,8 +121,8 @@
 		
 					<div class="calc5__chart__legend">
 						<div class="calc5__chart__name calc5__chart__name--black">Начальная сумма</div>
-						<div class="calc5__chart__name calc5__chart__name--blue">Пополнение</div>
-						<div class="calc5__chart__name calc5__chart__name--green">Проценты</div>
+						<div class="calc5__chart__name calc5__chart__name--blue">Итого пополнений</div>
+						<div class="calc5__chart__name calc5__chart__name--green">Накоплено процентов</div>
 					</div>
 		
 				</div>
@@ -148,10 +148,10 @@
 							<div class="calc5__cell calc5__cell--header">Месяц</div>
 						</div>
 						<div class="calc5__block">
-							<div class="calc5__cell calc5__cell--header">Пополнение</div>
+							<div class="calc5__cell calc5__cell--header">Итого пополнений</div>
 						</div>
 						<div class="calc5__block">
-							<div class="calc5__cell calc5__cell--header">Проценты</div>
+							<div class="calc5__cell calc5__cell--header">Накоплено процентов</div>
 						</div>
 						<div class="calc5__block calc5__block--big">
 							<div class="calc5__cell calc5__cell--header">Итого на конец месяца</div>
