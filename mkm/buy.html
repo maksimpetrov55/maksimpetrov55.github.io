@@ -49,6 +49,21 @@
 		});
 	</script>
 
+	<script>
+		$(document).ready(function() {
+			var t = setTimeout( function() {
+				$.ajax({
+					url: "parts/footer.html",
+					cache: true,
+					async: true,
+					success: function(html){
+						$("#footer").append(html);
+					}
+				});
+			}, 500 );
+		});
+	</script>
+
 	<div class="form" id="form"></div>
 	<!-- /.form -->
 
@@ -98,6 +113,9 @@
 
 	</div>
 	<!-- /.buy -->
+
+	<div id="footer" class="footer"></div>
+	<!-- /.footer -->
 
 </body>
 </html>

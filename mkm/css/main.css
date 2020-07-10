@@ -1285,4 +1285,54 @@ textarea:focus, input:focus {
 .docs__btn:active {
   opacity: 0.2;
 }
+
+.footer {
+  position: relative;
+  background: #333333;
+  padding: 30px 0;
+}
+
+.footer__wrap {
+  position: relative;
+  min-height: 100px;
+}
+
+.footer__img {
+  margin: 0 auto;
+  width: 90px;
+  height: 90px;
+  display: block;
+}
+
+.footer__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 30px 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: #fff;
+  margin: 10px 20px;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+@media (max-width: 420px) {
+  .footer__link {
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
+.footer__link:hover {
+  color: #1c71e0;
+}
 /*# sourceMappingURL=main.css.map */
