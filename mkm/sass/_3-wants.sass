@@ -1,0 +1,58 @@
+
+
+.wants
+    position: relative
+
+    &__wrap
+        padding: 120px 30px
+        width: 100%
+        margin: 0 auto
+        display: flex
+        justify-content: center
+        @media ( max-width: 840px )
+            flex-wrap: wrap
+        @media ( max-width: 499px )
+            padding: 80px 15px
+
+    &__block
+        position: relative
+        width: 420px
+        border: 1px solid #eee
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1)
+        border-radius: 6px
+        margin: 20px 20px
+        padding: 20px 20px 50px 20px
+        @media ( max-width: 1200px )
+            margin: 20px 10px
+        @media ( max-width: 499px )
+            margin: 10px 0
+
+    &__img
+        display: block
+        position: relative
+        width: 100%
+        border-radius: 6px
+
+    &__title
+        font-weight: 600
+        margin: 30px 0 20px 0
+
+    &__text
+        color: $gray
+        line-height: 1.5
+        margin: 0 0 10px 0
+        text-align: justify
+        @media ( max-width: 1200px )
+            font-size: 14px
+
+    &__link
+        display: block
+        text-decoration: none
+        color: #1c71e0
+        transition-duration: 0.3s
+        position: absolute
+        bottom: 25px
+
+        &:hover
+            padding: 0 0 0 10px
+            color: #0a438d

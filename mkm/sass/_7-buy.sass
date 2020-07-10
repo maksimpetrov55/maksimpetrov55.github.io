@@ -1,0 +1,59 @@
+
+
+
+.buy
+    position: relative
+    padding: 70px 0 100px 0
+
+    &__wrap
+        position: relative
+        margin: 0 auto
+        display: flex
+        justify-content: center
+        padding: 70px 0 0 0
+        @media ( max-width: 1310px )
+            flex-wrap: wrap
+
+    &__left
+        position: relative
+        width: 48%
+        min-height: 500px
+        margin: 0 1%
+        @media ( max-width: 1310px )
+            width: 100%
+            margin: 0 auto
+            max-width: 700px
+        @media ( max-width: 720px )
+            padding: 0 20px
+
+    &__right
+        position: relative
+        width: 48%
+        min-height: 500px
+        margin: 0 1%
+        @media ( max-width: 1310px )
+            width: 100%
+            margin: 0 auto
+            max-width: 700px
+        @media ( max-width: 720px )
+            padding: 0 20px
+
+    &__title
+        font-size: 28px
+        font-weight: 600
+        margin: 10px 0 50px 0
+        max-width: 600px
+        color: #333
+        @media ( max-width: 400px )
+            font-size: 22px
+
+    &__subtitle
+        font-size: 18px
+        font-weight: 600
+
+    &__tips
+        color: $teal
+        line-height: 1.4
+        margin: 15px 0
+        font-size: 17px
+        text-align: justify

@@ -1,0 +1,49 @@
+
+
+
+<div class="header__wrap">
+
+    <div class="header__burger">
+        <div class="header__burger__line"></div>
+        <div class="header__burger__line"></div>
+        <div class="header__burger__line"></div>
+    </div>
+
+    <div class="header__logo">
+        <img class="header__logo__img" src="img/logo.png" alt="" class="">
+        <div class="header__logo__text">Мой Квадратный Метр</div>
+    </div>
+
+    <div class="header__menu">
+        <a href="index.html" class="header__link">Главная</a>
+        <a href="about.html" class="header__link">Обо мне</a>
+        <a href="sale.html" class="header__link">Продавцам</a>
+        <a href="buy.html" class="header__link">Покупателям</a>
+        <!-- <a href="calcs.html" class="header__link">Калькуляторы</a> -->
+        <a href="docs.html" class="header__link">Документы</a>
+        <a href="contacts.html" class="header__link">Контакты</a>
+    </div>
+
+    <div class="header__phone">
+        <img src="img/icons/phone3.png" alt="" class="header__img">
+        +7 (999) 555-22-77
+    </div>
+
+    <div class="header__time"></div>
+
+</div>
+
+<script>
+
+    function time(){
+        var date = new Date();
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        $('.header__time').html( "⌚ " + hours + ":" + minutes )
+    }
+
+    time();
+
+    setInterval(() => time(), 10000);
+
+</script>

@@ -1,0 +1,171 @@
+
+
+
+.header
+    position: fixed
+    z-index: 99
+    top: 0
+    width: 100%
+    height: 70px
+    border-bottom: 1px solid #dddddd
+    background: #fff
+
+    &__wrap
+        width: 100%
+        max-width: 1900px
+        height: 100%
+        margin: 0 auto
+        padding: 0 20px
+        display: flex
+        justify-content: space-between
+        @media ( max-width: 399px )
+            padding: 0 10px
+
+    &__burger
+        position: relative
+        display: none
+        width: 50px
+        height: 50px
+        margin: 10px 140px 0 0
+        padding: 14px 7px
+        transition-duration: 0.4s
+        @media ( max-width: 1310px )
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+        @media ( max-width: 840px )
+            margin: 10px 0 0 0
+
+        &--close
+
+            &::before
+                content: "×"
+                position: absolute
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 50px
+                height: 50px
+                top: 0
+                left: 0
+                font-size: 36px
+                background: #eee
+                border-radius: 100px
+
+        &__line
+            background: $gray
+            width: 100%
+            position: relative
+            height: 2px
+
+            &--close
+                background: transparent
+
+
+    &__logo
+        display: flex
+        align-items: center
+        position: relative
+        // background: url("../img/logo.png") no-repeat
+        // background-size: contain
+        height: 100%
+        font-size: 20px
+        color: $teal
+        letter-spacing: -1.0px
+        @media ( max-width: 840px )
+            position: absolute
+            left: 90px
+        @media ( max-width: 399px )
+            left: 65px
+
+        &__img
+            position: relative
+            height: 80%
+            margin: 0 10px 0 0
+
+        &__text
+            @media ( max-width: 650px )
+                display: none
+
+    &__menu
+        display: flex
+        align-items: center
+        @media ( max-width: 1310px )
+            position: absolute
+            left: 0
+            top: 70px
+            background: #fff
+            flex-direction: column
+            width: 320px
+            height: 100vh
+            align-items: flex-start
+            padding: 20px 20px
+            border-right: 1px solid #dddddd
+            display: none
+        
+        &--show
+            @media ( max-width: 1310px )
+                display: flex
+
+    &__link
+        margin: 0 10px
+        letter-spacing: 0.5px
+        text-decoration: none
+        transition-duration: 0.4s
+        color: #222
+        border-bottom: 2px solid transparent
+        padding: 5px 0
+        @media ( max-width: 1310px )
+            margin: 10px
+
+        &:hover
+            color: $green
+            border-bottom: 2px solid $green 
+
+
+    &__phone
+        position: relative
+        width: 190px
+        //height: 100%
+        height: 40px
+        margin: 15px 0
+        border-radius: 6px
+        background: $teal
+        display: flex
+        align-items: center
+        justify-content: center
+        color: #ffffff
+        font-size: 17px
+        cursor: pointer
+        transition-duration: 0.4s
+        box-shadow: 0 3px 10px 0px rgba(0,0,0,0.15)
+        @media ( max-width: 399px )
+            font-size: 15px
+            width: 170px
+
+        &:hover
+            background: $green
+            box-shadow: 0 1px 5px 0px rgba(0,0,0,0.07)
+
+
+    &__img
+        width: 17px
+        height: 28px
+        margin: 0 7px 0 0
+
+    &__time
+        position: absolute
+        width: 90px
+        height: 40px
+        background: #fff
+        // right: 220px
+        // top: 50%
+        top: 90px
+        left: 0
+        margin: -20px 0 0 0
+        display: flex
+        align-items: center
+        padding: 0 10px
+        border-radius: 2px
+        border-right: 1px solid #dddddd
+        border-bottom: 1px solid #dddddd

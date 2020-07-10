@@ -1,0 +1,128 @@
+
+
+
+
+.form
+    z-index: 299
+    position: fixed
+    align-items: center
+    justify-content: center
+    width: 100%
+    display: none
+
+    &--show
+        display: flex
+
+    &__wrap
+        position: relative
+        margin: 50px 10px 10px 10px
+        width: 420px
+        height: 550px
+        background: #fff
+        border-radius: 6px
+        padding: 50px 10px
+        overflow: hidden
+        @media ( max-width: 410px )
+            margin: 30px 5px 10px 5px
+            padding: 50px 20px 30px 20px
+            height: auto
+
+    &__close
+        position: absolute
+        background: #fff
+        border: 7px solid $red
+        height: 24px
+        width: 24px
+        cursor: pointer
+        right: 7px
+        top: 7px
+        border-radius: 50px
+        transition-duration: 0.3s
+
+        // &::after
+        //     content: "×"
+        //     color: #ffffff
+        //     font-size: 26px
+        //     position: absolute
+        //     top: -3px
+        //     left: 5px
+
+        &:hover
+            opacity: 0.6
+
+    &__head
+        font-size: 24px
+        text-align: center
+        text-transform: uppercase
+        letter-spacing: 1px
+        margin: 0 0 40px 0
+        color: #1895AB
+        @media ( max-width: 410px )
+            margin: 0 0 30px 0
+
+    &__text
+        text-align: center
+        margin: 0 auto 40px auto
+        color: $gray
+        font-size: 18px
+        line-height: 1.4
+        max-width: 290px
+        @media ( max-width: 410px )
+            font-size: 16px
+
+    &__form
+        display: block
+        position: relative
+        width: 100%
+        margin: 0px auto 40px auto
+        max-width: 290px
+
+    &__title
+
+
+    &__input
+        display: block
+        width: 100%
+        height: 40px
+        margin: 5px auto 20px
+        font-size: 16px
+        border: none
+        border-bottom: 2px solid #cccccc
+        transition-duration: 0.4s
+        text-align: center
+
+        &:focus
+            border-bottom: 2px solid $blue1
+
+    &__note
+        font-size: 13px
+        color: #aaa
+        margin: 0 0 10px
+        text-align: center
+
+    &__btn
+        width: 100%
+        position: relative
+        margin: 20px auto
+        max-width: 180px
+        height: 54px
+        background: $blue1
+        border-radius: 100px
+        color: #fff
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+        transition-duration: 0.4s
+        box-shadow: 0 5px 10px 1px rgba(0,0,0,0.1)
+        font-size: 18px
+        letter-spacing: 1px
+        user-select: none
+
+        &:hover
+            background: $blue2
+            transform: translateY(5px)
+            box-shadow: 0 2px 7px 0px rgba(0,0,0,0.1)
+
+        &:active
+            opacity: 0.2

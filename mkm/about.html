@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Мой Квадратный Метр | Агентство недвижимости</title>
+
+	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
+	<link rel="icon" href="img/favicon.png" type="image/png">
+	
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
+
+</head>
+<body>
+
+	<div class="blackout"></div>
+
+	<script>
+		$(document).ready(function() {
+			var t = setTimeout( function() {
+				$.ajax({
+					url: "../parts/form.html",
+					cache: true,
+					async: true,
+					success: function(html){
+						$("#form").append(html);
+					}
+				});
+			}, 500 );
+		});
+	</script>
+
+	<script>
+		$(document).ready(function() {
+			var t = setTimeout( function() {
+				$.ajax({
+					url: "../parts/header.html",
+					cache: true,
+					async: true,
+					success: function(html){
+						$("#header").append(html);
+					}
+				});
+			}, 500 );
+		});
+	</script>
+
+	<div class="form" id="form"></div>
+	<!-- /.form -->
+
+	<div id="header" class="header"></div>
+	<!-- /.header -->
+
+	<div class="about">
+
+		<div class="g-head">Обо мне</div>
+
+		<div class="about__wrap maw1440">
+
+			<div class="about__container">
+
+				<div class="about__block">
+					<img src="img/about/3.jpg" alt="" class="about__img">
+					<div class="about__text">Имя - Дмитрий,  характер нордический, выдержанный, с товарищами по работе поддерживаю хорошие отношения, обладаю чувством юмора, образован. Не меркантилен, но бесплатно не работаю</div>
+				</div>
+				<div class="about__block">
+					<img src="img/about/6.jpg" alt="" class="about__img">
+					<div class="about__text">Мне также как и Вам не нравится обман и навязанные услуги  - поэтому предлагаю каждому самостоятельно выбрать исключительно то, за что готовы заплатить</div>
+				</div>
+				<div class="about__block">
+					<img src="img/about/5.jpg" alt="" class="about__img">
+					<div class="about__text">У меня нет "секретной" базы эксклюзивно выгодных объектов - все, что продается на рынке уже "бессовестно" выложено  на общедоступных ресурсах. Но... главное в умении выбирать</div>
+				</div>
+				<div class="about__block">
+					<img src="img/about/2.jpg" alt="" class="about__img">
+					<div class="about__text">У меня нет большой команды единомышленников, я не работаю "для Вас более 20 лет". Надеюсь, что эффективность весит больше "массовости"</div>
+				</div>
+				<div class="about__block">
+					<img src="img/about/1.jpg" alt="" class="about__img">
+					<div class="about__text">Я  не обещаю  акций и скидок кроме отсутствия "добавочной" стоимости и "изменения обстоятельств". Тем не менее для переезжающих в г. Калининград особые условия</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+	<!-- /.about -->
+
+</body>
+</html>

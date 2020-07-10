@@ -1,0 +1,35 @@
+
+
+<div class="form__wrap">
+
+    <div class="form__close"></div>
+    
+    <div class="form__head">Оставьте заявку</div>
+
+    <div class="form__text">Заполните форму и мы свяжемся с вами в ближайшее время!</div>
+
+    <form method="POST" action="!mail.php" class="form__form">
+
+        <!-- <div class="form__title">Ваше Имя</div> -->
+
+        <input name="form_name" type="text" class="form__input" required placeholder="Ваше Имя *">
+
+        <!-- <div class="form__title">Ваш телефон</div> -->
+
+        <input name="form_phone" type="text" class="form__input form__input--phone" required placeholder="Ваш телефон *">
+
+        <input name="form_email" type="email" class="form__input" required placeholder="Ваш email *">
+
+        <div class="form__note">* – поля обязательны для заполнения</div>
+
+    </form>
+
+    <div class="form__btn">Отправить</div>
+
+</div>
+
+<script>
+    $(function(){
+        $(".form__input--phone").mask("+7 (999) 999-99-99", {placeholder: "__________" });
+    });
+</script>

@@ -1,0 +1,84 @@
+
+
+$green: #419A1C
+$teal: #1895AB
+$red: #CF1717
+$gray: #777777
+$blue1: #1c71e0
+$blue2: #0a438d
+
+
+*
+    font-family: sans-serif
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+body
+    position: relative
+
+.space
+    position: relative
+    width: 100%
+    height: 500px
+    background: #ddfffd
+    border-bottom: 1px solid #0000ff
+
+input 
+    outline: none !important
+textarea:focus, input:focus
+    outline: none
+
+.maw1440
+    max-width: 1440px
+
+.blackout
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(0,0,20,0.7)
+    z-index: 199
+    display: none
+
+    &--show
+        display: block
+
+.g-head
+    position: relative
+    font-size: 40px
+    text-transform: uppercase
+    background: $teal
+    color: #fff
+    padding: 20px
+    text-align: center
+    letter-spacing: 1px
+    @media ( max-width: 430px )
+        font-size: 32px
+
+.g-link
+    text-decoration: none
+    color: #1c71e0
+    transition-duration: 0.3s
+
+    &:hover
+        color: #0a438d
+
+.dflex
+    display: flex
+
+    &--aic
+        align-items: center
+
+    &--jcb
+        justify-content: space-between
+
+    &--jcc
+        justify-content: center
+
+    &--jce
+        justify-content: flex-end
+
+    &--wrap
+        flex-wrap: wrap

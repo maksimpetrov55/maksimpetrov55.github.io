@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Мой Квадратный Метр | Агентство недвижимости</title>
+
+	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
+	<link rel="icon" href="img/favicon.png" type="image/png">
+	
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
+
+</head>
+<body>
+
+	<div class="blackout"></div>
+
+	<script>
+		$(document).ready(function() {
+			var t = setTimeout( function() {
+				$.ajax({
+					url: "../parts/form.html",
+					cache: true,
+					async: true,
+					success: function(html){
+						$("#form").append(html);
+					}
+				});
+			}, 500 );
+		});
+	</script>
+
+	<script>
+		$(document).ready(function() {
+			var t = setTimeout( function() {
+				$.ajax({
+					url: "../parts/header.html",
+					cache: true,
+					async: true,
+					success: function(html){
+						$("#header").append(html);
+					}
+				});
+			}, 500 );
+		});
+	</script>
+
+	<div class="form" id="form"></div>
+	<!-- /.form -->
+
+	<div id="header" class="header"></div>
+	<!-- /.header -->
+
+	<div class="sale">
+
+		<div class="g-head">Продавцам</div>
+
+		<div class="sale__wrap maw1440">
+
+			<div class="sale__left">
+
+				<div class="sale__title">Полезные советы при самостоятельной продаже объектов недвижимости</div>
+
+				<div class="sale__tips">
+					✔ – независимо от Ваших намерений, уточните реальную рыночную стоимость Вашего объекта (ссылка на калькуляторы). При завышенной цене Вам будут звонить разве что риелторы, при заниженной - ...  а зачем продавать дешевле? 
+				</div>
+				
+				<div class="sale__tips">
+					✔ – не спешите «запустить» свое объявление о продаже на «абы как» - не поленитесь и потратьте время на привлекающие фотографии, честное, но «притягивающее» описание объекта; 
+				</div>
+
+				<div class="sale__tips">
+					✔ – с момента публикации будьте всегда на связи ( пропущенный звонок от покупателя может быть сигналом к покупке другого объекта); 
+				</div>
+
+				<div class="sale__tips">
+					✔ – не старайтесь особенно расхваливать свой объект на показах - в большинстве случаев это вызывает интуитивные подозрения. Что говорить? - Из практики - просто отвечайте на возникающие у покупателя вопросы. Поверьте, он не зависимо от Вашего повествования, сам решит брать или не брать (а скромность, как известно - плохого не посоветует); 
+				</div>
+
+				<div class="sale__tips">
+					✔ – в случаях продажи своего объекта с целью обмена на другой (встречная покупка) - обязательно изначально подберите «другой», желательно закрепив свои намерения предварительным договором. Да, иногда это сложно и рискованно, но... C’est la vie. Риск продать свое и остаться с деньгами, в данном случае и особенно с учетом «жития во времена перемен» еще более рискованен. 
+				</div>
+
+				<div class="sale__tips">
+					✔ – и, наконец, если какие-либо действия Вы не можете провести самостоятельно, или недостаточно уверены в себе - обратитесь к специалистам. Во-первых, это не так дорого (особенно в сравнении со стоимостью объекта и результатом возможных ошибок), во-вторых, успешный результат будет более предсказуем, а Ваш сон более безмятежен. В конце концов не каждый самостоятельно шьет шторы, чинит обувь и ремонтирует автомобиль... хотя многие знают, как это делается. 
+				</div>
+
+
+			</div>
+
+			<div class="sale__right"></div>
+
+		</div>
+
+	</div>
+	<!-- /.sale -->
+
+</body>
+</html>
