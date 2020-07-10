@@ -74,6 +74,30 @@ textarea:focus, input:focus {
   color: #0a438d;
 }
 
+.g-wall {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.g-wall__img {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+}
+
+.g-wall::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.7)));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+  z-index: 9;
+}
+
 .dflex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -806,7 +830,7 @@ textarea:focus, input:focus {
 
 .about {
   position: relative;
-  padding: 70px 0 100px 0;
+  padding: 0px 0 100px 0;
 }
 
 .about__wrap {
@@ -859,7 +883,7 @@ textarea:focus, input:focus {
 
 .sale {
   position: relative;
-  padding: 70px 0 100px 0;
+  padding: 0px 0 100px 0;
 }
 
 .sale__wrap {
@@ -947,7 +971,7 @@ textarea:focus, input:focus {
 
 .buy {
   position: relative;
-  padding: 70px 0 100px 0;
+  padding: 0px 0 100px 0;
 }
 
 .buy__wrap {
@@ -1040,7 +1064,7 @@ textarea:focus, input:focus {
 
 .contacts {
   position: relative;
-  padding: 70px 0 100px 0;
+  padding: 0px 0 100px 0;
 }
 
 .contacts__wrap {
@@ -1132,7 +1156,7 @@ textarea:focus, input:focus {
 
 .docs {
   position: relative;
-  padding: 70px 0 100px 0;
+  padding: 0px 0 100px 0;
 }
 
 .docs__wrap {
