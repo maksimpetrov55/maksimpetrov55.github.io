@@ -266,7 +266,7 @@ textarea:focus, input:focus {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    padding: 20px 20px;
+    padding: 60px 20px 20px 20px;
     border-right: 1px solid #dddddd;
     display: none;
   }
