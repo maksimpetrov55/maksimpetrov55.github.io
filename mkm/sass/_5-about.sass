@@ -7,12 +7,14 @@
     &__wrap
         position: relative
         margin: 0 auto
+        @media ( max-width: 1300px )
+            max-width: 1000px
 
     &__container
         display: flex
         justify-content: space-between
         padding: 50px 10px
-        @media ( max-width: 1340px )
+        @media ( max-width: 1300px )
             flex-wrap: wrap
             justify-content: center
 
