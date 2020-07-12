@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Мой Квадратный Метр | Агентство недвижимости</title>
+
+	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
+	<link rel="icon" href="img/favicon.png" type="image/png">
+	
+	<link rel="stylesheet" href="css/main.css?v3">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js?v3"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
+
+</head>
+<body>
+
+	<div class="blackout"></div>
+
+	<script>
+		$(document).ready(function() {
+			var t = setTimeout( function() {
+				$.ajax({
+					url: "parts/form.html",
+					cache: true,
+					async: true,
+					success: function(html){
+						$("#form").append(html);
+					}
+				});
+			}, 500 );
+		});
+	</script>
+
+	<script>
+		$(document).ready(function() {
+			var t = setTimeout( function() {
+				$.ajax({
+					url: "parts/header.html",
+					cache: true,
+					async: true,
+					success: function(html){
+						$("#header").append(html);
+					}
+				});
+			}, 500 );
+		});
+	</script>
+
+	<script>
+		$(document).ready(function() {
+			var t = setTimeout( function() {
+				$.ajax({
+					url: "parts/footer.html",
+					cache: true,
+					async: true,
+					success: function(html){
+						$("#footer").append(html);
+					}
+				});
+			}, 500 );
+		});
+	</script>
+
+	<div class="form" id="form"></div>
+	<!-- /.form -->
+
+	<div id="header" class="header"></div>
+	<!-- /.header -->
+
+	<div class="g-wall">
+		<img class="g-wall__img" src="img/walls/1.jpg" alt="">
+	</div>
+
+	<div class="feedback">
+
+		<div class="g-head">Отзывы</div>
+
+		<div class="feedback__wrap maw1440">
+
+			<div class="feedback__block">
+
+				<img src="img/mock.jpg" alt="" class="feedback__img">
+
+				<div class="feedback__title">Сергей Иванович</div>
+
+				<div class="feedback__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad facilis id reprehenderit expedita nam blanditiis ipsa neque, eius sequi corrupti?</div>
+
+			</div>
+
+			<div class="feedback__block">
+
+				<img src="img/mock.jpg" alt="" class="feedback__img">
+
+				<div class="feedback__title">Сергей Иванович</div>
+
+				<div class="feedback__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad facilis id reprehenderit expedita nam blanditiis ipsa neque, eius sequi corrupti?</div>
+
+			</div>
+
+			<div class="feedback__block">
+
+				<img src="img/mock.jpg" alt="" class="feedback__img">
+
+				<div class="feedback__title">Сергей Иванович</div>
+
+				<div class="feedback__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad facilis id reprehenderit expedita nam blanditiis ipsa neque, eius sequi corrupti?</div>
+
+			</div>
+
+		</div>
+
+	</div>
+	<!-- /.feedback -->
+
+	<div id="footer" class="footer"></div>
+	<!-- /.footer -->
+
+</body>
+</html>
