@@ -54,6 +54,12 @@ body {
   line-height: 1.6;
 }
 
+.calc__text--ooo {
+  text-align: right;
+  color: #ddd;
+  font-size: 12px;
+}
+
 .calc__text--slide {
   cursor: pointer;
   margin: 0 5px;
@@ -127,6 +133,15 @@ body {
   .calc__text--subtitle {
     font-size: 14px;
   }
+}
+
+.calc__text--head {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #365EDC;
+  margin: 10px 0 30px 0;
+  text-align: center;
 }
 
 .calc__text--title {
