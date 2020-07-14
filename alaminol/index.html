@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+	<div class="wrapper">
+
+		<div class="calc">
+			
+			<!-- <div class="calc__text bg">
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo natus officia eligendi nihil perspiciatis sequi neque dolor voluptate facere necessitatibus minus similique, alias cumque, libero nulla inventore voluptas. Illo numquam explicabo ullam porro quis labore sint harum officiis, repudiandae nihil!
+			</div> -->
+
+			<div class="calc__scroll">
+
+				<div class="calc__table">
+
+					<div class="calc__row calc__row--margin calc__row--bor-b">
+
+						<div class="calc__cell calc__cell--height calc__cell--big calc__cell--big-padding"><div>Объект обеззараживания</div></div>
+						<div class="calc__cell calc__cell--height calc__cell--mid"><div>Способ</div><div class="calc__more">i</div><div class="calc__cloud"><div class="calc__close">×</div>Способ обеззараживания объекта</div></div>
+						<div class="calc__cell calc__cell--height"><div>Время</div><div class="calc__more">i</div><div class="calc__cloud"><div class="calc__close">×</div>Время обеззараживания объекта (мин)</div></div>
+						<div class="calc__cell calc__cell--height"><div>Единица</div><div class="calc__more">i</div><div class="calc__cloud"><div class="calc__close">×</div>Единица измерения объекта<br>(кг, л, штука, набор, комплект)</div></div>
+						<div class="calc__cell calc__cell--height"><div>Объемы</div><div class="calc__more">i</div><div class="calc__cloud"><div class="calc__close">×</div>Общие объемы объектов обеззараживания в смену</div></div>
+						<div class="calc__cell calc__cell--height"><div>Кол-во раствора</div><div class="calc__more">i</div><div class="calc__cloud"><div class="calc__close">×</div>Количество рабочего раствора на 1&nbsp;ед. измерения объекта&nbsp;(л)</div></div>
+						<div class="calc__cell calc__cell--height"><div>Концен-трация</div><div class="calc__more">i</div><div class="calc__cloud"><div class="calc__close">×</div>Концентрация рабочего раствора&nbsp;(%)</div></div>
+						<div class="calc__cell calc__cell--height"><div>Кол-во препа-рата</div><div class="calc__more">i</div><div class="calc__cloud"><div class="calc__close">×</div>Количество исходного препарата в 1 л рабочего раствора&nbsp;(л)</div></div>
+						<div class="calc__cell calc__cell--height"><div>Крат-ность</div><div class="calc__more">i</div><div class="calc__cloud"><div class="calc__close">×</div>Кратность обработок</div></div>
+						<div class="calc__cell calc__cell--height"><div>Кол-во раствора всего</div><div class="calc__more">i</div><div class="calc__cloud"><div class="calc__close">×</div>Количество рабочего раствора в течение смены -&nbsp;всего&nbsp;(л)</div></div>
+						<div class="calc__cell calc__cell--height"><div>Число обра-боток</div><div class="calc__more">i</div><div class="calc__cloud"><div class="calc__close">×</div>Общее число обработок в&nbsp;месяц</div></div>
+						<div class="calc__cell calc__cell--height"><div>Препа-рата в смену</div><div class="calc__more">i</div><div class="calc__cloud calc__cloud--margin1"><div class="calc__close">×</div>Количество исходного препарата в&nbsp;смену&nbsp;(л)</div></div>
+						<div class="calc__cell calc__cell--height"><div>Препа-рата в месяц</div><div class="calc__more">i</div><div class="calc__cloud calc__cloud--margin2"><div class="calc__close">×</div>Количество исходного препарата в&nbsp;месяц&nbsp;(л)</div></div>
+
+					</div>
+
+					<div class="calc__block">
+
+						<div class="calc__text calc__text--title calc__text--slide">Изделия медицинского назначения</div>
+
+						<div class="calc__slide">
+
+							<div class="calc__text calc__text--color calc__text--subtitle calc__text--margin">Дезинфекция</div>
+
+							<!-- row 1 -->
+							<div class="calc__row">
+								<div id="cell_1_1"  class="calc__cell calc__cell--big">Изделия из металлов, пластмасс, стекла (включая стоматологические инструменты), в т.ч. однократного применения</div>
+								<div id="cell_1_2"  class="calc__cell calc__cell--mid">Погру-жение</div>
+								<div id="cell_1_3"  class="calc__cell">60</div>
+								<div id="cell_1_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_1_5"  class="calc__cell calc__cell--input"><input id="inp_1_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_1_6"  class="calc__cell calc__cell--input"><input id="inp_1_2" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_1_7"  class="calc__cell">5</div>
+								<div id="cell_1_8"  class="calc__cell">0.05</div>
+								<div id="cell_1_9"  class="calc__cell calc__cell--input"><input id="inp_1_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_1_10" class="calc__cell"></div>
+								<div id="cell_1_11" class="calc__cell calc__cell--input"><input id="inp_1_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_1_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_1_13" class="calc__cell calc__cell--result"></div>
+							</div>
+		
+							<!-- row 2 -->
+							<div class="calc__row">
+								<div id="cell_2_1"  class="calc__cell calc__cell--big">Изделия из резин, в т.ч. однократного применения</div>
+								<div id="cell_2_2"  class="calc__cell calc__cell--mid">Погру-жение</div>
+								<div id="cell_2_3"  class="calc__cell">60</div>
+								<div id="cell_2_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_2_5"  class="calc__cell calc__cell--input"><input id="inp_2_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_2_6"  class="calc__cell calc__cell--input"><input id="inp_2_2" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_2_7"  class="calc__cell">8</div>
+								<div id="cell_2_8"  class="calc__cell">0.08</div>
+								<div id="cell_2_9"  class="calc__cell calc__cell--input"><input id="inp_2_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_2_10" class="calc__cell"></div>
+								<div id="cell_2_11" class="calc__cell calc__cell--input"><input id="inp_2_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_2_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_2_13" class="calc__cell calc__cell--result"></div>
+							</div>
+		
+							<!-- row 3 -->
+							<div class="calc__row calc__row--bor-b">
+								<div id="cell_3_1"  class="calc__cell calc__cell--big">Изделия из резин, в т.ч. однократного применения</div>
+								<div id="cell_3_2"  class="calc__cell calc__cell--mid">Погру-жение</div>
+								<div id="cell_3_3"  class="calc__cell">30</div>
+								<div id="cell_3_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_3_5"  class="calc__cell calc__cell--input"><input id="inp_3_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_3_6"  class="calc__cell calc__cell--input"><input id="inp_3_2" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_3_7"  class="calc__cell">10</div>
+								<div id="cell_3_8"  class="calc__cell">0.1</div>
+								<div id="cell_3_9"  class="calc__cell calc__cell--input"><input id="inp_3_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_3_10" class="calc__cell"></div>
+								<div id="cell_3_11" class="calc__cell calc__cell--input"><input id="inp_3_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_3_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_3_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<div class="calc__text calc__text--color calc__text--subtitle calc__text--margin calc__text--space">Дезинфекция ИМН, совмещенная с предстерилизационной очисткой</div>
+
+							<!-- row 4 -->
+							<div class="calc__row">
+								<div id="cell_4_1"  class="calc__cell calc__cell--big">Изделия медицинского назначения, не имеющие замковых частей</div>
+								<div id="cell_4_2"  class="calc__cell calc__cell--mid">Замачива-ние</div>
+								<div id="cell_4_3"  class="calc__cell">60</div>
+								<div id="cell_4_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_4_5"  class="calc__cell calc__cell--input"><input id="inp_4_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_4_6"  class="calc__cell calc__cell--input"><input id="inp_4_2" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_4_7"  class="calc__cell">5</div>
+								<div id="cell_4_8"  class="calc__cell"></div>
+								<div id="cell_4_9"  class="calc__cell calc__cell--input"><input id="inp_4_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_4_10" class="calc__cell"></div>
+								<div id="cell_4_11" class="calc__cell calc__cell--input"><input id="inp_4_4" type="text" class="calc__input" placeholder="•••" value="15"></div>
+								<div id="cell_4_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_4_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row 5 -->
+							<div class="calc__row">
+								<div id="cell_5_1"  class="calc__cell calc__cell--big">Изделия медицинского назначения, имеющие замковые части, каналы или полости</div>
+								<div id="cell_5_2"  class="calc__cell calc__cell--mid">Замачива-ние</div>
+								<div id="cell_5_3"  class="calc__cell">60</div>
+								<div id="cell_5_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_5_5"  class="calc__cell calc__cell--input"><input id="inp_5_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_5_6"  class="calc__cell calc__cell--input"><input id="inp_5_2" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_5_7"  class="calc__cell">8</div>
+								<div id="cell_5_8"  class="calc__cell"></div>
+								<div id="cell_5_9"  class="calc__cell calc__cell--input"><input id="inp_5_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_5_10" class="calc__cell"></div>
+								<div id="cell_5_11" class="calc__cell calc__cell--input"><input id="inp_5_4" type="text" class="calc__input" placeholder="•••" value="15"></div>
+								<div id="cell_5_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_5_13" class="calc__cell calc__cell--result"></div>
+							</div>
+							
+							<!-- row 6 -->
+							<div class="calc__row">
+								<div id="cell_6_1"  class="calc__cell calc__cell--big">Хирургические инструменты, не имеющие замковых частей </div>
+								<div id="cell_6_2"  class="calc__cell calc__cell--mid">Замачива-ние</div>
+								<div id="cell_6_3"  class="calc__cell">60</div>
+								<div id="cell_6_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_6_5"  class="calc__cell calc__cell--input"><input id="inp_6_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_6_6"  class="calc__cell calc__cell--input"><input id="inp_6_2" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_6_7"  class="calc__cell">5</div>
+								<div id="cell_6_8"  class="calc__cell"></div>
+								<div id="cell_6_9"  class="calc__cell calc__cell--input"><input id="inp_6_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_6_10" class="calc__cell"></div>
+								<div id="cell_6_11" class="calc__cell calc__cell--input"><input id="inp_6_4" type="text" class="calc__input" placeholder="•••" value="15"></div>
+								<div id="cell_6_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_6_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row 7 -->
+							<div class="calc__row">
+								<div id="cell_7_1"  class="calc__cell calc__cell--big">Хирургические инструменты, имеющие замковые части, каналы или полости </div>
+								<div id="cell_7_2"  class="calc__cell calc__cell--mid">Замачива-ние</div>
+								<div id="cell_7_3"  class="calc__cell">60</div>
+								<div id="cell_7_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_7_5"  class="calc__cell calc__cell--input"><input id="inp_7_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_7_6"  class="calc__cell calc__cell--input"><input id="inp_7_2" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_7_7"  class="calc__cell">8</div>
+								<div id="cell_7_8"  class="calc__cell"></div>
+								<div id="cell_7_9"  class="calc__cell calc__cell--input"><input id="inp_7_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_7_10" class="calc__cell"></div>
+								<div id="cell_7_11" class="calc__cell calc__cell--input"><input id="inp_7_4" type="text" class="calc__input" placeholder="•••" value="15"></div>
+								<div id="cell_7_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_7_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row 8 -->
+							<div class="calc__row calc__row--bor-b">
+								<div id="cell_8_1"  class="calc__cell calc__cell--big">Хирургические инструменты </div>
+								<div id="cell_8_2"  class="calc__cell calc__cell--mid">Погруже-ние в установку "Кристал-5" или "РЭЛТЕК"</div>
+								<div id="cell_8_3"  class="calc__cell">15</div>
+								<div id="cell_8_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_8_5"  class="calc__cell calc__cell--input"><input id="inp_8_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_8_6"  class="calc__cell calc__cell--input"><input id="inp_8_2" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_8_7"  class="calc__cell">8</div>
+								<div id="cell_8_8"  class="calc__cell"></div>
+								<div id="cell_8_9"  class="calc__cell calc__cell--input"><input id="inp_8_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_8_10" class="calc__cell"></div>
+								<div id="cell_8_11" class="calc__cell calc__cell--input"><input id="inp_8_4" type="text" class="calc__input" placeholder="•••" value="15"></div>
+								<div id="cell_8_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_8_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<div class="calc__text calc__text--color calc__text--subtitle calc__text--margin calc__text--space">Предстерилизационная очистка, не совмещенная с дезинфекцией</div>
+
+							<!-- row 9 -->
+							<div class="calc__row">
+								<div id="cell_9_1"  class="calc__cell calc__cell--big">Гибкие, жесткие эндоскопы </div>
+								<div id="cell_9_2"  class="calc__cell calc__cell--mid">Замачива-ние</div>
+								<div id="cell_9_3"  class="calc__cell">30</div>
+								<div id="cell_9_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_9_5"  class="calc__cell calc__cell--input"><input id="inp_9_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_9_6"  class="calc__cell calc__cell--input"><input id="inp_9_2" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_9_7"  class="calc__cell">1.5</div>
+								<div id="cell_9_8"  class="calc__cell"></div>
+								<div id="cell_9_9"  class="calc__cell calc__cell--input"><input id="inp_9_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_9_10" class="calc__cell"></div>
+								<div id="cell_9_11" class="calc__cell calc__cell--input"><input id="inp_9_4" type="text" class="calc__input" placeholder="•••" value="15"></div>
+								<div id="cell_9_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_9_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row 10 -->
+							<div class="calc__row calc__row--bor-b">
+								<div id="cell_10_1"  class="calc__cell calc__cell--big">Медицинские инструменты к эндоскопам</div>
+								<div id="cell_10_2"  class="calc__cell calc__cell--mid">Замачива-ние</div>
+								<div id="cell_10_3"  class="calc__cell">60</div>
+								<div id="cell_10_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_10_5"  class="calc__cell calc__cell--input"><input id="inp_10_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_10_6"  class="calc__cell calc__cell--input"><input id="inp_10_2" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_10_7"  class="calc__cell">1.5</div>
+								<div id="cell_10_8"  class="calc__cell"></div>
+								<div id="cell_10_9"  class="calc__cell calc__cell--input"><input id="inp_10_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_10_10" class="calc__cell"></div>
+								<div id="cell_10_11" class="calc__cell calc__cell--input"><input id="inp_10_4" type="text" class="calc__input" placeholder="•••" value="15"></div>
+								<div id="cell_10_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_10_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+
+						</div>
+
+					</div>
+
+					<div class="calc__block">
+
+						<div class="calc__text calc__text--title calc__text--slide calc__text--slide--open">Дезинфекция стоматологических инструментов, оборудования и др.</div>
+
+						<div class="calc__slide calc__slide--closed">
+
+							<div class="calc__text calc__text--color calc__text--subtitle calc__text--margin"></div>
+
+							<!-- row 11 -->
+							<div class="calc__row">
+								<div id="cell_11_1"  class="calc__cell calc__cell--big">Дезинфекция, совмещенная с предстерилизационной очисткой стоматологических инструментов, не имеющих замковых частей</div>
+								<div id="cell_11_2"  class="calc__cell calc__cell--mid">Замачива-ние</div>
+								<div id="cell_11_3"  class="calc__cell">60</div>
+								<div id="cell_11_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_11_5"  class="calc__cell calc__cell--input"><input id="inp_11_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_11_6"  class="calc__cell calc__cell--input"><input id="inp_11_2" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_11_7"  class="calc__cell">5</div>
+								<div id="cell_11_8"  class="calc__cell"></div>
+								<div id="cell_11_9"  class="calc__cell calc__cell--input"><input id="inp_11_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_11_10" class="calc__cell"></div>
+								<div id="cell_11_11" class="calc__cell calc__cell--input"><input id="inp_11_4" type="text" class="calc__input" placeholder="•••" value="15"></div>
+								<div id="cell_11_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_11_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row 12 -->
+							<div class="calc__row">
+								<div id="cell_12_1"  class="calc__cell calc__cell--big">Дезинфекция, совмещенная с предстерилизационной очисткой стоматологических инструментов, имеющие замковые части</div>
+								<div id="cell_12_2"  class="calc__cell calc__cell--mid">Замачива-ние</div>
+								<div id="cell_12_3"  class="calc__cell">60</div>
+								<div id="cell_12_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_12_5"  class="calc__cell calc__cell--input"><input id="inp_12_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_12_6"  class="calc__cell calc__cell--input"><input id="inp_12_2" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_12_7"  class="calc__cell">8</div>
+								<div id="cell_12_8"  class="calc__cell"></div>
+								<div id="cell_12_9"  class="calc__cell calc__cell--input"><input id="inp_12_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_12_10" class="calc__cell"></div>
+								<div id="cell_12_11" class="calc__cell calc__cell--input"><input id="inp_12_4" type="text" class="calc__input" placeholder="•••" value="15"></div>
+								<div id="cell_12_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_12_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row 13 -->
+							<div class="calc__row">
+								<div id="cell_13_1"  class="calc__cell calc__cell--big">Дезинфекция, совмещенная с предстерилизационной очисткой стоматологических инструментов</div>
+								<div id="cell_13_2"  class="calc__cell calc__cell--mid">В ультра-звуковой установке</div>
+								<div id="cell_13_3"  class="calc__cell">15</div>
+								<div id="cell_13_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_13_5"  class="calc__cell calc__cell--input"><input id="inp_13_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_13_6"  class="calc__cell calc__cell--input"><input id="inp_13_2" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_13_7"  class="calc__cell">8</div>
+								<div id="cell_13_8"  class="calc__cell"></div>
+								<div id="cell_13_9"  class="calc__cell calc__cell--input"><input id="inp_13_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_13_10" class="calc__cell"></div>
+								<div id="cell_13_11" class="calc__cell calc__cell--input"><input id="inp_13_4" type="text" class="calc__input" placeholder="•••" value="15"></div>
+								<div id="cell_13_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_13_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row 14 -->
+							<div class="calc__row">
+								<div id="cell_14_1"  class="calc__cell calc__cell--big">Дезинфекция, совмещенная с предстерилизационной очисткой щипцов стоматологических и зеркал с амальгамой</div>
+								<div id="cell_14_2"  class="calc__cell calc__cell--mid">В ультра-звуковой установке</div>
+								<div id="cell_14_3"  class="calc__cell">20</div>
+								<div id="cell_14_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_14_5"  class="calc__cell calc__cell--input"><input id="inp_14_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_14_6"  class="calc__cell calc__cell--input"><input id="inp_14_2" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_14_7"  class="calc__cell">8</div>
+								<div id="cell_14_8"  class="calc__cell"></div>
+								<div id="cell_14_9"  class="calc__cell calc__cell--input"><input id="inp_14_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_14_10" class="calc__cell"></div>
+								<div id="cell_14_11" class="calc__cell calc__cell--input"><input id="inp_14_4" type="text" class="calc__input" placeholder="•••" value="15"></div>
+								<div id="cell_14_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_14_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row 15 -->
+							<div class="calc__row">
+								<div id="cell_15_1"  class="calc__cell calc__cell--big">Предстерилизационная очистка, не совмещенная с дезинфекцией инструментов, имеющих замковые части и полости</div>
+								<div id="cell_15_2"  class="calc__cell calc__cell--mid">В ультра-звуковой установке "МЕДЭЛ"</div>
+								<div id="cell_15_3"  class="calc__cell">15</div>
+								<div id="cell_15_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_15_5"  class="calc__cell calc__cell--input"><input id="inp_15_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_15_6"  class="calc__cell calc__cell--input"><input id="inp_15_2" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_15_7"  class="calc__cell">1</div>
+								<div id="cell_15_8"  class="calc__cell"></div>
+								<div id="cell_15_9"  class="calc__cell calc__cell--input"><input id="inp_15_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_15_10" class="calc__cell"></div>
+								<div id="cell_15_11" class="calc__cell calc__cell--input"><input id="inp_15_4" type="text" class="calc__input" placeholder="•••" value="15"></div>
+								<div id="cell_15_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_15_13" class="calc__cell calc__cell--result"></div>
+							</div>
+		
+							<!-- row 16 -->
+							<div class="calc__row calc__row--bor-b">
+								<div id="cell_16_1"  class="calc__cell calc__cell--big">Предстерилизационная очистка, не совмещенная с дезинфекцией инструментов, не имеющих замковых частей и полостей</div>
+								<div id="cell_16_2"  class="calc__cell calc__cell--mid">В ультра-звуковой установке "МЕДЭЛ"</div>
+								<div id="cell_16_3"  class="calc__cell">10</div>
+								<div id="cell_16_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_16_5"  class="calc__cell calc__cell--input"><input id="inp_16_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_16_6"  class="calc__cell calc__cell--input"><input id="inp_16_2" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_16_7"  class="calc__cell">0.75</div>
+								<div id="cell_16_8"  class="calc__cell"></div>
+								<div id="cell_16_9"  class="calc__cell calc__cell--input"><input id="inp_16_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_16_10" class="calc__cell"></div>
+								<div id="cell_16_11" class="calc__cell calc__cell--input"><input id="inp_16_4" type="text" class="calc__input" placeholder="•••" value="15"></div>
+								<div id="cell_16_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_16_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="calc__block">
+
+						<div class="calc__text calc__text--title calc__text--slide calc__text--slide--open">Текущая, профилактическая дезинфекция в ЛПУ</div>
+
+						<div class="calc__slide calc__slide--closed">
+
+							<div class="calc__text calc__text--color calc__text--subtitle calc__text--margin">Поверхности</div>
+							
+							<!-- row 17 -->
+							<div class="calc__row">
+								<div id="cell_17_1"  class="calc__cell calc__cell--big">Поверхности (бактериальные инфекции)</div>
+								<div id="cell_17_2"  class="calc__cell calc__cell--mid">Протира-ние</div>
+								<div id="cell_17_3"  class="calc__cell">30</div>
+								<div id="cell_17_4"  class="calc__cell">кв. м</div>
+								<div id="cell_17_5"  class="calc__cell calc__cell--input"><input id="inp_17_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_17_6"  class="calc__cell calc__cell--input"><input id="inp_17_2" type="text" class="calc__input" placeholder="•••" value="0.15"></div>
+								<div id="cell_17_7"  class="calc__cell">1</div>
+								<div id="cell_17_8"  class="calc__cell"></div>
+								<div id="cell_17_9"  class="calc__cell calc__cell--input"><input id="inp_17_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_17_10" class="calc__cell"></div>
+								<div id="cell_17_11" class="calc__cell calc__cell--input"><input id="inp_17_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_17_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_17_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row 18 -->
+							<div class="calc__row">
+								<div id="cell_18_1"  class="calc__cell calc__cell--big">Поверхности (бактериальные инфекции)</div>
+								<div id="cell_18_2"  class="calc__cell calc__cell--mid">Протира-ние</div>
+								<div id="cell_18_3"  class="calc__cell">15</div>
+								<div id="cell_18_4"  class="calc__cell">кв. м</div>
+								<div id="cell_18_5"  class="calc__cell calc__cell--input"><input id="inp_18_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_18_6"  class="calc__cell calc__cell--input"><input id="inp_18_2" type="text" class="calc__input" placeholder="•••" value="0.15"></div>
+								<div id="cell_18_7"  class="calc__cell">3</div>
+								<div id="cell_18_8"  class="calc__cell"></div>
+								<div id="cell_18_9"  class="calc__cell calc__cell--input"><input id="inp_18_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_18_10" class="calc__cell"></div>
+								<div id="cell_18_11" class="calc__cell calc__cell--input"><input id="inp_18_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_18_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_18_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row19 -->
+							<div class="calc__row">
+								<div id="cell_19_1"  class="calc__cell calc__cell--big">Поверхности (Туберкулез)</div>
+								<div id="cell_19_2"  class="calc__cell calc__cell--mid">Протира-ние</div>
+								<div id="cell_19_3"  class="calc__cell">90</div>
+								<div id="cell_19_4"  class="calc__cell">кв. м</div>
+								<div id="cell_19_5"  class="calc__cell calc__cell--input"><input id="inp_19_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_19_6"  class="calc__cell calc__cell--input"><input id="inp_19_2" type="text" class="calc__input" placeholder="•••" value="0.15"></div>
+								<div id="cell_19_7"  class="calc__cell">3</div>
+								<div id="cell_19_8"  class="calc__cell"></div>
+								<div id="cell_19_9"  class="calc__cell calc__cell--input"><input id="inp_19_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_19_10" class="calc__cell"></div>
+								<div id="cell_19_11" class="calc__cell calc__cell--input"><input id="inp_19_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_19_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_19_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row20 -->
+							<div class="calc__row">
+								<div id="cell_20_1"  class="calc__cell calc__cell--big">Поверхности (Туберкулез)</div>
+								<div id="cell_20_2"  class="calc__cell calc__cell--mid">Протира-ние</div>
+								<div id="cell_20_3"  class="calc__cell">60</div>
+								<div id="cell_20_4"  class="calc__cell">кв. м</div>
+								<div id="cell_20_5"  class="calc__cell calc__cell--input"><input id="inp_20_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_20_6"  class="calc__cell calc__cell--input"><input id="inp_20_2" type="text" class="calc__input" placeholder="•••" value="0.15"></div>
+								<div id="cell_20_7"  class="calc__cell">5</div>
+								<div id="cell_20_8"  class="calc__cell"></div>
+								<div id="cell_20_9"  class="calc__cell calc__cell--input"><input id="inp_20_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_20_10" class="calc__cell"></div>
+								<div id="cell_20_11" class="calc__cell calc__cell--input"><input id="inp_20_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_20_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_20_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row21 -->
+							<div class="calc__row">
+								<div id="cell_21_1"  class="calc__cell calc__cell--big">Поверхности (Вирусные инфекции)</div>
+								<div id="cell_21_2"  class="calc__cell calc__cell--mid">Проитра-ние</div>
+								<div id="cell_21_3"  class="calc__cell">60</div>
+								<div id="cell_21_4"  class="calc__cell">кв. м</div>
+								<div id="cell_21_5"  class="calc__cell calc__cell--input"><input id="inp_21_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_21_6"  class="calc__cell calc__cell--input"><input id="inp_21_2" type="text" class="calc__input" placeholder="•••" value="0.15"></div>
+								<div id="cell_21_7"  class="calc__cell">5</div>
+								<div id="cell_21_8"  class="calc__cell"></div>
+								<div id="cell_21_9"  class="calc__cell calc__cell--input"><input id="inp_21_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_21_10" class="calc__cell"></div>
+								<div id="cell_21_11" class="calc__cell calc__cell--input"><input id="inp_21_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_21_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_21_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row22 -->
+							<div class="calc__row">
+								<div id="cell_22_1"  class="calc__cell calc__cell--big">Поверхности (Кандидозы)</div>
+								<div id="cell_22_2"  class="calc__cell calc__cell--mid">Протира-ние</div>
+								<div id="cell_22_3"  class="calc__cell">90</div>
+								<div id="cell_22_4"  class="calc__cell">кв. м</div>
+								<div id="cell_22_5"  class="calc__cell calc__cell--input"><input id="inp_22_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_22_6"  class="calc__cell calc__cell--input"><input id="inp_22_2" type="text" class="calc__input" placeholder="•••" value="0.15"></div>
+								<div id="cell_22_7"  class="calc__cell">3</div>
+								<div id="cell_22_8"  class="calc__cell"></div>
+								<div id="cell_22_9"  class="calc__cell calc__cell--input"><input id="inp_22_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_22_10" class="calc__cell"></div>
+								<div id="cell_22_11" class="calc__cell calc__cell--input"><input id="inp_22_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_22_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_22_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row23 -->
+							<div class="calc__row">
+								<div id="cell_23_1"  class="calc__cell calc__cell--big">Поверхности (Кандидозы)</div>
+								<div id="cell_23_2"  class="calc__cell calc__cell--mid">Протира-ние</div>
+								<div id="cell_23_3"  class="calc__cell">60</div>
+								<div id="cell_23_4"  class="calc__cell">кв. м</div>
+								<div id="cell_23_5"  class="calc__cell calc__cell--input"><input id="inp_23_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_23_6"  class="calc__cell calc__cell--input"><input id="inp_23_2" type="text" class="calc__input" placeholder="•••" value="0.15"></div>
+								<div id="cell_23_7"  class="calc__cell">5</div>
+								<div id="cell_23_8"  class="calc__cell"></div>
+								<div id="cell_23_9"  class="calc__cell calc__cell--input"><input id="inp_23_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_23_10" class="calc__cell"></div>
+								<div id="cell_23_11" class="calc__cell calc__cell--input"><input id="inp_23_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_23_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_23_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row24 -->
+							<div class="calc__row">
+								<div id="cell_24_1"  class="calc__cell calc__cell--big">Поверхности (Дерматофитии)</div>
+								<div id="cell_24_2"  class="calc__cell calc__cell--mid">Протира-ние</div>
+								<div id="cell_24_3"  class="calc__cell">60</div>
+								<div id="cell_24_4"  class="calc__cell">кв. м</div>
+								<div id="cell_24_5"  class="calc__cell calc__cell--input"><input id="inp_24_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_24_6"  class="calc__cell calc__cell--input"><input id="inp_24_2" type="text" class="calc__input" placeholder="•••" value="0.15"></div>
+								<div id="cell_24_7"  class="calc__cell">3</div>
+								<div id="cell_24_8"  class="calc__cell"></div>
+								<div id="cell_24_9"  class="calc__cell calc__cell--input"><input id="inp_24_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_24_10" class="calc__cell"></div>
+								<div id="cell_24_11" class="calc__cell calc__cell--input"><input id="inp_24_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_24_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_24_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row25 -->
+							<div class="calc__row calc__row--bor-b">
+								<div id="cell_25_1"  class="calc__cell calc__cell--big">Поверхности (Дерматофитии)</div>
+								<div id="cell_25_2"  class="calc__cell calc__cell--mid">Протира-ние</div>
+								<div id="cell_25_3"  class="calc__cell">30</div>
+								<div id="cell_25_4"  class="calc__cell">кв. м</div>
+								<div id="cell_25_5"  class="calc__cell calc__cell--input"><input id="inp_25_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_25_6"  class="calc__cell calc__cell--input"><input id="inp_25_2" type="text" class="calc__input" placeholder="•••" value="0.15"></div>
+								<div id="cell_25_7"  class="calc__cell">5</div>
+								<div id="cell_25_8"  class="calc__cell"></div>
+								<div id="cell_25_9"  class="calc__cell calc__cell--input"><input id="inp_25_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_25_10" class="calc__cell"></div>
+								<div id="cell_25_11" class="calc__cell calc__cell--input"><input id="inp_25_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_25_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_25_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<div class="calc__text calc__text--color calc__text--subtitle calc__text--margin">Санитарно-техническое оборудование</div>
+
+							<!-- row 26 -->
+							<div class="calc__row">
+								<div id="cell_26_1"  class="calc__cell calc__cell--big">Санитарно-техническое оборудование (Бактериальные инфекции)</div>
+								<div id="cell_26_2"  class="calc__cell calc__cell--mid">Протира-ние</div>
+								<div id="cell_26_3"  class="calc__cell">60</div>
+								<div id="cell_26_4"  class="calc__cell">кв. м</div>
+								<div id="cell_26_5"  class="calc__cell calc__cell--input"><input id="inp_26_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_26_6"  class="calc__cell calc__cell--input"><input id="inp_26_2" type="text" class="calc__input" placeholder="•••" value="0.2"></div>
+								<div id="cell_26_7"  class="calc__cell">1</div>
+								<div id="cell_26_8"  class="calc__cell"></div>
+								<div id="cell_26_9"  class="calc__cell calc__cell--input"><input id="inp_26_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_26_10" class="calc__cell"></div>
+								<div id="cell_26_11" class="calc__cell calc__cell--input"><input id="inp_26_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_26_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_26_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row 27 -->
+							<div class="calc__row">
+								<div id="cell_27_1"  class="calc__cell calc__cell--big">Санитарно-техническое оборудование (Бактериальные инфекции)</div>
+								<div id="cell_27_2"  class="calc__cell calc__cell--mid">Протира-ние</div>
+								<div id="cell_27_3"  class="calc__cell">30</div>
+								<div id="cell_27_4"  class="calc__cell">кв. м</div>
+								<div id="cell_27_5"  class="calc__cell calc__cell--input"><input id="inp_27_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_27_6"  class="calc__cell calc__cell--input"><input id="inp_27_2" type="text" class="calc__input" placeholder="•••" value="0.2"></div>
+								<div id="cell_27_7"  class="calc__cell">3</div>
+								<div id="cell_27_8"  class="calc__cell"></div>
+								<div id="cell_27_9"  class="calc__cell calc__cell--input"><input id="inp_27_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_27_10" class="calc__cell"></div>
+								<div id="cell_27_11" class="calc__cell calc__cell--input"><input id="inp_27_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_27_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_27_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row 28 -->
+							<div class="calc__row">
+								<div id="cell_28_1"  class="calc__cell calc__cell--big">Санитарно-техническое оборудование (Бактериальные инфекции)</div>
+								<div id="cell_28_2"  class="calc__cell calc__cell--mid">Протира-ние</div>
+								<div id="cell_28_3"  class="calc__cell">15</div>
+								<div id="cell_28_4"  class="calc__cell">кв. м</div>
+								<div id="cell_28_5"  class="calc__cell calc__cell--input"><input id="inp_28_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_28_6"  class="calc__cell calc__cell--input"><input id="inp_28_2" type="text" class="calc__input" placeholder="•••" value="0.2"></div>
+								<div id="cell_28_7"  class="calc__cell">5</div>
+								<div id="cell_28_8"  class="calc__cell"></div>
+								<div id="cell_28_9"  class="calc__cell calc__cell--input"><input id="inp_28_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_28_10" class="calc__cell"></div>
+								<div id="cell_28_11" class="calc__cell calc__cell--input"><input id="inp_28_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_28_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_28_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row 29 -->
+							<div class="calc__row">
+								<div id="cell_29_1"  class="calc__cell calc__cell--big">Санитарно-техническое оборудование (Туберкулез)</div>
+								<div id="cell_29_2"  class="calc__cell calc__cell--mid">Протира-ние</div>
+								<div id="cell_29_3"  class="calc__cell">90</div>
+								<div id="cell_29_4"  class="calc__cell">кв. м</div>
+								<div id="cell_29_5"  class="calc__cell calc__cell--input"><input id="inp_29_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_29_6"  class="calc__cell calc__cell--input"><input id="inp_29_2" type="text" class="calc__input" placeholder="•••" value="0.2"></div>
+								<div id="cell_29_7"  class="calc__cell">3</div>
+								<div id="cell_29_8"  class="calc__cell"></div>
+								<div id="cell_29_9"  class="calc__cell calc__cell--input"><input id="inp_29_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_29_10" class="calc__cell"></div>
+								<div id="cell_29_11" class="calc__cell calc__cell--input"><input id="inp_29_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_29_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_29_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row 30 -->
+							<div class="calc__row">
+								<div id="cell_30_1"  class="calc__cell calc__cell--big">Санитарно-техническое оборудование (Туберкулез)</div>
+								<div id="cell_30_2"  class="calc__cell calc__cell--mid">Протира-ние</div>
+								<div id="cell_30_3"  class="calc__cell">60</div>
+								<div id="cell_30_4"  class="calc__cell">кв. м</div>
+								<div id="cell_30_5"  class="calc__cell calc__cell--input"><input id="inp_30_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_30_6"  class="calc__cell calc__cell--input"><input id="inp_30_2" type="text" class="calc__input" placeholder="•••" value="0.2"></div>
+								<div id="cell_30_7"  class="calc__cell">5</div>
+								<div id="cell_30_8"  class="calc__cell"></div>
+								<div id="cell_30_9"  class="calc__cell calc__cell--input"><input id="inp_30_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_30_10" class="calc__cell"></div>
+								<div id="cell_30_11" class="calc__cell calc__cell--input"><input id="inp_30_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_30_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_30_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row 31 -->
+							<div class="calc__row">
+								<div id="cell_31_1"  class="calc__cell calc__cell--big">Санитарно-техническое оборудование (Вирусные инфекции)</div>
+								<div id="cell_31_2"  class="calc__cell calc__cell--mid">Проитра-ние</div>
+								<div id="cell_31_3"  class="calc__cell">30</div>
+								<div id="cell_31_4"  class="calc__cell">кв. м</div>
+								<div id="cell_31_5"  class="calc__cell calc__cell--input"><input id="inp_31_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_31_6"  class="calc__cell calc__cell--input"><input id="inp_31_2" type="text" class="calc__input" placeholder="•••" value="0.2"></div>
+								<div id="cell_31_7"  class="calc__cell">5</div>
+								<div id="cell_31_8"  class="calc__cell"></div>
+								<div id="cell_31_9"  class="calc__cell calc__cell--input"><input id="inp_31_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_31_10" class="calc__cell"></div>
+								<div id="cell_31_11" class="calc__cell calc__cell--input"><input id="inp_31_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_31_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_31_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row 32 -->
+							<div class="calc__row">
+								<div id="cell_32_1"  class="calc__cell calc__cell--big">Санитарно-техническое оборудование (Кандидозы)</div>
+								<div id="cell_32_2"  class="calc__cell calc__cell--mid">Протира-ние</div>
+								<div id="cell_32_3"  class="calc__cell">90</div>
+								<div id="cell_32_4"  class="calc__cell">кв. м</div>
+								<div id="cell_32_5"  class="calc__cell calc__cell--input"><input id="inp_32_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_32_6"  class="calc__cell calc__cell--input"><input id="inp_32_2" type="text" class="calc__input" placeholder="•••" value="0.2"></div>
+								<div id="cell_32_7"  class="calc__cell">3</div>
+								<div id="cell_32_8"  class="calc__cell"></div>
+								<div id="cell_32_9"  class="calc__cell calc__cell--input"><input id="inp_32_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_32_10" class="calc__cell"></div>
+								<div id="cell_32_11" class="calc__cell calc__cell--input"><input id="inp_32_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_32_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_32_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row 33 -->
+							<div class="calc__row">
+								<div id="cell_33_1"  class="calc__cell calc__cell--big">Санитарно-техническое оборудование (Кандидозы)</div>
+								<div id="cell_33_2"  class="calc__cell calc__cell--mid">Протира-ние</div>
+								<div id="cell_33_3"  class="calc__cell">60</div>
+								<div id="cell_33_4"  class="calc__cell">кв. м</div>
+								<div id="cell_33_5"  class="calc__cell calc__cell--input"><input id="inp_33_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_33_6"  class="calc__cell calc__cell--input"><input id="inp_33_2" type="text" class="calc__input" placeholder="•••" value="0.2"></div>
+								<div id="cell_33_7"  class="calc__cell">5</div>
+								<div id="cell_33_8"  class="calc__cell"></div>
+								<div id="cell_33_9"  class="calc__cell calc__cell--input"><input id="inp_33_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_33_10" class="calc__cell"></div>
+								<div id="cell_33_11" class="calc__cell calc__cell--input"><input id="inp_33_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_33_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_33_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row 34 -->
+							<div class="calc__row">
+								<div id="cell_34_1"  class="calc__cell calc__cell--big">Санитарно-техническое оборудование (Дерматофитии)</div>
+								<div id="cell_34_2"  class="calc__cell calc__cell--mid">Протира-ние</div>
+								<div id="cell_34_3"  class="calc__cell">60</div>
+								<div id="cell_34_4"  class="calc__cell">кв. м</div>
+								<div id="cell_34_5"  class="calc__cell calc__cell--input"><input id="inp_34_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_34_6"  class="calc__cell calc__cell--input"><input id="inp_34_2" type="text" class="calc__input" placeholder="•••" value="0.2"></div>
+								<div id="cell_34_7"  class="calc__cell">3</div>
+								<div id="cell_34_8"  class="calc__cell"></div>
+								<div id="cell_34_9"  class="calc__cell calc__cell--input"><input id="inp_34_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_34_10" class="calc__cell"></div>
+								<div id="cell_34_11" class="calc__cell calc__cell--input"><input id="inp_34_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_34_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_34_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row 35 -->
+							<div class="calc__row calc__row--bor-b">
+								<div id="cell_35_1"  class="calc__cell calc__cell--big">Санитарно-техническое оборудование (Дерматофитии)</div>
+								<div id="cell_35_2"  class="calc__cell calc__cell--mid">Протира-ние</div>
+								<div id="cell_35_3"  class="calc__cell">30</div>
+								<div id="cell_35_4"  class="calc__cell">кв. м</div>
+								<div id="cell_35_5"  class="calc__cell calc__cell--input"><input id="inp_35_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_35_6"  class="calc__cell calc__cell--input"><input id="inp_35_2" type="text" class="calc__input" placeholder="•••" value="0.2"></div>
+								<div id="cell_35_7"  class="calc__cell">5</div>
+								<div id="cell_35_8"  class="calc__cell"></div>
+								<div id="cell_35_9"  class="calc__cell calc__cell--input"><input id="inp_35_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_35_10" class="calc__cell"></div>
+								<div id="cell_35_11" class="calc__cell calc__cell--input"><input id="inp_35_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_35_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_35_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<div class="calc__text calc__text--color calc__text--subtitle calc__text--margin">Белье</div>
+
+							<!-- row36 -->
+							<div class="calc__row">
+								<div id="cell_36_1"  class="calc__cell calc__cell--big">Белье незагрязненное (Бактериальные инфекции)</div>
+								<div id="cell_36_2"  class="calc__cell calc__cell--mid">Замачива-ние</div>
+								<div id="cell_36_3"  class="calc__cell">15</div>
+								<div id="cell_36_4"  class="calc__cell">кг</div>
+								<div id="cell_36_5"  class="calc__cell calc__cell--input"><input id="inp_36_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_36_6"  class="calc__cell calc__cell--input"><input id="inp_36_2" type="text" class="calc__input" placeholder="•••" value="5"></div>
+								<div id="cell_36_7"  class="calc__cell">1</div>
+								<div id="cell_36_8"  class="calc__cell"></div>
+								<div id="cell_36_9"  class="calc__cell calc__cell--input"><input id="inp_36_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_36_10" class="calc__cell"></div>
+								<div id="cell_36_11" class="calc__cell calc__cell--input"><input id="inp_36_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_36_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_36_13" class="calc__cell calc__cell--result"></div>
+							</div>
+							
+							<!-- row37 -->
+							<div class="calc__row">
+								<div id="cell_37_1"  class="calc__cell calc__cell--big">Белье, загрязненное выделениями (Бактериальные инфекции)</div>
+								<div id="cell_37_2"  class="calc__cell calc__cell--mid">Замачива-ние</div>
+								<div id="cell_37_3"  class="calc__cell">120</div>
+								<div id="cell_37_4"  class="calc__cell">кг</div>
+								<div id="cell_37_5"  class="calc__cell calc__cell--input"><input id="inp_37_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_37_6"  class="calc__cell calc__cell--input"><input id="inp_37_2" type="text" class="calc__input" placeholder="•••" value="5"></div>
+								<div id="cell_37_7"  class="calc__cell">1</div>
+								<div id="cell_37_8"  class="calc__cell"></div>
+								<div id="cell_37_9"  class="calc__cell calc__cell--input"><input id="inp_37_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_37_10" class="calc__cell"></div>
+								<div id="cell_37_11" class="calc__cell calc__cell--input"><input id="inp_37_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_37_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_37_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row38 -->
+							<div class="calc__row">
+								<div id="cell_38_1"  class="calc__cell calc__cell--big">Белье, загрязненное выделениями (Бактериальные инфекции)</div>
+								<div id="cell_38_2"  class="calc__cell calc__cell--mid">Замачива-ние</div>
+								<div id="cell_38_3"  class="calc__cell">60</div>
+								<div id="cell_38_4"  class="calc__cell">кг</div>
+								<div id="cell_38_5"  class="calc__cell calc__cell--input"><input id="inp_38_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_38_6"  class="calc__cell calc__cell--input"><input id="inp_38_2" type="text" class="calc__input" placeholder="•••" value="5"></div>
+								<div id="cell_38_7"  class="calc__cell">3</div>
+								<div id="cell_38_8"  class="calc__cell"></div>
+								<div id="cell_38_9"  class="calc__cell calc__cell--input"><input id="inp_38_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_38_10" class="calc__cell"></div>
+								<div id="cell_38_11" class="calc__cell calc__cell--input"><input id="inp_38_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_38_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_38_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row39 -->
+							<div class="calc__row">
+								<div id="cell_39_1"  class="calc__cell calc__cell--big">Белье, загрязненное выделениями (Бактериальные инфекции)</div>
+								<div id="cell_39_2"  class="calc__cell calc__cell--mid">Замачива-ние</div>
+								<div id="cell_39_3"  class="calc__cell">30</div>
+								<div id="cell_39_4"  class="calc__cell">кг</div>
+								<div id="cell_39_5"  class="calc__cell calc__cell--input"><input id="inp_39_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_39_6"  class="calc__cell calc__cell--input"><input id="inp_39_2" type="text" class="calc__input" placeholder="•••" value="5"></div>
+								<div id="cell_39_7"  class="calc__cell">5</div>
+								<div id="cell_39_8"  class="calc__cell"></div>
+								<div id="cell_39_9"  class="calc__cell calc__cell--input"><input id="inp_39_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_39_10" class="calc__cell"></div>
+								<div id="cell_39_11" class="calc__cell calc__cell--input"><input id="inp_39_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_39_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_39_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row40 -->
+							<div class="calc__row">
+								<div id="cell_40_1"  class="calc__cell calc__cell--big">Белье незагрязненное (Туберкулез)</div>
+								<div id="cell_40_2"  class="calc__cell calc__cell--mid">Замачива-ние</div>
+								<div id="cell_40_3"  class="calc__cell">30</div>
+								<div id="cell_40_4"  class="calc__cell">кг</div>
+								<div id="cell_40_5"  class="calc__cell calc__cell--input"><input id="inp_40_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_40_6"  class="calc__cell calc__cell--input"><input id="inp_40_2" type="text" class="calc__input" placeholder="•••" value="5"></div>
+								<div id="cell_40_7"  class="calc__cell">3</div>
+								<div id="cell_40_8"  class="calc__cell"></div>
+								<div id="cell_40_9"  class="calc__cell calc__cell--input"><input id="inp_40_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_40_10" class="calc__cell"></div>
+								<div id="cell_40_11" class="calc__cell calc__cell--input"><input id="inp_40_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_40_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_40_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row41 -->
+							<div class="calc__row">
+								<div id="cell_41_1"  class="calc__cell calc__cell--big">Белье, загрязненное выделениями (Туберкулез)</div>
+								<div id="cell_41_2"  class="calc__cell calc__cell--mid">Замачива-ние</div>
+								<div id="cell_41_3"  class="calc__cell">180</div>
+								<div id="cell_41_4"  class="calc__cell">кг</div>
+								<div id="cell_41_5"  class="calc__cell calc__cell--input"><input id="inp_41_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_41_6"  class="calc__cell calc__cell--input"><input id="inp_41_2" type="text" class="calc__input" placeholder="•••" value="5"></div>
+								<div id="cell_41_7"  class="calc__cell">3</div>
+								<div id="cell_41_8"  class="calc__cell"></div>
+								<div id="cell_41_9"  class="calc__cell calc__cell--input"><input id="inp_41_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_41_10" class="calc__cell"></div>
+								<div id="cell_41_11" class="calc__cell calc__cell--input"><input id="inp_41_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_41_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_41_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row42 -->
+							<div class="calc__row">
+								<div id="cell_42_1"  class="calc__cell calc__cell--big">Белье, загрязненное выделениями (Туберкулез)</div>
+								<div id="cell_42_2"  class="calc__cell calc__cell--mid">Замачива-ние</div>
+								<div id="cell_42_3"  class="calc__cell">120</div>
+								<div id="cell_42_4"  class="calc__cell">кг</div>
+								<div id="cell_42_5"  class="calc__cell calc__cell--input"><input id="inp_42_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_42_6"  class="calc__cell calc__cell--input"><input id="inp_42_2" type="text" class="calc__input" placeholder="•••" value="5"></div>
+								<div id="cell_42_7"  class="calc__cell">5</div>
+								<div id="cell_42_8"  class="calc__cell"></div>
+								<div id="cell_42_9"  class="calc__cell calc__cell--input"><input id="inp_42_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_42_10" class="calc__cell"></div>
+								<div id="cell_42_11" class="calc__cell calc__cell--input"><input id="inp_42_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_42_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_42_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row43 -->
+							<div class="calc__row">
+								<div id="cell_43_1"  class="calc__cell calc__cell--big">Белье незагрязненное (Вирусные инфекции)</div>
+								<div id="cell_43_2"  class="calc__cell calc__cell--mid">Замачива-ние</div>
+								<div id="cell_43_3"  class="calc__cell">60</div>
+								<div id="cell_43_4"  class="calc__cell">кг</div>
+								<div id="cell_43_5"  class="calc__cell calc__cell--input"><input id="inp_43_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_43_6"  class="calc__cell calc__cell--input"><input id="inp_43_2" type="text" class="calc__input" placeholder="•••" value="5"></div>
+								<div id="cell_43_7"  class="calc__cell">3</div>
+								<div id="cell_43_8"  class="calc__cell"></div>
+								<div id="cell_43_9"  class="calc__cell calc__cell--input"><input id="inp_43_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_43_10" class="calc__cell"></div>
+								<div id="cell_43_11" class="calc__cell calc__cell--input"><input id="inp_43_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_43_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_43_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row44 -->
+							<div class="calc__row">
+								<div id="cell_44_1"  class="calc__cell calc__cell--big">Белье, загрязненное выделениями (Вирусные инфекции)</div>
+								<div id="cell_44_2"  class="calc__cell calc__cell--mid">Замачива-ние</div>
+								<div id="cell_44_3"  class="calc__cell">120</div>
+								<div id="cell_44_4"  class="calc__cell">кг</div>
+								<div id="cell_44_5"  class="calc__cell calc__cell--input"><input id="inp_44_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_44_6"  class="calc__cell calc__cell--input"><input id="inp_44_2" type="text" class="calc__input" placeholder="•••" value="5"></div>
+								<div id="cell_44_7"  class="calc__cell">5</div>
+								<div id="cell_44_8"  class="calc__cell"></div>
+								<div id="cell_44_9"  class="calc__cell calc__cell--input"><input id="inp_44_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_44_10" class="calc__cell"></div>
+								<div id="cell_44_11" class="calc__cell calc__cell--input"><input id="inp_44_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_44_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_44_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row45 -->
+							<div class="calc__row">
+								<div id="cell_45_1"  class="calc__cell calc__cell--big">Белье незагрязненное (Кандидозы)</div>
+								<div id="cell_45_2"  class="calc__cell calc__cell--mid">Замачива-ние</div>
+								<div id="cell_45_3"  class="calc__cell">30</div>
+								<div id="cell_45_4"  class="calc__cell">кг</div>
+								<div id="cell_45_5"  class="calc__cell calc__cell--input"><input id="inp_45_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_45_6"  class="calc__cell calc__cell--input"><input id="inp_45_2" type="text" class="calc__input" placeholder="•••" value="5"></div>
+								<div id="cell_45_7"  class="calc__cell">3</div>
+								<div id="cell_45_8"  class="calc__cell"></div>
+								<div id="cell_45_9"  class="calc__cell calc__cell--input"><input id="inp_45_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_45_10" class="calc__cell"></div>
+								<div id="cell_45_11" class="calc__cell calc__cell--input"><input id="inp_45_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_45_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_45_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row46 -->
+							<div class="calc__row">
+								<div id="cell_46_1"  class="calc__cell calc__cell--big">Белье, загрязненное выделениями (Кандидозы)</div>
+								<div id="cell_46_2"  class="calc__cell calc__cell--mid">Замачива-ние</div>
+								<div id="cell_46_3"  class="calc__cell">240</div>
+								<div id="cell_46_4"  class="calc__cell">кг</div>
+								<div id="cell_46_5"  class="calc__cell calc__cell--input"><input id="inp_46_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_46_6"  class="calc__cell calc__cell--input"><input id="inp_46_2" type="text" class="calc__input" placeholder="•••" value="5"></div>
+								<div id="cell_46_7"  class="calc__cell">3</div>
+								<div id="cell_46_8"  class="calc__cell"></div>
+								<div id="cell_46_9"  class="calc__cell calc__cell--input"><input id="inp_46_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_46_10" class="calc__cell"></div>
+								<div id="cell_46_11" class="calc__cell calc__cell--input"><input id="inp_46_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_46_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_46_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row47 -->
+							<div class="calc__row">
+								<div id="cell_47_1"  class="calc__cell calc__cell--big">Белье, загрязненное выделениями (Кандидозы)</div>
+								<div id="cell_47_2"  class="calc__cell calc__cell--mid">Замачива-ние</div>
+								<div id="cell_47_3"  class="calc__cell">180</div>
+								<div id="cell_47_4"  class="calc__cell">кг</div>
+								<div id="cell_47_5"  class="calc__cell calc__cell--input"><input id="inp_47_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_47_6"  class="calc__cell calc__cell--input"><input id="inp_47_2" type="text" class="calc__input" placeholder="•••" value="5"></div>
+								<div id="cell_47_7"  class="calc__cell">5</div>
+								<div id="cell_47_8"  class="calc__cell"></div>
+								<div id="cell_47_9"  class="calc__cell calc__cell--input"><input id="inp_47_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_47_10" class="calc__cell"></div>
+								<div id="cell_47_11" class="calc__cell calc__cell--input"><input id="inp_47_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_47_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_47_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row48 -->
+							<div class="calc__row">
+								<div id="cell_48_1"  class="calc__cell calc__cell--big">Белье незагрязненное (Дерматофитии)</div>
+								<div id="cell_48_2"  class="calc__cell calc__cell--mid">Замачива-ние</div>
+								<div id="cell_48_3"  class="calc__cell">30</div>
+								<div id="cell_48_4"  class="calc__cell">кг</div>
+								<div id="cell_48_5"  class="calc__cell calc__cell--input"><input id="inp_48_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_48_6"  class="calc__cell calc__cell--input"><input id="inp_48_2" type="text" class="calc__input" placeholder="•••" value="5"></div>
+								<div id="cell_48_7"  class="calc__cell">3</div>
+								<div id="cell_48_8"  class="calc__cell"></div>
+								<div id="cell_48_9"  class="calc__cell calc__cell--input"><input id="inp_48_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_48_10" class="calc__cell"></div>
+								<div id="cell_48_11" class="calc__cell calc__cell--input"><input id="inp_48_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_48_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_48_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row49 -->
+							<div class="calc__row">
+								<div id="cell_49_1"  class="calc__cell calc__cell--big">Белье, загрязненное выделениями (Дерматофитии)</div>
+								<div id="cell_49_2"  class="calc__cell calc__cell--mid">Замачива-ние</div>
+								<div id="cell_49_3"  class="calc__cell">180</div>
+								<div id="cell_49_4"  class="calc__cell">кг</div>
+								<div id="cell_49_5"  class="calc__cell calc__cell--input"><input id="inp_49_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_49_6"  class="calc__cell calc__cell--input"><input id="inp_49_2" type="text" class="calc__input" placeholder="•••" value="5"></div>
+								<div id="cell_49_7"  class="calc__cell">3</div>
+								<div id="cell_49_8"  class="calc__cell"></div>
+								<div id="cell_49_9"  class="calc__cell calc__cell--input"><input id="inp_49_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_49_10" class="calc__cell"></div>
+								<div id="cell_49_11" class="calc__cell calc__cell--input"><input id="inp_49_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_49_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_49_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row50 -->
+							<div class="calc__row calc__row--bor-b">
+								<div id="cell_50_1"  class="calc__cell calc__cell--big">Белье, загрязненное выделениями (Дерматофитии)</div>
+								<div id="cell_50_2"  class="calc__cell calc__cell--mid">Замачива-ние</div>
+								<div id="cell_50_3"  class="calc__cell">90</div>
+								<div id="cell_50_4"  class="calc__cell">кг</div>
+								<div id="cell_50_5"  class="calc__cell calc__cell--input"><input id="inp_50_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_50_6"  class="calc__cell calc__cell--input"><input id="inp_50_2" type="text" class="calc__input" placeholder="•••" value="5"></div>
+								<div id="cell_50_7"  class="calc__cell">5</div>
+								<div id="cell_50_8"  class="calc__cell"></div>
+								<div id="cell_50_9"  class="calc__cell calc__cell--input"><input id="inp_50_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_50_10" class="calc__cell"></div>
+								<div id="cell_50_11" class="calc__cell calc__cell--input"><input id="inp_50_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_50_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_50_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<div class="calc__text calc__text--color calc__text--subtitle calc__text--margin">Предметы ухода за больными, средства личной гигиены</div>
+
+							<!-- row51 -->
+							<div class="calc__row">
+								<div id="cell_51_1"  class="calc__cell calc__cell--big">Предметы ухода за больными, средства личной гигиены     (Бактериальные инфекции)</div>
+								<div id="cell_51_2"  class="calc__cell calc__cell--mid">Протира-ние или погруже-ние</div>
+								<div id="cell_51_3"  class="calc__cell">60</div>
+								<div id="cell_51_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_51_5"  class="calc__cell calc__cell--input"><input id="inp_51_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_51_6"  class="calc__cell calc__cell--input"><input id="inp_51_2" type="text" class="calc__input" placeholder="•••" value="10"></div>
+								<div id="cell_51_7"  class="calc__cell">1</div>
+								<div id="cell_51_8"  class="calc__cell"></div>
+								<div id="cell_51_9"  class="calc__cell calc__cell--input"><input id="inp_51_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_51_10" class="calc__cell"></div>
+								<div id="cell_51_11" class="calc__cell calc__cell--input"><input id="inp_51_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_51_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_51_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row52 -->
+							<div class="calc__row">
+								<div id="cell_52_1"  class="calc__cell calc__cell--big">Предметы ухода за больными, средства личной гигиены     (Бактериальные инфекции)</div>
+								<div id="cell_52_2"  class="calc__cell calc__cell--mid">Протира-ние или погруже-ние</div>
+								<div id="cell_52_3"  class="calc__cell">30</div>
+								<div id="cell_52_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_52_5"  class="calc__cell calc__cell--input"><input id="inp_52_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_52_6"  class="calc__cell calc__cell--input"><input id="inp_52_2" type="text" class="calc__input" placeholder="•••" value="10"></div>
+								<div id="cell_52_7"  class="calc__cell">3</div>
+								<div id="cell_52_8"  class="calc__cell"></div>
+								<div id="cell_52_9"  class="calc__cell calc__cell--input"><input id="inp_52_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_52_10" class="calc__cell"></div>
+								<div id="cell_52_11" class="calc__cell calc__cell--input"><input id="inp_52_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_52_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_52_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row53 -->
+							<div class="calc__row">
+								<div id="cell_53_1"  class="calc__cell calc__cell--big">Предметы ухода за больными, средства личной гигиены     (Бактериальные инфекции)</div>
+								<div id="cell_53_2"  class="calc__cell calc__cell--mid">Протира-ние или погруже-ние</div>
+								<div id="cell_53_3"  class="calc__cell">15</div>
+								<div id="cell_53_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_53_5"  class="calc__cell calc__cell--input"><input id="inp_53_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_53_6"  class="calc__cell calc__cell--input"><input id="inp_53_2" type="text" class="calc__input" placeholder="•••" value="10"></div>
+								<div id="cell_53_7"  class="calc__cell">5</div>
+								<div id="cell_53_8"  class="calc__cell"></div>
+								<div id="cell_53_9"  class="calc__cell calc__cell--input"><input id="inp_53_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_53_10" class="calc__cell"></div>
+								<div id="cell_53_11" class="calc__cell calc__cell--input"><input id="inp_53_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_53_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_53_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row54 -->
+							<div class="calc__row">
+								<div id="cell_54_1"  class="calc__cell calc__cell--big">Предметы ухода за больными, средства личной гигиены     (Туберкулез)</div>
+								<div id="cell_54_2"  class="calc__cell calc__cell--mid">Протира-ние или погруже-ние</div>
+								<div id="cell_54_3"  class="calc__cell">90</div>
+								<div id="cell_54_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_54_5"  class="calc__cell calc__cell--input"><input id="inp_54_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_54_6"  class="calc__cell calc__cell--input"><input id="inp_54_2" type="text" class="calc__input" placeholder="•••" value="10"></div>
+								<div id="cell_54_7"  class="calc__cell">3</div>
+								<div id="cell_54_8"  class="calc__cell"></div>
+								<div id="cell_54_9"  class="calc__cell calc__cell--input"><input id="inp_54_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_54_10" class="calc__cell"></div>
+								<div id="cell_54_11" class="calc__cell calc__cell--input"><input id="inp_54_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_54_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_54_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row55 -->
+							<div class="calc__row">
+								<div id="cell_55_1"  class="calc__cell calc__cell--big">Предметы ухода за больными, средства личной гигиены     (Туберкулез)</div>
+								<div id="cell_55_2"  class="calc__cell calc__cell--mid">Протира-ние или погруже-ние</div>
+								<div id="cell_55_3"  class="calc__cell">60</div>
+								<div id="cell_55_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_55_5"  class="calc__cell calc__cell--input"><input id="inp_55_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_55_6"  class="calc__cell calc__cell--input"><input id="inp_55_2" type="text" class="calc__input" placeholder="•••" value="10"></div>
+								<div id="cell_55_7"  class="calc__cell">5</div>
+								<div id="cell_55_8"  class="calc__cell"></div>
+								<div id="cell_55_9"  class="calc__cell calc__cell--input"><input id="inp_55_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_55_10" class="calc__cell"></div>
+								<div id="cell_55_11" class="calc__cell calc__cell--input"><input id="inp_55_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_55_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_55_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row56 -->
+							<div class="calc__row">
+								<div id="cell_56_1"  class="calc__cell calc__cell--big">Предметы ухода за больными, средства личной гигиены      (Вирусные инфекции)</div>
+								<div id="cell_56_2"  class="calc__cell calc__cell--mid">Протира-ние или погруже-ние</div>
+								<div id="cell_56_3"  class="calc__cell">60</div>
+								<div id="cell_56_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_56_5"  class="calc__cell calc__cell--input"><input id="inp_56_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_56_6"  class="calc__cell calc__cell--input"><input id="inp_56_2" type="text" class="calc__input" placeholder="•••" value="10"></div>
+								<div id="cell_56_7"  class="calc__cell">5</div>
+								<div id="cell_56_8"  class="calc__cell"></div>
+								<div id="cell_56_9"  class="calc__cell calc__cell--input"><input id="inp_56_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_56_10" class="calc__cell"></div>
+								<div id="cell_56_11" class="calc__cell calc__cell--input"><input id="inp_56_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_56_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_56_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row57 -->
+							<div class="calc__row">
+								<div id="cell_57_1"  class="calc__cell calc__cell--big">Предметы ухода за больными, средства личной гигиены     (Кандидозы)</div>
+								<div id="cell_57_2"  class="calc__cell calc__cell--mid">Протира-ние или погруже-ние</div>
+								<div id="cell_57_3"  class="calc__cell">90</div>
+								<div id="cell_57_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_57_5"  class="calc__cell calc__cell--input"><input id="inp_57_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_57_6"  class="calc__cell calc__cell--input"><input id="inp_57_2" type="text" class="calc__input" placeholder="•••" value="10"></div>
+								<div id="cell_57_7"  class="calc__cell">3</div>
+								<div id="cell_57_8"  class="calc__cell"></div>
+								<div id="cell_57_9"  class="calc__cell calc__cell--input"><input id="inp_57_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_57_10" class="calc__cell"></div>
+								<div id="cell_57_11" class="calc__cell calc__cell--input"><input id="inp_57_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_57_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_57_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row58 -->
+							<div class="calc__row">
+								<div id="cell_58_1"  class="calc__cell calc__cell--big">Предметы ухода за больными, средства личной гигиены     (Кандидозы)</div>
+								<div id="cell_58_2"  class="calc__cell calc__cell--mid">Протира-ние или погруже-ние</div>
+								<div id="cell_58_3"  class="calc__cell">60</div>
+								<div id="cell_58_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_58_5"  class="calc__cell calc__cell--input"><input id="inp_58_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_58_6"  class="calc__cell calc__cell--input"><input id="inp_58_2" type="text" class="calc__input" placeholder="•••" value="10"></div>
+								<div id="cell_58_7"  class="calc__cell">5</div>
+								<div id="cell_58_8"  class="calc__cell"></div>
+								<div id="cell_58_9"  class="calc__cell calc__cell--input"><input id="inp_58_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_58_10" class="calc__cell"></div>
+								<div id="cell_58_11" class="calc__cell calc__cell--input"><input id="inp_58_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_58_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_58_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row59 -->
+							<div class="calc__row">
+								<div id="cell_59_1"  class="calc__cell calc__cell--big">Предметы ухода за больными, средства личной гигиены     (Дерматофитии)</div>
+								<div id="cell_59_2"  class="calc__cell calc__cell--mid">Протира-ние или погруже-ние</div>
+								<div id="cell_59_3"  class="calc__cell">60</div>
+								<div id="cell_59_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_59_5"  class="calc__cell calc__cell--input"><input id="inp_59_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_59_6"  class="calc__cell calc__cell--input"><input id="inp_59_2" type="text" class="calc__input" placeholder="•••" value="10"></div>
+								<div id="cell_59_7"  class="calc__cell">3</div>
+								<div id="cell_59_8"  class="calc__cell"></div>
+								<div id="cell_59_9"  class="calc__cell calc__cell--input"><input id="inp_59_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_59_10" class="calc__cell"></div>
+								<div id="cell_59_11" class="calc__cell calc__cell--input"><input id="inp_59_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_59_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_59_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row60 -->
+							<div class="calc__row calc__row--bor-b">
+								<div id="cell_60_1"  class="calc__cell calc__cell--big">Предметы ухода за больными, средства личной гигиены     (Дерматофитии)</div>
+								<div id="cell_60_2"  class="calc__cell calc__cell--mid">Протира-ние или погруже-ние</div>
+								<div id="cell_60_3"  class="calc__cell">30</div>
+								<div id="cell_60_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_60_5"  class="calc__cell calc__cell--input"><input id="inp_60_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_60_6"  class="calc__cell calc__cell--input"><input id="inp_60_2" type="text" class="calc__input" placeholder="•••" value="10"></div>
+								<div id="cell_60_7"  class="calc__cell">5</div>
+								<div id="cell_60_8"  class="calc__cell"></div>
+								<div id="cell_60_9"  class="calc__cell calc__cell--input"><input id="inp_60_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_60_10" class="calc__cell"></div>
+								<div id="cell_60_11" class="calc__cell calc__cell--input"><input id="inp_60_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_60_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_60_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<div class="calc__text calc__text--color calc__text--subtitle calc__text--margin">Уборочный инвентарь</div>
+
+							<!-- row61 -->
+							<div class="calc__row">
+								<div id="cell_61_1"  class="calc__cell calc__cell--big">Уборочный инвентарь   (Бактериальные инфекции)</div>
+								<div id="cell_61_2"  class="calc__cell calc__cell--mid">Погруже-ние</div>
+								<div id="cell_61_3"  class="calc__cell">120</div>
+								<div id="cell_61_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_61_5"  class="calc__cell calc__cell--input"><input id="inp_61_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_61_6"  class="calc__cell calc__cell--input"><input id="inp_61_2" type="text" class="calc__input" placeholder="•••" value="10"></div>
+								<div id="cell_61_7"  class="calc__cell">1</div>
+								<div id="cell_61_8"  class="calc__cell"></div>
+								<div id="cell_61_9"  class="calc__cell calc__cell--input"><input id="inp_61_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_61_10" class="calc__cell"></div>
+								<div id="cell_61_11" class="calc__cell calc__cell--input"><input id="inp_61_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_61_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_61_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row62 -->
+							<div class="calc__row">
+								<div id="cell_62_1"  class="calc__cell calc__cell--big">Уборочный инвентарь   (Бактериальные инфекции)</div>
+								<div id="cell_62_2"  class="calc__cell calc__cell--mid">Погруже-ние</div>
+								<div id="cell_62_3"  class="calc__cell">60</div>
+								<div id="cell_62_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_62_5"  class="calc__cell calc__cell--input"><input id="inp_62_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_62_6"  class="calc__cell calc__cell--input"><input id="inp_62_2" type="text" class="calc__input" placeholder="•••" value="10"></div>
+								<div id="cell_62_7"  class="calc__cell">3</div>
+								<div id="cell_62_8"  class="calc__cell"></div>
+								<div id="cell_62_9"  class="calc__cell calc__cell--input"><input id="inp_62_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_62_10" class="calc__cell"></div>
+								<div id="cell_62_11" class="calc__cell calc__cell--input"><input id="inp_62_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_62_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_62_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row63 -->
+							<div class="calc__row">
+								<div id="cell_63_1"  class="calc__cell calc__cell--big">Уборочный инвентарь   (Бактериальные инфекции)</div>
+								<div id="cell_63_2"  class="calc__cell calc__cell--mid">Погруже-ние</div>
+								<div id="cell_63_3"  class="calc__cell">30</div>
+								<div id="cell_63_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_63_5"  class="calc__cell calc__cell--input"><input id="inp_63_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_63_6"  class="calc__cell calc__cell--input"><input id="inp_63_2" type="text" class="calc__input" placeholder="•••" value="10"></div>
+								<div id="cell_63_7"  class="calc__cell">5</div>
+								<div id="cell_63_8"  class="calc__cell"></div>
+								<div id="cell_63_9"  class="calc__cell calc__cell--input"><input id="inp_63_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_63_10" class="calc__cell"></div>
+								<div id="cell_63_11" class="calc__cell calc__cell--input"><input id="inp_63_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_63_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_63_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row64 -->
+							<div class="calc__row">
+								<div id="cell_64_1"  class="calc__cell calc__cell--big">Уборочный инвентарь   (Туберкулез)</div>
+								<div id="cell_64_2"  class="calc__cell calc__cell--mid">Погруже-ние</div>
+								<div id="cell_64_3"  class="calc__cell">180</div>
+								<div id="cell_64_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_64_5"  class="calc__cell calc__cell--input"><input id="inp_64_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_64_6"  class="calc__cell calc__cell--input"><input id="inp_64_2" type="text" class="calc__input" placeholder="•••" value="10"></div>
+								<div id="cell_64_7"  class="calc__cell">3</div>
+								<div id="cell_64_8"  class="calc__cell"></div>
+								<div id="cell_64_9"  class="calc__cell calc__cell--input"><input id="inp_64_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_64_10" class="calc__cell"></div>
+								<div id="cell_64_11" class="calc__cell calc__cell--input"><input id="inp_64_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_64_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_64_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row65 -->
+							<div class="calc__row">
+								<div id="cell_65_1"  class="calc__cell calc__cell--big">Уборочный инвентарь   (Туберкулез)</div>
+								<div id="cell_65_2"  class="calc__cell calc__cell--mid">Погруже-ние</div>
+								<div id="cell_65_3"  class="calc__cell">120</div>
+								<div id="cell_65_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_65_5"  class="calc__cell calc__cell--input"><input id="inp_65_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_65_6"  class="calc__cell calc__cell--input"><input id="inp_65_2" type="text" class="calc__input" placeholder="•••" value="10"></div>
+								<div id="cell_65_7"  class="calc__cell">5</div>
+								<div id="cell_65_8"  class="calc__cell"></div>
+								<div id="cell_65_9"  class="calc__cell calc__cell--input"><input id="inp_65_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_65_10" class="calc__cell"></div>
+								<div id="cell_65_11" class="calc__cell calc__cell--input"><input id="inp_65_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_65_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_65_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row66 -->
+							<div class="calc__row">
+								<div id="cell_66_1"  class="calc__cell calc__cell--big">Уборочный инвентарь   (Вирусные инфекции)</div>
+								<div id="cell_66_2"  class="calc__cell calc__cell--mid">Погруже-ние</div>
+								<div id="cell_66_3"  class="calc__cell">120</div>
+								<div id="cell_66_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_66_5"  class="calc__cell calc__cell--input"><input id="inp_66_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_66_6"  class="calc__cell calc__cell--input"><input id="inp_66_2" type="text" class="calc__input" placeholder="•••" value="10"></div>
+								<div id="cell_66_7"  class="calc__cell">5</div>
+								<div id="cell_66_8"  class="calc__cell"></div>
+								<div id="cell_66_9"  class="calc__cell calc__cell--input"><input id="inp_66_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_66_10" class="calc__cell"></div>
+								<div id="cell_66_11" class="calc__cell calc__cell--input"><input id="inp_66_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_66_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_66_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row67 -->
+							<div class="calc__row">
+								<div id="cell_67_1"  class="calc__cell calc__cell--big">Уборочный инвентарь   (Кандидозы)</div>
+								<div id="cell_67_2"  class="calc__cell calc__cell--mid">Погруже-ние</div>
+								<div id="cell_67_3"  class="calc__cell">240</div>
+								<div id="cell_67_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_67_5"  class="calc__cell calc__cell--input"><input id="inp_67_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_67_6"  class="calc__cell calc__cell--input"><input id="inp_67_2" type="text" class="calc__input" placeholder="•••" value="10"></div>
+								<div id="cell_67_7"  class="calc__cell">3</div>
+								<div id="cell_67_8"  class="calc__cell"></div>
+								<div id="cell_67_9"  class="calc__cell calc__cell--input"><input id="inp_67_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_67_10" class="calc__cell"></div>
+								<div id="cell_67_11" class="calc__cell calc__cell--input"><input id="inp_67_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_67_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_67_13" class="calc__cell calc__cell--result"></div>
+							</div>
+							
+							<!-- row68 -->
+							<div class="calc__row">
+								<div id="cell_68_1"  class="calc__cell calc__cell--big">Уборочный инвентарь   (Кандидозы)</div>
+								<div id="cell_68_2"  class="calc__cell calc__cell--mid">Погруже-ние</div>
+								<div id="cell_68_3"  class="calc__cell">180</div>
+								<div id="cell_68_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_68_5"  class="calc__cell calc__cell--input"><input id="inp_68_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_68_6"  class="calc__cell calc__cell--input"><input id="inp_68_2" type="text" class="calc__input" placeholder="•••" value="10"></div>
+								<div id="cell_68_7"  class="calc__cell">5</div>
+								<div id="cell_68_8"  class="calc__cell"></div>
+								<div id="cell_68_9"  class="calc__cell calc__cell--input"><input id="inp_68_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_68_10" class="calc__cell"></div>
+								<div id="cell_68_11" class="calc__cell calc__cell--input"><input id="inp_68_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_68_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_68_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row69 -->
+							<div class="calc__row">
+								<div id="cell_69_1"  class="calc__cell calc__cell--big">Уборочный инвентарь   (Дерматофитии)</div>
+								<div id="cell_69_2"  class="calc__cell calc__cell--mid">Погруже-ние</div>
+								<div id="cell_69_3"  class="calc__cell">180</div>
+								<div id="cell_69_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_69_5"  class="calc__cell calc__cell--input"><input id="inp_69_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_69_6"  class="calc__cell calc__cell--input"><input id="inp_69_2" type="text" class="calc__input" placeholder="•••" value="10"></div>
+								<div id="cell_69_7"  class="calc__cell">3</div>
+								<div id="cell_69_8"  class="calc__cell"></div>
+								<div id="cell_69_9"  class="calc__cell calc__cell--input"><input id="inp_69_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_69_10" class="calc__cell"></div>
+								<div id="cell_69_11" class="calc__cell calc__cell--input"><input id="inp_69_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_69_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_69_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row70 -->
+							<div class="calc__row calc__row--bor-b">
+								<div id="cell_70_1"  class="calc__cell calc__cell--big">Уборочный инвентарь   (Дерматофитии)</div>
+								<div id="cell_70_2"  class="calc__cell calc__cell--mid">Погруже-ние</div>
+								<div id="cell_70_3"  class="calc__cell">90</div>
+								<div id="cell_70_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_70_5"  class="calc__cell calc__cell--input"><input id="inp_70_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_70_6"  class="calc__cell calc__cell--input"><input id="inp_70_2" type="text" class="calc__input" placeholder="•••" value="10"></div>
+								<div id="cell_70_7"  class="calc__cell">5</div>
+								<div id="cell_70_8"  class="calc__cell"></div>
+								<div id="cell_70_9"  class="calc__cell calc__cell--input"><input id="inp_70_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_70_10" class="calc__cell"></div>
+								<div id="cell_70_11" class="calc__cell calc__cell--input"><input id="inp_70_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_70_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_70_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<div class="calc__text calc__text--color calc__text--subtitle calc__text--margin">Медициские отходы</div>
+
+							<!-- row71 -->
+							<div class="calc__row">
+								<div id="cell_71_1"  class="calc__cell calc__cell--big">Медициские отходы    (Текстильные материалы)</div>
+								<div id="cell_71_2"  class="calc__cell calc__cell--mid">Погруже-ние</div>
+								<div id="cell_71_3"  class="calc__cell">180</div>
+								<div id="cell_71_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_71_5"  class="calc__cell calc__cell--input"><input id="inp_71_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_71_6"  class="calc__cell calc__cell--input"><input id="inp_71_2" type="text" class="calc__input" placeholder="•••" value="10"></div>
+								<div id="cell_71_7"  class="calc__cell">5</div>
+								<div id="cell_71_8"  class="calc__cell"></div>
+								<div id="cell_71_9"  class="calc__cell calc__cell--input"><input id="inp_71_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_71_10" class="calc__cell"></div>
+								<div id="cell_71_11" class="calc__cell calc__cell--input"><input id="inp_71_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_71_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_71_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row72 -->
+							<div class="calc__row">
+								<div id="cell_72_1"  class="calc__cell calc__cell--big">Медициские отходы    (Из&nbsp;металлов, стекла, пластмасс)</div>
+								<div id="cell_72_2"  class="calc__cell calc__cell--mid">Погруже-ние</div>
+								<div id="cell_72_3"  class="calc__cell">60</div>
+								<div id="cell_72_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_72_5"  class="calc__cell calc__cell--input"><input id="inp_72_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_72_6"  class="calc__cell calc__cell--input"><input id="inp_72_2" type="text" class="calc__input" placeholder="•••" value="10"></div>
+								<div id="cell_72_7"  class="calc__cell">5</div>
+								<div id="cell_72_8"  class="calc__cell"></div>
+								<div id="cell_72_9"  class="calc__cell calc__cell--input"><input id="inp_72_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_72_10" class="calc__cell"></div>
+								<div id="cell_72_11" class="calc__cell calc__cell--input"><input id="inp_72_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_72_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_72_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row73 -->
+							<div class="calc__row calc__row--bor-b">
+								<div id="cell_73_1"  class="calc__cell calc__cell--big">Медициские отходы    (Из&nbsp;резин)</div>
+								<div id="cell_73_2"  class="calc__cell calc__cell--mid">Погруже-ние</div>
+								<div id="cell_73_3"  class="calc__cell">60</div>
+								<div id="cell_73_4"  class="calc__cell">Обра-ботка</div>
+								<div id="cell_73_5"  class="calc__cell calc__cell--input"><input id="inp_73_1" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_73_6"  class="calc__cell calc__cell--input"><input id="inp_73_2" type="text" class="calc__input" placeholder="•••" value="10"></div>
+								<div id="cell_73_7"  class="calc__cell">8</div>
+								<div id="cell_73_8"  class="calc__cell"></div>
+								<div id="cell_73_9"  class="calc__cell calc__cell--input"><input id="inp_73_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_73_10" class="calc__cell"></div>
+								<div id="cell_73_11" class="calc__cell calc__cell--input"><input id="inp_73_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_73_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_73_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="calc__block">
+
+						<div class="calc__text calc__text--title calc__text--slide calc__text--slide--open">Генеральные уборки в ЛПУ</div>
+
+						<div class="calc__slide calc__slide--closed">
+
+							<!-- row74 -->
+							<div class="calc__row">
+								<div id="cell_74_1"  class="calc__cell calc__cell--big">Хирургические, акушерские, гинекологические, соматические стационары; процедурные кабинеты; клинические, диагностические лаборатории; станции переливания крови</div>
+								<div id="cell_74_2"  class="calc__cell calc__cell--mid">Проитра-ние</div>
+								<div id="cell_74_3"  class="calc__cell">60</div>
+								<div id="cell_74_4"  class="calc__cell">кв. м</div>
+								<div id="cell_74_5"  class="calc__cell calc__cell--input"><input id="inp_74_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_74_6"  class="calc__cell calc__cell--input"><input id="inp_74_2" type="text" class="calc__input" placeholder="•••" value="0.15"></div>
+								<div id="cell_74_7"  class="calc__cell">5</div>
+								<div id="cell_74_8"  class="calc__cell"></div>
+								<div id="cell_74_9"  class="calc__cell calc__cell--input"><input id="inp_74_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_74_10" class="calc__cell"></div>
+								<div id="cell_74_11" class="calc__cell calc__cell--input"><input id="inp_74_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_74_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_74_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row75 -->
+							<div class="calc__row">
+								<div id="cell_75_1"  class="calc__cell calc__cell--big">Противотуберкулезные стационары</div>
+								<div id="cell_75_2"  class="calc__cell calc__cell--mid">Протира-ние</div>
+								<div id="cell_75_3"  class="calc__cell">90</div>
+								<div id="cell_75_4"  class="calc__cell">кв. м</div>
+								<div id="cell_75_5"  class="calc__cell calc__cell--input"><input id="inp_75_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_75_6"  class="calc__cell calc__cell--input"><input id="inp_75_2" type="text" class="calc__input" placeholder="•••" value="0.15"></div>
+								<div id="cell_75_7"  class="calc__cell">3</div>
+								<div id="cell_75_8"  class="calc__cell"></div>
+								<div id="cell_75_9"  class="calc__cell calc__cell--input"><input id="inp_75_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_75_10" class="calc__cell"></div>
+								<div id="cell_75_11" class="calc__cell calc__cell--input"><input id="inp_75_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_75_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_75_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row76 -->
+							<div class="calc__row">
+								<div id="cell_76_1"  class="calc__cell calc__cell--big">Противотуберкулезные стационары</div>
+								<div id="cell_76_2"  class="calc__cell calc__cell--mid">Протира-ние</div>
+								<div id="cell_76_3"  class="calc__cell">60</div>
+								<div id="cell_76_4"  class="calc__cell">кв. м</div>
+								<div id="cell_76_5"  class="calc__cell calc__cell--input"><input id="inp_76_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_76_6"  class="calc__cell calc__cell--input"><input id="inp_76_2" type="text" class="calc__input" placeholder="•••" value="0.15"></div>
+								<div id="cell_76_7"  class="calc__cell">5</div>
+								<div id="cell_76_8"  class="calc__cell"></div>
+								<div id="cell_76_9"  class="calc__cell calc__cell--input"><input id="inp_76_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_76_10" class="calc__cell"></div>
+								<div id="cell_76_11" class="calc__cell calc__cell--input"><input id="inp_76_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_76_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_76_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row77 -->
+							<div class="calc__row">
+								<div id="cell_77_1"  class="calc__cell calc__cell--big">Кожно-венерологические стационары (Кандидозы)</div>
+								<div id="cell_77_2"  class="calc__cell calc__cell--mid">Протира-ние</div>
+								<div id="cell_77_3"  class="calc__cell">90</div>
+								<div id="cell_77_4"  class="calc__cell">кв. м</div>
+								<div id="cell_77_5"  class="calc__cell calc__cell--input"><input id="inp_77_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_77_6"  class="calc__cell calc__cell--input"><input id="inp_77_2" type="text" class="calc__input" placeholder="•••" value="0.15"></div>
+								<div id="cell_77_7"  class="calc__cell">3</div>
+								<div id="cell_77_8"  class="calc__cell"></div>
+								<div id="cell_77_9"  class="calc__cell calc__cell--input"><input id="inp_77_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_77_10" class="calc__cell"></div>
+								<div id="cell_77_11" class="calc__cell calc__cell--input"><input id="inp_77_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_77_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_77_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row78 -->
+							<div class="calc__row">
+								<div id="cell_78_1"  class="calc__cell calc__cell--big">Кожно-венерологические стационары (Кандидозы)</div>
+								<div id="cell_78_2"  class="calc__cell calc__cell--mid">Протира-ние</div>
+								<div id="cell_78_3"  class="calc__cell">60</div>
+								<div id="cell_78_4"  class="calc__cell">кв. м</div>
+								<div id="cell_78_5"  class="calc__cell calc__cell--input"><input id="inp_78_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_78_6"  class="calc__cell calc__cell--input"><input id="inp_78_2" type="text" class="calc__input" placeholder="•••" value="0.15"></div>
+								<div id="cell_78_7"  class="calc__cell">5</div>
+								<div id="cell_78_8"  class="calc__cell"></div>
+								<div id="cell_78_9"  class="calc__cell calc__cell--input"><input id="inp_78_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_78_10" class="calc__cell"></div>
+								<div id="cell_78_11" class="calc__cell calc__cell--input"><input id="inp_78_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_78_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_78_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row79 -->
+							<div class="calc__row">
+								<div id="cell_79_1"  class="calc__cell calc__cell--big">Кожно-венерологические стационары (Дерматофитии)</div>
+								<div id="cell_79_2"  class="calc__cell calc__cell--mid">Протира-ние</div>
+								<div id="cell_79_3"  class="calc__cell">60</div>
+								<div id="cell_79_4"  class="calc__cell">кв. м</div>
+								<div id="cell_79_5"  class="calc__cell calc__cell--input"><input id="inp_79_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_79_6"  class="calc__cell calc__cell--input"><input id="inp_79_2" type="text" class="calc__input" placeholder="•••" value="0.15"></div>
+								<div id="cell_79_7"  class="calc__cell">3</div>
+								<div id="cell_79_8"  class="calc__cell"></div>
+								<div id="cell_79_9"  class="calc__cell calc__cell--input"><input id="inp_79_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_79_10" class="calc__cell"></div>
+								<div id="cell_79_11" class="calc__cell calc__cell--input"><input id="inp_79_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_79_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_79_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row80 -->
+							<div class="calc__row">
+								<div id="cell_80_1"  class="calc__cell calc__cell--big">Кожно-венерологические стационары (Дерматофитии)</div>
+								<div id="cell_80_2"  class="calc__cell calc__cell--mid">Протира-ние</div>
+								<div id="cell_80_3"  class="calc__cell">30</div>
+								<div id="cell_80_4"  class="calc__cell">кв. м</div>
+								<div id="cell_80_5"  class="calc__cell calc__cell--input"><input id="inp_80_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_80_6"  class="calc__cell calc__cell--input"><input id="inp_80_2" type="text" class="calc__input" placeholder="•••" value="0.15"></div>
+								<div id="cell_80_7"  class="calc__cell">5</div>
+								<div id="cell_80_8"  class="calc__cell"></div>
+								<div id="cell_80_9"  class="calc__cell calc__cell--input"><input id="inp_80_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_80_10" class="calc__cell"></div>
+								<div id="cell_80_11" class="calc__cell calc__cell--input"><input id="inp_80_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_80_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_80_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row81 -->
+							<div class="calc__row">
+								<div id="cell_81_1"  class="calc__cell calc__cell--big">Стоматологические отделения </div>
+								<div id="cell_81_2"  class="calc__cell calc__cell--mid">Проитра-ние</div>
+								<div id="cell_81_3"  class="calc__cell">60</div>
+								<div id="cell_81_4"  class="calc__cell">кв. м</div>
+								<div id="cell_81_5"  class="calc__cell calc__cell--input"><input id="inp_81_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_81_6"  class="calc__cell calc__cell--input"><input id="inp_81_2" type="text" class="calc__input" placeholder="•••" value="0.15"></div>
+								<div id="cell_81_7"  class="calc__cell">5</div>
+								<div id="cell_81_8"  class="calc__cell"></div>
+								<div id="cell_81_9"  class="calc__cell calc__cell--input"><input id="inp_81_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_81_10" class="calc__cell"></div>
+								<div id="cell_81_11" class="calc__cell calc__cell--input"><input id="inp_81_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_81_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_81_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="calc__block">
+
+						<div class="calc__text calc__text--title calc__text--slide calc__text--slide--open">Профилактическая дезинфекция</div>
+
+						<div class="calc__slide calc__slide--closed">
+
+							<!-- row82 -->
+							<div class="calc__row">
+								<div id="cell_82_1"  class="calc__cell calc__cell--big">На предприятиях коммунально-бытового обслуживания, учреждениях культуры, социального обеспечения, предприятиях общественного питания, торговли, детских учреждениях</div>
+								<div id="cell_82_2"  class="calc__cell calc__cell--mid">Проитра-ние</div>
+								<div id="cell_82_3"  class="calc__cell">30</div>
+								<div id="cell_82_4"  class="calc__cell">кв. м</div>
+								<div id="cell_82_5"  class="calc__cell calc__cell--input"><input id="inp_82_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_82_6"  class="calc__cell calc__cell--input"><input id="inp_82_2" type="text" class="calc__input" placeholder="•••" value="0.15"></div>
+								<div id="cell_82_7"  class="calc__cell">1</div>
+								<div id="cell_82_8"  class="calc__cell"></div>
+								<div id="cell_82_9"  class="calc__cell calc__cell--input"><input id="inp_82_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_82_10" class="calc__cell"></div>
+								<div id="cell_82_11" class="calc__cell calc__cell--input"><input id="inp_82_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_82_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_82_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row83 -->
+							<div class="calc__row calc__row--bor-b">
+								<div id="cell_83_1"  class="calc__cell calc__cell--big">На предприятиях коммунально-бытового обслуживания, учреждениях культуры, социального обеспечения, предприятиях общественного питания, торговли, детских учреждениях</div>
+								<div id="cell_83_2"  class="calc__cell calc__cell--mid">Проитра-ние</div>
+								<div id="cell_83_3"  class="calc__cell">15</div>
+								<div id="cell_83_4"  class="calc__cell">кв. м</div>
+								<div id="cell_83_5"  class="calc__cell calc__cell--input"><input id="inp_83_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_83_6"  class="calc__cell calc__cell--input"><input id="inp_83_2" type="text" class="calc__input" placeholder="•••" value="0.15"></div>
+								<div id="cell_83_7"  class="calc__cell">3</div>
+								<div id="cell_83_8"  class="calc__cell"></div>
+								<div id="cell_83_9"  class="calc__cell calc__cell--input"><input id="inp_83_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_83_10" class="calc__cell"></div>
+								<div id="cell_83_11" class="calc__cell calc__cell--input"><input id="inp_83_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_83_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_83_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="calc__block">
+
+						<div class="calc__text calc__text--title calc__text--slide calc__text--slide--open">Борьба с плесенью на поверхностях в помещениях</div>
+
+						<div class="calc__slide calc__slide--closed">
+
+							<!-- row84 -->
+							<div class="calc__row">
+								<div id="cell_84_1"  class="calc__cell calc__cell--big">Борьба с плесенью в нежилых помещениях</div>
+								<div id="cell_84_2"  class="calc__cell calc__cell--mid">Двухкрат-ная обработка с интерва-лом 15&nbsp;мин.</div>
+								<div id="cell_84_3"  class="calc__cell">180</div>
+								<div id="cell_84_4"  class="calc__cell">кв. м</div>
+								<div id="cell_84_5"  class="calc__cell calc__cell--input"><input id="inp_84_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_84_6"  class="calc__cell calc__cell--input"><input id="inp_84_2" type="text" class="calc__input" placeholder="•••" value="0.15"></div>
+								<div id="cell_84_7"  class="calc__cell">8</div>
+								<div id="cell_84_8"  class="calc__cell"></div>
+								<div id="cell_84_9"  class="calc__cell calc__cell--input"><input id="inp_84_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_84_10" class="calc__cell"></div>
+								<div id="cell_84_11" class="calc__cell calc__cell--input"><input id="inp_84_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_84_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_84_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+							<!-- row85 -->
+							<div class="calc__row calc__row--bor-b">
+								<div id="cell_85_1"  class="calc__cell calc__cell--big">Борьба с плесенью в нежилых помещениях</div>
+								<div id="cell_85_2"  class="calc__cell calc__cell--mid">Трехкрат-ная обработка с интерва-лом 15&nbsp;мин.</div>
+								<div id="cell_85_3"  class="calc__cell">120</div>
+								<div id="cell_85_4"  class="calc__cell">кв. м</div>
+								<div id="cell_85_5"  class="calc__cell calc__cell--input"><input id="inp_85_1" type="text" class="calc__input" placeholder="•••" value="100"></div>
+								<div id="cell_85_6"  class="calc__cell calc__cell--input"><input id="inp_85_2" type="text" class="calc__input" placeholder="•••" value="0.15"></div>
+								<div id="cell_85_7"  class="calc__cell">8</div>
+								<div id="cell_85_8"  class="calc__cell"></div>
+								<div id="cell_85_9"  class="calc__cell calc__cell--input"><input id="inp_85_3" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_85_10" class="calc__cell"></div>
+								<div id="cell_85_11" class="calc__cell calc__cell--input"><input id="inp_85_4" type="text" class="calc__input" placeholder="•••" value="1"></div>
+								<div id="cell_85_12" class="calc__cell calc__cell--result"></div>
+								<div id="cell_85_13" class="calc__cell calc__cell--result"></div>
+							</div>
+
+						</div>
+
+					</div>
+
+
+<!--
+					<div class="calc__block">
+
+						<div class="calc__text calc__text--title calc__text--slide">qqq</div>
+
+						<div class="calc__slide calc__slide--closed">
+
+							<div class="calc__text calc__text--color calc__text--subtitle calc__text--margin">qqq</div>
+
+						</div>
+
+					</div>
+-->
+
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+</body>
+</html>
