@@ -1,0 +1,242 @@
+
+$blue: #0094ff
+$gray: #8a7daa
+
+
+
+
+
+*
+    padding: 0
+    margin: 0
+    font-family: sans-serif
+    box-sizing: border-box
+
+.calc
+    position: relative
+    margin: 100px auto
+    width: 100%
+    max-width: 800px
+    min-height: 500px
+    @media ( max-width: 810px )
+        width: 96%
+
+    &__header
+        font-size: 24px
+        text-align: center
+        margin: 10px 0 100px 0
+        color: $gray
+        letter-spacing: 2px
+        text-transform: uppercase
+
+    &__content
+        width: 100%
+        height: 100%
+        min-height: 600px
+        position: relative
+        margin: 30px 0 0 0
+        box-shadow: 0 10px 25px 0px rgba(0,0,0,0.1)
+        padding: 20px 20px
+        display: flex
+        border-radius: 25px
+        justify-content: space-between
+        transition-duration: 1s
+        @media ( max-width: 768px )
+            flex-wrap: wrap
+            justify-content: center
+        @media ( max-width: 390px )
+            padding: 10px 10px
+
+        &--transform
+            transform: translateY(-100px)
+            opacity: 0
+
+    &__left
+        width: 60%
+        position: relative
+        //background: #00000011
+        @media ( max-width: 768px )
+            width: 90%
+        @media ( max-width: 390px )
+            width: 100%
+
+    &__right
+        width: 40%
+        position: relative
+        background: #f5f5f5
+        margin: 0 0 0 10px
+        border-radius: 15px
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        padding: 40px 20px
+        @media ( max-width: 768px )
+            width: 100%
+            min-height: 400px
+            margin: 0
+
+    &__start
+        width: 100%
+        height: 20px
+
+    &__img
+        display: block
+        width: 40%
+        position: relative
+        margin: 0 0 0 20px
+        @media ( max-width: 768px )
+            margin: 0
+            width: 100px
+            height: 100px
+
+    &__line
+        display: flex
+        margin: 15px 0
+        align-items: center
+        justify-content: center
+        height: 40px
+        @media ( max-width: 490px )
+            flex-wrap: wrap
+            height: auto
+        @media ( max-width: 390px )
+            width: 100%
+
+        &--padding
+            padding: 0 52px 0 0
+            @media ( max-width: 490px )
+                padding: 0
+
+    &__text
+        font-size: 16px
+        margin: 0 10px 0 0
+        width: 120px
+        text-align: right
+        @media ( max-width: 490px )
+            width: 100%
+            margin: 0 0 15px 0
+            text-align: center
+            color: $gray
+
+    &__radio
+        display: none
+
+        &:checked + .calc__label::before
+            content: ""
+            background: $blue
+            border: 4px solid #fff
+            box-shadow: 0 0 0 1px #ccc
+
+    &__label
+        position: relative
+        margin: 0 10px 0 0
+        padding: 0 0 0 30px
+        width: 95px
+
+        &::before
+            content: ""
+            display: block
+            width: 18px
+            height: 18px
+            position: absolute
+            border: 1px solid #ccc
+            border-radius: 30px
+            top: 0
+            left: 4px
+            box-sizing: border-box
+
+    &__input
+        height: 100%
+        width: 100px
+        background: #fff
+        border: 1px solid #ccc
+        border-radius: 6px
+        text-align: center
+        outline: none
+        font-size: 18px
+        transition-duration: 0.5s
+        @media ( max-width: 490px )
+            height: 40px
+
+        &:focus
+            border: 1px solid $blue
+            background: #f5f5ff
+
+    &__note
+        font-size: 16px
+        font-style: italic
+        color: #ccc
+        margin: 0 50px 0 10px
+        width: 100px
+        @media ( max-width: 490px )
+            margin: 0 0 0 10px
+
+        &--small
+            width: auto
+            text-align: center
+            width: 30px
+            margin: 0
+
+    &__separate
+        border-bottom: 1px dashed #ccc
+        width: 90%
+        height: 1px
+        margin: 30px auto
+
+    &__btn
+        width: 100%
+        max-width: 150px
+        text-transform: uppercase
+        font-size: 18px
+        color: #fff
+        height: 50px
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        background: $blue
+        border-radius: 6px
+        letter-spacing: 1px
+        cursor: pointer
+        transition-duration: 0.4s
+        margin: 40px auto 30px auto
+        user-select: none
+        @media ( max-width: 768px )
+            margin: 40px auto 50px auto
+
+        &:hover
+            opacity: 0.6
+
+        &:active
+            opacity: 0.1
+
+    &__result
+        width: 100%
+        //min-height: 300px
+        //background: #00000011
+        margin: 30px 0 0 0
+        transform: scale(1, 0)
+        transition-duration: 0.5s
+        position: absolute
+
+        &--show
+            position: relative
+            transform: scale(1, 1)
+
+    &__title
+        font-size: 16px
+        font-weight: 400
+        text-align: center
+        margin: 10px 0
+        color: #888
+
+    &__itog
+        font-size: 20px
+        font-weight: 600
+        text-align: center
+        margin: 10px 0 30px 0
+        color: $blue
+
+    &__remark
+        color: #888
+        text-align: center

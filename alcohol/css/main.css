@@ -1,0 +1,360 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.calc {
+  position: relative;
+  margin: 100px auto;
+  width: 100%;
+  max-width: 800px;
+  min-height: 500px;
+}
+
+@media (max-width: 810px) {
+  .calc {
+    width: 96%;
+  }
+}
+
+.calc__header {
+  font-size: 24px;
+  text-align: center;
+  margin: 10px 0 100px 0;
+  color: #8a7daa;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.calc__content {
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  position: relative;
+  margin: 30px 0 0 0;
+  -webkit-box-shadow: 0 10px 25px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 25px 0px rgba(0, 0, 0, 0.1);
+  padding: 20px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 25px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+@media (max-width: 768px) {
+  .calc__content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 390px) {
+  .calc__content {
+    padding: 10px 10px;
+  }
+}
+
+.calc__content--transform {
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+  opacity: 0;
+}
+
+.calc__left {
+  width: 60%;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .calc__left {
+    width: 90%;
+  }
+}
+
+@media (max-width: 390px) {
+  .calc__left {
+    width: 100%;
+  }
+}
+
+.calc__right {
+  width: 40%;
+  position: relative;
+  background: #f5f5f5;
+  margin: 0 0 0 10px;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 40px 20px;
+}
+
+@media (max-width: 768px) {
+  .calc__right {
+    width: 100%;
+    min-height: 400px;
+    margin: 0;
+  }
+}
+
+.calc__start {
+  width: 100%;
+  height: 20px;
+}
+
+.calc__img {
+  display: block;
+  width: 40%;
+  position: relative;
+  margin: 0 0 0 20px;
+}
+
+@media (max-width: 768px) {
+  .calc__img {
+    margin: 0;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.calc__line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 40px;
+}
+
+@media (max-width: 490px) {
+  .calc__line {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: auto;
+  }
+}
+
+@media (max-width: 390px) {
+  .calc__line {
+    width: 100%;
+  }
+}
+
+.calc__line--padding {
+  padding: 0 52px 0 0;
+}
+
+@media (max-width: 490px) {
+  .calc__line--padding {
+    padding: 0;
+  }
+}
+
+.calc__text {
+  font-size: 16px;
+  margin: 0 10px 0 0;
+  width: 120px;
+  text-align: right;
+}
+
+@media (max-width: 490px) {
+  .calc__text {
+    width: 100%;
+    margin: 0 0 15px 0;
+    text-align: center;
+    color: #8a7daa;
+  }
+}
+
+.calc__radio {
+  display: none;
+}
+
+.calc__radio:checked + .calc__label::before {
+  content: "";
+  background: #0094ff;
+  border: 4px solid #fff;
+  -webkit-box-shadow: 0 0 0 1px #ccc;
+          box-shadow: 0 0 0 1px #ccc;
+}
+
+.calc__label {
+  position: relative;
+  margin: 0 10px 0 0;
+  padding: 0 0 0 30px;
+  width: 95px;
+}
+
+.calc__label::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  top: 0;
+  left: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.calc__input {
+  height: 100%;
+  width: 100px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+  outline: none;
+  font-size: 18px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+@media (max-width: 490px) {
+  .calc__input {
+    height: 40px;
+  }
+}
+
+.calc__input:focus {
+  border: 1px solid #0094ff;
+  background: #f5f5ff;
+}
+
+.calc__note {
+  font-size: 16px;
+  font-style: italic;
+  color: #ccc;
+  margin: 0 50px 0 10px;
+  width: 100px;
+}
+
+@media (max-width: 490px) {
+  .calc__note {
+    margin: 0 0 0 10px;
+  }
+}
+
+.calc__note--small {
+  width: auto;
+  text-align: center;
+  width: 30px;
+  margin: 0;
+}
+
+.calc__separate {
+  border-bottom: 1px dashed #ccc;
+  width: 90%;
+  height: 1px;
+  margin: 30px auto;
+}
+
+.calc__btn {
+  width: 100%;
+  max-width: 150px;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #fff;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background: #0094ff;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  margin: 40px auto 30px auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+@media (max-width: 768px) {
+  .calc__btn {
+    margin: 40px auto 50px auto;
+  }
+}
+
+.calc__btn:hover {
+  opacity: 0.6;
+}
+
+.calc__btn:active {
+  opacity: 0.1;
+}
+
+.calc__result {
+  width: 100%;
+  margin: 30px 0 0 0;
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  position: absolute;
+}
+
+.calc__result--show {
+  position: relative;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+.calc__title {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  margin: 10px 0;
+  color: #888;
+}
+
+.calc__itog {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin: 10px 0 30px 0;
+  color: #0094ff;
+}
+
+.calc__remark {
+  color: #888;
+  text-align: center;
+}
+/*# sourceMappingURL=main.css.map */

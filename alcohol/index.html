@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+	
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+
+	<div class="calc">
+
+		<div class="calc__header">Калькулятор концентрации спирта в&nbsp;крови</div>
+
+		<div class="calc__content calc__content--transform">
+
+			<div class="calc__left">
+				
+				<div class="calc__start"></div>
+
+				<div class="calc__line calc__line--padding">
+	
+					<div class="calc__text">Ваш пол:</div>
+	
+					<input class="calc__radio" type="radio" name="calc_sex" id="calc_radio_1" value="0.7" checked>
+					<label class="calc__label" for="calc_radio_1">Мужской</label>
+					
+					<input class="calc__radio" type="radio" name="calc_sex" id="calc_radio_2" value="0.6">
+					<label class="calc__label" for="calc_radio_2">Женский</label>
+	
+				</div>
+	
+				<div class="calc__line">
+					
+					<div class="calc__text">Масса тела:</div>
+	
+					<input id="inp_mass" type="text" class="calc__input" value="60">
+	
+					<div class="calc__note">(40-150 кг)</div>
+	
+				</div>
+	
+				<div class="calc__line">
+					
+					<div class="calc__text">Рост:</div>
+	
+					<input id="inp_height" type="text" class="calc__input" value="170">
+	
+					<div class="calc__note">(120-200 см)</div>
+	
+				</div>
+	
+				<div class="calc__separate"></div>
+
+				<div class="calc__line">
+
+					<div class="calc__text">Напиток №1:</div>
+
+					<input id="inp_drink1_perc" type="text" class="calc__input calc__input--alco" value="40">
+
+					<div class="calc__note calc__note--small">%</div>
+
+					<input id="inp_drink1_ml" type="text" class="calc__input" value="100">
+
+					<div class="calc__note calc__note--small">мл</div>
+
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__text">Напиток №2:</div>
+
+					<input id="inp_drink2_perc" type="text" class="calc__input calc__input--alco" value="0">
+
+					<div class="calc__note calc__note--small">%</div>
+
+					<input id="inp_drink2_ml" type="text" class="calc__input" value="0">
+
+					<div class="calc__note calc__note--small">мл</div>
+
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__text">Напиток №3:</div>
+
+					<input id="inp_drink3_perc" type="text" class="calc__input calc__input--alco" value="0">
+
+					<div class="calc__note calc__note--small">%</div>
+
+					<input id="inp_drink3_ml" type="text" class="calc__input" value="0">
+
+					<div class="calc__note calc__note--small">мл</div>
+
+				</div>
+
+				<div class="calc__separate"></div>
+
+				<div class="calc__line calc__line--padding">
+	
+					<div class="calc__text">Наполненность&nbsp;&nbsp; желудка:</div>
+	
+					<input class="calc__radio" type="radio" name="calc_eat" id="calc_radio_3" value="1" checked>
+					<label class="calc__label" for="calc_radio_3">Пустой</label>
+					
+					<input class="calc__radio" type="radio" name="calc_eat" id="calc_radio_4" value="0.873">
+					<label class="calc__label" for="calc_radio_4">Полный</label>
+	
+				</div>
+
+				<div class="calc__separate"></div>
+
+				<div class="calc__btn">Рассчитать</div>
+	
+	
+			</div>
+	
+			<div class="calc__right">
+
+				<img src="img/cup1-bl.png" alt="" class="calc__img">
+
+				<div class="calc__result">
+
+					<div class="calc__title">Максимальная концентрация алкоголя в крови:</div>
+
+					<div id="calc_promille" class="calc__itog">123</div>
+
+					<!-- <div class="calc__remark"></div> -->
+
+					<div class="calc__title">В выдыхаемом воздухе указанная концентрация соответствует:</div>
+
+					<div id="calc_mlnal" class="calc__itog">123</div>
+
+					<div class="calc__title">Время выведения из организма:</div>
+
+					<div id="calc_clear" class="calc__itog">123</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+</body>
+</html>
