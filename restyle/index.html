@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@700&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div class="calc__head">Калькулятор стоимости букв</div>
+
+		
+
+		<div class="calc__space"></div>
+		<div class="calc__space"></div>
+
+		<div class="calc__title">Тип вывески</div>
+		<div class="calc__line"></div>
+
+		<div class="calc__type">
+
+			<input type="radio" name="letter_type" id="calc_radio_1" class="calc__radio" value="2200" checked>
+			<label for="calc_radio_1" class="calc__label">
+				<img src="img/letter1.png" alt="" class="calc__img">
+				<div>Лицевая подсветка</div>
+			</label>
+
+			<input type="radio" name="letter_type" id="calc_radio_2" class="calc__radio" value="3600">
+			<label for="calc_radio_2" class="calc__label">
+				<img src="img/letter2.png" alt="" class="calc__img">
+				<div>Жидкий акрил</div>
+			</label>
+
+			<input type="radio" name="letter_type" id="calc_radio_3" class="calc__radio" value="3600">
+			<label for="calc_radio_3" class="calc__label">
+				<img src="img/letter3.png" alt="" class="calc__img">
+				<div>Полное свечение</div>
+			</label>
+
+			<input type="radio" name="letter_type" id="calc_radio_4" class="calc__radio" value="3600">
+			<label for="calc_radio_4" class="calc__label">
+				<img src="img/letter4.png" alt="" class="calc__img">
+				<div>Контражурное свечение</div>
+			</label>
+
+			<input type="radio" name="letter_type" id="calc_radio_5" class="calc__radio" value="1800">
+			<label for="calc_radio_5" class="calc__label">
+				<img src="img/letter5.png" alt="" class="calc__img">
+				<div>Без подсветки</div>
+			</label>
+
+		</div>
+
+		<div class="calc__space"></div>
+		<div class="calc__title">Текст вывески</div>
+		<div class="calc__line"></div>
+
+		<div class="calc__properties">
+
+			<div class="calc__block">
+				<div class="calc__descr">Ваша надпись</div>
+				<input id="main_input" type="text" class="calc__input" placeholder="" value="ВАША НАДПИСЬ">
+			</div>
+
+			<div class="calc__block">
+				<div class="calc__descr">Выберите шрифт</div>
+
+				<div class="calc__input calc__select">Arial</div>
+
+				<div class="calc__list">
+					<li class="calc__li">Arial</li>
+					<li class="calc__li">Calibri</li>
+					<li class="calc__li">Impact</li>
+					<li class="calc__li">Times New Roman</li>
+					<li class="calc__li">Russo One</li>
+					<li class="calc__li">Caveat</li>
+					<li class="calc__li">Kelly Slab</li>
+					<li class="calc__li">Yeseva One</li>
+					<li class="calc__li">Trebuchet MS</li>
+					<li class="calc__li">Comic Sans MS</li>
+					<li class="calc__li">Montserrat Alternates</li>
+				</div>
+
+				<!-- <div class="calc__list">
+					<li class="calc__li">Arial Bold</li>
+					<li class="calc__li">CyrillicRound</li>
+					<li class="calc__li">Enthalpy298</li>
+					<li class="calc__li">Mont Heavy Demo</li>
+					<li class="calc__li">MFED</li>
+					<li class="calc__li">Citrica Cyrillic</li>
+					<li class="calc__li">Forte VR</li>
+					<li class="calc__li">Cramaten</li>
+					<li class="calc__li">GeoSlab</li>
+					<li class="calc__li">ljk_Carbon2</li>
+				</div> -->
+
+			</div>
+
+
+
+		</div>
+
+		<div class="calc__space"></div>
+		<div class="calc__title">Параметры вывески</div>
+		<div class="calc__line"></div>
+
+		<div class="calc__properties calc__flex--jcsb">
+
+			<div class="calc__block">
+				<div class="calc__descr">Выберите цвет</div>
+				
+				<div class="calc__color">
+
+					<div class="calc__picker calc__picker--1"></div>
+					<div class="calc__palette">
+
+						<div class="calc__palette-close">×</div>
+
+						<input type="radio" name="palette_1" id="calc_palette_1_1" class="calc__palette-radio" value="fff7f7">
+						<label for="calc_palette_1_1" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_2" class="calc__palette-radio" value="ff71c1">
+						<label for="calc_palette_1_2" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_3" class="calc__palette-radio" value="c60063">
+						<label for="calc_palette_1_3" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_4" class="calc__palette-radio" value="7b0042">
+						<label for="calc_palette_1_4" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_5" class="calc__palette-radio" value="520063">
+						<label for="calc_palette_1_5" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_6" class="calc__palette-radio" value="521a86">
+						<label for="calc_palette_1_6" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_7" class="calc__palette-radio" value="42004a">
+						<label for="calc_palette_1_7" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_8" class="calc__palette-radio" value="449ec0">
+						<label for="calc_palette_1_8" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_9" class="calc__palette-radio" value="008ac0">
+						<label for="calc_palette_1_9" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_10" class="calc__palette-radio" value="00619c">
+						<label for="calc_palette_1_10" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_11" class="calc__palette-radio" value="00964a">
+						<label for="calc_palette_1_11" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_12" class="calc__palette-radio" value="00b110">
+						<label for="calc_palette_1_12" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_13" class="calc__palette-radio" value="00cb21">
+						<label for="calc_palette_1_13" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_14" class="calc__palette-radio" value="00b673">
+						<label for="calc_palette_1_14" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_15" class="calc__palette-radio" value="e7be00">
+						<label for="calc_palette_1_15" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_16" class="calc__palette-radio" value="ffb200">
+						<label for="calc_palette_1_16" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_17" class="calc__palette-radio" value="ffc718">
+						<label for="calc_palette_1_17" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_18" class="calc__palette-radio" value="ffa200">
+						<label for="calc_palette_1_18" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_19" class="calc__palette-radio" value="e0c537">
+						<label for="calc_palette_1_19" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_20" class="calc__palette-radio" value="ff8a00">
+						<label for="calc_palette_1_20" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_21" class="calc__palette-radio" value="ff5500">
+						<label for="calc_palette_1_21" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_22" class="calc__palette-radio" value="004016">
+						<label for="calc_palette_1_22" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_23" class="calc__palette-radio" value="000000">
+						<label for="calc_palette_1_23" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_24" class="calc__palette-radio" value="8c8e84">
+						<label for="calc_palette_1_24" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_25" class="calc__palette-radio" value="9c9e94">
+						<label for="calc_palette_1_25" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_26" class="calc__palette-radio" value="afafaf">
+						<label for="calc_palette_1_26" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_27" class="calc__palette-radio" value="eadca9">
+						<label for="calc_palette_1_27" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_28" class="calc__palette-radio" value="632810">
+						<label for="calc_palette_1_28" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_29" class="calc__palette-radio" value="de9a6b">
+						<label for="calc_palette_1_29" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_30" class="calc__palette-radio" value="ffc384">
+						<label for="calc_palette_1_30" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_31" class="calc__palette-radio" value="d7d7d7">
+						<label for="calc_palette_1_31" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_32" class="calc__palette-radio" value="d7d7d7">
+						<label for="calc_palette_1_32" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_33" class="calc__palette-radio" value="0062aa">
+						<label for="calc_palette_1_33" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_34" class="calc__palette-radio" value="006b96">
+						<label for="calc_palette_1_34" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_35" class="calc__palette-radio" value="0014a5">
+						<label for="calc_palette_1_35" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_36" class="calc__palette-radio" value="002c63">
+						<label for="calc_palette_1_36" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_37" class="calc__palette-radio" value="310073">
+						<label for="calc_palette_1_37" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_38" class="calc__palette-radio" value="52007b">
+						<label for="calc_palette_1_38" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_39" class="calc__palette-radio" value="210073">
+						<label for="calc_palette_1_39" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_40" class="calc__palette-radio" value="008c9e">
+						<label for="calc_palette_1_40" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_41" class="calc__palette-radio" value="00b2a5">
+						<label for="calc_palette_1_41" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_42" class="calc__palette-radio" value="00ba94">
+						<label for="calc_palette_1_42" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_43" class="calc__palette-radio" value="ff2512">
+						<label for="calc_palette_1_43" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_44" class="calc__palette-radio" value="ff2246">
+						<label for="calc_palette_1_44" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_45" class="calc__palette-radio" value="f73400">
+						<label for="calc_palette_1_45" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_46" class="calc__palette-radio" value="ff0f00">
+						<label for="calc_palette_1_46" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_47" class="calc__palette-radio" value="ef1400">
+						<label for="calc_palette_1_47" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_48" class="calc__palette-radio" value="ce0000">
+						<label for="calc_palette_1_48" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_49" class="calc__palette-radio" value="b50018">
+						<label for="calc_palette_1_49" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_50" class="calc__palette-radio" value="840021">
+						<label for="calc_palette_1_50" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_51" class="calc__palette-radio" value="ffb1a1">
+						<label for="calc_palette_1_51" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_52" class="calc__palette-radio" value="00b614">
+						<label for="calc_palette_1_52" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_53" class="calc__palette-radio" value="197c5c">
+						<label for="calc_palette_1_53" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_1" id="calc_palette_1_54" class="calc__palette-radio" value="00a252">
+						<label for="calc_palette_1_54" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+
+					</div>
+					<div>Основной цвет</div>
+
+				</div>
+
+				<div class="calc__color">
+
+					<div class="calc__picker calc__picker--2"></div>
+					<div class="calc__palette">
+
+						<div class="calc__palette-close">×</div>
+
+						<input type="radio" name="palette_2" id="calc_palette_2_1" class="calc__palette-radio" value="fff7f7">
+						<label for="calc_palette_2_1" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_2" class="calc__palette-radio" value="ff71c1">
+						<label for="calc_palette_2_2" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_3" class="calc__palette-radio" value="c60063">
+						<label for="calc_palette_2_3" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_4" class="calc__palette-radio" value="7b0042">
+						<label for="calc_palette_2_4" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_5" class="calc__palette-radio" value="520063">
+						<label for="calc_palette_2_5" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_6" class="calc__palette-radio" value="521a86">
+						<label for="calc_palette_2_6" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_7" class="calc__palette-radio" value="42004a">
+						<label for="calc_palette_2_7" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_8" class="calc__palette-radio" value="449ec0">
+						<label for="calc_palette_2_8" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_9" class="calc__palette-radio" value="008ac0">
+						<label for="calc_palette_2_9" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_10" class="calc__palette-radio" value="00619c">
+						<label for="calc_palette_2_10" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_11" class="calc__palette-radio" value="00964a">
+						<label for="calc_palette_2_11" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_12" class="calc__palette-radio" value="00b110">
+						<label for="calc_palette_2_12" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_13" class="calc__palette-radio" value="00cb21">
+						<label for="calc_palette_2_13" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_14" class="calc__palette-radio" value="00b673">
+						<label for="calc_palette_2_14" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_15" class="calc__palette-radio" value="e7be00">
+						<label for="calc_palette_2_15" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_16" class="calc__palette-radio" value="ffb200">
+						<label for="calc_palette_2_16" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_17" class="calc__palette-radio" value="ffc718">
+						<label for="calc_palette_2_17" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_18" class="calc__palette-radio" value="ffa200">
+						<label for="calc_palette_2_18" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_19" class="calc__palette-radio" value="e0c537">
+						<label for="calc_palette_2_19" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_20" class="calc__palette-radio" value="ff8a00">
+						<label for="calc_palette_2_20" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_21" class="calc__palette-radio" value="ff5500">
+						<label for="calc_palette_2_21" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_22" class="calc__palette-radio" value="004016">
+						<label for="calc_palette_2_22" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_23" class="calc__palette-radio" value="000000">
+						<label for="calc_palette_2_23" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_24" class="calc__palette-radio" value="8c8e84">
+						<label for="calc_palette_2_24" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_25" class="calc__palette-radio" value="9c9e94">
+						<label for="calc_palette_2_25" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_26" class="calc__palette-radio" value="afafaf">
+						<label for="calc_palette_2_26" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_27" class="calc__palette-radio" value="eadca9">
+						<label for="calc_palette_2_27" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_28" class="calc__palette-radio" value="632810">
+						<label for="calc_palette_2_28" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_29" class="calc__palette-radio" value="de9a6b">
+						<label for="calc_palette_2_29" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_30" class="calc__palette-radio" value="ffc384">
+						<label for="calc_palette_2_30" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_31" class="calc__palette-radio" value="d7d7d7">
+						<label for="calc_palette_2_31" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_32" class="calc__palette-radio" value="d7d7d7">
+						<label for="calc_palette_2_32" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_33" class="calc__palette-radio" value="0062aa">
+						<label for="calc_palette_2_33" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_34" class="calc__palette-radio" value="006b96">
+						<label for="calc_palette_2_34" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_35" class="calc__palette-radio" value="0014a5">
+						<label for="calc_palette_2_35" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_36" class="calc__palette-radio" value="002c63">
+						<label for="calc_palette_2_36" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_37" class="calc__palette-radio" value="310073">
+						<label for="calc_palette_2_37" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_38" class="calc__palette-radio" value="52007b">
+						<label for="calc_palette_2_38" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_39" class="calc__palette-radio" value="210073">
+						<label for="calc_palette_2_39" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_40" class="calc__palette-radio" value="008c9e">
+						<label for="calc_palette_2_40" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_41" class="calc__palette-radio" value="00b2a5">
+						<label for="calc_palette_2_41" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_42" class="calc__palette-radio" value="00ba94">
+						<label for="calc_palette_2_42" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_43" class="calc__palette-radio" value="ff2512">
+						<label for="calc_palette_2_43" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_44" class="calc__palette-radio" value="ff2246">
+						<label for="calc_palette_2_44" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_45" class="calc__palette-radio" value="f73400">
+						<label for="calc_palette_2_45" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_46" class="calc__palette-radio" value="ff0f00">
+						<label for="calc_palette_2_46" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_47" class="calc__palette-radio" value="ef1400">
+						<label for="calc_palette_2_47" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_48" class="calc__palette-radio" value="ce0000">
+						<label for="calc_palette_2_48" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_49" class="calc__palette-radio" value="b50018">
+						<label for="calc_palette_2_49" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_50" class="calc__palette-radio" value="840021">
+						<label for="calc_palette_2_50" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_51" class="calc__palette-radio" value="ffb1a1">
+						<label for="calc_palette_2_51" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_52" class="calc__palette-radio" value="00b614">
+						<label for="calc_palette_2_52" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_53" class="calc__palette-radio" value="197c5c">
+						<label for="calc_palette_2_53" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_2" id="calc_palette_2_54" class="calc__palette-radio" value="00a252">
+						<label for="calc_palette_2_54" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+
+					</div>
+					<div>Цвет борта</div>
+
+				</div>
+				
+			</div>
+
+			<div class="calc__block">
+
+				<div class="calc__descr">Выберите размер</div>
+
+				<div class="calc__size">
+
+					<div class="calc__size-descr">Высота</div>
+
+					<input id="calc_height" type="text" class="calc__input calc__input--size" placeholder="" value="50">
+
+					<div>см</div>
+
+				</div>
+
+				<div class="calc__size">
+
+					<div class="calc__size-descr">Длина</div>
+
+					<input id="calc_width" type="text" class="calc__input calc__input--disabled calc__input--size" placeholder="" disabled>
+
+					<div>см</div>
+
+				</div>
+				
+			</div>
+
+			<div class="calc__block">
+
+				<div class="calc__descr">Размер подложки</div>
+
+				<div class="calc__size">
+
+					<div class="calc__size-descr">Высота</div>
+
+					<input id="calc_back_height" type="text" class="calc__input calc__input--size" placeholder="" value="60">
+
+					<div>см</div>
+
+				</div>
+
+				<div class="calc__size">
+
+					<div class="calc__size-descr">Длина</div>
+
+					<input id="calc_back_width" type="text" class="calc__input calc__input--disabled calc__input--size" placeholder="" disabled>
+
+					<div>см</div>
+
+				</div>
+
+			</div>
+
+			<div class="calc__block">
+
+				<div class="calc__descr">Цвет подложки</div>
+				
+				<div class="calc__color">
+
+					<div class="calc__picker calc__picker--3"></div>
+					<div class="calc__palette">
+
+						<div class="calc__palette-close">×</div>
+
+						<input type="radio" name="palette_3" id="calc_palette_3_1" class="calc__palette-radio" value="fff7f7">
+						<label for="calc_palette_3_1" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_2" class="calc__palette-radio" value="ff71c1">
+						<label for="calc_palette_3_2" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_3" class="calc__palette-radio" value="c60063">
+						<label for="calc_palette_3_3" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_4" class="calc__palette-radio" value="7b0042">
+						<label for="calc_palette_3_4" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_5" class="calc__palette-radio" value="520063">
+						<label for="calc_palette_3_5" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_6" class="calc__palette-radio" value="521a86">
+						<label for="calc_palette_3_6" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_7" class="calc__palette-radio" value="42004a">
+						<label for="calc_palette_3_7" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_8" class="calc__palette-radio" value="449ec0">
+						<label for="calc_palette_3_8" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_9" class="calc__palette-radio" value="008ac0">
+						<label for="calc_palette_3_9" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_10" class="calc__palette-radio" value="00619c">
+						<label for="calc_palette_3_10" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_11" class="calc__palette-radio" value="00964a">
+						<label for="calc_palette_3_11" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_12" class="calc__palette-radio" value="00b110">
+						<label for="calc_palette_3_12" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_13" class="calc__palette-radio" value="00cb21">
+						<label for="calc_palette_3_13" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_14" class="calc__palette-radio" value="00b673">
+						<label for="calc_palette_3_14" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_15" class="calc__palette-radio" value="e7be00">
+						<label for="calc_palette_3_15" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_16" class="calc__palette-radio" value="ffb200">
+						<label for="calc_palette_3_16" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_17" class="calc__palette-radio" value="ffc718">
+						<label for="calc_palette_3_17" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_18" class="calc__palette-radio" value="ffa200">
+						<label for="calc_palette_3_18" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_19" class="calc__palette-radio" value="e0c537">
+						<label for="calc_palette_3_19" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_20" class="calc__palette-radio" value="ff8a00">
+						<label for="calc_palette_3_20" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_21" class="calc__palette-radio" value="ff5500">
+						<label for="calc_palette_3_21" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_22" class="calc__palette-radio" value="004016">
+						<label for="calc_palette_3_22" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_23" class="calc__palette-radio" value="000000">
+						<label for="calc_palette_3_23" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_24" class="calc__palette-radio" value="8c8e84">
+						<label for="calc_palette_3_24" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_25" class="calc__palette-radio" value="9c9e94">
+						<label for="calc_palette_3_25" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_26" class="calc__palette-radio" value="afafaf">
+						<label for="calc_palette_3_26" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_27" class="calc__palette-radio" value="eadca9">
+						<label for="calc_palette_3_27" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_28" class="calc__palette-radio" value="632810">
+						<label for="calc_palette_3_28" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_29" class="calc__palette-radio" value="de9a6b">
+						<label for="calc_palette_3_29" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_30" class="calc__palette-radio" value="ffc384">
+						<label for="calc_palette_3_30" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_31" class="calc__palette-radio" value="d7d7d7">
+						<label for="calc_palette_3_31" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_32" class="calc__palette-radio" value="d7d7d7">
+						<label for="calc_palette_3_32" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_33" class="calc__palette-radio" value="0062aa">
+						<label for="calc_palette_3_33" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_34" class="calc__palette-radio" value="006b96">
+						<label for="calc_palette_3_34" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_35" class="calc__palette-radio" value="0014a5">
+						<label for="calc_palette_3_35" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_36" class="calc__palette-radio" value="002c63">
+						<label for="calc_palette_3_36" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_37" class="calc__palette-radio" value="310073">
+						<label for="calc_palette_3_37" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_38" class="calc__palette-radio" value="52007b">
+						<label for="calc_palette_3_38" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_39" class="calc__palette-radio" value="210073">
+						<label for="calc_palette_3_39" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_40" class="calc__palette-radio" value="008c9e">
+						<label for="calc_palette_3_40" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_41" class="calc__palette-radio" value="00b2a5">
+						<label for="calc_palette_3_41" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_42" class="calc__palette-radio" value="00ba94">
+						<label for="calc_palette_3_42" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_43" class="calc__palette-radio" value="ff2512">
+						<label for="calc_palette_3_43" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_44" class="calc__palette-radio" value="ff2246">
+						<label for="calc_palette_3_44" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_45" class="calc__palette-radio" value="f73400">
+						<label for="calc_palette_3_45" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_46" class="calc__palette-radio" value="ff0f00">
+						<label for="calc_palette_3_46" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_47" class="calc__palette-radio" value="ef1400">
+						<label for="calc_palette_3_47" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_48" class="calc__palette-radio" value="ce0000">
+						<label for="calc_palette_3_48" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_49" class="calc__palette-radio" value="b50018">
+						<label for="calc_palette_3_49" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_50" class="calc__palette-radio" value="840021">
+						<label for="calc_palette_3_50" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_51" class="calc__palette-radio" value="ffb1a1">
+						<label for="calc_palette_3_51" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_52" class="calc__palette-radio" value="00b614">
+						<label for="calc_palette_3_52" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_53" class="calc__palette-radio" value="197c5c">
+						<label for="calc_palette_3_53" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+						<input type="radio" name="palette_3" id="calc_palette_3_54" class="calc__palette-radio" value="00a252">
+						<label for="calc_palette_3_54" class="calc__palette-label"><div class="calc__palette-img"></div></label>
+
+					</div>
+					<div>Цвет фона</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="calc__space"></div>
+		<div class="calc__space"></div>
+
+		<div class="calc__section">
+
+			<div class="calc__result">
+				<div class="calc__theword calc__theword--back">Ваша надпись</div>
+				<div class="calc__sizemark calc__sizemark--right">111</div>
+				<div class="calc__sizemark calc__sizemark--bot">222</div>
+			</div>
+
+		</div>
+
+
+		<div class="calc__space"></div>
+		<div class="calc__space"></div>
+		<div class="calc__title">Стоимость вывески</div>
+		<div class="calc__line"></div>
+
+		<div class="calc__properties calc__flex--jcsb">
+
+			<div class="calc__block">
+
+				<div class="calc__descr">Буквы</div>
+				<div id="calc_summ_1" class="calc__summ">15755</div>
+
+			</div>
+
+			<div class="calc__block">
+
+				<div class="calc__descr">Блок питания</div>
+				<div id="calc_summ_2" class="calc__summ">15755</div>
+
+			</div>
+
+			<div class="calc__block">
+
+				<div class="calc__descr calc__flex calc__flex--aic">
+					<div>Нужна подложка?</div>
+					<input class="calc__checkbox" type="checkbox" name="calc_checkbox_1" id="calc_checkbox_1" checked>
+				</div>
+				<div id="calc_summ_3" class="calc__summ">15755</div>
+
+			</div>
+
+			<div class="calc__block">
+
+				<div class="calc__descr calc__flex calc__flex--aic">
+					<div>Нужен монтаж?</div>
+					<input class="calc__checkbox" type="checkbox" name="calc_checkbox_2" id="calc_checkbox_2" checked>
+				</div>
+				<div id="calc_summ_4" class="calc__summ">15755</div>
+
+			</div>
+
+			<div class="calc__block">
+
+				<div class="calc__descr">Итого</div>
+				<div id="calc_summ_5" class="calc__summ calc__summ--itog">15755</div>
+
+			</div>
+
+
+
+		</div>
+
+		<div class="calc__space"></div>
+		<div class="calc__space"></div>
+		<div class="calc__space"></div>
+		<div class="calc__title calc__title--bold">Оформить заказ</div>
+		<div class="calc__line"></div>
+		<div class="calc__space"></div>
+
+		<form method="" action="" class="calc__flex calc__flex--jcsb">
+
+			<input id="calc_name" type="text" class="calc__input calc__input--form" placeholder="Ваше имя">
+
+			<input id="calc_phone" type="text" class="calc__input calc__input--form" placeholder="Ваш телефон">
+
+			<div class="calc__btn">Отправить</div>
+
+		</form>
+
+		<div class="calc__space"></div>
+
+	</div>
+
+
+
+</body>
+</html>

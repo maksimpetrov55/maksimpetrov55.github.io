@@ -1,0 +1,368 @@
+
+$red: #D12223
+$black: #333
+$gray: #eeeeee
+
+
+
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: 'Open Sans', sans-serif
+
+body
+    position: relative
+    background: #37343f
+
+.calc
+    position: relative
+    width: 100%
+    max-width: 1140px
+    min-width: 1140px
+    min-height: 500px
+    background: #fff
+    margin: 70px auto
+    border-radius: 2px
+    box-shadow: 0 15px 25px 0px rgba(0,0,0,0.1)
+    padding: 20px 40px 70px 40px 
+
+    &__space
+        width: 100%
+        height: 20px
+        position: relative
+
+    &__flex
+        display: flex
+
+        &--aic
+            align-items: center
+
+        &--jcsb
+            justify-content: space-between
+
+    &__line
+        background: $gray
+        height: 1px
+        width: 100%
+        position: relative
+        margin: 10px auto
+
+    &__head
+        font-size: 38px
+        font-weight: 600
+        font-family: 'Merriweather', serif
+        color: $red
+        text-align: center
+        margin: 30px auto 10px auto
+        letter-spacing: 1.5px
+        text-transform: uppercase
+
+    &__title
+        font-size: 20px
+        color: $black
+        margin: 10px 0
+
+        &--bold
+            font-weight: 600
+
+    &__type
+        display: flex
+        flex-shrink: none
+        flex-wrap: wrap
+
+    &__radio
+        display: none
+
+        &:checked + .calc__label
+            border: 3px solid $red
+            background: #fafafa
+            box-shadow: 0 7px 20px 0px rgba(0,0,0,0.1)
+
+    &__label
+        display: block
+        margin: 10px 20px 10px 0
+        background: $gray
+        border: 3px solid $gray
+        width: 160px
+        text-align: center
+        padding: 10px 20px
+        cursor: pointer
+        border-radius: 10px
+        user-select: none
+        transition-duration: 0.4s
+
+    &__img
+        position: relative
+        display: block
+        width: 90px
+        height: 90px
+        margin: 10px auto
+
+    &__properties
+        display: flex
+        flex-shrink: none
+
+    &__block
+        //background: #eee
+        margin: 10px 30px 10px 0
+
+    &__descr
+        margin: 10px 0
+        color: #777
+
+    &__input
+        border: none
+        border: 1px solid #aaa
+        border-radius: 4px
+        height: 42px
+        width: 260px
+        padding: 0 10px
+        outline: none
+        font-size: 18px
+
+        &--form
+            width: 340px
+            height: 50px
+
+        &--size
+            width: 70px
+            margin: 0 5px
+
+        &--disabled
+            background: #ddd
+
+    &__select
+        display: flex
+        align-items: center
+        user-select: none
+        cursor: pointer
+
+    &__list
+        padding: 10px 0
+        border: 1px solid #eee
+        border-radius: 8px
+        box-shadow: 0 5px 15px 0 rgba(0,0,0,0.1)
+        position: absolute
+        width: 260px
+        //margin: 10px 0 0 0
+        background: #fff
+        z-index: 89
+        display: none
+
+        &--show
+            display: block
+
+    &__li
+        list-style-type: none
+        margin: 2px 0
+        cursor: pointer
+        padding: 4px 15px
+
+        &:hover
+            background: $gray
+
+    &__color
+        display: flex
+        align-items: center
+
+        min-height: 42px
+        margin: 5px 20px 5px 0
+        position: relative
+
+    &__picker
+        width: 32px
+        height: 32px
+        background: #000
+        margin: 0 5px 0 0
+        border-radius: 50px
+        overflow: hidden
+        cursor: pointer
+
+        &--1
+            background: #FFF7F7
+
+        &--2
+            background: #AFAFAF
+
+        &--3
+            background: #FF2512
+
+        // &--close
+        //     background-image: url("../img/close.png")
+        //     background-size: 80% 80%
+        //     background-position: 50% 50%
+
+    &__palette
+        display: none
+        position: absolute
+        width: 290px
+        height: 300px
+        background: #ffffff
+        border: 1px solid #cccccc
+        border-radius: 6px
+        top: -305px
+        left: 0px
+        flex-wrap: wrap
+        z-index: 99
+        box-shadow: 0 5px 15px 0 rgba(0,0,0,0.1)
+
+        &--show
+            display: flex
+
+    &__palette-close
+        position: absolute
+        left: 105%
+        top: 0%
+        font-size: 30px
+        line-height: 50px
+        margin: -8px 0 0 0
+        cursor: pointer
+
+    &__palette-radio
+        display: none
+
+        &:checked + .calc__palette-label
+            border: 7px solid #fff
+
+    &__palette-label
+        display: block
+        width: 30px
+        height: 30px
+        margin: 3px
+        cursor: pointer
+
+    &__palette-img
+        position: relative
+        width: 100%
+        height: 100%
+        display: block
+        background: #000
+        border-radius: 50px
+
+    &__size
+        display: flex
+        align-items: center
+        width: 160px
+        margin: 5px 0
+
+    &__size-descr
+        width: 60px
+
+
+
+
+    &__section
+        width: 100%
+        position: relative
+        padding: 60px 30px
+        overflow: hidden
+        background: $gray
+        border-radius: 10px
+        display: flex
+        align-items: center
+        justify-content: center
+
+    &__result
+        position: relative
+        display: flex
+        align-items: center
+
+    &__theword
+        font-size: 70px
+        font-weight: 900
+        text-align: center
+        min-height: 9px
+        min-width: 210px
+        padding: 15px 15px
+        border-radius: 10px
+        text-transform: uppercase
+        position: relative
+        font-family: Arial
+        line-height: 1.1
+        letter-spacing: 1px
+
+        &--back
+            padding: 20px 40px
+            min-height: 136px
+
+        &--trans
+            background: transparent !important
+
+    &__sizemark
+        position: absolute
+        display: flex
+        align-items: center
+        justify-content: center
+
+        &--right
+            height: 100%
+            top: 0
+            left: calc( 100% + 19px )
+
+            &::before
+                content: ""
+                display: block
+                position: absolute
+                right: calc(  100% + 4px )
+                top: 0
+                width: 10px
+                height: 100%
+                border-right: 2px solid #333
+                border-top: 2px solid #333
+                border-bottom: 2px solid #333
+                border-radius: 0 3px 3px 0
+                box-sizing: border-box
+
+        &--bot
+            width: 100%
+            left: 0
+            top: calc( 100% + 15px )
+
+            &::before
+                content: ""
+                display: block
+                position: absolute
+                bottom: 100%
+                left: 0
+                width: 100%
+                height: 10px
+                border-right: 2px solid #333
+                border-left: 2px solid #333
+                border-bottom: 2px solid #333
+                border-radius: 0 3px 3px 0
+                box-sizing: border-box
+
+    &__checkbox
+        margin: 0 0 0 5px
+        width: 20px
+        height: 20px
+        cursor: pointer
+
+    &__summ
+        font-weight: 600
+        font-size: 18px
+        color: $black
+
+        &--itog
+            color: $red
+
+    &__btn
+        width: 340px
+        height: 50px
+        background: $red
+        display: flex
+        align-items: center
+        justify-content: center
+        color: #fff
+        font-size: 18px
+        border-radius: 4px
+        cursor: pointer
+        transition-duration: 0.4s
+
+        &:hover
+            opacity: 0.85
+
+        &:active
+            opacity: 0.2
