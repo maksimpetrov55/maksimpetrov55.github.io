@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 
 
-	var paletteColor_1 = "FFF7F7";
+	var paletteColor_1 = "FFC718";
 	$('.calc__theword').css({ color: "#" + paletteColor_1 });
 
 	$('input[name="palette_1"]').click(function(){
@@ -22,7 +22,7 @@ $(document).ready(function() {
 		$('.calc__theword').css({ color: "#" + paletteColor_1 });
 	});
 
-	var paletteColor_2 = "AFAFAF";
+	var paletteColor_2 = "7B0042";
 	$('.calc__theword').css({ textShadow: "1px 1px 0px #" + paletteColor_2 + ", 2px 2px 0px #" + paletteColor_2 + ", 3px 3px 0px #" + paletteColor_2 + ", 4px 4px 0px #" + paletteColor_2 + ", 5px 5px 0px #" + paletteColor_2 });
 
 	$('input[name="palette_2"]').click(function(){

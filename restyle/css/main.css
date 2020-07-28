@@ -232,11 +232,11 @@ body {
 }
 
 .calc__picker--1 {
-  background: #FFF7F7;
+  background: #FFC718;
 }
 
 .calc__picker--2 {
-  background: #AFAFAF;
+  background: #7B0042;
 }
 
 .calc__picker--3 {
@@ -469,5 +469,12 @@ body {
 
 .calc__btn:active {
   opacity: 0.2;
+}
+
+.calc__note {
+  color: #aaaaaa;
+  font-size: 16px;
+  margin: 20px 0 10px;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */
