@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="muller/muller.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div class="calc__head">Рассчет стоимости бухгалтерских услуг</div>
+
+		<div class="calc__body">
+
+			<div class="calc__row">
+
+				<div class="calc__block">
+
+					<div class="calc__title">Тип регистрации в ИФНС</div>
+
+					<div class="calc__variants">
+
+						<input class="calc__select" type="radio" name="radio_reg" id="radio_reg_1" value="1">
+						<label class="calc__label calc__label--margin" for="radio_reg_1">Индивидуальный предприниматель</label>
+
+						<input class="calc__select" type="radio" name="radio_reg" id="radio_reg_2" value="2">
+						<label class="calc__label" for="radio_reg_2">Юридическое лицо</label>
+
+					</div>
+
+				</div>
+
+				<div class="calc__block">
+
+					<div class="calc__title">Тип системы налогооблажения</div>
+
+					<div class="calc__variants">
+
+						<input class="calc__select" type="radio" name="radio_nalog" id="radio_nalog_1" value="1">
+						<label class="calc__label calc__label--margin" for="radio_nalog_1">Общая система налогообложения</label>
+
+						<input class="calc__select" type="radio" name="radio_nalog" id="radio_nalog_2" value="2">
+						<label class="calc__label calc__label--margin" for="radio_nalog_2">Упрощенная система налогообложения 6%</label>
+
+						<input class="calc__select" type="radio" name="radio_nalog" id="radio_nalog_3" value="3">
+						<label class="calc__label" for="radio_nalog_3">Упрощенная система налогообложения 15%</label>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="calc__row">
+
+				<div class="calc__block">
+
+					<div class="calc__title">Количество сотрудников</div>
+
+					<div class="calc__variants calc__variants--emplo">
+
+						<input class="calc__select" type="radio" name="radio_emplo" id="radio_emplo_1" value="1">
+						<label class="calc__label calc__label--small calc__label--margin" for="radio_emplo_1">1 — 5</label>
+
+						<input class="calc__select" type="radio" name="radio_emplo" id="radio_emplo_2" value="2">
+						<label class="calc__label calc__label--small calc__label--margin" for="radio_emplo_2">6 — 10</label>
+
+						<input class="calc__select" type="radio" name="radio_emplo" id="radio_emplo_3" value="3">
+						<label class="calc__label calc__label--small calc__label--margin" for="radio_emplo_3">11 — 20</label>
+
+						<input class="calc__select" type="radio" name="radio_emplo" id="radio_emplo_4" value="4">
+						<label class="calc__label calc__label--small calc__label--margin" for="radio_emplo_4">21 — 30</label>
+
+						<input class="calc__select" type="radio" name="radio_emplo" id="radio_emplo_5" value="5">
+						<label class="calc__label calc__label--small" for="radio_emplo_5">> 30</label>
+
+					</div>
+
+				</div>
+
+				<div class="calc__block">
+
+					<div class="calc__title">Количество операций в месяц</div>
+
+
+					<div class="calc__operations">
+
+						<div class="calc__slider" id="polzunok"></div>
+
+						<div class="calc__scale">
+
+							<div>1</div>
+
+							<div>350</div>
+
+						</div>
+
+						<input class="calc__input" id="result-polzunok" type="text">
+
+					</div>
+
+
+				</div>
+
+			</div>
+
+			<div class="calc__row">
+
+				<div class="calc__block calc__block--long">
+
+					<div class="calc__title">Вид деятельности</div>
+
+					<div class="calc__variants calc__variants--activity">
+
+						<input class="calc__radio" type="radio" name="radio_activity" id="radio_activity_1" value="10">
+						<label class="calc__activity" for="radio_activity_1">Различные ставки НДС при реализации (+10%)</label>
+
+						<input class="calc__radio" type="radio" name="radio_activity" id="radio_activity_2" value="20">
+						<label class="calc__activity" for="radio_activity_2">Наличие различных систем налогообложения (+20%)</label>
+
+						<input class="calc__radio" type="radio" name="radio_activity" id="radio_activity_3" value="25">
+						<label class="calc__activity" for="radio_activity_3">ВЭД, валютные платежи (+25%)</label>
+
+						<input class="calc__radio" type="radio" name="radio_activity" id="radio_activity_4" value="25">
+						<label class="calc__activity" for="radio_activity_4">Производство (+25%)</label>
+
+						<input class="calc__radio" type="radio" name="radio_activity" id="radio_activity_5" value="20">
+						<label class="calc__activity" for="radio_activity_5">Строительство (+20%)</label>
+
+						<input class="calc__radio" type="radio" name="radio_activity" id="radio_activity_6" value="15">
+						<label class="calc__activity" for="radio_activity_6">Агентская деятельность (+15%)</label>
+
+						<input class="calc__radio" type="radio" name="radio_activity" id="radio_activity_7" value="25">
+						<label class="calc__activity" for="radio_activity_7">Розничная торговля с применением ККМ (+25%)</label>
+
+						<input class="calc__radio" type="radio" name="radio_activity" id="radio_activity_8" value="20">
+						<label class="calc__activity" for="radio_activity_8">Оптовая торговля (+20%)</label>
+						
+						<input class="calc__radio" type="radio" name="radio_activity" id="radio_activity_9" value="20">
+						<label class="calc__activity" for="radio_activity_9">Торговля акцизными товарами (+20%)</label>
+
+						<input class="calc__radio" type="radio" name="radio_activity" id="radio_activity_10" value="15">
+						<label class="calc__activity" for="radio_activity_10">Применение ПБУ 18/02 (+15%)</label>
+
+						<input class="calc__radio" type="radio" name="radio_activity" id="radio_activity_11" value="20">
+						<label class="calc__activity" for="radio_activity_11">Общепит (+20%)</label>
+
+						<div class="calc__activity calc__activity--blank"></div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="calc__row ">
+
+				<div class="calc__block calc__block--long">
+
+					<div class="calc__title">Итог расчета</div>
+
+					<div class="calc__itogtext"></div>
+
+					<div class="calc__price">Стоимость обслуживания: </div>
+					<div class="calc__price calc__price--cross">25000 руб.</div>
+
+					<div class="calc__result">
+
+						
+						<div class="calc__pricesale">22000 руб.</div>
+						<div class="calc__sale">Ваша скидка — <span class="calc__sale--bold"> 5%</span></div>
+
+					</div>
+
+					<div class="calc__info calc__info--title">В стоимость услуг бесплатно включены следующие услуги:</div>
+					<div class="calc__info">
+						— Ведение всех участков бухгалтерского и налогового учёта в 1С;<br>
+						— Составление и сдача сведений в ПФР по персонифицированному учёту;<br>
+						— Составление и предоставление в ИФНС сведений о доходах физических лиц;<br>
+						— Предоставление в ИФНС и фондах ваших интересов;<br>
+						— Ежеквартальная сверка по расчётам с бюджетом (по электронным каналам связи);<br>
+						— Консультирование по бухгалтерскому учёту и налогообложению в рамках текущей деятельности компании;<br>
+						— IT-поддержка специалистов при использовании клиентом нашей 1С:Бухгалтерии, размещённой на сервере нашей компании.<br>
+					</div>
+
+					<div class="calc__warn">Рассчитанная стоимость является примерной.</div>
+
+				</div>
+
+			</div>
+
+			<div class="calc__row ">
+
+				<div class="calc__block calc__block--long">
+
+					<div class="calc__title">Оставьте заявку</div>
+
+					<form class="calc__form" method="" action="">
+
+						<input type="text" name="calc_name" class="calc__forminp" required placeholder="Ваше Имя">
+						
+						<input type="text" name="calc_phone" class="calc__forminp" required placeholder="Ваш телефон">
+
+						<div class="calc__btn">Отправить</div>
+
+					</form>
+
+					<div class="calc__warn calc__warn--form">Нажимая на кнопку «Отправить», я даю согласие на обработку моих персональных данных.</div>
+					
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+</body>
+</html>
