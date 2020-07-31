@@ -300,8 +300,8 @@ $(document).ready(function() {
 				$('.calc__pricesale').text ( calcResult );
 			} else {
 				$('.calc__price--cross').css({ display: "inline-block" });
-				$('.calc__price--cross').text( (+calcResult * ((calcUp / 100) + 1)).toFixed(0) + " руб." );
-				$('.calc__pricesale').text ( (+calcResult * ((calcUp / 100) + 1) * 0.95).toFixed(0) + " руб." );
+				$('.calc__price--cross').text( "от " + (+calcResult * ((calcUp / 100) + 1)).toFixed(0) + " руб." );
+				$('.calc__pricesale').text ( "от " + (+calcResult * ((calcUp / 100) + 1)).toFixed(0) + " руб." );
 			}
 
 

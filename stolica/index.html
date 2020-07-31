@@ -6,13 +6,13 @@
 	<title>Web Mockup</title>
 
 	<link rel="stylesheet" href="muller/muller.css">
-	<link rel="stylesheet" href="css/main.css?v2">
+	<link rel="stylesheet" href="css/main.css?v3">
 	<link rel="stylesheet" href="css/jquery-ui.css">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/jquery.ui.touch-punch.min.js"></script>
-	<script src="js/scripts.js?v2"></script>	
+	<script src="js/scripts.js?v3"></script>	
 
 </head>
 <body>
@@ -35,12 +35,12 @@
 
 						<input class="calc__select" type="radio" name="radio_reg" id="radio_reg_1" value="1" checked>
 						<label class="calc__label calc__label--margin" for="radio_reg_1">
-							<div><span class="calc__label--radio"></span>Индивидуальный предприниматель</div>
+							<div><!-- <span class="calc__label--radio"> --></span>Индивидуальный предприниматель</div>
 						</label>
 
 						<input class="calc__select" type="radio" name="radio_reg" id="radio_reg_2" value="2">
 						<label class="calc__label" for="radio_reg_2">
-							<div><span class="calc__label--radio"></span>Юридическое лицо</div>
+							<div><!-- <span class="calc__label--radio"> --></span>Юридическое лицо</div>
 						</label>
 
 					</div>
@@ -55,17 +55,17 @@
 
 						<input class="calc__select" type="radio" name="radio_nalog" id="radio_nalog_1" value="1" checked>
 						<label class="calc__label calc__label--margin" for="radio_nalog_1">
-							<div><span class="calc__label--radio"></span>Общая система налогообложения</div>
+							<div><!-- <span class="calc__label--radio"> --></span>Общая система</div>
 							</label>
 
 						<input class="calc__select" type="radio" name="radio_nalog" id="radio_nalog_2" value="2">
 						<label class="calc__label calc__label--margin" for="radio_nalog_2">
-							<div><span class="calc__label--radio"></span>Упрощенная система налогообложения 6%</div>
+							<div><!-- <span class="calc__label--radio"> --></span>Упрощенная система 6%</div>
 							</label>
 
 						<input class="calc__select" type="radio" name="radio_nalog" id="radio_nalog_3" value="3">
 						<label class="calc__label" for="radio_nalog_3">
-							<div><span class="calc__label--radio"></span>Упрощенная система налогообложения 15%</div>
+							<div><!-- <span class="calc__label--radio"> --></span>Упрощенная система 15%</div>
 							</label>
 
 					</div>
@@ -202,9 +202,9 @@
 					<div class="calc__result">
 
 						<div class="calc__price">Стоимость услуг: </div>
-						<div class="calc__price calc__price--cross">от 25000 руб.</div>
+						<!-- <div class="calc__price calc__price--cross">от 25000 руб.</div> -->
 						<div class="calc__pricesale">от 22000 руб.</div>
-						<div class="calc__sale">Ваша скидка — <span class="calc__sale--bold"> 5%</span></div>
+						<!-- <div class="calc__sale">Ваша скидка — <span class="calc__sale--bold"> 5%</span></div> -->
 						<div class="calc__hover">
 							<div class="calc__hover__mark">?</div>
 							<div class="calc__hover__text">Что включено бесплатно в стоимость</div>
@@ -229,7 +229,7 @@
 
 					<div class="calc__line"></div>
 
-					<div class="calc__descr">Заполните форму, чтобы получить точный расчет, с учетом акций, коэффициентов и зафиксировать скидку 5%</div>
+					<div class="calc__descr">Заполните форму, чтобы получить точный расчет и первый месяц <span class="calc__descr--green">БЕСПЛАТНОГО</span> обслуживания</div>
 
 					<form class="calc__form" method="" action="">
 

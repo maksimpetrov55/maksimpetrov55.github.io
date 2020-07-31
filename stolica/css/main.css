@@ -201,22 +201,35 @@ body {
 }
 
 .calc__select:checked + .calc__label {
-  border: 3px solid #FDCD00;
+  border: 1px solid #FDCD00;
   background: #FDCD00;
-  padding: 4px;
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
   -webkit-box-shadow: 0 0 10px 3px rgba(253, 207, 0, 0.9);
           box-shadow: 0 0 10px 3px rgba(253, 207, 0, 0.9);
 }
 
-.calc__select:checked + .calc__label div .calc__label--radio {
+.calc__select:checked + .calc__label::before {
+  border: 1px solid #555;
+}
+
+.calc__select:checked + .calc__label::after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
   background: #fff;
+  border: 1px solid #555;
+  position: absolute;
+  left: 12px;
+  border-radius: 20px;
+  margin: -5px 0 0 0;
 }
 
 .calc__label {
+  position: relative;
   width: 160px;
-  height: 80px;
+  height: 90px;
   border: 1px dashed #111;
   border-radius: 15px;
   margin: 10px 0 10px 0;
@@ -225,14 +238,10 @@ body {
   display: flex;
   -ms-flex-negative: none;
       flex-shrink: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   font-size: 14px;
-  text-align: center;
   cursor: pointer;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
@@ -241,7 +250,7 @@ body {
       -ms-user-select: none;
           user-select: none;
   letter-spacing: -0.5px;
-  padding: 7px;
+  padding: 3px 3px 3px 38px;
   line-height: 1.2;
 }
 
@@ -283,17 +292,16 @@ body {
   }
 }
 
-.calc__label--radio {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
+.calc__label::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
   border: 1px solid #111;
-  border-radius: 50px;
-  margin: 0 5px 0 0;
-}
-
-.calc__label--radio--check {
-  background: #fff;
+  position: absolute;
+  left: 9px;
+  border-radius: 20px;
+  margin: -4px 0 0 0;
 }
 
 .calc__radio {
@@ -703,7 +711,12 @@ body {
 .calc__descr {
   font-size: 24px;
   font-weight: 700;
-  max-width: 790px;
+  max-width: 580px;
+  line-height: 1.2;
+}
+
+.calc__descr--green {
+  color: #37B538;
 }
 
 .calc__form {
@@ -787,6 +800,12 @@ body {
 }
 
 .calc__hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 14px;
   cursor: pointer;
 }
