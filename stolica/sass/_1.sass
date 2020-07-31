@@ -42,7 +42,7 @@ body
         overflow: hidden
         box-shadow: $shadow
         border-radius: 2px
-        background: $yellow1
+        background: #fff
         position: relative
         width: 100%
         min-height: 500px
@@ -66,6 +66,7 @@ body
             margin: 0
 
         &--bg
+            padding: 40px 0 0 0
             &::before
                 content: ""
                 display: block
@@ -73,8 +74,8 @@ body
                 width: 200%
                 height: 200%
                 left: -50%
-                top: -5%
-                background: #67B5DB
+                top: 0
+                background: #FFE67F
 
     &__block
         position: relative
@@ -105,6 +106,7 @@ body
             font-size: 16px
 
     &__variants
+        position: relative
         display: flex
         @media ( max-width: 500px )
             flex-wrap: wrap
@@ -118,27 +120,34 @@ body
             flex-wrap: wrap
             justify-content: space-between
 
+    &__por
+        position: relative
+
     &__select
         display: none
 
         &:checked + .calc__label
-            border: 3px solid #fff
-            background: #fff
+            border: 3px solid $yellow1
+            background: $yellow1
             padding: 4px
             transform: translateY(-5px)
-            box-shadow: 0 0 10px 3px rgba(255,255,255,0.9)
+            box-shadow: 0 0 10px 3px rgba(253,207,0,0.9)
+
+        &:checked + .calc__label div .calc__label--radio
+            background: #fff
 
     &__label
         width: 160px
         height: 80px
-        border: 1px solid #111
+        border: 1px dashed #111
         border-radius: 15px
         margin: 10px 0 10px 0
         display: flex
+        flex-shrink: none
         justify-content: center
         align-items: center
-        flex-direction: column
-        font-size: 15px
+        //flex-direction: column
+        font-size: 14px
         text-align: center
         cursor: pointer
         transition-duration: 0.2s
@@ -165,6 +174,19 @@ body
             margin: 10px 10px 10px 0
             @media ( max-width: 500px )
                 margin: 5px 0
+                
+        &--radio
+            display: inline-block
+            width: 14px
+            height: 14px
+            border: 1px solid #111
+            border-radius: 50px
+            margin: 0 5px 0 0
+
+            &--check
+                background: #fff
+
+
 
     &__radio
         display: none
@@ -359,7 +381,7 @@ body
 
     &__sale
         padding: 0 10px
-        background: $yellow1
+        background: #37B538
         color: #fff
         display: inline-flex
         align-items: center
@@ -377,6 +399,7 @@ body
 
     &__info
         display: none
+        box-shadow: $shadow
         position: absolute
         background: #fff
         padding: 20px 20px
@@ -471,7 +494,7 @@ body
         justify-content: center
         align-items: center
         text-align: center
-        background: $yellow1
+        background: #3D9FD0
         cursor: pointer
         border-radius: 2px
         font-size: 20px
@@ -524,16 +547,16 @@ body
 
 
 .ui-slider
-    background: #111 !important
+    background: #ddd !important
     height: 2px !important
     border: none !important
 
 .ui-slider-range
-    background: #fff !important
+    background: $yellow1 !important
 
 .ui-slider-handle
     border-radius: 50px !important
-    background: #fff !important
+    background: $yellow1 !important
     border: none !important
     outline: none !important
     margin-top: -3px !important

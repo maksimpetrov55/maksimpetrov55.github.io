@@ -50,7 +50,7 @@ body {
   -webkit-box-shadow: 0 15px 38px 1.6px rgba(0, 0, 0, 0.1);
           box-shadow: 0 15px 38px 1.6px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
-  background: #FDCD00;
+  background: #fff;
   position: relative;
   width: 100%;
   min-height: 500px;
@@ -110,7 +110,7 @@ body {
   height: 200%;
   left: -50%;
   top: 0;
-  background: #67B5DB;
+  background: #FFE67F;
 }
 
 .calc__block {
@@ -161,6 +161,7 @@ body {
 }
 
 .calc__variants {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -191,40 +192,46 @@ body {
           justify-content: space-between;
 }
 
+.calc__por {
+  position: relative;
+}
+
 .calc__select {
   display: none;
 }
 
 .calc__select:checked + .calc__label {
-  border: 3px solid #fff;
-  background: #fff;
+  border: 3px solid #FDCD00;
+  background: #FDCD00;
   padding: 4px;
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
-  -webkit-box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.9);
-          box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.9);
+  -webkit-box-shadow: 0 0 10px 3px rgba(253, 207, 0, 0.9);
+          box-shadow: 0 0 10px 3px rgba(253, 207, 0, 0.9);
+}
+
+.calc__select:checked + .calc__label div .calc__label--radio {
+  background: #fff;
 }
 
 .calc__label {
   width: 160px;
   height: 80px;
-  border: 1px solid #111;
+  border: 1px dashed #111;
   border-radius: 15px;
   margin: 10px 0 10px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-negative: none;
+      flex-shrink: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-size: 15px;
+  font-size: 14px;
   text-align: center;
   cursor: pointer;
   -webkit-transition-duration: 0.2s;
@@ -274,6 +281,19 @@ body {
   .calc__label--margin {
     margin: 5px 0;
   }
+}
+
+.calc__label--radio {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #111;
+  border-radius: 50px;
+  margin: 0 5px 0 0;
+}
+
+.calc__label--radio--check {
+  background: #fff;
 }
 
 .calc__radio {
@@ -582,7 +602,7 @@ body {
 
 .calc__sale {
   padding: 0 10px;
-  background: #FDCD00;
+  background: #37B538;
   color: #fff;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -610,6 +630,8 @@ body {
 
 .calc__info {
   display: none;
+  -webkit-box-shadow: 0 15px 38px 1.6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 15px 38px 1.6px rgba(0, 0, 0, 0.1);
   position: absolute;
   background: #fff;
   padding: 20px 20px;
@@ -735,7 +757,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background: #FDCD00;
+  background: #3D9FD0;
   cursor: pointer;
   border-radius: 2px;
   font-size: 20px;
@@ -807,18 +829,18 @@ body {
 }
 
 .ui-slider {
-  background: #111 !important;
+  background: #ddd !important;
   height: 2px !important;
   border: none !important;
 }
 
 .ui-slider-range {
-  background: #fff !important;
+  background: #FDCD00 !important;
 }
 
 .ui-slider-handle {
   border-radius: 50px !important;
-  background: #fff !important;
+  background: #FDCD00 !important;
   border: none !important;
   outline: none !important;
   margin-top: -3px !important;
