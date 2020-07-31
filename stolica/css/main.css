@@ -98,6 +98,10 @@ body {
   }
 }
 
+.calc__row--bg {
+  padding: 40px 0 0 0;
+}
+
 .calc__row--bg::before {
   content: "";
   display: block;
@@ -105,7 +109,7 @@ body {
   width: 200%;
   height: 200%;
   left: -50%;
-  top: -5%;
+  top: 0;
   background: #67B5DB;
 }
 
