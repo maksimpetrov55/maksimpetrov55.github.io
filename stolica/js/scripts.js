@@ -12,7 +12,8 @@ $(document).ready(function() {
 		animate: "slow",
 		range: "min",
 		value: 50,
-		min: 1,
+		step: 10,
+		min: 10,
 		max: 350,
 		slide : function(event, ui) {
 			$("#result-polzunok").val(ui.value);
@@ -300,8 +301,8 @@ $(document).ready(function() {
 				$('.calc__pricesale').text ( calcResult );
 			} else {
 				$('.calc__price--cross').css({ display: "inline-block" });
-				$('.calc__price--cross').text( "от " + (+calcResult * ((calcUp / 100) + 1)).toFixed(0) + " руб." );
-				$('.calc__pricesale').text ( "от " + (+calcResult * ((calcUp / 100) + 1)).toFixed(0) + " руб." );
+				$('.calc__price--cross').text( (+calcResult * ((calcUp / 100) + 1)).toFixed(0) + " руб." );
+				$('.calc__pricesale').text ( (+calcResult * ((calcUp / 100) + 1)).toFixed(0) + " руб." );
 			}
 
 
