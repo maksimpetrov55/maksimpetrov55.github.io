@@ -1,0 +1,350 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Barlow", sans-serif;
+}
+
+body {
+  position: relative;
+  background: #F2F3F7;
+}
+
+.calc {
+  position: relative;
+  margin: 100px auto;
+  width: 100%;
+  max-width: 800px;
+  min-height: 400px;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 1px #bbb;
+          box-shadow: 0 1px 1px #bbb;
+  border-radius: 4px;
+  padding: 40px 50px 80px 50px;
+}
+
+@media (max-width: 380px) {
+  .calc {
+    padding: 40px 20px 70px 20px;
+  }
+}
+
+.calc__head {
+  font-size: 26px;
+  margin: 0 0 40px 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 22px;
+}
+
+.calc__title {
+  margin: 20px 0 20px 0;
+  font-size: 18px;
+}
+
+@media (max-width: 440px) {
+  .calc__title {
+    text-align: center;
+  }
+}
+
+.calc__title--itog {
+  color: #fff;
+}
+
+.calc__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 440px) {
+  .calc__flex {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.calc__radio {
+  display: none;
+}
+
+.calc__radio:checked + .calc__label {
+  border: 2px solid #157ED2;
+  background: #d9f1ff;
+}
+
+.calc__label {
+  display: block;
+  width: 110px;
+  height: 60px;
+  background: #fff;
+  border: 1px solid #ddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 0 10px 10px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  text-align: center;
+  padding: 10px;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+}
+
+.calc__label--big {
+  height: 100px;
+  width: 150px;
+}
+
+@media (max-width: 440px) {
+  .calc__label--big {
+    width: 100%;
+    height: auto;
+    margin: 0 0 10px 0;
+  }
+}
+
+.calc__label:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.calc__part {
+  margin: 0 20px 0 0;
+}
+
+@media (max-width: 440px) {
+  .calc__part {
+    margin: 0;
+    width: 100%;
+    position: relative;
+  }
+}
+
+.calc__input {
+  background: #fff;
+  border: 1px solid #ddd;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  border-radius: 4px;
+  height: 42px;
+  width: 170px;
+  padding: 0 10px;
+  font-size: 18px;
+  outline: none;
+  margin: 0 0 10px 0;
+}
+
+@media (max-width: 440px) {
+  .calc__input {
+    width: 100%;
+    position: relative;
+  }
+}
+
+.calc__input:focus {
+  border: 2px solid #157ED2;
+}
+
+.calc__select {
+  background: #fff;
+  border: 1px solid #ddd;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  border-radius: 4px;
+  height: 42px;
+  width: 300px;
+  position: relative;
+  cursor: pointer;
+}
+
+@media (max-width: 440px) {
+  .calc__select {
+    width: 100%;
+  }
+}
+
+.calc__select::before {
+  content: "▼";
+  position: absolute;
+  right: 10px;
+  top: 0;
+  height: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #aaa;
+}
+
+.calc__select--open::before {
+  content: "▲";
+  position: absolute;
+  right: 10px;
+  top: 0;
+  height: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #aaa;
+}
+
+.calc__current {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.calc__list {
+  display: none;
+  position: absolute;
+  top: 42px;
+  background: #fff;
+  width: 100%;
+  padding: 15px 0 30px 0;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0 0 4px 4px;
+  z-index: 29;
+}
+
+.calc__list--open {
+  display: block;
+}
+
+.calc__li {
+  margin: 1px 0;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.calc__li:hover {
+  background: #eee;
+}
+
+.calc__btn {
+  margin: 40px 0;
+  width: 200px;
+  height: 50px;
+  background: #FDD922;
+  font-size: 18px;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-box-shadow: 0 1px 1px #bbb;
+          box-shadow: 0 1px 1px #bbb;
+}
+
+@media (max-width: 440px) {
+  .calc__btn {
+    margin: 40px auto;
+  }
+}
+
+.calc__btn:hover {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+.calc__btn:active {
+  opacity: 0.2;
+}
+
+.calc__line {
+  border-top: 1px dashed #ddd;
+  height: 1px;
+  width: 100%;
+  position: relative;
+  margin: 30px 0;
+}
+
+.calc__itog {
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  background: #157ED2;
+  border-radius: 4px;
+  padding: 10px 20px 40px 20px;
+  display: none;
+}
+
+@media (max-width: 440px) {
+  .calc__itog {
+    margin: 10px 10px 40px 10px;
+  }
+}
+
+.calc__itog--show {
+  display: block;
+}
+
+.calc__warning {
+  color: #ff4400;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0px 0;
+  display: none;
+}
+
+.calc__warning--show {
+  display: block;
+}
+
+.calc__formula {
+  color: #ffffff;
+  margin: 5px 0;
+}
+/*# sourceMappingURL=main.css.map */

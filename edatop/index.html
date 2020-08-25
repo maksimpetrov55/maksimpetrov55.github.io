@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div class="calc__head">Расчет суточной нормы калорий и БЖУ</div>
+
+		<div class="calc__line"></div>
+
+		<div class="calc__title">Ваш пол:</div>
+
+		<div class="calc__flex">
+
+			<input class="calc__radio" type="radio" name="calc_sex" id="calc_sex_m" value="1">
+			<label class="calc__label" for="calc_sex_m">Мужской</label>
+			
+			<input class="calc__radio" type="radio" name="calc_sex" id="calc_sex_f" value="2">
+			<label class="calc__label" for="calc_sex_f">Женский</label>
+
+		</div>
+
+		<div class="calc__flex">
+
+			<div class="calc__part">
+				<div class="calc__title">Ваш возраст:</div>
+				<input id="calc_age" class="calc__input" type="text" placeholder="">
+			</div>
+
+			<div class="calc__part">
+				<div class="calc__title">Ваш рост, см:</div>
+				<input id="calc_hei" class="calc__input" type="text" placeholder="">
+			</div>
+
+			<div class="calc__part">
+				<div class="calc__title">Ваш вес, кг:</div>
+				<input id="calc_wei" class="calc__input" type="text" placeholder="">
+			</div>
+
+		</div>
+
+		<div class="calc__title">Ваш образ жизни:</div>
+
+		<div class="calc__select">
+			<div id="calc_activity" class="calc__current">Не указано</div>
+			<div class="calc__list">
+				<div class="calc__li">Не указано</div>
+				<div class="calc__li">Малоподвижный</div>
+				<div class="calc__li">Тренировки 1-3 раза в неделю</div>
+				<div class="calc__li">Тренировки 3-5 раза в неделю</div>
+				<div class="calc__li">Высокие нагрузки каждый день</div>
+				<div class="calc__li">Экстремальные нагрузки</div>
+			</div>
+		</div>
+
+		<div class="calc__title">Ваша цель:</div>
+
+		<div class="calc__flex">
+
+			<input class="calc__radio" type="radio" name="calc_goal" id="calc_goal_1" value="1">
+			<label class="calc__label calc__label--big" for="calc_goal_1">Сбросить вес</label>
+			
+			<input class="calc__radio" type="radio" name="calc_goal" id="calc_goal_2" value="2">
+			<label class="calc__label calc__label--big" for="calc_goal_2">Набрать мышечную массу</label>
+
+			<input class="calc__radio" type="radio" name="calc_goal" id="calc_goal_3" value="3">
+			<label class="calc__label calc__label--big" for="calc_goal_3">Поддерживать вес</label>
+
+		</div>
+
+		<div class="calc__line"></div>
+
+		<div class="calc__warning">Пожалуйста заполните все поля</div>
+
+		<div id="calc_btn" class="calc__btn">Рассчитать</div>
+
+		<div class="calc__itog">
+
+			<div class="calc__title calc__title--itog">Суточная норма калорий:</div>
+
+			<div id="cacl_formula_1" class="calc__formula"></div>
+			<div id="cacl_formula_2" class="calc__formula"></div>
+			<div id="cacl_formula_3" class="calc__formula"></div>
+
+			<div class="calc__line"></div>
+
+			<div id="calc_goal_title" class="calc__title calc__title--itog"></div>
+
+		</div>
+
+	</div>
+
+
+</body>
+</html>

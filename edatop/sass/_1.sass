@@ -1,0 +1,241 @@
+
+$blue: #157ED2
+$orange: #FDD922
+
+
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: "Barlow", sans-serif
+
+body
+    position: relative
+    background: #F2F3F7
+
+.calc
+    position: relative
+    margin: 100px auto
+    width: 100%
+    max-width: 800px
+    min-height: 400px
+    background: #fff
+    box-shadow: 0 1px 1px #bbb
+    border-radius: 4px
+    padding: 40px 50px 80px 50px
+    @media ( max-width: 380px )
+        padding: 40px 20px 70px 20px
+
+    &__head
+        font-size: 26px
+        //font-weight: 600
+        margin: 0 0 40px 0
+        text-align: center
+        text-transform: uppercase
+        letter-spacing: 1px
+        font-size: 22px
+
+    &__title
+        margin: 20px 0 20px 0
+        font-size: 18px
+        @media ( max-width: 440px )
+            text-align: center
+
+        &--itog
+            color: #fff
+
+    &__flex
+        display: flex
+        flex-wrap: wrap
+        @media ( max-width: 440px )
+            justify-content: center
+
+    &__radio
+        display: none
+
+        &:checked + .calc__label
+            border: 2px solid $blue
+            background: #d9f1ff
+
+    &__label
+        display: block
+        width: 110px
+        height: 60px
+        background: #fff
+        border: 1px solid #ddd
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer
+        border-radius: 4px
+        margin: 0 10px 10px 0
+        user-select: none
+        transition-duration: 0.2s
+        text-align: center
+        padding: 10px
+        line-height: 1.4
+        letter-spacing: 0.5px
+
+        &--big
+            height: 100px
+            width: 150px
+            @media ( max-width: 440px )
+                width: 100%
+                height: auto
+                margin: 0 0 10px 0
+
+        &:hover
+            transform: translateY(-3px)
+
+    &__part
+        margin: 0 20px 0 0
+        @media ( max-width: 440px )
+            margin: 0
+            width: 100%
+            position: relative
+
+    &__input
+        background: #fff
+        border: 1px solid #ddd
+        transition-duration: 0.4s
+        border-radius: 4px
+        height: 42px
+        width: 170px
+        padding: 0 10px
+        font-size: 18px
+        outline: none
+        margin: 0 0 10px 0
+        @media ( max-width: 440px )
+            width: 100%
+            position: relative
+
+        &:focus
+            border: 2px solid $blue
+
+    &__select
+        background: #fff
+        border: 1px solid #ddd
+        transition-duration: 0.4s
+        border-radius: 4px
+        height: 42px
+        width: 300px
+        position: relative
+        cursor: pointer
+        @media ( max-width: 440px )
+            width: 100%
+
+        &::before
+            content: "▼"
+            position: absolute
+            right: 10px
+            top: 0
+            height: 38px
+            display: flex
+            align-items: center
+            color: #aaa
+
+        &--open
+            &::before
+                content: "▲"
+                position: absolute
+                right: 10px
+                top: 0
+                height: 38px
+                display: flex
+                align-items: center
+                color: #aaa
+
+    &__current
+        position: absolute
+        width: 100%
+        height: 100%
+        padding: 0 10px
+        display: flex
+        align-items: center
+        user-select: none
+
+    &__list
+        display: none
+        position: absolute
+        top: 42px
+        background: #fff
+        width: 100%
+        padding: 15px 0 30px 0
+        border-left: 1px solid #ddd
+        border-right: 1px solid #ddd
+        border-bottom: 1px solid #ddd
+        border-radius: 0 0 4px 4px
+        z-index: 29
+
+        &--open
+            display: block
+
+    &__li
+        margin: 1px 0
+        padding: 8px 10px
+        cursor: pointer
+
+        &:hover
+            background: #eee
+
+    &__btn
+        margin: 40px 0
+        width: 200px
+        height: 50px
+        background: $orange
+        font-size: 18px
+        text-transform: uppercase
+        user-select: none
+        border-radius: 4px
+        display: flex
+        align-items: center
+        justify-content: center
+        letter-spacing: 0.5px
+        cursor: pointer
+        transition-duration: 0.3s
+        box-shadow: 0 1px 1px #bbb
+        @media ( max-width: 440px )
+            margin: 40px auto
+
+        &:hover
+            transform: translateY(-3px)
+            opacity: 0.9
+
+        &:active
+            opacity: 0.2
+
+    &__line
+        border-top: 1px dashed #ddd
+        height: 1px
+        width: 100%
+        position: relative
+        margin: 30px 0
+
+    &__itog
+        position: relative
+        width: 100%
+        min-height: 200px
+        background: $blue
+        border-radius: 4px
+        padding: 10px 20px 40px 20px
+        display: none
+        @media ( max-width: 440px )
+            margin: 10px 10px 40px 10px
+
+        &--show
+            display: block
+
+    &__warning
+        color: #ff4400
+        font-weight: 600
+        font-size: 18px
+        margin: 0px 0
+        display: none
+
+        &--show
+            display: block
+
+    &__formula
+        color: #ffffff
+        margin: 5px 0
