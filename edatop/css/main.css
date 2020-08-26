@@ -53,6 +53,7 @@ body {
 
 .calc__title--itog {
   color: #fff;
+  font-size: 20px;
 }
 
 .calc__flex {
@@ -318,7 +319,6 @@ body {
   background: #157ED2;
   border-radius: 4px;
   padding: 10px 20px 40px 20px;
-  display: none;
 }
 
 @media (max-width: 440px) {
@@ -345,6 +345,11 @@ body {
 
 .calc__formula {
   color: #ffffff;
-  margin: 5px 0;
+  margin: 10px 0;
+}
+
+.calc__formula--text {
+  font-style: italic;
+  letter-spacing: 0.5px;
 }
 /*# sourceMappingURL=main.css.map */
