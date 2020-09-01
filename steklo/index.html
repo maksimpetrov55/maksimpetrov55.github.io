@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/arrays.js"></script>
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div class="calc__head">Расчет стоимости стекол</div>
+
+		<div class="calc__space"></div>
+
+		<div class="calc__title">Вид изделия</div>
+
+		<div class="calc__line"></div>
+
+		<div class="calc__flex calc__flex--wrap calc__flex--aic">
+
+			<div class="calc__select">
+				<div class="calc__current"></div>
+				<div id="calc_glass_list" class="calc__list">
+					<div class="calc__li">Lorem, ipsum dolor.</div>
+					<div class="calc__li">Lorem, ipsum dolor.</div>
+					<div class="calc__li">Lorem, ipsum dolor.</div>
+				</div>
+			</div>
+
+			<div>
+
+				<div class="calc__zakalka calc__zakalka--hide calc__flex calc__flex--aic">
+					<input class="calc__checkbox" type="checkbox" name="calc_zakalka" id="calc_zakalka">
+					<label for="calc_zakalka">Закалка стекла</label>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="calc__space"></div>
+
+		<div class="calc__title">Форма изделия</div>
+
+		<div class="calc__line"></div>
+
+		<div class="calc__flex calc__flex--wrap">
+
+			<input class="calc__radio" type="radio" name="calc_form" id="calc_form_1" value="1">
+			<label class="calc__label" for="calc_form_1">
+				<div>№1</div>
+				<img class="calc__img" src="img/form/1.png" alt="">
+			</label>
+			<input class="calc__radio" type="radio" name="calc_form" id="calc_form_2" value="2">
+			<label class="calc__label" for="calc_form_2">
+				<div>№2</div>
+				<img class="calc__img" src="img/form/2.png" alt="">
+			</label>
+			<input class="calc__radio" type="radio" name="calc_form" id="calc_form_3" value="3">
+			<label class="calc__label" for="calc_form_3">
+				<div>№3</div>
+				<img class="calc__img" src="img/form/3.png" alt="">
+			</label>
+			<input class="calc__radio" type="radio" name="calc_form" id="calc_form_4" value="4">
+			<label class="calc__label" for="calc_form_4">
+				<div>№4</div>
+				<img class="calc__img" src="img/form/4.png" alt="">
+			</label>
+			<input class="calc__radio" type="radio" name="calc_form" id="calc_form_5" value="5">
+			<label class="calc__label" for="calc_form_5">
+				<div>№5</div>
+				<img class="calc__img" src="img/form/5.png" alt="">
+			</label>
+			<input class="calc__radio" type="radio" name="calc_form" id="calc_form_6" value="6">
+			<label class="calc__label" for="calc_form_6">
+				<div>№6</div>
+				<img class="calc__img" src="img/form/6.png" alt="">
+			</label>
+			<input class="calc__radio" type="radio" name="calc_form" id="calc_form_7" value="7">
+			<label class="calc__label" for="calc_form_7">
+				<div>№7</div>
+				<img class="calc__img" src="img/form/7.png" alt="">
+			</label>
+			<input class="calc__radio" type="radio" name="calc_form" id="calc_form_8" value="8">
+			<label class="calc__label" for="calc_form_8">
+				<div>№8</div>
+				<img class="calc__img" src="img/form/8.png" alt="">
+			</label>
+			<input class="calc__radio" type="radio" name="calc_form" id="calc_form_9" value="9">
+			<label class="calc__label" for="calc_form_9">
+				<div>№9</div>
+				<img class="calc__img" src="img/form/9.png" alt="">
+			</label>
+			<input class="calc__radio" type="radio" name="calc_form" id="calc_form_10" value="10">
+			<label class="calc__label" for="calc_form_10">
+				<div>№10</div>
+				<img class="calc__img" src="img/form/10.png" alt="">
+			</label>
+			<input class="calc__radio" type="radio" name="calc_form" id="calc_form_11" value="11">
+			<label class="calc__label" for="calc_form_11">
+				<div>№11</div>
+				<img class="calc__img" src="img/form/11.png" alt="">
+			</label>
+			<input class="calc__radio" type="radio" name="calc_form" id="calc_form_12" value="12">
+			<label class="calc__label" for="calc_form_12">
+				<div>№12</div>
+				<img class="calc__img" src="img/form/12.png" alt="">
+			</label>
+			<input class="calc__radio" type="radio" name="calc_form" id="calc_form_13" value="13">
+			<label class="calc__label" for="calc_form_13">
+				<div>№13</div>
+				<img class="calc__img" src="img/form/13.png" alt="">
+			</label>
+			<input class="calc__radio" type="radio" name="calc_form" id="calc_form_14" value="14">
+			<label class="calc__label" for="calc_form_14">
+				<div>№14</div>
+				<img class="calc__img" src="img/form/14.png" alt="">
+			</label>
+			<input class="calc__radio" type="radio" name="calc_form" id="calc_form_15" value="15">
+			<label class="calc__label" for="calc_form_15">
+				<div>№15</div>
+				<img class="calc__img" src="img/form/15.png" alt="">
+			</label>
+			<input class="calc__radio" type="radio" name="calc_form" id="calc_form_16" value="16">
+			<label class="calc__label" for="calc_form_16">
+				<div>№16</div>
+				<img class="calc__img" src="img/form/16.png" alt="">
+			</label>
+			<input class="calc__radio" type="radio" name="calc_form" id="calc_form_17" value="17">
+			<label class="calc__label" for="calc_form_17">
+				<div>№17</div>
+				<img class="calc__img" src="img/form/17.png" alt="">
+			</label>
+
+		</div>
+
+		<div class="calc__space"></div>
+
+		<div class="calc__title">Размеры и количество</div>
+
+		<div class="calc__line"></div>
+
+		<div class="calc__flex calc__flex--sizes calc__flex--aic">
+
+			<div class="calc__text">Ширина</div>
+			<input type="text" class="calc__input" id="calc_width" value="1000">
+			<div>мм</div>
+
+		</div>
+
+		<div class="calc__flex calc__flex--sizes calc__flex--aic">
+
+			<div class="calc__text">Высота</div>
+			<input type="text" class="calc__input" id="calc_height" value="1000">
+			<div>мм</div>
+
+		</div>
+
+		<div class="calc__flex calc__flex--sizes calc__flex--aic">
+
+			<div class="calc__text">Количество</div>
+			<input id="calc_quantity" type="text" class="calc__input" value="1">
+			<div>шт</div>
+
+		</div>
+
+		<div class="calc__space"></div>
+
+		<div class="calc__flex calc__flex--aic">
+			<div class="calc__title">Обработка</div>
+			<input class="calc__checkbox" type="checkbox" name="calc_section_1" id="calc_checkbox_1">
+		</div>
+
+
+		<div class="calc__line"></div>
+
+		<div id="calc_section_1" class="calc__flex calc__flex--wrap calc__section--hide">
+
+			<input class="calc__radio" type="radio" name="calc_obrabotka" id="calc_obrabotka_1" value="1">
+			<label id="calc_label_1" class="calc__label calc__label--hide1 calc__label--obrabotka" for="calc_obrabotka_1">Шлифовка прямолинейная</label>
+
+			<input class="calc__radio" type="radio" name="calc_obrabotka" id="calc_obrabotka_2" value="2">
+			<label id="calc_label_2" class="calc__label calc__label--hide1 calc__label--obrabotka" for="calc_obrabotka_2">Шлифовка криволинейная</label>
+
+			<input class="calc__radio" type="radio" name="calc_obrabotka" id="calc_obrabotka_3" value="3">
+			<label id="calc_label_3" class="calc__label calc__label--hide1 calc__label--obrabotka" for="calc_obrabotka_3">Полировка прямолинейная</label>
+
+			<input class="calc__radio" type="radio" name="calc_obrabotka" id="calc_obrabotka_4" value="4">
+			<label id="calc_label_4" class="calc__label calc__label--hide1 calc__label--obrabotka" for="calc_obrabotka_4">Полировка криволинейная</label>
+
+			<input class="calc__radio" type="radio" name="calc_obrabotka" id="calc_obrabotka_5" value="5">
+			<label id="calc_label_5" class="calc__label calc__label--hide1 calc__label--obrabotka" for="calc_obrabotka_5">Шлифовка с изменением угла (45-89 гр.)</label>
+
+			<input class="calc__radio" type="radio" name="calc_obrabotka" id="calc_obrabotka_6" value="6">
+			<label id="calc_label_6" class="calc__label calc__label--hide1 calc__label--obrabotka" for="calc_obrabotka_6">Полировка с изменением угла (45-89 гр.)</label>
+
+		</div>
+ 
+		<div class="calc__space"></div>
+
+		<div class="calc__flex calc__flex--aic">
+			<div class="calc__title">Отверстия с зенковкой</div>
+			<input class="calc__checkbox" type="checkbox" name="calc_section_2" id="calc_checkbox_2">
+		</div>
+
+		<div class="calc__line"></div>
+
+		<div class="calc__section--hide" id="calc_section_2">
+
+			<div class="calc__flex calc__flex--sizes calc__flex--aic">
+
+				<div class="calc__text">Диаметр отверстий</div>
+				<input id="calc_hole_sz" type="text" class="calc__input" value="3">
+				<div>мм</div>
+	
+			</div>
+	
+			<div class="calc__flex calc__flex--sizes calc__flex--aic">
+	
+				<div class="calc__text">Количество</div>
+				<input id="calc_hole_amount" type="text" class="calc__input" value="0">
+				<div>шт</div>
+	
+			</div>
+
+		</div>
+
+		<div class="calc__space"></div>
+
+		<div class="calc__flex calc__flex--aic">
+			<div class="calc__title">Вырезы механические</div>
+			<input class="calc__checkbox" type="checkbox" name="calc_section_3" id="calc_checkbox_3">
+		</div>
+
+		<div class="calc__line"></div>
+
+		<div class="calc__section--hide" id="calc_section_3">
+
+			<div class="calc__flex calc__flex--sizes calc__flex--aic">
+
+				<div class="calc__text">Вырез внешний</div>
+				<input id="calc_hole_outer" type="text" class="calc__input" value="0">
+				<div>шт</div>
+	
+			</div>
+	
+			<div class="calc__flex calc__flex--sizes calc__flex--aic">
+	
+				<div class="calc__text">Вырез внутренний</div>
+				<input id="calc_hole_inner" type="text" class="calc__input" value="0">
+				<div>шт</div>
+	
+			</div>
+
+		</div>
+
+
+		<div class="calc__space"></div>
+
+		<div class="calc__flex calc__flex--aic">
+			<div class="calc__title">Фацет</div>
+			<input class="calc__checkbox" type="checkbox" name="calc_section_4" id="calc_checkbox_4">
+		</div>
+
+		<div class="calc__line"></div>
+
+		<div class="calc__section--hide" id="calc_section_4">
+
+			<div class="calc__flex calc__flex--sizes calc__flex--aic">
+
+				<input class="calc__radio" type="radio" name="calc_facet" id="calc_facet_1" value="1">
+				<label id="calc_facet-label_1" class="calc__label calc__label--hide1 calc__label--facet" for="calc_facet_1">Прямолинейный</label>
+	
+				<input class="calc__radio" type="radio" name="calc_facet" id="calc_facet_2" value="2">
+				<label id="calc_facet-label_2" class="calc__label calc__label--hide1 calc__label--facet" for="calc_facet_2">Криволинейный</label>
+	
+			</div>
+	
+			<div class="calc__flex calc__flex--sizes calc__flex--aic">
+	
+				<div class="calc__text">Ширина фацета</div>
+				<input id="calc_facet_width" type="text" class="calc__input" value="10">
+				<div>мм</div>
+	
+			</div>
+
+		</div>
+
+
+		<div class="calc__space"></div>
+
+		<div class="calc__flex calc__flex--aic">
+			<div class="calc__title">Накатка пленки</div>
+			<input class="calc__checkbox" type="checkbox" name="calc_section_5" id="calc_checkbox_5">
+		</div>
+
+		<div class="calc__line"></div>
+
+		<div class="calc__section--hide" id="calc_section_5">
+
+			<div class="calc__flex calc__flex--sizes calc__flex--aic">
+
+				<div class="calc__text">Антиосколочная пленка</div>
+				<input id="calc_plenka" type="text" class="calc__input" value="0">
+				<div>м2</div>
+	
+			</div>
+
+		</div>
+
+		<div class="calc__space"></div>
+		<div class="calc__space"></div>
+		<div class="calc__space"></div>
+
+		<div class="calc__title">Результат</div>
+
+		<div class="calc__line"></div>
+
+		<div class="calc__itog" id="calc_itog">Здесь будет результат</div>
+
+
+	</div>
+	
+
+
+</body>
+</html>
