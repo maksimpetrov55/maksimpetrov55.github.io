@@ -140,8 +140,12 @@ $(document).ready(function() {
 		console.log( "calc_glass_value: " + calc_glass_value);
 		console.log( "calc_glass_thin: " + calc_glass_thin);
 
-		var calc_form = 0;
-		calc_form = $('input[name=calc_form]:checked').val();
+		if ( $('input[name=calc_form]').is(':checked') ) {
+			calc_form = $('input[name=calc_form]:checked').val();
+		} else {
+			var calc_form = 0;
+		}
+		
 		console.log( "calc_form: " + calc_form);
 
 		// if ( $('#calc_zakalka').is(':checked') ) {
