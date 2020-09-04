@@ -263,7 +263,11 @@ $(document).ready(function() {
 			var calc_zakalka = 0
 		}
 
+		var calc_obrabotka_itog = calc_square * calc_obrabotka * 4;
+
 		console.log("calc_obrabotka: " + calc_obrabotka);
+		console.log("calc_obrabotka_itog: " + calc_obrabotka_itog);
+
 		console.log("calc_zakalka: " + calc_zakalka);
 
 
@@ -385,15 +389,15 @@ $(document).ready(function() {
 
 
 		if ( calc_square >= 4 ) {
-			var calc_facet_itog = calc_facet_price * 1.6 * calc_square;
+			var calc_facet_itog = calc_facet_price * 1.6 * calc_square * 4;
 		} else {
 			if ( (calc_width >= 3000) || (calc_height > 3000) ) {
-				var calc_facet_itog = calc_facet_price * 1.4 * calc_square;
+				var calc_facet_itog = calc_facet_price * 1.4 * calc_square * 4;
 			} else {
 				if ( (calc_width >= 2500) || (calc_height > 2500) ) {
-					var calc_facet_itog = calc_facet_price * 1.3 * calc_square;
+					var calc_facet_itog = calc_facet_price * 1.3 * calc_square * 4;
 				} else {
-					var calc_facet_itog = calc_facet_price * calc_square;
+					var calc_facet_itog = calc_facet_price * calc_square * 4;
 				}
 			}
 		}
@@ -465,15 +469,15 @@ $(document).ready(function() {
 			var calc_kraska_itog = 0;
 		}
 
+		console.log("calc_kraska_itog: "+ calc_kraska_itog);
 
 
 		// ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––
 
 
-
 		var calc_quantity = $('#calc_quantity').val();
 
-		var calc_itog = +calc_quantity * +calc_square * ( +calc_glass_value + +calc_obrabotka + +calc_zakalka ) + ( +calc_hole_amount * +calc_hole_price ) + (+calc_outer_amount * +calc_outer_price) + (+calc_inner_amount * +calc_inner_price) + +calc_plenka_itog + +calc_facet_itog + +calc_kraska_itog;
+		var calc_itog = +calc_quantity * +calc_square * ( +calc_glass_value + +calc_zakalka ) + calc_obrabotka_itog + ( +calc_hole_amount * +calc_hole_price ) + (+calc_outer_amount * +calc_outer_price) + (+calc_inner_amount * +calc_inner_price) + +calc_plenka_itog + +calc_facet_itog + +calc_kraska_itog;
 		
 		if ( calc_itog < 500 ) {
 			calc_itog = 500;
