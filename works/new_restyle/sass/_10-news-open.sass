@@ -1,0 +1,116 @@
+
+
+.news-open
+    position: relative
+    padding: 30px 0 100px 0
+
+    &__date
+        position: absolute
+        background: $black
+        width: 100px
+        height: 36px
+        display: flex
+        justify-content: center
+        align-items: center
+        color: #fff
+        bottom: 45px
+        right: 15px
+        border-radius: 5px
+        font-family: "Roboto Mono", sans-serif
+        font-size: 12px
+        box-shadow: 3px 4px 25px rgba(33, 33, 33, 0.1)
+
+    &__bigimg
+        display: block
+        width: 100%
+        height: 400px
+        background: #ddd
+        border-radius: 10px
+        margin: 20px 0 30px 0
+
+    &__navigation
+        display: flex
+        justify-content: flex-end
+        width: 100%
+        position: relative
+        height: 100%
+        padding: 20px 0 0 0
+
+    &__arrow
+        width: 40px
+        height: 40px
+        border-radius: 5px
+        background: $gray1
+        position: relative
+        cursor: pointer
+        user-select: none
+        transition-duration: 0.3s
+        font-size: 42px
+        color: $gray2
+        display: flex
+        justify-content: center
+        align-items: center
+        font-weight: 300
+
+        &--prev
+            margin: 0 10px 0 0
+            padding: 0 0 2px 0
+
+        &--next
+            padding: 0 0 2px 2px
+
+        &:hover
+            background: $black
+            color: #fff
+
+    &__gallery
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        margin: 0 0 50px 0
+
+    &__img
+        position: relative
+        display: block
+        background: #00000055
+        border-radius: 10px
+        width: 250px
+        height: 250px
+        margin: 10px 0
+        transition-duration: 0.3s
+        overflow: hidden
+
+        img
+            position: relative
+            width: 100%
+            height: 100%
+
+        &::after
+            content: ""
+            position: absolute
+            display: block
+            background: #fed906cb url("../img/icons/zoom.png") no-repeat
+            background-position: 50% 50%
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            opacity: 0
+            cursor: pointer
+            transition-duration: 0.3s
+
+        &:hover
+            
+            &::after
+                opacity: 1
+
+    &__video
+        position: relative
+        width: 100%
+        height: 360px
+        margin: 0 0 60px 0
+
+    &__iframe
+        position: relative
+        width: 100%
+        height: 100%

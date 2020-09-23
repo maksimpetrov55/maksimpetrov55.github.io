@@ -1,0 +1,145 @@
+
+
+
+
+
+.footer
+    position: relative
+    padding: 50px 0 20px 0
+    background: $orange1
+    overflow: hidden
+
+    &__title
+        font-size: 18px
+        font-weight: 600
+        color: $black
+        text-transform: uppercase
+        margin: 5px 0 30px 0
+
+    &__link
+        display: block
+        margin: 0 0 4px 0
+        color: $black
+        font-weight: 900
+        font-size: 18px
+        transition-duration: 0.3s
+
+        &:hover
+            color: $black
+            text-decoration: none
+            opacity: 0.5
+
+    &__logo
+        margin-bottom: 30px
+
+    &__phone
+        font-size: 21px
+        font-weight: 900
+        margin: 20px 0
+        color: $black
+
+    &__mail
+        font-weight: 700
+        color: #fff
+        font-size: 21px
+        border-bottom: 3px dotted #fff 
+        display: inline-block
+        line-height: 1
+        margin: 0 0 30px 0
+
+    &__btnrow
+        margin-top: 30px
+
+    &__social
+        position: relative
+        width: 46px
+        height: 46px
+        border-radius: 5px
+        margin: 0 12px 10px 0
+        cursor: pointer
+        transition-duration: 0.3s
+        display: flex
+        align-items: center
+        justify-content: center
+
+        &--1
+            background: $black url("../img/icons/social/1.png") no-repeat
+            background-position: 50% 50%
+            &:hover
+                background: #fff url("../img/icons/social/1-b.png") no-repeat
+                background-position: 50% 50%
+                transform: translateY(-4px)
+                z-index: 19
+
+        &--2
+            background: $black url("../img/icons/social/2.png") no-repeat
+            background-position: 50% 50%
+            &:hover
+                background: #fff url("../img/icons/social/2-b.png") no-repeat
+                background-position: 50% 50%
+                transform: translateY(-4px)
+                z-index: 19
+
+        &--3
+            background: $black url("../img/icons/social/3.png") no-repeat
+            background-position: 50% 50%
+            &:hover
+                background: #fff url("../img/icons/social/3-b.png") no-repeat
+                background-position: 50% 50%
+                transform: translateY(-4px)
+                z-index: 19
+
+        &--4
+            background: $black url("../img/icons/social/4.png") no-repeat
+            background-position: 50% 50%
+            &:hover
+                background: #fff url("../img/icons/social/4-b.png") no-repeat
+                background-position: 50% 50%
+                transform: translateY(-4px)
+                z-index: 19
+
+        &--1:hover > .footer__note
+            display: block
+        &--2:hover > .footer__note
+            display: block
+        &--3:hover > .footer__note
+            display: block
+        &--4:hover > .footer__note
+            display: block
+
+    &__note
+        color: $black
+        background: #fff
+        position: absolute
+        top: -50%
+        left: 60%
+        display: none
+        box-shadow: 2px 3px 10px rgba(33, 33, 33, 0.1)
+        text-align: center
+        padding: 4px 10px
+        font-size: 14px
+        font-weight: 700
+        border-radius: 2px
+        white-space: nowrap
+
+    &__info
+        position: relative
+        margin-top: 30px
+        border-top: 1px solid #00000011
+        padding-top: 20px
+
+    &__copy
+        font-size: 18px
+        color: $gray2
+
+    &__politics
+        font-size: 18px
+        color: $gray2
+        transition-duration: 0.3s
+        text-decoration: none
+        font-weight: 700
+
+        &:hover
+            text-decoration: none
+            color: $gray2
+            opacity: 0.5

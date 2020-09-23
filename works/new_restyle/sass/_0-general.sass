@@ -1,0 +1,189 @@
+
+$black: #0d0d0d
+$gray1: #f7f7f7
+$gray2: #595959
+$gray3: #A2A2A2
+
+$orange1: #fed806
+$orange2: #ffbd03
+
+$gradient1: linear-gradient(118deg, rgba(52,0,149,1) 0%, rgba(255,0,232,1) 100%)
+
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: "circe", sans-serif
+
+body
+    position: relative
+    overflow-x: hidden
+
+.grid
+    top: 0
+    position: fixed
+    width: 100%
+    height: 1200px
+    z-index: 999
+
+    &__col
+        position: relative
+        background: #0000ff44
+        height: 1200px
+
+.bg1
+    position: relative
+    width: 100%
+    min-height: 50px
+    background: #0000ff77
+
+.mw1440
+    max-width: 1440px
+
+.mw1170
+    max-width: 1170px
+
+.dflex
+    display: flex
+
+    &--aic
+        align-items: center
+    &--jcc
+        justify-content: center
+    &--jcsb
+        justify-content: space-between
+    &--jcfe
+        justify-content: flex-end
+    &--wrap
+        flex-wrap: wrap
+
+.por
+    position: relative
+
+.topspace
+    width: 100%
+    height: 100px
+
+.g-logo
+    font-size: 19px
+    color: $black
+    text-transform: uppercase
+    user-select: none
+    
+    &--span
+        font-size: 21px
+        font-weight: 900
+        font-family: 'Intro Rust', sans-serif
+        text-shadow: 3px 3px 0 $orange1, -3px -3px 0 #d9d9d9
+        margin: 0 5px 0 0
+
+.g-title
+    font-size: 45px
+    color: $black
+    text-transform: uppercase
+    letter-spacing: 0.3px
+    margin: 10px auto 30px auto
+    font-family: "Roboto Mono", sans-serif
+    font-weight: 900
+    line-height: 1.3
+
+    &--white
+        color: #fff
+
+    &--tac
+        text-align: center
+
+    &--small
+        font-size: 24px
+        margin: 10px auto
+        text-transform: none
+
+    &--m0
+        line-height: 1.3
+        margin: 0px auto
+
+.g-text
+    margin: 20px auto
+    color: $gray2
+    margin: 10px 0 10px 0
+    font-size: 15px
+
+    &--li
+        color: $orange1
+
+        span
+            color: $gray2
+
+    &--tac
+        text-align: center
+
+    &--margin
+        margin: 10px 0 50px 0
+
+.g-btn
+    font-size: 19px
+    font-weight: 900
+    text-transform: uppercase
+    user-select: none
+    letter-spacing: 0.4px
+    display: flex
+    justify-content: center
+    align-items: center
+    background: $orange1 url("../img/shapes/btn.png") no-repeat
+    background-position: 10px 0
+    padding: 20px 20px 18px 20px
+    border-radius: 5px
+    cursor: pointer
+    transition-duration: 0.3s
+    color: $black
+
+    &:hover
+        opacity: 0.8
+        transform: translateY(-4px)
+        text-decoration: none
+        color: $black
+
+    &--black
+        background: $black url("../img/shapes/btn2.png") no-repeat
+        color: #fff
+        font-weight: 700
+        font-size: 16px
+        text-transform: none
+        padding: 11px 33px
+        max-width: 180px
+
+        &:hover
+            color: #fff
+
+    &--fzsm
+        font-size: 16px
+
+
+
+    &:active
+        opacity: 0.2
+
+.g-navigation
+    padding: 30px
+
+.g-page
+    color: $gray3
+    text-decoration: none
+    transition-duration: 0.3s
+
+    &:hover
+        color: $gray3
+        text-decoration: none
+        opacity: 0.5
+
+    &--current
+        &:hover
+            opacity: 1
+
+.g-break
+    margin: 0 15px
+    height: 20px
+    position: relative
+    width: 1px
+    background: $gray3

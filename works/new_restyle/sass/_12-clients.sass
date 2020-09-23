@@ -1,0 +1,81 @@
+
+
+
+.clients
+    position: relative
+    padding: 30px 0 90px 0
+
+    &__img--hover
+        display: none
+
+    &__about
+        color: $orange2
+        text-transform: uppercase
+        text-decoration: none
+        transition-duration: 0.3s
+        border-bottom: 3px dotted $orange2
+        display: inline-block
+        line-height: 1
+        font-weight: 600
+        margin: 30px 0 0 0
+
+        &:hover
+            color: $black
+            border-bottom: 3px dotted $black
+            text-decoration: none
+
+    &__question
+        margin: 27px 0 0 7px
+        color: $gray3
+        border: 1px solid $gray3
+        border-radius: 50px
+        width: 20px
+        height: 20px
+        text-align: center
+        line-height: 1.3
+        font-weight: 400
+        padding: 0 0 0 1px
+
+    &__block
+        position: relative
+        box-shadow: 4px 6px 25px rgba(33, 33, 33, 0.1)
+        height: 150px
+        border-radius: 10px
+        margin: 15px 0
+        display: flex
+        justify-content: center
+        align-items: center
+        transition-duration: 0.3s
+        background: #fff
+        cursor: pointer
+        z-index: 19
+
+        &::before
+            border-radius: 10px
+            opacity: 0
+            content: ""
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            background: #000 url("../img/shapes/paper-black.png")
+            transition-duration: 0.3s
+            z-index: -1
+
+        &:hover
+
+            &::before
+                opacity: 1
+                background: #000 url("../img/shapes/paper-black.png")
+                transition-duration: 0.3s
+
+        &:hover .clients__img
+            display: none
+
+        &:hover .clients__img--hover
+            display: block
+
+    &__btn
+        max-width: 250px
+        margin: 50px auto

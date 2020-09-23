@@ -1,0 +1,94 @@
+
+
+.catalog
+    position: relative
+    padding: 0 0 100px 0
+
+    &__block
+        background: #fff
+        padding: 20px 20px 40px 20px
+        transition-duration: 0.3s
+        margin: 20px 0
+
+        &:hover
+            box-shadow: 3px 4px 30px rgba(33, 33, 33, 0.1)
+
+    &__pct
+        position: relative
+        width: 100%
+
+    &__name
+        font-size: 18px
+        text-transform: uppercase
+        color: $black
+        line-height: 1.1
+        font-family: "Roboto Mono", sans-serif
+        font-weight: 600
+        margin: 30px 0 20px 0
+        height: 57px
+
+    &__cost
+        color: $gray3
+        white-space: nowrap
+        font-weight: 900
+        font-family: "Roboto Mono", sans-serif
+
+        &--dots
+            position: relative
+            width: 100%
+            border-bottom: 4px dotted #aaa
+            margin: 0 10px
+            padding: 7px 0 0 0
+
+        &--black
+            color: $black
+
+    &__arrow
+        margin: 30px 0 0 0
+        border-radius: 5px
+        position: relative
+        width: 90px
+        height: 46px
+        font-weight: 600
+        color: $black
+        display: flex
+        justify-content: center
+        align-items: center
+        transition-duration: 0.3s
+        text-decoration: none
+        color: $black
+
+        &::before
+            content: ""
+            display: block
+            background: $orange1 url("../img/icons/arrow.png") no-repeat
+            background-size: 20px 20px
+            background-position: 50% 50%
+            width: 46px
+            height: 46px
+            position: absolute
+            left: 0
+            border-radius: 5px
+
+        &::after
+            content: ""
+            display: none
+            font-size: 15px
+            color: transparent
+
+        &:hover
+            width: 200px
+            height: 46px
+            padding: 0 10px 0 46px
+            text-decoration: none
+            color: $black
+            background: $orange2
+
+            &::after
+                content: "Заказать"
+                text-transform: uppercase
+                display: block
+                text-decoration: none
+                color: $black
+                white-space: nowrap
+                font-weight: 900

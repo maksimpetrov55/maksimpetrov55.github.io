@@ -1,0 +1,74 @@
+
+
+
+
+.ware
+    position: relative
+    padding: 40px 0 110px 0
+
+    &__block
+        position: relative
+        width: 100%
+        height: 150px
+        background: #fff
+        margin: 15px auto
+        overflow: hidden
+        border-radius: 10px
+        box-shadow: 4px 6px 25px rgba(33, 33, 33, 0.1)
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        text-align: center
+        padding: 20px 20px 0px 20px
+        transition-duration: 0.3s
+        cursor: pointer
+        z-index: 19
+
+        &::before
+            content: ""
+            display: block
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 0
+            background: $black url("../img/shapes/paper-black.png")
+            z-index: -1
+            opacity: 0
+            transition-duration: 0.3s
+
+        &:hover
+            background-size: cover
+            color: #fff
+
+            &::before
+                opacity: 1
+                transition-duration: 0.3s
+
+        &:hover > .ware__about
+            //display: block
+            transform: translateY(0)
+
+    &__text
+        margin: 0 0 5px 0
+        font-weight: 700
+        line-height: 1.2
+        font-size: 17px
+
+    &__about
+        //display: none
+        color: $orange1
+        text-transform: uppercase
+        border-bottom: 2px dotted $orange1
+        font-weight: 700
+        font-size: 14px
+        transition-duration: 0.3s
+        transform: translateY(100px)
+
+        &:hover
+            text-decoration: none
+            color: $orange1
+
+    &__btn
+        max-width: 250px
+        margin: 60px auto

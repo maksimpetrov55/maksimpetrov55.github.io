@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=0">
+    <title>РПК Перспектива | Продукция и цены | Вывески из нержавеющей стали</title>
+
+    <link rel="stylesheet" href="fonts/Circe/Circe.css">
+    <link rel="stylesheet" href="fonts/RobotoMono/RobotoMono.css">
+    <link rel="stylesheet" href="fonts/IntroRust/IntroRust.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+</head>
+<body>
+
+    <script>
+        $(document).ready(function() {
+            let t = setTimeout( function() {
+                $.ajax({
+                    url: "parts/header.html",
+                    cache: true,
+                    async: true,
+                    success: function(html){
+                        $("#header").append(html);
+                    }
+                });
+            }, 100 );
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            let t = setTimeout( function() {
+                $.ajax({
+                    url: "parts/footer.html",
+                    cache: true,
+                    async: true,
+                    success: function(html){
+                        $("#footer").append(html);
+                    }
+                });
+            }, 100 );
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            let t = setTimeout( function() {
+                $.ajax({
+                    url: "parts/exp.html",
+                    cache: true,
+                    async: true,
+                    success: function(html){
+                        $("#exp").append(html);
+                    }
+                });
+            }, 100 );
+        });
+    </script>
+
+    <div id="header" class="header">
+    </div>
+    <!-- /.header -->
+
+    <div class="topspace"></div>
+
+    <div class="g-navigation">
+        <div class="container-fluid mw1170">
+            <div class="row">
+                <div class="col-12">
+                    <div class="dflex dflex--wrap">
+                        <a href="index.html" class="g-page">Главная</a>
+                        <div class="g-break"></div>
+                        <a href="products.html" class="g-page">Продукция и цены</a>
+                        <div class="g-break"></div>
+                        <div class="g-page g-page--current">Вывески из нержавеющей стали</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="grid">
+        <div class="container-fluid mw1170">
+            <div class="row">
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="viveski__art"><img src="img/art/viveski.png" alt=""></div>
+    <div class="viveski__buble viveski__buble--1"><img src="img/shapes/buble1.png" alt=""></div>
+	<div class="viveski__dots viveski__dots--1"><img src="img/shapes/dots-orange.png" alt=""></div>
+
+    <div class="viveski">
+
+        <div class="container-fluid mw1170">
+            <div class="row">
+                <div class="col-6">
+                    <div class="g-title">Вывески из нержавеющей стали</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="viveski__subtitle">Безупречное качество, презентабельность и долговечность!</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-8">
+                    <div class="viveski__features">
+                        <div class="">
+                            <img src="img/icons/goods/1.png" alt="" class="viveski__icon">
+                            <div class="viveski__good viveski__good--margin"><span class="viveski__line">Подчеркните</span> ваш&nbsp;статус</div>
+                        </div>
+                        <div class="">
+                            <img src="img/icons/goods/2.png" alt="" class="viveski__icon">
+                            <div class="viveski__good viveski__good--margin"><span class="viveski__line">Справимся</span> с&nbsp;любой задачей</div>
+                        </div>
+                        <div class="">
+                            <img src="img/icons/goods/3.png" alt="" class="viveski__icon">
+                            <div class="viveski__good"><span class="viveski__line">Гарантия</span> до&nbsp;60&nbsp;месяцев!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-6">
+                    <img src="img/pct/5.png" alt="" class="viveski__img">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6"></div>
+
+                <div class="col-6">
+                    <div class="viveski__card1">
+                        <div class="g-title g-title--small">Нам можно доверять!</div>
+                        <div class="viveski__text">Инновационные технологии, стремительное развитие, стабильность нашей команды, гарантия качества — все это приоритеты нашей компании. Мы стараемся предоставить максимальное количество услуг и продукции, для удобства каждого нашего клиента.</div>
+                        <div class="viveski__text">Почти все услуги в области наружной рекламы и благоустройства территории можно заказать в нашей компании. В каждой из этих отраслей мы достигли совершенства. Огромный опыт, длиной более чем в 13 лет, позволяет нам оказывать услуги на высочайшем уровне и со 100% гарантией качества.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="viveski__card2">
+                        <div class="viveski__15let">Уже более</div>
+                        <div class="viveski__15let viveski__15let--big">15 <span class="viveski__15let--rotate">Лет</span></div>
+                        <div class="viveski__15let">работаем на рынке наружной рекламы</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="viveski__space"></div>
+        </div>
+    </div>
+    <!-- /.viveski -->
+
+    <div class="catalog">
+        <div class="container-fluid mw1170">
+            <div class="row">
+                <div class="col-12">
+                    <div class="g-title g-title--m0">Каталог вывесок из нержавеющей стали</div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12">
+                    <div class="viveski__subtitle viveski__subtitle--margin">Безупречное качество, презентабельность и долговечность!</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="catalog__block">
+                        <img src="img/catalog/viveski/1.png" alt="" class="catalog__pct">
+                        <div class="catalog__name">Плоские буквы из нержавеющей стали</div>
+                        <div class="dflex dflex--aic catalog__cost--jcsb">
+                            <div class="catalog__cost">35см</div><div class="catalog__cost catalog__cost--dots"></div><div class="catalog__cost catalog__cost--black">35руб/см</div>
+                        </div>
+                        <div class="dflex dflex--aic catalog__cost--jcsb">
+                            <div class="catalog__cost">50см</div><div class="catalog__cost catalog__cost--dots"></div><div class="catalog__cost catalog__cost--black">40руб/см</div>
+                        </div>
+                        <div class="dflex dflex--aic catalog__cost--jcsb">
+                            <div class="catalog__cost">На заказ</div><div class="catalog__cost catalog__cost--dots"></div><div class="catalog__cost catalog__cost--black">45руб/см</div>
+                        </div>
+                        <a href="" class="catalog__arrow"></a>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="catalog__block">
+                        <img src="img/catalog/viveski/2.png" alt="" class="catalog__pct">
+                        <div class="catalog__name">Объемные буквы из нержавеющей стали несветовые</div>
+                        <div class="dflex dflex--aic catalog__cost--jcsb">
+                            <div class="catalog__cost">35см</div><div class="catalog__cost catalog__cost--dots"></div><div class="catalog__cost catalog__cost--black">75руб/см</div>
+                        </div>
+                        <div class="dflex dflex--aic catalog__cost--jcsb">
+                            <div class="catalog__cost">50см</div><div class="catalog__cost catalog__cost--dots"></div><div class="catalog__cost catalog__cost--black">80руб/см</div>
+                        </div>
+                        <div class="dflex dflex--aic catalog__cost--jcsb">
+                            <div class="catalog__cost">На заказ</div><div class="catalog__cost catalog__cost--dots"></div><div class="catalog__cost catalog__cost--black">90руб/см</div>
+                        </div>
+                        <a href="" class="catalog__arrow"></a>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="catalog__block">
+                        <img src="img/catalog/viveski/3.png" alt="" class="catalog__pct">
+                        <div class="catalog__name">Буквы из нержавеющей стали со световым лицом</div>
+                        <div class="dflex dflex--aic catalog__cost--jcsb">
+                            <div class="catalog__cost">35см</div><div class="catalog__cost catalog__cost--dots"></div><div class="catalog__cost catalog__cost--black">90руб/см</div>
+                        </div>
+                        <div class="dflex dflex--aic catalog__cost--jcsb">
+                            <div class="catalog__cost">50см</div><div class="catalog__cost catalog__cost--dots"></div><div class="catalog__cost catalog__cost--black">95руб/см</div>
+                        </div>
+                        <div class="dflex dflex--aic catalog__cost--jcsb">
+                            <div class="catalog__cost">На заказ</div><div class="catalog__cost catalog__cost--dots"></div><div class="catalog__cost catalog__cost--black">100руб/см</div>
+                        </div>
+                        <a href="" class="catalog__arrow"></a>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="catalog__block">
+                        <img src="img/catalog/viveski/4.png" alt="" class="catalog__pct">
+                        <div class="catalog__name">Буквы из нержавеющей стали с контражурной подсветкой</div>
+                        <div class="dflex dflex--aic catalog__cost--jcsb">
+                            <div class="catalog__cost">35см</div><div class="catalog__cost catalog__cost--dots"></div><div class="catalog__cost catalog__cost--black">90руб/см</div>
+                        </div>
+                        <div class="dflex dflex--aic catalog__cost--jcsb">
+                            <div class="catalog__cost">50см</div><div class="catalog__cost catalog__cost--dots"></div><div class="catalog__cost catalog__cost--black">95руб/см</div>
+                        </div>
+                        <div class="dflex dflex--aic catalog__cost--jcsb">
+                            <div class="catalog__cost">На заказ</div><div class="catalog__cost catalog__cost--dots"></div><div class="catalog__cost catalog__cost--black">100руб/см</div>
+                        </div>
+                        <a href="" class="catalog__arrow"></a>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="catalog__block">
+                        <img src="img/catalog/viveski/5.png" alt="" class="catalog__pct">
+                        <div class="catalog__name">Буквы из нержавеющей стали с RGB подсветкой</div>
+                        <div class="dflex dflex--aic catalog__cost--jcsb">
+                            <div class="catalog__cost">35см</div><div class="catalog__cost catalog__cost--dots"></div><div class="catalog__cost catalog__cost--black">90руб/см</div>
+                        </div>
+                        <div class="dflex dflex--aic catalog__cost--jcsb">
+                            <div class="catalog__cost">50см</div><div class="catalog__cost catalog__cost--dots"></div><div class="catalog__cost catalog__cost--black">95руб/см</div>
+                        </div>
+                        <div class="dflex dflex--aic catalog__cost--jcsb">
+                            <div class="catalog__cost">На заказ</div><div class="catalog__cost catalog__cost--dots"></div><div class="catalog__cost catalog__cost--black">100руб/см</div>
+                        </div>
+                        <a href="" class="catalog__arrow"></a>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="catalog__block">
+                        <img src="img/catalog/viveski/6.png" alt="" class="catalog__pct">
+                        <div class="catalog__name">Объемные буквы из нержавеющей стали с боковым свечением</div>
+                        <div class="dflex dflex--aic catalog__cost--jcsb">
+                            <div class="catalog__cost">35см</div><div class="catalog__cost catalog__cost--dots"></div><div class="catalog__cost catalog__cost--black">110руб/см</div>
+                        </div>
+                        <div class="dflex dflex--aic catalog__cost--jcsb">
+                            <div class="catalog__cost">50см</div><div class="catalog__cost catalog__cost--dots"></div><div class="catalog__cost catalog__cost--black">120руб/см</div>
+                        </div>
+                        <div class="dflex dflex--aic catalog__cost--jcsb">
+                            <div class="catalog__cost">На заказ</div><div class="catalog__cost catalog__cost--dots"></div><div class="catalog__cost catalog__cost--black">135руб/см</div>
+                        </div>
+                        <a href="" class="catalog__arrow"></a>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="catalog__block">
+                        <img src="img/catalog/viveski/7.png" alt="" class="catalog__pct">
+                        <div class="catalog__name">Объёмные буквы из нержавеющей стали с открытой подсветкой</div>
+                        <div class="dflex dflex--aic catalog__cost--jcsb">
+                            <div class="catalog__cost">35см</div><div class="catalog__cost catalog__cost--dots"></div><div class="catalog__cost catalog__cost--black">90руб/см</div>
+                        </div>
+                        <div class="dflex dflex--aic catalog__cost--jcsb">
+                            <div class="catalog__cost">50см</div><div class="catalog__cost catalog__cost--dots"></div><div class="catalog__cost catalog__cost--black">95руб/см</div>
+                        </div>
+                        <div class="dflex dflex--aic catalog__cost--jcsb">
+                            <div class="catalog__cost">На заказ</div><div class="catalog__cost catalog__cost--dots"></div><div class="catalog__cost catalog__cost--black">100руб/см</div>
+                        </div>
+                        <a href="" class="catalog__arrow"></a>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="catalog__block">
+                        <img src="img/catalog/viveski/8.png" alt="" class="catalog__pct">
+                        <div class="catalog__name">Объемные буквы из нержавеющей стали перфорированные</div>
+                        <div class="dflex dflex--aic catalog__cost--jcsb">
+                            <div class="catalog__cost">35см</div><div class="catalog__cost catalog__cost--dots"></div><div class="catalog__cost catalog__cost--black">110руб/см</div>
+                        </div>
+                        <div class="dflex dflex--aic catalog__cost--jcsb">
+                            <div class="catalog__cost">50см</div><div class="catalog__cost catalog__cost--dots"></div><div class="catalog__cost catalog__cost--black">120руб/см</div>
+                        </div>
+                        <div class="dflex dflex--aic catalog__cost--jcsb">
+                            <div class="catalog__cost">На заказ</div><div class="catalog__cost catalog__cost--dots"></div><div class="catalog__cost catalog__cost--black">135руб/см</div>
+                        </div>
+                        <a href="" class="catalog__arrow"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.catalog -->
+
+    <div class="order">
+
+        <div class="order__buble"><img src="img/shapes/buble11.png" alt=""></div>
+
+        <div class="container-fluid mw1170">
+            <div class="row">
+                <div class="col-6">
+                    <form action="" method="POST" class="order__form">
+
+                        <div class="g-title g-title--white">Оставьте заявку для&nbsp;точного расчета</div>
+
+                        <div class="order__description">Мы свяжемся с вами в ближайшее рабочее время, озвучим точную стоимость и все детали</div>
+
+                        <div class="dflex dflex--jcsb">
+                            <input type="text" class="order__input" placeholder="Ваше имя">
+                            <input type="text" class="order__input" placeholder="Телефон или E-mail для связи">
+                        </div>
+
+                        <textarea name="" id="" class="order__input order__input--textarea" placeholder="Ваше сообщение"></textarea>
+
+                        <div class="dflex dflex--jcsb">
+                            <div class="g-btn g-btn--fzsm order__btn">Отправить заявку</div>
+                            <div class="order__note">Нажимая на кнопку, вы даете согласие на&nbsp;обработку персональных данных</div>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="col-6">
+                    <img src="img/art/clipboard.png" alt="" class="order__clipboard">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.order -->
+    
+    <div class="viveski">
+        <div class="container-fluid mw1170">
+            <div class="row">
+                <div class="col-12">
+                    <div class="g-title g-title--m0">Вывески из нержавеющей стали в деталях</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="g-title g-title--small viveski__line viveski__line--title">Все “под ключ” в одном месте!</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="g-text">Внутренняя подсветка осуществляется с помощью самых современных светодиодных технологий. Она пришла на замену неоновой подсветке. Которая была очень хрупка, сложна в установке и замене, очень пожароопасна и энергозатратна. Светодиодная подсветка обеспецивает равномерную засветку, большое снижение энергопотребления и большой эксплуатационный срок изделий.</div>
+                    <div class="g-text">Цвет букв может быть абсолютно любым указанным в шкале RAL. Окрашивание производится порошковым методом. Это обеспечивает визуально безупречное качество и долговечность покраски. Так же можно выбрать нитротитановое напыление под серебро или золото. Данный вид напыления обеспечивает максимальную привлекательность букв.</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="viveski__pct"><img src="img/pct/2.png" alt=""></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="g-text">Хотя этот вид наружной рекламы несколько дороже чем обычные буквы из ПВХ или акрила, но он полностью оправдывает себя гарантированно безупречным внешним видом и долговечностью. Такие буквы обычно не требуют ремонта очень долгое время. Единственное что нужно делать это очищать их от пыли и грязи по мере загрязнения. Стоимость ремонта и обслуживания данного вида вывесок определяется их размерами, высотой размещения и сроком эксплуатации.</div>
+                    <div class="g-text g-text--margin">Буквы из нержавейки можно сочетать с подложкой из композитного материала, что придает таким вывескам еще большую привлекательность. Все цены указанные в нашем прайсе актуальны на любой момент времени. Так же есть возможность корректировки данных цен в зависимости от объема заказа и дополнительные скидки для рекламных агентств.</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-10">
+                    <div class="g-title">Фотогалерея</div>
+                </div>
+
+                <div class="col-2">
+                    <div class="news-open__navigation">
+                        <div class="news-open__arrow news-open__arrow--prev">‹</div>
+                        <div class="news-open__arrow news-open__arrow--next">›</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="news-open__gallery">
+                        <a href="#" class="news-open__img"><img src="img/mock.png" alt=""></a>
+                        <a href="#" class="news-open__img"><img src="img/mock.png" alt=""></a>
+                        <a href="#" class="news-open__img"><img src="img/mock.png" alt=""></a>
+                        <a href="#" class="news-open__img"><img src="img/mock.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.viveski -->
+
+
+    <div id="exp" class="exp">
+    </div>
+    <!-- /.exp -->
+
+
+    <div id="footer" class="footer">
+    </div>
+    <!-- /.footer -->
+
+
+</body>
+</html>

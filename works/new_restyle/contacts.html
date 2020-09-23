@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=0">
+    <title>РПК Перспектива | Контакты</title>
+
+    <link rel="stylesheet" href="fonts/Circe/Circe.css">
+    <link rel="stylesheet" href="fonts/RobotoMono/RobotoMono.css">
+    <link rel="stylesheet" href="fonts/IntroRust/IntroRust.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+</head>
+<body>
+
+    <script>
+        $(document).ready(function() {
+            let t = setTimeout( function() {
+                $.ajax({
+                    url: "parts/header.html",
+                    cache: true,
+                    async: true,
+                    success: function(html){
+                        $("#header").append(html);
+                    }
+                });
+            }, 100 );
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            let t = setTimeout( function() {
+                $.ajax({
+                    url: "parts/footer.html",
+                    cache: true,
+                    async: true,
+                    success: function(html){
+                        $("#footer").append(html);
+                    }
+                });
+            }, 100 );
+        });
+    </script>
+
+    <div id="header" class="header">
+    </div>
+    <!-- /.header -->
+
+    <div class="topspace"></div>
+
+    <div class="g-navigation">
+        <div class="container-fluid mw1170">
+            <div class="row">
+                <div class="col-12">
+                    <div class="dflex dflex--wrap">
+                        <a href="index.html" class="g-page">Главная</a>
+                        <div class="g-break"></div>
+                        <div class="g-page g-page--current">Контакты</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="grid">
+        <div class="container-fluid mw1170">
+            <div class="row">
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="contacts__buble contacts__buble--1"><img src="img/shapes/buble8.png" alt=""></div>
+    <div class="contacts__buble contacts__buble--2"><img src="img/shapes/buble9.png" alt=""></div>
+    <div class="contacts__dots contacts__dots--1"><img src="img/shapes/dots-black.png" alt=""></div>
+    
+    <div class="contacts">
+
+        <div class="container-fluid mw1170">
+            <div class="row">
+                <div class="col-6">
+                    <div class="g-title contacts__title">Контакты</div>
+
+                    <div class="contacts__text contacts__text--margin contacts__text--bold">Адрес расположения офиса и производства:</div>
+
+                    <div class="dflex dflex--aic">
+                        <div class="contacts__img"><img src="img/icons/mark.png" alt=""></div>
+
+                        <div class="contacts__text contacts__text--20">
+                            107553<br>
+                            г. Москва, ул. Большая Черкизовская 24А
+                        </div>
+                    </div>
+
+                    <div class="contacts__text contacts__text--margin contacts__text--bold">Рабочий режим:</div>
+
+                    <div class="dflex">
+                        <div class="dflex dflex--aic">
+                            <div class="contacts__img"><img src="img/icons/clock.png" alt=""></div>
+
+                            <div>
+                                <div class="contacts__text contacts__text--width">Время работы офисов:</div>
+                                <div class="contacts__text contacts__text--bold">ПН-ПТ, с 9.00 до 19.00</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="contacts__text">Время работы производственных цехов:</div>
+                            <div class="contacts__text contacts__text--bold">ПН-ПТ, с 9.00 до 18.00</div>
+                        </div>
+                    </div>
+
+                    <div class="contacts__text contacts__text--margin contacts__text--bold">По всем вопросам:</div>
+
+                    <div class="dflex">
+                        <div class="dflex dflex--aic">
+                            <div class="contacts__img"><img src="img/icons/call.png" alt=""></div>
+
+                            <div>
+                                <div class="contacts__text contacts__text--width">Телефон:</div>
+                                <div class="contacts__text contacts__text--bold">+7 (916) 333 99 33</div>
+                            </div>
+                        </div>
+
+                        <div class="dflex dflex--aic">
+                            <div class="contacts__img"><img src="img/icons/email.png" alt=""></div>
+
+                            <div>
+                                <div class="contacts__text">Email:</div>
+                                <div class="contacts__text contacts__text--bold">zakaz@dmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="col-6 dflex dflex--jcfe">
+                    <form action="" method="POST" class="contacts__form">
+
+                        <div class="contacts__form__title">Обратная связь</div>
+                        
+                        <input type="text" class="contacts__form__input" placeholder="Ваше имя">
+
+                        <input type="text" class="contacts__form__input" placeholder="Телефон или E-mail для связи">
+
+                        <textarea name="" id="" class="contacts__form__input contacts__form__input--textarea" placeholder="Ваше сообщение"></textarea>
+
+                        <div class="contacts__form__btn g-btn">Отправить заявку</div>
+
+                        <div class="contacts__form__note">Нажимая на кнопку, вы даете согласие на обработку персональных данных</div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="g-title g-title--small">Схема проезда</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="contacts__map">
+                        <a class="dg-widget-link" href="http://2gis.ru/moscow/firm/70000001021636272/center/37.835454940795906,55.80898693448976/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Москвы</a><div class="dg-widget-link"><a href="http://2gis.ru/moscow/center/37.835542,55.807932/zoom/16/routeTab/rsType/bus/to/37.835542,55.807932╎РПК РЕСТАЙЛ, рекламная компания?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до РПК РЕСТАЙЛ, рекламная компания</a></div><script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script><script charset="utf-8">new DGWidgetLoader({"width": "100%","height": "100%","borderColor":"transparent","pos":{"lat":55.80898693448976,"lon":37.835454940795906,"zoom":14},"opt":{"city":"moscow"},"org":[{"id":"70000001021636272"}]});</script><noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.contacts -->
+
+
+
+    <div id="footer" class="footer">
+    </div>
+    <!-- /.footer -->
+
+
+</body>
+</html>

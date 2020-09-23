@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=0">
+	<title>РПК Перспектива | Главная</title>
+
+	<link rel="stylesheet" href="fonts/Circe/Circe.css">
+	<link rel="stylesheet" href="fonts/RobotoMono/RobotoMono.css">
+	<link rel="stylesheet" href="fonts/IntroRust/IntroRust.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+	<script>
+		$(document).ready(function() {
+			let t = setTimeout( function() {
+				$.ajax({
+					url: "parts/header.html",
+					cache: true,
+					async: true,
+					success: function(html){
+						$("#header").append(html);
+					}
+				});
+			}, 100 );
+		});
+	</script>
+
+	<script>
+		$(document).ready(function() {
+			let t = setTimeout( function() {
+				$.ajax({
+					url: "parts/footer.html",
+					cache: true,
+					async: true,
+					success: function(html){
+						$("#footer").append(html);
+					}
+				});
+			}, 100 );
+		});
+	</script>
+
+	<script>
+		$(document).ready(function() {
+			let t = setTimeout( function() {
+				$.ajax({
+					url: "parts/exp.html",
+					cache: true,
+					async: true,
+					success: function(html){
+						$("#exp").append(html);
+					}
+				});
+			}, 100 );
+		});
+	</script>
+
+	<div id="header" class="header">
+	</div>
+	<!-- /.header -->
+
+	<div class="topspace"></div>
+
+
+	<div class="first__stella"></div>
+
+	<div class="home__dots home__dots--1"><img src="img/shapes/dots-gray.png" alt=""></div>
+	<div class="home__buble home__buble--1"><img src="img/shapes/buble1.png" alt=""></div>
+	<div class="home__dots home__dots--2"><img src="img/shapes/dots-orange.png" alt=""></div>
+	<div class="home__buble home__buble--2"><img src="img/shapes/buble2.png" alt=""></div>
+	<div class="home__buble home__buble--3"><img src="img/shapes/buble3.png" alt=""></div>
+
+
+	<div class="first">
+
+		<div class="container-fluid mw1170">
+
+			<div class="row">
+				<div class="col-9">
+					<h1 class="first__h1">Выжимаем максимум<br><span class="first__h1--span">из рекламы<br>для ваших продаж</span></h1>
+
+					<div class="first__subtitle">Проектирование, изготовление, монтаж, обслуживание</div>
+				</div>
+
+				<div class="col-3">
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-3">
+					<a href="#" class="first__btn g-btn">Подробнее</a>
+				</div>
+				<div class="col-6 dflex">
+					<div class="first__good">
+						<div class="first__number">15 <span class="first__number--span">лет</span></div>
+						<div class="first__descr">опыта работы</div>
+					</div>
+					<div class="first__good">
+						<div class="first__number">23 000</div>
+						<div class="first__descr">довольных клиентов</div>
+					</div>
+				</div>
+				<div class="col-3 dflex justify-content-end">
+					<a href="" class="first__calc">Калькулятор</a>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	<!-- /.first -->
+
+
+	<div class="cases">
+
+		<div class="container-fluid mw1170">
+			<div class="row">
+				<div class="col-12">
+					<div class="cases__title g-title">Примеры наших работ</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-4">
+					<a href="" class="cases__block">
+
+					</a>
+				</div>
+				<div class="col-4">
+					<a href="" class="cases__block">
+
+					</a>
+				</div>
+				<div class="col-4">
+					<a href="" class="cases__block">
+
+					</a>
+				</div>
+				<div class="col-4">
+					<a href="" class="cases__block">
+
+					</a>
+				</div>
+				<div class="col-4">
+					<a href="" class="cases__block">
+
+					</a>
+				</div>
+				<div class="col-4">
+					<a href="" class="cases__block">
+
+					</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- /.cases -->
+
+
+	<div class="ware">
+
+		<div class="container-fluid mw1170">
+			<div class="row">
+				<div class="col-12">
+					<div class="ware__title g-title g-title--tac">Наша продукция</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-2">
+					<div class="ware__block">
+						<div class="ware__text">Вывески из нержавеющей стали</div>
+						<a href="" class="ware__about">Подробнее</a>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="ware__block">
+						<div class="ware__text">Вывески из обьемных букв</div>
+						<a href="" class="ware__about">Подробнее</a>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="ware__block">
+						<div class="ware__text">МАФы</div>
+						<a href="" class="ware__about">Подробнее</a>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="ware__block">
+						<div class="ware__text">Оформление зоны ресепшн</div>
+						<a href="" class="ware__about">Подробнее</a>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="ware__block">
+						<div class="ware__text">Крышные установки</div>
+						<a href="" class="ware__about">Подробнее</a>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="ware__block">
+						<div class="ware__text">Рекламные стеллы и пилоны</div>
+						<a href="" class="ware__about">Подробнее</a>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="ware__block">
+						<div class="ware__text">Комплексное оформление ТЦ</div>
+						<a href="" class="ware__about">Подробнее</a>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="ware__block">
+						<div class="ware__text">Интерактивные конструкции</div>
+						<a href="" class="ware__about">Подробнее</a>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="ware__block">
+						<div class="ware__text">Входные группы и козырьки</div>
+						<a href="" class="ware__about">Подробнее</a>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="ware__block">
+						<div class="ware__text">Композитные короба с инкрустацией</div>
+						<a href="" class="ware__about">Подробнее</a>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="ware__block">
+						<div class="ware__text">Автоподиумы</div>
+						<a href="" class="ware__about">Подробнее</a>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="ware__block">
+						<div class="ware__text">Фальшфасады</div>
+						<a href="" class="ware__about">Подробнее</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="row justify-content-center">
+				<div class="col-12">
+					<a href="#" class="ware__btn g-btn g-btn--fzsm">Больше продукции</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- /.ware -->
+
+
+	<div id="exp" class="exp">
+	</div>
+	<!-- /.exp -->
+
+
+	<div id="footer" class="footer">
+	</div>
+	<!-- /.footer -->
+
+
+</body>
+</html>

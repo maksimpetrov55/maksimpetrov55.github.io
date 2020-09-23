@@ -1,0 +1,54 @@
+
+
+
+.exp
+    background: $gray1
+    position: relative
+    padding: 110px 0 90px 0
+
+    &__title
+        position: relative
+        font-size: 40px
+        font-family: 'Intro Rust G Base', sans-serif
+        text-transform: uppercase
+        color: $black
+        line-height: 1.1
+        margin: 0 0 40px 0
+
+        &--span
+            position: relative
+            font-size: 60px
+            font-family: 'Intro Rust G Base', sans-serif
+            text-transform: uppercase
+            color: $black
+            line-height: 1.1
+            z-index: 19
+
+            &::before
+                content: ""
+                display: block
+                height: 17px
+                width: 280px
+                background: $orange1
+                position: absolute
+                top: 48px
+                left: 0
+                z-index: -1
+                border-radius: 2px
+
+    &__descr
+        font-size: 21px
+        color: $gray2
+        line-height: 1.2
+        margin: 0 0 50px 0
+        max-width: 430px
+
+    &__note
+        text-transform: uppercase
+        color: $gray2
+        font-weight: 600
+        line-height: 1.2
+        display: flex
+        flex-direction: column
+        justify-content: center
+        height: 100%

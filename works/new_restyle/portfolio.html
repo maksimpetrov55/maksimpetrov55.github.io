@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=0">
+    <title>РПК Перспектива | Портфолио</title>
+
+    <link rel="stylesheet" href="fonts/Circe/Circe.css">
+    <link rel="stylesheet" href="fonts/RobotoMono/RobotoMono.css">
+    <link rel="stylesheet" href="fonts/IntroRust/IntroRust.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+</head>
+<body>
+
+    <script>
+        $(document).ready(function() {
+            let t = setTimeout( function() {
+                $.ajax({
+                    url: "parts/header.html",
+                    cache: true,
+                    async: true,
+                    success: function(html){
+                        $("#header").append(html);
+                    }
+                });
+            }, 100 );
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            let t = setTimeout( function() {
+                $.ajax({
+                    url: "parts/footer.html",
+                    cache: true,
+                    async: true,
+                    success: function(html){
+                        $("#footer").append(html);
+                    }
+                });
+            }, 100 );
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            let t = setTimeout( function() {
+                $.ajax({
+                    url: "parts/exp.html",
+                    cache: true,
+                    async: true,
+                    success: function(html){
+                        $("#exp").append(html);
+                    }
+                });
+            }, 100 );
+        });
+    </script>
+
+    <div id="header" class="header">
+    </div>
+    <!-- /.header -->
+
+    <div class="topspace"></div>
+
+    <div class="g-navigation">
+        <div class="container-fluid mw1170">
+            <div class="row">
+                <div class="col-12">
+                    <div class="dflex dflex--wrap">
+                        <a href="index.html" class="g-page">Главная</a>
+                        <div class="g-break"></div>
+                        <div class="g-page g-page--current">Портфолио</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="portfolio">
+
+        <div class="container-fluid mw1170">
+            <div class="row">
+                <div class="col-12">
+                    <div class="g-title g-title--tac">Портфолио</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="portfolio__descr">
+                        Опыт работы в сфере производства наружной рекламы позволил нам выбрать лучшие решения, позволяющие предложить клиентам высокое качество конечной продукции и достаточно высокую скорость их изготовления.
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="portfolio__block">
+                        <a href="#" class="portfolio__title">Портфолио крышных установок</a>
+                        <div class="dflex dflex--jcsb dflex--wrap">
+                            <img src="img/mock.png" alt="" class="portfolio__img">
+                            <img src="img/mock.png" alt="" class="portfolio__img">
+                            <img src="img/mock.png" alt="" class="portfolio__img">
+                            <img src="img/mock.png" alt="" class="portfolio__img">
+                        </div>
+                    </div>
+
+                    <a href="#" class="portfolio__btn g-btn g-btn--fzsm">Больше продукции</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="portfolio__block">
+                        <a href="#" class="portfolio__title">Портфолио букв из нержавеющей стали</a>
+                        <div class="dflex dflex--jcsb dflex--wrap">
+                            <img src="img/mock.png" alt="" class="portfolio__img">
+                            <img src="img/mock.png" alt="" class="portfolio__img">
+                            <img src="img/mock.png" alt="" class="portfolio__img">
+                            <img src="img/mock.png" alt="" class="portfolio__img">
+                        </div>
+                    </div>
+
+                    <a href="#" class="portfolio__btn g-btn g-btn--fzsm">Больше продукции</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="portfolio__block">
+                        <a href="#" class="portfolio__title">Дизайн-проект интерьера</a>
+                        <div class="dflex dflex--jcsb dflex--wrap">
+                            <img src="img/mock.png" alt="" class="portfolio__img">
+                            <img src="img/mock.png" alt="" class="portfolio__img">
+                            <img src="img/mock.png" alt="" class="portfolio__img">
+                            <img src="img/mock.png" alt="" class="portfolio__img">
+                        </div>
+                    </div>
+
+                    <a href="#" class="portfolio__btn g-btn g-btn--fzsm">Больше продукции</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="portfolio__block">
+                        <a href="#" class="portfolio__title">Объемные буквы</a>
+                        <div class="dflex dflex--jcsb dflex--wrap">
+                            <img src="img/mock.png" alt="" class="portfolio__img">
+                            <img src="img/mock.png" alt="" class="portfolio__img">
+                            <img src="img/mock.png" alt="" class="portfolio__img">
+                            <img src="img/mock.png" alt="" class="portfolio__img">
+                        </div>
+                    </div>
+
+                    <a href="#" class="portfolio__btn g-btn g-btn--fzsm">Больше продукции</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="portfolio__block">
+                        <a href="#" class="portfolio__title">Оформление витрин</a>
+                        <div class="dflex dflex--jcsb dflex--wrap">
+                            <img src="img/mock.png" alt="" class="portfolio__img">
+                            <img src="img/mock.png" alt="" class="portfolio__img">
+                            <img src="img/mock.png" alt="" class="portfolio__img">
+                            <img src="img/mock.png" alt="" class="portfolio__img">
+                        </div>
+                    </div>
+
+                    <a href="#" class="portfolio__btn g-btn g-btn--fzsm">Больше продукции</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="portfolio__block">
+                        <a href="#" class="portfolio__title">Оформление зоны ресепшн</a>
+                        <div class="dflex dflex--jcsb dflex--wrap">
+                            <img src="img/mock.png" alt="" class="portfolio__img">
+                            <img src="img/mock.png" alt="" class="portfolio__img">
+                            <img src="img/mock.png" alt="" class="portfolio__img">
+                            <img src="img/mock.png" alt="" class="portfolio__img">
+                        </div>
+                    </div>
+
+                    <a href="#" class="portfolio__btn portfolio__btn--last g-btn g-btn--fzsm">Больше продукции</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.portfolio -->
+
+    <div id="exp" class="exp">
+    </div>
+    <!-- /.exp -->
+
+    <div id="footer" class="footer">
+    </div>
+    <!-- /.footer -->
+
+
+</body>
+</html>

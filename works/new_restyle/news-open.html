@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=0">
+    <title>РПК Перспектива | Новости | Новость!</title>
+
+    <link rel="stylesheet" href="fonts/Circe/Circe.css">
+    <link rel="stylesheet" href="fonts/RobotoMono/RobotoMono.css">
+    <link rel="stylesheet" href="fonts/IntroRust/IntroRust.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+</head>
+<body>
+
+    <script>
+        $(document).ready(function() {
+            let t = setTimeout( function() {
+                $.ajax({
+                    url: "parts/header.html",
+                    cache: true,
+                    async: true,
+                    success: function(html){
+                        $("#header").append(html);
+                    }
+                });
+            }, 100 );
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            let t = setTimeout( function() {
+                $.ajax({
+                    url: "parts/footer.html",
+                    cache: true,
+                    async: true,
+                    success: function(html){
+                        $("#footer").append(html);
+                    }
+                });
+            }, 100 );
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            let t = setTimeout( function() {
+                $.ajax({
+                    url: "parts/exp.html",
+                    cache: true,
+                    async: true,
+                    success: function(html){
+                        $("#exp").append(html);
+                    }
+                });
+            }, 100 );
+        });
+    </script>
+
+    <div id="header" class="header">
+    </div>
+    <!-- /.header -->
+
+    <div class="topspace"></div>
+
+    <div class="g-navigation">
+        <div class="container-fluid mw1170">
+            <div class="row">
+                <div class="col-12">
+                    <div class="dflex dflex--wrap">
+                        <a href="index.html" class="g-page">Главная</a>
+                        <div class="g-break"></div>
+                        <a href="news.html" class="g-page">Новости компании</a>
+                        <div class="g-break"></div>
+                        <div class="g-page g-page--current">Изготовление и монтаж входной группы для NIKE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="news-open">
+
+        <div class="container-fluid mw1170">
+            <div class="row">
+                <div class="col-10">
+                    <div class="g-title">Изготовление и монтаж входной группы для NIKE</div>
+                </div>
+                <div class="col-2">
+                    <div class="news-open__date">05.08.2020</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <img src="img/mock.png" class="news-open__bigimg">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class=".g-text .g-text--margin">Разнообразный и богатый опыт начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации существующих финансовых и административных условий. Разнообразный и богатый опыт повышение уровня гражданского сознания представляет собой интересный эксперимент проверки новых предложений. Соображения высшего порядка, а также консультация с профессионалами из IT требует определения и уточнения дальнейших направлений развития проекта. Дорогие друзья, дальнейшее развитие различных форм деятельности обеспечивает широкому кругу специалистов участие в формировании позиций, занимаемых участниками в отношении поставленных задач.</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-10">
+                    <div class="g-title">Фотогалерея</div>
+                </div>
+
+                <div class="col-2">
+                    <div class="news-open__navigation">
+                        <div class="news-open__arrow news-open__arrow--prev">‹</div>
+                        <div class="news-open__arrow news-open__arrow--next">›</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="news-open__gallery">
+                        <a href="#" class="news-open__img"><img src="img/mock.png" alt=""></a>
+                        <a href="#" class="news-open__img"><img src="img/mock.png" alt=""></a>
+                        <a href="#" class="news-open__img"><img src="img/mock.png" alt=""></a>
+                        <a href="#" class="news-open__img"><img src="img/mock.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="g-title g-title--small">Креативность в наружной рекламе!</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class=".g-text .g-text--margin">Разнообразный и богатый опыт начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации существующих финансовых и административных условий. Разнообразный и богатый опыт повышение уровня гражданского сознания представляет собой интересный эксперимент проверки новых предложений. Соображения высшего порядка, а также консультация с профессионалами из IT требует определения и уточнения дальнейших направлений развития проекта. Дорогие друзья, дальнейшее развитие различных форм деятельности обеспечивает широкому кругу специалистов участие в формировании позиций, занимаемых участниками в отношении поставленных задач.</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-5">
+                    <div class="news-open__video">
+                        <iframe class="news-open__iframe" src="https://www.youtube.com/embed/LXb3EKWsInQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="col-7">
+                    <div class="g-title g-title--small">Креативность в наружной рекламе!</div>
+                    
+                    <div class=".g-text">Разнообразный и богатый опыт начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации существующих финансовых и административных условий. </div>
+                    <div class=".g-text">Разнообразный и богатый опыт повышение уровня гражданского сознания представляет собой интересный эксперимент проверки новых предложений. Соображения высшего порядка, а также консультация с профессионалами из IT требует определения и уточнения дальнейших направлений развития проекта. </div>
+                    <div class=".g-text">Дорогие друзья, дальнейшее развитие различных форм деятельности обеспечивает широкому кругу специалистов участие в формировании позиций, занимаемых участниками в отношении поставленных задач.</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.news-open -->
+
+
+    <div id="exp" class="exp">
+    </div>
+    <!-- /.exp -->
+
+
+    <div id="footer" class="footer">
+    </div>
+    <!-- /.footer -->
+
+
+</body>
+</html>

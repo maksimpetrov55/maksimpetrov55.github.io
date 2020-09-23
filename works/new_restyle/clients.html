@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=0">
+    <title>РПК Перспектива | Нам доверяют</title>
+
+    <link rel="stylesheet" href="fonts/Circe/Circe.css">
+    <link rel="stylesheet" href="fonts/RobotoMono/RobotoMono.css">
+    <link rel="stylesheet" href="fonts/IntroRust/IntroRust.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+</head>
+<body>
+
+    <script>
+        $(document).ready(function() {
+            let t = setTimeout( function() {
+                $.ajax({
+                    url: "parts/header.html",
+                    cache: true,
+                    async: true,
+                    success: function(html){
+                        $("#header").append(html);
+                    }
+                });
+            }, 100 );
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            let t = setTimeout( function() {
+                $.ajax({
+                    url: "parts/footer.html",
+                    cache: true,
+                    async: true,
+                    success: function(html){
+                        $("#footer").append(html);
+                    }
+                });
+            }, 100 );
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            let t = setTimeout( function() {
+                $.ajax({
+                    url: "parts/exp.html",
+                    cache: true,
+                    async: true,
+                    success: function(html){
+                        $("#exp").append(html);
+                    }
+                });
+            }, 100 );
+        });
+    </script>
+
+    <div id="header" class="header">
+    </div>
+    <!-- /.header -->
+
+    <div class="topspace"></div>
+
+    <div class="g-navigation">
+        <div class="container-fluid mw1170">
+            <div class="row">
+                <div class="col-12">
+                    <div class="dflex dflex--wrap">
+                        <a href="index.html" class="g-page">Главная</a>
+                        <div class="g-break"></div>
+                        <div class="g-page g-page--current">Нам доверяют</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="grid">
+        <div class="container-fluid mw1170">
+            <div class="row">
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <div class="clients">
+
+        <div class="container-fluid mw1170">
+            <div class="row">
+                <div class="col-9">
+                    <div class="g-title">Нам доверяют</div>
+                </div>
+
+                <div class="col-3">
+                    <div class="dflex dflex-aic dflex--jcfe">
+                        <a class="clients__about" href="about.html">Подробнее о нас</a>
+                        <div class="clients__question">?</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2"><div class="clients__block"><img class="clients__img" src="img/clients/1.png" alt=""><img class="clients__img--hover" src="img/clients/1w.png" alt=""></div></div>
+                <div class="col-2"><div class="clients__block"><img class="clients__img" src="img/clients/1.png" alt=""><img class="clients__img--hover" src="img/clients/1w.png" alt=""></div></div>
+                <div class="col-2"><div class="clients__block"><img class="clients__img" src="img/clients/1.png" alt=""><img class="clients__img--hover" src="img/clients/1w.png" alt=""></div></div>
+                <div class="col-2"><div class="clients__block"><img class="clients__img" src="img/clients/1.png" alt=""><img class="clients__img--hover" src="img/clients/1w.png" alt=""></div></div>
+                <div class="col-2"><div class="clients__block"><img class="clients__img" src="img/clients/1.png" alt=""><img class="clients__img--hover" src="img/clients/1w.png" alt=""></div></div>
+                <div class="col-2"><div class="clients__block"><img class="clients__img" src="img/clients/1.png" alt=""><img class="clients__img--hover" src="img/clients/1w.png" alt=""></div></div>
+                <div class="col-2"><div class="clients__block"><img class="clients__img" src="img/clients/1.png" alt=""><img class="clients__img--hover" src="img/clients/1w.png" alt=""></div></div>
+                <div class="col-2"><div class="clients__block"><img class="clients__img" src="img/clients/1.png" alt=""><img class="clients__img--hover" src="img/clients/1w.png" alt=""></div></div>
+                <div class="col-2"><div class="clients__block"><img class="clients__img" src="img/clients/1.png" alt=""><img class="clients__img--hover" src="img/clients/1w.png" alt=""></div></div>
+                <div class="col-2"><div class="clients__block"><img class="clients__img" src="img/clients/1.png" alt=""><img class="clients__img--hover" src="img/clients/1w.png" alt=""></div></div>
+                <div class="col-2"><div class="clients__block"><img class="clients__img" src="img/clients/1.png" alt=""><img class="clients__img--hover" src="img/clients/1w.png" alt=""></div></div>
+                <div class="col-2"><div class="clients__block"><img class="clients__img" src="img/clients/1.png" alt=""><img class="clients__img--hover" src="img/clients/1w.png" alt=""></div></div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="clients__btn g-btn g-btn--fzsm">Больше компаний</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.clients -->
+
+
+    <div id="exp" class="exp">
+    </div>
+    <!-- /.exp -->
+
+
+    <div id="footer" class="footer">
+    </div>
+    <!-- /.footer -->
+
+
+</body>
+</html>

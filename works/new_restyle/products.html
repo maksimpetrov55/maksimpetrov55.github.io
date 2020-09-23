@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=0">
+    <title>РПК Перспектива | Продукция и цены</title>
+
+    <link rel="stylesheet" href="fonts/Circe/Circe.css">
+    <link rel="stylesheet" href="fonts/RobotoMono/RobotoMono.css">
+    <link rel="stylesheet" href="fonts/IntroRust/IntroRust.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+</head>
+<body>
+
+    <script>
+        $(document).ready(function() {
+            let t = setTimeout( function() {
+                $.ajax({
+                    url: "parts/header.html",
+                    cache: true,
+                    async: true,
+                    success: function(html){
+                        $("#header").append(html);
+                    }
+                });
+            }, 100 );
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            let t = setTimeout( function() {
+                $.ajax({
+                    url: "parts/footer.html",
+                    cache: true,
+                    async: true,
+                    success: function(html){
+                        $("#footer").append(html);
+                    }
+                });
+            }, 100 );
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            let t = setTimeout( function() {
+                $.ajax({
+                    url: "parts/exp.html",
+                    cache: true,
+                    async: true,
+                    success: function(html){
+                        $("#exp").append(html);
+                    }
+                });
+            }, 100 );
+        });
+    </script>
+
+    <div id="header" class="header">
+    </div>
+    <!-- /.header -->
+
+    <div class="topspace"></div>
+
+    <div class="g-navigation">
+        <div class="container-fluid mw1170">
+            <div class="row">
+                <div class="col-12">
+                    <div class="dflex dflex--wrap">
+                        <a href="index.html" class="g-page">Главная</a>
+                        <div class="g-break"></div>
+                        <div class="g-page g-page--current">Продукция и цены</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="grid">
+        <div class="container-fluid mw1170">
+            <div class="row">
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+                <div class="col-1"><div class="grid__col"></div></div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="home__buble home__buble--1"><img src="img/shapes/buble1.png" alt=""></div>
+    <div class="home__dots home__dots--2"><img src="img/shapes/dots-orange.png" alt=""></div>
+    <div class="products__buble products__buble--1"><img src="img/shapes/buble10.png" alt=""></div>
+
+
+    <div class="products">
+        <div class="container-fluid mw1170">
+            <div class="row">
+                <div class="col-12">
+                    <div class="g-title">Продукция и цены</div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4">
+                    <div class="products__card">
+                        <img src="img/products/1.png" alt="" class="products__img">
+                        <div class="products__content">
+                            <div class="products__name">Вывески из нержавеющей стали</div>
+                            <div class="products__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
+                            <a href="#" class="g-btn g-btn--black">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="products__card">
+                        <img src="img/products/2.png" alt="" class="products__img">
+                        <div class="products__content">
+                            <div class="products__name">Вывески из объемных&nbsp;букв</div>
+                            <div class="products__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
+                            <a href="#" class="g-btn g-btn--black">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="products__card">
+                        <img src="img/products/3.png" alt="" class="products__img">
+                        <div class="products__content">
+                            <div class="products__name">Крышные установки</div>
+                            <div class="products__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
+                            <a href="#" class="g-btn g-btn--black">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="products__card">
+                        <img src="img/products/4.png" alt="" class="products__img">
+                        <div class="products__content">
+                            <div class="products__name">Световые короба</div>
+                            <div class="products__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
+                            <a href="#" class="g-btn g-btn--black">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="products__card">
+                        <img src="img/products/5.png" alt="" class="products__img">
+                        <div class="products__content">
+                            <div class="products__name">Рекламные стеллы и&nbsp;пилоны</div>
+                            <div class="products__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
+                            <a href="#" class="g-btn g-btn--black">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="products__card">
+                        <img src="img/products/6.png" alt="" class="products__img">
+                        <div class="products__content">
+                            <div class="products__name">Промостойки</div>
+                            <div class="products__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
+                            <a href="#" class="g-btn g-btn--black">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="products__card">
+                        <img src="img/products/7.png" alt="" class="products__img">
+                        <div class="products__content">
+                            <div class="products__name">Информационные стенды</div>
+                            <div class="products__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
+                            <a href="#" class="g-btn g-btn--black">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="products__card">
+                        <img src="img/products/8.png" alt="" class="products__img">
+                        <div class="products__content">
+                            <div class="products__name">Широкоформатная печать</div>
+                            <div class="products__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</div>
+                            <a href="#" class="g-btn g-btn--black">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.products -->
+
+
+    <div id="exp" class="exp">
+    </div>
+    <!-- /.exp -->
+
+
+    <div id="footer" class="footer">
+    </div>
+    <!-- /.footer -->
+
+
+</body>
+</html>
