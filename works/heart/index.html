@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div class="calc__body">
+
+			<div id="calc_step0" class="calc__block calc__block--start">
+				<div class="calc__height">
+					<div class="calc__text">Хочешь в 50 лет посетить Эльбрус? А может прыгнуть с парашютом? Или активно проводить время со своей семьей на природе? Для этого нужно понять все ли ты правильно делаешь для своего сердца, чтобы чувствовать себя отлично и не встретить 50 лет с инфарктом или инсультом.</div>
+				</div>
+
+				<div id="calc_btn_start" class="calc__btn calc__btn--next">Узнать</div>
+			</div>
+
+			<div id="calc_step1" class="calc__block calc__block--hide">
+				<div class="calc__counter">1/10</div>
+
+				<div class="calc__height">
+					<div class="calc__title">Регион, в котором Вы проживаете на данный момент:</div>
+
+					<div class="calc__select">
+						<div class="calc__current"></div>
+						<div class="calc__list">
+							<div class="calc__li">Регион регион 1</div>
+							<div class="calc__li">Регион регион 2</div>
+							<div class="calc__li">Регион регион 3</div>
+							<div class="calc__li">Регион регион 4</div>
+							<div class="calc__li">Регион регион 5</div>
+							<div class="calc__li">Регион регион 6</div>
+							<div class="calc__li">Регион регион 7</div>
+							<div class="calc__li">Регион регион 8</div>
+							<div class="calc__li">Регион регион 9</div>
+							<div class="calc__li">Регион регион 10</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="calc__flex">
+					<div id="calc_btn_step1" class="calc__btn calc__btn--next">Дальше</div>
+					<div id="calc_btn_back1" class="calc__btn calc__btn--back">Назад</div>
+				</div>
+			</div>
+
+			<div id="calc_step2" class="calc__block calc__block--hide">
+				<div class="calc__counter">2/10</div>
+
+				<div class="calc__height">
+					<div class="calc__title">Возраст:</div>
+					<div class="calc__flex calc__flex--jcfs">
+						<div class="calc__minus">–</div>
+						<input class="calc__input" type="number" name="calc_age" id="calc_age">
+						<div class="calc__plus">+</div>
+					</div>
+
+					<div class="calc__title">Пол:</div>
+					<input class="calc__radio" type="radio" name="calc_sex" id="calc_sex_1" value="1">
+					<label class="calc__label calc__label--big" for="calc_sex_1">Мужской</label>
+					<input class="calc__radio" type="radio" name="calc_sex" id="calc_sex_2" value="2">
+					<label class="calc__label calc__label--big" for="calc_sex_2">Женский</label>
+				</div>
+
+				<div class="calc__flex">
+					<div id="calc_btn_step1" class="calc__btn calc__btn--next">Дальше</div>
+					<div id="calc_btn_back1" class="calc__btn calc__btn--back">Назад</div>
+				</div>
+			</div>
+
+			<div id="calc_step3" class="calc__block calc__block--hide">
+				<div class="calc__counter">3/10</div>
+
+				<div class="calc__height">
+					<div class="calc__title">Мой вес:</div>
+					<div class="calc__flex calc__flex--jcfs">
+						<div class="calc__minus">–</div>
+						<input class="calc__input" type="number" name="calc_weight" id="calc_weight">
+						<div class="calc__plus">+</div>
+					</div>
+
+
+					<div class="calc__title">Мой рост:</div>
+
+					<div class="calc__flex calc__flex--jcfs">
+						<div class="calc__minus">–</div>
+						<input class="calc__input" type="number" name="calc_tall" id="calc_tall">
+						<div class="calc__plus">+</div>
+					</div>
+
+				</div>
+
+				<div class="calc__flex">
+					<div id="calc_btn_step1" class="calc__btn calc__btn--next">Дальше</div>
+					<div id="calc_btn_back1" class="calc__btn calc__btn--back">Назад</div>
+				</div>
+			</div>
+
+			<div id="calc_step4" class="calc__block calc__block--hide">
+				<div class="calc__counter">4/10</div>
+
+				<div class="calc__height">
+					<div class="calc__title">Когда я измерял(а) давление, то видел(а) такие цифры:</div>
+
+					<input class="calc__radio" type="radio" name="calc_pres" id="calc_pres_1" value="2">
+					<label class="calc__label calc__label--big" for="calc_pres_1">менее 110/60</label>
+					<input class="calc__radio" type="radio" name="calc_pres" id="calc_pres_2" value="5">
+					<label class="calc__label calc__label--big" for="calc_pres_2">110/60-130/80</label>
+					<input class="calc__radio" type="radio" name="calc_pres" id="calc_pres_3" value="4">
+					<label class="calc__label calc__label--big" for="calc_pres_3">140/90</label>
+					<input class="calc__radio" type="radio" name="calc_pres" id="calc_pres_4" value="1">
+					<label class="calc__label calc__label--big" for="calc_pres_4">более 140/90</label>
+				</div>
+
+				<div class="calc__flex">
+					<div id="calc_btn_step1" class="calc__btn calc__btn--next">Дальше</div>
+					<div id="calc_btn_back1" class="calc__btn calc__btn--back">Назад</div>
+				</div>
+			</div>
+
+			<div id="calc_step5" class="calc__block calc__block--hide">
+				<div class="calc__counter">5/10</div>
+
+				<div class="calc__height">
+					<div class="calc__title">Окружность моей талии составляет:</div>
+
+					<div class="calc__flex calc__flex--jcfs">
+						<div class="calc__minus">–</div>
+						<input class="calc__input" type="number" name="calc_length" id="calc_length">
+						<div class="calc__plus">+</div>
+					</div>
+
+					<div class="calc__title">Я:</div>
+					<input class="calc__radio" type="radio" name="calc_smoke" id="calc_smoke_1" value="0">
+					<label class="calc__label calc__label--big" for="calc_smoke_1">выкуриваю N сигарет в день</label>
+					<input class="calc__radio" type="radio" name="calc_smoke" id="calc_smoke_2" value="1">
+					<label class="calc__label calc__label--big" for="calc_smoke_2">курю вейп/кальян и другие аналоги</label>
+					<input class="calc__radio" type="radio" name="calc_smoke" id="calc_smoke_3" value="5">
+					<label class="calc__label calc__label--big" for="calc_smoke_3">не курю</label>
+				</div>
+
+				<div class="calc__flex">
+					<div id="calc_btn_step1" class="calc__btn calc__btn--next">Дальше</div>
+					<div id="calc_btn_back1" class="calc__btn calc__btn--back">Назад</div>
+				</div>
+			</div>
+
+			<div id="calc_step6" class="calc__block calc__block--hide">
+				<div class="calc__counter">6/10</div>
+
+				<div class="calc__height">
+					<div class="calc__title">Я:</div>
+
+					<input class="calc__check" type="checkbox"     id="calc_ask1_1" name="calc_ask1" value="5">
+					<label class="calc__label calc__label--check" for="calc_ask1_1">ежедневно ем овощи/фрукты</label>
+					<input class="calc__check" type="checkbox"     id="calc_ask1_2" name="calc_ask1" value="1">
+					<label class="calc__label calc__label--check" for="calc_ask1_2">ем фрукты/овощи, но очень редко</label>
+					<input class="calc__check" type="checkbox"     id="calc_ask1_3" name="calc_ask1" value="4">
+					<label class="calc__label calc__label--check" for="calc_ask1_3">стараюсь сократить потребление жирного</label>
+					<input class="calc__check" type="checkbox"     id="calc_ask1_4" name="calc_ask1" value="0">
+					<label class="calc__label calc__label--check" for="calc_ask1_4">не могу отказаться от жирной пищи</label>
+					<input class="calc__check" type="checkbox"     id="calc_ask1_5" name="calc_ask1" value="0">
+					<label class="calc__label calc__label--check" for="calc_ask1_5">ем перед сном</label>
+					<input class="calc__check" type="checkbox"     id="calc_ask1_6" name="calc_ask1" value="0">
+					<label class="calc__label calc__label--check" for="calc_ask1_6">пропускаю часто завтрак/обед или ужин</label>
+					<input class="calc__check" type="checkbox"     id="calc_ask1_7" name="calc_ask1" value="5">
+					<label class="calc__label calc__label--check" for="calc_ask1_7">завтракаю, обедаю, ужинаю + 2 перекуса</label>
+					<input class="calc__check" type="checkbox"     id="calc_ask1_8" name="calc_ask1" value="5">
+					<label class="calc__label calc__label--check" for="calc_ask1_8">не ем за 4 часа до сна</label>
+					
+				</div>
+
+				<div class="calc__flex">
+					<div id="calc_btn_step1" class="calc__btn calc__btn--next">Дальше</div>
+					<div id="calc_btn_back1" class="calc__btn calc__btn--back">Назад</div>
+				</div>
+			</div>
+
+			<div id="calc_step7" class="calc__block calc__block--hide">
+				<div class="calc__counter">7/10</div>
+
+				<div class="calc__height">
+					<div class="calc__title">Я:</div>
+
+					<input class="calc__check" type="checkbox"     id="calc_ask2_1" name="calc_ask2" value="5">
+					<label class="calc__label calc__label--check" for="calc_ask2_1">выпиваю не менее 2 литров чистой воды в день</label>
+					<input class="calc__check" type="checkbox"     id="calc_ask2_2" name="calc_ask2" value="4">
+					<label class="calc__label calc__label--check" for="calc_ask2_2">не могу отказаться от сока/газировки</label>
+					<input class="calc__check" type="checkbox"     id="calc_ask2_3" name="calc_ask2" value="0">
+					<label class="calc__label calc__label--check" for="calc_ask2_3">сокращаю потребление соли</label>
+					<input class="calc__check" type="checkbox"     id="calc_ask2_4" name="calc_ask2" value="0">
+					<label class="calc__label calc__label--check" for="calc_ask2_4">часто досаливаю еду</label>
+					<input class="calc__check" type="checkbox"     id="calc_ask2_5" name="calc_ask2" value="0">
+					<label class="calc__label calc__label--check" for="calc_ask2_5">ем сладкое каждый день</label>
+					<input class="calc__check" type="checkbox"     id="calc_ask2_6" name="calc_ask2" value="4">
+					<label class="calc__label calc__label--check" for="calc_ask2_6">рассчитываю потребление белков, жиров и углеводов</label>
+				</div>
+
+				<div class="calc__flex">
+					<div id="calc_btn_step1" class="calc__btn calc__btn--next">Дальше</div>
+					<div id="calc_btn_back1" class="calc__btn calc__btn--back">Назад</div>
+				</div>
+			</div>
+
+			<div id="calc_step8" class="calc__block calc__block--hide">
+				<div class="calc__counter">8/10</div>
+
+				<div class="calc__height">
+					<div class="calc__title">Я знаю, что у моих близких родственников (мама, папа, бабушка, дедушка) есть проблемы с сердцем:</div>
+
+					<input class="calc__radio" type="radio" name="calc_heart" id="calc_heart_1" value="2">
+					<label class="calc__label calc__label--big" for="calc_heart_1">да</label>
+					<input class="calc__radio" type="radio" name="calc_heart" id="calc_heart_2" value="4">
+					<label class="calc__label calc__label--big" for="calc_heart_2">нет</label>
+				</div>
+
+				<div class="calc__flex">
+					<div id="calc_btn_step1" class="calc__btn calc__btn--next">Дальше</div>
+					<div id="calc_btn_back1" class="calc__btn calc__btn--back">Назад</div>
+				</div>
+			</div>
+
+			<div id="calc_step9" class="calc__block calc__block--hide">
+				<div class="calc__counter">9/10</div>
+
+				<div class="calc__height">
+					<div class="calc__title">При посещении врача я слышал(а), что у меня есть следующие заболевания:</div>
+
+					<input class="calc__check" type="checkbox"     id="calc_ask3_1" name="calc_ask3" value="0">
+					<label class="calc__label calc__label--check" for="calc_ask3_1">сахарный диабет</label>
+					<input class="calc__check" type="checkbox"     id="calc_ask3_2" name="calc_ask3" value="2">
+					<label class="calc__label calc__label--check" for="calc_ask3_2">заболевания желудочно-кишечного тракта</label>
+					<input class="calc__check" type="checkbox"     id="calc_ask3_3" name="calc_ask3" value="0">
+					<label class="calc__label calc__label--check" for="calc_ask3_3">атеросклероз</label>
+					<input class="calc__check" type="checkbox"     id="calc_ask3_4" name="calc_ask3" value="2">
+					<label class="calc__label calc__label--check" for="calc_ask3_4">заболевания суставов</label>
+					<input class="calc__check" type="checkbox"     id="calc_ask3_5" name="calc_ask3" value="2">
+					<label class="calc__label calc__label--check" for="calc_ask3_5">хронический бронхит</label>
+					<input class="calc__check" type="checkbox"     id="calc_ask3_6" name="calc_ask3" value="1">
+					<label class="calc__label calc__label--check" for="calc_ask3_6">ожирение</label>
+					<input class="calc__check" type="checkbox"     id="calc_ask3_7" name="calc_ask3" value="0">
+					<label class="calc__label calc__label--check" for="calc_ask3_7">ревмокардит</label>
+					<input class="calc__check" type="checkbox"     id="calc_ask3_8" name="calc_ask3" value="5">
+					<label class="calc__label calc__label--check" for="calc_ask3_8">не имею таких заболеваний</label>
+				</div>
+
+				<div class="calc__flex">
+					<div id="calc_btn_step1" class="calc__btn calc__btn--next">Дальше</div>
+					<div id="calc_btn_back1" class="calc__btn calc__btn--back">Назад</div>
+				</div>
+			</div>
+
+			<div id="calc_step10" class="calc__block calc__block--hide">
+				<div class="calc__counter">10/10</div>
+
+				<div class="calc__height">
+					<div class="calc__title">Я:</div>
+
+					<input class="calc__radio" type="radio" name="calc_stress" id="calc_stress_1" value="1">
+					<label class="calc__label" for="calc_stress_1">часто подвержен стрессовым ситуациям</label>
+					
+					<input class="calc__radio" type="radio" name="calc_stress" id="calc_stress_2" value="5">
+					<label class="calc__label" for="calc_stress_2">абстрагируюсь от стрессовых ситуаций</label>
+				</div>
+
+				<div class="calc__flex">
+					<div id="calc_btn_step1" class="calc__btn calc__btn--next">Дальше</div>
+					<div id="calc_btn_back1" class="calc__btn calc__btn--back">Назад</div>
+				</div>
+			</div>
+
+			<div id="calc_step11" class="calc__block calc__block--hide">
+
+				<div class="calc__height">
+					<!-- <div class="calc__title calc__title--result">Ваш результат:</div> -->
+					<!-- <div class="calc__score">11111</div> -->
+					<div class="calc__result"></div>
+				</div>
+
+				<div class="calc__flex">
+					<!-- <div id="calc_btn_step1" class="calc__btn calc__btn--next">Дальше</div> -->
+					<div id="calc_btn_back1" class="calc__btn calc__btn--last">Назад</div>
+				</div>
+			</div>
+
+
+
+		</div>
+
+	</div>
+	
+
+
+</body>
+</html>

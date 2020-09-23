@@ -1,0 +1,263 @@
+
+
+.calc, .calc *
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: 'Candide', Arial, sans-serif
+
+body
+    position: relative
+    background: #c0c3c9
+    
+
+.calc
+    position: relative
+    margin: 50px auto
+    width: 100%
+    max-width: 500px
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 9
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button
+        -webkit-appearance: none
+
+    &__body
+        position: relative
+        width: 100%
+        max-width: 410px
+        background: #fff
+        border: 3px solid #000
+        margin: 0 15px 15px 0
+        padding: 20px 20px 30px 30px
+        @media ( max-width: 350px )
+            padding: 20px 10px 20px 15px
+
+        &::before
+            content: ""
+            display: block
+            border: 3px solid #000
+            position: absolute
+            width: 100%
+            height: 100%
+            background: #fff
+            top: 15px
+            left: 15px
+            z-index: -1
+            box-sizing: border-box
+
+    &__block
+        display: block
+
+        &--start
+            padding: 50px 0 0 0
+
+        &--hide
+            display: none
+
+    &__height
+        min-height: 390px
+        padding: 0 0 30px 0
+
+    &__text
+        display: block
+        font-size: 20px
+        line-height: 1.55
+        font-weight: 500
+        margin: 0px 0 40px 0
+
+    &__title
+        font-size: 25px
+        font-weight: 500
+        margin: 20px 0 20px 0
+        line-height: 1.1
+        user-select: none
+
+    &__flex
+        display: flex
+        justify-content: space-between
+
+        &--jcfs
+            justify-content: flex-start
+
+    &__btn
+        padding: 10px 45px
+        border: 3px solid #000
+        text-transform: uppercase
+        display: inline-block
+        font-size: 14px
+        font-weight: 600
+        user-select: none
+        cursor: pointer
+        transition-duration: 0.3s
+        @media ( max-width: 350px )
+            padding: 10px 30px
+
+        &:hover
+            border: 3px solid #E61403
+            color: #E61403
+        
+        &--back, &--last
+            border: none
+
+            &:hover
+                border: none
+
+    &__select
+        position: relative
+        border: 3px solid #E61403
+        padding: 10px 40px 10px 10px
+        min-height: 49px
+        cursor: pointer
+
+        &::before
+            content: "▼"
+            position: absolute
+            right: 10px
+            height: 100%
+            color: #000
+            padding: 2px 0 0 0
+
+        &--open 
+             
+            &::before
+                content: "▲"
+
+    &__current
+        font-size: 20px
+
+    &__list
+        position: absolute
+        top: 100%
+        width: 100%
+        background: #fff
+        left: 0
+        padding: 10px 0 20px 0
+        height: 200px
+        overflow-y: scroll
+        border: 3px solid #000000
+        display: none
+
+        &--open
+            display: block
+
+    &__li
+        font-size: 20px
+        padding: 5px 10px
+        user-select: none
+
+        &:hover
+            background: #eee
+            cursor: pointer
+
+    &__counter
+        font-size: 18px
+        padding: 2px 5px
+        border: 3px solid #000
+        display: inline-block
+        font-weight: 500
+        margin: 0 0 10px 0
+        user-select: none
+
+    &__input
+        position: relative
+        border: 3px solid #E61403
+        padding-left: 10px
+        min-height: 49px
+        font-size: 20px
+        width: 80px
+        outline: none
+
+    &__plus
+        width: 40px
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 20px
+        cursor: pointer
+        user-select: none
+        transition-duration: 0.2s
+        
+        &:hover
+            background: #00000022
+
+    &__minus
+        width: 40px
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 20px
+        cursor: pointer
+        user-select: none
+        transition-duration: 0.2s
+        
+        &:hover
+            background: #00000022
+
+    &__radio
+        display: none
+
+        &:checked + .calc__label
+
+            &::after
+                content: ""
+                width: 10px
+                height: 10px
+                background: #E61403
+                position: absolute
+                left: 5px
+                top: 5px
+                border-radius: 50px
+
+    &__check
+        display: none
+
+        &:checked + .calc__label
+
+            &::before
+                content: "✔"
+
+    &__label
+        position: relative
+        font-size: 16px
+        font-weight: 500
+        display: block
+        margin: 0px 0 20px 0
+        padding: 0 0 0 30px
+        cursor: pointer
+        user-select: none
+
+        &::before
+            content: ""
+            width: 16px
+            height: 16px
+            border: 2px solid #E61403
+            color: #E61403
+            position: absolute
+            border-radius: 50px
+            left: 0
+
+        &--check
+
+            &::before
+                border-radius: 0
+                line-height: 1.1
+                text-align: center
+
+        &--big
+            font-size: 20px
+
+    &__score
+        font-size: 22px
+        margin: 0px 0 0 0
+        color: #E61403
+
+    &__result
+        font-size: 17
+        line-height: 1.5
+        color: #E61403
+        font-weight: 500
+        margin: 30px 0 0 0
