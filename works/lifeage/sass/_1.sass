@@ -1,0 +1,149 @@
+
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: sans-serif
+
+body
+    position: relative
+    background: #453b4e
+
+.calc
+    margin: 50px auto
+    background: #fff
+    width: 100%
+    max-width: 400px
+    min-height: 500px
+    padding: 40px 30px 70px 30px
+    border-radius: 20px
+    @media ( max-width: 370px )
+        padding: 40px 20px 50px 30px
+        width: 96%
+
+    &__title
+        font-size: 22px
+        font-weight: 600
+        color: #222
+        letter-spacing: 0.5px
+        line-height: 1.25
+        text-align: center
+        text-transform: uppercase
+        margin: 0 0 10px 0
+        @media ( max-width: 370px )
+            font-size: 20px
+
+    &__descr
+        font-size: 15px
+        color: #777777
+        text-align: center
+        margin: 0 auto 20px auto
+        @media ( max-width: 370px )
+            max-width: 210px
+
+    &__separate
+        width: 100%
+        height: 1px
+        border-bottom: 1px dashed #ccc
+        margin: 30px auto
+
+    &__flex
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__line
+        margin: 20px 0 0 0
+        @media ( max-width: 370px )
+            font-size: 15px
+
+    &__slider
+        position: relative
+        margin: 20px 0 20px 0
+        padding: 0 15px 0 5px !important
+        width: 100%
+
+    &__input
+        width: 60px
+        height: 30px
+        border-radius: 15px
+        border: none
+        border: 1px solid #ddd
+        text-align: center
+        font-weight: 600
+        color: #777
+        letter-spacing: 1px
+        user-select: none
+
+    &__btn
+        margin: 40px auto
+        width: 180px
+        height: 48px
+        display: flex
+        justify-content: center
+        align-items: center
+        background: #95cf57
+        color: #04310e
+        text-shadow: 0 0 1px #04310e
+        border: 2px solid #00b327
+        border-radius: 100px
+        text-transform: uppercase
+        letter-spacing: 1px
+        cursor: pointer
+        user-select: none
+        transition-duration: 0.3s
+        box-shadow: 0 5px 15px 1px rgba(0,0,0,0.2)
+
+        &:hover
+            transform: translateY(6px)
+            box-shadow: 0 2px 9px 1px rgba(0,0,0,0.1)
+
+    &__age
+        font-size: 18px
+        font-weight: 600
+        margin: 30px auto 0 auto
+        text-align: center
+        @media ( max-width: 370px )
+            font-size: 16px
+            max-width: 210px
+            line-height: 1.4
+
+    &__result
+        text-align: center
+        margin: 10px 0 0 0
+        font-size: 16px
+        color: #555
+        line-height: 1.3
+        @media ( max-width: 370px )
+            font-size: 15px
+
+    &__link
+        margin: 30px 0 0 0
+        text-align: center
+
+        &--hidden
+            display: none
+
+
+
+
+
+
+.ui-slider
+    background: #ddd !important
+    height: 6px !important
+    border: none !important
+
+.ui-slider-range
+    background: #95cf57 !important
+
+.ui-slider-handle
+    border-radius: 50px !important
+    background: #fff !important
+    border: none !important
+    outline: none !important
+    margin-top: -2px !important
+    cursor: pointer !important
+    box-shadow: 0 3px 10px 0px rgba(0,0,0,0.2)
+    border: 4px solid #95cf57 !important
