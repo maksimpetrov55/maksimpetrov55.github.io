@@ -37,8 +37,19 @@ $(document).ready(function() {
 
 		var calc_itog_1 = Math.ceil((+calc_input_1 / +calc_select_2) * 2);
 		var calc_itog_2 = Math.ceil((+calc_input_1 * +calc_select_3) / 1000);
-		var calc_itog_3 = +calc_itog_2 * 2;
-		var calc_itog_4 = +calc_itog_3 * 5;
+
+		if ( calc_select_6 == "Без подкладки" ) {
+			var calc_itog_3 = "Без подкладки";
+		} else {
+			var calc_itog_3 = +calc_itog_2 * 2 + " шт.";
+		}
+
+		if ( calc_select_7 == "Без крепежа" ) {
+			var calc_itog_4 = "Без крепежа"
+		} else {
+			var calc_itog_4 = +calc_itog_2 * 2 * 5 + " шт.";
+		}
+
 
 
 		if ( calc_select_9 == "Без накладки" ) {
@@ -48,19 +59,25 @@ $(document).ready(function() {
 		}
 
 
-		if ( calc_select_9 == "2Р-65" ) {
-			var calc_itog_6 = ((+calc_itog_5 / 2) * 4).toFixed(2) + " шт.";
+		if ( calc_select_8 == "Без БГШ") {
+			var calc_itog_6 = "Без скреплений"
 		} else {
-			if ( calc_select_9 == "1Р-65" ) {
-				var calc_itog_6 = ((+calc_itog_5 / 2) * 6).toFixed(2) + " шт.";
+			if ( calc_select_9 == "2Р-65" ) {
+				var calc_itog_6 = ((+calc_itog_5 / 2) * 4).toFixed(2) + " шт.";
 			} else {
-				if ( calc_select_9 == "1Р-50" ) {
+				if ( calc_select_9 == "1Р-65" ) {
 					var calc_itog_6 = ((+calc_itog_5 / 2) * 6).toFixed(2) + " шт.";
 				} else {
-					var calc_itog_6 = "Без скреплений"
+					if ( calc_select_9 == "1Р-50" ) {
+						var calc_itog_6 = ((+calc_itog_5 / 2) * 6).toFixed(2) + " шт.";
+					} else {
+						var calc_itog_6 = "Без скреплений"
+					}
 				}
 			}
 		}
+
+
 		
 		if ( calc_select_4 == "I тип деревянная" ) {
 
@@ -107,8 +124,8 @@ $(document).ready(function() {
 
 		$('#calc_itog_1').text( calc_itog_1 + " шт.");
 		$('#calc_itog_2').text( calc_itog_2 + " шт.");
-		$('#calc_itog_3').text( calc_itog_3 + " шт.");
-		$('#calc_itog_4').text( calc_itog_4 + " шт.");
+		$('#calc_itog_3').text( calc_itog_3 );
+		$('#calc_itog_4').text( calc_itog_4 );
 		$('#calc_itog_5').text( calc_itog_5_ht );
 		$('#calc_itog_6').text( calc_itog_6 );
 		$('#calc_itog_7').text( calc_itog_7 + " руб." );
