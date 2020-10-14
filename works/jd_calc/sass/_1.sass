@@ -1,0 +1,134 @@
+
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: sans-serif
+
+body
+    position: relative
+    background: #322d38
+
+.calc
+    margin: 50px auto
+    background: #fff
+    border-radius: 30px
+    width: 96%
+    max-width: 700px
+    min-height: 500px
+    padding: 40px 40px 70px 40px
+
+    &__head
+        font-size: 22px
+        text-transform: uppercase
+        letter-spacing: 1px
+        margin: 0 0 50px 0
+        text-align: center
+        border-bottom: 1px dashed #ccc
+        padding: 0 0 15px 0
+
+    &__line
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin: 10px auto
+        max-width: 500px
+
+    &__title
+        font-size: 18px
+        text-align: right
+        width: 240px
+
+        &--result
+            width: 54%
+            position: relative
+
+    &__select
+        width: 340px
+        margin: 0 0 0 20px
+        height: 36px
+        padding: 0 10px
+        border-radius: 3px
+        border: 1px solid #ccc
+        font-size: 16px
+
+    &__input
+        width: 340px
+        margin: 0 0 0 20px
+        height: 36px
+        padding: 0 13px
+        border-radius: 3px
+        border: 1px solid #cccccc
+        font-size: 18px
+
+        &--form
+            width: 100%
+            position: relative
+            height: 30px
+            margin: 0
+
+    &__alert
+        font-size: 18px
+        color: #ff2200
+        text-align: right
+        max-width: 500px
+        margin: 20px auto 0 auto
+
+    &__btn
+        margin: 20px 0 20px 20px
+        text-transform: uppercase
+        position: relative
+        width: 340px
+        height: 46px
+        background: #514997
+        border-radius: 3px
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        color: #fff
+        cursor: pointer
+        box-shadow: 0 5px 15px 1px rgba(0,0,0,0.2)
+        letter-spacing: 1.5px
+        transition-duration: 0.3s
+
+        &:hover
+            transform: translateY(5px)
+            box-shadow: 0 2px 5px 0px rgba(0,0,0,0.2)
+            background: #756cc0
+
+        &--submit
+            background: #00A010
+
+            &:hover
+                background: #00C416
+
+    &__form
+        margin: 40px 0 20px 0
+        display: none
+
+        &--show
+            display: block
+
+    &__result
+        border: 1px solid #ddd
+        width: 100%
+        margin: 30px auto
+        background: #f7f7f7
+        min-height: 300px
+        border-radius: 25px
+        padding: 30px
+        display: none
+
+        &--show
+            display: block
+
+    &__row
+        margin: 10px 0
+        display: flex
+        border-bottom: 1px dashed #ddd
+        padding: 0 0 5px 0
+
+    &__itog
+        margin: 0 0 0 15px

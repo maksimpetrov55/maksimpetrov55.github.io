@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div class="calc__head">Расчет материалов</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Марка рельс:</div>
+			<select id="calc_select_1" class="calc__select">
+				<option value="Р65">Р65</option>
+				<option value="Р43">Р43</option>
+				<option value="РП65">РП65</option>
+				<option value="Р50">Р50</option>
+				<option value="Р18">Р18</option>
+				<option value="РП50">РП50</option>
+				<option value="Р33">Р33</option>
+				<option value="Р24">Р24</option>
+			</select>
+		</div>
+		<div class="calc__line">
+			<div class="calc__title">Длина пути:</div>
+			<input id="calc_input_1" type="number" class="calc__input">
+		</div>
+		<div class="calc__line">
+			<div class="calc__title">Длина рельс:</div>
+			<select id="calc_select_2" class="calc__select">
+				<option value="25">25</option>
+				<option value="15.5">15.5</option>
+				<option value="8">8</option>
+			</select>
+		</div>
+		<div class="calc__line">
+			<div class="calc__title">Эпюра пути:</div>
+			<select id="calc_select_3" class="calc__select">
+				<option value="2000">2000</option>
+				<option value="1840">1840</option>
+				<option value="1600">1600</option>
+			</select>
+		</div>
+		<div class="calc__line">
+			<div class="calc__title">Тип шпалы:</div>
+			<select id="calc_select_4" class="calc__select">
+				<option value="I тип деревянная">I тип деревянная</option>
+				<option value="II тип деревянная">II тип деревянная</option>
+				<option value="Ш1 железобетонная">Ш1 железобетонная</option>
+			</select>
+		</div>
+		<div class="calc__line">
+			<div class="calc__title">Глубина пропитки:</div>
+			<select id="calc_select_5" class="calc__select">
+				<option value="До 3 мм">До 3 мм</option>
+				<option value="3-5 мм">3-5 мм</option>
+				<option value="От 5 мм">От 5 мм</option>
+			</select>
+		</div>
+		<div class="calc__line">
+			<div class="calc__title">Подкладка:</div>
+			<select id="calc_select_6" class="calc__select">
+				<option value="Без подкладки">Без подкладки</option>
+				<option value="Д-65">Д-65</option>
+				<option value="ДН6-65">ДН6-65</option>
+				<option value="СД-65">СД-65</option>
+				<option value="СК-65">СК-65</option>
+				<option value="КД-65">КД-65</option>
+			</select>
+		</div>
+		<div class="calc__line">
+			<div class="calc__title">Крепеж:</div>
+			<select id="calc_select_7" class="calc__select">
+				<option value="Без крепежа">Без крепежа</option>
+				<option value="Костыль 165">Костыль 165</option>
+			</select>
+		</div>
+		<div class="calc__line">
+			<div class="calc__title">Стыковое скрепление:</div>
+			<select id="calc_select_8" class="calc__select">
+				<option value="Без БГШ">Без БГШ</option>
+				<option value="БГШ М 27*160">БГШ М 27*160</option>
+				<option value="Болт с гайкой М 27*160">Болт с гайкой М 27*160</option>
+				<option value="Болт М 27*160">Болт М 27*160</option>
+			</select>
+		</div>
+		<div class="calc__line">
+			<div class="calc__title">Накладка:</div>
+			<select id="calc_select_9" class="calc__select">
+				<option value="Без накладки">Без накладки</option>
+				<option value="2Р-65">2Р-65</option>
+				<option value="1Р-65">1Р-65</option>
+				<option value="1Р-50">1Р-50</option>
+			</select>
+		</div>
+	
+		<div class="calc__alert"></div>
+
+		<div class="calc__line">
+			<div class="calc__title">&nbsp;</div>
+			<div id="calc_calculate" class="calc__btn">Рассчитать</div>
+		</div>
+		
+
+		<div class="calc__result">
+
+			<div class="calc__row">
+				<div class="calc__title calc__title--result">Количество рельс:</div>
+				<div id="calc_itog_1" class="calc__itog">11111</div>
+			</div>
+			<div class="calc__row">
+				<div class="calc__title calc__title--result">Количество шпал:</div>
+				<div id="calc_itog_2" class="calc__itog">11111</div>
+			</div>
+			<div class="calc__row">
+				<div class="calc__title calc__title--result">Количество подкладок:</div>
+				<div id="calc_itog_3" class="calc__itog">11111</div>
+			</div>
+			<div class="calc__row">
+				<div class="calc__title calc__title--result">Количество крепежа:</div>
+				<div id="calc_itog_4" class="calc__itog">11111</div>
+			</div>
+			<div class="calc__row">
+				<div class="calc__title calc__title--result">Количество накладок:</div>
+				<div id="calc_itog_5" class="calc__itog">11111</div>
+			</div>
+			<div class="calc__row">
+				<div class="calc__title calc__title--result">Количество скреплений:</div>
+				<div id="calc_itog_6" class="calc__itog">11111</div>
+			</div>
+			<div class="calc__row">
+				<div class="calc__title calc__title--result">Стоимость шпал:</div>
+				<div id="calc_itog_7" class="calc__itog">11111</div>
+			</div>
+
+		</div>
+
+
+		<form action="" class="calc__form">
+
+			<div class="calc__line">
+				<div class="calc__title">Ваше Имя</div>
+				<input id="calc_name" class="calc__input" type="text">
+			</div>
+			
+			<div class="calc__line">
+				<div class="calc__title">Ваш Телефон</div>
+				<input id="calc_phone" class="calc__input" type="text">
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__title"> ЖД станция или город доставки (по&nbsp;желанию)</div>
+				<input id="calc_delivery" class="calc__input" type="text">
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__title">&nbsp;</div>
+				<div id="calc_submit" class="calc__btn calc__btn--submit">Отправить</div>
+			</div>
+
+		</form>
+
+	</div>
+	
+
+
+</body>
+</html>
