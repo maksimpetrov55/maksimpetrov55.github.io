@@ -42,9 +42,36 @@ $(document).ready(function() {
 		let calc_date_final = calc_date_diff / 1000 / 60 / 60 / 24;
 		console.log( calc_date_final );
 
-		var calc_price = $('#calc_price').val();
+		//var calc_price = $('#calc_price').val();
+		
+		$('#calc_price').val(String($('#calc_price').val().replace(/[^0-9.]/g,'')).replace(/\B(?=(\d{3})+(?!\d))/g, " "));
 
-		var calc_result_1 = (1 / 300) * (+calc_rate / 100) * +calc_price * +calc_date_final  * 2;
+		var arr = $('#calc_price').val().split(' ');
+		var length = arr.length;
+
+		if ( length == 1 ) {
+			var val1 = arr[0];
+		} else {
+			if ( length == 2 ) {
+				var val1 = arr[0] + arr[1];
+			} else {
+				if ( length == 3 ) {
+					var val1 = arr[0] + arr[1] + arr[2];
+				} else {
+					if ( length == 4 ) {
+						var val1 = arr[0] + arr[1] + arr[2] + arr[3];
+					} else {
+						if ( length > 4 ) {
+							var val1 = 999999999999;
+							$('#calc_price').val( val1.toLocaleString('ru') );
+						}
+					}
+				}
+			}
+		}
+
+
+		var calc_result_1 = (1 / 300) * (+calc_rate / 100) * +val1 * +calc_date_final  * 2;
 
 		$('#calc_result_1').text( (+calc_result_1.toFixed(0)).toLocaleString("ru") + " руб" );
 		$('#calc_result_3').text( (+( calc_result_1 * 0.5 ).toFixed(0)).toLocaleString("ru") + " руб" );
