@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+
+		<div class="calc__flex calc__flex--jcsb">
+
+			<div>
+
+				<div class="calc__head">Калькулятор</div>
+				<div class="calc__head">Неустойки</div>
+
+				<div class="calc__description">Работаем без предоплаты и даём гарантию 100% по договору</div>
+
+			</div>
+
+			<img src="img/calc.png" alt="" class="calc__img">
+
+		</div>
+
+		<div class="calc__flex">
+
+			<div class="calc__cell calc__cell--1">
+				<div class="calc__title">Стоимоти вашего объекта</div>
+
+				<input id="calc_price" type="number" class="calc__input">
+			</div>
+			<div class="calc__cell calc__cell--2">
+				<div class="calc__title">Дата сдачи (по догвору)</div>
+
+				<input id="calc_date_1" type="date" class="calc__input calc__input--date">
+			</div>
+			<div class="calc__cell calc__cell--3">
+				<div class="calc__title">Дата (фактическая)</div>
+
+				<input id="calc_date_2" type="date" class="calc__input calc__input--date">
+			</div>
+
+		</div>
+
+		<div class="calc__flex">
+
+			<div class="calc__cell calc__cell--1 calc__cell--plus">
+				<div id="calc_result_1" class="calc__money"></div>
+			</div>
+			<div class="calc__cell calc__cell--2 calc__cell--plus">
+				<div id="calc_result_2" class="calc__money">20 000 руб</div>
+			</div>
+			<div class="calc__cell calc__cell--3 calc__cell--summ">
+				<div id="calc_result_3" class="calc__money"></div>
+			</div>
+			<div class="calc__cell calc__cell--4">
+				<div id="calc_result_4" class="calc__money"></div>
+			</div>
+
+		</div>
+
+		<div class="calc__flex">
+
+			<div class="calc__cell calc__cell--1">
+				<div class="calc__bottext">Неустойка</div>
+			</div>
+			<div class="calc__cell calc__cell--2">
+				<div class="calc__bottext">Моральный вред</div>
+			</div>
+			<div class="calc__cell calc__cell--3">
+				<div class="calc__bottext">Штраф 50%</div>
+			</div>
+			<div class="calc__cell calc__cell--4">
+				<div class="calc__bottext">Итого к взысканию</div>
+			</div>
+
+		</div>
+
+
+	</div>
+
+
+
+</body>
+</html>
