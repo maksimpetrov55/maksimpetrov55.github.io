@@ -1,0 +1,68 @@
+.price
+    padding: 120px 0 60px 0
+    background: $bg1
+    position: relative
+
+    
+    &--white
+        background: $bg3
+    &--white h3
+        color: #000
+
+
+    &__btn
+        background: #ffc140
+        border-radius: 10px
+        height: 70px
+        margin: 10px 0px
+        width: 100%
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 10px 10px
+        text-align: center
+        font-size: 14px
+        cursor: pointer
+
+    &__scroll
+        height: 800px
+        width: 100%
+        overflow-y: scroll
+        margin: 50px 0 0 0
+
+        &__body1
+            display: table-row-group
+
+        &__body2
+            display: none
+
+        &__body3
+            display: none
+
+        &__body4
+            display: none
+
+        &__body5
+            display: none
+
+        &__body6
+            display: none
+
+
+.price__scroll th 
+    min-width: 90px
+.price__scroll td 
+    max-width: 600px
+    min-width: 120px
+
+
+.table--white
+    background: rgba(#ffffff, 0.9)
+
+
+
+@media (max-width: 390px)
+    .price
+        &__btn
+            font-size: 12px

@@ -1,0 +1,133 @@
+.fst-screen
+    background-image: url("/img/5.jpg")
+    background-size: cover
+    height: 100vh
+    display: flex
+    align-items: center
+    position: relative
+    min-height: 600px
+    padding: 150px 0 100px 0
+
+    *
+        z-index: 1
+
+    &:before
+        content: ""
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: rgba(35,35,35,0.75)
+        z-index: 0
+
+    &__sub
+        width: 100%
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        margin: 0 0 20px 0
+        p 
+            justify-content: center
+            display: flex
+            margin: 0 20px
+
+    &__button
+        max-width: 900px
+        position: relative
+        padding: 15px 30px
+        display: block
+        margin: 40px auto 0 auto
+        font-size: 30px
+        letter-spacing: 0.5px
+        font-weight: 600
+        text-align: center
+        color: #ffffff
+        border-radius: 5px
+        text-transform: uppercase
+        cursor: pointer
+        transition-duration: 0.25s
+        text-shadow: 0 3px 5px rgba(0,0,0,0.3)
+        background: linear-gradient(to top, #00770F, #00c116)
+        box-shadow: 0 5px 25px 2px rgba(0,0,0,0.2)
+        overflow: hidden
+        animation: scale 3s ease 1s infinite
+
+        &:hover:before
+            animation: hover 1.2s ease
+            animation-fill-mode: forwards
+
+        &:before
+            content: ""
+            display: block
+            position: absolute
+            top: -60%
+            left: -20%
+            background: #fff
+            box-shadow: 0 0 15px 5px rgba(255,255,230,1)
+            z-index: -1
+            width: 65px
+            height: 200%
+            transform: rotate(25deg)
+            animation: slide 4.5s ease 1.1s infinite
+
+
+@keyframes slide 
+    from
+        left: -20%
+        opacity: 1
+    20%
+        left: 120%
+        opacity: 1
+    21%
+        opacity: 0
+    to 
+        left: -20%
+        opacity: 0
+
+
+@keyframes scale
+  from
+    transform: scale(1, 1)
+  30%
+    transform: scale(1.08, 1.08)
+  to
+    transform: scale(1, 1)
+
+@keyframes hover
+
+    1%
+        transform: rotate(0)
+
+    to 
+        width: 300%
+        height: 100%
+        background: #008000
+        top: 0
+        transform: rotate(0)
+
+
+@media (max-width: 1010px)
+    .fst-screen
+        &__button
+            font-size: 20px
+            padding: 15px 20px
+            max-width: 600px
+
+@media (max-width: 690px)
+    .fst-screen
+        &__sub
+            flex-direction: column
+        &__button
+            font-size: 20px
+            padding: 15px 10px
+            
+@media (max-width: 390px)
+    .fst-screen
+        height: 80vh
+        min-height: 500px
+        padding: 200px 0 100px 0
+        &__button
+            font-size: 16px
+            padding: 10px 10px

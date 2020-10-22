@@ -1,0 +1,124 @@
+
+// .form-black 
+//         z-index: 999
+//         position: fixed
+//         width: 100vw
+//         height: 100vh
+//         background: rgba(0,0,0,0.8)
+
+.form
+    position: fixed
+    z-index: 2999
+    background: #00ffff
+    // display: flex
+    display: none
+    align-items: center
+    width: 100vw
+    height: 100vh
+    background: rgba(0,0,0,0.8)
+
+    &__block
+        position: relative
+        background: #ffffff
+        display: flex
+        justify-content: center
+        flex-direction: column
+        padding: 60px 40px 60px 40px
+        border-radius: 2px
+        margin: 0 40px
+        max-width: 460px
+
+        &__close
+            position: absolute
+            display: block
+            right: 10px
+            top: 0
+            font-size: 40px
+            line-height: 1
+            color: #dddddd
+            text-align: right
+            &:hover
+                text-decoration: none
+                color: #ff0000
+
+        &__title
+            font-size: 36px
+            font-weight: 600
+            text-transform: uppercase
+            text-align: center
+            margin: 0 0 30px 0
+
+        &__text
+            font-size: 20px
+            color: #777777
+            text-align: center
+            margin: 0 0 30px 0
+
+        &__input
+            height: 60px
+            margin: 15px
+            padding: 0 15px
+            font-size: 18px
+            border-radius: 5px
+            border: 1px solid #dddddd
+
+        &__sub-text
+            color: #bbbbbb
+            font-size: 16px
+            text-align: center
+
+        &__btn
+            background: linear-gradient(to top, #00770F, #00c116)
+            // box-shadow: 0 5px 25px 2px rgba(0,0,0,0.2)
+            display: flex
+            justify-content: center
+            align-items: center
+            font-size: 22px
+            color: #fff
+            padding: 10px 20px
+            width: 220px
+            height: 60px
+            margin: 30px auto 0 auto
+            border-radius: 2px
+            cursor: pointer
+            &:hover
+                background: #42a600
+
+
+
+@media (max-width: 530px)
+    .form
+        &__block
+            padding: 60px 40px 60px 40px
+            margin: 0 10px
+
+
+@media (max-width: 470px)
+    .form
+        &__block
+            padding: 50px 20px 50px 20px
+            &__title
+                font-size: 28px
+            &__text
+                font-size: 18px
+
+
+@media (max-width: 380px)
+    .form
+        &__block
+            padding: 50px 20px 50px 20px
+            margin: 0
+            &__title
+                font-size: 24px
+            &__text
+                font-size: 16px
+                margin: 0 0 20px 0
+            &__input
+                height: 50px
+                font-size: 16px
+                margin: 10px
+            &__btn
+                height: 50px
+                width: 200px
+                line-height: 50px
+                margin: 20px auto 0 auto

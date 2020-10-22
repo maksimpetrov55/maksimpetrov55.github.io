@@ -1,0 +1,209 @@
+.menu--show
+    display: block
+.menu--hide
+    display: none
+
+.header
+    background: transparent
+    height: 80px
+    width: 100%
+    position: fixed
+    z-index: 2000
+
+    &-bg 
+        background: #3c3c3c
+
+    &__logo
+        z-index: 2000
+        height: 80px
+        display: flex
+        align-items: center
+        color: #ffffff
+        text-transform: uppercase
+        
+        h2
+            font-weight: 900
+            margin: 0 0 0 20px
+            font-size: $text-2
+            a
+                color: #fff
+                &:hover
+                    color: #fff
+                    text-decoration: none
+
+    &__menu
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+
+        &__drop
+            position: absolute
+            top: 70px
+            left: -10px
+            background: rgba(60,60,60,1)
+            width: 200px
+            margin: 0 0 0 0
+            padding: 10px 10px 10px 10px
+            li 
+                line-height: 30px
+                list-style-type: none
+                a
+                    color: #dddddd
+                    display: block
+                    margin: 0 0 10px 0
+                    font-weight: 600
+                    font-size: 16px
+                    user-select: none
+                    // height: 30px
+                    text-align: left
+                    line-height: 30px
+
+        &__item
+            position: relative
+            color: #dddddd
+            margin: 0 15px
+            font-size: $text-4
+            font-weight: 600
+            transition-duration: 0.2s
+            cursor: pointer
+            text-align: center
+            user-select: none
+            display: block
+            height: 100%
+            line-height: 80px
+
+            &:hover 
+                color: #aaaaaa
+
+
+    &__phone
+        z-index: 2000
+        height: 80px
+        display: flex
+        justify-content: flex-end
+        color: #ffffff
+        align-items: center
+
+        a 
+            font-size: $text-3
+            font-weight: 600
+            margin: 0 20px 0 0
+            color: #fff
+            text-decoration: underline
+
+
+    &__burger
+        // background: #f00
+        position: absolute
+        width: 70px
+        height: 60px
+        z-index: 2001
+        top: 0px
+        left: 0px
+        padding: 18px 20px 19px 20px
+
+        display: none
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+
+        cursor: pointer
+
+
+
+        &__line
+            position: relative
+            height: 3px
+            width: 100%
+            background: #fff
+
+    &__mobile-menu
+        z-index: 1999
+        position: absolute
+        top: 0
+        left: 0
+
+        background: rgba(60,60,60,1)
+        min-width: 320px
+        width: 100vw
+        height: 100vh
+
+        display: none
+        padding: 60px 20px 20px 20px
+
+        li 
+            list-style-type: none
+
+        &__li
+            font-size: 18px
+            display: block
+            margin: 25px 0
+            color: #fff
+            &:hover
+                text-decoration: none
+                color: #ffffaa
+
+.mobile-translate-0
+    transform: translateX(-110%)
+    transition-duration: 0.3s
+
+.mobile-translate-1
+    transform: translateX(0%)
+    transition-duration: 0.3s
+
+
+@media (max-width: 1340px)
+    .header
+        &__logo
+            h2 
+                font-size: 24px
+
+@media (max-width: 1080px)
+    .header
+        &__logo
+            h2 
+                font-size: 22px
+        &__phone
+            a
+                font-size: 18px
+
+@media (max-width: 1080px)
+    .header
+        &__menu
+            &__item
+                margin: 0 9px
+        &__logo
+            h2 
+                margin: 0
+
+        &__phone
+            a
+                margin: 0
+
+@media (max-width: 768px)
+    .header
+        height: 60px
+        &__logo
+            height: 25px
+            justify-content: flex-end
+            align-items: flex-end
+            h2 
+                font-size: 16px
+        &__phone
+            height: 30px
+        &__menu
+            display: none
+        &__mobile-menu
+            display: flex
+        &__burger
+            display: flex
+
+@media (max-width: 380px)
+    .header
+        &__logo
+            h2 
+                font-size: 14px
+        &__phone
+            a 
+                font-size: 16px

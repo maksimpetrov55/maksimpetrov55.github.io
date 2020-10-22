@@ -1,0 +1,273 @@
+
+$text-1: 50px;
+$text-2: 26px;
+$text-3: 20px;
+$text-4: 16px;
+
+$bg1: rgba(25,25,25,0.70)
+$bg2: #181721
+
+
+
+
+body 
+    background: url(../img/1.png) no-repeat fixed
+
+body *
+    box-sizing: border-box
+    font-family: roboto, sans serif
+
+.bred 
+    border: 1px solid #ff0000
+
+.line
+    width: 100%
+    height: 1px
+    // background: rgba(255,255,255,0.5)
+    background: #444
+
+
+// .header
+//     background: transparent
+//     height: 80px
+//     width: 100%
+//     position: absolute
+//     z-index: 100
+
+//     &__logo
+//         height: 80px
+//         display: flex
+//         align-items: center
+//         color: #ffffff
+//         text-transform: uppercase
+        
+//         h2 
+//             font-weight: 900
+//             margin: 0 0 0 20px
+//             font-size: $text-2
+
+//     &__phone
+//         height: 80px
+//         display: flex
+//         justify-content: flex-end
+//         color: #ffffff
+//         align-items: center
+
+//         p 
+//             font-size: $text-3
+//             font-weight: 600
+//             margin: 0 20px 0 0
+
+// .fst-screen
+//     background-image: url("/img/5.jpg")
+//     background-size: cover
+//     height: 100vh
+//     display: flex
+//     align-items: center
+//     position: relative
+
+//     *
+//         z-index: 1
+
+//     &:before
+//         content: ""
+//         display: block
+//         position: absolute
+//         top: 0
+//         left: 0
+//         width: 100%
+//         height: 100%
+//         background: rgba(35,35,35,0.75)
+//         z-index: 0
+
+//     h1 
+//         color: #ffffff
+//         font-size: 64px
+//         text-align: center
+//         text-transform: uppercase
+//         font-weight: 600
+//         width: 100%
+        
+//     h2 
+//         color: #ffffff
+//         font-size: $text-2
+//         text-align: center
+//         width: 100%
+//         margin: 50px 0 0 0
+
+//     &__button
+//         width: 240px
+//         height: 55px
+//         background: #ffff00
+//         display: flex
+//         margin: 60px auto 0 auto
+
+// .goods
+//     // background: url("/img/2.jpg")
+//     background: $bg1
+//     padding: 40px 50px
+//     position: relative
+    
+//     &__border
+//         border-right: 1px solid rgba(144,144,144,0.6)
+
+//     &__item
+//         margin: 20px 0
+//         display: flex
+//         justify-content: center
+//         flex-direction: column
+//         padding: 0 20px
+
+//         &__icon
+//             width: 50px
+//             height: 50px
+//             background: #0000ff
+//             margin: 20px auto
+
+//         &__title
+//             color: #ffffff
+//             text-align: center
+//             font-size: $text-2
+//             font-weight: 600
+
+//         &__text
+//             color: #e5e5e5
+//             text-align: center
+//             font-size: $text-3
+//             max-width: 400px
+//             margin: 0 auto
+
+// .about
+//     padding: 120px 0 60px 0
+//     // background-image: url(../img/1.png)
+//     background: transparent
+//     position: relative
+
+//     &:before
+//         content: ""
+//         display: block
+//         position: absolute
+//         left: 0
+//         top: 0
+//         width: 100%
+//         height: 100%
+//         background: $bg1
+//         z-index: 0
+
+//     h3 
+//         color: #ffffff
+//         font-size: $text-1
+//         font-weight: 600
+//         text-align: center
+//         text-transform: uppercase
+//         margin: 0 0 60px 0
+
+//     &__text 
+//         color: #ffffff
+//         font-size: $text-2
+//         text-align: center
+//         margin: 0 0 0px 0
+
+//     &__icon
+//         width: 40px
+//         height: 40px
+//         background: #00f
+//         margin: 5px
+
+//     &__goods
+//         display: flex
+//         padding: 0 40px 0 0
+//         margin: 0 0 40px 0
+
+//         p 
+//             color: #ffffff
+//             font-size: $text-3
+//             width: 90%
+
+// .price
+//     background: $bg2
+//     padding: 120px
+//     position: relative
+
+//     h3 
+//         color: #ffffff
+//         font-size: $text-1
+//         font-weight: 600
+//         text-align: center
+//         text-transform: uppercase
+//         margin: 0 0 60px 0
+
+//     &__card
+//         height: 250px
+//         position: relative
+//         display: flex
+//         justify-content: center
+//         align-items: center
+//         padding: 0 5%
+//         transition-duration: 0.2s
+//         color: rgba(255,255,255,0.5)
+//         cursor: pointer
+//         text-transform: uppercase
+
+//         &:hover
+//             border: 5px solid white
+//             color: rgba(255,255,255,1)
+
+//         &__title
+//             z-index: 1
+//             position: relative
+//             font-size: $text-2
+//             text-align: center
+
+//         &:before
+//             content: ""
+//             display: block
+//             position: absolute
+//             left: 0
+//             top: 0
+//             width: 100%
+//             height: 100%
+//             background: rgba(25,25,25,0.7)
+//             z-index: 0
+
+
+//     &__card:nth-child(1)
+//         background: url("../img/flat1.png")
+//         background-size: cover
+//     &__card:nth-child(2)
+//         background: url("../img/flat2.png")
+//         background-size: cover
+//     &__card:nth-child(3)
+//         background: url("../img/flat1.png")
+//         background-size: cover
+//     &__card:nth-child(4)
+//         background: url("../img/flat2.png")
+//         background-size: cover
+
+// .contacts
+//     background: url("../img/7.jpg")
+//     background-position: 100% 100%
+//     padding: 120px 0
+//     position: relative
+    
+//     *
+//         z-index: 1
+
+//     &:before
+//         content: ""
+//         display: block
+//         position: absolute
+//         top: 0
+//         left: 0
+//         width: 100%
+//         height: 100%
+//         background: rgba(6,0,15,0.70)
+//         z-index: 0
+
+//     h3 
+//         font-size: $text-1
+//         color: #ffffff
+//         font-weight: 600
+//         text-align: center
+//         text-transform: uppercase
+//         margin: 0 0 60px 0

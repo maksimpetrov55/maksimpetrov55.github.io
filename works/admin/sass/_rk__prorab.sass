@@ -1,0 +1,89 @@
+.prorab
+    padding: 80px 0 100px 0
+    background: url("../img/8.jpg")
+    position: relative
+
+    *
+        z-index: 1
+
+    &:before
+        content: ""
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: rgba(16,16,28,0.95)
+        z-index: 0
+
+
+
+    &__block
+        height: 100%
+        max-width: 640px
+        margin: 10px auto
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        &__border
+            position: relative
+            padding: 20px 20px 60px 20px
+            border-top: 4px solid #ffff6c
+            border-left: 4px solid #ffff6c
+            border-right: 4px solid #ffff6c
+
+            &:before
+                content: ""
+                display: block
+                width: 20%
+                border-bottom: 4px solid #ffff6c
+                position: absolute
+                top: 100%
+                left: -4px
+
+            &:after
+                content: ""
+                display: block
+                width: 20%
+                border-bottom: 4px solid #ffff6c
+                position: absolute
+                top: 100%
+                right: -4px
+
+    &__phone
+        position: relative
+        background: url("../img/prorab3.png") no-repeat
+        background-size: cover
+        height: 500px
+        width: 251px
+        margin: 0 auto
+
+    &__btn
+        color: #ffffff
+        background: linear-gradient(to top, #00770F, #00c116)
+        font-size: $text-3
+        font-weight: 400
+        text-align: center
+        width: 300px
+        height: 54px
+        line-height: 54px
+        border-radius: 1px
+        margin: -25px 0 60px 0
+        transition-duration: 0.2s
+        cursor: pointer
+        box-shadow: 0 5px 25px 2px rgba(0,0,0,0.2)
+        z-index: 11
+
+        &:hover
+            background: linear-gradient(to top, #00A510, #00c116)
+
+@media (max-width: 390px)
+    .online
+        &__btn
+            font-size: 18px
+            line-height: 42px
+            height: 44px
+            width: 240px
+            margin: -20px 0 60px 0

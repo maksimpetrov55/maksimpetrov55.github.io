@@ -1,0 +1,55 @@
+.rk__goods
+    background: url("../img/2.jpg") no-repeat
+    background-size: cover
+    min-height: 100vh
+    display: flex
+    align-items: center
+    position: relative
+    padding: 150px 0 100px 0
+
+    &--kommerch
+        background: url("../img/!A.jpg") no-repeat
+        background-size: cover
+
+    &--doma
+        background: url("../img/domwp.jpg") no-repeat
+        background-size: cover
+
+    &--proekt
+        background: url("../img/card5.jpg") no-repeat
+        background-size: cover
+
+    *
+        z-index: 1
+
+    &:before
+        content: ""
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: rgba(26,26,38,0.85)
+        z-index: 0
+
+    &__space
+        height: 30px
+
+    &__img
+        display: block
+        width: 120px
+        height: 120px
+        background: rgba(#fff, 1)
+        border-radius: 50%
+        margin: 20px auto
+
+        img 
+            width: 60%
+            height: 60%
+            margin: 20% 20%
+
+    &__text
+        color: #ffffff
+        font-size: $text-3
+        text-align: center
