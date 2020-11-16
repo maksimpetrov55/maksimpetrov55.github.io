@@ -8,6 +8,7 @@
 
 body {
   overflow-y: scroll;
+  background: #3a3646;
 }
 
 .bg {
@@ -23,16 +24,12 @@ body {
 }
 
 .wrapper {
+  border-radius: 30px;
   max-width: 1408px;
   padding: 30px 30px;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin: 100px auto;
+  margin: 50px auto;
+  background: #fff;
 }
 
 @media (max-width: 767px) {
@@ -44,8 +41,8 @@ body {
 .calc {
   position: relative;
   width: 100%;
+  margin: 0 auto;
   max-width: 1064px;
-  background: #ffffff;
 }
 
 .calc__text {
@@ -140,7 +137,7 @@ body {
   font-weight: 600;
   line-height: 1.4;
   color: #365EDC;
-  margin: 10px 0 30px 0;
+  margin: 20px 0 10px 0;
   text-align: center;
 }
 
@@ -241,7 +238,7 @@ body {
 .calc__cell--result {
   background: #365EDC;
   color: #fff;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 1px;
 }
 
