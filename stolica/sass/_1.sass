@@ -1,6 +1,6 @@
 
-$yellow1: #FDCD00
-$yellow2: #FDFF9C
+$yellow1: #00b135
+$yellow2: #00be39
 $dark: #1D323F
 $gray: #F5F5F5
 
@@ -15,7 +15,7 @@ $shadow: 0 15px 38px 1.6px rgba(0,0,0,0.1)
 
 body
     position: relative
-    background: $gray
+    background: #4c465a
 
 .calc
     width: 100%
@@ -28,6 +28,7 @@ body
 
 
     &__head
+        color: #fff
         font-size: 32px
         font-weight: 700
         text-align: center
@@ -39,9 +40,9 @@ body
             font-size: 22px
 
     &__body
+        border-radius: 20px
         overflow: hidden
         box-shadow: $shadow
-        border-radius: 2px
         background: #fff
         position: relative
         width: 100%
@@ -71,11 +72,13 @@ body
                 content: ""
                 display: block
                 position: absolute
-                width: 200%
-                height: 200%
-                left: -50%
+                width: 107%
+                height: 113%
+                left: -3.5%
                 top: 0
-                background: #FFE67F
+                background: #a9ecba
+                //border: 3px solid $yellow1
+                border-radius: 20px
 
     &__block
         position: relative
@@ -96,8 +99,8 @@ body
         position: relative
         width: 100%
         font-size: 20px
-        font-weight: 700
-        border-bottom: 1px solid #111
+        font-weight: 300
+        border-bottom: 1px solid #ddd
         padding: 0 0 10px 0
         margin: 0 0 15px 0
         @media ( max-width: 500px )
@@ -127,47 +130,47 @@ body
         display: none
 
         &:checked + .calc__label
-            border: 1px solid $yellow1
-            background: $yellow1
+            border: 2px solid $yellow1
+            background: #d0ffdc
             transform: translateY(-5px)
-            box-shadow: 0 0 10px 3px rgba(253,207,0,0.9)
+            box-shadow: 0 5px 10px 0px rgba(0,0,0,0.1)
 
         &:checked + .calc__label::before
             //background: #fff
             border: 1px solid #555
 
         &:checked + .calc__label::after
-            content: ""
-            display: block
-            width: 12px
-            height: 12px
-            background: #fff
-            border: 1px solid #555
-            position: absolute
-            left: 12px
-            border-radius: 20px
-            margin: -5px 0 0 0
+            // content: ""
+            // display: block
+            // width: 12px
+            // height: 12px
+            // background: #fff
+            // border: 1px solid #555
+            // position: absolute
+            // left: 12px
+            // border-radius: 20px
+            // margin: -5px 0 0 0
 
 
     &__label
         position: relative
         width: 160px
         height: 90px
-        border: 1px dashed #111
+        border: 1px solid #ddd
         border-radius: 15px
         margin: 10px 0 10px 0
         display: flex
         flex-shrink: none
-        //justify-content: center
+        justify-content: center
         align-items: center
-        //flex-direction: column
+        flex-direction: column
         font-size: 14px
-        //text-align: center
         cursor: pointer
         transition-duration: 0.2s
         user-select: none
         letter-spacing: -0.5px
-        padding: 3px 3px 3px 38px
+        padding: 3px 3px 3px 3px
+        text-align: center
         line-height: 1.2
         @media ( max-width: 560px )
             font-size: 13px
@@ -180,6 +183,7 @@ body
             font-size: 12px
 
         &--small
+            max-height: 60px
             width: 92px
             @media ( max-width: 500px )
                 width: 48%
@@ -197,28 +201,29 @@ body
         //     border-radius: 50px
         //     margin: 0 5px 0 0
 
-        &::before
-            content: ""
-            display: block
-            width: 18px
-            height: 18px
-            border: 1px solid #111
-            position: absolute
-            left: 9px
-            border-radius: 20px
-            margin: -4px 0 0 0
+        // &::before
+        //     content: ""
+        //     display: block
+        //     width: 18px
+        //     height: 18px
+        //     border: 1px solid #111
+        //     position: absolute
+        //     left: 9px
+        //     border-radius: 20px
+        //     margin: -4px 0 0 0
 
 
     &__radio
         display: none
+        transition-duration: 0.3s
 
         &:checked + .calc__activity
-            //background: #fff
-            //box-shadow: 0 0 10px 3px rgba(255,255,255,0.9)
+            background: #fff
+            box-shadow: 0 0 10px 3px rgba(255,255,255,0.9)
             
         &:checked + .calc__activity::before
-            border: 2px solid #fff
-            background: #fff
+            border: 2px solid $yellow1
+            background: $yellow1
             box-shadow: 0 0 10px 3px rgba(255,255,255,0.9)
 
         &:checked + .calc__activity::after
@@ -260,6 +265,7 @@ body
             padding: 0 0 0 50px
 
         &::before
+            transition-duration: 0.2s
             content: ""
             display: block
             width: 30px
@@ -303,7 +309,7 @@ body
         text-align: center
         height: 40px
         border-radius: 10px
-        border: 1px solid #111111
+        border: 1px solid #ddd
         font-size: 18px
         outline: none
         background: transparent
@@ -314,7 +320,7 @@ body
             height: 50px
 
         &:focus
-            border: 2px solid #fff
+            border: 2px solid $yellow1
             background: #ffffff55
 
     &__slider
@@ -496,33 +502,40 @@ body
             flex-wrap: wrap
 
     &__forminp
-        height: 42px
+        height: 46px
         width: 32%
-        max-width: 270px
+        max-width: 230px
         position: relative
         border: 1px solid #dddddd
-        border-radius: 2px
+        border-radius: 10px
         font-size: 16px
         padding: 0 10px
         margin: 0 20px 0 0
+        outline: none
+        transition-duration: 0.3s
         @media ( max-width: 1110px )
             width: 100%
             max-width: 340px
             margin: 0 0 20px 0
 
+        &:focus
+
+            box-shadow: 0 5px 15px 0px rgba(0,0,0,0.1)
+
     &__btn
         width: 32%
-        max-width: 270px
+        max-width: 240px
         position: relative
-        height: 42px
+        height: 46px
         display: flex
         justify-content: center
         align-items: center
         text-align: center
-        background: #3D9FD0
+        background: #a200ff
         cursor: pointer
-        border-radius: 2px
-        font-size: 20px
+        border-radius: 10px
+        font-size: 18px
+        text-transform: uppercase
         letter-spacing: 0.5px
         color: #fff
         transition-duration: 0.3s
