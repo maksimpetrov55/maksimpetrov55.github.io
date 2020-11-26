@@ -1,0 +1,354 @@
+
+$color1: #EA00B6
+$color2: #0094FF
+$color3: #00c093
+$color4: #FF8D00
+$color5: #365EDC
+$color6: #008a29
+$color7: #e0ac00
+
+
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: sans-serif
+
+body
+    position: relative
+    background: linear-gradient(107.56deg, #177998 0%, #1b2a47 100%) no-repeat
+
+#particle-canvas
+    width: 100%
+    height: 100vh
+    background: linear-gradient(107.56deg, #221f29 0%, #250055 100%)
+    background: linear-gradient(102.73deg, #0a2a47 2.39%, #5a1c5a 95.4%)
+    vertical-align: middle
+    position: fixed
+
+.dflex
+    display: flex
+
+.space
+    position: relative
+    width: 100%
+    height: 700px
+
+.blackout
+    position: fixed
+    width: 100%
+    height: 100%
+    background: linear-gradient(111.43deg, #070029 6.3%, #460034 92.37%)
+    z-index: 99
+    top: 0
+    left: 0
+    display: flex
+    justify-content: center
+    align-items: center
+
+.header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    background: linear-gradient(to right, #ffffff 0%, #ffffffef 50%, #ffffff 100%)
+    height: 50px
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.06)
+    z-index: 99
+    backdrop-filter: blur(20px)
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0 30px
+
+.side
+    position: fixed
+    left: 0
+    bottom: 0
+    //background: linear-gradient(107.56deg, #ffffff 0%, #d6f6ff 100%) no-repeat
+    background: #fff
+    box-shadow: 0px -15px 20px 5px #00000066
+    width: 100%
+    height: 50px
+    z-index: 29
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 0px 30px 0 30px
+
+    &__name
+        font-family: "Gotham", sans-serif
+        font-size: 18px
+        font-weight: 400
+        letter-spacing: 2px
+        color: #111
+        //text-shadow: 0 0 1px rgba(30,30,30,0.8)
+
+    &__contacts
+        display: flex
+        align-items: flex-end
+
+    &__link
+        display: block
+        font-family: "lato", sans-serif
+        margin: 0 10px
+        text-decoration: none
+        transition-duration: 0.3s
+        letter-spacing: 1px
+        font-weight: 400
+        padding: 14px 5px 14px 5px
+
+        &--wp
+            color: #06bd00
+
+        &--vk
+            color: #5175ec
+
+        &--tg
+            color: #30A7DA
+
+        &--kw
+            color: #ff7300
+
+        &:hover
+            transform: translateY(-3px)
+            opacity: 0.4
+
+    &__blink
+        position: absolute
+        width: 40px
+        height: 80px
+        background: #00000077
+        box-shadow: 0 0 10px 10px #00000077
+        bottom: -20px
+        right: 25%
+        transform: rotate(15deg)
+        //animation: blink 7s ease infinite
+
+    &__sale
+        position: absolute
+        bottom: -6px
+        left: 50%
+        margin: 0 0 0 -240px
+        background: url("../img/sale.png")
+        width: 515px
+        height: 90px
+        background-size: cover
+
+.cases
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    //width: calc( 100% - 200px )
+    //background: #00000077
+    background: linear-gradient(102.73deg, #103457aa 2.39%, #006a8aaa 95.4%)
+    
+    z-index: 9
+    padding: 60px 0 300px 0
+
+
+    &__top
+        margin: 10px auto 60px auto
+        position: relative
+        width: 96%
+        color: #eee
+        text-shadow: 0 0 1px #eeeeee
+        text-align: center
+        font-size: 18px
+        font-family: "Gotham", sans-serif
+        font-weight: 300
+        letter-spacing: 1px
+        z-index: 19
+
+        &::before
+            content: ""
+            position: absolute
+            display: block
+            width: 39%
+            height: 1px
+            background: #dedede
+            left: 0
+            top: 54%
+
+        &::after
+            content: ""
+            position: absolute
+            display: block
+            width: 39%
+            height: 1px
+            background: #dedede
+            right: 0
+            top: 54%
+
+    &__content
+        position: relative
+        width: 100%
+        max-width: 1140px
+        margin: 0 auto
+        display: flex
+        justify-content: flex-start
+        flex-wrap: wrap
+        z-index: 19
+        padding: 0 40px
+
+    &__card
+        position: relative
+        background: #fff
+        width: 96%
+        max-width: 450px
+        min-height: 170px
+        margin: 30px 40px
+        border-radius: 20px
+        transition-duration: 0.3s
+        display: flex
+        flex-direction: column
+        justify-content: center
+        padding: 20px 140px 20px 30px
+        text-decoration: none
+        //box-shadow: 0 15px 15px 1px #2fffba99
+        //opacity: 0
+
+        &::after
+            content: ""
+            display: block
+            position: absolute
+            // width: calc( 100% + 4px )
+            // height: calc( 100% + 4px )
+            // top: -2px
+            // left: -2px
+            box-sizing: border-box
+            border-radius: 0px 0 34px 34px
+            opacity: 0
+            transition-duration: 0.3s
+            width: 100%
+            height: 15px
+            bottom: 0
+            left: 0
+
+        &--color1
+            //border: 3px solid $color1
+
+            &::after
+                //border-bottom: 5px solid $color1
+                //background: $color1
+
+        &--color2
+            //border: 3px solid $color2
+
+            &::after
+                //border: 5px solid $color2
+                //background: $color2
+
+        &:hover
+            //transform: translateY(-8px) scale(1.04)
+            transform: translate(5px, -8px) 
+            box-shadow: 0px 8px 20px 0px rgba(0,0,0,0.1)
+
+        &:hover::after
+            opacity: 1
+
+        &:hover > .dflex > .cases__card__link
+            opacity: 1
+            transform: translateX(0px)
+
+        &:hover > .dflex > .cases__card__arrow
+            transform: scaleX(1)
+
+        &__name
+            font-size: 18px
+            letter-spacing: 0.5px
+            color: #222
+            font-family: "Gotham", sans-serif
+            margin: 0 0 8px 0
+            min-height: 42px
+            display: flex
+            flex-direction: column
+            justify-content: flex-end
+
+        &__type
+            font-size: 15px
+            color: #aaa
+            font-family: "lato", sans-serif
+            margin: 0 0 8px 0
+            min-height: 38px
+
+        &__specs
+            font-size: 15px
+            letter-spacing: 1px
+            margin: 0 0 18px 0
+            font-family: "lato", sans-serif
+            font-weight: 400
+
+            &--color1
+                color: $color1
+                text-shadow: 0 0 1px $color1
+
+            &--color2
+                color: $color2
+                text-shadow: 0 0 1px $color2
+
+            &--color3
+                color: $color3
+                text-shadow: 0 0 1px $color3
+
+            &--color4
+                color: $color4
+                text-shadow: 0 0 1px $color4
+
+            &--color5
+                color: $color5
+                text-shadow: 0 0 1px $color5
+
+            &--color6
+                color: $color6
+                text-shadow: 0 0 1px $color6
+
+            &--color7
+                color: $color7
+                text-shadow: 0 0 1px $color7
+
+
+            &--span
+                margin: 0 4px 0 0
+                
+
+        &__link
+            font-size: 15px
+            letter-spacing: 1px
+            color: #222
+            font-family: "Gotham", sans-serif
+            text-transform: uppercase
+            opacity: 0.2
+            transition-duration: 0.2s
+            transform: translateX(0px)
+            margin: 0 15px 0 0
+            text-shadow: 0 0 1px #44444477
+
+        &__arrow
+            transition-duration: 0.4s
+            transform: scaleX(0)
+            transform-origin: left center
+
+        &__img
+            position: absolute
+            right: 30px
+            top: 50%
+            margin: -45px 0 0 0
+
+
+
+
+
+@keyframes blink
+    0%
+        opacity: 1
+        transform: translateX(0) rotate(15deg)
+    10%
+        transform: translateX(600px) rotate(15deg)
+        opacity: 1
+    100%
+        transform: translateX(600px) rotate(15deg)
+        opacity: 1
+
