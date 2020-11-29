@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+	<div class="calc">
+
+		
+		<div class="calc__wrap">
+
+			<div class="calc__header">Калькулятор процентов</div>
+
+			<div class="calc__line">
+
+				<div class="calc__text calc__text--min">Рассчитать</div>
+				<div class="calc__relative">
+					<input id="calc_inp_1_1" type="number" class="calc__input calc__input--small calc__input--perc">
+					<div class="calc__percent">%</div>
+				</div>
+				<div class="calc__text calc__text--cntr">от числа</div>
+				<input id="calc_inp_1_2" type="number" class="calc__input">
+				<div class="calc__text calc__text--sign ">=</div>
+				<div id="calc_result_1" class="calc__text calc__text--result">0.00</div>
+
+				<div class="calc__clear">×</div>
+
+			</div>
+
+			<div class="calc__line calc__line--border">
+
+				<div class="calc__text calc__text--min">Число</div>
+				<input id="calc_inp_2_1" id="in1" type="number" class="calc__input">
+				<div class="calc__text"></div>
+				<div class="calc__text calc__text--cntr">от числа</div>
+				<input id="calc_inp_2_2" type="number" class="calc__input">
+				<div class="calc__text calc__text--sign ">=</div>
+				<div id="calc_result_2" class="calc__text calc__text--result">0.00 %</div>
+
+				<div class="calc__clear">×</div>
+
+			</div>
+
+			<div class="calc__line calc__line--border">
+
+				<div class="calc__text calc__text--min">Прибавить</div>
+				<div class="calc__relative">
+					<input id="calc_inp_3_1" type="number" class="calc__input calc__input--small calc__input--perc">
+					<div class="calc__percent">%</div>
+				</div>
+				
+				<div class="calc__text calc__text--cntr">к числу</div>
+				<input id="calc_inp_3_2" type="number" class="calc__input">
+				<div class="calc__text calc__text--sign ">=</div>
+				<div id="calc_result_3" class="calc__text calc__text--result">0.00</div>
+
+				<div class="calc__clear">×</div>
+
+			</div>
+
+			<div class="calc__line calc__line--border">
+
+				<div class="calc__text calc__text--min">Вычесть</div>
+				<div class="calc__relative">
+					<input id="calc_inp_4_1" type="number" class="calc__input calc__input--small calc__input--perc">
+					<div class="calc__percent">%</div>
+				</div>
+				
+				<div class="calc__text calc__text--cntr">из числа</div>
+				<input id="calc_inp_4_2" type="number" class="calc__input">
+				<div class="calc__text calc__text--sign ">=</div>
+				<div id="calc_result_4" class="calc__text calc__text--result">0.00</div>
+
+				<div class="calc__clear">×</div>
+
+			</div>
+
+			<div class="calc__line calc__line--border">
+
+				<div class="calc__text calc__text--min">От какой величины число</div>
+				<input id="calc_inp_5_1" type="number" class="calc__input calc__input--small">
+				<div class="calc__text calc__text--cntr">составляет</div>
+				<div class="calc__relative">
+					<input id="calc_inp_5_2" type="number" class="calc__input calc__input--perc">
+					<div class="calc__percent">%</div>
+				</div>
+				<div class="calc__text calc__text--sign ">=</div>
+				<div id="calc_result_5" class="calc__text calc__text--result">0.00</div>
+
+				<div class="calc__clear">×</div>
+
+			</div>
+
+			<div class="calc__line calc__line--border">
+
+				<div class="calc__text calc__text--min">На сколько % число</div>
+
+				<input id="calc_inp_6_1" type="number" class="calc__input calc__input--small calc__input--perc">
+
+				<div class="calc__text calc__text--cntr">> или < числа</div>
+				<input id="calc_inp_6_2" type="number" class="calc__input">
+				<div class="calc__text calc__text--sign ">=</div>
+				<div id="calc_result_6" class="calc__text calc__text--result">0.00 %</div>
+
+				<div class="calc__clear">×</div>
+
+			</div>
+
+			<div class="calc__line calc__line--last">
+
+				<div class="calc__text">Количество знаков после запятой</div>
+				<input id="calc_count" type="number" class="calc__input calc__input--fst" value="2">
+
+			</div>
+
+		</div>
+
+	</div>
+	
+
+
+</body>
+</html>
