@@ -57,7 +57,14 @@ body {
           align-items: center;
 }
 
+@media (max-width: 360px) {
+  .calc__wrap {
+    padding: 40px 10px;
+  }
+}
+
 .calc__line {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,12 +79,32 @@ body {
           justify-content: center;
 }
 
+@media (max-width: 860px) {
+  .calc__line {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 400px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+@media (max-width: 560px) {
+  .calc__line {
+    width: 100%;
+  }
+}
+
 .calc__line--border {
   border-top: 1px dashed #e9e9e9;
 }
 
 .calc__line--last {
   margin: 30px auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .calc__relative {
@@ -91,12 +118,38 @@ body {
   top: 10px;
 }
 
+@media (max-width: 860px) {
+  .calc__percent {
+    top: 15px;
+  }
+}
+
 .calc__text {
   font-size: 17px;
 }
 
+@media (max-width: 360px) {
+  .calc__text {
+    font-size: 15px;
+  }
+}
+
 .calc__text--sign {
   margin: 0 10px 0 0;
+}
+
+@media (max-width: 560px) {
+  .calc__text--sign {
+    width: 140px;
+    text-align: right;
+    margin: 6px 15px 6px 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .calc__text--sign {
+    width: 130px;
+  }
 }
 
 .calc__text--margin {
@@ -108,9 +161,28 @@ body {
   text-align: right;
 }
 
+@media (max-width: 360px) {
+  .calc__text--min {
+    width: 130px;
+  }
+}
+
 .calc__text--cntr {
   text-align: center;
   width: 94px;
+}
+
+@media (max-width: 860px) {
+  .calc__text--cntr {
+    width: 140px;
+    text-align: right;
+  }
+}
+
+@media (max-width: 360px) {
+  .calc__text--cntr {
+    width: 130px;
+  }
 }
 
 .calc__text--result {
@@ -132,6 +204,18 @@ body {
           appearance: none;
 }
 
+@media (max-width: 860px) {
+  .calc__input {
+    margin: 6px 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  .calc__input {
+    font-size: 15px;
+  }
+}
+
 .calc__input:focus {
   border: 1px solid #8974ff;
   color: #8974ff;
@@ -146,6 +230,12 @@ body {
   width: 40px;
   height: 30px;
   margin: 0 0 0 15px;
+}
+
+@media (max-width: 860px) {
+  .calc__input--fst {
+    margin: 6px 0 6px 15px;
+  }
 }
 
 .calc__input--fst:focus {
@@ -165,7 +255,7 @@ body {
   width: 30px;
   height: 30px;
   position: absolute;
-  right: 40px;
+  right: -40px;
   color: #fff;
   font-size: 22px;
   display: -webkit-box;
@@ -183,6 +273,21 @@ body {
   cursor: pointer;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
+}
+
+@media (max-width: 560px) {
+  .calc__clear {
+    right: -20px;
+    margin: 15px 0 0 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .calc__clear {
+    bottom: 20px;
+    left: 10px;
+    margin: 0;
+  }
 }
 
 .calc__clear:hover {

@@ -112,7 +112,8 @@ $(document).ready(function() {
 		var calc_inp_6_2 = $('#calc_inp_6_2').val();
 
 		if ( (calc_inp_6_1 != "") && (calc_inp_6_2 != "") ) {
-			if ( calc_inp_6_1 >= calc_inp_6_2 ) {
+
+			if ( +calc_inp_6_1 >= +calc_inp_6_2 ) {
 				var calc_result_6 = (calc_inp_6_1 - calc_inp_6_2) / calc_inp_6_2 * 100;
 				$('#calc_result_6').text( "Больше на " + calc_result_6.toFixed(calc_count) + " %" );
 			} else {
