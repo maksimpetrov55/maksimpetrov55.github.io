@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script src="js/scripts.js"></script>	
+	<link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div class="calc__header"><span class="calc__header--span">•</span>Калькулятор<span class="calc__header--span">•</span></div>
+
+		<div class="calc__select">
+
+			<div class="calc__block">
+				<input class="calc__item" type="radio" name="calc_radio_form" id="calc_form_1" value="1" checked>
+				<label class="calc__border" for="calc_form_1"></label>
+				<img class="calc__img" src="img/a.png" alt="">
+				<div class="calc__title">Круглые и овальные наклейки и&nbsp;стикеры</div>
+			</div>
+			<div class="calc__block">
+				<input class="calc__item" type="radio" name="calc_radio_form" id="calc_form_2" value="2">
+				<label class="calc__border" for="calc_form_2"></label>
+				<img class="calc__img" src="img/b.png" alt="">
+				<div class="calc__title">Прямоугольные и квадратные наклейки и&nbsp;стикеры</div>
+			</div>
+			<div class="calc__block">
+				<input class="calc__item" type="radio" name="calc_radio_form" id="calc_form_3" value="3">
+				<label class="calc__border" for="calc_form_3"></label>
+				<img class="calc__img" src="img/c.png" alt="">
+				<div class="calc__title">Наклейки и стикеры сложной формы (фигурная&nbsp;вырезка)</div>
+			</div>
+			<div class="calc__block">
+				<input class="calc__item" type="radio" name="calc_radio_form" id="calc_form_4" value="4">
+				<label class="calc__border" for="calc_form_4"></label>
+				<img class="calc__img" src="img/d.png" alt="">
+				<div class="calc__title">Бумажные наклейки с просечкой подложки только прямоугольные (эконом&nbsp;вариант)</div>
+			</div>
+
+		</div>
+
+		<div class="calc__body">
+
+			<div class="calc__left">
+
+				<div class="calc__image">
+					<img id="calc_image_1" class="calc__picture calc__picture--show" src="img/1.png" alt="">
+					<img id="calc_image_2" class="calc__picture" src="img/2.png" alt="">
+					<img id="calc_image_3" class="calc__picture" src="img/3.png" alt="">
+					<img id="calc_image_4" class="calc__picture" src="img/4.png" alt="">
+				</div>
+
+				<div class="calc__slider1">
+					<input id="result-polzunok1" class="calc__slidervalue1" type="number" id="">
+					<div class="calc__sliderdiv1" id="polzunok1"></div>
+				</div>
+
+				<div class="calc__slider2 calc__slider2--hide">
+					<div class="calc__sliderdiv2" id="polzunok2"></div>
+					<input id="result-polzunok2" class="calc__slidervalue2" type="number" id="">
+				</div>
+
+			</div>
+
+			<div class="calc__right">
+
+				<div class="calc__line">
+					<div class="calc__text calc__text--dot">Количество</div>
+					<input id="calc_shtuk" type="number" class="calc__input" value="1000">
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__text calc__text--dot">Количество видов</div>
+					<input id="calc_vid" type="number" class="calc__input" value="1">
+				</div>
+
+				<div class="calc__line calc__line--typeof">
+					<div class="calc__text calc__text--dot">Тип печати</div>
+				</div>
+
+				<input class="calc__radio" type="radio" name="calc_radio_type" id="calc_type_1" checked>
+				<label class="calc__label calc__label--typeof calc__label--last" for="calc_type_1">Лазерная</label>
+
+				<div class="calc__line">
+					<div class="calc__text calc__text--dot">Материал</div>
+				</div>
+
+				<input class="calc__radio" type="radio" name="calc_radio_material" id="calc_material_1" value="1" checked>
+				<label id="calc_label_material_1" class="calc__label" for="calc_material_1">Глянцевая пленка</label>
+
+				<input class="calc__radio" type="radio" name="calc_radio_material" id="calc_material_2" value="2" >
+				<label id="calc_label_material_2" class="calc__label" for="calc_material_2">Матовая пленка</label>
+
+				<input class="calc__radio" type="radio" name="calc_radio_material" id="calc_material_3" value="3" >
+				<label id="calc_label_material_3" class="calc__label" for="calc_material_3">Прозрачная пленка</label>
+
+				<input class="calc__radio" type="radio" name="calc_radio_material" id="calc_material_4" value="4" >
+				<label id="calc_label_material_4" class="calc__label calc__label--last" for="calc_material_4">Бумажная самоклейка (эконом)</label>
+
+				<div class="calc__line">
+					<div class="calc__text calc__text--dot">Ламинация</div>
+				</div>
+
+				<input class="calc__radio" type="radio" name="calc_radio_lamination" id="calc_lamination_1" value="1" checked>
+				<label class="calc__label" for="calc_lamination_1">Без ламинации</label>
+
+				<input class="calc__radio" type="radio" name="calc_radio_lamination" id="calc_lamination_2" value="2">
+				<label class="calc__label" for="calc_lamination_2">Глянцевая</label>
+
+				<input class="calc__radio" type="radio" name="calc_radio_lamination" id="calc_lamination_3" value="3">
+				<label class="calc__label calc__label--last" for="calc_lamination_3">Матовая</label>
+
+				<div class="calc__line calc__line--450wrap">
+					<div class="calc__text calc__text--dot">Итого</div>
+					<input id="calc_itog" type="text" class="calc__input calc__input--itog" disabled>
+					<div class="calc__btn">Заказать</div>
+				</div>
+
+			</div>
+			
+		</div>
+
+	</div>
+	
+
+
+</body>
+</html>
