@@ -69,10 +69,10 @@ $(document).ready(function() {
 	$("#polzunok2").slider({
 		animate: "slow",
 		range: "min",
-		value: 300,
+		value: 100,
 		step: 10,
 		min: 10,
-		max: 450,
+		max: 320,
 		slide : function(event, ui) {
 			$("#result-polzunok2").val(ui.value);
 			calculation();
