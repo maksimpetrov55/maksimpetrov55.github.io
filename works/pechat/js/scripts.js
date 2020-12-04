@@ -52,7 +52,7 @@ $(document).ready(function() {
 		value: 100,
 		step: 10,
 		min: 10,
-		max: 1000,
+		max: 450,
 		slide : function(event, ui) {
 			$("#result-polzunok1").val(ui.value);
 			calculation();
@@ -72,7 +72,7 @@ $(document).ready(function() {
 		value: 300,
 		step: 10,
 		min: 10,
-		max: 1000,
+		max: 450,
 		slide : function(event, ui) {
 			$("#result-polzunok2").val(ui.value);
 			calculation();
