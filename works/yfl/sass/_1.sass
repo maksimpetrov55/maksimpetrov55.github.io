@@ -1,0 +1,206 @@
+$blue: #295BDB
+$blue-li: #628fff
+$back: #2B3A4A
+$wind: #222A35
+$gray: #373F49
+$gray-li: #5F656D
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: sans-serif
+
+body
+    position: relative
+    background: $back
+
+.calc
+    position: relative
+    width: 98%
+    max-width: 1000px
+    min-height: 600px
+    background: $wind
+    margin: 50px auto
+    border-radius: 8px
+    box-shadow: 0 5px 10px 0px rgba(0,0,0,0.1)
+    padding: 40px 30px
+    @media ( max-width: 440px )
+        padding: 40px 20px
+
+    *
+        font-family: "Work Sans", sans-serif
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button
+        -webkit-appearance: none
+    
+    &__head
+        text-transform: uppercase
+        font-size: 26px
+        color: #fff
+        margin: 0 auto 50px auto
+        text-align: center
+        max-width: 600px
+        line-height: 1.3
+        letter-spacing: 0.5px
+        @media ( max-width: 440px )
+            font-size: 21px
+
+        &--22
+            font-size: 22px
+            margin: 0 auto 10px auto
+            //color: #C1BB86
+            @media ( max-width: 440px )
+                font-size: 19px
+
+        &--blue
+            color: $blue-li
+
+    &__separator
+        margin: 20px auto 40px auto
+        width: 90%
+        height: 1px
+        background: $gray-li
+
+        &--mid
+            margin: 40px auto
+
+    &__line
+        display: flex
+        justify-content: center
+        align-items: center
+        @media ( max-width: 689px )
+            flex-wrap: wrap
+
+        &--wrap
+            flex-wrap: wrap
+
+        &--slider
+            margin: 10px 10px 20px 10px
+
+        &--border
+            border: 1px solid $gray-li
+            padding: 40px
+            width: 90%
+            margin: 20px auto
+            @media ( max-width: 925px )
+                padding: 30px 20px
+                width: 100%
+    
+    &__title
+        color: #ffffff
+        font-size: 18px
+        margin: 0 20px 0 0
+        @media ( max-width: 689px )
+            margin: 10px 0 20px 0
+            text-align: center
+
+    &__input
+        height: 38px
+        padding: 0 10px
+        text-align: right
+        font-size: 18px
+        width: 170px
+        outline: none !important
+        background: $gray-li
+        border: none
+        border: 2px solid $gray-li
+        color: #fff
+        border-radius: 2px
+        @media ( max-width: 689px )
+            text-align: center
+
+        &:focus
+            border: 2px solid $blue-li
+
+        &--slider
+            display: none
+
+    &__slider
+        width: 100%
+        position: relative
+        max-width: 280px
+        margin: 0 30px
+        @media ( max-width: 925px )
+            margin: 20px 30px
+        @media ( max-width: 440px )
+            margin: 20px 5px
+            
+
+    &__sliderval
+        background: $wind
+        text-align: center
+        width: 100%
+        position: relative
+        margin: 10px auto 15px auto
+        // border-right: 1px solid #ccc 
+        // border-left: 1px solid #ccc 
+        height: 20px
+        color: #ffffff
+        font-size: 18px
+
+    &__img
+        width: 40px
+        height: 40px
+        position: relative
+        margin: 0px auto 15px auto
+        display: block
+
+    &__result
+        width: 100%
+        max-width: 280px
+        margin: 20px
+        @media ( max-width: 925px )
+            max-width: 230px
+        @media ( max-width: 440px )
+            margin: 20px 5px
+
+    &__itog
+        text-align: center
+        color: #fff
+        font-size: 20px
+        margin: 10px auto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ui-slider
+    background: $gray-li !important
+    height: 5px !important
+    border: none !important
+
+.ui-slider-range
+    background: $blue !important
+    //border: 1px solid #91c1ff !important
+
+.ui-slider-handle
+    margin-top: -2px
+    //margin: 1px 0 0 -9px !important
+    border-radius: 10px !important
+    border: none !important
+    outline: none !important
+    cursor: pointer !important
+    box-shadow: 0 3px 10px 0px rgba(0,0,0,0.1)
+
+// .calc__sliderdiv2 .ui-slider-handle
+//     background: url("../img/btn2.png") no-repeat !important 
+//     width: 44px !important
+//     height: 24px !important
+
+// .calc__sliderdiv1 .ui-slider-handle
+//     background: url("../img/btn.png") no-repeat !important 
+//     width: 24px !important
+//     height: 44px !important
+//     margin: 0 0 0 -1px !important

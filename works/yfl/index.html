@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script src="js/scripts.js"></script>
+
+</head>
+<body>
+
+
+	<div class="calc">
+
+		<div class="calc__head">Сalculate the rewards from staking in the yfl&nbsp;linkswap governance&nbsp;vault</div>
+
+		<!-- <div class="calc__separator"></div> -->
+
+		<div class="calc__line calc__line--border">
+			<div class="calc__title">Enter the number of YFL you have&nbsp;staked:</div>
+			<input id="calc_yfl" type="number" class="calc__input" value="100">
+		</div>
+
+		<!-- <div class="calc__separator calc__separator--mid"></div> -->
+
+		<div class="calc__line calc__line--wrap calc__line--slider calc__line--border">
+			<div class="calc__slider">
+				<div class="calc__head calc__head--22">Assumptions</div>
+				<div class="calc__sliderval" id="calc_slider_1_val"></div>
+				<div class="calc__sliderdiv" id="slider_1"></div>
+				<input id="slider_1_in" type="number" class="calc__input calc__input--slider" disabled>
+			</div>
+
+			<div class="calc__slider">
+				<div class="calc__head calc__head--22">Daily Volume</div>
+				<div class="calc__sliderval" id="calc_slider_2_val"></div>
+				<div class="calc__sliderdiv" id="slider_2"></div>
+				<input id="slider_2_in" type="number" class="calc__input calc__input--slider" disabled>
+			</div>
+		</div>
+
+		<!-- <div class="calc__separator calc__separator--mid"></div> -->
+
+		<div class="calc__line calc__line--wrap calc__line--border">
+			<div class="calc__result">
+				<img src="img/1.png" alt="" class="calc__img">
+				<div class="calc__head calc__head--blue calc__head--22">Daily estimate</div>
+				<div id="calc_itog_1" class="calc__itog"></div>
+			</div>
+			<div class="calc__result">
+				<img src="img/7.png" alt="" class="calc__img">
+				<div class="calc__head calc__head--blue calc__head--22">Weekly estimate</div>
+				<div id="calc_itog_2" class="calc__itog"></div>
+			</div>
+			<div class="calc__result">
+				<img src="img/30.png" alt="" class="calc__img">
+				<div class="calc__head calc__head--blue calc__head--22">Monthly estimate</div>
+				<div id="calc_itog_3" class="calc__itog"></div>
+			</div>
+			<div class="calc__result">
+				<img src="img/365.png" alt="" class="calc__img">
+				<div class="calc__head calc__head--blue calc__head--22">Yearly estimate</div>
+				<div id="calc_itog_4" class="calc__itog"></div>
+			</div>
+		</div>
+
+	</div>
+	
+
+
+</body>
+</html>
