@@ -39,6 +39,38 @@ body {
   -webkit-appearance: none;
 }
 
+.calc__logo {
+  font-size: 24px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  margin: 50px auto 80px auto;
+  cursor: pointer;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+}
+
+.calc__logo img {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin: 0 10px 0 0;
+}
+
+.calc__logo:hover {
+  opacity: 0.7;
+}
+
 .calc__head {
   text-transform: uppercase;
   font-size: 26px;
@@ -226,6 +258,27 @@ body {
   color: #fff;
   font-size: 20px;
   margin: 10px auto;
+}
+
+.calc__social {
+  margin: 60px auto 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.calc__link {
+  text-decoration: none;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  margin: 0 5px;
+}
+
+.calc__link:hover {
+  opacity: 0.7;
 }
 
 .ui-slider {
