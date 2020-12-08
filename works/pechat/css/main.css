@@ -265,6 +265,7 @@ body {
 }
 
 .calc__line {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -340,7 +341,7 @@ body {
 }
 
 .calc__input--itog {
-  width: 100px;
+  width: 150px;
 }
 
 .calc__label {
@@ -414,7 +415,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 10px;
-  margin: 5px 0 5px 10px;
+  margin: 30px 0 15px 0;
   font-weight: 900;
   letter-spacing: 1.5px;
   -webkit-transition-duration: 0.3s;
@@ -599,7 +600,7 @@ body {
   background: -webkit-gradient(linear, left top, right top, color-stop(3%, #C40006), color-stop(4%, #F0F1F5));
   background: linear-gradient(90deg, #C40006 3%, #F0F1F5 4%);
   width: 387px;
-  height: 12px;
+  height: 13 px;
   left: -10px;
 }
 
@@ -614,6 +615,15 @@ body {
   .calc__sliderdiv2::before {
     width: 197px;
   }
+}
+
+.calc__price {
+  color: #aaa;
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  text-align: right;
+  padding: 0 5px;
 }
 
 .ui-slider {

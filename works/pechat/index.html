@@ -68,7 +68,7 @@
 					<div class="calc__sliderdiv1" id="polzunok1"></div>
 				</div>
 
-				<div class="calc__slider2 calc__slider2--hide">
+				<div class="calc__slider2 calc__slider2--hiddd">
 					<div class="calc__sliderdiv2" id="polzunok2"></div>
 					<input id="result-polzunok2" class="calc__slidervalue2" type="number" id="">
 				</div>
@@ -79,7 +79,7 @@
 
 				<div class="calc__line">
 					<div class="calc__text calc__text--dot">Количество</div>
-					<input id="calc_shtuk" type="number" class="calc__input" value="1000">
+					<input id="calc_shtuk" type="number" class="calc__input" value="200">
 				</div>
 
 				<div class="calc__line">
@@ -98,17 +98,17 @@
 					<div class="calc__text calc__text--dot">Материал</div>
 				</div>
 
-				<input class="calc__radio" type="radio" name="calc_radio_material" id="calc_material_1" value="1" checked>
-				<label id="calc_label_material_1" class="calc__label" for="calc_material_1">Глянцевая пленка</label>
+				<input class="calc__radio" type="radio" name="calc_radio_material" id="calc_material_1" value="1">
+				<label id="calc_label_material_1" class="calc__label" for="calc_material_1">Виниловая пленка</label>
 
-				<input class="calc__radio" type="radio" name="calc_radio_material" id="calc_material_2" value="2" >
-				<label id="calc_label_material_2" class="calc__label" for="calc_material_2">Матовая пленка</label>
+				<!-- <input class="calc__radio" type="radio" name="calc_radio_material" id="calc_material_2" value="2" >
+				<label id="calc_label_material_2" class="calc__label" for="calc_material_2">Матовая пленка</label> -->
 
 				<input class="calc__radio" type="radio" name="calc_radio_material" id="calc_material_3" value="3" >
 				<label id="calc_label_material_3" class="calc__label" for="calc_material_3">Прозрачная пленка</label>
 
-				<input class="calc__radio" type="radio" name="calc_radio_material" id="calc_material_4" value="4" >
-				<label id="calc_label_material_4" class="calc__label calc__label--last" for="calc_material_4">Бумажная самоклейка (эконом)</label>
+				<input class="calc__radio" type="radio" name="calc_radio_material" id="calc_material_4" value="4" checked>
+				<label id="calc_label_material_4" class="calc__label calc__label--last" for="calc_material_4">Бумажная самоклейка</label>
 
 				<div class="calc__line">
 					<div class="calc__text calc__text--dot">Ламинация</div>
@@ -118,16 +118,18 @@
 				<label class="calc__label" for="calc_lamination_1">Без ламинации</label>
 
 				<input class="calc__radio" type="radio" name="calc_radio_lamination" id="calc_lamination_2" value="2">
-				<label class="calc__label" for="calc_lamination_2">Глянцевая</label>
+				<label class="calc__label" for="calc_lamination_2">Глянцевая (для агрессивной среды)</label>
 
 				<input class="calc__radio" type="radio" name="calc_radio_lamination" id="calc_lamination_3" value="3">
-				<label class="calc__label calc__label--last" for="calc_lamination_3">Матовая</label>
+				<label class="calc__label calc__label--last" for="calc_lamination_3">Матовая (для агрессивной среды)</label>
 
 				<div class="calc__line calc__line--450wrap">
 					<div class="calc__text calc__text--dot">Итого</div>
+					<div class="calc__price"></div>
 					<input id="calc_itog" type="text" class="calc__input calc__input--itog" disabled>
-					<div class="calc__btn">Заказать</div>
 				</div>
+
+				<div class="calc__btn">Заказать</div>
 
 			</div>
 			
