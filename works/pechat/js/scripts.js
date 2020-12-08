@@ -9,7 +9,7 @@ $(document).ready(function() {
 			$('.calc__label--typeof').removeClass("calc__label--hide");
 			$('.calc__picture--show').removeClass("calc__picture--show");
 			$('#calc_image_1').addClass("calc__picture--show");
-			$('#calc_label_material_1, #calc_label_material_2, #calc_label_material_3, #calc_label_material_4').removeClass("calc__label--hide");
+			// $('#calc_label_material_1, #calc_label_material_2, #calc_label_material_3, #calc_label_material_4').removeClass("calc__label--hide");
 			//$('.calc__slider2').addClass("calc__slider2--hide");
 		} else {
 			if ( calc_item == 2 ) {
@@ -18,8 +18,8 @@ $(document).ready(function() {
 				$('.calc__slider2').removeClass("calc__slider2--hide");
 				$('.calc__picture--show').removeClass("calc__picture--show");
 				$('#calc_image_2').addClass("calc__picture--show");
-				$('#calc_label_material_1, #calc_label_material_2, #calc_label_material_3, #calc_label_material_4').removeClass("calc__label--hide");
-				$('#calc_label_material_1, #calc_label_material_2, #calc_label_material_3').addClass("calc__label--hide");
+				// $('#calc_label_material_1, #calc_label_material_2, #calc_label_material_3, #calc_label_material_4').removeClass("calc__label--hide");
+				// $('#calc_label_material_1, #calc_label_material_2, #calc_label_material_3').addClass("calc__label--hide");
 				$('#calc_material_4').prop("checked", true);
 			} else {
 				if ( calc_item == 3 ) {
@@ -28,15 +28,15 @@ $(document).ready(function() {
 					$('.calc__slider2').removeClass("calc__slider2--hide");
 					$('.calc__picture--show').removeClass("calc__picture--show");
 					$('#calc_image_3').addClass("calc__picture--show");
-					$('#calc_label_material_1, #calc_label_material_2, #calc_label_material_3, #calc_label_material_4').removeClass("calc__label--hide");
+					// $('#calc_label_material_1, #calc_label_material_2, #calc_label_material_3, #calc_label_material_4').removeClass("calc__label--hide");
 				} else {
 					$('.calc__line--typeof').addClass("calc__line--hide");
 					$('.calc__label--typeof').addClass("calc__label--hide");
 					$('.calc__slider2').removeClass("calc__slider2--hide");
 					$('.calc__picture--show').removeClass("calc__picture--show");
 					$('#calc_image_4').addClass("calc__picture--show");
-					$('#calc_label_material_1, #calc_label_material_2, #calc_label_material_3, #calc_label_material_4').removeClass("calc__label--hide");
-					$('#calc_label_material_1, #calc_label_material_2, #calc_label_material_3').addClass("calc__label--hide");
+					// $('#calc_label_material_1, #calc_label_material_2, #calc_label_material_3, #calc_label_material_4').removeClass("calc__label--hide");
+					// $('#calc_label_material_1, #calc_label_material_2, #calc_label_material_3').addClass("calc__label--hide");
 					$('#calc_material_4').prop("checked", true);
 				}
 			}
@@ -114,13 +114,13 @@ $(document).ready(function() {
 		calculation();
 	});
 
-	$('#calc_shtuk').on("change", function(){
-		var calc_shtuk_check = $(this).val();
-		if ( calc_shtuk_check < 5 ) {
-			$('#calc_shtuk').val(5);
-		}
-		calculation();
-	});
+	// $('#calc_shtuk').on("change", function(){
+	// 	var calc_shtuk_check = $(this).val();
+	// 	if ( calc_shtuk_check < 5 ) {
+	// 		$('#calc_shtuk').val(5);
+	// 	}
+	// 	calculation();
+	// });
 
 	$('.calc__radio, .calc__item').click(function(){
 		calculation();
@@ -170,8 +170,8 @@ $(document).ready(function() {
 
 		var calc_shtuk_fin = +calc_shtuk / +calc_onlist;
 
-		if ( calc_shtuk_fin < 5 ) {
-			var calc_shtuk_fin = 5;
+		if ( calc_shtuk_fin < 1 ) {
+			var calc_shtuk_fin = 1;
 		}
 
 		console.log(calc_shtuk_fin);
@@ -198,6 +198,11 @@ $(document).ready(function() {
 
 		var calc_sale = 0.85;
 
+		if ( +calc_shtuk_fin >= 0 ) {
+			var calc_base = 0;
+			var calc_set = 300;
+			var calc_rate = 20;
+		}
 		if ( +calc_shtuk_fin >= 5 ) {
 			var calc_base = 5;
 			var calc_set = 200;
@@ -263,7 +268,11 @@ $(document).ready(function() {
 		var calc_result = ( +calc_preresult * +calc_x1 * +calc_x2 * +calc_x3 * +calc_sale) + +calc_vid_sum;
 
 		if ( calc_result <= 3000 ) {
-			var calc_result = 3000;
+			$('.calc__alert').addClass("calc__alert--show");
+			$('.calc__price').removeClass("calc__price--margin");
+		} else {
+			$('.calc__alert').removeClass("calc__alert--show");
+			$('.calc__price').addClass("calc__price--margin");
 		}
 
 		// (calc_base * calc_set) + ( (+calc_shtuk_fin - calc_base) * (calc_set - (calc_rate * (+calc_shtuk_fin - calc_base)))

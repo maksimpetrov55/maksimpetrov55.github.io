@@ -98,6 +98,9 @@
 					<div class="calc__text calc__text--dot">Материал</div>
 				</div>
 
+				<input class="calc__radio" type="radio" name="calc_radio_material" id="calc_material_4" value="4" checked>
+				<label id="calc_label_material_4" class="calc__label" for="calc_material_4">Бумажная самоклейка</label>
+
 				<input class="calc__radio" type="radio" name="calc_radio_material" id="calc_material_1" value="1">
 				<label id="calc_label_material_1" class="calc__label" for="calc_material_1">Виниловая пленка</label>
 
@@ -105,10 +108,9 @@
 				<label id="calc_label_material_2" class="calc__label" for="calc_material_2">Матовая пленка</label> -->
 
 				<input class="calc__radio" type="radio" name="calc_radio_material" id="calc_material_3" value="3" >
-				<label id="calc_label_material_3" class="calc__label" for="calc_material_3">Прозрачная пленка</label>
+				<label id="calc_label_material_3" class="calc__label calc__label--last" for="calc_material_3">Прозрачная пленка</label>
 
-				<input class="calc__radio" type="radio" name="calc_radio_material" id="calc_material_4" value="4" checked>
-				<label id="calc_label_material_4" class="calc__label calc__label--last" for="calc_material_4">Бумажная самоклейка</label>
+
 
 				<div class="calc__line">
 					<div class="calc__text calc__text--dot">Ламинация</div>
@@ -118,19 +120,27 @@
 				<label class="calc__label" for="calc_lamination_1">Без ламинации</label>
 
 				<input class="calc__radio" type="radio" name="calc_radio_lamination" id="calc_lamination_2" value="2">
-				<label class="calc__label" for="calc_lamination_2">Глянцевая (для агрессивной среды)</label>
+				<label class="calc__label" for="calc_lamination_2">Глянцевая <span class="calc__label--sm">(для агрессивной среды)</span></label>
 
 				<input class="calc__radio" type="radio" name="calc_radio_lamination" id="calc_lamination_3" value="3">
-				<label class="calc__label calc__label--last" for="calc_lamination_3">Матовая (для агрессивной среды)</label>
+				<label class="calc__label calc__label--last" for="calc_lamination_3">Матовая <span class="calc__label--sm">(для агрессивной среды)</span></label>
 
 				<div class="calc__line calc__line--450wrap">
 					<div class="calc__text calc__text--dot">Итого</div>
-					<div class="calc__price"></div>
+					
 					<input id="calc_itog" type="text" class="calc__input calc__input--itog" disabled>
 				</div>
 
-				<div class="calc__btn">Заказать</div>
+				<div class="calc__price"></div>
 
+				<div class="calc__alert">Минимальная сумма заказа 3000 рублей!</div>
+
+				
+
+			</div>
+
+			<div class="calc__order">
+				<div class="calc__btn">Заказать</div>
 			</div>
 			
 		</div>

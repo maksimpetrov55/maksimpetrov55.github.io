@@ -164,6 +164,7 @@ body
             display: block
 
     &__line
+        position: relative
         display: flex
         justify-content: space-between
         align-items: center
@@ -216,7 +217,7 @@ body
             width: 69px
 
         &--itog
-            width: 100px
+            width: 150px
 
     &__label
         display: block
@@ -231,6 +232,9 @@ body
 
         &--last
             margin: 5px 0 15px 22px
+
+        &--sm
+            font-size: 16px
 
         &--hide
             display: none
@@ -262,28 +266,6 @@ body
     &__radio:checked + .calc__label::after
         background: linear-gradient(177.37deg, #e2e2ff 30%, #0F0D97 95.44%)
         border: 1px solid #5a5a5a88
-
-    &__btn
-        width: 150px
-        height: 48px
-        background: #C40006
-        text-transform: uppercase
-        color: #fff
-        display: flex
-        justify-content: center
-        align-items: center
-        border-radius: 10px
-        margin: 5px 0 5px 10px
-        font-weight: 900
-        letter-spacing: 1.5px
-        transition-duration: 0.3s
-        cursor: pointer
-        font-size: 18px
-        @media ( max-width: 450px )
-            margin: 30px auto 15px auto
-
-        &:hover
-            opacity: 0.7
 
     &__slider1
         position: relative
@@ -368,7 +350,7 @@ body
             position: absolute
             background: linear-gradient(180deg, #F0F1F5 96%, #C40006 97%)
             height: 405px
-            width: 13px
+            width: 12px
             bottom: -0px
             @media ( max-width: 590px )
                 height: 190px
@@ -392,13 +374,67 @@ body
             position: absolute
             background: linear-gradient(90deg, #C40006 3%, #F0F1F5 4%)
             width: 387px
-            height: 12px
+            height: 13px
             left: -10px
             @media ( max-width: 590px )
                 width: 267px
                 left: 0
             @media ( max-width: 450px )
                 width: 197px
+
+    &__price
+        color: #aaa
+        // position: absolute
+        // right: 0
+        // bottom: -20px
+        text-align: right
+        padding: 0 5px
+        margin: 4px 0 0px 0
+        
+        &--margin
+            margin: 4px 0 41px 0
+
+    &__alert
+        font-size: 17px
+        margin: 12px 0 5px 0
+        text-align: center
+        color: #C40006
+        border: 1px dashed #C40006
+        border-radius: 3px
+        padding: 4px 5px 4px 5px
+        display: none
+
+        &--show
+            display: block
+
+    &__order
+        display: flex
+        justify-content: flex-end
+        margin: 10px 0
+        padding: 0 30px 0 0
+        width: 100%
+        @media ( max-width: 1020px )
+            justify-content: center
+            padding: 0
+
+    &__btn
+        width: 150px
+        height: 48px
+        background: #C40006
+        text-transform: uppercase
+        color: #fff
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 10px
+        font-weight: 900
+        letter-spacing: 1.5px
+        transition-duration: 0.3s
+        cursor: pointer
+        font-size: 18px
+
+        &:hover
+            opacity: 0.7
 
 
 
