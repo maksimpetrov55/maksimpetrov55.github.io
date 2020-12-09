@@ -194,6 +194,16 @@ body {
 
 .calc__right {
   max-width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 @media (max-width: 1020px) {
@@ -531,7 +541,7 @@ body {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(96%, #F0F1F5), color-stop(97%, #C40006));
   background: linear-gradient(180deg, #F0F1F5 96%, #C40006 97%);
   height: 405px;
-  width: 12px;
+  width: 13px;
   bottom: -0px;
 }
 
