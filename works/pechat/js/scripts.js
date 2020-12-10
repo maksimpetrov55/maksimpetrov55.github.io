@@ -10,7 +10,7 @@ $(document).ready(function() {
 			$('.calc__picture--show').removeClass("calc__picture--show");
 			$('#calc_image_1').addClass("calc__picture--show");
 			$('#calc_label_material_1, #calc_label_material_2, #calc_label_material_3, #calc_label_material_4').removeClass("calc__label--hide");
-			$('.calc__slider2').addClass("calc__slider2--hide");
+			//$('.calc__slider2').addClass("calc__slider2--hide");
 		} else {
 			if ( calc_item == 2 ) {
 				$('.calc__line--typeof').removeClass("calc__line--hide");
