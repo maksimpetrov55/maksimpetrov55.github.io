@@ -1,18 +1,33 @@
 
 
-.events
+.articles
     position: relative
-    padding: 30px 0 100px 0
+    padding: 0 0 100px 0
 
     &__block
-        position: relative
         width: 100%
-        height: 530px
-        margin: 30px 0 
-        padding: 0 0 0 20px
+        position: relative
+        min-height: 350px
+        box-shadow: 3px 4px 25px rgba(33, 33, 33, 0.1)
+        border-radius: 10px
+        background-color: #ffffff
+        padding: 20px
+        margin: 10px 0 30px 0
+        display: flex
+
+    &__img
+        width: 310px
+        height: 310px
+        margin: 0 35px 0 0
+        background: #888
+        border-radius: 10px
+
+    &__content
+        display: flex
+        flex-direction: column
+        justify-content: center
 
     &__date
-        position: absolute
         background: $black
         width: 100px
         height: 36px
@@ -26,23 +41,22 @@
         font-family: "Roboto Mono", sans-serif
         font-size: 12px
         box-shadow: 3px 4px 25px rgba(33, 33, 33, 0.1)
-
-    &__img
-        background: $gradient1
-        width: 100%
-        height: 350px
-        border-radius: 10px
-        display: block
-        margin: 0 0 30px 0
+        margin: 0 0 15px 0
 
     &__title
         font-size: 23px
         color: $black
         font-weight: 900
         font-family: "Roboto Mono", sans-serif
+        text-transform: uppercase
+        margin: 0 0 15px 0
 
-    &__arrow
-        margin: 30px 0 0 0
+    &__text
+        font-size: 15px
+        color: $gray2
+
+    &__go
+        margin: 20px 0 0 0
         border-radius: 5px
         position: relative
         width: 90px
