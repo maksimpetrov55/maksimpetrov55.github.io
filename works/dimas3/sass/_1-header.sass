@@ -1,0 +1,141 @@
+
+
+.header
+    position: fixed
+    height: 70px
+    background: #fff
+    border-bottom: 1px solid $gray
+    width: 100%
+    padding: 0 40px
+    display: flex
+    align-items: center
+    z-index: 990
+    top: 0
+
+    &__wrap
+        display: flex
+        align-items: center
+        justify-content: space-between
+        position: relative
+        height: 100%
+        width: 100%
+        max-width: 1806px
+        margin: 0 auto
+
+    &__logo
+        height: 60px
+        width: 60px
+        position: relative
+
+    &__name
+        display: block
+        font-size: 26px
+        font-weight: 600
+        font-family: 'Oswald', sans-serif
+        letter-spacing: 2px
+        margin: 0 0 0 10px
+        //text-shadow: 0 0 1px $blue
+        color: $blue
+        background: linear-gradient(340deg, $lightblue -10%, $blue 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        text-decoration: none
+
+    &__contacts
+        text-align: right
+        color: $dark
+        letter-spacing: 2px
+        margin: 0 0 0 20px
+        font-size: 17px
+
+        font-weight: 400
+        text-transform: uppercase
+        align-items: center
+
+    &__mail
+        margin: 5px 0 0 30px
+
+    &__menu
+        width: 70px
+        height: 70px
+        position: relative
+        border-left: 1px solid $gray
+        border-right: 1px solid $gray
+        margin: 0px 0 0 30px
+        transition-duration: 0.2s
+        cursor: pointer
+
+        &:hover
+            background: $blue
+
+        &:hover > .header__burger > .header__burger-line
+            background: #fff
+            height: 1px
+            text-shadow: 0 0 1px #fff
+
+    &__burger
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        height: 100%
+        position: relative
+
+    &__burger-line
+        width: 34px
+        height: 1px
+        background: $blue
+        margin: 4px 0
+        text-shadow: 0 0 1px #000
+
+    &__list
+        position: absolute
+        right: 0
+        top: 70px
+        background: #fff
+        width: 380px
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        padding: 30px 30px 60px 30px
+        border-left: 1px solid $gray
+        border-right: 1px solid $gray
+        border-bottom: 1px solid $gray
+
+        &--open
+
+    &__link
+        display: block
+        font-size: 16px
+        text-decoration: none
+        text-transform: uppercase
+        margin: 10px 0 10px 40px
+        padding: 5px 10px
+        color: $blue
+        letter-spacing: 1px
+        transition-duration: 0.3s
+        opacity: 0
+
+        &--show
+            opacity: 1
+
+        &:hover
+            color: $lightblue
+            transform: translateX(15px)
+            text-decoration: none
+
+    &__lang
+        padding: 5px 10px
+        user-select: none
+        letter-spacing: 1px
+
+        &--unselect
+            cursor: pointer
+            color: $lightblue
+            transition-duration: 0.2s
+            &:hover
+                opacity: 0.6
+        
+        &--border
+            border-right: 1px solid $gray
+

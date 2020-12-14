@@ -1,0 +1,59 @@
+
+
+
+<div class="header__wrap">
+
+    <div class="dflex dflex--aic">
+        <img src="img/logo.png" alt="" class="header__logo">
+        <a href="index.html" class="header__name">USBПРОДАКШЕН</a>
+    </div>
+
+    <div class="dflex dflex--aic">
+
+        <div class="dflex">
+            <div class="header__lang header__lang--border">RU</div>
+            <div class="header__lang header__lang--unselect">EN</div>
+        </div>
+    
+        <div class="header__contacts">
+            <div class="header__phone">+7 (999) 888 77-22</div>
+            <div class="header__mail">infoinfo@mail.ru</div>
+        </div>
+    
+        <div class="header__menu">
+    
+            <div class="header__burger">
+                <div class="header__burger-line"></div>
+                <div class="header__burger-line"></div>
+                <div class="header__burger-line"></div>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <div class="header__list">
+        <a href="#" class="header__link">Пункт меню</a>
+        <a href="#" class="header__link">Пункт меню</a>
+        <a href="#" class="header__link">Пункт меню</a>
+        <a href="#" class="header__link">Пункт меню</a>
+        <a href="#" class="header__link">Пункт меню</a>
+        <a href="#" class="header__link">Пункт меню</a>
+    </div>
+
+</div>
+
+
+<script>
+
+    $('.header__list').slideUp(0);
+
+    $('.header__menu').click(function(){
+        $('.header__list').slideToggle(300);
+        
+        setTimeout(function(){
+            $('.header__link').toggleClass("header__link--show");
+        }, 300);
+    });
+
+</script>

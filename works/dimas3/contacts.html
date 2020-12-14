@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap" rel="stylesheet">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+	<script>
+		$(document).ready(function() {
+			let t = setTimeout( function() {
+				$.ajax({
+					url: "parts/header.html",
+					cache: true,
+					async: true,
+					success: function(html){
+						$("#header").append(html);
+					}
+				});
+			}, 100 );
+		});
+	</script>
+
+	<div id="header" class="header"></div>
+	<!-- /.header -->
+
+
+    <div class="contacts section section--top">
+        <div class="container-fluid mw1140">
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="contacts__map">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="contacts__contacts">
+                        <div class="dflex dflex--aic">
+                            <img src="img/phone-white.png" alt="" class="contacts__icon">
+                            <div class="contacts__phone">+7 (999) 888 77-22</div>
+                        </div>
+                        <div class="dflex dflex--aic">
+                            <img src="img/mail-white.png" alt="" class="contacts__icon">
+                            <div class="contacts__mail">infoinfo@mail.ru</div>
+                        </div>
+                        <div class="dflex dflex--aic">
+                            <img src="img/clock-white.png" alt="" class="contacts__icon">
+                            <div class="contacts__mail">Пн – Пт. 9:00 – 18:00</div>
+                        </div>
+                        <div class="dflex dflex--aic">
+                            <img src="img/pin-white.png" alt="" class="contacts__icon">
+                            <div class="contacts__mail">Адрес, адресадрес 20</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="dflex dflex--col dflex--aie">
+                        <a href="#" class="contacts__download">
+                            <img src="img/download-white.png" alt="" class="contacts__img">
+                            <div>
+                                <div class="contacts__file">Реквизиты организации</div>
+                                <div class="contacts__size">PDF, 1.7 GB</div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="contacts__download">
+                            <img src="img/download-white.png" alt="" class="contacts__img">
+                            <div>
+                                <div class="contacts__file">Реквизиты организации</div>
+                                <div class="contacts__size">PDF, 1.7 GB</div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="contacts__download">
+                            <img src="img/download-white.png" alt="" class="contacts__img">
+                            <div>
+                                <div class="contacts__file">Реквизиты организации</div>
+                                <div class="contacts__size">PDF, 1.7 GB</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.contacts -->
+
+
+
+
+
+
+
+
+
+	<!-- <script>
+		$(document).ready(function() {
+			let t = setTimeout( function() {
+				$.ajax({
+					url: "parts/footer.html",
+					cache: true,
+					async: true,
+					success: function(html){
+						$("#footer").append(html);
+					}
+				});
+			}, 100 );
+		});
+	</script>
+
+	<div id="footer" class="footer"></div> -->
+	<!-- /.footer -->
+
+</body>
+</html>

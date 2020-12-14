@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap" rel="stylesheet">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+	<script>
+		$(document).ready(function() {
+			let t = setTimeout( function() {
+				$.ajax({
+					url: "parts/header.html",
+					cache: true,
+					async: true,
+					success: function(html){
+						$("#header").append(html);
+					}
+				});
+			}, 100 );
+		});
+	</script>
+
+	<div id="header" class="header"></div>
+	<!-- /.header -->
+
+	<div class="first">
+
+		<div class="first__wall"></div>
+
+		<div class="first__diagonal"></div>
+
+		<div class="first__head">
+			<span class="first__head--1">Ответственность</span><br>
+			<span class="first__head--2">Компетентность</span><br>
+			<span class="first__head--3">Надежность</span>
+		</div>
+
+	</div>
+
+	</div>
+	<!-- /.first -->
+
+	<div class="h_about section">
+		<div class="container-fluid mw1140">
+			<div class="row">
+				<div class="col-12">
+					<div class="title title--right">Наши показатели</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-4">
+					<div class="h_about__card">
+						<div class="h_about__number">50</div>
+						<div class="h_about__title">Проектов реализовано</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="h_about__card">
+						<div class="h_about__number">2000</div>
+						<div class="h_about__title">Кв метров построено</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="h_about__card">
+						<div class="h_about__number">40</div>
+						<div class="h_about__title">Сотрудников в штате</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.h_about -->
+
+	<div class="h_proj section">
+		<div class="container-fluid mw1140">
+			<div class="row">
+				<div class="col-12">
+					<div class="title title--right">Реализованные проекты</div>
+				</div>
+			</div>
+
+			<div class="row dflex justify-content-end">
+				<div class="col-6">
+					<a href="cases.html" target="_blank" class="h_proj__card">
+						<div class="h_proj__title">Нефтезавод</div>
+						<img src="img/zavod.png" alt="" class="h_proj__img">
+					</a>
+				</div>
+				<div class="col-6">
+					<a href="cases.html" target="_blank" class="h_proj__card">
+						<div class="h_proj__title">Нефтезавод</div>
+						<img src="img/zavod.png" alt="" class="h_proj__img">
+					</a>
+				</div>
+				<div class="col-4">
+					<a href="cases.html" target="_blank" class="h_proj__card">
+						<div class="h_proj__title">Нефтезавод</div>
+						<img src="img/zavod.png" alt="" class="h_proj__img">
+					</a>
+				</div>
+				<div class="col-4">
+					<a href="cases.html" target="_blank" class="h_proj__card">
+						<div class="h_proj__title">Нефтезавод</div>
+						<img src="img/zavod.png" alt="" class="h_proj__img">
+					</a>
+				</div>
+				<div class="col-4">
+					<a href="#" target="_blank" class="h_proj__card h_proj__card--last">
+						<div class="h_proj__title h_proj__title--last">Смотреть все проекты</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.h_proj -->
+
+	<div class="h_partn section section--dark">
+		<div class="container-fluid mw1140">
+			<div class="row">
+				<div class="col-12">
+					<div class="title title--right--dark title--right">Наши партнеры</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-3">
+					<img src="img/partn1.png" alt="" class="h_partn__img">
+				</div>
+				<div class="col-3">
+					<img src="img/partn1.png" alt="" class="h_partn__img">
+				</div>
+				<div class="col-3">
+					<img src="img/partn1.png" alt="" class="h_partn__img">
+				</div>
+				<div class="col-3">
+					<img src="img/partn1.png" alt="" class="h_partn__img">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.h_partn -->
+
+	<script>
+		$(document).ready(function() {
+			let t = setTimeout( function() {
+				$.ajax({
+					url: "parts/form.html",
+					cache: true,
+					async: true,
+					success: function(html){
+						$("#form").append(html);
+					}
+				});
+			}, 100 );
+		});
+	</script>
+
+	<div id="form" class="form"></div>
+	<!-- /.form -->
+
+	<script>
+		$(document).ready(function() {
+			let t = setTimeout( function() {
+				$.ajax({
+					url: "parts/footer.html",
+					cache: true,
+					async: true,
+					success: function(html){
+						$("#footer").append(html);
+					}
+				});
+			}, 100 );
+		});
+	</script>
+
+	<div id="footer" class="footer"></div>
+	<!-- /.footer -->
+
+</body>
+</html>

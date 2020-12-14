@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap" rel="stylesheet">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+	<script>
+		$(document).ready(function() {
+			let t = setTimeout( function() {
+				$.ajax({
+					url: "parts/header.html",
+					cache: true,
+					async: true,
+					success: function(html){
+						$("#header").append(html);
+					}
+				});
+			}, 100 );
+		});
+	</script>
+
+	<div id="header" class="header"></div>
+	<!-- /.header -->
+
+
+    
+
+
+
+
+
+
+
+
+
+	<script>
+		$(document).ready(function() {
+			let t = setTimeout( function() {
+				$.ajax({
+					url: "parts/footer.html",
+					cache: true,
+					async: true,
+					success: function(html){
+						$("#footer").append(html);
+					}
+				});
+			}, 100 );
+		});
+	</script>
+
+	<div id="footer" class="footer"></div>
+	<!-- /.footer -->
+
+</body>
+</html>
