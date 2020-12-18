@@ -19,25 +19,6 @@ $(document).ready(function() {
 
 
 
-	$('.single-item').slick({
-		slidesToShow: 2,
-		slidesToScroll: 1,
-		arrows: true,
-		dots: true,
-		//dotsClass: 'dots',
-		prevArrow: "<div class='arrow prev'></div>",
-		nextArrow: "<div class='arrow next'></div>",
-		responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 1
-                }
-            }
-        ]
-	});
-
-
 
 
 

@@ -18,7 +18,6 @@
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/jquery.ui.touch-punch.min.js"></script>
 	<script src="slick/slick.min.js"></script>
-	<script src="js/scripts.js"></script>
 
 </head>
 <body>
@@ -126,38 +125,22 @@
 
 			<div class="works__title">Наши работы</div>
 
-			<div class="works__slider">
-				<div class="single-item">
-					<div class="works__item">
-						<img class="works__img" src="img/slider/l1.png" alt="">
-						<img class="works__img" src="img/slider/l2.png" alt="">
-						<img class="works__img" src="img/slider/l3.png" alt="">
-						<img class="works__img" src="img/slider/l4.png" alt="">
-						<img class="works__img" src="img/slider/l5.png" alt="">
-					</div>
-					<div class="works__item">
-						<img class="works__img" src="img/slider/r1.png" alt="">
-						<img class="works__img" src="img/slider/r2.png" alt="">
-						<img class="works__img" src="img/slider/r3.png" alt="">
-						<img class="works__img" src="img/slider/r4.png" alt="">
-						<img class="works__img" src="img/slider/r5.png" alt="">
-					</div>
-					<div class="works__item">
-						<img class="works__img" src="img/slider/l1.png" alt="">
-						<img class="works__img" src="img/slider/l2.png" alt="">
-						<img class="works__img" src="img/slider/l3.png" alt="">
-						<img class="works__img" src="img/slider/l4.png" alt="">
-						<img class="works__img" src="img/slider/l5.png" alt="">
-					</div>
-					<div class="works__item">
-						<img class="works__img" src="img/slider/r1.png" alt="">
-						<img class="works__img" src="img/slider/r2.png" alt="">
-						<img class="works__img" src="img/slider/r3.png" alt="">
-						<img class="works__img" src="img/slider/r4.png" alt="">
-						<img class="works__img" src="img/slider/r5.png" alt="">
-					</div>
-				</div>
-			</div>
+			<script>
+				$(document).ready(function() {
+					let t = setTimeout( function() {
+						$.ajax({
+							url: "parts/slider.html",
+							cache: true,
+							async: true,
+							success: function(html){
+								$("#slider").append(html);
+							}
+						});
+					}, 1000 );
+				});
+			</script>
+
+			<div id="slider" class="works__slider"></div>
 
 		</div>
 
@@ -177,7 +160,7 @@
 			<div class="order__title">Калькулятор</div>
 			<div class="order__subtitle">цены на самоклеящиеся наклейки</div>
 
-			<div class="calc">
+			<div id="calc" class="calc">
 		
 				<div class="calc__select">
 		
@@ -308,11 +291,24 @@
 				*при заказе от 10 000 руб.
 			</div>
 
-			<div class="order__frame">
-				<div class="order__video">
-					<iframe width="100%" height="auto" src="https://www.youtube.com/embed/aCvlgi1nq_o" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				</div>
-			</div>
+
+
+			<script>
+				$(document).ready(function() {
+					let t = setTimeout( function() {
+						$.ajax({
+							url: "parts/youtube.html",
+							cache: true,
+							async: true,
+							success: function(html){
+								$("#youtube").append(html);
+							}
+						});
+					}, 1000 );
+				});
+			</script>
+
+			<div id="youtube" class="order__frame"></div>
 
 			<div class="order__text">
 				Наша компания занимается изготовлением блокнотов с логотипом с 2005 года. Сделав заказ у нас, вы получите высококачественные изделия, выполненные в неповторимом стиле вашей фирмы. Мы уделяем особое внимание оформлению макета фирменного блокнота, в котором будет кратко и ёмко отображена информация о компании и её логотип. Вы заинтересованы в печати фирменных блокнотов дёшево? Мы предлагаем качественное и недорогое изготовление и печать блокнотов с логотипом, которые станут прекрасным подарком партнёрам и клиентам, великолепным воплощением имиджа компании и отражением её статуса и престижа.<br><br>
@@ -353,7 +349,7 @@
 			<div class="bot__contacts">
 				<div class="bot__info">Консультация и расчет нестандартных наклеек</div>
 				<div class="bot__info">по тел.: <span class="bot__info--span">8-800-775-52-46</span></div>
-				<div class="bot__info">по почте: <span class="bot__info--span">88007755246@mail.ru</span></div>
+				<div class="bot__info">по почте: <span class="bot__info--span">8007755246@mail.ru</span></div>
 			</div>
 
 		</div>
@@ -366,6 +362,8 @@
 	<!-- /.bot -->
 
 	<div class="space"></div>
+
+	<script src="js/scripts.js"></script>
 
 </body>
 </html>
