@@ -1,0 +1,464 @@
+
+.calc
+    position: relative
+    width: 96%
+    max-width: 1000px
+    background: #fff
+    margin: 0px auto
+    min-height: 600px
+    padding: 30px 10px 10px 10px
+    @media ( max-width: 1020px )
+        max-width: 700px
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button
+        -webkit-appearance: none
+    
+    *
+        font-family: 'Play', sans-serif
+
+    &__header
+        text-align: center
+        text-transform: uppercase
+        color: #ff0000
+        font-family: 'Play', sans-serif
+        font-size: 28px
+        font-weight: 900
+        display: flex
+        align-items: center
+        justify-content: center
+        letter-spacing: 0.5px
+        margin: 0 auto 40px auto
+
+        &--span
+            display: block
+            line-height: 22px
+            font-size: 36px
+            margin: 0 3px
+            font-weight: 900
+            
+    &__select
+        display: flex
+        //padding: 0 0 0 10px
+        justify-content: center
+        flex-wrap: wrap
+
+    &__block
+        width: 230px
+        margin: 5px 0
+        display: flex
+        flex-direction: column
+        align-items: center
+
+    &__radio
+        display: none
+
+    &__item
+        display: none
+
+    &__item:checked + .calc__border
+        background: #ff000022
+
+    &__border
+        z-index: 23
+        display: block
+        position: relative
+        border: 3px solid #ff0000
+        margin: 0 0 10px 0
+        border-radius: 10px
+        width: 90%
+        height: 160px
+        transform: skew(-10deg, 0)
+        transition-duration: 0.3s
+        cursor: pointer
+
+        &:hover
+            background: #ff000022
+
+    &__img
+        position: absolute
+        width: 200px
+        height: 167px
+        z-index: 20
+
+    &__title
+        color: #555555
+        font-size: 19px
+        line-height: 1
+        padding: 0 10px 0 0
+        font-family: 'Play', sans-serif
+
+    &__body
+        padding: 0 30px
+        margin: 30px 0 0 0
+        display: flex
+        flex-wrap: wrap
+        @media ( max-width: 1020px )
+            justify-content: center
+        @media ( max-width: 590px )
+            padding: 0
+
+    &__left
+        display: flex
+        flex-wrap: wrap
+        width: 100%
+        max-width: 530px
+        min-width: 530px
+        padding: 0 30px 0 0
+        margin: 0 20px 0 0
+        @media ( max-width: 1020px )
+            margin: 0 0 30px 30px
+        @media ( max-width: 590px )
+            min-width: 100px
+            justify-content: center
+            margin: 0
+            padding: 0
+
+    &__right
+        max-width: 350px
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        @media ( max-width: 1020px )
+            max-width: 460px
+            width: 100%
+            padding: 0 30px 0 0
+        @media ( max-width: 450px )
+            padding: 0
+
+    &__image
+        width: 440px
+        height: 440px
+        border: 15px solid #F0F1F5
+        margin: 0 5px 5px 0
+        display: flex
+        justify-content: center
+        align-items: center
+        @media ( max-width: 590px )
+            width: 310px
+            height: 310px
+        @media ( max-width: 450px )
+            width: 220px
+            height: 220px
+
+    &__picture
+        width: 400px
+        height: 333px
+        display: none
+        @media ( max-width: 590px )
+            width: 250px
+            height: 208px
+        @media ( max-width: 450px )
+            width: 190px
+            height: 158px
+
+        &--show
+            display: block
+
+    &__line
+        position: relative
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+
+        &--450wrap
+            @media ( max-width: 450px )
+                flex-wrap: wrap
+
+        &--hide
+            display: none
+
+    &__text
+        position: relative
+        font-size: 21px
+        text-transform: uppercase
+        font-weight: 900
+        margin: 0 10px 0 0
+        @media ( max-width: 450px )
+            font-size: 17px
+
+        &--dot
+            padding: 0 0 0 22px
+
+            &::before
+                position: absolute
+                content: ""
+                background: #ff0000
+                display: block
+                width: 16px
+                height: 16px
+                border-radius: 50px
+                top: 50%
+                left: 0
+                margin: -8px 0 0 0
+
+    &__input
+        width: 92px
+        height: 36px
+        background: #F0F1F5
+        color: #333
+        margin: 3px 0
+        border: none
+        padding: 0 5px
+        font-size: 20px
+        font-weight: 600
+        text-align: right
+        @media ( max-width: 450px )
+            font-size: 18px
+            width: 69px
+
+        &--itog
+            width: 150px
+
+    &__label
+        display: block
+        font-size: 18px
+        color: #444
+        padding: 0 0 0 28px
+        margin: 5px 0 5px 22px
+        position: relative
+        cursor: pointer
+        @media ( max-width: 450px )
+            font-size: 16px
+
+        &--last
+            margin: 5px 0 15px 22px
+
+        &--sm
+            font-size: 16px
+
+        &--hide
+            display: none
+
+        &::before
+            content: ""
+            display: block
+            border-radius: 50px
+            width: 18px
+            height: 18px
+            background: linear-gradient(175deg, #F8F8F8 15%, #d1d1d1 21%, #FBFBFB 32%, #F8F8F8 61.52%, #BEBEBE 69.91%, #050505 86.25%)
+            border: 1px solid #ddd
+            position: absolute
+            left: 0
+            top: 2px
+
+        &::after
+            content: ""
+            display: block
+            position: absolute
+            width: 10px
+            height: 10px
+            background: #fff
+            top: 6px
+            left: 4px
+            border-radius: 30px
+            border: 1px solid #a3a3a3
+
+    &__radio:checked + .calc__label::after
+        background: linear-gradient(177.37deg, #e2e2ff 30%, #0F0D97 95.44%)
+        border: 1px solid #5a5a5a88
+
+    &__slider1
+        position: relative
+        width: 54px
+        height: 440px
+        padding: 0 0px 0 0
+        @media ( max-width: 590px )
+            height: 330px
+        @media ( max-width: 450px )
+            height: 250px
+
+        &::before
+            content: "мм"
+            display: block
+            position: absolute
+            top: 10px
+            right: -30px
+            font-size: 15px
+            color: #777
+            @media ( max-width: 450px )
+                content: ""
+
+    &__slider2
+        position: relative
+        width: 440px
+        height: 32px
+        display: flex
+        align-items: center
+        @media ( max-width: 590px )
+            width: 320px
+            margin: 0 50px 30px 0
+        @media ( max-width: 450px )
+            width: 250px
+            margin: 0 0 30px 0 
+
+        &--hide
+            display: none
+
+        &::before
+            content: "мм"
+            display: block
+            position: absolute
+            top: 10px
+            right: -30px
+            font-size: 15px
+            color: #777
+            @media ( max-width: 450px )
+                content: ""
+
+    &__slidervalue1
+        width: 100%
+        position: relative
+        height: 32px
+        background: #F0F1F5
+        border: none
+        padding: 0 5px
+        font-size: 18px
+        text-align: center
+
+    &__slidervalue2
+        width: 54px
+        position: relative
+        height: 32px
+        background: #F0F1F5
+        border: none
+        padding: 0 5px
+        font-size: 18px
+        text-align: center
+
+    &__sliderdiv1
+        height: 360px !important
+        position: relative
+        margin: 45px auto 0px auto
+        @media ( max-width: 590px )
+            height: 230px !important
+        @media ( max-width: 450px )
+            height: 145px !important
+
+        &::before
+            content: ""
+            display: block
+            position: absolute
+            background: linear-gradient(180deg, #F0F1F5 96%, #ff0000 97%)
+            height: 405px
+            width: 13px
+            bottom: -0px
+            @media ( max-width: 590px )
+                height: 190px
+
+
+    &__sliderdiv2
+        width: 375px !important
+        position: relative
+        margin: 0px 35px 0 10px
+        position: relative
+        z-index: 29
+        @media ( max-width: 590px )
+            width: 235px !important
+            margin: 0 35px 0 0
+        @media ( max-width: 450px )
+            width: 170px !important
+
+        &::before
+            content: ""
+            display: block
+            position: absolute
+            background: linear-gradient(90deg, #ff0000 3%, #F0F1F5 4%)
+            width: 387px
+            height: 13px
+            left: -10px
+            @media ( max-width: 590px )
+                width: 267px
+                left: 0
+            @media ( max-width: 450px )
+                width: 197px
+
+    &__price
+        color: #aaa
+        // position: absolute
+        // right: 0
+        // bottom: -20px
+        text-align: right
+        padding: 0 5px
+        margin: 4px 0 0px 0
+        
+        &--margin
+            margin: 4px 0 41px 0
+
+    &__alert
+        font-size: 17px
+        margin: 12px 0 5px 0
+        text-align: center
+        color: #ff0000
+        border: 1px dashed #ff0000
+        border-radius: 3px
+        padding: 4px 5px 4px 5px
+        display: none
+
+        &--show
+            display: block
+
+    &__order
+        display: flex
+        justify-content: flex-end
+        margin: 10px 0
+        padding: 0 30px 0 0
+        width: 100%
+        @media ( max-width: 1020px )
+            justify-content: center
+            padding: 0
+
+    &__btn
+        width: 150px
+        background: #ff0000
+        text-transform: uppercase
+        color: #fff
+        text-align: center
+        border-radius: 10px
+        font-weight: 900
+        letter-spacing: 1.5px
+        transition-duration: 0.3s
+        cursor: pointer
+        font-size: 18px
+        padding: 10px
+        line-height: 16px
+
+        &--span
+            font-size: 14px
+            font-weight: 400
+
+        &:hover
+            opacity: 0.7
+
+
+
+
+
+
+
+.ui-slider
+    background: #ddd !important
+    //height: 10px !important
+    border: none !important
+
+.ui-slider-range
+    background: #ff0000 !important
+
+.ui-slider-handle
+    border-radius: 10px !important
+    border: none !important
+    outline: none !important
+    cursor: pointer !important
+    box-shadow: 0 3px 10px 0px rgba(0,0,0,0.1)
+
+.calc__sliderdiv2 .ui-slider-handle
+    background: url("../img/btn2.png") no-repeat !important 
+    width: 44px !important
+    height: 24px !important
+
+.calc__sliderdiv1 .ui-slider-handle
+    background: url("../img/btn.png") no-repeat !important 
+    width: 24px !important
+    height: 44px !important
+    margin: 0 0 0 -1px !important

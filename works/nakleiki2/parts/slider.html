@@ -1,0 +1,54 @@
+<div class="single-item">
+    <div class="works__item">
+        <img class="works__img" src="img/slider/l1.png" alt="">
+        <img class="works__img" src="img/slider/l2.png" alt="">
+        <img class="works__img" src="img/slider/l3.png" alt="">
+        <img class="works__img" src="img/slider/l4.png" alt="">
+        <img class="works__img" src="img/slider/l5.png" alt="">
+    </div>
+    <div class="works__item">
+        <img class="works__img" src="img/slider/r1.png" alt="">
+        <img class="works__img" src="img/slider/r2.png" alt="">
+        <img class="works__img" src="img/slider/r3.png" alt="">
+        <img class="works__img" src="img/slider/r4.png" alt="">
+        <img class="works__img" src="img/slider/r5.png" alt="">
+    </div>
+    <div class="works__item">
+        <img class="works__img" src="img/slider/l1.png" alt="">
+        <img class="works__img" src="img/slider/l2.png" alt="">
+        <img class="works__img" src="img/slider/l3.png" alt="">
+        <img class="works__img" src="img/slider/l4.png" alt="">
+        <img class="works__img" src="img/slider/l5.png" alt="">
+    </div>
+    <div class="works__item">
+        <img class="works__img" src="img/slider/r1.png" alt="">
+        <img class="works__img" src="img/slider/r2.png" alt="">
+        <img class="works__img" src="img/slider/r3.png" alt="">
+        <img class="works__img" src="img/slider/r4.png" alt="">
+        <img class="works__img" src="img/slider/r5.png" alt="">
+    </div>
+</div>
+
+<script>
+
+    $(document).ready(function(){
+        $('.single-item').slick({
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: true,
+            //dotsClass: 'dots',
+            prevArrow: "<div class='arrow__prev'></div>",
+            nextArrow: "<div class='arrow__next'></div>",
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    });
+
+</script>
