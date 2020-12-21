@@ -18,18 +18,24 @@ $(document).ready(function() {
 	});
 
 
+	var date = new Date();
+	var dateDay = date.getDate();
+	var dateMonth = date.getMonth() + 1;
 
+	if ( dateMonth == 1 )  { if ( dateDay > 14 ) { var timer_date = "15 по 31 января"; 		} else { var timer_date = "1 по 15 января"; }}
+	if ( dateMonth == 2 )  { if ( dateDay > 14 ) { var timer_date = "15 по 28 февраля"; 	} else { var timer_date = "1 по 15 февраля"; }}
+	if ( dateMonth == 3 )  { if ( dateDay > 14 ) { var timer_date = "15 по 31 марта"; 		} else { var timer_date = "1 по 15 марта"; }}
+	if ( dateMonth == 4 )  { if ( dateDay > 14 ) { var timer_date = "15 по 30 апреля"; 		} else { var timer_date = "1 по 15 апреля"; }}
+	if ( dateMonth == 5 )  { if ( dateDay > 14 ) { var timer_date = "15 по 31 мая"; 		} else { var timer_date = "1 по 15 мая"; }}
+	if ( dateMonth == 6 )  { if ( dateDay > 14 ) { var timer_date = "15 по 30 июня"; 		} else { var timer_date = "1 по 15 июня"; }}
+	if ( dateMonth == 7 )  { if ( dateDay > 14 ) { var timer_date = "15 по 31 июля"; 		} else { var timer_date = "1 по 15 июля"; }}
+	if ( dateMonth == 8 )  { if ( dateDay > 14 ) { var timer_date = "15 по 31 августа"; 	} else { var timer_date = "1 по 15 августа"; }}
+	if ( dateMonth == 9 )  { if ( dateDay > 14 ) { var timer_date = "15 по 30 сентября";	} else { var timer_date = "1 по 15 сентября"; }}
+	if ( dateMonth == 10 ) { if ( dateDay > 14 ) { var timer_date = "15 по 31 октября"; 	} else { var timer_date = "1 по 15 октября"; }}
+	if ( dateMonth == 11 ) { if ( dateDay > 14 ) { var timer_date = "15 по 30 ноября"; 		} else { var timer_date = "1 по 15 ноября"; }}
+	if ( dateMonth == 12 ) { if ( dateDay > 14 ) { var timer_date = "15 по 31 декабря"; 	} else { var timer_date = "1 по 15 декабря"; }}
 
-
-
-
-
-
-
-
-
-
-
+	$('#timer').text("C " + timer_date + " БЕСПЛАТНЫЙ дизайн и макет вашей фирменной наклейки!*");
 
 
 

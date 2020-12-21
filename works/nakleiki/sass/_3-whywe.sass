@@ -29,7 +29,7 @@
         text-align: right
         z-index: 29
         max-width: 1300px
-        padding: 0 60px 0 0
+        padding: 0 110px 0 0
         margin: 0 auto
         @media ( max-width: 1580px )
             padding: 0 140px 0 0
@@ -58,45 +58,98 @@
         position: relative
         display: flex
         justify-content: space-between
-        margin: 0
-        @media ( max-width: 1350px )
+        margin: 0 auto
+        @media ( max-width: 1560px )
             flex-wrap: wrap
             justify-content: center
             padding: 90px 0 20px 0
+            max-width: 1320px
 
     &__sticker
         position: relative
 
-    &__img
-        width: 90%
-        position: relative
-        margin: 0 auto
-        display: block
-        @media ( max-width: 1350px )
-            width: 300px
-            height: 300px
-            padding: 10px
+    &__circle
+        width: 300px
+        height: 300px
+        background: url("../img/circle.webp") no-repeat
+        background-size: cover
+        display: flex
+        justify-content: center
+        align-items: center
+        @media ( max-width: 1560px )
+            margin: 10px 20px
+        @media ( max-width: 399px )
+            width: 260px
+            height: 260px
 
         &--1
             margin-top: 0px
-            @media ( max-width: 1350px )
+            @media ( max-width: 1560px )
                 margin-top: 0
         &--2
-            margin-top: 150px
-            @media ( max-width: 1350px )
+            margin-top: 200px
+            @media ( max-width: 1560px )
                 margin-top: 0
         &--3
             margin-top: 25px
-            @media ( max-width: 1350px )
+            @media ( max-width: 1560px )
                 margin-top: 0
         &--4
             margin-top: 240px
-            @media ( max-width: 1350px )
+            @media ( max-width: 1560px )
                 margin-top: 0
         &--5
             margin-top: 80px
             @media ( max-width: 1350px )
                 margin-top: 0
+
+    &__text
+        font-size: 19px
+        font-weight: 900
+        color: #df0007
+        padding: 50px 50px 50px 50px
+        text-align: center
+        @media ( max-width: 399px )
+            font-size: 16px
+            line-height: 1.1
+
+        &--span
+            font-size: 19px
+            text-transform: uppercase
+            text-shadow: 0 0 1px #c40006
+            @media ( max-width: 399px )
+                font-size: 17px
+
+    // &__img
+    //     width: 90%
+    //     position: relative
+    //     margin: 0 auto
+    //     display: block
+    //     @media ( max-width: 1350px )
+    //         width: 300px
+    //         height: 300px
+    //         padding: 10px
+
+    //     &--1
+    //         margin-top: 0px
+    //         @media ( max-width: 1350px )
+    //             margin-top: 0
+    //     &--2
+    //         margin-top: 150px
+    //         @media ( max-width: 1350px )
+    //             margin-top: 0
+    //     &--3
+    //         margin-top: 25px
+    //         @media ( max-width: 1350px )
+    //             margin-top: 0
+    //     &--4
+    //         margin-top: 240px
+    //         @media ( max-width: 1350px )
+    //             margin-top: 0
+    //     &--5
+    //         margin-top: 80px
+    //         @media ( max-width: 1350px )
+    //             margin-top: 0
             
 
     &__shape3

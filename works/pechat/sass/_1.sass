@@ -1,12 +1,23 @@
 
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: sans-serif
+
+body
+    position: relative
+    background: #e6e6e6
+
 .calc
     position: relative
     width: 96%
     max-width: 1000px
     background: #fff
-    margin: 0px auto
+    margin: 100px auto
     min-height: 600px
-    padding: 30px 10px 10px 10px
+    padding: 30px 10px
     @media ( max-width: 1020px )
         max-width: 700px
 
@@ -20,7 +31,7 @@
     &__header
         text-align: center
         text-transform: uppercase
-        color: #ff0000
+        color: #C40006
         font-family: 'Play', sans-serif
         font-size: 28px
         font-weight: 900
@@ -57,13 +68,13 @@
         display: none
 
     &__item:checked + .calc__border
-        background: #ff000022
+        background: #C4000622
 
     &__border
         z-index: 23
         display: block
         position: relative
-        border: 3px solid #ff0000
+        border: 3px solid #C40006
         margin: 0 0 10px 0
         border-radius: 10px
         width: 90%
@@ -73,7 +84,7 @@
         cursor: pointer
 
         &:hover
-            background: #ff000022
+            background: #C4000622
 
     &__img
         position: absolute
@@ -90,7 +101,7 @@
 
     &__body
         padding: 0 30px
-        margin: 30px 0 0 0
+        margin: 30px 0
         display: flex
         flex-wrap: wrap
         @media ( max-width: 1020px )
@@ -184,7 +195,7 @@
             &::before
                 position: absolute
                 content: ""
-                background: #ff0000
+                background: #C40006
                 display: block
                 width: 16px
                 height: 16px
@@ -340,7 +351,7 @@
             content: ""
             display: block
             position: absolute
-            background: linear-gradient(180deg, #F0F1F5 96%, #ff0000 97%)
+            background: linear-gradient(180deg, #F0F1F5 96%, #C40006 97%)
             height: 405px
             width: 13px
             bottom: -0px
@@ -364,7 +375,7 @@
             content: ""
             display: block
             position: absolute
-            background: linear-gradient(90deg, #ff0000 3%, #F0F1F5 4%)
+            background: linear-gradient(90deg, #C40006 3%, #F0F1F5 4%)
             width: 387px
             height: 13px
             left: -10px
@@ -390,8 +401,8 @@
         font-size: 17px
         margin: 12px 0 5px 0
         text-align: center
-        color: #ff0000
-        border: 1px dashed #ff0000
+        color: #C40006
+        border: 1px dashed #C40006
         border-radius: 3px
         padding: 4px 5px 4px 5px
         display: none
@@ -411,22 +422,19 @@
 
     &__btn
         width: 150px
-        background: #ff0000
+        height: 48px
+        background: #C40006
         text-transform: uppercase
         color: #fff
-        text-align: center
+        display: flex
+        justify-content: center
+        align-items: center
         border-radius: 10px
         font-weight: 900
         letter-spacing: 1.5px
         transition-duration: 0.3s
         cursor: pointer
         font-size: 18px
-        padding: 10px
-        line-height: 16px
-
-        &--span
-            font-size: 14px
-            font-weight: 400
 
         &:hover
             opacity: 0.7
@@ -443,7 +451,7 @@
     border: none !important
 
 .ui-slider-range
-    background: #ff0000 !important
+    background: #C40006 !important
 
 .ui-slider-handle
     border-radius: 10px !important
@@ -453,12 +461,12 @@
     box-shadow: 0 3px 10px 0px rgba(0,0,0,0.1)
 
 .calc__sliderdiv2 .ui-slider-handle
-    background: url("../img/min/btn2-min.png") no-repeat !important 
+    background: url("../img/btn2.png") no-repeat !important 
     width: 44px !important
     height: 24px !important
 
 .calc__sliderdiv1 .ui-slider-handle
-    background: url("../img/min/btn-min.png") no-repeat !important 
+    background: url("../img/btn.png") no-repeat !important 
     width: 24px !important
     height: 44px !important
     margin: 0 0 0 -1px !important

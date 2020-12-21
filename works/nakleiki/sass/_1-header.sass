@@ -8,19 +8,27 @@
     border-bottom: 8px solid #dadada
     z-index: 199
     top: 0
+    display: flex
+    justify-content: center
+
+    &__w100
+        position: relative
+        width: 100%
+        background: #000
+        height: 100px
+        max-width: 1494px
 
     &__wrap
         position: relative
         width: 100%
         height: 100%
-        max-width: 1478px
-        padding: 0 15px
+        max-width: 1494px
+        padding: 0 20px
         display: flex
         align-items: center
-        margin: 0 auto
-        @media ( max-width: 1478px )
-            justify-content: space-between
-            
+        justify-content: space-between
+        // @media ( max-width: 1478px )
+        //     justify-content: space-between
 
     &__logo
         position: relative
@@ -94,10 +102,10 @@
             opacity: 0.5
 
     &__contact
-        padding: 0 20px
+        padding: 0 0 0 20px
         display: flex
         flex-direction: column
-        align-items: center
+        align-items: flex-end
         cursor: pointer
         @media ( max-width: 650px )
             width: 300px

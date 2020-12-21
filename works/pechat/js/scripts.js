@@ -1,53 +1,5 @@
 $(document).ready(function() {
 
-	function form() {
-		$('.form').toggleClass("form--hide");
-	}
-
-	$('.header__btn').click(function(){
-		$('.form__input--order').val("");
-		form();
-	});
-	$('.header__contact').click(function(){
-		$('.form__input--order').val("");
-		form();
-	});
-	$('.form__close').click(function(){
-		form();
-		$('.form__input--order').val("");
-	});
-
-
-	var date = new Date();
-	var dateDay = date.getDate();
-	var dateMonth = date.getMonth() + 1;
-
-	if ( dateMonth == 1 )  { if ( dateDay > 14 ) { var timer_date = "15 по 31 января"; 		} else { var timer_date = "1 по 15 января"; }}
-	if ( dateMonth == 2 )  { if ( dateDay > 14 ) { var timer_date = "15 по 28 февраля"; 	} else { var timer_date = "1 по 15 февраля"; }}
-	if ( dateMonth == 3 )  { if ( dateDay > 14 ) { var timer_date = "15 по 31 марта"; 		} else { var timer_date = "1 по 15 марта"; }}
-	if ( dateMonth == 4 )  { if ( dateDay > 14 ) { var timer_date = "15 по 30 апреля"; 		} else { var timer_date = "1 по 15 апреля"; }}
-	if ( dateMonth == 5 )  { if ( dateDay > 14 ) { var timer_date = "15 по 31 мая"; 		} else { var timer_date = "1 по 15 мая"; }}
-	if ( dateMonth == 6 )  { if ( dateDay > 14 ) { var timer_date = "15 по 30 июня"; 		} else { var timer_date = "1 по 15 июня"; }}
-	if ( dateMonth == 7 )  { if ( dateDay > 14 ) { var timer_date = "15 по 31 июля"; 		} else { var timer_date = "1 по 15 июля"; }}
-	if ( dateMonth == 8 )  { if ( dateDay > 14 ) { var timer_date = "15 по 31 августа"; 	} else { var timer_date = "1 по 15 августа"; }}
-	if ( dateMonth == 9 )  { if ( dateDay > 14 ) { var timer_date = "15 по 30 сентября";	} else { var timer_date = "1 по 15 сентября"; }}
-	if ( dateMonth == 10 ) { if ( dateDay > 14 ) { var timer_date = "15 по 31 октября"; 	} else { var timer_date = "1 по 15 октября"; }}
-	if ( dateMonth == 11 ) { if ( dateDay > 14 ) { var timer_date = "15 по 30 ноября"; 		} else { var timer_date = "1 по 15 ноября"; }}
-	if ( dateMonth == 12 ) { if ( dateDay > 14 ) { var timer_date = "15 по 31 декабря"; 	} else { var timer_date = "1 по 15 декабря"; }}
-
-	$('#timer').text("C " + timer_date + " БЕСПЛАТНЫЙ дизайн и макет вашей фирменной наклейки!*");
-
-
-
-
-
-
-
-
-
-
-
-
 	$('.calc__border').click(function(){
 		var calc_item = $(this).prev(".calc__item").val();
 		//console.log(calc_item);
@@ -371,46 +323,49 @@ $(document).ready(function() {
 		$('.calc__price').text( calc_price.toFixed(1) + " руб/шт" );
 
 
-		if ( calc_material == 4) {
-			var calc_material_name = "Бумажная самоклейка";
-		}
-		if ( calc_material == 1) {
-			var calc_material_name = "Виниловая пленка";
-		}
-		if ( calc_material == 3) {
-			var calc_material_name = "Прозрачная пленка";
-		}
-
-		if ( calc_lamination == 1) {
-			var calc_lamination_name = "Без ламинации";
-		}
-		if ( calc_lamination == 2) {
-			var calc_lamination_name = "Глянцевая";
-		}
-		if ( calc_lamination == 3) {
-			var calc_lamination_name = "Матовая";
-		}
 
 
-		$('.form__input--order').val( 
-			" | Ширина: " + calc_height + 
-			" | Высота: " + calc_width + 
-			" | Штук: " + calc_shtuk + 
-			" | Виды: " + calc_vid +
-			" | Форма наклеек: " + calc_form +
-			" | Материал: " + calc_material_name +
-			" | Ламинация: " + calc_lamination_name +
-			" | Итого сумма: " + calc_result.toFixed(0) + " |"
-		);
 
 
+
+
+		// if ( calc_form == 1 ) {
+		// 	var calc_size = +$( "#result-polzunok1" ).val();
+		// 	console.log(calc_size);
+		// } else {
+		// 	var calc_size = (+$( "#result-polzunok1" ).val() + +$( "#result-polzunok2" ).val()) / 2;
+		// 	console.log(calc_size);
+		// }
+
+		// if ( calc_form == 3 ) {
+		// 	var calc_k3 = 1.2;
+		// } else {
+		// 	var calc_k3 = 1;
+		// }
+
+		
+		// if ( calc_lamination == 1 ) {
+		// 	var calc_k2 = 1;
+		// } else {
+		// 	if ( calc_form == 4 ) {
+		// 		var calc_k2 = 1.35;
+		// 	} else {
+		// 		var calc_k2 = 1.2;
+		// 	}
+			
+			
+		// }
+
+ 
+		// var calc_result = ((( 4 + ( 0.039 * +calc_size ) ) * +calc_size * +calc_shtuk / 100 ) * +calc_k1 * +calc_k2 * +calc_k3 * +calc_k4 * +calc_k5 ) + +calc_vid_sum;
+
+		// $('#calc_itog').val( calc_result.toFixed(0) + " руб" );
+
+		// var calc_price = calc_result / calc_shtuk;
+
+		// $('.calc__price').text( calc_price.toFixed(1) + " руб/шт" );
 
 	};
-
-	$('.calc__btn').click(function(){
-		calculation();
-		form();
-	});
 
 
 });
