@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8" />
+	<title>BIZNESDAR</title>
+	<meta name="description" content="BIZNESDAR" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/style-2.css" />
+	<link rel="stylesheet" href="css/footer-new.css" />
+	<link rel="stylesheet" href="css/jquery.fancybox.css" />
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="css/main.css" />
+
+	<link rel='stylesheet' href="slick/slick.css">
+	<link rel='stylesheet' href="slick/slick-theme.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="slick/slick.min.js"></script>
+
+
+	<!-- <link rel="stylesheet" href="css/main.css">
+	<script src="js/scripts.js"></script> -->
+
+</head>
+
+<body class="main-page">
+	<header id="header">
+		<div class="container">
+			<div class="header-container">
+				<a href="/" class="logo">
+					<img src="images/logo_new.png" alt="Логотип" />
+				</a>
+				<div class="header-menu">
+					<menu>
+						<li>
+							<a href="student.html"> Студент </a>
+						</li>
+						<li>
+							<a href="businessman.html"> Предприниматель </a>
+						</li>
+						<li>
+							<a href="business.html"> Бизнес </a>
+						</li>
+						<li>
+							<a href="investment.html"> Инвестиции </a>
+						</li>
+						<!-- <li>
+							<a class="ierog" href="factory.html"> 世界工厂 </a>
+						</li> -->
+						<li class="mobmenu">
+							<a href="logistics.html">
+								BIZNESDAR<span class="mobmenuspan"> ЛОГИСТИКА</span>
+							</a>
+						</li>
+						<li class="mobmenu">
+							<a href="bookkeeping.html">
+								BIZNESDAR <span class="mobmenuspan">БУХГАЛТЕРИЯ</span>
+							</a>
+						</li>
+						<li class="mobmenu">
+							<a href="#">
+								BIZNESDAR <span class="mobmenuspan">ИНСТРУКЦИЯ</span>
+							</a>
+						</li>
+						<li class="mobmenu">
+							<a href="#"> Политика конфиденциальности </a>
+						</li>
+						<li class="mobmenu">
+							<a href="#"> Пользовательское соглашение </a>
+						</li>
+					</menu>
+				</div>
+				<div class="header-actions">
+					<div class="header-menu-button d-md-none">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<!-- <a href="task.html" class="header-profile header-profile--tree "></a> -->
+					<a href="#" class="header-profile header-profile--bd "></a>
+					<a href="tel:88007517300" class="header-contact phone"></a>
+					<a href="http://www.my.biznesdar.ru/" class="header-profile"></a>
+
+				</div>
+
+			</div>
+		</div>
+		<div class="header-menu d-md-none" id="mob-header-menu">
+			<div class="header-container">
+				<a href="/" class="logo">
+					<img src="images/logo_new.png" alt="Логотип">
+				</a>
+				<div class="header-menu">
+					<menu>
+						<li>
+							<a href="student.html"> Студент </a>
+						</li>
+						<li>
+							<a href="businessman.html"> Предприниматель </a>
+						</li>
+						<li>
+							<a href="business.html"> Бизнес </a>
+						</li>
+						<li>
+							<a href="investment.html"> Инвестиции </a>
+						</li>
+						<li>
+							<a class="ierog" href="factory.html"> 世界工厂 </a>
+						</li>
+						<li class="mobmenu">
+							<a href="logistics.html">
+								BIZNESDAR<span class="mobmenuspan"> ЛОГИСТИКА</span>
+							</a>
+						</li>
+						<li class="mobmenu">
+							<a href="bookkeeping.html">
+								BIZNESDAR <span class="mobmenuspan">БУХГАЛТЕРИЯ</span>
+							</a>
+						</li>
+						<li class="mobmenu">
+							<a href="#">
+								BIZNESDAR <span class="mobmenuspan">ИНСТРУКЦИЯ</span>
+							</a>
+						</li>
+						<li class="mobmenu">
+							<a href="#"> Политика конфиденциальности </a>
+						</li>
+						<li class="mobmenu">
+							<a href="#"> Пользовательское соглашение </a>
+						</li>
+					</menu>
+				</div>
+				<div class="header-actions">
+					<div class="header-menu-button d-md-none show">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<a href="task.html" class="header-profile header-profile--tree "></a>
+					<a href="#" class="header-profile header-profile--bd "></a>
+					<a href="tel:88007517300" class="header-contact phone"></a>
+					<a href="http://www.my.biznesdar.ru/" class="header-profile"></a>
+				</div>
+			</div>
+			<menu>
+				<li class="busness__item">
+					<a href="business-community-programs.html">
+						<span>BIZNESDAR</span>
+					</a>
+				</li>
+				<li class="busness__item">
+					<a href="pro-programs.html">
+						<span>BIZNESDAR</span>
+						<span class="main--new__link">PRO</span>
+					</a>
+				</li>
+				<li class="busness__item">
+					<a href="#">
+						<span>BIZNESDAR</span>
+						<span class="main--new__link">MARKET</span>
+					</a>
+				</li>
+				<li class="busness__item">
+					<a href="logistics.html">
+						<span>BIZNESDAR</span>
+						<span class="main--new__link">ЛОГИСТИКА</span>
+					</a>
+				</li>
+				<li class="busness__item">
+					<a href="bookkeeping.html">
+						<span>BIZNESDAR</span>
+						<span class="main--new__link">БУХГАЛТЕРИЯ</span>
+					</a>
+				</li>
+				<li class="busness__item">
+					<a href="instruction.html">
+						<span>BIZNESDAR</span>
+						<span class="main--new__link">ИНСТРУКЦИЯ</span>
+					</a>
+				</li>
+				<li class="busness__item">
+					<a href="#">
+						<span>BIZNESDAR</span>
+						<span class="main--new__link">IT</span>
+					</a>
+				</li>
+				<li class="busness__item">
+					<a href="#">
+						<span>BIZNESDAR</span>
+						<span class="main--new__link">BANK</span>
+					</a>
+				</li>
+				<li class="busness__item">
+					<a href="#">
+						<span>BIZNESDAR </span>
+						<span class="main--new__link">АRKHITEKTURA</span>
+					</a>
+				</li>
+				<li class="main">
+					<a href="student.html"> Студент </a>
+				</li>
+				<li class="add">
+					<a href="student-program.html"> Программа </a>
+				</li>
+				<li class="add">
+					<a href="#"> Контракт </a>
+				</li>
+				<li class="add">
+					<a href="#"> Тариф </a>
+				</li>
+				<li class="main">
+					<a href="businessman.html"> Предприниматель </a>
+				</li>
+				<li class="add">
+					<a href="entrepreneur-program.html"> Программа </a>
+				</li>
+				<li class="add">
+					<a href="#"> Контракт </a>
+				</li>
+				<li class="add">
+					<a href="#"> Тариф </a>
+				</li>
+				<li class="main">
+					<a href="business.html"> Бизнес </a>
+				</li>
+				<li class="add">
+					<a href="buisness-programm.html"> Программа </a>
+				</li>
+				<li class="add">
+					<a href="#"> Контракт </a>
+				</li>
+				<li class="add">
+					<a href="#"> Тариф </a>
+				</li>
+				<li>
+					<a href="investment.html"> Инвестиции </a>
+				</li>
+				<li class="add">
+					<a href="investment-programs.html"> Программа </a>
+				</li>
+				<li class="add">
+					<a href="#"> Контракт </a>
+				</li>
+				<li class="add">
+					<a href="#"> Тариф </a>
+				</li>
+				<li>
+					<a class="ierog" href="factory.html"> 世界工厂 </a>
+				</li>
+				<li class="policy">
+					<a href="#">Политика конфиденциальности</a>
+				</li>
+				<li class="agreement">
+					<a href="#">Пользовательское соглашение</a>
+				</li>
+			</menu>
+		</div>
+	</header>
+
+	<div id="content">
+		<div class="intro__logo">
+			<img src="images/logo_big_new.png" alt="Платформа для предпринимателей" />
+		</div>
+	</div>
+
+
+
+	<!-- <div id="popup" class="popup">
+		<div class="popup__container">
+			<div class="popup-title">Заказать звонок</div>
+			<div class="popup-form">
+				<div class="popup__text">Оставить заявку на обратный звонок</div>
+				<form id="popup-form">
+					<div class="form-control name">
+						<input minlength="10" maxlength="11" name="popup-phone" type="tel" placeholder="+7__________" id="popup-form-phone" required />
+					</div>
+					<div class="form-control checkbox">
+						<input name="popup-checkbox" type="checkbox" id="popup-checkbox" required />
+						<label for="popup-checkbox">Я согласен с использованием <br />
+							платформы BIZNESDAR</label>
+					</div>
+					<button id="popup-order-button" class="button blue" type="submit">
+						Оставить заявку
+					</button>
+					<div class="form-info__tip">Согласие обязательно</div>
+				</form>
+			</div>
+		</div>
+	</div> -->
+
+	<div id="popup2" class="popup2">
+
+		<div class="popup2__black"></div>
+
+		<div class="popup2__body">
+
+			<div class="popup2__close"></div>
+
+			<div class="popup2__wrap">
+				<div class="popup2__title">Заказать звонок</div>
+				<div class="popup2__text">Оставить заявку на обратный звонок</div>
+				<form id="popup2-form">
+	
+					<input class="popup2__input" minlength="10" maxlength="11" name="popup-phone" type="tel" placeholder="+7  __________________________" id="popup2-form-phone" required />
+					
+					<div class="popup2__flex">
+						<input class="popup2__checkbox" name="popup-checkbox" type="checkbox" id="popup2-checkbox" required />
+						<label class="popup2__label" for="popup2-checkbox">Я согласен с условиями использования платформы BIZNESDAR</label>
+					</div>
+	
+					<button id="popup2-order-button" class="popup2__btn" type="submit">Продолжить</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="servs">
+		<div class="servs__wrap">
+			<div class="servs__flex">
+				<a href="#" class="servs__block"><img class="servs__img" src="images/servs/1.png"  alt="">世界工厂</a>
+				<a href="#" class="servs__block"><img class="servs__img" src="images/servs/2.png"  alt="">Biznesdar</a>
+				<a href="#" class="servs__block"><img class="servs__img" src="images/servs/3.png"  alt="">Инструкция</a>
+				<a href="#" class="servs__block"><img class="servs__img" src="images/servs/4.png"  alt="">Бухгалтерия</a>
+				<a href="#" class="servs__block"><img class="servs__img" src="images/servs/5.png"  alt="">Логистика</a>
+				<a href="#" class="servs__block"><img class="servs__img" src="images/servs/6.png"  alt="">Market</a>
+				<a href="#" class="servs__block"><img class="servs__img" src="images/servs/7.png"  alt="">Pro</a>
+				<a href="#" class="servs__block"><img class="servs__img" src="images/servs/8.png"  alt="">It</a>
+				<a href="#" class="servs__block"><img class="servs__img" src="images/servs/9.png"  alt="">Сообщество</a>
+				<a href="#" class="servs__block"><img class="servs__img" src="images/servs/10.png" alt="">Клуб</a>
+				<a href="#" class="servs__block"><img class="servs__img" src="images/servs/11.png" alt="">Ранчо</a>
+				<a href="#" class="servs__block"><img class="servs__img" src="images/servs/12.png" alt="">Архитектура</a>
+				<a href="#" class="servs__block"><img class="servs__img" src="images/servs/13.png" alt="">Банк</a>
+				<a href="#" class="servs__block"><img class="servs__img" src="images/servs/14.png" alt="">Совет</a>
+				<a href="#" class="servs__block"><img class="servs__img" src="images/servs/15.png" alt="">Фонд</a>
+				<a href="#" class="servs__block"><img class="servs__img" src="images/servs/16.png" alt="">Кодекс</a>
+			</div>
+
+			<div class="servs__banner">
+				<div class="single-item">
+					<img class="servs__image" src="images/banner/1.png" alt="">
+					<img class="servs__image" src="images/banner/2.png" alt="">
+					<img class="servs__image" src="images/banner/3.png" alt="">
+					<img class="servs__image" src="images/banner/4.png" alt="">
+					<img class="servs__image" src="images/banner/5.png" alt="">
+					<img class="servs__image" src="images/banner/6.png" alt="">
+					<img class="servs__image" src="images/banner/7.png" alt="">
+					<img class="servs__image" src="images/banner/8.png" alt="">
+					<img class="servs__image" src="images/banner/9.png" alt="">
+					<img class="servs__image" src="images/banner/10.png" alt="">
+					<img class="servs__image" src="images/banner/11.png" alt="">
+					<img class="servs__image" src="images/banner/12.png" alt="">
+					<img class="servs__image" src="images/banner/13.png" alt="">
+					<img class="servs__image" src="images/banner/14.png" alt="">
+				</div>
+			</div>
+
+
+			<div class="servs__flex">
+				<div class="servs__links">
+					<a href="#" class="servs__a servs__a--fst">Студент</a>
+					<a href="#" class="servs__a">Программа</a>
+					<a href="#" class="servs__a">Контракт</a>
+					<a href="#" class="servs__a">Тариф</a>
+				</div>
+
+				<div class="servs__links">
+					<a href="#" class="servs__a servs__a--fst">Предприниматель</a>
+					<a href="#" class="servs__a">Программа</a>
+					<a href="#" class="servs__a">Контракт</a>
+					<a href="#" class="servs__a">Тариф</a>
+				</div>
+
+				<div class="servs__links">
+					<a href="#" class="servs__a servs__a--fst">Бизнес</a>
+					<a href="#" class="servs__a">Программа</a>
+					<a href="#" class="servs__a">Контракт</a>
+					<a href="#" class="servs__a">Тариф</a>
+				</div>
+
+				<div class="servs__links">
+					<a href="#" class="servs__a servs__a--fst">Инвестиции</a>
+					<a href="#" class="servs__a">Программа</a>
+					<a href="#" class="servs__a">Контракт</a>
+					<a href="#" class="servs__a">Тариф</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="about">
+
+		<div class="about__wrap">
+
+			<div class="about__card">
+				<img src="images/card/1.png" alt="" class="about__img">
+				<div class="about__title"><span class="about__title--span">BIZNESDAR</span> СТУДЕНТ:</div>
+				<ul>
+					<li class="about__li">Индивидуальное предпринимательство основы построения «ИП»;</li>
+					<li class="about__li">Для участников программы BIZNESDAR студент;</li>
+					<li class="about__li">Зарегистрируем ИП – ноль рублей;</li>
+					<li class="about__li">Юридическое сопровождение – ноль рублей;</li>
+					<li class="about__li">Бухгалтерское обслуживание – ноль рублей;</li>
+					<li class="about__li">Подбор мировых фабрик производителей – ноль рублей;</li>
+					<li class="about__li">Доставка товара с мировых фабрик – ноль рублей;</li>
+					<li class="about__li">Реализация товаров через торговую сеть BIZNESDAR market.</li>
+				</ul>
+			</div>
+			<div class="about__card">
+				<img src="images/card/2.png" alt="" class="about__img">
+				<div class="about__title"><span class="about__title--span">BIZNESDAR</span> ПРЕДПРИНИМАТЕЛЬ:</div>
+				<ul>
+					<li class="about__li">Малое предпринимательство основы построения «ООО»;</li>
+					<li class="about__li">Для участников программы BIZNESDAR предприниматель;</li>
+					<li class="about__li">Зарегистрируем Юридическое Лицо «ООО» – ноль рублей;</li>
+					<li class="about__li">Юридическое сопровождение – ноль рублей;</li>
+					<li class="about__li">Бухгалтерское обслуживание – ноль рублей;</li>
+					<li class="about__li">Подбор мировых фабрик производителей – ноль рублей;</li>
+					<li class="about__li">Доставка товара с мировых фабрик – ноль рублей.</li>
+					<li class="about__li">Реализация товаров через торговую сеть BIZNESDAR market.</li>
+				</ul>
+			</div>
+			
+			<div class="about__card">
+				<img src="images/card/3.png" alt="" class="about__img">
+				<div class="about__title"><span class="about__title--span">BIZNESDAR</span> БИЗНЕС:</div>
+				<ul>
+					<li class="about__li">Построим бизнес модель;</li>
+					<li class="about__li">Настроим цикличность рабочего процесса;</li>
+					<li class="about__li">Подберем рентабельную товарную группу с профитом 50% +</li>
+					<li class="about__li">На мощностях мировых фабрик произведем тестовые образцы товаров;</li>
+					<li class="about__li">Запустим производство товаров и оборудования;</li>
+					<li class="about__li">Окажем Юридическое и Бухгалтерское сопровождение;</li>
+					<li class="about__li">Доставка товара с мировых фабрик – ноль рублей.</li>
+					<li class="about__li">Реализация товаров через торговую сеть BIZNESDAR market.</li>
+				</ul>
+			</div>
+			<div class="about__card">
+				<img src="images/card/4.png" alt="" class="about__img">
+				<div class="about__title"><span class="about__title--span">BIZNESDAR</span> ИНВЕСТИЦИИ:</div>
+				<ul>
+					<li class="about__li">Инвестиции для Физических лиц, для Юридических лиц;</li>
+					<li class="about__li">Инвестор инвестирует;</li>
+					<li class="about__li">В производство, логистику, реализацию товаров и оборудования;</li>
+					<li class="about__li">Инвестиционный период на платформе BIZNESDAR;</li>
+					<li class="about__li">Страхование инвестиционного периода;</li>
+					<li class="about__li">100% Безопасно, отсутствуют риски потери средств;</li>
+					<li class="about__li">Прибыль 17 % + за один цикл;</li>
+					<li class="about__li">Один цикл составляет 7 месяцев.</li>
+				</ul>
+			</div>
+			<div class="about__card">
+				<img src="images/card/5.png" alt="" class="about__img">
+				<div class="about__title"><span class="about__title--span">BIZNESDAR</span> БУХГАЛТЕРИЯ:</div>
+				<ul>
+					<li class="about__li">Для участников платформы BIZNESDAR;</li>
+					<li class="about__li">Бухгалтерское обслуживание – ноль рублей;</li>
+					<li class="about__li">Юридическое сопровождение – ноль рублей;</li>
+					<li class="about__li">Бухгалтерский учет ВЭД – ноль рублей;</li>
+					<li class="about__li">Финансовый контроль предприятия – ноль рублей;</li>
+					<li class="about__li">Учет производственный затрат – ноль рублей;</li>
+					<li class="about__li">Составление договоров, контрактов – ноль рублей;</li>
+					<li class="about__li">Круглосуточная техническая поддержка 24/7.</li>
+				</ul>
+			</div>
+			<div class="about__card">
+				<img src="images/card/6.png" alt="" class="about__img">
+				<div class="about__title"><span class="about__title--span">BIZNESDAR</span> ЛОГИСТИКА:</div>
+				<ul>
+					<li class="about__li">Для участников платформы BIZNESDAR;</li>
+					<li class="about__li">Безопасная доставка товаров и грузов с мировых фабрик;</li>
+					<li class="about__li">Подбор мировых фабрик производителей – ноль рублей;</li>
+					<li class="about__li">Доставка товаров и оборудования с мировых фабрик – ноль рублей;</li>
+					<li class="about__li">Доставка товарных образцов для экспертиз EAC – ноль рублей;</li>
+					<li class="about__li">Ответственное хранение грузов – ноль рублей;</li>
+					<li class="about__li">Пакет ВЭД – ноль рублей;</li>
+					<li class="about__li">Страхование грузов – ноль рублей.</li>
+				</ul>
+			</div>
+			<div class="about__card">
+				<img src="images/card/7.png" alt="" class="about__img">
+				<div class="about__title"><span class="about__title--span">BIZNESDAR</span> MARKET:</div>
+				<ul>
+					<li class="about__li">Для участников платформы BIZNESDAR;</li>
+					<li class="about__li">Аналитика рынков реализации;</li>
+					<li class="about__li">Сеть сбыта товаров и оборудования BIZNESDAR market;</li>
+					<li class="about__li">Распределение товаров и оборудования;</li>
+					<li class="about__li">Ответственное хранение товаров и оборудования;</li>
+					<li class="about__li">Логистический сервис по доставке товаров до потребителей;</li>
+					<li class="about__li">Пункты выдачи товаров;</li>
+					<li class="about__li">Производство, Логистика, Реализация.</li>
+				</ul>
+			</div>
+			<div class="about__card">
+				<img src="images/card/8.png" alt="" class="about__img">
+				<div class="about__title"><span class="about__title--span">BIZNESDAR</span> СОВЕТ:</div>
+				<ul>
+					<li class="about__li">Для участников платформы BIZNESDAR;</li>
+					<li class="about__li">Создан коллективный совет управления платформой;</li>
+					<li class="about__li">Совет состоит  из предпринимателей и общественных деятелей;</li>
+					<li class="about__li">Задача совета;</li>
+					<li class="about__li">Управлять платформой BIZNESDAR;</li>
+					<li class="about__li">Вести безубыточною предпринимательскую деятельность;</li>
+					<li class="about__li">Управлять торговой сетью BIZNESDAR market;</li>
+					<li class="about__li">Распределять прибыль на социально значимые проекты.</li>
+				</ul>
+			</div>
+
+		</div>
+		
+	</div>
+
+
+	<div class="mech">
+		<div class="mech__wrap">
+			<div class="mech__title">МЕХАНИЗМ РАБОТЫ ПЛАТФОРМЫ BIZNESDAR</div>
+
+			<img src="images/mech.png" alt="" class="mech__img">
+		</div>
+	</div>
+
+	<div class="maps">
+		<div class="maps__wrap">
+
+			<div class="maps__title">С НАМИ СОТРУДНИЧАЮТ БОЛЕЕ 500 МИРОВЫХ ФАБРИК</div>
+			<div class="maps__subtitle">BIZNESDAR ОБЪЕДИНЯЕТ БИЗНЕС СООБЩЕСТВО</div>
+
+			<div class="maps__flex">
+				<img src="images/rus.png" alt="" class="maps__rus">
+				<img src="images/chi.png" alt="" class="maps__chi">
+			</div>
+
+			<div class="maps__most maps__most--30">РОССИЯ - КИТАЙ</div>
+			<div class="maps__most">Мост между странами </div>
+		</div>
+	</div>
+
+	
+	<!-- <footer id="footer">
+		<div class="container">
+			<div class="footer__container footer__new">
+				<ul class="contact__list">
+					<li class="contact__list__item">
+						<a href="tel:88007517300" class="footer-phone">
+							8 800 751 73 00
+						</a>
+					</li>
+					<li class="contact__list__item">
+						<a href="mailto:info@biznesdar.ru" class="footer-email">
+							info@biznesdar.ru
+						</a>
+					</li>
+					<li class="contact__list__item d-none d-md-block">
+						<a class="copyright__link copyright__link-1" href="#">Политика конфиденциальности</a>
+					</li>
+					<li class="contact__list__item d-none d-md-block">
+						<a class="copyright__link copyright__link-2" href="#">Пользовательское соглашение</a>
+					</li>
+				</ul>
+
+				<ul class="social__list">
+					<li class="social__list__item">
+						<span>Скачать мобильное приложение</span>
+					</li>
+					<li class="social__list__item">
+						<div class="links_list">
+							<a href="#" class="app-store">
+								<img src="images/App_dark.png" alt="app-store" />
+							</a>
+							<a href="#" class="google-play">
+								<img src="images/Google_dark.png" alt="play-market" />
+							</a>
+						</div>
+					</li>
+					<li class="social__list__item" style="margin-top: -6px;">
+						<div class="footer-socials">
+							<div class="social fb"></div>
+							<div class="social vk"></div>
+							<div class="social instagram"></div>
+							<div class="social telegram"></div>
+							<div class="social youtube"></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer> -->
+
+
+	<footer class="footer">
+
+		<div class="footer__container">
+
+			<div class="footer__block footer__block--1">
+				<a href="tel:88007517300" class="footer__phone">8 800 751 73 00</a>
+				<a href="mailto:info@biznesdar.ru" class="footer__mail">info@biznesdar.ru</a>
+			</div>
+			<div class="footer__block footer__block--2">
+				<div class="footer__title">Контакты</div>
+				<div class="footer__socials">
+					<a href="#" class="footer__soc footer__fb"></a>
+					<a href="#" class="footer__soc footer__vk"></a>
+					<a href="#" class="footer__soc footer__in"></a>
+					<a href="#" class="footer__soc footer__tg"></a>
+					<a href="#" class="footer__soc footer__yt"></a>
+				</div>
+			</div>
+			<div class="footer__block footer__block--3">
+				<div class="footer__title">Скачать мобильное приложение</div>
+
+				<div class="footer__download">
+					<a href="#" class="footer__app"><img class="footer__img" src="images/App_dark.png" alt="app-store"></a>
+					<a href="#" class="footer__app"><img class="footer__img" src="images/Google_dark.png" alt="play-market"></a>
+				</div>
+			</div>
+			<div class="footer__block footer__block--4">
+				<a href="#" class="footer__link">Политика конфиденциальности</a>
+				<a href="#" class="footer__link">Пользовательское соглашение</a>
+			</div>
+
+		</div>
+
+		<div class="footer__line">
+			<div class="footer__copy">© 2020 Copyright</div>
+		</div>
+
+	</footer>
+
+
+
+	<script src="js/jquery.fancybox.js"></script>
+	<script src="js/common.js"></script> 
+
+</body>
+</html>
