@@ -90,7 +90,7 @@ header {
 }
 @media (min-width: 1200px) {
   #header .header-menu {
-    width: 50%;
+    width: 58%;
   }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
@@ -965,9 +965,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
   text-align: left;
-  background-color: #fff;
 }
 
 [tabindex="-1"]:focus {
@@ -11326,9 +11324,9 @@ strong {
   -o-transition: all ease 280ms;
   transition: all ease 280ms;
 }
-#header .header-profile--bd {
+/* #header .header-profile--bd {
   background: no-repeat center/contain url("../images/icon-bd-btn.png");
-}
+} */
 #header .header-profile--tree {
   background: no-repeat center/contain url("../images/icon-tree-btn.png");
 }
@@ -11361,7 +11359,7 @@ strong {
 }
 @media (min-width: 1200px) {
   #header .header-menu {
-    width: 50%;
+    width: 58%;
   }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
@@ -11479,7 +11477,6 @@ body {
   min-height: 100vh;
   cursor: default;
   font-size: 12px;
-  color: #025e69;
   line-height: 1.2em;
   font-family: "Montserrat Regular";
 }
@@ -12019,6 +12016,7 @@ body.disable-scroll {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  padding: 30px 0;
 }
 .main-page .intro__logo img {
   height: 100%;

@@ -26,13 +26,13 @@ $(document).ready(function() {
 	$('.single-item').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		arrows: true,
+		arrows: false,
 		autoplay: true,
-		autoplaySpeed: 3000,
+		autoplaySpeed: 3000
 		//dots: true,
 		//dotsClass: 'dots',
-		prevArrow: "<div class='arrow__prev'></div>",
-		nextArrow: "<div class='arrow__next'></div>"
+		// prevArrow: "<div class='arrow__prev'></div>",
+		// nextArrow: "<div class='arrow__next'></div>"
 	});
 
 	var currentSlide = $('.single-item').slick('slickCurrentSlide') + 1;

@@ -1,6 +1,9 @@
 *
     font-family: "Montserrat"
 
+body
+    background: #00C4B0
+
 .popup2
     width: 100vw
     height: 100vh
@@ -277,7 +280,7 @@
 
 
 .servs
-    padding: 50px 0
+    padding: 50px 0 10px
     background: #035F6C
     @media ( max-width: 530px )
         padding: 30px 0
@@ -343,6 +346,7 @@
     &__a
         display: block
         font-size: 10px
+        margin: 6px 0
         text-transform: uppercase
         color: #fff
         letter-spacing: 0.5px
@@ -352,7 +356,7 @@
 
         &--fst
             font-size: 12px
-            margin: 10px 0
+            margin: 10px 0 15px 0
             font-weight: 600
 
         &:hover
@@ -428,6 +432,12 @@
             color: #fff
             text-decoration: none
 
+    &__flex
+        display: flex
+        justify-content: center
+        position: relative
+        width: 100%
+
     &__title
         padding: 6px 0
         font-size: 13px
@@ -435,7 +445,7 @@
         line-height: 1.2
 
     &__link
-        padding: 6px 0
+        padding: 6px 8px
         font-size: 13px
         color: #fff
         transition-duration: 0.3s

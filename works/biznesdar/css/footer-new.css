@@ -36,7 +36,17 @@
     transition: all ease 280ms; }
   
   #header .header-profile--bd {
-    background: no-repeat center/contain url("../images/icon-bd-btn.png"); }
+    /* background: no-repeat center/contain url("../images/icon-bd-btn.png"); */
+    background: none;
+    font-size: 25px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+
+  .header-profile--bd:hover{
+    text-decoration: none;
+  }
   
   #header .header-profile--tree {
     background: no-repeat center/contain url("../images/icon-tree-btn.png"); }
