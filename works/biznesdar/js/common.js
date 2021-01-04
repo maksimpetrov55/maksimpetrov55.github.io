@@ -23,23 +23,40 @@ $(document).ready(function() {
 		$('#popup2').removeClass("popup2--open");
 	});
 
-	$('.single-item').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		autoplay: true,
-		autoplaySpeed: 3000
-		//dots: true,
-		//dotsClass: 'dots',
-		// prevArrow: "<div class='arrow__prev'></div>",
-		// nextArrow: "<div class='arrow__next'></div>"
-	});
+	// $('.single-item').slick({
+	// 	slidesToShow: 1,
+	// 	slidesToScroll: 1,
+	// 	arrows: false,
+	// 	autoplay: true,
+	// 	autoplaySpeed: 3000
+	// 	//dots: true,
+	// 	//dotsClass: 'dots',
+	// 	// prevArrow: "<div class='arrow__prev'></div>",
+	// 	// nextArrow: "<div class='arrow__next'></div>"
+	// });
 
-	var currentSlide = $('.single-item').slick('slickCurrentSlide') + 1;
-	var allSlide = $(".single-item").slick("getSlick").slideCount;
+	// var currentSlide = $('.single-item').slick('slickCurrentSlide') + 1;
+	// var allSlide = $(".single-item").slick("getSlick").slideCount;
 
-	console.log(currentSlide);
-	console.log(allSlide);
+	// console.log(currentSlide);
+	// console.log(allSlide);
+
+	$('.servs__image').fadeOut(0);
+	$('.servs__image:eq(0)').fadeIn(100);
+	var i = 1;
+	let timerId = setTimeout(function tick() {
+
+		$('.servs__image:eq(' + (i - 1) + ')').fadeOut(1200);
+		$('.servs__image:eq(' + i + ')').fadeIn(1800);
+		//console.log('tick' + i);
+
+		timerId = setTimeout(tick, 6000);
+		if ( i < 13 ) {
+			i++;
+		} else {
+			i = 0;
+		}
+	}, 6000);
 
 });
 

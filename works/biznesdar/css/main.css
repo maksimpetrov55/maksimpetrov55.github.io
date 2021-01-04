@@ -198,9 +198,22 @@ body {
       flex-wrap: wrap;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1260px) {
   .about__wrap {
-    padding: 0;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media (max-width: 1000px) {
+  .about__wrap {
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 840px) {
+  .about__wrap {
+    padding: 0 5px;
   }
 }
 
@@ -208,27 +221,38 @@ body {
   position: relative;
   width: 96%;
   max-width: 570px;
-  height: 260px;
+  height: 360px;
   background: #fff;
   margin: 30px 20px;
-  padding: 50px 30px 30px 40px;
+  padding: 50px 40px 30px 45px;
+  -webkit-box-shadow: 10px 10px 29px 0px rgba(0, 0, 0, 0.52);
+          box-shadow: 10px 10px 29px 0px rgba(0, 0, 0, 0.52);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1260px) {
   .about__card {
-    margin: 30px 0;
+    margin: 30px 5px;
+    max-width: 48%;
+    padding: 50px 20px 40px 30px;
+    height: auto;
+  }
+}
+
+@media (max-width: 690px) {
+  .about__card {
+    max-width: 550px;
+    padding: 50px 20px 20px 30px;
   }
 }
 
 @media (max-width: 530px) {
   .about__card {
-    padding: 40px 25px 25px 15px;
     height: auto;
   }
 }
 
 .about__title {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 800;
   margin: 0 0 15px 0;
 }
@@ -239,14 +263,33 @@ body {
 }
 
 .about__li {
-  font-size: 12px;
+  font-size: 14px;
+  margin: 7px 0;
+  list-style: none;
   line-height: 1.4;
+}
+
+@media (max-width: 1000px) {
+  .about__li {
+    font-size: 13px;
+    margin: 5px 0;
+  }
 }
 
 @media (max-width: 530px) {
   .about__li {
-    font-size: 10px;
+    font-size: 11px;
   }
+}
+
+.about__li::before {
+  content: "";
+  display: block;
+  width: 7px;
+  height: 7px;
+  background: #1A8FC4;
+  position: absolute;
+  margin: 6px 0 0 -18px;
 }
 
 .about__img {
@@ -256,8 +299,8 @@ body {
   background: #000;
   left: 20px;
   top: -30px;
-  -webkit-box-shadow: 0 -2px 9px 0 rgba(0, 0, 0, 0.1);
-          box-shadow: 0 -2px 9px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 4px 5px 7px 0px rgba(0, 0, 0, 0.32);
+          box-shadow: 4px 5px 7px 0px rgba(0, 0, 0, 0.32);
 }
 
 .mech {
@@ -313,6 +356,12 @@ body {
   line-height: 1.1;
 }
 
+@media (max-width: 960px) {
+  .maps__title {
+    padding: 0 15px 0 10px;
+  }
+}
+
 @media (max-width: 530px) {
   .maps__title {
     font-size: 26px;
@@ -334,6 +383,12 @@ body {
   color: #fff;
   text-align: right;
   line-height: 1.1;
+}
+
+@media (max-width: 960px) {
+  .maps__subtitle {
+    padding: 0 15px 0 10px;
+  }
 }
 
 @media (max-width: 530px) {
@@ -431,7 +486,7 @@ body {
           justify-content: space-between;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 991px) {
   .servs__flex {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -439,10 +494,32 @@ body {
   }
 }
 
+@media (max-width: 979px) {
+  .servs__flex--btns {
+    margin: 0 auto;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 730px) {
+  .servs__flex--btns {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 410px) {
+  .servs__flex--btns {
+    max-width: 280px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
 .servs__block {
   position: relative;
-  margin: 10px;
-  width: 100px;
+  margin: 5px;
+  width: 110px;
   height: 100px;
   color: #fff;
   display: -webkit-box;
@@ -453,15 +530,20 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   font-size: 14px;
-  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
 }
 
-@media (max-width: 530px) {
+@media (max-width: 510px) {
   .servs__block {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     font-size: 12px;
   }
 }
@@ -478,22 +560,39 @@ body {
   margin: 0 auto 10px auto;
 }
 
-@media (max-width: 530px) {
+@media (max-width: 510px) {
   .servs__img {
-    height: 40px;
+    height: 50px;
   }
 }
 
 .servs__banner {
   position: relative;
-  margin: 10px auto;
+  margin: 20px auto 10px auto;
   width: 100%;
   padding: 0 0px;
+  height: 130px;
+}
+
+@media (max-width: 830px) {
+  .servs__banner {
+    height: 13vw;
+  }
 }
 
 .servs__image {
-  position: relative;
-  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 130px !important;
+  width: 980px;
+}
+
+@media screen and (max-width: 1000px) {
+  .servs__image {
+    height: auto !important;
+    width: 100%;
+  }
 }
 
 .servs__links {
