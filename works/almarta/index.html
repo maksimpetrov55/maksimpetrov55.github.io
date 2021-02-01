@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="quiz">
+
+		<div class="quiz__head">Подберите козырек под ваши потребности</div>
+
+		<div id="quiz_step_1" class="quiz__step quiz__step--show">
+
+			<div class="quiz__title">1. Цвет кронштейна</div>
+
+			<div class="quiz__variants">
+
+				<input class="quiz__radio" type="radio" name="quiz_kronshtein" id="quiz_kronshtein_1" value="brown">
+				<label class="quiz__select quiz__kronshtein-1" for="quiz_kronshtein_1">Коричневый</label>
+
+				<input class="quiz__radio" type="radio" name="quiz_kronshtein" id="quiz_kronshtein_2" value="gray">
+				<label class="quiz__select quiz__kronshtein-2" for="quiz_kronshtein_2">Серый Металик</label>
+
+				<input class="quiz__radio" type="radio" name="quiz_kronshtein" id="quiz_kronshtein_3" value="white">
+				<label class="quiz__select quiz__kronshtein-3" for="quiz_kronshtein_3">Слоновая Кость</label>
+
+				<input class="quiz__radio" type="radio" name="quiz_kronshtein" id="quiz_kronshtein_4" value="black">
+				<label class="quiz__select quiz__kronshtein-4" for="quiz_kronshtein_4">Черный</label>
+
+			</div>
+
+			<div class="quiz__error">Пожалуйста выберите один из вариантов!</div>
+
+			<div class="quiz__buttons">
+				<div id="quiz_next_1" class="quiz__next">Вперед</div>
+			</div>
+
+		</div>
+
+		<div id="quiz_step_2" class="quiz__step">
+
+			<div class="quiz__title">2. Цвет поликарбоната</div>
+
+			<div class="quiz__variants">
+
+				<input class="quiz__radio" type="radio" name="quiz_karbonat" id="quiz_karbonat_1" value="bronze">
+				<label class="quiz__select quiz__karbonat-1" for="quiz_karbonat_1">Бронза</label>
+
+				<input class="quiz__radio" type="radio" name="quiz_karbonat" id="quiz_karbonat_2" value="transp">
+				<label class="quiz__select quiz__karbonat-2" for="quiz_karbonat_2">Прозрачный</label>
+
+				<input class="quiz__radio" type="radio" name="quiz_karbonat" id="quiz_karbonat_3" value="none">
+				<label class="quiz__select quiz__karbonat-3" for="quiz_karbonat_3">Без поликарбоната</label>
+
+			</div>
+
+			<div class="quiz__error">Пожалуйста выберите один из вариантов!</div>
+
+			<div class="quiz__buttons">
+				<div id="quiz_prev_2" class="quiz__prev">Назад</div>
+				<div id="quiz_next_2" class="quiz__next">Вперед</div>
+			</div>
+
+		</div>
+
+		<div id="quiz_step_3" class="quiz__step">
+
+			<div class="quiz__title">3. Ширина козырька (мм)</div>
+
+			<div class="quiz__variants">
+
+				<input class="quiz__radio" type="radio" name="quiz_kozirek" id="quiz_kozirek_1" value="a1100">
+				<label class="quiz__select quiz__kozirek" for="quiz_kozirek_1">1100 мм</label>
+
+				<input class="quiz__radio" type="radio" name="quiz_kozirek" id="quiz_kozirek_2" value="a1500">
+				<label class="quiz__select quiz__kozirek" for="quiz_kozirek_2">1500 мм</label>
+
+				<input class="quiz__radio" type="radio" name="quiz_kozirek" id="quiz_kozirek_3" value="a2200">
+				<label class="quiz__select quiz__kozirek" for="quiz_kozirek_3">2200 мм</label>
+
+				<input class="quiz__radio" type="radio" name="quiz_kozirek" id="quiz_kozirek_4" value="a3300">
+				<label class="quiz__select quiz__kozirek" for="quiz_kozirek_4">3300 мм</label>
+
+				<input class="quiz__radio" type="radio" name="quiz_kozirek" id="quiz_kozirek_5" value="a4400">
+				<label class="quiz__select quiz__kozirek" for="quiz_kozirek_5">4400 мм</label>
+
+			</div>
+
+			<div class="quiz__error">Пожалуйста выберите один из вариантов!</div>
+
+			<div class="quiz__buttons">
+				<div id="quiz_prev_3" class="quiz__prev">Назад</div>
+				<div id="quiz_next_3" class="quiz__next">Вперед</div>
+			</div>
+
+		</div>
+
+		<div id="quiz_step_4" class="quiz__step">
+
+			<div class="quiz__title">4. Ширина секции (мм)</div>
+
+			<div class="quiz__variants">
+
+				<input class="quiz__radio" type="radio" name="quiz_section" id="quiz_section_1" value="b700">
+				<label class="quiz__select quiz__section" for="quiz_section_1">700 мм</label>
+
+				<input class="quiz__radio" type="radio" name="quiz_section" id="quiz_section_2" value="b1050">
+				<label class="quiz__select quiz__section" for="quiz_section_2">1050 мм</label>
+
+			</div>
+
+			<div class="quiz__error">Пожалуйста выберите один из вариантов!</div>
+
+			<div class="quiz__buttons">
+				<div id="quiz_prev_4" class="quiz__prev">Назад</div>
+				<div id="quiz_next_4" class="quiz__next">Вперед</div>
+			</div>
+
+		</div>
+
+		<div id="quiz_itog" class="quiz__itog">
+
+			<div class="quiz__title">Вам подойдут варианты:</div>
+
+			<div class="quiz__sorry">Кажется по вашим параметрам ничего нет, попробуйте выбрать другую конфигурацию.</div>
+
+			<div class="quiz__elements">
+
+				<a href="#" class="quiz__item brown bronze a2200 b700">S2200SB</a>
+				<a href="#" class="quiz__item brown bronze a1500 b700">S1500SB</a>
+				<a href="#" class="quiz__item brown transp a2200 b700">S2200SW</a>
+				<a href="#" class="quiz__item brown transp a1500 b700">S1500SW</a>
+				<a href="#" class="quiz__item white transp a2200 b700">W2200SW</a>
+				<a href="#" class="quiz__item white transp a1500 b700">W1500SW</a>
+				<a href="#" class="quiz__item white bronze a2200 b700">W2200SB</a>
+				<a href="#" class="quiz__item white bronze a1500 b700">W1500SB</a>
+				<a href="#" class="quiz__item black bronze a2200 b700">B2200SB</a>
+				<a href="#" class="quiz__item black bronze a1500 b700">B1500SB</a>
+				<a href="#" class="quiz__item black transp a2200 b700">B2200SW</a>
+				<a href="#" class="quiz__item black transp a1500 b700">B1500SW</a>
+				<a href="#" class="quiz__item gray bronze a2200 b700">M2200SB</a>
+				<a href="#" class="quiz__item gray bronze a1500 b700">M1500SB</a>
+				<a href="#" class="quiz__item gray transp a2200 b700">M2200SW</a>
+				<a href="#" class="quiz__item gray transp a1500 b700">M1500SW</a>
+				<a href="#" class="quiz__item brown bronze a1100 b1050">1100SB</a>
+				<a href="#" class="quiz__item brown bronze a2200 b1050">2200SB</a>
+				<a href="#" class="quiz__item brown bronze a3300 b1050">3300SB</a>
+				<a href="#" class="quiz__item brown bronze a4400 b1050">4400SB</a>
+				<a href="#" class="quiz__item brown transp a1100 b1050">1100SW</a>
+				<a href="#" class="quiz__item brown transp a2200 b1050">2200SW</a>
+				<a href="#" class="quiz__item brown transp a3300 b1050">3300SW</a>
+				<a href="#" class="quiz__item brown transp a4400 b1050">4400SW</a>
+				<a href="#" class="quiz__item white transp a1100 b1050">1100WW</a>
+				<a href="#" class="quiz__item white transp a2200 b1050">2200WW</a>
+				<a href="#" class="quiz__item white transp a3300 b1050">3300WW</a>
+				<a href="#" class="quiz__item white transp a4400 b1050">4400WW</a>
+				<a href="#" class="quiz__item white bronze a1100 b1050">1100WB</a>
+				<a href="#" class="quiz__item white bronze a2200 b1050">2200WB</a>
+				<a href="#" class="quiz__item white bronze a3300 b1050">3300WB</a>
+				<a href="#" class="quiz__item white bronze a4400 b1050">4400WB</a>
+				<a href="#" class="quiz__item black bronze a1100 b1050">1100BB</a>
+				<a href="#" class="quiz__item black bronze a2200 b1050">2200BB</a>
+				<a href="#" class="quiz__item black bronze a3300 b1050">3300BB</a>
+				<a href="#" class="quiz__item black bronze a4400 b1050">4400BB</a>
+				<a href="#" class="quiz__item black transp a1100 b1050">1100BW</a>
+				<a href="#" class="quiz__item black transp a2200 b1050">2200BW</a>
+				<a href="#" class="quiz__item black transp a3300 b1050">3300BW</a>
+				<a href="#" class="quiz__item black transp a4400 b1050">4400BW</a>
+				<a href="#" class="quiz__item gray transp a1100 b1050">1100MW</a>
+				<a href="#" class="quiz__item gray transp a2200 b1050">2200MW</a>
+				<a href="#" class="quiz__item gray transp a3300 b1050">3300MW</a>
+				<a href="#" class="quiz__item gray transp a4400 b1050">4400MW</a>
+				<a href="#" class="quiz__item gray bronze a1100 b1050">1100MB</a>
+				<a href="#" class="quiz__item gray bronze a2200 b1050">2200MB</a>
+				<a href="#" class="quiz__item gray bronze a3300 b1050">3300MB</a>
+				<a href="#" class="quiz__item gray bronze a4400 b1050">4400MB</a>
+				<a href="#" class="quiz__item black none a1100 b1050">KB1100</a>
+				<a href="#" class="quiz__item black none a2200 b1050">KB2200</a>
+				<a href="#" class="quiz__item black none a3300 b1050">KB3300</a>
+				<a href="#" class="quiz__item brown none a1100 b1050">KS1100</a>
+				<a href="#" class="quiz__item brown none a2200 b1050">KS2200</a>
+				<a href="#" class="quiz__item brown none a3300 b1050">KS3300</a>
+				<a href="#" class="quiz__item white none a1100 b1050">KW1100</a>
+				<a href="#" class="quiz__item white none a2200 b1050">KW2200</a>
+				<a href="#" class="quiz__item white none a3300 b1050">KW3300</a>
+				<a href="#" class="quiz__item gray none a1100 b1050">KM1100</a>
+				<a href="#" class="quiz__item gray none a2200 b1050">KM2200</a>
+				<a href="#" class="quiz__item gray none a3300 b1050">KM3300</a>
+				
+			</div>
+
+			<div class="quiz__buttons">
+
+				<div class="quiz__again">Заново</div>
+
+			</div>
+
+		</div>
+
+		
+
+	</div>
+	
+
+
+</body>
+</html>
