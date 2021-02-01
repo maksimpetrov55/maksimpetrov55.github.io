@@ -34,6 +34,8 @@ $(document).ready(function() {
 		console.log( radio_1 + " | " + radio_2 + " | " + radio_3  + " | " + radio_4 );
 		
 		if ( radio_1 != undefined && radio_2 != undefined && radio_3 != undefined && radio_4 != undefined ) {
+
+			$('#quiz_itog').addClass("quiz__itog--show");
 			
 			var selector = "." + radio_1 + "." + radio_2 + "." + radio_3 + "." + radio_4;
 			
@@ -54,64 +56,64 @@ $(document).ready(function() {
 
 	}
 
-	$('#quiz_next_1').click(function(){
-		var radio_1 = $('input[name=quiz_kronshtein]:checked').val();
-		if ( radio_1 != undefined ) {
-			$('#quiz_step_1').removeClass("quiz__step--show");
-			$('#quiz_step_2').addClass("quiz__step--show");
-			$(this).parent().prev().removeClass("quiz__error--show");
-		} else {
-			$(this).parent().prev().addClass("quiz__error--show");
-		}
+	// $('#quiz_next_1').click(function(){
+	// 	var radio_1 = $('input[name=quiz_kronshtein]:checked').val();
+	// 	if ( radio_1 != undefined ) {
+	// 		$('#quiz_step_1').removeClass("quiz__step--show");
+	// 		$('#quiz_step_2').addClass("quiz__step--show");
+	// 		$(this).parent().prev().removeClass("quiz__error--show");
+	// 	} else {
+	// 		$(this).parent().prev().addClass("quiz__error--show");
+	// 	}
 
-	});
-	$('#quiz_next_2').click(function(){
-		var radio_2 = $('input[name=quiz_karbonat]:checked').val();
-		if ( radio_2 != undefined ) {
-			$('#quiz_step_2').removeClass("quiz__step--show");
-			$('#quiz_step_3').addClass("quiz__step--show");
-			$(this).parent().prev().removeClass("quiz__error--show");
-		} else {
-			$(this).parent().prev().addClass("quiz__error--show");
-		}
+	// });
+	// $('#quiz_next_2').click(function(){
+	// 	var radio_2 = $('input[name=quiz_karbonat]:checked').val();
+	// 	if ( radio_2 != undefined ) {
+	// 		$('#quiz_step_2').removeClass("quiz__step--show");
+	// 		$('#quiz_step_3').addClass("quiz__step--show");
+	// 		$(this).parent().prev().removeClass("quiz__error--show");
+	// 	} else {
+	// 		$(this).parent().prev().addClass("quiz__error--show");
+	// 	}
 
-	});
-	$('#quiz_next_3').click(function(){
-		var radio_3 = $('input[name=quiz_kozirek]:checked').val();
-		if ( radio_3 != undefined ) {
-			$('#quiz_step_3').removeClass("quiz__step--show");
-			$('#quiz_step_4').addClass("quiz__step--show");
-			$(this).parent().prev().removeClass("quiz__error--show");
-		} else {
-			$(this).parent().prev().addClass("quiz__error--show");
-		}
+	// });
+	// $('#quiz_next_3').click(function(){
+	// 	var radio_3 = $('input[name=quiz_kozirek]:checked').val();
+	// 	if ( radio_3 != undefined ) {
+	// 		$('#quiz_step_3').removeClass("quiz__step--show");
+	// 		$('#quiz_step_4').addClass("quiz__step--show");
+	// 		$(this).parent().prev().removeClass("quiz__error--show");
+	// 	} else {
+	// 		$(this).parent().prev().addClass("quiz__error--show");
+	// 	}
 
-	});
-	$('#quiz_next_4').click(function(){
-		var radio_4 = $('input[name=quiz_section]:checked').val();
-		if ( radio_4 != undefined ) {
-			$('#quiz_step_4').removeClass("quiz__step--show");
-			$('#quiz_itog').addClass("quiz__itog--show");
-			$(this).parent().prev().removeClass("quiz__error--show");
-		} else {
-			$(this).parent().prev().addClass("quiz__error--show");
-		}
+	// });
+	// $('#quiz_next_4').click(function(){
+	// 	var radio_4 = $('input[name=quiz_section]:checked').val();
+	// 	if ( radio_4 != undefined ) {
+	// 		$('#quiz_step_4').removeClass("quiz__step--show");
+	// 		$('#quiz_itog').addClass("quiz__itog--show");
+	// 		$(this).parent().prev().removeClass("quiz__error--show");
+	// 	} else {
+	// 		$(this).parent().prev().addClass("quiz__error--show");
+	// 	}
 
-	});
+	// });
 
 
-	$('#quiz_prev_2').click(function(){
-		$('#quiz_step_2').removeClass("quiz__step--show");
-		$('#quiz_step_1').addClass("quiz__step--show");
-	});
-	$('#quiz_prev_3').click(function(){
-		$('#quiz_step_3').removeClass("quiz__step--show");
-		$('#quiz_step_2').addClass("quiz__step--show");
-	});
-	$('#quiz_prev_4').click(function(){
-		$('#quiz_step_4').removeClass("quiz__step--show");
-		$('#quiz_step_3').addClass("quiz__step--show");
-	});
+	// $('#quiz_prev_2').click(function(){
+	// 	$('#quiz_step_2').removeClass("quiz__step--show");
+	// 	$('#quiz_step_1').addClass("quiz__step--show");
+	// });
+	// $('#quiz_prev_3').click(function(){
+	// 	$('#quiz_step_3').removeClass("quiz__step--show");
+	// 	$('#quiz_step_2').addClass("quiz__step--show");
+	// });
+	// $('#quiz_prev_4').click(function(){
+	// 	$('#quiz_step_4').removeClass("quiz__step--show");
+	// 	$('#quiz_step_3').addClass("quiz__step--show");
+	// });
 
 
 	$('.quiz__again').click(function(){
