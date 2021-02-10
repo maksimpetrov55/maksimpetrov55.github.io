@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="font/MyriadPro.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=en_US&amp;apikey=a939a3a3-da01-4096-b0fe-457cdc8a8dbf"></script>
+	<script src="js/maps.js"></script>
+	<script src="js/scripts.js"></script>
+
+</head>
+<body>
+
+
+	<div class="calc">
+		
+		<div class="header">
+			<img src="img/back.png" alt="" class="header__back">
+			<div class="header__name">CompanyName</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__img"><img src="img/1.png" alt=""></div>
+			<div id="calc_btn_otkuda" class="calc__text">
+				<div class="calc__title">Where to get?</div>
+				<div class="calc_sub_otkuda"></div>
+			</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__img"><img src="img/2.png" alt=""></div>
+			<div id="calc_btn_kuda" class="calc__text">
+				<div class="calc__title">Where to go?</div>
+				<div class="calc_sub_kuda"></div>
+			</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__img"><img src="img/3.png" alt=""></div>
+			<div id="calc_btn_date" class="calc__text">
+				<div class="calc__title">Date and time</div>
+				<div class="calc_sub_date">Select date</div>
+			</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__img"><img src="img/4.png" alt=""></div>
+			<div id="calc_btn_hours" class="calc__text">
+				<div class="calc__title">Work time</div>
+				<div class="calc_sub_hours">2 hours</div>
+			</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__img"><img src="img/5.png" alt=""></div>
+			<div id="calc_btn_car" class="calc__text">
+				<div class="calc__title">Vehicle type</div>
+				<div class="calc_sub_car">Vehicle 3 m</div>
+			</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__img"><img src="img/6.png" alt=""></div>
+			<div id="calc_btn_workers" class="calc__text">
+				<div class="calc__title">Number of workers</div>
+				<div class="calc_sub_workers">Number of workers</div>
+			</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__img"><img src="img/7.png" alt=""></div>
+			<div id="calc_btn_msg" class="calc__text">
+				<div class="calc__title">Comment for order</div>
+				<div class="calc_sub_msg">No comment</div>
+			</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__img"><img src="img/8.png" alt=""></div>
+			<label for="calc_sborka" class="calc__text">
+				<div class="calc__title">Assembly / disassembly of furniture</div>
+				<!-- <div class="calc__subtitle">Нет комментария</div> -->
+			</label>
+			<input class="calc__checkbox calc__checkbox--sborka" type="checkbox" name="calc_sborka" id="calc_sborka">
+			<div class="calc__tick">✔</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__img"><img src="img/9.png" alt=""></div>
+			<label for="calc_upakovka" class="calc__text">
+				<div class="calc__title">Packaging materials</div>
+				<!-- <div class="calc__subtitle">Нет комментария</div> -->
+			</label>
+			<input class="calc__checkbox calc__checkbox--upakovka" type="checkbox" name="calc_upakovka" id="calc_upakovka">
+			<div class="calc__tick">✔</div>
+		</div>
+
+		<div class="itog" id="itog">
+			<div class="itog__text">Total: $570 <span class="itog__text--thin">(further $100 per hour)</span></div>
+			<div class="itog__text">Make order</div>
+		</div>
+
+		<div class="side">
+
+			<div class="workers">
+
+				<div class="side__title">Number of workers</div>
+
+				<div class="workers__flex workers__flex--top">
+					<input class="workers__radio" type="radio" name="workers" id="workers_0" value="0" checked>
+					<label class="workers__label" for="workers_0">Do it myself</label>
+					<div class="workers__tick workers__tick--show">✔</div>
+				</div>
+				
+				<div class="workers__flex">
+					<input class="workers__radio" type="radio" name="workers" id="workers_1" value="1">
+					<label class="workers__label" for="workers_1">1 worker</label>
+					<div class="workers__tick">✔</div>
+				</div>
+				
+				<div class="workers__flex">
+					<input class="workers__radio" type="radio" name="workers" id="workers_2" value="2">
+					<label class="workers__label" for="workers_2">2 workers</label>
+					<div class="workers__tick">✔</div>
+				</div>
+				
+				<div class="workers__flex">
+					<input class="workers__radio" type="radio" name="workers" id="workers_3" value="3">
+					<label class="workers__label" for="workers_3">3 workers</label>
+					<div class="workers__tick">✔</div>
+				</div>
+				
+				<div class="workers__flex">
+					<input class="workers__radio" type="radio" name="workers" id="workers_4" value="4">
+					<label class="workers__label" for="workers_4">4 workers</label>
+					<div class="workers__tick">✔</div>
+				</div>
+				
+				<div class="workers__flex">
+					<input class="workers__radio" type="radio" name="workers" id="workers_5" value="5">
+					<label class="workers__label" for="workers_5">5 workers</label>
+					<div class="workers__tick">✔</div>
+				</div>
+				
+				<div class="workers__flex">
+					<input class="workers__radio" type="radio" name="workers" id="workers_6" value="6">
+					<label class="workers__label" for="workers_6">6 workers</label>
+					<div class="workers__tick">✔</div>
+				</div>
+				
+				<div class="workers__flex">
+					<input class="workers__radio" type="radio" name="workers" id="workers_7" value="7">
+					<label class="workers__label" for="workers_7">7 workers</label>
+					<div class="workers__tick">✔</div>
+				</div>
+
+			</div>
+
+			<div class="msg">
+
+				<div class="side__title">Comment for order</div>
+
+				<textarea class="msg__textarea" name="msg" id="msg_textarea"></textarea>
+
+				<div class="msg__confirm">Add comment</div>
+
+			</div>
+
+			<div class="car">
+
+				<div class="side__title">Vehicle type</div>
+
+				<div class="car__flex car__flex--top">
+					<input class="car__radio" type="radio" name="car" id="car_1" value="Vehicle 3 m" checked>
+					<label class="car__label" for="car_1">
+						<div class="car__label--bold">Vehicle 3 m</div>
+						<div>Height: 1.8 m</div>
+						<div>Width: 2 m</div>
+					</label>
+					<img src="img/car1.png" alt="" class="car__img">
+					<div class="car__tick car__tick--show">✔</div>
+				</div>
+
+				<div class="car__flex">
+					<input class="car__radio" type="radio" name="car" id="car_2" value="Vehicle 4.2 m">
+					<label class="car__label" for="car_2">
+						<div class="car__label--bold">Vehicle 4.2 m</div>
+						<div>Height: 2.2 m</div>
+						<div>Width: 2 m</div>
+					</label>
+					<img src="img/car2.png" alt="" class="car__img">
+					<div class="car__tick">✔</div>
+				</div>
+
+				<div class="car__flex">
+					<input class="car__radio" type="radio" name="car" id="car_3" value="Vehicle 6.1 m">
+					<label class="car__label" for="car_3">
+						<div class="car__label--bold">Vehicle 6.1 m</div>
+						<div>Height: 2.4 m</div>
+						<div>Width: 2.4 m</div>
+					</label>
+					<img src="img/car3.png" alt="" class="car__img">
+					<div class="car__tick">✔</div>
+				</div>
+
+			</div>
+
+			<div class="hours">
+
+				<div class="side__title">Work time</div>
+
+				<div class="hours__flex hours__flex--top">
+					<input class="hours__radio" type="radio" name="hours" id="hours_1" checked value="2">
+					<label class="hours__label" for="hours_1">2 hours</label>
+					<div class="hours__tick hours__tick--show">✔</div>
+				</div>
+
+				<div class="hours__flex">
+					<input class="hours__radio" type="radio" name="hours" id="hours_2" value="3">
+					<label class="hours__label" for="hours_2">3 hours</label>
+					<div class="hours__tick">✔</div>
+				</div>
+
+				<div class="hours__flex">
+					<input class="hours__radio" type="radio" name="hours" id="hours_3" value="4">
+					<label class="hours__label" for="hours_3">4 hours</label>
+					<div class="hours__tick">✔</div>
+				</div>
+
+				<div class="hours__flex">
+					<input class="hours__radio" type="radio" name="hours" id="hours_4" value="5">
+					<label class="hours__label" for="hours_4">5 hours</label>
+					<div class="hours__tick">✔</div>
+				</div>
+
+				<div class="hours__flex">
+					<input class="hours__radio" type="radio" name="hours" id="hours_5" value="6">
+					<label class="hours__label" for="hours_5">6 hours</label>
+					<div class="hours__tick">✔</div>
+				</div>
+
+				<div class="hours__flex">
+					<input class="hours__radio" type="radio" name="hours" id="hours_6" value="7">
+					<label class="hours__label" for="hours_6">7 hours</label>
+					<div class="hours__tick">✔</div>
+				</div>
+
+				<div class="hours__flex">
+					<input class="hours__radio" type="radio" name="hours" id="hours_7" value="8">
+					<label class="hours__label" for="hours_7">8 hours</label>
+					<div class="hours__tick">✔</div>
+				</div>
+
+			</div>
+
+			<div class="date">
+
+				<div class="side__title">Date and time</div>
+
+				<!-- <div class="date__list">
+
+					<input type="radio" name="date_radio" id="date_radio_1" class="date__radio" checked>
+					<label class="date__li" for="date_radio_1">9 февраля 2021</label>
+
+					<input type="radio" name="date_radio" id="date_radio_2" class="date__radio">
+					<label class="date__li" for="date_radio_2">10 февраля 2021</label>
+
+					<input type="radio" name="date_radio" id="date_radio_3" class="date__radio">
+					<label class="date__li" for="date_radio_3">11 февраля 2021</label>
+					
+				</div> -->
+
+				<div class="date__wrap">
+					<input type="date" id="date_date" class="date__date">
+					<input type="time" id="date_time" class="date__time">
+				</div>
+
+				<div class="date__wrap">
+					<div class="date__ok">Confirm</div>
+				</div>
+
+			</div>
+
+			<div class="otkuda">
+
+				<div class="side__title">Where to get?</div>
+
+				<div class="otkuda__wrap">
+					<div class="otkuda__note">Please click at map to set position</div>
+					<div id="map" class="otkuda__map"></div>
+					<div class="otkuda__value"></div>
+					<div class="otkuda__confirm">Confirm</div>
+				</div>
+
+			</div>
+
+			<div class="kuda">
+
+				<div class="side__title">Where to go?</div>
+
+				<div class="kuda__wrap">
+					<div class="kuda__note">Please click at map to set position</div>
+					<div id="map2" class="kuda__map"></div>
+					<div class="kuda__value"></div>
+					<div class="kuda__confirm">Confirm</div>
+				</div>
+
+			</div>
+
+			<div class="form">
+
+				<div class="side__title">Make order</div>
+
+				<form method="POST" action="!mail.php" class="form__wrap">
+
+					<div class="form__title">Order info:</div>
+
+					<textarea class="form__text" name="form_text" id="form_text" disabled></textarea>
+
+					<div class="form__info"></div>
+
+					<input type="text" name="form_name" class="form__name" required placeholder="Your name">
+
+					<input type="text" name="form_phone" class="form__phone" required placeholder="Your phone">
+
+					<input class="form__send" type="submit" value="Send">
+
+				</form>
+				
+			</div>
+			
+
+		</div>
+
+	</div>
+
+
+</body>
+</html>
