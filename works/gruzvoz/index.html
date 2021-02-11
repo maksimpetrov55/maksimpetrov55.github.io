@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Web Mockup</title>
 
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/main.css?v1">
 	<link rel="stylesheet" href="font/MyriadPro.css">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="https://api-maps.yandex.ru/2.1/?lang=en_US&amp;apikey=a939a3a3-da01-4096-b0fe-457cdc8a8dbf"></script>
-	<script src="js/maps.js"></script>
-	<script src="js/scripts.js"></script>
+	<script src="js/maps.js?v1"></script>
+	<script src="js/scripts.js?v1"></script>
 
 </head>
 <body>
@@ -19,10 +19,10 @@
 
 	<div class="calc">
 		
-		<div class="header">
+		<!-- <div class="header">
 			<img src="img/back.png" alt="" class="header__back">
 			<div class="header__name">CompanyName</div>
-		</div>
+		</div> -->
 
 		<div class="calc__line">
 			<div class="calc__img"><img src="img/1.png" alt=""></div>
@@ -52,7 +52,7 @@
 			<div class="calc__img"><img src="img/4.png" alt=""></div>
 			<div id="calc_btn_hours" class="calc__text">
 				<div class="calc__title">Work time</div>
-				<div class="calc_sub_hours">2 hours</div>
+				<div class="calc_sub_hours">1 hour</div>
 			</div>
 		</div>
 
@@ -60,7 +60,7 @@
 			<div class="calc__img"><img src="img/5.png" alt=""></div>
 			<div id="calc_btn_car" class="calc__text">
 				<div class="calc__title">Vehicle type</div>
-				<div class="calc_sub_car">Vehicle 3 m</div>
+				<div class="calc_sub_car">10' truck</div>
 			</div>
 		</div>
 
@@ -68,7 +68,7 @@
 			<div class="calc__img"><img src="img/6.png" alt=""></div>
 			<div id="calc_btn_workers" class="calc__text">
 				<div class="calc__title">Number of workers</div>
-				<div class="calc_sub_workers">Number of workers</div>
+				<div class="calc_sub_workers">2 workers</div>
 			</div>
 		</div>
 
@@ -101,7 +101,7 @@
 		</div>
 
 		<div class="itog" id="itog">
-			<div class="itog__text">Total: $570 <span class="itog__text--thin">(further $100 per hour)</span></div>
+			<div class="itog__text"><span id="itog_text_1">Total: $570 </span><span id="itog_text_2" class="itog__text--thin">(further $100 per hour)</span></div>
 			<div class="itog__text">Make order</div>
 		</div>
 
@@ -110,23 +110,11 @@
 			<div class="workers">
 
 				<div class="side__title">Number of workers</div>
-
+				
 				<div class="workers__flex workers__flex--top">
-					<input class="workers__radio" type="radio" name="workers" id="workers_0" value="0" checked>
-					<label class="workers__label" for="workers_0">Do it myself</label>
-					<div class="workers__tick workers__tick--show">✔</div>
-				</div>
-				
-				<div class="workers__flex">
-					<input class="workers__radio" type="radio" name="workers" id="workers_1" value="1">
-					<label class="workers__label" for="workers_1">1 worker</label>
-					<div class="workers__tick">✔</div>
-				</div>
-				
-				<div class="workers__flex">
-					<input class="workers__radio" type="radio" name="workers" id="workers_2" value="2">
+					<input class="workers__radio" type="radio" name="workers" id="workers_2" value="2" checked>
 					<label class="workers__label" for="workers_2">2 workers</label>
-					<div class="workers__tick">✔</div>
+					<div class="workers__tick workers__tick--show">✔</div>
 				</div>
 				
 				<div class="workers__flex">
@@ -141,24 +129,6 @@
 					<div class="workers__tick">✔</div>
 				</div>
 				
-				<div class="workers__flex">
-					<input class="workers__radio" type="radio" name="workers" id="workers_5" value="5">
-					<label class="workers__label" for="workers_5">5 workers</label>
-					<div class="workers__tick">✔</div>
-				</div>
-				
-				<div class="workers__flex">
-					<input class="workers__radio" type="radio" name="workers" id="workers_6" value="6">
-					<label class="workers__label" for="workers_6">6 workers</label>
-					<div class="workers__tick">✔</div>
-				</div>
-				
-				<div class="workers__flex">
-					<input class="workers__radio" type="radio" name="workers" id="workers_7" value="7">
-					<label class="workers__label" for="workers_7">7 workers</label>
-					<div class="workers__tick">✔</div>
-				</div>
-
 			</div>
 
 			<div class="msg">
@@ -176,35 +146,67 @@
 				<div class="side__title">Vehicle type</div>
 
 				<div class="car__flex car__flex--top">
-					<input class="car__radio" type="radio" name="car" id="car_1" value="Vehicle 3 m" checked>
-					<label class="car__label" for="car_1">
-						<div class="car__label--bold">Vehicle 3 m</div>
-						<div>Height: 1.8 m</div>
-						<div>Width: 2 m</div>
-					</label>
 					<img src="img/car1.png" alt="" class="car__img">
+					<input class="car__radio" type="radio" name="car" id="car_1" value="10' truck" checked>
+					<label class="car__label" for="car_1">
+						<div class="car__label--bold">10' truck</div>
+						<div>Inside dimensions: 9'11"x6'4"x6'2" (LxWxH)</div>
+						<div>Door opening: 5'11"x5'7" (WxH)</div>
+						<div>Deck height: 2'5"</div>
+						<div>Loading ramp: none</div>
+					</label>
 					<div class="car__tick car__tick--show">✔</div>
 				</div>
 
 				<div class="car__flex">
-					<input class="car__radio" type="radio" name="car" id="car_2" value="Vehicle 4.2 m">
-					<label class="car__label" for="car_2">
-						<div class="car__label--bold">Vehicle 4.2 m</div>
-						<div>Height: 2.2 m</div>
-						<div>Width: 2 m</div>
-					</label>
 					<img src="img/car2.png" alt="" class="car__img">
+					<input class="car__radio" type="radio" name="car" id="car_2" value="14' truck">
+					<label class="car__label" for="car_2">
+						<div class="car__label--bold">14' truck</div>
+						<div>Inside dimensions: 14'6"x7'8"x7'2" (LxWxH)</div>
+						<div>Door opening: 7'3"x6'5" (WxH)</div>
+						<div>Deck height: 2'10"</div>
+						<div>EZ-Load ramp</div>
+					</label>
 					<div class="car__tick">✔</div>
 				</div>
 
 				<div class="car__flex">
-					<input class="car__radio" type="radio" name="car" id="car_3" value="Vehicle 6.1 m">
-					<label class="car__label" for="car_3">
-						<div class="car__label--bold">Vehicle 6.1 m</div>
-						<div>Height: 2.4 m</div>
-						<div>Width: 2.4 m</div>
-					</label>
 					<img src="img/car3.png" alt="" class="car__img">
+					<input class="car__radio" type="radio" name="car" id="car_3" value="17' truck">
+					<label class="car__label" for="car_3">
+						<div class="car__label--bold">17' truck</div>
+						<div>Inside dimensions: 16'9"x7'8"x7'2" (LxWxH)</div>
+						<div>Door opening: 7'3"x6'5" (WxH)</div>
+						<div>Deck height: 2'10"</div>
+						<div>EZ-Load ramp</div>
+					</label>
+					<div class="car__tick">✔</div>
+				</div>
+
+				<div class="car__flex">
+					<img src="img/car4.png" alt="" class="car__img">
+					<input class="car__radio" type="radio" name="car" id="car_4" value="20' truck">
+					<label class="car__label" for="car_4">
+						<div class="car__label--bold">20' truck</div>
+						<div>Inside dimensions: 19'11"x7'8"x7'2" (LxWxH)</div>
+						<div>Door opening: 7'3.75"x5'5" (WxH)</div>
+						<div>Deck height: 2'11"</div>
+						<div>EZ-Load ramp</div>
+					</label>
+					<div class="car__tick">✔</div>
+				</div>
+
+				<div class="car__flex">
+					<img src="img/car5.png" alt="" class="car__img">
+					<input class="car__radio" type="radio" name="car" id="car_5" value="26' truck">
+					<label class="car__label" for="car_5">
+						<div class="car__label--bold">26' truck</div>
+						<div>Inside dimensions: 26'5"x7'8"x8'3" (LxWxH)</div>
+						<div>Door opening: 7'3"x6'10" (WxH)</div>
+						<div>Deck height: 2'9"</div>
+						<div>EZ-Load ramp</div>
+					</label>
 					<div class="car__tick">✔</div>
 				</div>
 
@@ -215,44 +217,50 @@
 				<div class="side__title">Work time</div>
 
 				<div class="hours__flex hours__flex--top">
-					<input class="hours__radio" type="radio" name="hours" id="hours_1" checked value="2">
-					<label class="hours__label" for="hours_1">2 hours</label>
+					<input class="hours__radio" type="radio" name="hours" id="hours_1" checked value="1">
+					<label class="hours__label" for="hours_1">1 hour</label>
 					<div class="hours__tick hours__tick--show">✔</div>
 				</div>
 
 				<div class="hours__flex">
-					<input class="hours__radio" type="radio" name="hours" id="hours_2" value="3">
-					<label class="hours__label" for="hours_2">3 hours</label>
+					<input class="hours__radio" type="radio" name="hours" id="hours_2" value="2">
+					<label class="hours__label" for="hours_2">2 hours</label>
 					<div class="hours__tick">✔</div>
 				</div>
 
 				<div class="hours__flex">
-					<input class="hours__radio" type="radio" name="hours" id="hours_3" value="4">
-					<label class="hours__label" for="hours_3">4 hours</label>
+					<input class="hours__radio" type="radio" name="hours" id="hours_3" value="3">
+					<label class="hours__label" for="hours_3">3 hours</label>
 					<div class="hours__tick">✔</div>
 				</div>
 
 				<div class="hours__flex">
-					<input class="hours__radio" type="radio" name="hours" id="hours_4" value="5">
-					<label class="hours__label" for="hours_4">5 hours</label>
+					<input class="hours__radio" type="radio" name="hours" id="hours_4" value="4">
+					<label class="hours__label" for="hours_4">4 hours</label>
 					<div class="hours__tick">✔</div>
 				</div>
 
 				<div class="hours__flex">
-					<input class="hours__radio" type="radio" name="hours" id="hours_5" value="6">
-					<label class="hours__label" for="hours_5">6 hours</label>
+					<input class="hours__radio" type="radio" name="hours" id="hours_5" value="5">
+					<label class="hours__label" for="hours_5">5 hours</label>
 					<div class="hours__tick">✔</div>
 				</div>
 
 				<div class="hours__flex">
-					<input class="hours__radio" type="radio" name="hours" id="hours_6" value="7">
-					<label class="hours__label" for="hours_6">7 hours</label>
+					<input class="hours__radio" type="radio" name="hours" id="hours_6" value="6">
+					<label class="hours__label" for="hours_6">6 hours</label>
 					<div class="hours__tick">✔</div>
 				</div>
 
 				<div class="hours__flex">
-					<input class="hours__radio" type="radio" name="hours" id="hours_7" value="8">
-					<label class="hours__label" for="hours_7">8 hours</label>
+					<input class="hours__radio" type="radio" name="hours" id="hours_7" value="7">
+					<label class="hours__label" for="hours_7">7 hours</label>
+					<div class="hours__tick">✔</div>
+				</div>
+
+				<div class="hours__flex">
+					<input class="hours__radio" type="radio" name="hours" id="hours_8" value="8">
+					<label class="hours__label" for="hours_8">8 hours</label>
 					<div class="hours__tick">✔</div>
 				</div>
 
@@ -331,6 +339,8 @@
 					<input class="form__send" type="submit" value="Send">
 
 				</form>
+
+				<div class="form__back">Go back</div>
 				
 			</div>
 			

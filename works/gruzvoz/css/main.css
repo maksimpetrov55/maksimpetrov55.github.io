@@ -62,7 +62,7 @@ body {
   background: #fff;
   margin: 0 auto;
   max-width: 992px;
-  min-height: 500px;
+  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -75,19 +75,20 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 80px;
+  height: 70px;
   position: relative;
 }
 
 @media (max-width: 400px) {
   .calc__line {
     padding: 5px 15px;
+    height: 60px;
   }
 }
 
 .calc__img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   margin: 0 25px 0 0;
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -95,8 +96,8 @@ body {
 
 @media (max-width: 400px) {
   .calc__img {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     margin: 0 20px 0 0;
   }
 }
@@ -130,7 +131,7 @@ body {
 }
 
 .calc__title {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
   width: 100%;
   position: relative;
@@ -144,12 +145,13 @@ body {
 }
 
 .calc__subtitle {
+  font-size: 15px;
   margin: 10px 0 0 0;
 }
 
 @media (max-width: 400px) {
   .calc__subtitle {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
@@ -196,7 +198,8 @@ body {
 @media (max-width: 400px) {
   .itog {
     width: 96%;
-    padding: 20px 10px;
+    padding: 15px 10px;
+    margin: 20px auto 20px auto;
   }
 }
 
@@ -225,8 +228,9 @@ body {
   background: #fff;
   position: absolute;
   width: 100%;
-  height: calc( 100% - 80px);
-  bottom: 0;
+  height: 100%;
+  overflow-y: auto;
+  top: 0;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
   -webkit-transform: translateX(110%);
@@ -262,7 +266,13 @@ body {
           align-items: center;
   border-bottom: 1px solid #DCDCDC;
   padding: 5px 25px;
-  height: 80px;
+  height: 70px;
+}
+
+@media (max-width: 400px) {
+  .workers__flex {
+    height: 50px;
+  }
 }
 
 .workers__flex--top {
@@ -384,13 +394,13 @@ body {
       -ms-flex-align: center;
           align-items: center;
   border-bottom: 1px solid #DCDCDC;
-  padding: 10px 25px;
+  padding: 10px 15px;
   min-height: 80px;
 }
 
 @media (max-width: 500px) {
   .car__flex {
-    padding: 10px 15px;
+    padding: 10px 10px;
   }
 }
 
@@ -403,7 +413,7 @@ body {
 }
 
 .car__label {
-  font-size: 18px;
+  font-size: 16px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -414,25 +424,24 @@ body {
 
 @media (max-width: 400px) {
   .car__label {
-    font-size: 16px;
+    font-size: 11px;
   }
 }
 
 .car__label--bold {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   margin: 0 0 5px 0;
 }
 
 @media (max-width: 400px) {
   .car__label--bold {
-    font-size: 18px;
+    font-size: 15px;
   }
 }
 
 .car__img {
   display: block;
-  position: absolute;
   height: 80px;
   margin: 0 20px 0 0;
   right: 40px;
@@ -492,7 +501,13 @@ body {
           align-items: center;
   border-bottom: 1px solid #DCDCDC;
   padding: 5px 25px;
-  height: 80px;
+  height: 70px;
+}
+
+@media (max-width: 400px) {
+  .hours__flex {
+    height: 50px;
+  }
 }
 
 .hours__flex--top {
@@ -680,6 +695,13 @@ body {
   border: 1px solid #dcdcdc;
 }
 
+@media (max-width: 400px) {
+  .form__name {
+    font-size: 19px;
+    padding: 15px 10px;
+  }
+}
+
 .form__phone {
   display: block;
   font-size: 24px;
@@ -688,6 +710,13 @@ body {
   padding: 15px 20px;
   margin: 0 0 15px 0;
   border: 1px solid #dcdcdc;
+}
+
+@media (max-width: 400px) {
+  .form__phone {
+    font-size: 19px;
+    padding: 15px 10px;
+  }
 }
 
 .form__send {
@@ -719,8 +748,20 @@ body {
   border-radius: 8px;
 }
 
+@media (max-width: 400px) {
+  .form__send {
+    font-size: 20px;
+    height: 54px;
+  }
+}
+
 .form__send:hover {
   background: #fcff4d;
+}
+
+.form__back {
+  text-align: center;
+  margin: 0 auto 30px auto;
 }
 
 .otkuda {
@@ -739,6 +780,12 @@ body {
   width: 100%;
   position: relative;
   height: 500px;
+}
+
+@media (max-width: 400px) {
+  .otkuda__map {
+    height: 350px;
+  }
 }
 
 .otkuda__note {
@@ -797,6 +844,12 @@ body {
   width: 100%;
   position: relative;
   height: 500px;
+}
+
+@media (max-width: 400px) {
+  .kuda__map {
+    height: 350px;
+  }
 }
 
 .kuda__note {

@@ -38,10 +38,11 @@ $(document).ready(function() {
 	var workers_count = $('input[name="workers"]:checked').val();
 	$('input[name="workers"]').change(function(){
 		var workers_text = $("input[name='workers']:checked").next().text();
-		var workers_count = $('input[name="workers"]:checked').val();
 		$('.calc_sub_workers').text(workers_text);
 		$('.workers__tick--show').removeClass("workers__tick--show");
 		$("input[name='workers']:checked").next().next().toggleClass("workers__tick--show");
+		calculate();
+		side_close();
 	});
 
 	$('#calc_btn_workers').click(function(){
@@ -63,7 +64,8 @@ $(document).ready(function() {
 		var car_type = $('input[name="car"]:checked').val();
 		$('.calc_sub_car').text(car_text);
 		$('.car__tick--show').removeClass("car__tick--show");
-		$("input[name='car']:checked").next().next().next().toggleClass("car__tick--show");
+		$("input[name='car']:checked").next().next().toggleClass("car__tick--show");
+		side_close();
 	});
 	// car
 
@@ -75,10 +77,11 @@ $(document).ready(function() {
 	var hours_count = $("input[name='hours']:checked").val();
 	$('input[name="hours"]').change(function(){
 		var hours_text = $("input[name='hours']:checked").next().text();
-		var hours_count = $("input[name='hours']:checked").val();
 		$('.calc_sub_hours').text(hours_text);
 		$('.hours__tick--show').removeClass("hours__tick--show");
 		$("input[name='hours']:checked").next().next().toggleClass("hours__tick--show");
+		calculate();
+		side_close();
 	});
 	// hours
 
@@ -128,6 +131,10 @@ $(document).ready(function() {
 		side_open();
 		make_order();
 		$('.form').addClass("form--show");
+	});
+
+	$('.form__back').click(function(){
+		side_close();
 	});
 	// form
 
@@ -182,6 +189,30 @@ $(document).ready(function() {
 			alert("Please set address");
 		}
 	});
+
+	calculate();
+
+	function calculate() {
+
+		var hours_count = $("input[name='hours']:checked").val();
+		var workers_count = $('input[name="workers"]:checked').val();
+
+		if ( workers_count == 2 ) {
+			var calc__rent = 79;
+		}
+		if ( workers_count == 3 ) {
+			var calc__rent = 109;
+		}
+		if ( workers_count == 4 ) {
+			var calc__rent = 129;
+		}
+
+		var calc__price = +calc__rent * +hours_count;
+
+		$('#itog_text_1').text( "Total: $" + calc__price + " " );
+		$('#itog_text_2').text( "(further $" + calc__rent + " per hour)" );
+
+	}
 
 	function make_order() {
 

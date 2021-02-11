@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="font/MyriadPro.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+
+	<div class="calc">
+		
+		<div class="header">
+			<img src="img/back.png" alt="" class="header__back">
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__img"></div>
+			<div id="calc_btn_otkuda" class="calc__text">
+				<div class="calc__title">Откуда забрать?</div>
+				<div class="calc_sub_otkuda"></div>
+			</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__img"></div>
+			<div id="calc_btn_kuda" class="calc__text">
+				<div class="calc__title">Куда ехать?</div>
+				<div class="calc_sub_kuda"></div>
+			</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__img"></div>
+			<div id="calc_btn_date" class="calc__text">
+				<div class="calc__title">Дата и время начала переезда</div>
+				<div class="calc_sub_date">Выбрать дату</div>
+			</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__img"></div>
+			<div id="calc_btn_hours" class="calc__text">
+				<div class="calc__title">Примерное количество часов работы</div>
+				<div class="calc_sub_hours">2 часа</div>
+			</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__img"></div>
+			<div id="calc_btn_car" class="calc__text">
+				<div class="calc__title">Тип автомобиля</div>
+				<div class="calc_sub_car">Газель 3 м</div>
+			</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__img"></div>
+			<div id="calc_btn_workers" class="calc__text">
+				<div class="calc__title">Количество грузчиков</div>
+				<div class="calc_sub_workers">Справлюсь сам</div>
+			</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__img"></div>
+			<div id="calc_btn_msg" class="calc__text">
+				<div class="calc__title">Комментарий к заказу</div>
+				<div class="calc_sub_msg">Нет комментария</div>
+			</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__img"></div>
+			<label for="calc_sborka" class="calc__text">
+				<div class="calc__title">Сборка/разборка мебели</div>
+				<!-- <div class="calc__subtitle">Нет комментария</div> -->
+			</label>
+			<input class="calc__checkbox calc__checkbox--sborka" type="checkbox" name="calc_sborka" id="calc_sborka">
+			<div class="calc__tick">✔</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__img"></div>
+			<label for="calc_upakovka" class="calc__text">
+				<div class="calc__title">Упаковочные материалы</div>
+				<!-- <div class="calc__subtitle">Нет комментария</div> -->
+			</label>
+			<input class="calc__checkbox calc__checkbox--upakovka" type="checkbox" name="calc_upakovka" id="calc_upakovka">
+			<div class="calc__tick">✔</div>
+		</div>
+
+		<div class="itog" id="itog">
+			<div class="itog__text">Итого: 5700₽ <span class="itog__text--thin">(далее 1000₽/час)</span></div>
+			<div class="itog__text">Оформить заказ</div>
+		</div>
+
+		<!-- <div class="test">
+			<div class="some">some text</div>
+			<div class="some">some text</div>
+			<div class="some">some text</div>
+			<div class="some">some text</div>
+			<div class="some">some text</div>
+			<div class="some">some text</div>
+			<div class="some">some text</div>
+			<div class="some">some text</div>
+			<div class="some">some text</div>
+			<div class="some">some text</div>
+		</div> -->
+
+		<!-- <input style="font-size: 26px;" type="date" name="" id="" value="1992-10-11">
+		<input style="font-size: 26px;" type="time" name="" id=""> -->
+
+		<div class="side">
+
+			<div class="workers">
+
+				<div class="side__title">Количество грузчиков</div>
+
+				<div class="workers__flex workers__flex--top">
+					<input class="workers__radio" type="radio" name="workers" id="workers_0" value="0" checked>
+					<label class="workers__label" for="workers_0">Справлюсь сам</label>
+					<div class="workers__tick workers__tick--show">✔</div>
+				</div>
+				
+				<div class="workers__flex">
+					<input class="workers__radio" type="radio" name="workers" id="workers_1" value="500">
+					<label class="workers__label" for="workers_1">1 грузчик</label>
+					<div class="workers__tick">✔</div>
+				</div>
+				
+				<div class="workers__flex">
+					<input class="workers__radio" type="radio" name="workers" id="workers_2" value="1000">
+					<label class="workers__label" for="workers_2">2 грузчика</label>
+					<div class="workers__tick">✔</div>
+				</div>
+				
+				<div class="workers__flex">
+					<input class="workers__radio" type="radio" name="workers" id="workers_3" value="1500">
+					<label class="workers__label" for="workers_3">3 грузчика</label>
+					<div class="workers__tick">✔</div>
+				</div>
+				
+				<div class="workers__flex">
+					<input class="workers__radio" type="radio" name="workers" id="workers_4" value="2000">
+					<label class="workers__label" for="workers_4">4 грузчика</label>
+					<div class="workers__tick">✔</div>
+				</div>
+				
+				<div class="workers__flex">
+					<input class="workers__radio" type="radio" name="workers" id="workers_5" value="2500">
+					<label class="workers__label" for="workers_5">5 грузчиков</label>
+					<div class="workers__tick">✔</div>
+				</div>
+				
+				<div class="workers__flex">
+					<input class="workers__radio" type="radio" name="workers" id="workers_6" value="3000">
+					<label class="workers__label" for="workers_6">6 грузчиков</label>
+					<div class="workers__tick">✔</div>
+				</div>
+				
+				<div class="workers__flex">
+					<input class="workers__radio" type="radio" name="workers" id="workers_7" value="3500">
+					<label class="workers__label" for="workers_7">7 грузчиков</label>
+					<div class="workers__tick">✔</div>
+				</div>
+
+			</div>
+
+			<div class="msg">
+
+				<div class="side__title">Комментарий к заказу</div>
+
+				<textarea class="msg__textarea" name="msg" id="msg_textarea"></textarea>
+
+				<div class="msg__confirm">Добавить комментарий</div>
+
+			</div>
+
+			<div class="car">
+
+				<div class="side__title">Тип автомобиля</div>
+
+				<div class="car__flex car__flex--top">
+					<input class="car__radio" type="radio" name="car" id="car_1" value="1000" checked>
+					<label class="car__label" for="car_1">
+						<div class="car__label--bold">Газель 3 м</div>
+						<div>Высота: 1.8 м</div>
+						<div>Ширина: 2 м</div>
+					</label>
+					<img src="img/car1.png" alt="" class="car__img">
+					<div class="car__tick car__tick--show">✔</div>
+				</div>
+
+				<div class="car__flex">
+					<input class="car__radio" type="radio" name="car" id="car_2" value="1500">
+					<label class="car__label" for="car_2">
+						<div class="car__label--bold">Газель 4.2 м</div>
+						<div>Высота: 2.2 м</div>
+						<div>Ширина: 2 м</div>
+					</label>
+					<img src="img/car2.png" alt="" class="car__img">
+					<div class="car__tick">✔</div>
+				</div>
+
+				<div class="car__flex">
+					<input class="car__radio" type="radio" name="car" id="car_3" value="2000">
+					<label class="car__label" for="car_3">
+						<div class="car__label--bold">Газель 6.1 м</div>
+						<div>Высота: 2.4 м</div>
+						<div>Ширина: 2.4 м</div>
+					</label>
+					<img src="img/car3.png" alt="" class="car__img">
+					<div class="car__tick">✔</div>
+				</div>
+
+			</div>
+
+			<div class="hours">
+
+				<div class="side__title">Количество часов</div>
+
+				<div class="hours__flex hours__flex--top">
+					<input class="hours__radio" type="radio" name="hours" id="hours_1" checked>
+					<label class="hours__label" for="hours_1">2 часа</label>
+					<div class="hours__tick hours__tick--show">✔</div>
+				</div>
+
+				<div class="hours__flex">
+					<input class="hours__radio" type="radio" name="hours" id="hours_2" checked>
+					<label class="hours__label" for="hours_2">3 часа</label>
+					<div class="hours__tick">✔</div>
+				</div>
+
+				<div class="hours__flex">
+					<input class="hours__radio" type="radio" name="hours" id="hours_3" checked>
+					<label class="hours__label" for="hours_3">4 часа</label>
+					<div class="hours__tick">✔</div>
+				</div>
+
+				<div class="hours__flex">
+					<input class="hours__radio" type="radio" name="hours" id="hours_4" checked>
+					<label class="hours__label" for="hours_4">5 часа</label>
+					<div class="hours__tick">✔</div>
+				</div>
+
+				<div class="hours__flex">
+					<input class="hours__radio" type="radio" name="hours" id="hours_5" checked>
+					<label class="hours__label" for="hours_5">6 часа</label>
+					<div class="hours__tick">✔</div>
+				</div>
+
+				<div class="hours__flex">
+					<input class="hours__radio" type="radio" name="hours" id="hours_6" checked>
+					<label class="hours__label" for="hours_6">7 часа</label>
+					<div class="hours__tick">✔</div>
+				</div>
+
+				<div class="hours__flex">
+					<input class="hours__radio" type="radio" name="hours" id="hours_7" checked>
+					<label class="hours__label" for="hours_7">8 часа</label>
+					<div class="hours__tick">✔</div>
+				</div>
+
+			</div>
+
+			<div class="date">
+
+				<div class="side__title">Дата и время начала переезда</div>
+
+				<!-- <div class="date__list">
+
+					<input type="radio" name="date_radio" id="date_radio_1" class="date__radio" checked>
+					<label class="date__li" for="date_radio_1">9 февраля 2021</label>
+
+					<input type="radio" name="date_radio" id="date_radio_2" class="date__radio">
+					<label class="date__li" for="date_radio_2">10 февраля 2021</label>
+
+					<input type="radio" name="date_radio" id="date_radio_3" class="date__radio">
+					<label class="date__li" for="date_radio_3">11 февраля 2021</label>
+					
+				</div> -->
+
+				<div class="date__wrap">
+
+					<input type="date" id="date_date" class="date__date">
+					<input type="time" id="date_time" class="date__time">
+
+					<div class="date__ok">Подтвердить</div>
+
+				</div>
+
+			</div>
+
+			<div class="otkuda">
+
+				<div class="side__title">Откуда забрать?</div>
+
+				<div class="otkuda__wrap">
+					<div class="otkuda__map"></div>
+				</div>
+
+			</div>
+
+			<div class="kuda">
+
+				<div class="side__title">Куда ехать?</div>
+
+				<div class="kuda__wrap">
+					<div class="kuda__map"></div>
+				</div>
+
+			</div>
+
+			<div class="form">
+
+				<div class="side__title">Отправить заявку</div>
+
+				<form method="POST" action="!mail.php" class="form__wrap">
+
+					<textarea name="form_text" id="form_text"></textarea>
+
+					<input type="text" name="form_name" class="form__name" required placeholder="Ваше Имя">
+
+					<input type="text" name="form_phone" class="form__phone" required placeholder="Ваш телефон">
+
+					<input class="form__send" type="submit" value="Отправить">
+
+				</form>
+				
+			</div>
+			
+
+		</div>
+
+	</div>
+
+
+</body>
+</html>
