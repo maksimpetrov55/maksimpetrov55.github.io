@@ -1,5 +1,13 @@
 $(document).ready(function() {
 
+	// $('.t754__imgwrapper').each(function(){
+	// 	var this_newid = +$(this).index('.t754__imgwrapper') + 1;
+	// 	var this_index = "anchor" + this_newid;
+	// 	$(this).attr("id", this_index);
+	// 	//var this_id = $(this).attr("id");
+	// 	//$(this).text(this_id);
+	// });
+
 	// $('.quiz__btn').click(function(){
 	// 	calculate();
 	// });
@@ -24,7 +32,7 @@ $(document).ready(function() {
 
 	function quiz() {
 
-		$('.quiz__item--select').removeClass("quiz__item--select");
+		$('.item--select').removeClass("item--select");
 
 		var radio_1 = $('input[name=quiz_kronshtein]:checked').val();
 		var radio_2 = $('input[name=quiz_karbonat]:checked').val();
@@ -36,6 +44,7 @@ $(document).ready(function() {
 		if ( radio_1 != undefined && radio_2 != undefined && radio_3 != undefined && radio_4 != undefined ) {
 
 			$('#quiz_itog').addClass("quiz__itog--show");
+			$('.quiz__title--temp').css({display: "none"});
 			
 			var selector = "." + radio_1 + "." + radio_2 + "." + radio_3 + "." + radio_4;
 			
@@ -49,7 +58,7 @@ $(document).ready(function() {
 				$('.quiz__sorry--show').removeClass("quiz__sorry--show");
 			}
 			
-			$('.quiz__elements').children( selector ).addClass("quiz__item--select");
+			$('.quiz__elements').children( selector ).addClass("item--select");
 			
 
 		}
@@ -120,5 +129,7 @@ $(document).ready(function() {
 		$('#quiz_itog').removeClass("quiz__itog--show");
 		$('#quiz_step_1').addClass("quiz__step--show");
 	});
+
+
 
 });

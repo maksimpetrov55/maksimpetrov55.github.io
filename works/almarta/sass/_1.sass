@@ -1,0 +1,354 @@
+
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: "futura", sans-serif
+
+body
+    position: relative
+
+.quiz
+    position: relative
+    width: 96%
+    max-width: 1160px
+    min-height: 700px
+    margin: 50px auto
+    background: #fff
+    //border-radius: 25px
+    //border: 1px solid #eee
+    padding: 30px 40px
+    //box-shadow: 0 10px 20px 2px rgba(0,0,0,0.1)
+    @media ( max-width: 1200px )
+        padding: 30px 20px
+    @media ( max-width: 1100px )
+        padding: 30px 0
+        width: 98%
+    @media ( max-width: 1040px )
+        padding: 30px 20px
+    @media ( max-width: 640px )
+        padding: 30px 0
+    
+    &__flex
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        @media ( max-width: 640px )
+            justify-content: center
+
+    &__head
+        color: #000000
+        font-size: 42px
+        max-width: 600px
+        font-family: 'Futura',Arial,sans-serif
+        line-height: 1.2
+        font-weight: 700
+        text-transform: uppercase
+        text-align: center
+        margin: 20px auto 60px auto
+        text-shadow: 0 0 1px #000
+        @media ( max-width: 700px )
+            font-size: 34px
+        @media ( max-width: 475px )
+            font-size: 26px
+        @media ( max-width: 410px )
+            font-size: 24px
+
+    &__step
+        //width: 50%
+        min-width: 465px
+        margin: 20px 0 20px 0
+        @media ( max-width: 480px )
+            min-width: 280px
+            width: 100%
+
+        &--show
+            display: block
+
+    &__title
+        font-size: 24px
+        margin: 0 0 0px 0
+        font-weight: 400
+
+        &--temp
+            margin: 30px 0
+            max-width: 450px
+
+        &--bold
+            font-weight: 900
+
+        &--itog
+            text-transform: uppercase
+            font-weight: 900
+            font-size: 24px
+
+    &__variants
+        display: flex
+        flex-wrap: wrap
+        padding: 10px 0
+        @media ( max-width: 640px )
+            justify-content: space-between
+        @media ( max-width: 480px )
+            justify-content: flex-start
+
+        &--jcfs
+            justify-content: flex-start
+
+    &__select
+        width: 120px
+        margin: 10px 15px 10px 0
+        transition-duration: 0.2s
+        cursor: pointer
+        color: #333
+        font-size: 16px
+        text-align: center
+        user-select: none
+        @media ( max-width: 1100px )
+            margin: 10px 8px 10px 0
+            width: 108px
+        @media ( max-width: 480px )
+            font-size: 12px
+
+        &--last
+            margin: 10px 0
+        
+        &--width
+            width: 140px
+            @media ( max-width: 480px )
+                width: 98px
+
+        &--small
+            width: 90px
+            height: 60px
+            @media ( max-width: 510px )
+                width: 85px
+                height: 50px
+
+        &:hover
+            transform: scale(1.05)
+
+    &__img
+        position: relative
+        width: 100%
+        border: 1px solid #B4B4B4
+        height: 80px
+        overflow: hidden
+        margin: 0 0 8px 0
+        border-radius: 12px
+        img
+            position: relative
+            width: 100%
+
+        &--material
+            @media ( max-width: 480px )
+                height: 50px
+
+    &__digit
+        position: relative
+        width: 100%
+        height: 100%
+        border: 1px solid #B4B4B4
+        border-radius: 12px
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 20px
+        font-weight: 500
+
+    &__radio
+        display: none
+
+    &__radio:checked + .quiz__select > .quiz__img
+        border: 5px solid #7E1615
+
+    &__radio:checked + .quiz__select > .quiz__digit
+        border: 5px solid #7E1615
+
+
+    &__elements
+        position: relative
+        display: flex
+        flex-wrap: wrap
+        padding: 10px 0
+
+    // &__item
+    //     border: 5px solid #7E1615
+    //     width: 200px
+    //     height: 100px
+    //     position: relative
+    //     margin: 8px
+    //     font-size: 24px
+    //     color: #7E1615
+    //     border-radius: 12px
+    //     display: none
+    //     justify-content: center
+    //     align-items: center
+    //     font-weight: 500
+    //     text-decoration: none
+    //     margin: 10px 20px 30px 0
+
+    //     &::after
+    //         content: "Посмотреть козырек"
+    //         font-size: 18px
+    //         color: #7E1615
+    //         position: absolute
+    //         bottom: -36px
+    //         white-space: nowrap
+
+    //     &--select
+    //         display: flex
+
+    &__buttons
+        display: flex
+        margin: 40px 0 40px 0
+
+    &__again
+        width: 120px
+        height: 44px
+        background: #2079ff
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 5px
+        border-radius: 6px
+        margin: 0 10px 0 0
+        color: #fff
+        font-weight: 600
+        cursor: pointer
+        transition-duration: 0.3s
+
+        &:hover
+            background: #7ba9ee
+
+    &__prev
+        width: 120px
+        height: 44px
+        border: 1px solid #eeeeee
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 5px
+        border-radius: 6px
+        margin: 0 10px 0 0
+        cursor: pointer
+        transition-duration: 0.3s
+
+        &:hover
+            background: #eee
+
+    &__next
+        width: 120px
+        height: 44px
+        background: #2079ff
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 5px
+        border-radius: 6px
+        margin: 0 10px 0 0
+        color: #fff
+        font-weight: 600
+        cursor: pointer
+        transition-duration: 0.3s
+
+        &:hover
+            background: #7ba9ee
+
+    &__itog
+        margin: 50px auto 40px auto
+        //display: none
+        @media ( max-width: 640px )
+            max-width: 482px
+
+        &--show
+            display: block
+
+    &__sorry
+        display: none
+        font-size: 20px
+        color: #2079ff
+        margin: 20px 0 0 0
+
+        &--show
+            display: block
+
+    &__error
+        font-size: 20px
+        color: #d33232
+        margin: 10px 0 0 0
+        display: none
+
+        &--show
+            display: block
+
+
+
+.item
+    position: relative
+    margin: 8px
+    display: none
+    justify-content: center
+    font-weight: 500
+    text-decoration: none
+    margin: 10px 20px 30px 0
+    @media ( max-width: 340px )
+        width: 100%
+        margin: 10px 0 20px 0
+
+    &--select
+        display: flex
+
+    &__name
+        position: relative
+        border: 5px solid #7E1615
+        width: 190px
+        height: 100px
+        border-radius: 12px
+        font-size: 24px
+        color: #7E1615
+        display: flex
+        justify-content: center
+        align-items: center
+        @media ( max-width: 640px )
+            width: 146px
+            height: 73px
+            font-size: 19px
+        @media ( max-width: 480px )
+            width: 140px
+            height: 60px
+
+
+        &::after
+            content: "Посмотреть козырек"
+            font-size: 18px
+            color: #7E1615
+            position: absolute
+            bottom: -30px
+            left: 0
+            width: 100%
+            text-align: center
+            @media ( max-width: 640px )
+                bottom: -50px
+                font-size: 16px
+                line-height: 1.1
+
+
+
+    &__img
+        background: #000
+        width: 165px
+        height: 122px
+        border-radius: 20px
+        margin: 0 0 0 15px
+        @media ( max-width: 640px )
+            width: 150px
+            height: 111px
+            margin: 0 0 0 10px
+
+
+// .t754__imgwrapper
+//     width: 100px
+//     height: 90px
+//     background: #ddd
+//     margin: 10px
