@@ -41,22 +41,14 @@ body {
 
 @media (max-width: 400px) {
   .main {
-    background-size: auto 80%;
-    background-position: 0% 100%;
     padding: 10px 0 60px 0;
-  }
-}
-
-@media (max-width: 340px) {
-  .main {
-    background-position: 10% 100%;
   }
 }
 
 .main__logo {
   position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 300px;
   z-index: 99;
 }
 
@@ -175,7 +167,7 @@ body {
 
 @media (max-width: 400px) {
   .main__gradient {
-    height: 25vh;
+    height: 35vh;
   }
 }
 
