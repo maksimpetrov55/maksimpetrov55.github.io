@@ -13,7 +13,7 @@ body {
 .main {
   width: 100vw;
   height: 100vh;
-  background: #0E163D url("../img/wall2.png") no-repeat;
+  background: #0E163D url("../img/wall2.jpg") no-repeat;
   background-position: 50% 50%;
   background-size: auto 100%;
   padding: 10px 0 100px 0;
