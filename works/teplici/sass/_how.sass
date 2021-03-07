@@ -1,0 +1,262 @@
+
+
+.how
+    overflow: hidden
+
+    &__title
+        margin: 0 0 40px 0
+
+    &__step
+        display: flex
+        height: 190px
+
+        &--down
+            align-items: flex-end
+
+        &__text
+            height: 118px
+            display: flex
+            align-items: center
+            font-size: 18px
+            line-height: 1.2
+
+        &--1::before
+            content: ""
+            display: block
+            position: absolute
+            bottom: 30px
+            right: 0
+            background: url("../img/arr1.png") no-repeat
+            height: 50px
+            width: 80px
+
+        &--2::before
+            content: ""
+            display: block
+            position: absolute
+            top: 30px
+            right: 0
+            background: url("../img/arr2.png") no-repeat
+            height: 50px
+            width: 80px
+
+        &--3::before
+            content: ""
+            display: block
+            position: absolute
+            bottom: 30px
+            right: 0
+            background: url("../img/arr1.png") no-repeat
+            height: 50px
+            width: 80px
+
+    &--zi10
+        z-index: 10
+    &--zi11
+        z-index: 11
+
+    &__gazel
+        position: relative
+        height: 480px
+
+        &__img
+            position: absolute
+            top: 20px
+            right: -25%
+
+    &__delivery
+        margin: 100px 0 20px 0
+        background: #efeee8
+        border-radius: 10px
+        padding: 30px 30px 20px 60px
+        border: 2px solid #ffffff
+        box-shadow: 0 0 0 12px #efeee8
+        z-index: -1
+
+        &__bold
+            font-size: 32px
+            font-weight: 600
+            line-height: 1
+            margin: 0 0 20px 0
+
+        &__text
+            font-size: 21px
+            line-height: 1.2
+            margin: 0 0 10px 0
+
+        // &::before
+        //     content: ""
+        //     position: absolute
+        //     display: block
+        //     top: 0
+        //     left: -585px
+        //     width: 733px
+        //     height: 550px
+        //     background: url("../img/gazel.png") no-repeat
+        //     background-size: cover
+
+        &::after
+            content: ""
+            position: absolute
+            display: block
+            top: 70px
+            left: -50px
+            width: 117px
+            height: 117px
+            background: url("../img/sale.png") no-repeat
+            background-size: cover
+
+        &__btn
+            max-width: 320px
+            height: 80px
+            margin: 30px auto 40px auto
+
+    &__carbonat
+        margin: 150px 0 90px 0
+
+        &__img
+            position: relative
+            width: 100%
+
+        &__title
+            text-align: left
+            margin: 0 0 15px 0
+
+        &__text
+            font-size: 20px
+            line-height: 1.3
+
+        &__flex
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+
+            &__btn
+                width: 100%
+                height: 80px
+                max-width: 320px
+                margin: 25px 0
+
+            &__download
+                display: flex
+                align-items: center
+                padding: 0 0 0 10px
+
+                &__img
+                    width: 50px
+                    height: 50px
+
+                &__link
+                    display: block
+                    color: #333300
+                    font-size: 21px
+                    margin: 0 0 0 15px
+                    line-height: 1.1
+                    border-bottom: 2px solid #333300
+                    transition-duration: 0.2s
+
+                    &:hover
+                        color: #67a926
+                        border-bottom: 2px solid #67a926
+                        text-decoration: none
+
+
+
+@media ( max-width: 1090px )
+    .how
+
+        &__gazel
+            height: 520px
+
+            &__img
+                top: -70px
+                left: 50%
+                margin: 0 0 0 -400px
+
+
+@media ( max-width: 991px )
+    .how
+
+        &__img
+            display: flex
+            justify-content: center
+
+        &__step
+            flex-direction: column
+            margin: 0 0 20px 0
+
+            &--down
+                align-items: center
+
+            &__text
+                font-size: 22px
+                max-width: 300px
+                text-align: center
+                margin: 0 auto 0 auto
+
+            &--1::before
+                display: none
+
+            &--2::before
+                display: none
+
+            &--3::before
+                display: none
+
+        &__delivery
+            position: relative
+            padding: 40px 30px 20px 30px
+
+            &::after
+                top: -85px
+                left: 75%
+
+
+
+@media ( max-width: 599px )
+    .how
+        &__gazel
+            height: auto
+
+            &__img
+                position: relative
+                width: 120%
+                top: 0
+                left: -10%
+                margin: -50px 0 0 0
+
+
+        &__delivery
+            margin: 100px 15px 20px 15px
+
+            &::after
+                top: -65px
+                left: 70%
+                width: 105px
+                height: 105px
+
+
+@media ( max-width: 499px )
+    .how
+        &__delivery
+
+            &__bold
+                font-size: 28px
+
+            &__text
+                font-size: 19px
+
+@media ( max-width: 399px )
+    .how
+        &__delivery
+            margin: 100px 10px 20px 10px
+            padding: 40px 15px 20px 15px
+
+            &__bold
+                font-size: 27px
+
+            &__text
+                font-size: 19px
+
+        &__carbonat
+            margin: 110px 0 90px 0

@@ -1,0 +1,50 @@
+
+
+.dop
+    padding: 0 0 50px 0
+    
+    &__title
+        margin: 100px 0
+
+    &__block
+        display: flex
+        flex-direction: column
+        align-items: center
+        background: #fff
+        box-shadow: 0 0 50px #ebebeb
+        border-radius: 10px
+        padding: 60px 40px 30px 40px
+        margin: 20px 0
+
+        &__img
+            width: 230px
+            height: 190px
+
+        &__title
+            font-size: 30px
+            margin: 10px 0
+            text-align: center
+            line-height: 1.1
+
+        &__link
+            font-size: 23px
+            display: inline-block
+            color: #67a926
+            cursor: pointer
+            border-bottom: 2px solid transparent
+            line-height: 20px
+            margin: 0 auto
+            transition-duration: 0.2s
+            text-align: center
+
+            &:hover
+                color: #67a926
+                border-bottom: 2px solid #67a926
+                text-decoration: none
+
+
+@media ( max-width: 479px )
+    .dop
+        
+        &__title
+            margin: 40px 0
