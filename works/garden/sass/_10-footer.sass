@@ -1,0 +1,198 @@
+
+
+.footer
+    position: relative
+    background: #F8F8F8
+    padding: 50px 0 20px 0
+
+    &__line
+        border-top: 1px solid $gray
+        border-bottom: 1px solid $gray
+        padding: 30px 0
+
+    &__logo
+        margin: 30px 0 20px 0
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        opacity: 0.2
+        @media ( max-width: 470px )
+            margin: 10px 0
+        img
+            max-width: 440px
+            @media ( max-width: 991px )
+                display: none
+
+        &--hide
+            display: none
+            justify-content: center
+            margin: 30px 0 0 0
+            @media ( max-width: 991px )
+                display: flex
+            img
+                @media ( max-width: 991px )
+                    display: block
+
+    &__office
+        text-align: right
+        margin: 10px 0
+        font-size: 20px
+        color: $gray-dark
+        @media ( max-width: 991px )
+            text-align: center
+            margin: 5px 0
+        @media ( max-width: 470px )
+            font-size: 16px
+        @media ( max-width: 370px )
+            padding: 0 30px
+
+    &__address
+        margin: 0
+        @media ( max-width: 991px )
+            margin: 0 0 20px 0
+
+    &__contacts
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        justify-content: center
+        height: 100%
+        @media ( max-width: 991px )
+            align-items: center
+
+    &__phone
+        margin: 10px 0 0 0
+        font-size: 46px
+        font-weight: 900
+        color: $brown
+        background: $gray-dark
+        background: linear-gradient(111.04deg, $blue 12.36%, $green 90.63%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        @media ( max-width: 470px )
+            font-size: 36px
+        @media ( max-width: 390px )
+            font-size: 30px
+
+    &__mail
+        color: $brown
+        margin: 10px 0 10px 0
+        font-size: 26px
+        font-weight: 900
+        @media ( max-width: 470px )
+            font-size: 20px
+
+    &__flex
+        display: flex
+        justify-content: flex-end
+
+    &__social
+        display: block
+        margin: 15px 0 15px 25px
+        width: 60px
+        height: 60px
+        border-radius: 60px
+        overflow: hidden
+        background: #000
+        @media ( max-width: 991px )
+            margin: 15px
+        @media (max-width: 399px)
+            margin: 15px 5px
+
+    &__inst
+        background: url("../img/icons/inst-big-gray.png")
+        background-size: cover
+
+    &__vk
+        background: url("../img/icons/vk-big-gray.png")
+        background-size: cover
+
+    &__what
+        background: url("../img/icons/what-big-gray.png")
+        background-size: cover
+
+    &__houzz
+        background: url("../img/icons/houzz-big-gray.png")
+        background-size: cover
+
+    &__img
+        opacity: 0
+        transition-duration: 0.4s
+        &:hover
+            opacity: 1
+
+    &__map
+        width: 100%
+        height: 100%
+        min-height: 450px
+        background: #b3b3b3
+        border-radius: 3px
+        box-shadow: 0 5px 20px 1px rgba(0,0,0,0.1)
+
+    &__2020
+        line-height: 24px
+        color: $gray-dark
+        font-size: 16px
+        letter-spacing: 0.5s
+        margin: 30px 0 10px 0
+        opacity: 0.5
+        @media ( max-width: 991px )
+            text-align: center
+            margin: 20px 0 10px 0
+
+    &__wrap
+        position: relative
+        margin: 30px 0 10px 0
+        display: flex
+        justify-content: flex-end
+        @media ( max-width: 991px )
+            justify-content: center
+            margin: 5px 0 10px 0
+
+    &__develop
+        line-height: 24px
+        position: relative
+        color: $gray-dark
+        font-size: 16px
+        letter-spacing: 0.5s
+        opacity: 0.5
+        padding: 0 70px 0 0
+        @media ( max-width: 350px )
+            padding: 0 60px 0 0
+
+        &::after
+            content: ""
+            display: block
+            height: 1px
+            width: 40px
+            background: $gray-dark
+            position: absolute
+            top: 50%
+            right: 15px
+            margin: -1px 0 0 0
+            @media ( max-width: 350px )
+                width: 30px
+
+    &__eskel
+        font-size: 22px
+        line-height: 24px
+        font-weight: 600
+        letter-spacing: 2px
+        transition-duration: 0.3s
+        display: block
+
+        &:hover
+            color: #007BFF
+            text-decoration: none
+            text-shadow: 1px 1px 0px #00137F, 2px 2px 0px #00137F, 3px 3px 0px #00137F
+            transform: translate(-2px,-2px)
+
+    &__btn
+        max-width: 240px
+        height: 60px
+        font-size: 18px
+        margin: 20px 0 20px 0
+        z-index: 29
+        box-shadow: 0 5px 20px 3px rgba(0,0,0,0.3)
+

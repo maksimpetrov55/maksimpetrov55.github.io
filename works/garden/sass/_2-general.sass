@@ -1,0 +1,163 @@
+body
+    position: relative
+    background: url(../img/bg2.png)
+
+    *
+        font-family: "roboto", sans-serif
+
+
+.bg1
+    background: #ff000022
+.bg2
+    background: #00ff0022
+.bg3
+    background: #0000ff22
+
+.some
+    width: 100%
+    height: 200px
+    margin: 10px 0
+
+.mw1140
+    max-width: 1140px
+.mw1440
+    max-width: 1440px
+.mw1680
+    max-width: 1680px
+
+.w100
+    width: 100%
+.h100
+    height: 100%
+
+.g-title
+    font-weight: 600
+    font-size: 56px
+    color: $brown
+    line-height: 1.2
+    margin: 10px 0 60px 0
+    text-align: center
+    @media ( max-width: 768px )
+        font-size: 48px
+    @media ( max-width: 550px )
+        font-size: 39px
+    @media ( max-width: 370px )
+        font-size: 33px
+
+.g-font
+    font-family: 'Lora', serif
+    &--1
+        font-family: 'Nunito', sans-serif
+    &--2
+        font-family: 'comfortaa', sans-serif
+    &--3
+        font-family: 'Cormorant Garamond', serif
+
+.g-btn
+    position: relative
+    width: 100%
+    border-radius: 50px
+    background: linear-gradient(111.04deg, $blue 12.36%, $blue-light 90.63%)
+    display: flex
+    justify-content: center
+    align-items: center
+    color: #ffffff
+    text-transform: uppercase
+    box-shadow: 0 8px 20px 3px rgba(0,0,0,0.2)
+    cursor: pointer
+    transition-duration: 0.4s
+    user-select: none
+    text-shadow: 0 2px 12px rgba(0,0,0,0.3)
+
+    &::after
+        content: ""
+        display: block
+        background: #00ff00
+        border-radius: 50px
+        box-shadow: 0 0 10px 2px rgba(25,255,25,0.2)
+        position: absolute
+        width: 100%
+        height: 100%
+        z-index: -1
+        opacity: 0
+        transition-duration: 0.4s
+
+    &:hover::after
+        opacity: 0.4
+    &:active::after
+        opacity: 0.05
+
+    &:hover
+        transform: translateY(5px)
+        box-shadow: 0 5px 15px 1px rgba(0,0,0,0.15)
+
+
+.arrow
+    display: block
+    width: 40px
+    height: 40px
+    background: #fff
+    cursor: pointer
+    position: absolute
+    top: 50%
+    z-index: 39
+    border-radius: 50px
+    box-shadow: 0 4px 15px 1px rgba(0,0,0,0.1)
+
+.prev
+    left: 0
+    margin: -20px 0 0 0
+    &::after
+        content: ""
+        display: block
+        position: absolute
+        width: 12px
+        height: 12px
+        top: 14px
+        right: 12px
+        border-right: 2px solid #000000
+        border-bottom: 2px solid #000000
+        transform: rotate(135deg)
+
+.next
+    right: 0
+    margin: -20px 0 0 0
+    &::after
+        content: ""
+        display: block
+        position: absolute
+        width: 12px
+        height: 12px
+        top: 14px
+        left: 12px
+        border-right: 2px solid #000000
+        border-bottom: 2px solid #000000
+        transform: rotate(-45deg)
+
+
+
+
+
+.info
+    z-index: 99
+    position: fixed
+    bottom: 0
+    left: 0
+    background: #77777733
+    padding: 5px 10px
+
+    &__width
+        font-size: 14px
+    &__width2
+        font-size: 14px
+
+.font
+    position: fixed
+    z-index: 99
+    bottom: 10px
+    right: 10px
+    cursor: pointer
+    background: $green
+    border: 2px solid black
+    width: 15px
+    height: 15px
