@@ -53,7 +53,7 @@ $(document).ready(function() {
 
 	setvalue();
 
-	$('#calc_time').on("input", function(){
+	$('#calc_time').on("change", function(){
 		if ( $(this).val() > 30 ) {
 			$(this).val( 30 );
 			calculation();
@@ -66,7 +66,7 @@ $(document).ready(function() {
 			}
 		}
 	});
-	$('#calc_rate').on("input", function(){
+	$('#calc_rate').on("change", function(){
 		if ( $(this).val() < 1 ) {
 			$(this).val( 1 );
 			calculation();
@@ -112,9 +112,9 @@ $(document).ready(function() {
 	// 	discharge();
 	// });
 
-	$('#result-polzunok').on("focus", function(){
-		console.log("222");
-	});
+	// $('#result-polzunok').on("focus", function(){
+	// 	console.log("222");
+	// });
 	
 
 
