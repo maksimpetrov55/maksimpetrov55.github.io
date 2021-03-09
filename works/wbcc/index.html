@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+		<h2 class="calc__h2">Расчет дохода от операций</h2>
+		<div class="calc__underline"></div>
+		<div class="">
+
+				<div class="calc__flex">
+					<div class="calc__title">Начальный депозид:</div>
+					<input id="calc_deposit" type="number" class="calc__input" value="1000">
+				</div>
+
+				<div class="calc__flex">
+					<div class="calc__title">Плечо:</div>
+					<input id="calc_leverage" type="number" class="calc__input" value="3">
+				</div>
+
+				<div class="calc__flex">
+					<div class="calc__title">Количество строк:</div>
+					<input id="calc_lines" type="number" class="calc__input" value="5">
+				</div>
+
+		</div>
+
+		<div class="calc__line calc__line--head">
+			<div class="calc__label">Процент по&nbsp;сделке</div>
+			<div class="calc__label">Процент с&nbsp;учетом плеча</div>
+			<div class="calc__label">Текущий депозид</div>
+		</div>
+
+		<div class="calc__scroll">
+
+			<div class="calc__line"><div class="calc__number">1.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line"><div class="calc__number">2.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+
+			<div class="calc__line"><div class="calc__number">3.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line"><div class="calc__number">4.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line"><div class="calc__number">5.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line"><div class="calc__number">6.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line"><div class="calc__number">7.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line"><div class="calc__number">8.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line"><div class="calc__number">9.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line"><div class="calc__number">10.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line"><div class="calc__number">11.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line"><div class="calc__number">12.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line"><div class="calc__number">13.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line"><div class="calc__number">14.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line"><div class="calc__number">15.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line"><div class="calc__number">16.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line"><div class="calc__number">17.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line"><div class="calc__number">18.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line"><div class="calc__number">19.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line"><div class="calc__number">20.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line"><div class="calc__number">21.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line"><div class="calc__number">22.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line"><div class="calc__number">23.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line"><div class="calc__number">24.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line"><div class="calc__number">25.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line"><div class="calc__number">26.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line"><div class="calc__number">27.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line"><div class="calc__number">28.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line"><div class="calc__number">29.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line"><div class="calc__number">30.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+
+			<div class="calc__line calc__line--hidden"><div class="calc__number">31.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">32.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">33.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">34.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">35.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">36.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">37.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">38.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">39.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">40.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">41.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">42.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">43.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">44.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">45.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">46.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">47.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">48.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">49.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">50.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">51.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">52.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">53.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">54.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">55.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">56.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">57.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">58.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">59.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">60.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">61.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">62.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">63.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">64.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">65.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">66.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">67.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">68.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">69.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">70.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">71.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">72.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">73.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">74.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">75.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">76.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">77.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">78.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">79.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">80.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">81.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">82.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">83.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">84.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">85.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">86.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">87.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">88.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">89.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">90.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">91.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">92.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">93.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">94.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">95.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">96.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">97.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">98.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">99.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+			<div class="calc__line calc__line--hidden"><div class="calc__number">100.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
+		
+
+
+		</div>
+	</div>
+
+
+
+</body>
+</html>
