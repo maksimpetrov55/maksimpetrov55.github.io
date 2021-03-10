@@ -6,10 +6,10 @@
 	<title>Web Mockup</title>
 
 	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;800&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/main.css?v1">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/scripts.js"></script>	
+	<script src="js/scripts.js?v1"></script>	
 
 </head>
 <body>
@@ -36,6 +36,11 @@
 					<input id="calc_lines" type="number" class="calc__input" value="5">
 				</div>
 
+		</div>
+
+		<div class="calc__error">
+			<div class="calc__error-text">Расчет далее невозможен, сумма депозита равна 0.</div>
+			<div class="calc__error-close">Ок</div>
 		</div>
 
 		<div class="calc__line calc__line--head">
@@ -148,10 +153,11 @@
 			<div class="calc__line calc__line--hidden"><div class="calc__number">98.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
 			<div class="calc__line calc__line--hidden"><div class="calc__number">99.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
 			<div class="calc__line calc__line--hidden"><div class="calc__number">100.</div><input type="number" class="calc__input calc__input--small" value=""><div class="calc__percent"></div><div class="calc__deposit"></div></div>
-		
 
 
 		</div>
+
+		<div class="calc__itog">Текущий депозид: <span class="calc__itog--span"></span></div>
 	</div>
 
 

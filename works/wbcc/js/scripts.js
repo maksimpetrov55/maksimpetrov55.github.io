@@ -4,6 +4,10 @@ $(document).ready(function() {
 		calc();
 	});
 
+	$('.calc__error-close').click(function(){
+		$('.calc__error').removeClass("calc__error--show");
+	});
+
 	calc();
 
 	function calc() {
@@ -37,6 +41,7 @@ $(document).ready(function() {
 		}
 
 		var calc_deposit = $('#calc_deposit').val();
+		$('.calc__itog--span').text( (+calc_deposit).toFixed(2) );
 		var calc_leverage = $('#calc_leverage').val();
 
 		var calc_amount = 0;
@@ -54,8 +59,14 @@ $(document).ready(function() {
 			if ( line_this != "" ) {
 				var line_percent = line_this;
 				var line_itog = +line_itog + ( (line_itog * line_percent * calc_leverage) / 100 );
+				if ( line_itog < 0 ) {
+					var line_itog = 0;
+					$('.calc__error--show').removeClass("calc__error--show");
+					$('.calc__error').addClass("calc__error--show");
+				}
 				$('.calc__scroll').find(".calc__input--small:eq(" + calc_amount + ")").next().text( line_percent * calc_leverage + "%" );
 				$('.calc__scroll').find(".calc__input--small:eq(" + calc_amount + ")").next().next().text( line_itog.toFixed(2) );
+				$('.calc__itog--span').text( line_itog.toFixed(2) );
 			}
 
 			calc_amount++;

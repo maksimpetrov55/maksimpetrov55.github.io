@@ -168,3 +168,52 @@ input::-webkit-inner-spin-button
             width: 100px
         @media ( max-width: 400px )
             width: 90px
+
+    &__error
+        display: none
+        z-index: 99
+        position: absolute
+        width: 300px
+        height: 140px
+        background: #fff
+        border: 1px solid #ddd
+        border-radius: 10px
+        box-shadow: 0 7px 20px 0 rgba(0,0,0,0.1)
+        left: 50%
+        top: 50%
+        margin: -70px 0 0 -150px
+
+        &--show
+            display: block
+
+        &-close
+            width: 100px
+            padding: 7px 15px
+            background: #00b100
+            color: #fff
+            border-radius: 6px
+            text-align: center
+            transition-duration: 0.2s
+            cursor: pointer
+            margin: 10px auto
+
+            &:hover
+                opacity: 0.7
+        
+        &-text
+            position: relative
+            margin: 20px auto
+            max-width: 90%
+            text-align: center
+
+    &__itog
+        position: relative
+        margin: 20px 0
+        text-align: right
+        padding: 0 10px 0 0
+        font-size: 18px
+
+        &--span
+            margin: 0 0 0 10px
+            font-weight: 600
+            font-size: 22px
