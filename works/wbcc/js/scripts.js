@@ -59,7 +59,10 @@ $(document).ready(function() {
 			if ( line_this != "" ) {
 				var line_percent = line_this;
 				var line_itog = +line_itog + ( (line_itog * line_percent * calc_leverage) / 100 );
+
 				if ( line_itog < 0 ) {
+					var line_last = line_itog;
+					$('.calc__error-dep').text(line_last.toFixed(2));
 					var line_itog = 0;
 					$('.calc__error--show').removeClass("calc__error--show");
 					$('.calc__error').addClass("calc__error--show");
