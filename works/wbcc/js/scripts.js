@@ -63,26 +63,42 @@ $(document).ready(function() {
 				if ( line_itog < 0 ) {
 					var line_last = line_itog;
 					$('.calc__error-dep').text(line_last.toFixed(2));
-					var line_itog = 0;
+					//var line_itog = 0;
+
 					$('.calc__error--show').removeClass("calc__error--show");
 					$('.calc__error').addClass("calc__error--show");
+
+					$('.calc__scroll').find(".calc__input--small:eq(" + calc_amount + ")").next().text( line_percent * calc_leverage + "%" );
+					$('.calc__scroll').find(".calc__input--small:eq(" + calc_amount + ")").next().next().text( line_last.toFixed(2) );
+					$('.calc__itog--span').text( line_last.toFixed(2) );
+					$('.calc__itog--span').addClass("calc__itog--red");
+
+					var calc_stop = 1;
+					var calc_break = +calc_amount + 1;
+					break;
+				} else {
+					$('.calc__scroll').find(".calc__input--small:eq(" + calc_amount + ")").next().text( line_percent * calc_leverage + "%" );
+					$('.calc__scroll').find(".calc__input--small:eq(" + calc_amount + ")").next().next().text( line_itog.toFixed(2) );
+					$('.calc__itog--span').text( line_itog.toFixed(2) );
+					$('.calc__itog--span').removeClass("calc__itog--red");
+
+					var calc_stop = 0;
 				}
-				$('.calc__scroll').find(".calc__input--small:eq(" + calc_amount + ")").next().text( line_percent * calc_leverage + "%" );
-				$('.calc__scroll').find(".calc__input--small:eq(" + calc_amount + ")").next().next().text( line_itog.toFixed(2) );
-				$('.calc__itog--span').text( line_itog.toFixed(2) );
+
 			}
 
 			calc_amount++;
 		}
 
-		//$('.calc__scroll').find(".calc__input--small:eq(" + calc_amount + ")").val(222);
-
-		// $('.calc__scroll').find(".calc__input--small").each(function(){
-		// 	if ( $(this).val() != "" ) {
-		// 		let calc_temp = $(this).val();
-		// 		$(this).next().text( calc_leverage * calc_temp + "%" );
-		// 	}
-		// });
+		if ( calc_stop == 1 ) {
+			$('.calc__input--small').each(function(){
+				if ( $(this).val() == '' ) {
+					$(this).addClass('calc__input--disable');
+				}
+			});
+		} else {
+			$('.calc__input--disable').removeClass("calc__input--disable");
+		}
 
 	}
 
