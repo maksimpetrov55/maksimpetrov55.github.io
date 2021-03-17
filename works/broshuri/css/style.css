@@ -1,0 +1,871 @@
+
+
+body{
+    margin: 0;
+	padding:0;
+    width: 100%;
+    height: auto;
+    font-family: sans-serif;
+    background: #f5f5f5;
+}
+
+.flex {
+    display: flex;
+}
+.flex--jcsb{
+    justify-content: space-between;
+}
+
+.content{
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto 30px auto;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 20px;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    padding: 10px 20px 10px 20px;
+    box-shadow: 0 10px 20px 1px rgba(0,0,0,0.1);
+}
+
+.content * {
+    box-sizing: border-box;
+}
+
+/*		Описание первого блока - типы блокнотов		*/
+
+.content input.tirag,
+.content input.tirag2{
+    padding: 6px 5px;
+    font-size: 18px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+}
+
+.content select{
+    padding: 8px 5px;
+    font-size: 16px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.content select.short{
+    width: 100px;
+}
+
+.content select option {
+    cursor: pointer;
+}
+
+.content__header{
+    position: relative;
+    width: 100%;
+    height: 70px;
+    margin: 0 0 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    /* border-top: 1px dashed #ddd; */
+    border-bottom: 1px dashed #ddd;
+}
+
+.content__logo{
+    position: relative;
+    height: 100%;
+    margin: 0 20px 0 0;
+}
+
+.content__headname{
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.content__contacts{
+    display: flex;
+    position: relative;
+    height: 100%;
+    max-height: 40px;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.content__whatsapp{
+    position: relative;
+    height: 100%;
+    margin: 0 10px 0 0;
+    max-height: 40px;
+}
+
+.content__phone{
+    font-size: 20px;
+    color: #64B161;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px #64B16122;
+    transition-duration: 0.2s;
+}
+.content__phone:hover{
+    color: #0056b3;
+    text-shadow: 1px 1px 1px #5b4eca22;
+}
+.content__finalprice{
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+.form_inp{
+    padding: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 5px 0 0 0;
+    border: 1px solid #aaa;
+}
+.fix__itog {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+
+
+
+
+
+
+
+
+.content_block1{
+    display: block;
+    width: 40%;
+    height: auto;
+    float: left;
+    /*min-width: 400px;*/
+}
+.content_block1_content{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px 25px;
+}
+
+
+.content_block1 h2{
+    font-family: 'Myriad Pro Regular';
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.active{
+    border: 2px solid #0066cc;
+    border-radius: 3px;
+    color:#0066cc ;
+}
+
+.content_block1_img{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+   margin-top: 10px;
+}
+.content_block1_img img{
+    float: left;
+    width: 90px;
+    height: 104px;
+}
+
+
+
+.content_block1_img1_2{
+    display: none;
+}
+
+.content_block1_img2_2{
+    display: none;
+}
+.content_block1_img3_2{
+    display: none;
+}
+.content_block1_img4_2{
+    display: none;
+}
+
+/*.active_img{*/
+    /*display: block;*/
+/*}*/
+/*.active{*/
+    /*border: 2px solid #0066cc;*/
+    /*border-radius: 3px;*/
+    /*color:#0066cc ;*/
+/*}*/
+.active_img2{
+    display: block;
+}
+.active_imgnone{
+    display: none;
+}
+.calc_content_img_block1{
+    display: block;
+    margin-left: 12px;
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.calc_content_format{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+
+}
+
+
+.name, .name2{
+    display: block;
+    font-family: 'Myriad Pro Light';
+    font-size: 1em;
+    font-weight: 400;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    width: 85%;
+    float: left;
+}
+.format{
+    width:100%;
+}
+
+.frech{
+    margin-bottom: 20px;
+}
+
+.cont_img_itog{
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.cont_img_itog1{
+    display: block;
+    height: 200px;
+   
+}
+.cont_img_itog1 img{
+    display:block;
+    width: 384px;
+    /*width: 100%;*/
+    /*height: 158px;*/
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.NameBl{
+    display: block;
+    position: absolute;
+    top:0;
+    font-family: 'Myriad Pro Regular';
+    font-size: 1.1em;
+}
+
+.Lbl{
+    display: block;
+    position: absolute;
+    top: 77%;
+    left: 12%;
+    font-family: 'Myriad Pro Light';
+    font-size: 1em;
+    /*background-color: #f3f3f3;*/
+}
+.Hbl{
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 27%;
+    font-family: 'Myriad Pro Light';
+    font-size: 1em;
+    /*background-color: #f3f3f3;*/
+}
+.Lb12{
+    display: block;
+    position: absolute;
+    top: 77%;
+    left: 72%;
+    font-family: 'Myriad Pro Light';
+    font-size: 1em;
+    /*background-color: #f3f3f3;*/
+}
+
+
+.cont_img_itog2{
+    display: none;
+    height: 200px
+}
+
+.cont_img_itog2 img{
+    display:block;
+    /*width: 100%;*/
+    width: 384px;
+    /*height: 114px;*/
+    margin: 0 auto;
+    margin-top: 20px;
+
+
+}
+
+.Lb2{
+    display: block;
+    position: absolute;
+    top: 28%;
+    left: 32%;
+    font-family: 'Myriad Pro Light';
+    font-size: 1em;
+    /*background-color: #f3f3f3;*/
+}
+.Hb2{
+    display: block;
+    position: absolute;
+    top: 52%;
+    left: 15%;
+    font-family: 'Myriad Pro Light';
+    font-size: 1em;
+    /*background-color: #f3f3f3;*/
+}
+.Lb22{
+    display: block;
+    position: absolute;
+    top: 52%;
+    left: 66%;
+    font-family: 'Myriad Pro Light';
+    font-size: 1em;
+    /*background-color: #f3f3f3;*/
+}
+
+
+.active_img{
+    display: none;
+
+}
+
+.active_bl{
+    display: block;
+
+}
+
+/*		Описание вторго блока - ОБЛОЖКА		*/
+.content_block2{
+    display: block;
+    width: 35%;
+    margin-top: 10px;
+    float: left;
+
+}
+
+
+.content_block2_obl{
+    display: block;
+    width: 90%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-height: 50px;
+    padding: 5px 25px;
+}
+
+.content_block2_obl h2{
+    font-family: 'Myriad Pro Regular';
+    font-size: 1.3em;
+    text-align: left;
+}
+
+.format2{
+    width: 100%;
+}
+
+
+.button_param{
+    display: block;
+   /*// background-color: #005697;*/
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: -44px 0 0 0;
+    float: right;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+}
+
+
+.content_block2_bl{
+    display: block;
+    width: 90%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px 25px;
+}
+
+.content_block2_bl h2{
+    font-family: 'Myriad Pro Regular';
+    font-size: 1.3em;
+    text-align: left;
+}
+
+
+
+/*		Описание 3 блока - ИТОГИ		*/
+.content_block3{
+    display: block;
+    width: 25%;
+    margin-top: 10px;
+    float: left;
+    padding: 0 20px 0 0;
+}
+.content_block3_cont h2{
+    font-family: 'Myriad Pro Regular';
+    font-size: 1.3em;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    /*margin-left: 20px;*/
+}
+
+.content_block3 p{
+    font-family: 'Myriad Pro Regular';
+    font-size: 1.4em;
+    text-align: left;
+    margin: 0 0 5px 0;
+    letter-spacing: 1px;
+    /*margin-left: 20px;*/
+}
+
+.content_block3 a{
+    font-size: 16px;
+    width: 100%;
+    font-family: 'Myriad Pro Light';
+    display: inline-block;
+    line-height: 1.6;
+    letter-spacing: -0.3px;
+}
+
+
+
+.itog_obl{
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.itog_oblo{
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+.active_none{
+    display: none;
+
+}
+
+.itogdata{
+    font-family: 'Myriad Pro Light';
+    color: #0066cc;
+}
+
+.content_block1_img img{
+     /*width: 109px;*/
+    /*height: 202px;*/
+}
+
+
+/*		Описание 4 блока - КНОПКА		*/
+.content_block4{
+    display: block;
+    width: 25%;
+    position: relative;
+    overflow: hidden;
+    float: right;
+    margin-top: 20px;
+}
+
+.button_param2{
+    display: block;
+    margin: 0;
+    background-color: #005697;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+.button_param2:hover{
+    opacity: 0.7;
+}
+
+.itog_block{
+    display: none;
+}
+
+.itog_block_open{
+    display: block;
+
+}
+.coment{
+    display: block;
+    width: 100%;
+    border: 1px solid #aaa;
+    margin: 5px 0 0 0;
+    border-radius: 4px;
+    min-height: 70px;
+    padding: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.coment:hover{
+    border: 2px solid #0056b3;
+}
+.coment:active{
+    border: 2px solid #0056b3;
+}
+.coment:focus{
+    border: 2px solid #0056b3;
+}
+/*//==================================//  */
+
+/*
+* Оформление контактной формы
+* без дополительных изображений;
+* исключительно средствами CSS;
+
+
+*/
+
+/*--Слой затемнения фона--*/
+
+.popup-fade1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #00000088;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9990;
+}
+/* .popup-fade1:before {
+    content: '';
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    z-index: 9999;
+} */
+.popup-fade2 {
+    display: none;
+}
+.popup-fade2:before {
+    content: '';
+    background: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    z-index: 9999;
+}
+.popup {
+    position: relative;
+    width: 96%;
+    max-width: 600px;
+    z-index: 99999;
+    opacity: 1;
+    background: #fff;
+    padding: 20px 20px 30px 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    
+    /* position: fixed;
+    top: 1%;
+    left: 50%;
+    padding: 20px;
+    width: 30em;
+    margin-left: -20em;
+    background: #fff;
+    border: 1px solid orange;
+    border-radius: 4px;
+    z-index: 99999;
+    opacity: 1; */
+}
+.popup * {
+    box-sizing: border-box;
+}
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #0056b3;
+}
+
+.popup-close2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #0056b3;
+}
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: none; /*--по умолчанию скрыт--*/
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .70;/* Полупрозрачность слоя затемнения */
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+/*--Модальное окно--*/
+.popup_block{
+    position: fixed;
+    top: 55%;;
+    left: 45%;
+    z-index: 99999;
+    display: none; /*--по умолчанию скрыт--*/
+    float: left;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    background-color: #ffffff;
+    max-height: 100%;
+
+    /*-- скругленные углы--*/
+
+    color: #ffffff;
+    font-size: .9em;
+}
+/*--Фиксированное позиционирование для тупого IE6--*/
+*html #fade {
+    position: absolute;
+}
+*html .popup_block {
+    position: absolute;
+}
+/*--Блок содержания--*/
+
+/* формируем кнопку закрытия */
+.close {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ccc;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    background-color: rgba(61, 61, 61, 0.8);
+    -webkit-box-shadow: 0px 0px 10px #000;
+    -moz-box-shadow: 0px 0px 10px #000;
+    box-shadow: 0px 0px 10px #000;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 20px;
+    -webkit-transition: all ease .8s;
+    -moz-transition: all ease .8s;
+    -ms-transition: all ease .8s;
+    -o-transition: all ease .8s;
+    transition: all ease .8s;
+}
+.close:before {
+    color: rgba(255, 255, 255, 0.9);
+    content: "X";
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+    font-size: 12px;
+}
+.close:hover {
+    background-color: rgba(252, 20, 0, 0.8);
+    /*--крутим кнопку при наведении--*/
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+.note{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.note h2{
+    text-align: left;
+}
+.param{
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.param_block{
+    display: block;
+    margin: 0 0 10px 0;
+}
+
+.param_block_list1{
+    display: block;
+    margin: 0 0 10px 0;
+}
+
+.param_block_list2{
+    display: none;
+    margin: 0 0 10px 0;
+}
+
+.act_block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.non_block{
+    display: none;
+}
+
+
+
+.button_param3{
+    display: block;
+    margin: 0 auto;
+    background-color: #005697;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.sub{
+     display: block;
+     width: 80%;
+     border-radius: 5px;
+     margin: 0 auto;
+     background-color: #005697;
+     font-family: "Open Sans", sans-serif;
+     font-size: 16px;
+     color: #ffffff;
+     text-align: center;
+     padding-top: 2px;
+     padding-bottom: 2px;
+     padding-left: 5px;
+     padding-right: 5px;
+ }
+.submit{
+    display: block;
+    width: 80%;
+    border-radius: 5px;
+    margin: 10px auto 10px auto;
+    background-color: #005697;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
+.first{
+    display: block;
+}
+.first span{
+   width: 100%;
+}
+.first input{
+    width: 100%;
+}
+
+
+.itog_oblf{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.Nobl{
+    display: none;
+}
+
+
+
+.form1 a{
+    font-family: 'Myriad Pro Light';
+    display: inline-block;
+    width: 100%;
+    margin-top: 5px;
+}
+.itog_oblf span{
+    font-family: 'Myriad Pro Light';
+    border: 0;
+
+    width: 20%;
+}
+
+.itog_oblf input{
+    font-family: 'Myriad Pro Light';
+    border: 0;
+    color: #0056b3;
+    width: 50%;
+}
+
+.itog_oblf p{
+    font-family: 'Myriad Pro Regular';
+    font-size: 1.3em;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    /*margin-left: 20px;*/
+}
+
+/* конец формы */
+
+
+
+/*//========================================//*/
+
+/*//========================================//*/
+

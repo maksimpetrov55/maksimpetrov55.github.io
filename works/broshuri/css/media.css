@@ -1,0 +1,369 @@
+    
+@media only screen  and (max-width: 1178px) { 
+    .content_block1_img{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .calc_content_img_block1{
+        float: none !important;
+        margin: 10px 20px 20px 20px;
+    }
+}
+
+@media only screen  and (max-width: 1024px) {
+
+    .content{
+        width: 96%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+    }
+    .cont_img_itog1 img{
+        display:block;
+        width: 100%;
+    }
+    .cont_img_itog2 img{
+        display:block;
+        width: 100%;
+    }
+
+    .Lbl {
+        left: 5%;
+        top: 60%;
+    }
+    .Hb2 {
+
+        top: 41%;
+        left: 10%
+    }
+    .Lb2 {
+        left: 30%;
+    }
+    .Lb12 {
+        top: 60%;
+        left: 75%;
+    }
+    .Lb22 {
+        top: 40%;
+      }
+}
+
+
+
+@media only screen  and (max-width: 960px) {
+
+    .content__headname{
+        font-size: 20px;
+    }
+    .content__contacts{
+        max-height: 30px;
+    }
+    .content__whatsapp{
+        max-height: 30px;
+    }
+    .content__phone{
+        font-size: 17px;
+        white-space: nowrap;
+    }
+
+    .content_block1 {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 10px;
+
+    }
+    .content_block2 {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 10px;
+
+    }
+    .content_block3 {
+        display: none;
+        width: 80%;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+    .content_block4 {
+        display: block;
+        width: 50%;
+       float: right;
+      margin-top: 10px;
+    }
+    .cont_img_itog1 img{
+        display:block;
+       width: 100%;
+     }
+    .cont_img_itog2 img{
+        display:block;
+        width: 100%;
+    }
+
+    .Lbl {
+        left: 10%;
+        top: 75%;
+    }
+    .Lb2 {
+        left: 30%;
+    }
+    .Hb2 {
+        top: 45%;
+        left: 10%;
+    }
+    .Lb12 {
+        top: 75%;
+        left: 75%;
+    }
+    .Lb22 {
+        top: 45%;
+    }
+}
+
+
+
+@media only screen  and (max-width: 788px) {
+
+    .content__headname{
+        font-size: 18px;
+    }
+
+
+    .Hbl {
+        top: 25%;
+        left: 25%;
+    }
+    .Lbl {
+        left: 10%;
+        top: 55%;
+    }
+    .Lb2 {
+        left: 30%;
+        top: 10%;
+    }
+    .Hb2 {
+        top: 35%;
+        left: 10%;
+    }
+    .Lb12 {
+        top: 55%;
+        left: 75%;
+    }
+    .Lb22 {
+        top: 35%;
+    }
+    /*.content_block1 {*/
+        /*display: block;*/
+        /*width: 100%;*/
+        /*margin: 0 auto;*/
+        /*margin-top: 10px;*/
+    /*}*/
+    /*.content_block2 {*/
+        /*display: block;*/
+        /*width: 80%;*/
+        /*margin-left: 20px;*/
+        /*margin-top: 10px;*/
+
+    /*}*/
+    /*.content_block3 {*/
+        /*display: block;*/
+        /*width: 80%;*/
+        /*margin-left: 20px;*/
+        /*margin-top: 10px;*/
+
+    /*}*/
+
+}
+
+@media only screen  and (max-width: 699px){
+    .content__header{
+        flex-direction: column;
+        padding: 10px 20px;
+        height: auto;
+    }
+    .content__logo{
+        max-height: 50px;
+        margin: 10px auto;
+    }
+
+    .content__headname{
+        font-size: 18px;
+        margin: 0 auto 0px auto; 
+        text-align: center;
+    }
+}
+
+@media only screen  and (max-width: 480px) {
+    .content_block2_obl{
+        margin: 0 auto;
+    }
+    .content_block2_bl{
+        margin: 20px auto;
+    }
+    .button_param2{
+        margin: 20px auto;
+    }
+
+    .content_block1 {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 10px;
+
+    }
+    .content_block2 {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 10px;
+
+    }
+    .content_block3 {
+        display: none;
+        width: 80%;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+    .content_block4 {
+        display: block;
+        width: 100%;
+        float: right;
+        margin-top: 10px;
+    }
+
+    .itog_oblf {
+        display: block;
+        width: 100%;
+    }
+    .Hbl {
+        top: 25%;
+        left: 25%;
+    }
+    .Lbl {
+        left: 10%;
+        top: 70%;
+    }
+    .Lb2 {
+        left: 30%;
+        top: 10%;
+    }
+    .Hb2 {
+        top: 45%;
+        left: 10%;
+    }
+    .Lb12 {
+        top: 70%;
+        left: 75%;
+    }
+    .Lb22 {
+        top: 45%;
+    }
+    .form1 {
+       padding: 0;
+        margin: 0;
+    }
+    .note{
+        margin-top: 0;
+    }
+    .note h2{
+        font-size: 1em;
+    }
+    .form1 a{
+     margin-top: 0;
+     }
+    .itog_oblf p{
+        font-size: 1em;
+        line-height: 1em;
+    }
+    .itog_st{
+        display: inline-block;
+    }
+    .itog_st p{
+        width: 40%;
+        float: left;
+    }
+    .itog_st input{
+        width: 40%;
+        float: left;
+    }
+    .first p{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media only screen  and (max-width: 400px) {
+    .content {
+        padding: 30px 0px 30px 0px;
+    }
+    .note {
+        width: 100%;
+        padding: 20px 0 0 0;
+    }
+    .submit{
+        width: 100%;
+    }
+    .fix__itog{
+        font-size: 18px;
+        display: block;
+        width: 100% !important;
+    }
+    .coment{
+        margin: 0;
+    }
+    .form_inp{
+        margin: 0;
+    }
+}
+
+@media only screen  and (max-width: 321px) {
+
+    .Lbl {
+        left: 10%;
+        top: 60%;
+    }
+    .Lb12{
+        top: 60%;
+    }
+    .Lb2 {
+        left: 30%;
+        top: 18%;
+    }
+
+    .Hb2 {
+        top: 38%;
+    }
+    .Lb22 {
+        top: 37%;
+    }
+}
+
+/* @media only screen  and (max-width: 281px) {
+    .popup {
+        width: 20em;
+        top: 1%;
+        left: 100%;
+    }
+    .Lbl {
+        left: 10%;
+        top: 60%;
+    }
+    .Lb12{
+        top: 60%;
+    }
+    .Lb2 {
+        left: 30%;
+        top: 18%;
+    }
+
+    .Hb2 {
+        top: 38%;
+    }
+    .Lb22 {
+        top: 37%;
+    }
+
+
+} */
