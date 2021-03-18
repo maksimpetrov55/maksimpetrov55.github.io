@@ -18,13 +18,103 @@
 
 <body>
 
+<div class="popup-fade1">
+    <div class="popup">
+        <form id="form1" class="form1" action="send.php" method="post" >
+
+        <div class="note">
+            <div class="content_block3_cont">
+                <h2>Брошюра</h2>
+
+            </div>
+            <div class="itog_oblf">
+
+                <!--<p>брошюра</p>-->
+                <a><span>формат: &nbsp; </span><input readonly type="text" name="tupblitogf" id="tupblitogf"  value="Книга, A6 (105 × 148 мм)"/>
+                </a>
+
+                <a>крепление: &nbsp;<input readonly type="text" name="itogkrf" id="itogkrf"  value="Пружина"/>
+                </a>
+
+                <a>тираж: &nbsp;<input readonly type="text" name="tiragvf" id="tiragvf"  value="30"/>
+                 </a>
+            <!--</div>-->
+            <div class="itog_oblm">
+                <p>Обложка</p>
+                <a>материал: &nbsp;<input readonly type="text" name="mat_oblvf" id="mat_oblvf"  value="офсетка 80 гр/м2"/>
+                </a>
+
+                <a>цветность: &nbsp;<input readonly type="text" name="color_oblvf" id="color_oblvf"  value="Пружина"/>
+                </a>
+
+                <a>ламинация: &nbsp;<input readonly type="text" name="lamin_oblvf" id="lamin_oblvf"  value="Глянец 32 мкр"/>
+                </a>
+
+            </div>
+
+            <!--<div class="itog_obl">-->
+                <p>Блок</p>
+                <a><span>количество страниц: &nbsp;</span><input readonly type="text" name="Nstrf" id="Nstrf"  value="100"/>
+                </a>
+
+                <a>материал: &nbsp;<input readonly type="text" name="mat_blvf" id="mat_blvf"  value="офсетка 80 гр/м2"/>
+                </a>
+
+                <a>цветность: &nbsp;<input readonly type="text" name="color_blvf" id="color_blvf"  value="Пружина"/>
+                  </a>
+
+                <a>ламинация: &nbsp;<input readonly type="text" name="lamin_blvf" id="lamin_blvf"  value="Глянец 32 мкр"/>
+                </a>
+            <!--</div>-->
+
+            <div class="itog_st">
+                <p>Стоимость</p>
+                <input class="fix__itog" readonly type="text" name="Zitof" id="Zitof"  value="0"/>
+
+                <div class="Nobl">
+                <a>Закрытие блока &nbsp;<input readonly type="text" name="Nobl" id="Nobl"  value="1"/></a>
+                </div>
+
+            </div>
+            </div>
+
+            <div class="first">
+                <p>
+                    <span>Комментарий</span>
+                    <textarea class="coment" name="coment" id="coment"></textarea>
+
+                </p>
+            </div>
+
+            <div class="first">
+                <p>
+                    <span>Позвоните мне по телефону</span>
+                    <input type="text" class="form_inp" name="telefon" id="phone" placeholder="+7()-___-__-__"  size="30" required />
+                </p>
+            </div>
+
+            <div class="first">
+                <p>
+                    <span>Имя</span>
+                    <input type="text" class="form_inp"  name="name" id="name" placeholder=""  size="30" required />
+                </p>
+            </div>
+
+        </div>
+        
+            <button class="submit" name="insert"  id="btn1" >ОТПРАВИТЬ</button>
+
+      </form>
+    </div>
+</div>
+
 
 <div class="content">
 
     <div class="content__header">
         <div class="content__headname">Калькулятор брошюр</div>
         <img src="img/logo.png" alt="" class="content__logo">
-        <a target="_blank" href="https://wa.me/79265319363?text=Здравствуйте!%20Я%20из%20калькулятора%20блокнотов" class="content__contacts">
+        <a target="_blank" href="https://wa.me/79265319363?text=Здравствуйте,%20я%20из%20калькулятора%20брошюр" class="content__contacts">
             <img src="img/whatsapp.png" alt="" class="content__whatsapp">
             <div class="content__phone">+7 (926) 531-93-63</div>
         </a>
@@ -213,6 +303,7 @@
     </div>
 
     <div class="content_block3">
+        <script src="https://maksimpetrov55.github.io/CDN/js/stop.js?v2"></script>
         <!-- <div class="content_block3_cont">
             <h2>Брошюра</h2>
         </div> -->
@@ -272,95 +363,7 @@
 
 
 </div>
-<div class="popup-fade1">
-    <div class="popup">
-        <form id="form1" class="form1" action="send.php" method="post" >
 
-        <div class="note">
-            <div class="content_block3_cont">
-                <h2>Брошюра</h2>
-
-            </div>
-            <div class="itog_oblf">
-
-                <!--<p>брошюра</p>-->
-                <a><span>формат: &nbsp; </span><input readonly type="text" name="tupblitogf" id="tupblitogf"  value="Книга, A6 (105 × 148 мм)"/>
-                </a>
-
-                <a>крепление: &nbsp;<input readonly type="text" name="itogkrf" id="itogkrf"  value="Пружина"/>
-                </a>
-
-                <a>тираж &nbsp;<input readonly type="text" name="tiragvf" id="tiragvf"  value="30"/>
-                 </a>
-            <!--</div>-->
-            <div class="itog_oblm">
-                <p>Обложка</p>
-                <a>материал: &nbsp;<input readonly type="text" name="mat_oblvf" id="mat_oblvf"  value="офсетка 80 гр/м2"/>
-                </a>
-
-                <a>цветность: &nbsp;<input readonly type="text" name="color_oblvf" id="color_oblvf"  value="Пружина"/>
-                </a>
-
-                <a>ламинация &nbsp;<input readonly type="text" name="lamin_oblvf" id="lamin_oblvf"  value="Глянец 32 мкр"/>
-                </a>
-
-            </div>
-
-            <!--<div class="itog_obl">-->
-                <p>Блок</p>
-                <a><span>количество страниц: &nbsp;</span><input readonly type="text" name="Nstrf" id="Nstrf"  value="100"/>
-                </a>
-
-                <a>материал: &nbsp;<input readonly type="text" name="mat_blvf" id="mat_blvf"  value="офсетка 80 гр/м2"/>
-                </a>
-
-                <a>цветность: &nbsp;<input readonly type="text" name="color_blvf" id="color_blvf"  value="Пружина"/>
-                  </a>
-
-                <a>ламинация &nbsp;<input readonly type="text" name="lamin_blvf" id="lamin_blvf"  value="Глянец 32 мкр"/>
-                </a>
-            <!--</div>-->
-
-            <div class="itog_st">
-                <p>Стоимость</p>
-                <input class="fix__itog" readonly type="text" name="Zitof" id="Zitof"  value="0"/>
-
-                <div class="Nobl">
-                <a>Закрытие блока &nbsp;<input readonly type="text" name="Nobl" id="Nobl"  value="1"/></a>
-                </div>
-
-            </div>
-            </div>
-
-            <div class="first">
-                <p>
-                    <span>Комментарий</span>
-                    <textarea class="coment" name="coment" id="coment"></textarea>
-
-                </p>
-            </div>
-
-            <div class="first">
-                <p>
-                    <span>Позвоните мне по телефону</span>
-                    <input type="text" class="form_inp" name="telefon" id="phone" placeholder="+7()-___-__-__"  size="30" required />
-                </p>
-            </div>
-
-            <div class="first">
-                <p>
-                    <span>Имя</span>
-                    <input type="text" class="form_inp"  name="name" id="name" placeholder=""  size="30" required />
-                </p>
-            </div>
-
-        </div>
-        
-            <button class="submit" name="insert"  id="btn1" >ОТПРАВИТЬ</button>
-
-      </form>
-    </div>
-</div>
 
 
 
@@ -379,6 +382,7 @@
 <script>
     $(document).ready(function($) {
         $('.popup-open').click(function() {
+            window.scrollTo(0, 0);
             $('.popup-fade1').fadeIn();
             return false;
         });
