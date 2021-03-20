@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<h1 class="calc__header">Калькулятор количества и стоимости обоев</h1>
+
+		<div class="itog itog--hidden">
+			<div class="calc__flex calc__flex--jcc">
+				<div class="itog__title">Общая площадь всех стен</div>
+				<div id="itog_square" class="itog__result"></div>
+			</div>
+			<div class="calc__flex itog__line calc__flex--jcc">
+				<div class="itog__title">Всего рулонов</div>
+				<div id="itog_ruloni" class="itog__result"></div>
+			</div>
+			<div class="calc__flex calc__flex--jcc">
+				<div class="itog__title">Остаток обоев</div>
+				<div id="itog_ostatok" class="itog__result"></div>
+			</div>
+			<div class="calc__flex itog__line calc__flex--jcc">
+				<div class="itog__title">Расход клея</div>
+				<div id="itog_klei" class="itog__result"></div>
+			</div>
+			<div class="calc__flex calc__flex--jcc">
+				<div class="itog__title">Цена обоев</div>
+				<div id="itog_cena" class="itog__result"></div>
+			</div>
+		</div>
+
+		<div class="table table--hidden">
+			<div class="table__row table__row--hidden">
+				<div class="table__cell table__cell--head">№ стены</div>
+				<div class="table__cell table__cell--head">Площадь стены</div>
+				<div class="table__cell table__cell--head">Количество рулонов</div>
+				<div class="table__cell table__cell--head">Остаток обоев</div>
+				<div class="table__cell table__cell--head">Количество полос</div>
+			</div>
+			<div id="table_row_1" class="table__row table__row--hidden">
+				<div class="table__cell">1</div>
+				<div class="table__cell"></div>
+				<div class="table__cell"></div>
+				<div class="table__cell"></div>
+				<div class="table__cell"></div>
+			</div>
+			<div id="table_row_2" class="table__row table__row--hidden">
+				<div class="table__cell">2</div>
+				<div class="table__cell"></div>
+				<div class="table__cell"></div>
+				<div class="table__cell"></div>
+				<div class="table__cell"></div>
+			</div>
+			<div id="table_row_3" class="table__row table__row--hidden">
+				<div class="table__cell">3</div>
+				<div class="table__cell"></div>
+				<div class="table__cell"></div>
+				<div class="table__cell"></div>
+				<div class="table__cell"></div>
+			</div>
+			<div id="table_row_4" class="table__row table__row--hidden">
+				<div class="table__cell">4</div>
+				<div class="table__cell"></div>
+				<div class="table__cell"></div>
+				<div class="table__cell"></div>
+				<div class="table__cell"></div>
+			</div>
+			<div id="table_row_5" class="table__row table__row--hidden">
+				<div class="table__cell">5</div>
+				<div class="table__cell"></div>
+				<div class="table__cell"></div>
+				<div class="table__cell"></div>
+				<div class="table__cell"></div>
+			</div>
+			<div id="table_row_6" class="table__row table__row--hidden">
+				<div class="table__cell">6</div>
+				<div class="table__cell"></div>
+				<div class="table__cell"></div>
+				<div class="table__cell"></div>
+				<div class="table__cell"></div>
+			</div>
+			<div id="table_row_7" class="table__row table__row--hidden">
+				<div class="table__cell">7</div>
+				<div class="table__cell"></div>
+				<div class="table__cell"></div>
+				<div class="table__cell"></div>
+				<div class="table__cell"></div>
+			</div>
+			<div id="table_row_8" class="table__row table__row--hidden">
+				<div class="table__cell">8</div>
+				<div class="table__cell"></div>
+				<div class="table__cell"></div>
+				<div class="table__cell"></div>
+				<div class="table__cell"></div>
+			</div>
+		</div>
+
+		<div class="calc__oboi">
+
+			<div class="calc__name">Параметры обоев</div>
+
+			<div class="calc__flex calc__flex--jcc">
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Ширина рулона:</div>
+					<input class="calc__input" type="number" id="rulon_shirina" placeholder="" value="100">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Длина рулона:</div>
+					<input class="calc__input" type="number" id="rulon_dlina" placeholder="" value="2">
+					<div class="calc__text calc__text--sm">м</div>
+				</div>
+			</div>
+
+			<div class="calc__flex calc__flex--brtop calc__flex--jcc">
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Ширина нахлеста:</div>
+					<input class="calc__input" type="number" id="rulon_nahlest" placeholder="" value="10">
+					<div class="calc__text calc__text--sm">мм</div>
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Цена рулона:</div>
+					<input class="calc__input" type="number" id="rulon_cena" placeholder="" value="200">
+					<div class="calc__text calc__text--sm">руб</div>
+				</div>
+			</div>
+
+			<div class="calc__flex calc__flex--brtop calc__flex--jcc">
+				<div class="calc__flex calc__flex--title">
+					<div class="calc__text">С рисунком</div>
+					<input class="calc__checkbox" type="checkbox" name="rulon_risunok" id="rulon_risunok">
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Повтор рисунка через:</div>
+					<input class="calc__input calc__input--disabled" type="number" id="rulon_povtor" placeholder="">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+			</div>
+			
+
+		</div>
+
+
+		<div class="calc__stena calc__stena--show" id="stena_1">
+			<div class="calc__name">Стена №1</div>
+
+			<div class="calc__flex calc__flex--jcc">
+				<div class="calc__flex calc__flex--title">
+					<div class="calc__text">Параметры стены:</div>
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Ширина:</div>
+					<input type="number" class="calc__input" id="stena_1_shirina" value="300">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Высота:</div>
+					<input type="number" class="calc__input" id="stena_1_visota" value="300">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+			</div>
+
+			<div class="calc__flex calc__flex--brtop calc__flex--jcc">
+				<div class="calc__flex calc__flex--title">
+					<div class="calc__text">Дверь / Окно</div>
+					<input class="calc__checkbox" type="checkbox" name="okno_1_check" id="okno_1_check">
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Ширина:</div>
+					<input type="number" class="calc__input calc__input--disabled" id="okno_1_shirina">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Высота:</div>
+					<input type="number" class="calc__input calc__input--disabled" id="okno_1_visota">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="calc__stena calc__stena--hidden" id="stena_2">
+			<div class="calc__name">Стена №2</div>
+
+			<div class="calc__flex calc__flex--jcc">
+				<div class="calc__flex calc__flex--title">
+					<div class="calc__text">Параметры стены:</div>
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Ширина:</div>
+					<input type="number" class="calc__input" id="stena_2_shirina" value="300">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Высота:</div>
+					<input type="number" class="calc__input" id="stena_2_visota" value="300">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+			</div>
+
+			<div class="calc__flex calc__flex--brtop calc__flex--jcc">
+				<div class="calc__flex calc__flex--title">
+					<div class="calc__text">Дверь / Окно</div>
+					<input class="calc__checkbox" type="checkbox" name="okno_2_check" id="okno_2_check">
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Ширина:</div>
+					<input type="number" class="calc__input calc__input--disabled" id="okno_2_shirina">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Высота:</div>
+					<input type="number" class="calc__input calc__input--disabled" id="okno_2_visota">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="calc__stena calc__stena--hidden" id="stena_3">
+			<div class="calc__name">Стена №3</div>
+
+			<div class="calc__flex calc__flex--jcc">
+				<div class="calc__flex calc__flex--title">
+					<div class="calc__text">Параметры стены:</div>
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Ширина:</div>
+					<input type="number" class="calc__input" id="stena_3_shirina" value="300">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Высота:</div>
+					<input type="number" class="calc__input" id="stena_3_visota" value="300">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+			</div>
+
+			<div class="calc__flex calc__flex--brtop calc__flex--jcc">
+				<div class="calc__flex calc__flex--title">
+					<div class="calc__text">Дверь / Окно</div>
+					<input class="calc__checkbox" type="checkbox" name="okno_3_check" id="okno_3_check">
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Ширина:</div>
+					<input type="number" class="calc__input calc__input--disabled" id="okno_3_shirina">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Высота:</div>
+					<input type="number" class="calc__input calc__input--disabled" id="okno_3_visota">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="calc__stena calc__stena--hidden" id="stena_4">
+			<div class="calc__name">Стена №4</div>
+
+			<div class="calc__flex calc__flex--jcc">
+				<div class="calc__flex calc__flex--title">
+					<div class="calc__text">Параметры стены:</div>
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Ширина:</div>
+					<input type="number" class="calc__input" id="stena_4_shirina" value="300">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Высота:</div>
+					<input type="number" class="calc__input" id="stena_4_visota" value="300">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+			</div>
+
+			<div class="calc__flex calc__flex--brtop calc__flex--jcc">
+				<div class="calc__flex calc__flex--title">
+					<div class="calc__text">Дверь / Окно</div>
+					<input class="calc__checkbox" type="checkbox" name="okno_4_check" id="okno_4_check">
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Ширина:</div>
+					<input type="number" class="calc__input calc__input--disabled" id="okno_4_shirina">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Высота:</div>
+					<input type="number" class="calc__input calc__input--disabled" id="okno_4_visota">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="calc__stena calc__stena--hidden" id="stena_5">
+			<div class="calc__name">Стена №5</div>
+
+			<div class="calc__flex calc__flex--jcc">
+				<div class="calc__flex calc__flex--title">
+					<div class="calc__text">Параметры стены:</div>
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Ширина:</div>
+					<input type="number" class="calc__input" id="stena_5_shirina" value="300">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Высота:</div>
+					<input type="number" class="calc__input" id="stena_5_visota" value="300">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+			</div>
+
+			<div class="calc__flex calc__flex--brtop calc__flex--jcc">
+				<div class="calc__flex calc__flex--title">
+					<div class="calc__text">Дверь / Окно</div>
+					<input class="calc__checkbox" type="checkbox" name="okno_5_check" id="okno_5_check">
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Ширина:</div>
+					<input type="number" class="calc__input calc__input--disabled" id="okno_5_shirina">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Высота:</div>
+					<input type="number" class="calc__input calc__input--disabled" id="okno_5_visota">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="calc__stena calc__stena--hidden" id="stena_6">
+			<div class="calc__name">Стена №6</div>
+
+			<div class="calc__flex calc__flex--jcc">
+				<div class="calc__flex calc__flex--title">
+					<div class="calc__text">Параметры стены:</div>
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Ширина:</div>
+					<input type="number" class="calc__input" id="stena_6_shirina" value="300">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Высота:</div>
+					<input type="number" class="calc__input" id="stena_6_visota" value="300">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+			</div>
+
+			<div class="calc__flex calc__flex--brtop calc__flex--jcc">
+				<div class="calc__flex calc__flex--title">
+					<div class="calc__text">Дверь / Окно</div>
+					<input class="calc__checkbox" type="checkbox" name="okno_6_check" id="okno_6_check">
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Ширина:</div>
+					<input type="number" class="calc__input calc__input--disabled" id="okno_6_shirina">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Высота:</div>
+					<input type="number" class="calc__input calc__input--disabled" id="okno_6_visota">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="calc__stena calc__stena--hidden" id="stena_7">
+			<div class="calc__name">Стена №7</div>
+
+			<div class="calc__flex calc__flex--jcc">
+				<div class="calc__flex calc__flex--title">
+					<div class="calc__text">Параметры стены:</div>
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Ширина:</div>
+					<input type="number" class="calc__input" id="stena_7_shirina" value="300">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Высота:</div>
+					<input type="number" class="calc__input" id="stena_7_visota" value="300">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+			</div>
+
+			<div class="calc__flex calc__flex--brtop calc__flex--jcc">
+				<div class="calc__flex calc__flex--title">
+					<div class="calc__text">Дверь / Окно</div>
+					<input class="calc__checkbox" type="checkbox" name="okno_7_check" id="okno_7_check">
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Ширина:</div>
+					<input type="number" class="calc__input calc__input--disabled" id="okno_7_shirina">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Высота:</div>
+					<input type="number" class="calc__input calc__input--disabled" id="okno_7_visota">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="calc__stena calc__stena--hidden" id="stena_8">
+			<div class="calc__name">Стена №8</div>
+
+			<div class="calc__flex calc__flex--jcc">
+				<div class="calc__flex calc__flex--title">
+					<div class="calc__text">Параметры стены:</div>
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Ширина:</div>
+					<input type="number" class="calc__input" id="stena_8_shirina" value="300">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Высота:</div>
+					<input type="number" class="calc__input" id="stena_8_visota" value="300">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+			</div>
+
+			<div class="calc__flex calc__flex--brtop calc__flex--jcc">
+				<div class="calc__flex calc__flex--title">
+					<div class="calc__text">Дверь / Окно</div>
+					<input class="calc__checkbox" type="checkbox" name="okno_8_check" id="okno_8_check">
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Ширина:</div>
+					<input type="number" class="calc__input calc__input--disabled" id="okno_8_shirina">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+				<div class="calc__flex calc__flex--jcc calc__flex--pad">
+					<div class="calc__text">Высота:</div>
+					<input type="number" class="calc__input calc__input--disabled" id="okno_8_visota">
+					<div class="calc__text calc__text--sm">см</div>
+				</div>
+			</div>
+		</div>
+
+		
+		<div class="calc__flex calc__flex--jcc">
+			<div class="calc__add">Добавить стену</div>
+			<div class="calc__del">Удалить стену</div>
+		</div>
+
+		<div class="calc__btn">Рассчитать количество обоев и клея</div>
+
+	</div>
+
+
+
+</body>
+</html>

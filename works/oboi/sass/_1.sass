@@ -1,0 +1,224 @@
+
+
+
+
+body
+    position: relative
+    background: #493e4d
+
+input[type='number']
+    -moz-appearance:textfield
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+    -webkit-appearance: none
+
+.calc
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: sans-serif
+    position: relative
+    width: 100%
+    max-width: 800px
+    min-height: 300px
+    background: #fff
+    border-radius: 10px
+    margin: 30px auto 20px auto
+    padding: 30px
+
+    *
+        padding: 0
+        margin: 0
+        box-sizing: border-box
+        font-family: sans-serif
+
+    &__header
+        text-align: center
+        font-size: 22px
+        margin: 10px auto 80px auto
+        font-weight: 400
+        text-transform: uppercase
+        letter-spacing: 2px
+
+        &--margin
+            margin: 10px auto 20px auto 
+
+    &__input
+        display: block
+        margin: 10px
+        padding: 5px 10px
+        width: 70px
+        border: 1px solid #bbb
+
+        &--disabled
+            background: #ccc
+            pointer-events: none
+
+    &__checkbox
+        height: 20px
+        width: 20px
+        margin: 0 0 0 10px
+
+    &__oboi
+        width: 100%
+        position: relative
+        border: 1px solid #ddd
+        padding: 10px 10px
+        margin: 50px auto 20px auto
+        border-radius: 4px
+
+    &__stena
+        width: 100%
+        position: relative
+        border: 1px solid #ddd
+        padding: 10px 10px
+        margin: 50px auto 20px auto
+        border-radius: 4px
+
+        &--hidden
+            display: none
+
+    &__name
+        position: absolute
+        width: 100%
+        top: -30px
+        left: 0
+        text-align: center
+        font-size: 18px
+
+    &__flex
+        display: flex
+        align-items: center
+
+        &--brtop
+            border-top: 1px dashed #ddd
+
+        &--jcsa
+            justify-content: space-around
+
+        &--jcfe
+            justify-content: flex-end
+
+        &--jcc
+            justify-content: center
+
+        &--pad
+            padding: 0 20px
+
+        &--title
+            width: 170px
+            justify-content: flex-end
+            padding: 0 10px 0 0
+
+
+
+    &__add,
+    &__del
+        margin: 10px 8px 10px 8px
+        position: relative
+        text-align: center
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        max-width: 160px
+        padding: 10px 15px
+        cursor: pointer
+        transition-duration: 0.2s
+        border-radius: 8px
+        border: 2px solid #6073e0
+        user-select: none
+
+        &:hover
+            background: #d6ddff
+
+
+    &__btn
+        position: relative
+        text-align: center
+        margin: 20px auto 10px auto
+        width: 100%
+        max-width: 240px
+        padding: 10px 15px
+        display: flex
+        justify-content: center
+        align-items: center
+        background: #6073e0
+        color: #fff
+        border-radius: 10px
+        line-height: 1.3
+        cursor: pointer
+        transition-duration: 0.2s
+        user-select: none
+
+        &:hover
+            opacity: 0.8
+
+        &:active
+            opacity: 0.2
+
+
+
+
+.table
+    width: 550px
+    position: relative
+    margin: 20px auto 60px auto
+    border-right: 1px solid #bbb
+    border-top: 1px solid #bbb
+
+    &--hidden
+        display: none
+
+    &__row
+        display: flex
+
+        &--hidden
+            display: none
+
+    &__cell
+        padding: 6px
+        border-bottom: 1px solid #bbb
+        border-left: 1px solid #bbb
+        text-align: center
+        width: 110px
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 13px
+
+        &--head
+            background: #f8f8f8
+            font-size: 14px
+            font-weight: 600
+
+
+
+.itog
+    margin: 0px auto
+    width: 100%
+    position: relative
+    padding: 20px
+
+    &--hidden
+        display: none
+
+    &__line
+        background: #f8f8f8
+    
+    &__title
+        font-size: 16px
+        color: #5765b1
+        position: relative
+        width: 50%
+        text-align: right
+        padding: 3px 5px 3px 0
+        margin: 5px 0
+
+    &__result
+        font-size: 16px
+        position: relative
+        width: 50%
+        padding: 3px 0 3px 5px
+        margin: 5px 0
