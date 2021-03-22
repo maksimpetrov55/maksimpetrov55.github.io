@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/arrays.js"></script>
+	<script src="js/scripts.js"></script>
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div class="calc__value" id="type_value">111</div>
+
+		<div class="calc__left">
+			<div class="calc__text calc__text--header">Тип проката:</div>
+			<label class="calc__label" for="prokat_type_1">
+				<input type="radio" name="prokat_type" id="prokat_type_1" value="1" checked>
+				<span class="calc__label--span">Лист</span>
+			</label>
+
+			<label class="calc__label" for="prokat_type_2">
+				<input type="radio" name="prokat_type" id="prokat_type_2" value="2">
+				<span class="calc__label--span">Труба</span>
+			</label>
+
+			<label class="calc__label" for="prokat_type_3">
+				<input type="radio" name="prokat_type" id="prokat_type_3" value="3">
+				<span class="calc__label--span">Круг</span>
+			</label>
+
+			<label class="calc__label" for="prokat_type_4">
+				<input type="radio" name="prokat_type" id="prokat_type_4" value="4">
+				<span class="calc__label--span">Труба квадратная</span>
+			</label>
+
+			<label class="calc__label" for="prokat_type_5">
+				<input type="radio" name="prokat_type" id="prokat_type_5" value="5">
+				<span class="calc__label--span">Квадрат</span>
+			</label>
+
+			<label class="calc__label" for="prokat_type_6">
+				<input type="radio" name="prokat_type" id="prokat_type_6" value="6">
+				<span class="calc__label--span">Шестигранник</span>
+			</label>
+
+		</div>
+
+
+		<div class="calc__right">
+
+			<select class="calc__select" name="" id="calc_select">
+				<option selected value="Сталь">Сталь</option>
+				<option value="Чугун">Чугун</option>
+				<option value="Аллюминий">Аллюминий</option>
+				<option value="Бронза">Бронза</option>
+				<option value="Латунь">Латунь</option>
+				<option value="Медь">Медь</option>
+				<option value="Титан">Титан</option>
+			</select>
+
+			<select class="calc__select" name="" id="calc_material">
+
+			</select>
+
+			<div class="calc__button">Посчитать</div>
+
+			<div id="section_1" class="calc__section">
+				<div class="calc__bg"><img src="img/prokat1.jpg" alt="" class="calc__img" id="calc_img_1"></div>
+
+				<div class="calc__box">
+					<div class="calc__line">
+						<img src="img/1.png" alt="" class="calc__number">
+						<div class="calc__text calc__text--margin">Высота</div>
+						<input class="calc__input" type="number" name="" id="type_1_visota">
+						<div class="calc__text calc__text--margin">мм</div>
+					</div>
+					<div class="calc__line">
+						<img src="img/2.png" alt="" class="calc__number">
+						<div class="calc__text calc__text--margin">Ширина</div>
+						<input class="calc__input" type="number" name="" id="type_1_shirina">
+						<div class="calc__text calc__text--margin">мм</div>
+					</div>
+					<div class="calc__line">
+						<img src="img/3.png" alt="" class="calc__number">
+						<div class="calc__text calc__text--margin">Толщина</div>
+						<input class="calc__input" type="number" name="" id="type_1_tolshina">
+						<div class="calc__text calc__text--margin">мм</div>
+					</div>
+					<div class="calc__line">
+						<img src="img/4.png" alt="" class="calc__number">
+						<div class="calc__text calc__text--margin">Количество</div>
+						<input class="calc__input" type="number" name="" id="type_1_kolvo">
+						<div class="calc__text calc__text--margin">шт</div>
+					</div>
+				</div>
+
+				<div class="calc__result">
+					<div class="calc__line calc__line--result">
+					</div>
+
+					<div class="calc__line calc__line--result">
+						<div class="calc__text calc__text--result calc__text--margin">Масса</div>
+						<input class="calc__input calc__input--big" type="text" name="" id="type_1_massa">
+						<div class="calc__text calc__text--result calc__text--margin">кг</div>
+					</div>
+				</div>
+			</div>
+			<div id="section_2" class="calc__section calc__section--hidden">
+				<div class="calc__bg"><img src="img/prokat2.jpg" alt="" class="calc__img" id="calc_img_2"></div>
+				
+				<div class="calc__box">
+					<div class="calc__line">
+						<img src="img/1.png" alt="" class="calc__number">
+						<div class="calc__text calc__text--margin">Диаметр</div>
+						<input class="calc__input" type="number" name="" id="type_2_diametr">
+						<div class="calc__text calc__text--margin">мм</div>
+					</div>
+					<div class="calc__line">
+						<img src="img/2.png" alt="" class="calc__number">
+						<div class="calc__text calc__text--margin">Толщ. стенки</div>
+						<input class="calc__input" type="number" name="" id="type_2_tolshina">
+						<div class="calc__text calc__text--margin">мм</div>
+					</div>
+				</div>
+
+				<div class="calc__result">
+					<div class="calc__line calc__line--result">
+						<div class="calc__text calc__text--result calc__text--margin">Длина</div>
+						<input class="calc__input calc__input--dlina calc__input--big" type="text" name="" id="type_2_dlina">
+						<div class="calc__text calc__text--result calc__text--margin">м</div>
+					</div>
+
+					<div class="calc__line calc__line--result">
+						<div class="calc__text calc__text--result calc__text--margin">Масса</div>
+						<input class="calc__input calc__input--massa calc__input--big" type="text" name="" id="type_2_massa">
+						<div class="calc__text calc__text--result calc__text--margin">кг</div>
+					</div>
+				</div>
+			</div>
+			<div id="section_3" class="calc__section calc__section--hidden">
+				<div class="calc__bg"><img src="img/prokat3.jpg" alt="" class="calc__img" id="calc_img_3"></div>
+
+				<div class="calc__box">
+					<div class="calc__line">
+						<img src="img/1.png" alt="" class="calc__number">
+						<div class="calc__text calc__text--margin">Диаметр</div>
+						<input class="calc__input" type="number" name="" id="type_3_diametr">
+						<div class="calc__text calc__text--margin">мм</div>
+					</div>
+				</div>
+
+				<div class="calc__result">
+					<div class="calc__line calc__line--result">
+						<div class="calc__text calc__text--result calc__text--margin">Длина</div>
+						<input class="calc__input calc__input--dlina calc__input--big" type="text" name="" id="type_3_dlina">
+						<div class="calc__text calc__text--result calc__text--margin">м</div>
+					</div>
+
+					<div class="calc__line calc__line--result">
+						<div class="calc__text calc__text--result calc__text--margin">Масса</div>
+						<input class="calc__input calc__input--massa calc__input--big" type="text" name="" id="type_3_massa">
+						<div class="calc__text calc__text--result calc__text--margin">кг</div>
+					</div>
+				</div>
+			</div>
+			<div id="section_4" class="calc__section calc__section--hidden">
+				<div class="calc__bg"><img src="img/prokat4.jpg" alt="" class="calc__img" id="calc_img_4"></div>
+
+				<div class="calc__box">
+					<div class="calc__line">
+						<img src="img/1.png" alt="" class="calc__number">
+						<div class="calc__text calc__text--margin">Высота</div>
+						<input class="calc__input" type="number" name="" id="type_4_visota">
+						<div class="calc__text calc__text--margin">мм</div>
+					</div>
+					<div class="calc__line">
+						<img src="img/2.png" alt="" class="calc__number">
+						<div class="calc__text calc__text--margin">Ширина</div>
+						<input class="calc__input" type="number" name="" id="type_4_shirina">
+						<div class="calc__text calc__text--margin">мм</div>
+					</div>
+					<div class="calc__line">
+						<img src="img/3.png" alt="" class="calc__number">
+						<div class="calc__text calc__text--margin">Толщ. стенки</div>
+						<input class="calc__input" type="number" name="" id="type_4_tolshina">
+						<div class="calc__text calc__text--margin">мм</div>
+					</div>
+				</div>
+
+				<div class="calc__result">
+					<div class="calc__line calc__line--result">
+						<div class="calc__text calc__text--result calc__text--margin">Длина</div>
+						<input class="calc__input calc__input--dlina calc__input--big" type="text" name="" id="type_4_dlina">
+						<div class="calc__text calc__text--result calc__text--margin">м</div>
+					</div>
+
+					<div class="calc__line calc__line--result">
+						<div class="calc__text calc__text--result calc__text--margin">Масса</div>
+						<input class="calc__input calc__input--massa calc__input--big" type="text" name="" id="type_4_massa">
+						<div class="calc__text calc__text--result calc__text--margin">кг</div>
+					</div>
+				</div>
+			</div>
+			<div id="section_5" class="calc__section calc__section--hidden">
+				<div class="calc__bg"><img src="img/prokat5.jpg" alt="" class="calc__img" id="calc_img_5"></div>
+
+				<div class="calc__box">
+					<div class="calc__line">
+						<img src="img/1.png" alt="" class="calc__number">
+						<div class="calc__text calc__text--margin">Высота</div>
+						<input class="calc__input" type="number" name="" id="type_5_visota">
+						<div class="calc__text calc__text--margin">мм</div>
+					</div>
+				</div>
+
+				<div class="calc__result">
+					<div class="calc__line calc__line--result">
+						<div class="calc__text calc__text--result calc__text--margin">Длина</div>
+						<input class="calc__input calc__input--dlina calc__input--big" type="text" name="" id="type_5_dlina">
+						<div class="calc__text calc__text--result calc__text--margin">м</div>
+					</div>
+
+					<div class="calc__line calc__line--result">
+						<div class="calc__text calc__text--result calc__text--margin">Масса</div>
+						<input class="calc__input calc__input--massa calc__input--big" type="text" name="" id="type_5_massa">
+						<div class="calc__text calc__text--result calc__text--margin">кг</div>
+					</div>
+				</div>
+			</div>
+			<div id="section_6" class="calc__section calc__section--hidden">
+				<div class="calc__bg"><img src="img/prokat6.jpg" alt="" class="calc__img" id="calc_img_6"></div>
+
+				<div class="calc__box">
+					<div class="calc__line">
+						<img src="img/1.png" alt="" class="calc__number">
+						<div class="calc__text calc__text--margin">Диаметр</div>
+						<input class="calc__input" type="number" name="" id="type_6_diametr">
+						<div class="calc__text calc__text--margin">мм</div>
+					</div>
+				</div>
+
+				<div class="calc__result">
+					<div class="calc__line calc__line--result">
+						<div class="calc__text calc__text--result calc__text--margin">Длина</div>
+						<input class="calc__input calc__input--dlina calc__input--big" type="text" name="" id="type_6_dlina">
+						<div class="calc__text calc__text--result calc__text--margin">м</div>
+					</div>
+
+					<div class="calc__line calc__line--result">
+						<div class="calc__text calc__text--result calc__text--margin">Масса</div>
+						<input class="calc__input calc__input--massa calc__input--big" type="text" name="" id="type_6_massa">
+						<div class="calc__text calc__text--result calc__text--margin">кг</div>
+					</div>
+				</div>
+			</div>
+
+
+			
+
+		</div>
+
+	</div>
+	
+
+
+</body>
+</html>

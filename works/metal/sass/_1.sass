@@ -1,0 +1,151 @@
+
+
+body
+    position: relative
+
+input[type='number']
+    -moz-appearance:textfield
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+    -webkit-appearance: none
+
+.calc
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: sans-serif
+    position: relative
+    width: 100%
+    max-width: 650px
+    min-height: 330px
+    display: flex
+    justify-content: space-between
+    margin: 30px auto
+
+    *
+        padding: 0
+        margin: 0
+        box-sizing: border-box
+        font-family: sans-serif
+
+    &__value
+        position: absolute
+        margin: -20px 0 0 0
+        opacity: 0
+
+    &__left
+        position: relative
+        width: 210px
+        min-height: 330px
+        border: 3px solid #0082a0
+        padding: 6px
+
+    &__right
+        position: relative
+        width: 430px
+        min-height: 330px
+        border: 3px solid #0082a0
+        padding: 6px
+
+    &__text
+        font-size: 16px
+
+        &--header
+            margin: 0 0 5px 0
+
+        &--margin
+            margin: 0 5px
+
+        &--result
+            color: #fff
+
+    &__label
+        width: 100%
+        display: flex
+        align-items: center
+        cursor: pointer
+        padding: 3px
+        margin: 3px 0
+        background: #eee
+        border: 1px solid #ccc
+        user-select: none
+
+        &--span
+            margin: 0 0 0 5px
+
+    &__section
+        position: relative
+        width: 100%
+        height: 270px
+        display: flex
+        justify-content: flex-end
+
+        &--hidden
+            display: none
+
+    &__bg
+        position: absolute
+        width: 100%
+        height: 270px
+        top: 50%
+        left: 0
+        margin: -135px 0 0 0
+        z-index: -1
+
+    &__img
+        position: relative
+        width: 100%
+        height: 100%
+
+    &__select
+        padding: 3px
+        width: 150px
+        margin: 0 5px
+
+    &__box
+        margin: 40px 0 0 0
+
+    &__line
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        margin: 3px 0
+        position: relative
+
+        &--result
+            width: 50%
+            justify-content: center
+
+    &__input
+        width: 50px
+        padding: 4px
+        border: 1px solid #0082a0
+
+        &--big
+            width: 70px
+
+    &__result
+        position: absolute
+        display: flex
+        bottom: 42px
+        width: 100%
+
+    &__button
+        position: absolute
+        bottom: 15px
+        right: 11px
+        padding: 5px 10px 
+        background: #eee
+        border: 1px solid #0082a0
+        border-radius: 4px
+        cursor: pointer
+        transition-duration: 0.2s
+        z-index: 29
+        user-select: none
+
+        &:hover
+            opacity: 0.7
+
+        &:active
+            opacity: 0.1
