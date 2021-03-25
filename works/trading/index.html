@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+		<div class="calc__title calc__title--long">LONG</div>
+		<div class="calc__area calc__area--long">
+			<div class="calc__name">Расчет Take&nbsp;Profit и Stop&nbsp;Loss</div>
+			<div class="calc__flex calc__flex--wrap700">
+				<div class="calc__cell calc__cell--left"><div class="calc__text">Цена входа</div><input id="long_num_in" type="text" class="calc__input calc__input--left" value="100"></div>
+				<div class="calc__cell"><div class="calc__text">Размер позиции</div><input id="long_num_size" type="text" class="calc__input" value="1"></div>
+				<div class="calc__cell"><div class="calc__text">Цена TP</div><input id="long_num_priceTP" type="text" class="calc__input" value="110"></div>
+				<div class="calc__cell"><div class="calc__text">Цена SL</div><input id="long_num_priceSL" type="text" class="calc__input" value="90"></div>
+				<div class="calc__cell calc__cell--700"><div class="calc__text">Цена TP в&nbsp;%</div><input id="long_num_percTP" type="text" class="calc__input calc__input--disabled" disabled></div>
+				<div class="calc__cell"><div class="calc__text">Цена SL в&nbsp;%</div><input id="long_num_percSL" type="text" class="calc__input calc__input--disabled" disabled></div>
+				<div class="calc__cell"><div class="calc__text">Take Profit</div><input id="long_num_resultTP" type="text" class="calc__input calc__input--result-TP" disabled></div>
+				<div class="calc__cell"><div class="calc__text">Stop Loss</div><input id="long_num_resultSL" type="text" class="calc__input calc__input--result-SL" disabled></div>
+			</div>
+
+			<div class="calc__name calc__name--margin">Расчет Take&nbsp;Profit и Stop&nbsp;Loss в&nbsp;процентах</div>
+			<div class="calc__flex calc__flex--wrap700">
+				<div class="calc__cell calc__cell--left"><div class="calc__text">Цена входа</div><input id="long_perc_in" type="text" class="calc__input calc__input--left" value="14500"></div>
+				<div class="calc__cell"><div class="calc__text">Размер позиции</div><input id="long_perc_size" type="text" class="calc__input" value="0.15"></div>
+				<div class="calc__cell"><div class="calc__text">Цена TP в&nbsp;%</div><input id="long_perc_percTP" type="text" class="calc__input" value="4"></div>
+				<div class="calc__cell"><div class="calc__text">Цена SL в&nbsp;%</div><input id="long_perc_percSL" type="text" class="calc__input" value="0.5"></div>
+				<div class="calc__cell calc__cell--700"><div class="calc__text">Цена TP</div><input id="long_perc_priceTP" type="text" class="calc__input calc__input--disabled" disabled></div>
+				<div class="calc__cell"><div class="calc__text">Цена SL</div><input id="long_perc_priceSL" type="text" class="calc__input calc__input--disabled" disabled></div>
+				<div class="calc__cell"><div class="calc__text">Take Profit</div><input id="long_perc_resultTP" type="text" class="calc__input calc__input--result-TP" disabled></div>
+				<div class="calc__cell"><div class="calc__text">Stop Loss</div><input id="long_perc_resultSL" type="text" class="calc__input calc__input--result-SL" disabled></div>
+			</div>
+			<div class="calc__tax">
+				<div class="calc__flex calc__flex--jcfe calc__flex--aic">
+					<div class="calc__order">Комиссия за Maker ордер</div>
+					<input id="long_maker" class="calc__rate" type="text" value="0.02">
+					<div class="calc__order">%</div>
+				</div>
+				<div class="calc__flex calc__flex--jcfe calc__flex--aic">
+					<div class="calc__order">Комиссия за Taker ордер</div>
+					<input id="long_taker" class="calc__rate" type="text" value="0.04">
+					<div class="calc__order">%</div>
+				</div>
+			</div>
+		</div>
+		<div class="calc__title calc__title--short">SHORT</div>
+		<div class="calc__area calc__area--short">
+			<div class="calc__name">Расчет Take&nbsp;Profit и Stop&nbsp;Loss</div>
+			<div class="calc__flex calc__flex--wrap700">
+				<div class="calc__cell calc__cell--left"><div class="calc__text">Цена входа</div><input id="short_num_in" type="text" class="calc__input calc__input--left" value="100"></div>
+				<div class="calc__cell"><div class="calc__text">Размер позиции</div><input id="short_num_size" type="text" class="calc__input" value="1"></div>
+				<div class="calc__cell"><div class="calc__text">Цена TP</div><input id="short_num_priceTP" type="text" class="calc__input" value="90"></div>
+				<div class="calc__cell"><div class="calc__text">Цена SL</div><input id="short_num_priceSL" type="text" class="calc__input" value="110"></div>
+				<div class="calc__cell calc__cell--700"><div class="calc__text">Цена TP в&nbsp;%</div><input id="short_num_percTP" type="text" class="calc__input calc__input--disabled" disabled></div>
+				<div class="calc__cell"><div class="calc__text">Цена SL в&nbsp;%</div><input id="short_num_percSL" type="text" class="calc__input calc__input--disabled" disabled></div>
+				<div class="calc__cell"><div class="calc__text">Take Profit</div><input id="short_num_resultTP" type="text" class="calc__input calc__input--result-TP" disabled></div>
+				<div class="calc__cell"><div class="calc__text">Stop Loss</div><input id="short_num_resultSL" type="text" class="calc__input calc__input--result-SL" disabled></div>
+			</div>
+
+			<div class="calc__name calc__name--margin">Расчет Take&nbsp;Profit и Stop&nbsp;Loss в&nbsp;процентах</div>
+			<div class="calc__flex calc__flex--wrap700">
+				<div class="calc__cell calc__cell--left"><div class="calc__text">Цена входа</div><input id="short_perc_in" type="text" class="calc__input calc__input--left" value="14500"></div>
+				<div class="calc__cell"><div class="calc__text">Размер позиции</div><input id="short_perc_size" type="text" class="calc__input" value="1"></div>
+				<div class="calc__cell"><div class="calc__text">Цена TP в&nbsp;%</div><input id="short_perc_percTP" type="text" class="calc__input" value="3"></div>
+				<div class="calc__cell"><div class="calc__text">Цена SL в&nbsp;%</div><input id="short_perc_percSL" type="text" class="calc__input" value="0.5"></div>
+				<div class="calc__cell calc__cell--700"><div class="calc__text">Цена TP</div><input id="short_perc_priceTP" type="text" class="calc__input calc__input--disabled" disabled></div>
+				<div class="calc__cell"><div class="calc__text">Цена SL</div><input id="short_perc_priceSL" type="text" class="calc__input calc__input--disabled" disabled></div>
+				<div class="calc__cell"><div class="calc__text">Take Profit</div><input id="short_perc_resultTP" type="text" class="calc__input calc__input--result-TP" disabled></div>
+				<div class="calc__cell"><div class="calc__text">Stop Loss</div><input id="short_perc_resultSL" type="text" class="calc__input calc__input--result-SL" disabled></div>
+			</div>
+			<div class="calc__tax">
+				<div class="calc__flex calc__flex--jcfe calc__flex--aic">
+					<div class="calc__order">Комиссия за Maker ордер</div>
+					<input id="short_maker" class="calc__rate" type="text" value="0.02">
+					<div class="calc__order">%</div>
+				</div>
+				<div class="calc__flex calc__flex--jcfe calc__flex--aic">
+					<div class="calc__order">Комиссия за Taker ордер</div>
+					<input id="short_taker" class="calc__rate" type="text" value="0.04">
+					<div class="calc__order">%</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="calc__average">
+			<div class="calc__average__head">Расчет средней цены</div>
+			<div class="calc__flex calc__flex--aic calc__flex--jcfe">
+				<div class="calc__average__name">Цена входа</div>
+				<div class="calc__average__name">Размер позиции</div>
+			</div>
+			<div class="calc__flex calc__flex--aic">
+				<div class="calc__average__number">1</div>
+				<input id="average_price_1" type="text" class="calc__average__input calc__average__input--price">
+				<input id="average_amount_1" type="text" class="calc__average__input calc__average__input--amount">
+			</div>
+			<div class="calc__flex calc__flex--aic">
+				<div class="calc__average__number">2</div>
+				<input id="average_price_2" type="text" class="calc__average__input calc__average__input--price">
+				<input id="average_amount_2" type="text" class="calc__average__input calc__average__input--amount">
+			</div>
+			<div class="calc__flex calc__flex--aic">
+				<div class="calc__average__number">3</div>
+				<input id="average_price_3" type="text" class="calc__average__input calc__average__input--price">
+				<input id="average_amount_3" type="text" class="calc__average__input calc__average__input--amount">
+			</div>
+			<div class="calc__flex calc__flex--aic">
+				<div class="calc__average__number">4</div>
+				<input id="average_price_4" type="text" class="calc__average__input calc__average__input--price">
+				<input id="average_amount_4" type="text" class="calc__average__input calc__average__input--amount">
+			</div>
+			<div class="calc__flex calc__flex--aic">
+				<div class="calc__average__number">5</div>
+				<input id="average_price_5" type="text" class="calc__average__input calc__average__input--price">
+				<input id="average_amount_5" type="text" class="calc__average__input calc__average__input--amount">
+			</div>
+			<div class="calc__flex calc__flex--aic">
+				<div class="calc__average__number">6</div>
+				<input id="average_price_6" type="text" class="calc__average__input calc__average__input--price">
+				<input id="average_amount_6" type="text" class="calc__average__input calc__average__input--amount">
+			</div>
+			<div class="calc__flex calc__flex--aic">
+				<div class="calc__average__number">7</div>
+				<input id="average_price_7" type="text" class="calc__average__input calc__average__input--price">
+				<input id="average_amount_7" type="text" class="calc__average__input calc__average__input--amount">
+			</div>
+			<div class="calc__flex calc__flex--aic">
+				<div class="calc__average__number">8</div>
+				<input id="average_price_8" type="text" class="calc__average__input calc__average__input--price">
+				<input id="average_amount_8" type="text" class="calc__average__input calc__average__input--amount">
+			</div>
+			<div class="calc__flex calc__flex--aic">
+				<div class="calc__average__number">9</div>
+				<input id="average_price_9" type="text" class="calc__average__input calc__average__input--price">
+				<input id="average_amount_9" type="text" class="calc__average__input calc__average__input--amount">
+			</div>
+			<div class="calc__flex calc__flex--aic">
+				<div class="calc__average__number">10</div>
+				<input id="average_price_10" type="text" class="calc__average__input calc__average__input--price">
+				<input id="average_amount_10" type="text" class="calc__average__input calc__average__input--amount">
+			</div>
+			<div class="calc__average__name calc__average__name--itog">Средняя цена позиции</div>
+			<div class="calc__flex calc__flex--aic">
+				<input id="average_itog" type="text" class="calc__average__input calc__average__input--itog" disabled>
+			</div>
+		</div>
+	</div>
+	
+
+
+</body>
+</html>
