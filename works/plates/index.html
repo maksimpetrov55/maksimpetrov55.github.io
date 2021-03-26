@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div class="calc__header">РАССЧИТАЙТЕ <span class="calc__header--span">СТОИМОСТЬ</span> МОНТАЖА ПЕЧАТНЫХ ПЛАТ</div>
+
+		<div class="calc__descr">Для удобства вы можете самостоятельно сделать предварительный расчет стоимости монтажа печатных плат в нашей компании. Мы предлагаем низкие цены от 20 коп. за точку пайки и гарантируем отличное качество. Для точного расчета необходимо прислать готовый файл с вашим проектом на адрес: <a href="sales@runline.ru">sales@runline.ru</a>. По всем вопросам контрактного производства обращайтесь по телефону:</div>
+
+		<a href="tel:+79173901717" class="calc__phone">+7 (917) 390-17-17</a>
+
+		<div class="calc__separator"></div>
+
+		<div class="calc__title">Онлайн-калькулятор</div>
+
+		<div class="calc__body">
+
+			<div class="calc__left">
+				<div class="calc__line">
+					<div>Количество печатных плат,&nbsp;шт.:</div>
+					<input id="calc_amount" type="text" class="calc__input">
+				</div>
+				<div class="calc__line">
+					<div>Количество автомат. точек пайки,&nbsp;шт.:</div>
+					<input id="calc_auto" type="text" class="calc__input">
+				</div>
+				<div class="calc__line">
+					<div>Количество точек пайки вручную,&nbsp;шт.:</div>
+					<input id="calc_hand" type="text" class="calc__input">
+				</div>
+			</div>
+
+			<div class="calc__right">
+				<div class="calc__result">Ориентировочная стоимость (с учетом НДС), руб.:</div>
+				<input class="calc__input calc__input--itog" id="calc_itog" type="text" disabled>
+			</div>
+
+		</div>
+
+		<div class="calc__btn">Рассчитать</div>
+
+	</div>
+	
+
+
+</body>
+</html>
