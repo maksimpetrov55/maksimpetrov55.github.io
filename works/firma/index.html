@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="order">
+
+		<div id="step_1" class="order__step">
+
+			<div class="order__back" id="back_1"></div>
+
+			<div class="order__city">Москва</div>
+
+			<div class="order__separator"></div>
+	
+			<div class="order__where">В какое отделениe?</div>
+	
+			<div id="wrap_mos" class="order__wrap">
+				<input class="place__radio" type="radio" name="place_mos" id="place_mos_1">
+				<label for="place_mos_1" class="place__card">
+					<div class="place__img"></div>
+					<div class="place__title">ул. Островитянова, д. 9, к. 1</div>
+					<div class="place__time">пн.-вс.: 10:00-22:00</div>
+				</label>
+	
+				<input class="place__radio" type="radio" name="place_mos" id="place_mos_2">
+				<label for="place_mos_2" class="place__card">
+					<div class="place__img"></div>
+					<div class="place__title">ул. Островитянова, д. 9, к. 1</div>
+					<div class="place__time">пн.-вс.: 10:00-22:00</div>
+				</label>
+			</div>
+	
+			<div id="wrap_krasn" class="order__wrap">
+				<input class="place__radio" type="radio" name="place_krasn" id="place_krasn_1">
+				<label for="place_krasn_1" class="place__card">
+					<div class="place__img"></div>
+					<div class="place__title">ул. Красноярская, 9</div>
+					<div class="place__time">пн.-вс.: 10:00-22:00</div>
+				</label>
+	
+				<input class="place__radio" type="radio" name="place_krasn" id="place_krasn_2">
+				<label for="place_krasn_2" class="place__card">
+					<div class="place__img"></div>
+					<div class="place__title">ул. Красноярская, 9</div>
+					<div class="place__time">пн.-вс.: 10:00-22:00</div>
+				</label>
+			</div>
+	
+			<div class="order__next">
+				<div id="btn_1" class="order__btn">Продолжить</div>
+			</div>
+		</div>
+		<!-- /#step_1 -->
+
+		<div id="step_2" class="order__step order__step--hide">
+			<div class="order__back" id="back_2"></div>
+
+			<div class="order__head">Запись: Шаг 1 из 4</div>
+
+			<div class="order__separator"></div>
+
+			<div class="switch">
+				<input class="switch__radio" type="radio" name="switch" id="switch_1" checked>
+				<label class="switch__label" for="switch_1">Выбрать услуги</label>
+				<input class="switch__radio" type="radio" name="switch" id="switch_2">
+				<label class="switch__label" for="switch_2">Выбрать мастера</label>
+			</div>
+
+			<div class="servs__header">Мужские стрижки и бритье</div>
+			<div class="servs">
+				<input class="servs__check" type="checkbox" name="servs" id="servs_1" value="1500"><label class="servs__label" for="servs_1"><div class="servs__title">Мужская стрижка</div><div class="servs__price">1500 ₽</div></label>
+				<input class="servs__check" type="checkbox" name="servs" id="servs_2" value="1500"><label class="servs__label" for="servs_2"><div class="servs__title">Мужская стрижка</div><div class="servs__price">1500 ₽</div></label>
+				<input class="servs__check" type="checkbox" name="servs" id="servs_3" value="1500"><label class="servs__label" for="servs_3"><div class="servs__title">Мужская стрижка</div><div class="servs__price">1500 ₽</div></label>
+				<input class="servs__check" type="checkbox" name="servs" id="servs_4" value="1500"><label class="servs__label" for="servs_4"><div class="servs__title">Мужская стрижка</div><div class="servs__price">1500 ₽</div></label>
+				<input class="servs__check" type="checkbox" name="servs" id="servs_5" value="1500"><label class="servs__label" for="servs_5"><div class="servs__title">Мужская стрижка</div><div class="servs__price">1500 ₽</div></label>
+				<input class="servs__check" type="checkbox" name="servs" id="servs_6" value="1500"><label class="servs__label" for="servs_6"><div class="servs__title">Мужская стрижка</div><div class="servs__price">1500 ₽</div></label>
+				<input class="servs__check" type="checkbox" name="servs" id="servs_7" value="1500"><label class="servs__label" for="servs_7"><div class="servs__title">Мужская стрижка</div><div class="servs__price">1500 ₽</div></label>
+				<input class="servs__check" type="checkbox" name="servs" id="servs_8" value="1500"><label class="servs__label" for="servs_8"><div class="servs__title">Мужская стрижка</div><div class="servs__price">1500 ₽</div></label>
+				<input class="servs__check" type="checkbox" name="servs" id="servs_9" value="1500"><label class="servs__label" for="servs_9"><div class="servs__title">Мужская стрижка</div><div class="servs__price">1500 ₽</div></label>
+			</div>
+
+			<div class="person">
+				<input type="radio" name="person" id="person_1" class="person__radio" value="1">
+				<label class="person__label" for="person_1">
+					<img src="img/faces/1.jpg" alt="" class="person__img">
+					<div class="person__name">Алексей</div>
+					<div class="person__prof">Барбер</div>
+					<div class="person__rate">♣♣♣♣♣151</div>
+				</label>
+				<input type="radio" name="person" id="person_2" class="person__radio" value="2">
+				<label class="person__label" for="person_2">
+					<img src="img/faces/1.jpg" alt="" class="person__img">
+					<div class="person__name">Алексей</div>
+					<div class="person__prof">Барбер</div>
+					<div class="person__rate">♣♣♣♣♣151</div>
+				</label>
+				<input type="radio" name="person" id="person_3" class="person__radio" value="3">
+				<label class="person__label" for="person_3">
+					<img src="img/faces/1.jpg" alt="" class="person__img">
+					<div class="person__name">Алексей</div>
+					<div class="person__prof">Барбер</div>
+					<div class="person__rate">♣♣♣♣♣151</div>
+				</label>
+			</div>
+
+		</div>
+		<!-- /#step_2 -->
+
+	</div>
+
+
+</body>
+</html>
