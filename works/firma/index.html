@@ -5,10 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Web Mockup</title>
 
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/main.css?v1">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/scripts.js"></script>	
+	<script src="js/scripts.js?v1"></script>	
 
 </head>
 <body>
@@ -19,45 +19,67 @@
 
 		<div id="step_1" class="order__step">
 
-			<div class="order__back" id="back_1"></div>
+			<div class="order__top">
+				<div class="order__back" id="back_1"></div>
 
-			<div class="order__city">Москва</div>
-
-			<div class="order__separator"></div>
+				<div class="city">
+					<div class="city__current">Москва</div>
+					<div class="city__list">
+						<input class="city__radio" type="radio" name="city" id="city_1" value="Красноярск">
+						<label class="city__li city__li--top" for="city_1">Красноярск</label>
+						<input class="city__radio" type="radio" name="city" id="city_2" value="Томск">
+						<label class="city__li" for="city_2">Томск</label>
+						<input class="city__radio" type="radio" name="city" id="city_3" value="Казань">
+						<label class="city__li" for="city_3">Казань</label>
+						<input class="city__radio" type="radio" name="city" id="city_4" value="Москва" checked>
+						<label class="city__li" for="city_4">Москва</label>
+					</div>
+				</div>
 	
-			<div class="order__where">В какое отделениe?</div>
-	
-			<div id="wrap_mos" class="order__wrap">
-				<input class="place__radio" type="radio" name="place_mos" id="place_mos_1">
-				<label for="place_mos_1" class="place__card">
-					<div class="place__img"></div>
-					<div class="place__title">ул. Островитянова, д. 9, к. 1</div>
-					<div class="place__time">пн.-вс.: 10:00-22:00</div>
-				</label>
-	
-				<input class="place__radio" type="radio" name="place_mos" id="place_mos_2">
-				<label for="place_mos_2" class="place__card">
-					<div class="place__img"></div>
-					<div class="place__title">ул. Островитянова, д. 9, к. 1</div>
-					<div class="place__time">пн.-вс.: 10:00-22:00</div>
-				</label>
+				<div class="order__separator"></div>
+		
+				<div class="order__where">В какое отделениe?</div>
 			</div>
 	
-			<div id="wrap_krasn" class="order__wrap">
-				<input class="place__radio" type="radio" name="place_krasn" id="place_krasn_1">
-				<label for="place_krasn_1" class="place__card">
-					<div class="place__img"></div>
-					<div class="place__title">ул. Красноярская, 9</div>
-					<div class="place__time">пн.-вс.: 10:00-22:00</div>
-				</label>
-	
-				<input class="place__radio" type="radio" name="place_krasn" id="place_krasn_2">
-				<label for="place_krasn_2" class="place__card">
-					<div class="place__img"></div>
-					<div class="place__title">ул. Красноярская, 9</div>
-					<div class="place__time">пн.-вс.: 10:00-22:00</div>
-				</label>
+			<div class="order__mid">
+				<div id="wrap_mos" class="order__wrap">
+					<input class="place__radio" type="radio" name="place" id="place_mos_1" checked value="ул. Островитянова, д. 9, к. 1">
+					<label for="place_mos_1" class="place__card">
+						<div class="place__img"></div>
+						<div class="place__title">ул. Островитянова, д. 9, к. 1</div>
+						<div class="place__time">пн.-вс.: 10:00-22:00</div>
+					</label>
+		
+					<input class="place__radio" type="radio" name="place" id="place_mos_2" value="ул. Островитянова, д. 9, к. 1">
+					<label for="place_mos_2" class="place__card">
+						<div class="place__img"></div>
+						<div class="place__title">ул. Островитянова, д. 9, к. 1</div>
+						<div class="place__time">пн.-вс.: 10:00-22:00</div>
+					</label>
+				</div>
+		
+				<div id="wrap_krasn" class="order__wrap order__wrap--hide">
+					<input class="place__radio" type="radio" name="place" id="place_krasn_1" value="ул. Красноярская, 9">
+					<label for="place_krasn_1" class="place__card">
+						<div class="place__img"></div>
+						<div class="place__title">ул. Красноярская, 9</div>
+						<div class="place__time">пн.-вс.: 10:00-22:00</div>
+					</label>
+		
+					<input class="place__radio" type="radio" name="place" id="place_krasn_2" value="ул. Красноярская, 9">
+					<label for="place_krasn_2" class="place__card">
+						<div class="place__img"></div>
+						<div class="place__title">ул. Красноярская, 9</div>
+						<div class="place__time">пн.-вс.: 10:00-22:00</div>
+					</label>
+				</div>
+
+				<div id="wrap_tomsk" class="order__wrap order__wrap--hide"></div>
+
+				<div id="wrap_kazan" class="order__wrap order__wrap--hide"></div>
+
 			</div>
+			<!-- /.order__mid -->
 	
 			<div class="order__next">
 				<div id="btn_1" class="order__btn">Продолжить</div>
@@ -66,56 +88,198 @@
 		<!-- /#step_1 -->
 
 		<div id="step_2" class="order__step order__step--hide">
-			<div class="order__back" id="back_2"></div>
 
-			<div class="order__head">Запись: Шаг 1 из 4</div>
+			<div class="order__top order__top--2">
+				<div class="order__back" id="back_2"></div>
 
-			<div class="order__separator"></div>
+				<div class="order__head">Запись: Шаг 1 из 4</div>
+	
+				<div class="order__separator"></div>
 
-			<div class="switch">
-				<input class="switch__radio" type="radio" name="switch" id="switch_1" checked>
-				<label class="switch__label" for="switch_1">Выбрать услуги</label>
-				<input class="switch__radio" type="radio" name="switch" id="switch_2">
-				<label class="switch__label" for="switch_2">Выбрать мастера</label>
 			</div>
 
-			<div class="servs__header">Мужские стрижки и бритье</div>
-			<div class="servs">
-				<input class="servs__check" type="checkbox" name="servs" id="servs_1" value="1500"><label class="servs__label" for="servs_1"><div class="servs__title">Мужская стрижка</div><div class="servs__price">1500 ₽</div></label>
-				<input class="servs__check" type="checkbox" name="servs" id="servs_2" value="1500"><label class="servs__label" for="servs_2"><div class="servs__title">Мужская стрижка</div><div class="servs__price">1500 ₽</div></label>
-				<input class="servs__check" type="checkbox" name="servs" id="servs_3" value="1500"><label class="servs__label" for="servs_3"><div class="servs__title">Мужская стрижка</div><div class="servs__price">1500 ₽</div></label>
-				<input class="servs__check" type="checkbox" name="servs" id="servs_4" value="1500"><label class="servs__label" for="servs_4"><div class="servs__title">Мужская стрижка</div><div class="servs__price">1500 ₽</div></label>
-				<input class="servs__check" type="checkbox" name="servs" id="servs_5" value="1500"><label class="servs__label" for="servs_5"><div class="servs__title">Мужская стрижка</div><div class="servs__price">1500 ₽</div></label>
-				<input class="servs__check" type="checkbox" name="servs" id="servs_6" value="1500"><label class="servs__label" for="servs_6"><div class="servs__title">Мужская стрижка</div><div class="servs__price">1500 ₽</div></label>
-				<input class="servs__check" type="checkbox" name="servs" id="servs_7" value="1500"><label class="servs__label" for="servs_7"><div class="servs__title">Мужская стрижка</div><div class="servs__price">1500 ₽</div></label>
-				<input class="servs__check" type="checkbox" name="servs" id="servs_8" value="1500"><label class="servs__label" for="servs_8"><div class="servs__title">Мужская стрижка</div><div class="servs__price">1500 ₽</div></label>
-				<input class="servs__check" type="checkbox" name="servs" id="servs_9" value="1500"><label class="servs__label" for="servs_9"><div class="servs__title">Мужская стрижка</div><div class="servs__price">1500 ₽</div></label>
-			</div>
+			<div class="order__mid order__mid--2">
+				<div class="switch">
+					<input class="switch__radio" type="radio" name="switch" id="switch_1" checked>
+					<label class="switch__label" for="switch_1">Выбрать услуги</label>
+					<input class="switch__radio" type="radio" name="switch" id="switch_2">
+					<label class="switch__label" for="switch_2">Выбрать мастера</label>
+				</div>
 
-			<div class="person">
-				<input type="radio" name="person" id="person_1" class="person__radio" value="1">
-				<label class="person__label" for="person_1">
-					<img src="img/faces/1.jpg" alt="" class="person__img">
-					<div class="person__name">Алексей</div>
-					<div class="person__prof">Барбер</div>
-					<div class="person__rate">♣♣♣♣♣151</div>
-				</label>
-				<input type="radio" name="person" id="person_2" class="person__radio" value="2">
-				<label class="person__label" for="person_2">
-					<img src="img/faces/1.jpg" alt="" class="person__img">
-					<div class="person__name">Алексей</div>
-					<div class="person__prof">Барбер</div>
-					<div class="person__rate">♣♣♣♣♣151</div>
-				</label>
-				<input type="radio" name="person" id="person_3" class="person__radio" value="3">
-				<label class="person__label" for="person_3">
-					<img src="img/faces/1.jpg" alt="" class="person__img">
-					<div class="person__name">Алексей</div>
-					<div class="person__prof">Барбер</div>
-					<div class="person__rate">♣♣♣♣♣151</div>
-				</label>
-			</div>
+				<div class="servs__header">Мужские стрижки и бритье</div>
+				<div class="servs">
+					<input class="AllValueСheckbox servs__check" type="checkbox" name="servs" id="servs_1" value=" Мужская стрижка 1500 ₽"><label class="servs__label" for="servs_1"><div class="servs__title">Мужская стрижка</div><div class="servs__price">1500 ₽</div></label>
+					<input class="AllValueСheckbox servs__check" type="checkbox" name="servs" id="servs_2" value=" Мужская стрижка 1500 ₽"><label class="servs__label" for="servs_2"><div class="servs__title">Мужская стрижка</div><div class="servs__price">1500 ₽</div></label>
+					<input class="AllValueСheckbox servs__check" type="checkbox" name="servs" id="servs_3" value=" Мужская стрижка 1500 ₽"><label class="servs__label" for="servs_3"><div class="servs__title">Мужская стрижка</div><div class="servs__price">1500 ₽</div></label>
+					<input class="AllValueСheckbox servs__check" type="checkbox" name="servs" id="servs_4" value=" Мужская стрижка 1500 ₽"><label class="servs__label" for="servs_4"><div class="servs__title">Мужская стрижка</div><div class="servs__price">1500 ₽</div></label>
+					<input class="AllValueСheckbox servs__check" type="checkbox" name="servs" id="servs_5" value=" Мужская стрижка 1500 ₽"><label class="servs__label" for="servs_5"><div class="servs__title">Мужская стрижка</div><div class="servs__price">1500 ₽</div></label>
+					<input class="AllValueСheckbox servs__check" type="checkbox" name="servs" id="servs_6" value=" Мужская стрижка 1500 ₽"><label class="servs__label" for="servs_6"><div class="servs__title">Мужская стрижка</div><div class="servs__price">1500 ₽</div></label>
+					<input class="AllValueСheckbox servs__check" type="checkbox" name="servs" id="servs_7" value=" Мужская стрижка 1500 ₽"><label class="servs__label" for="servs_7"><div class="servs__title">Мужская стрижка</div><div class="servs__price">1500 ₽</div></label>
+					<input class="AllValueСheckbox servs__check" type="checkbox" name="servs" id="servs_8" value=" Мужская стрижка 1500 ₽"><label class="servs__label" for="servs_8"><div class="servs__title">Мужская стрижка</div><div class="servs__price">1500 ₽</div></label>
+					<input class="AllValueСheckbox servs__check" type="checkbox" name="servs" id="servs_9" value=" Мужская стрижка 1500 ₽"><label class="servs__label" for="servs_9"><div class="servs__title">Мужская стрижка</div><div class="servs__price">1500 ₽</div></label>
+					<input type="text" hidden name="AllСheckbox">
+				</div>
+	
+				<div id="target_1" id="person" class="person">
+					<input type="radio" name="person" id="person_1" class="person__radio" value="Алексей">
+					<label class="person__label" for="person_1">
+						<img src="img/faces/1.jpg" alt="" class="person__img">
+						<div class="person__name">Алексей</div>
+						<div class="person__prof">Барбер</div>
+					</label>
+					<input type="radio" name="person" id="person_2" class="person__radio" value="Алексей">
+					<label class="person__label" for="person_2">
+						<img src="img/faces/1.jpg" alt="" class="person__img">
+						<div class="person__name">Алексей</div>
+						<div class="person__prof">Барбер</div>
+					</label>
+					<input type="radio" name="person" id="person_3" class="person__radio" value="Алексей">
+					<label class="person__label" for="person_3">
+						<img src="img/faces/1.jpg" alt="" class="person__img">
+						<div class="person__name">Алексей</div>
+						<div class="person__prof">Барбер</div>
+					</label>
+					<input type="radio" name="person" id="person_any" class="person__radio" value="Любой мастер">
+					<label class="person__label person__label--any" for="person_any">
+						<div class="person__name">Любой мастер</div>
+					</label>
+				</div>
 
+				<div id="target_2" class="date">
+					<div id="date_header" class="date__header"></div>
+
+					<div class="date__header">Время</div>
+					<div class="date__time">
+						<input class="date__radio" type="radio" name="time" id="time_1000" value="10:00"><label class="date__hours" for="time_1000">10:00</label>
+						<input class="date__radio" type="radio" name="time" id="time_1010" value="10:10"><label class="date__hours" for="time_1010">10:10</label>
+						<input class="date__radio" type="radio" name="time" id="time_1020" value="10:20"><label class="date__hours" for="time_1020">10:20</label>
+						<input class="date__radio" type="radio" name="time" id="time_1030" value="10:30"><label class="date__hours" for="time_1030">10:30</label>
+						<input class="date__radio" type="radio" name="time" id="time_1040" value="10:40"><label class="date__hours" for="time_1040">10:40</label>
+						<input class="date__radio" type="radio" name="time" id="time_1050" value="10:50"><label class="date__hours" for="time_1050">10:50</label>
+
+						<input class="date__radio" type="radio" name="time" id="time_1100" value="11:00"><label class="date__hours" for="time_1100">11:00</label>
+						<input class="date__radio" type="radio" name="time" id="time_1110" value="11:10"><label class="date__hours" for="time_1110">11:10</label>
+						<input class="date__radio" type="radio" name="time" id="time_1120" value="11:20"><label class="date__hours" for="time_1120">11:20</label>
+						<input class="date__radio" type="radio" name="time" id="time_1130" value="11:30"><label class="date__hours" for="time_1130">11:30</label>
+						<input class="date__radio" type="radio" name="time" id="time_1140" value="11:40"><label class="date__hours" for="time_1140">11:40</label>
+						<input class="date__radio" type="radio" name="time" id="time_1150" value="11:50"><label class="date__hours" for="time_1150">11:50</label>
+						
+						<input class="date__radio" type="radio" name="time" id="time_1200" value="12:00"><label class="date__hours" for="time_1200">12:00</label>
+						<input class="date__radio" type="radio" name="time" id="time_1210" value="12:10"><label class="date__hours" for="time_1210">12:10</label>
+						<input class="date__radio" type="radio" name="time" id="time_1220" value="12:20"><label class="date__hours" for="time_1220">12:20</label>
+						<input class="date__radio" type="radio" name="time" id="time_1230" value="12:30"><label class="date__hours" for="time_1230">12:30</label>
+						<input class="date__radio" type="radio" name="time" id="time_1240" value="12:40"><label class="date__hours" for="time_1240">12:40</label>
+						<input class="date__radio" type="radio" name="time" id="time_1250" value="12:50"><label class="date__hours" for="time_1250">12:50</label>
+
+						<input class="date__radio" type="radio" name="time" id="time_1300" value="13:00"><label class="date__hours" for="time_1300">13:00</label>
+						<input class="date__radio" type="radio" name="time" id="time_1310" value="13:10"><label class="date__hours" for="time_1310">13:10</label>
+						<input class="date__radio" type="radio" name="time" id="time_1320" value="13:20"><label class="date__hours" for="time_1320">13:20</label>
+						<input class="date__radio" type="radio" name="time" id="time_1330" value="13:30"><label class="date__hours" for="time_1330">13:30</label>
+						<input class="date__radio" type="radio" name="time" id="time_1340" value="13:40"><label class="date__hours" for="time_1340">13:40</label>
+						<input class="date__radio" type="radio" name="time" id="time_1350" value="13:50"><label class="date__hours" for="time_1350">13:50</label>
+
+						<input class="date__radio" type="radio" name="time" id="time_1400" value="14:00"><label class="date__hours" for="time_1400">14:00</label>
+						<input class="date__radio" type="radio" name="time" id="time_1410" value="14:10"><label class="date__hours" for="time_1410">14:10</label>
+						<input class="date__radio" type="radio" name="time" id="time_1420" value="14:20"><label class="date__hours" for="time_1420">14:20</label>
+						<input class="date__radio" type="radio" name="time" id="time_1430" value="14:30"><label class="date__hours" for="time_1430">14:30</label>
+						<input class="date__radio" type="radio" name="time" id="time_1440" value="14:40"><label class="date__hours" for="time_1440">14:40</label>
+						<input class="date__radio" type="radio" name="time" id="time_1450" value="14:50"><label class="date__hours" for="time_1450">14:50</label>
+						
+						<input class="date__radio" type="radio" name="time" id="time_1500" value="15:00"><label class="date__hours" for="time_1500">15:00</label>
+						<input class="date__radio" type="radio" name="time" id="time_1510" value="15:10"><label class="date__hours" for="time_1510">15:10</label>
+						<input class="date__radio" type="radio" name="time" id="time_1520" value="15:20"><label class="date__hours" for="time_1520">15:20</label>
+						<input class="date__radio" type="radio" name="time" id="time_1530" value="15:30"><label class="date__hours" for="time_1530">15:30</label>
+						<input class="date__radio" type="radio" name="time" id="time_1540" value="15:40"><label class="date__hours" for="time_1540">15:40</label>
+						<input class="date__radio" type="radio" name="time" id="time_1550" value="15:50"><label class="date__hours" for="time_1550">15:50</label>
+
+						<input class="date__radio" type="radio" name="time" id="time_1600" value="16:00"><label class="date__hours" for="time_1600">16:00</label>
+						<input class="date__radio" type="radio" name="time" id="time_1610" value="16:10"><label class="date__hours" for="time_1610">16:10</label>
+						<input class="date__radio" type="radio" name="time" id="time_1620" value="16:20"><label class="date__hours" for="time_1620">16:20</label>
+						<input class="date__radio" type="radio" name="time" id="time_1630" value="16:30"><label class="date__hours" for="time_1630">16:30</label>
+						<input class="date__radio" type="radio" name="time" id="time_1640" value="16:40"><label class="date__hours" for="time_1640">16:40</label>
+						<input class="date__radio" type="radio" name="time" id="time_1650" value="16:50"><label class="date__hours" for="time_1650">16:50</label>
+
+						<input class="date__radio" type="radio" name="time" id="time_1700" value="17:00"><label class="date__hours" for="time_1700">17:00</label>
+						<input class="date__radio" type="radio" name="time" id="time_1710" value="17:10"><label class="date__hours" for="time_1710">17:10</label>
+						<input class="date__radio" type="radio" name="time" id="time_1720" value="17:20"><label class="date__hours" for="time_1720">17:20</label>
+						<input class="date__radio" type="radio" name="time" id="time_1730" value="17:30"><label class="date__hours" for="time_1730">17:30</label>
+						<input class="date__radio" type="radio" name="time" id="time_1740" value="17:40"><label class="date__hours" for="time_1740">17:40</label>
+						<input class="date__radio" type="radio" name="time" id="time_1750" value="17:50"><label class="date__hours" for="time_1750">17:50</label>
+
+						<input class="date__radio" type="radio" name="time" id="time_1800" value="18:00"><label class="date__hours" for="time_1800">18:00</label>
+						<input class="date__radio" type="radio" name="time" id="time_1810" value="18:10"><label class="date__hours" for="time_1810">18:10</label>
+						<input class="date__radio" type="radio" name="time" id="time_1820" value="18:20"><label class="date__hours" for="time_1820">18:20</label>
+						<input class="date__radio" type="radio" name="time" id="time_1830" value="18:30"><label class="date__hours" for="time_1830">18:30</label>
+						<input class="date__radio" type="radio" name="time" id="time_1840" value="18:40"><label class="date__hours" for="time_1840">18:40</label>
+						<input class="date__radio" type="radio" name="time" id="time_1850" value="18:50"><label class="date__hours" for="time_1850">18:50</label>
+
+						<input class="date__radio" type="radio" name="time" id="time_1900" value="19:00"><label class="date__hours" for="time_1900">19:00</label>
+						<input class="date__radio" type="radio" name="time" id="time_1910" value="19:10"><label class="date__hours" for="time_1910">19:10</label>
+						<input class="date__radio" type="radio" name="time" id="time_1920" value="19:20"><label class="date__hours" for="time_1920">19:20</label>
+						<input class="date__radio" type="radio" name="time" id="time_1930" value="19:30"><label class="date__hours" for="time_1930">19:30</label>
+						<input class="date__radio" type="radio" name="time" id="time_1940" value="19:40"><label class="date__hours" for="time_1940">19:40</label>
+						<input class="date__radio" type="radio" name="time" id="time_1950" value="19:50"><label class="date__hours" for="time_1950">19:50</label>
+					</div>
+				</div>
+
+				<div id="target_3"></div>
+
+				<div class="form">
+					<div class="form__header">Моя запись</div>
+
+					<form method="" action="">
+						<div class="form__line">
+							<div class="form__title">Отделениe</div>
+							<textarea class="form__area" name="form_otdelenie" id="form_otdelenie" disabled hidden></textarea>
+							<div class="form__text" id="form_text_otdelenie"></div>
+						</div>
+						<div class="form__line">
+							<div class="form__title">Услуга</div>
+							<textarea class="form__area" name="form_usluga" id="form_usluga" disabled hidden></textarea>
+							<div class="form__text" id="form_text_usluga"></div>
+						</div>
+						<div class="form__line">
+							<div class="form__title">Мастер</div>
+							<textarea class="form__area" name="form_master" id="form_master" disabled hidden></textarea>
+							<div class="form__text" id="form_text_master"></div>
+						</div>
+						<div class="form__line">
+							<div class="form__title">Дата, время</div>
+							<textarea class="form__area" name="form_date" id="form_date" disabled hidden></textarea>
+							<div class="form__text" id="form_text_date"></div>
+						</div>
+						<div class="form__line">
+							<div class="form__title">Комметарий</div>
+							<textarea class="form__comment" name="form_comment" id="form_comment" placeholder="По желанию"></textarea>
+						</div>
+						<div class="form__line">
+							<div class="form__title">Ваше имя*</div>
+							<input class="form__input" name="form_name" type="text" required placeholder="Обязательное поле">
+						</div>
+						<div class="form__line">
+							<div class="form__title">Ваш телефон*</div>
+							<input class="form__input" name="form_phone" type="text" required placeholder="Обязательное поле">
+						</div>
+						<div class="form__line">
+							<div class="form__title">Напомнить</div>
+							<div class="form__wrap">
+								<input class="form__check" id="form_remind_24hours" name="form_remind_24hours" type="checkbox" checked>
+								<label class="form__remind" for="form_remind_24hours">За сутки</label>
+								<input class="form__check" id="form_remind_2hours" name="form_remind_2hours" type="checkbox" checked>
+								<label class="form__remind" for="form_remind_2hours">За 2 часа</label>
+							</div>
+						</div>
+
+						<input class="form__submit" type="submit" value="Подтвердить">
+					</form>
+				</div>
+				
+				<div class="space"></div>
+			</div>
+			
+			<div class="next">
+				<div id="next_btn" class="next__btn">Далее</div>
+			</div>
 		</div>
 		<!-- /#step_2 -->
 
