@@ -275,7 +275,7 @@
     &__header
         font-size: 18px
         text-align: center
-        margin: 70px auto 20px auto
+        margin: 50px auto 20px auto
         text-transform: uppercase
         color: #fff
 
@@ -455,3 +455,158 @@
 
         &:active
             transform: scale(1.2)
+
+
+
+
+.account
+    position: relative
+    height: 100vh
+    transition-duration: 0.7s
+    overflow: hidden
+
+    &--hide
+        display: none
+
+    &__icon
+        width: 60px
+        height: 60px
+        position: absolute
+        right: 0px
+        top: 0px
+        background: url("../img/lk.png") no-repeat
+        background-size: 26px 26px
+        background-position: 50% 50%
+        transition-duration: 0.5s
+        z-index: 199
+
+        &:active
+            transform: scale(0.7)
+
+    &__card
+        position: relative
+        margin: 10px auto
+        padding: 10px
+        background: #00000066
+
+        &--hide
+            display: none
+
+    &__head
+        color: #fff
+        font-size: 18px
+        padding: 12px 0
+        border-bottom: 1px solid #999
+
+    &__line
+        flex-shrink: 0
+        display: flex
+        width: 100%
+        position: relative
+        border-bottom: 1px solid #999
+        align-items: center
+        padding: 12px 0
+
+    &__title
+        flex-shrink: 0
+        width: 29%
+        font-size: 14px
+        color: #999
+        position: relative
+        text-transform: uppercase
+
+    &__data
+        position: relative
+        font-size: 14px
+        color: #fff
+
+    &__cancel
+        margin: 20px auto 10px auto
+        font-size: 18px
+        text-transform: uppercase
+        color: $red
+        transition-duration: 0.2s
+        text-align: center
+
+        &:active
+            transform: scale(1.2)
+
+    &__switch
+        display: flex
+        width: 100%
+        max-width: 400px
+        justify-content: center
+        position: relative
+        margin: 30px auto 0 auto
+
+    &__radio
+        display: none
+
+        &:checked + .account__label
+            color: #fff
+            border-bottom: 4px solid $red
+
+    &__label
+        transition-duration: 0.1s
+        text-transform: uppercase
+        color: #aaa
+        text-align: center
+        position: relative
+        width: 50%
+        padding: 0 0 10px 0
+        border-bottom: 4px solid transparent
+
+
+
+
+.picker
+    position: relative
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    width: 100%
+    margin: 0px auto 10px auto
+
+    &__header
+        display: flex
+        justify-content: space-between
+        margin: 10px auto 10px auto
+
+    &__daynum
+        display: none
+
+    &__day
+        position: relative
+        width: 13%
+        color: #fff
+        text-align: center
+        color: #999
+        font-size: 13px
+
+    &__radio
+        display: none
+
+        &:checked + .picker__label
+            background: $red
+
+    &__label
+        position: relative
+        width: 13%
+        height: 55px
+        min-width: 39px
+        background: #00000066
+        color: #fff
+        display: flex
+        justify-content: center
+        align-items: center
+        transition-duration: 0.2s
+        margin: 5px 0
+
+        &:active
+            transform: scale(1.2)
+
+        &--dis
+            color: #999
+
+            &:active
+                transform: scale(1)

@@ -5,22 +5,40 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Web Mockup</title>
 
-	<link rel="stylesheet" href="css/main.css?v1">
+	<link rel="stylesheet" href="css/main.css?v2">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/scripts.js?v1"></script>	
+	<script src="js/scripts.js?v2"></script>	
 
 </head>
 <body>
 
 
+	<div class="main">
 
-	<div class="order">
+		<div class="account__icon account__icon--main"></div>
+
+		<img src="img/logo_sm.png" alt="" class="main__logo">
+
+		<a href="#" class="main__btn">
+			<img src="img/left.png" alt="" class="main__btn--left">
+			<span class="main__btn--span">–</span>
+			Записаться
+			<span class="main__btn--span">–</span>
+			<img src="img/right.png" alt="" class="main__btn--right">
+		</a>
+
+	</div>
+
+
+	<div class="order order--hidden">
 
 		<div id="step_1" class="order__step">
 
 			<div class="order__top">
 				<div class="order__back" id="back_1"></div>
+
+				<div class="account__icon"></div>
 
 				<div class="city">
 					<div class="city__current">Москва</div>
@@ -91,8 +109,9 @@
 
 			<div class="order__top order__top--2">
 				<div class="order__back" id="back_2"></div>
+				<div class="account__icon"></div>
 
-				<div class="order__head">Запись: Шаг 1 из 4</div>
+				<div id="order_head" class="order__head">Запись: Шаг 1 из 4</div>
 	
 				<div class="order__separator"></div>
 
@@ -147,6 +166,41 @@
 
 				<div id="target_2" class="date">
 					<div id="date_header" class="date__header"></div>
+
+					<div class="picker__header">
+						<div class="picker__day">Пн</div>
+						<div class="picker__day">Вт</div>
+						<div class="picker__day">Ср</div>
+						<div class="picker__day">Чт</div>
+						<div class="picker__day">Пт</div>
+						<div class="picker__day">Сб</div>
+						<div class="picker__day">Вс</div>
+					</div>
+					<div class="picker">
+						<input value="1" type="radio" name="picker_radio" id="picker_radio_1" class="picker__radio"><label class="picker__label" for="picker_radio_1">1</label><div class="picker__daynum">1</div>
+						<input value="2" type="radio" name="picker_radio" id="picker_radio_2" class="picker__radio"><label class="picker__label" for="picker_radio_2">2</label><div class="picker__daynum">2</div>
+						<input value="3" type="radio" name="picker_radio" id="picker_radio_3" class="picker__radio"><label class="picker__label" for="picker_radio_3">3</label><div class="picker__daynum">3</div>
+						<input value="4" type="radio" name="picker_radio" id="picker_radio_4" class="picker__radio"><label class="picker__label" for="picker_radio_4">4</label><div class="picker__daynum">4</div>
+						<input value="5" type="radio" name="picker_radio" id="picker_radio_5" class="picker__radio"><label class="picker__label" for="picker_radio_5">5</label><div class="picker__daynum">5</div>
+						<input value="6" type="radio" name="picker_radio" id="picker_radio_6" class="picker__radio"><label class="picker__label" for="picker_radio_6">6</label><div class="picker__daynum">6</div>
+						<input value="7" type="radio" name="picker_radio" id="picker_radio_7" class="picker__radio"><label class="picker__label" for="picker_radio_7">7</label><div class="picker__daynum">7</div>
+
+						<input value="8" type="radio" name="picker_radio" id="picker_radio_8" class="picker__radio"><label class="picker__label" for="picker_radio_8">8</label><div class="picker__daynum">1</div>
+						<input value="9" type="radio" name="picker_radio" id="picker_radio_9" class="picker__radio"><label class="picker__label" for="picker_radio_9">9</label><div class="picker__daynum">2</div>
+						<input value="10" type="radio" name="picker_radio" id="picker_radio_10" class="picker__radio"><label class="picker__label" for="picker_radio_10">10</label><div class="picker__daynum">3</div>
+						<input value="11" type="radio" name="picker_radio" id="picker_radio_11" class="picker__radio"><label class="picker__label" for="picker_radio_11">11</label><div class="picker__daynum">4</div>
+						<input value="12" type="radio" name="picker_radio" id="picker_radio_12" class="picker__radio"><label class="picker__label" for="picker_radio_12">12</label><div class="picker__daynum">5</div>
+						<input value="13" type="radio" name="picker_radio" id="picker_radio_13" class="picker__radio"><label class="picker__label" for="picker_radio_13">13</label><div class="picker__daynum">6</div>
+						<input value="14" type="radio" name="picker_radio" id="picker_radio_14" class="picker__radio"><label class="picker__label" for="picker_radio_14">14</label><div class="picker__daynum">7</div>
+
+						<input value="15" type="radio" name="picker_radio" id="picker_radio_15" class="picker__radio"><label class="picker__label" for="picker_radio_15">15</label><div class="picker__daynum">1</div>
+						<input value="16" type="radio" name="picker_radio" id="picker_radio_16" class="picker__radio"><label class="picker__label" for="picker_radio_16">16</label><div class="picker__daynum">2</div>
+						<input value="17" type="radio" name="picker_radio" id="picker_radio_17" class="picker__radio"><label class="picker__label" for="picker_radio_17">17</label><div class="picker__daynum">3</div>
+						<input value="18" type="radio" name="picker_radio" id="picker_radio_18" class="picker__radio"><label class="picker__label" for="picker_radio_18">18</label><div class="picker__daynum">4</div>
+						<input value="19" type="radio" name="picker_radio" id="picker_radio_19" class="picker__radio"><label class="picker__label" for="picker_radio_19">19</label><div class="picker__daynum">5</div>
+						<input value="20" type="radio" name="picker_radio" id="picker_radio_20" class="picker__radio"><label class="picker__label" for="picker_radio_20">20</label><div class="picker__daynum">6</div>
+						<input value="21" type="radio" name="picker_radio" id="picker_radio_21" class="picker__radio"><label class="picker__label" for="picker_radio_21">21</label><div class="picker__daynum">7</div>
+					</div>
 
 					<div class="date__header">Время</div>
 					<div class="date__time">
@@ -227,7 +281,7 @@
 				<div class="form">
 					<div class="form__header">Моя запись</div>
 
-					<form method="" action="">
+					<form method="get">
 						<div class="form__line">
 							<div class="form__title">Отделениe</div>
 							<textarea class="form__area" name="form_otdelenie" id="form_otdelenie" disabled hidden></textarea>
@@ -282,6 +336,48 @@
 			</div>
 		</div>
 		<!-- /#step_2 -->
+
+
+
+		<div class="account account--hide" id="account">
+
+			<div class="order__top order__top--3">
+				<div class="order__back" id="back_3"></div>
+
+				<div class="order__head">Мои записи</div>
+	
+				<div class="order__separator"></div>
+
+				<div class="account__switch">
+					<input class="account__radio" type="radio" name="account_state" id="account_state_1" checked>
+					<label class="account__label" for="account_state_1">Активные</label>
+					<input class="account__radio" type="radio" name="account_state" id="account_state_2">
+					<label class="account__label" for="account_state_2">История</label>
+				</div>
+
+			</div>
+
+			<div class="order__mid order__mid--3">
+				<div id="account_card_1" class="account__card account__card--hide">
+					<div class="account__head">17 апреля 2021 11:30</div>
+					<div class="account__line">
+						<div class="account__title">Услуга</div>
+						<div class="account__data account__serv"></div>
+					</div>
+					<div class="account__line">
+						<div class="account__title">Салон</div>
+						<div class="account__data account__place"></div>
+					</div>
+					<div class="account__line">
+						<div class="account__title">Барбер</div>
+						<div class="account__data account__master"></div>
+					</div>
+					<div class="account__cancel">Отмена</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- /.account -->
 
 	</div>
 
