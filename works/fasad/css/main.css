@@ -1,0 +1,342 @@
+@charset "UTF-8";
+body {
+  position: relative;
+  background: #646464;
+}
+
+.black {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 89;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.black--open {
+  display: block;
+}
+
+.calc {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+  position: relative;
+  background: #fff;
+  width: 100%;
+  max-width: 1300px;
+  margin: 40px auto;
+  padding: 30px 15px;
+  min-height: 300px;
+}
+
+.calc * {
+  font-size: 14px;
+  font-family: sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.calc__header {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 10px 0 20px 0;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid #aaa;
+}
+
+.calc__line {
+  display: none;
+  margin: 5px 0;
+}
+
+.calc__line--open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.calc__radius {
+  display: none;
+  margin: 5px 0;
+}
+
+.calc__radius--open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.calc__karniz {
+  display: none;
+  margin: 5px 0;
+}
+
+.calc__karniz--open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.calc__box {
+  margin: 0 5px 0 0;
+}
+
+.calc__number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  line-height: 24px;
+}
+
+.calc__title {
+  font-size: 12px;
+  padding: 0 0 0 2px;
+}
+
+.calc__input {
+  border: 1px solid #aaa;
+  padding: 3px;
+  width: 53px;
+  font-size: 12px;
+  min-height: 24px;
+}
+
+.calc__input--long {
+  width: 100px;
+}
+
+.calc__textarea {
+  border: 1px solid #aaa;
+  padding: 3px;
+  width: 130px;
+  height: 24px;
+}
+
+.calc__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin: 0 0 30px 0;
+  border-top: 1px solid #aaa;
+}
+
+.calc__bottom--2 {
+  max-width: 894px;
+}
+
+.calc__bottom--3 {
+  max-width: 690px;
+}
+
+.calc__add {
+  cursor: pointer;
+  margin: 0 5px 0 0;
+  width: 20px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1;
+  background: #ccc;
+  font-weight: 600;
+  padding: 3px 0 0 0;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.calc__add:hover {
+  opacity: 0.6;
+}
+
+.calc__remove {
+  cursor: pointer;
+  margin: 0 5px 0 0;
+  width: 20px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1;
+  background: #ccc;
+  font-weight: 600;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.calc__remove:hover {
+  opacity: 0.6;
+}
+
+.calc__calculate {
+  margin: 20px 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  background: #a4c9ff;
+  border-radius: 4px;
+  display: inline-block;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.calc__calculate:hover {
+  opacity: 0.6;
+}
+
+.calc__total {
+  position: absolute;
+  right: 2px;
+  width: 100px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #00000022;
+  padding: 0 3px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.select {
+  position: relative;
+  width: 125px;
+}
+
+.select__current {
+  position: relative;
+  background: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  padding: 3px 20px 3px 3px;
+  border: 1px solid #aaa;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.select__current::before {
+  content: "▼";
+  font-size: 12px;
+  line-height: 1;
+  position: absolute;
+  right: 0px;
+  top: 1px;
+  width: 22px;
+  height: 22px;
+  color: #333;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.select__current--open {
+  z-index: 90;
+}
+
+.select__current--open::before {
+  content: "▼";
+  font-size: 12px;
+  line-height: 1;
+  position: absolute;
+  right: 0px;
+  top: 1px;
+  width: 22px;
+  height: 22px;
+  color: #aaa;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+}
+
+.select__list {
+  position: absolute;
+  min-width: 100%;
+  background: #fff;
+  z-index: 99;
+  display: none;
+  border: 1px solid #aaa;
+  margin: -1px 0 0 0;
+  padding: 6px 0;
+  overflow-y: scroll;
+  height: 150px;
+}
+
+.select__list--open {
+  display: block;
+}
+
+.select__li {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  padding: 3px;
+  white-space: nowrap;
+}
+
+.select__li:hover {
+  background: #eee;
+}
+/*# sourceMappingURL=main.css.map */
