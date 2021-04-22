@@ -946,7 +946,7 @@ $(document).ready(function() {
             ZPerepl=NtiragP*Kper+KpriladraKlei;
         }
         if (cover_type==4){
-            let sverl_lists = $('#list').val();
+            let sverl_lists = +$('#list').val() / 2;
             if ( sverl_lists >= 0 ){var sverl_price = 0.7}
             if ( sverl_lists > 500 ){var sverl_price = 0.6}
             if ( sverl_lists > 1000 ){var sverl_price = 0.5}
@@ -961,7 +961,7 @@ $(document).ready(function() {
 
             console.log(sverl_lists);
             console.log(sverl_price);
-            ZPerepl = +KpriladraSverl + (+sverl_lists / 2 * +sverl_price);
+            ZPerepl = +KpriladraSverl + (+sverl_lists * +sverl_price);
 
             // if (ZPerepl < 300){
             //     ZPerepl = 300;
