@@ -961,11 +961,11 @@ $(document).ready(function() {
 
             console.log(sverl_lists);
             console.log(sverl_price);
-            ZPerepl = +KpriladraSverl + (+sverl_lists * +sverl_price);
+            ZPerepl = +KpriladraSverl + (+sverl_lists / 2 * +sverl_price);
 
-            if (ZPerepl < 300){
-                ZPerepl = 300;
-            }
+            // if (ZPerepl < 300){
+            //     ZPerepl = 300;
+            // }
         }
 
 
