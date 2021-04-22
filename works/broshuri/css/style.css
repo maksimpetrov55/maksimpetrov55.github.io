@@ -176,10 +176,11 @@ body{
 }
 
 .content_block1_img{
-    display: block;
     width: 90%;
     margin: 0 auto;
-   margin-top: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 .content_block1_img img{
     float: left;

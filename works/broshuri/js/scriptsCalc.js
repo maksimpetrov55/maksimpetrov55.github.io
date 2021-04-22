@@ -1,19 +1,15 @@
-var typeCalck, Lbloknot, Hbloknot,Nobl;
-typeCalck=2;
-Lbloknot=105;
-Hbloknot=148;
-Nobl=1;
-
+var cover_type = 2;
+var bloknot_width = 105;
+var bloknot_height = 148;
+var Nobl = 1;
 
 $(document).ready(function() {
 
-    if(BlockOpen==1){
+    if(BlockOpen == 1){
         $('.itog_block').addClass('itog_block_open');
     }
 
-
     $('.content_block1_img1').click (function(){
-       // alert(5);
         $('.content_block1_img1_2').addClass('active_img2');
         $('.content_block1_img1_1').addClass('active_imgnone');
 
@@ -31,13 +27,16 @@ $(document).ready(function() {
 
         $('.param_block_list2').addClass('act_block');
         $('.param_block_list1').addClass('non_block');
-        typeCalck=1;
-        Zena();
+        cover_type = 1;
+        $('#button1').val("Добавить");
+        add_remove_cover();
+        calculation();
+
+
 
     });
 
     $('.content_block1_img2').click (function(){
-        // alert(5);
         $('.content_block1_img2_1').addClass('active_img2');
         $('.content_block1_img2_2').addClass('active_imgnone');
         $('.content_block1_img2_1').removeClass('active_imgnone');
@@ -54,13 +53,14 @@ $(document).ready(function() {
 
         $('.param_block_list2').removeClass('act_block');
         $('.param_block_list1').removeClass('non_block');
-        typeCalck=2;
-        Zena();
+        cover_type=2;
+        $('#button1').val("Добавить");
+        add_remove_cover();
+        calculation();
 
     });
 
     $('.content_block1_img3').click (function(){
-        // alert(5);
         $('.content_block1_img3_2').addClass('active_img2');
         $('.content_block1_img3_1').addClass('active_imgnone');
 
@@ -78,13 +78,13 @@ $(document).ready(function() {
         $('.param_block_list2').removeClass('act_block');
         $('.param_block_list1').removeClass('non_block');
 
-        typeCalck=3;
-
-        Zena();
+        cover_type=3;
+        $('#button1').val("Добавить");
+        add_remove_cover();
+        calculation();
     });
 
     $('.content_block1_img4').click (function(){
-        // alert(5);
         $('.content_block1_img4_2').addClass('active_img2');
         $('.content_block1_img4_1').addClass('active_imgnone');
 
@@ -101,12 +101,14 @@ $(document).ready(function() {
         $('.param_block_list2').removeClass('act_block');
         $('.param_block_list1').removeClass('non_block');
 
-        typeCalck=4;
+        cover_type = 4;
 
-        Zena();
+        $('#tirag').val(1);
+        $('#button1').val("Убрать");
+        add_remove_cover();
+
+        calculation();
     });
-
-
 
 
     //======================= Заполнение данных по формату блокнотов ========================\\
@@ -116,11 +118,9 @@ $(document).ready(function() {
             $('<option value="' + format[i].val + '">' + format[i].name + '</option>').appendTo(newCategor);
         }
     }
-
     ADDFormat();
 
     //======================= Заполнение данных на первом попап Обложка ========================\\
-
     function ADDOblogka() {
         var newCategor = $('#typeb');
         for (var i = 0; i < typeb.length; i++) {
@@ -136,13 +136,11 @@ $(document).ready(function() {
         for (var i = 0; i < laminir.length; i++) {
             $('<option value="' + laminir[i].val + '">' + laminir[i].name + '</option>').appendTo(newCategor);
         }
-        Zena()
+        calculation();
     }
-
     ADDOblogka();
 
     //======================= Заполнение данных на втором попап Блокнот ========================\\
-
     function ADDBloknot() {
         var newCategor = $('#typeb_bl');
         for (var i = 0; i < typeb.length; i++) {
@@ -158,225 +156,206 @@ $(document).ready(function() {
         for (var i = 0; i < laminir.length; i++) {
             $('<option value="' + laminir[i].val + '">' + laminir[i].name + '</option>').appendTo(newCategor);
         }
-        Zena();
+        calculation();
     }
-
     ADDBloknot();
-
 
     //======================= Пересчет после изменения ТИРАЖа ========================\\
 
     $('#tirag').click(function () {
-        Zena();
+        calculation();
     });
 
     $('#tirag').keyup(function(e){
-        Zena();
+        calculation();
     });
-
 
     //======================= Заполнение данных поле выбоа формата блокнота ========================\\
 
     $('#format').click(function () {
         var formatl = document.getElementById('format').value;
-         if (formatl==1){
-             Lbloknot=105;
-             Hbloknot=148;
-             $('.cont_img_itog1').addClass('active_bl');
-             $('.cont_img_itog2').addClass('active_img');
-             $('.cont_img_itog2').removeClass('active_bl');
-             $('.NameBl').text('вертикальный, A6 (105 × 148 мм)');
-
-         }
+        if (formatl==1){
+            bloknot_width=105;
+            bloknot_height=148;
+            $('.cont_img_itog1').addClass('active_bl');
+            $('.cont_img_itog2').addClass('active_img');
+            $('.cont_img_itog2').removeClass('active_bl');
+            $('.NameBl').text('вертикальный, A6 (105 × 148 мм)');
+        }
         if (formatl==2){
-            Lbloknot=148;
-            Hbloknot=210;
+            bloknot_width=148;
+            bloknot_height=210;
             $('.cont_img_itog1').addClass('active_bl');
             $('.cont_img_itog2').addClass('active_img');
             $('.cont_img_itog2').removeClass('active_bl');
             $('.NameBl').text('вертикальный, A5 (148 × 210 мм)');
         }
-
         if (formatl==3){
-            Lbloknot=210;
-            Hbloknot=297;
+            bloknot_width=210;
+            bloknot_height=297;
             $('.cont_img_itog1').addClass('active_bl');
             $('.cont_img_itog2').addClass('active_img');
             $('.cont_img_itog2').removeClass('active_bl');
             $('.NameBl').text('вертикальный, A4 (210 × 297 мм)');
         }
-
         if (formatl==4){
-            Lbloknot=297;
-            Hbloknot=420;
+            bloknot_width=297;
+            bloknot_height=420;
             $('.cont_img_itog1').addClass('active_bl');
             $('.cont_img_itog2').addClass('active_img');
             $('.cont_img_itog2').removeClass('active_bl');
             $('.NameBl').text('вертикальный, A4 (297 × 420 мм)');
         }
         if (formatl==5){
-            Lbloknot=148;
-            Hbloknot=105;
+            bloknot_width=148;
+            bloknot_height=105;
             $('.cont_img_itog2').addClass('active_bl');
             $('.cont_img_itog1').addClass('active_img');
             $('.cont_img_itog1').removeClass('active_bl');
             $('.NameBl').text('горизонтальный, A6 (148 × 105 мм)');
         }
         if (formatl==6){
-            Lbloknot=210;
-            Hbloknot=148;
+            bloknot_width=210;
+            bloknot_height=148;
             $('.cont_img_itog2').addClass('active_bl');
             $('.cont_img_itog1').addClass('active_img');
             $('.cont_img_itog1').removeClass('active_bl');
             $('.NameBl').text('горизонтальный, A5 (210 × 148 мм)');
         }
         if (formatl==7){
-            Lbloknot=297;
-            Hbloknot=210;
+            bloknot_width=297;
+            bloknot_height=210;
             $('.cont_img_itog2').addClass('active_bl');
             $('.cont_img_itog1').addClass('active_img');
             $('.cont_img_itog1').removeClass('active_bl');
             $('.NameBl').text('горизонтальный, A4 (297 × 210 мм)');
         }
         if (formatl==8){
-            Lbloknot=420;
-            Hbloknot=297;
+            bloknot_width=420;
+            bloknot_height=297;
             $('.cont_img_itog2').addClass('active_bl');
             $('.cont_img_itog1').addClass('active_img');
             $('.cont_img_itog1').removeClass('active_bl');
             $('.NameBl').text('горизонтальный, A4 (420 × 297 мм)');
         }
 
-        document.getElementById('Llist').value=Lbloknot;
-        document.getElementById('Hlist').value=Hbloknot;
-        $('#Lbl').text(Lbloknot);
-        var Lbl2=Lbloknot*2;
+        document.getElementById('Llist').value=bloknot_width;
+        document.getElementById('Hlist').value=bloknot_height;
+        $('#Lbl').text(bloknot_width);
+        var Lbl2=bloknot_width*2;
         $('#Lb12').text(Lbl2);
-        $('#Hbl').text(Hbloknot);
+        $('#Hbl').text(bloknot_height);
 
 
-        $('#Lb2').text(Hbloknot);
-        var Lb22=Lbloknot*2;
+        $('#Lb2').text(bloknot_height);
+        var Lb22=bloknot_width*2;
         $('#Lb22').text(Lb22);
-        $('#Hb2').text(Lbloknot);
-
-
-
-
+        $('#Hb2').text(bloknot_width);
 
         if (formatl==9){
-
             document.getElementById('Llist').disabled = false;
             document.getElementById('Hlist').disabled = false;
             $('.cont_img_itog1').addClass('active_bl');
             $('.cont_img_itog2').addClass('active_img');
             $('.cont_img_itog2').removeClass('active_bl');
             $('.NameBl').text('Свой размер');
-
-
         }
         else{
             document.getElementById('Llist').setAttribute('disabled', 'disabled');
             document.getElementById('Hlist').setAttribute('disabled', 'disabled');
-
         }
-        Zena();
+        calculation();
     });
 
-
     $('#Llist').click (function(){
-        Lbloknot=document.getElementById('Llist').value;
-        Hbloknot=document.getElementById('Hlist').value;
-        $('#Lbl').text(Lbloknot);
-        var Lbl2=Lbloknot*2;
+        bloknot_width=document.getElementById('Llist').value;
+        bloknot_height=document.getElementById('Hlist').value;
+        $('#Lbl').text(bloknot_width);
+        var Lbl2=bloknot_width*2;
         $('#Lb12').text(Lbl2);
-        $('#Hbl').text(Hbloknot);
-        $('#Lb2').text(Lbloknot);
-        var Lbl2=Lbloknot*2;
+        $('#Hbl').text(bloknot_height);
+        $('#Lb2').text(bloknot_width);
+        var Lbl2=bloknot_width*2;
         $('#Lb22').text(Lbl2);
-        $('#Hb2').text(Hbloknot);
-        Zena();
+        $('#Hb2').text(bloknot_height);
+        calculation();
     });
 
     $('#Hlist').click (function(){
-        Lbloknot=document.getElementById('Llist').value;
-        Hbloknot=document.getElementById('Hlist').value;
-        $('#Lbl').text(Lbloknot);
-        var Lbl2=Lbloknot*2;
+        bloknot_width=document.getElementById('Llist').value;
+        bloknot_height=document.getElementById('Hlist').value;
+        $('#Lbl').text(bloknot_width);
+        var Lbl2=bloknot_width*2;
         $('#Lb12').text(Lbl2);
-        $('#Hbl').text(Hbloknot);
-        $('#Lb2').text(Lbloknot);
-        var Lbl2=Lbloknot*2;
+        $('#Hbl').text(bloknot_height);
+        $('#Lb2').text(bloknot_width);
+        var Lbl2=bloknot_width*2;
         $('#Lb22').text(Lbl2);
-        $('#Hb2').text(Hbloknot);
-        Zena();
+        $('#Hb2').text(bloknot_height);
+        calculation();
     });
 
     $('#Llist').keyup(function(e){
-        Lbloknot=document.getElementById('Llist').value;
-        if(Lbloknot<0){
-            Lbloknot=0;
+        bloknot_width=document.getElementById('Llist').value;
+        if(bloknot_width<0){
+            bloknot_width=0;
         }
-        document.getElementById('Llist').value=Lbloknot;
-
-        Hbloknot=document.getElementById('Hlist').value;
-        if(Hbloknot<0){
-            Hbloknot=0;
+        document.getElementById('Llist').value=bloknot_width;
+        bloknot_height=document.getElementById('Hlist').value;
+        if(bloknot_height<0){
+            bloknot_height=0;
         }
-        document.getElementById('Hlist').value=Hbloknot;
+        document.getElementById('Hlist').value=bloknot_height;
 
-        $('#Lbl').text(Lbloknot);
-        var Lbl2=Lbloknot*2;
+        $('#Lbl').text(bloknot_width);
+        var Lbl2=bloknot_width*2;
         $('#Lb12').text(Lbl2);
-        $('#Hbl').text(Hbloknot);
-        $('#Lb2').text(Lbloknot);
-        var Lbl2=Lbloknot*2;
+        $('#Hbl').text(bloknot_height);
+        $('#Lb2').text(bloknot_width);
+        var Lbl2=bloknot_width*2;
         $('#Lb22').text(Lbl2);
-        $('#Hb2').text(Hbloknot);
-        Zena();
+        $('#Hb2').text(bloknot_height);
+        calculation();
     });
 
     $('#Hlist').keyup(function(e){
-        Lbloknot=document.getElementById('Llist').value;
-        if(Lbloknot<0){
-            Lbloknot=0;
+        bloknot_width=document.getElementById('Llist').value;
+        if(bloknot_width<0){
+            bloknot_width=0;
         }
-        document.getElementById('Llist').value=Lbloknot;
+        document.getElementById('Llist').value=bloknot_width;
 
-        Hbloknot=document.getElementById('Hlist').value;
-        if(Hbloknot<0){
-            Hbloknot=0;
+        bloknot_height=document.getElementById('Hlist').value;
+        if(bloknot_height<0){
+            bloknot_height=0;
         }
-        document.getElementById('Hlist').value=Hbloknot;
+        document.getElementById('Hlist').value=bloknot_height;
 
-        $('#Lbl').text(Lbloknot);
-        var Lbl2=Lbloknot*2;
+        $('#Lbl').text(bloknot_width);
+        var Lbl2=bloknot_width*2;
         $('#Lb12').text(Lbl2);
-        $('#Hbl').text(Hbloknot);
-        $('#Lb2').text(Lbloknot);
-        var Lbl2=Lbloknot*2;
+        $('#Hbl').text(bloknot_height);
+        $('#Lb2').text(bloknot_width);
+        var Lbl2=bloknot_width*2;
         $('#Lb22').text(Lbl2);
-        $('#Hb2').text(Hbloknot);
-        Zena();
+        $('#Hb2').text(bloknot_height);
+        calculation();
     });
 
-    $('#list').click (function(){
-        Zena();
+    $('#list').click(function(){
+        calculation();
     });
 
-    $('#list').keyup (function(){
-        Zena();
+    $('#list').keyup(function(){
+        calculation();
     });
 
-    $('#list2').click (function(){
-        Zena();
+    $('#list2').click(function(){
+        calculation();
     });
 
-
-    $('#button1').click (function(){
-
+    function add_remove_cover() {
         var txtbtn =  document.getElementById('button1').value;
-
         if (txtbtn=='Убрать'){
             document.getElementById('button1').value='Добавить';
             $('.param_obl').addClass('active_none');
@@ -397,47 +376,45 @@ $(document).ready(function() {
             $('#Nobl').text(Nobl);
             document.getElementById('Nobl').value=Nobl;
         }
+    }
 
-         Zena();
+    $('#button1').click(function(){
+
+        add_remove_cover();
+        calculation();
 
     });
 
-
-
-
     //========================= Выбор типа бумаги ОБЛОЖКА   ===========================///
     $('#typeb').change(function () {
-
         $('#select option:selected').text();
         var typebtext=  $('#typeb option:selected').text();
         $('#type_obl').text(typebtext+';');
         var pl_otbl=document.getElementById('typeb').value;
         $('#pl_otbl').text(pl_otbl+';');
-        Zena();
-
+        calculation();
     });
 
     //========================= Выбор плотности бумаги ОБЛОЖКА   ===========================///
     $('#plb').change(function () {
         var pl_otbl=document.getElementById('plb').value;
         $('#pl_otbl').text(pl_otbl+';');
-        Zena();
+        calculation();
     });
 
     //========================= Выбор цветности бумаги ОБЛОЖКА   ===========================///
     $('#colorb').change(function () {
         var colorb=$('#colorb option:selected').text();
         $('#color_obl').text(colorb+';');
-        Zena();
+        calculation();
     });
 
     //========================= Выбор ламинции бумаги ОБЛОЖКА   ===========================///
     $('#laminb').change(function () {
         var laminb=$('#laminb option:selected').text();
         $('#lamin_obl').text(laminb+';');
-        Zena();
+        calculation();
     });
-
 
     //========================= Выбор типа бумаги БЛОКНОТ   ===========================///
     $('#typeb_bl').change(function () {
@@ -447,60 +424,58 @@ $(document).ready(function() {
         $('#type_bl').text(typebtext+';');
         var pl_otbl=document.getElementById('typeb_bl').value;
         $('#pl_bl').text(pl_otbl+';');
-        Zena();
+        calculation();
     });
 
     //========================= Выбор плотности бумаги БЛОКНОТ   ===========================///
     $('#plb_bl').change(function () {
         var pl_otbl=document.getElementById('plb_bl').value;
         $('#pl_bl').text(pl_otbl+';');
-        Zena();
+        calculation();
     });
 
     //========================= Выбор цветности бумаги БЛОКНОТ   ===========================///
     $('#colorb_bl').change(function () {
         var colorb=$('#colorb_bl option:selected').text();
         $('#color_blv').text(colorb+';');
-        Zena();
+        calculation();
     });
 
     //========================= Выбор ламинции бумаги БЛОКНОТА   ===========================///
     $('#laminb_bl').change(function () {
         var laminb=$('#laminb_bl option:selected').text();
         $('#lamin_bl').text(laminb+';');
-        Zena();
+        calculation();
     });
-
      $('#color_pr').click(function (){
-         Zena();
+         calculation();
     });
 
-    function Zena(){
+    function calculation(){
 
-
-     //=====Заполненеи данных по Брошюрв=========///
+        //=====Заполненеи данных по Брошюрв=========///
         //==== формат:  =====//
         var Tbr=$('#format option:selected').text();
-       $('#tupblitog').text(Tbr);
+        $('#tupblitog').text(Tbr);
         document.getElementById('tupblitogf').value=Tbr;
         //==== крепление:   =====//
-        if (typeCalck==1){
+        if (cover_type==1){
             $('#itogkr').text("Cкоба");
             document.getElementById('itogkrf').value="Cкоба";
 
         }
-        if (typeCalck==2){
+        if (cover_type==2){
            // var color_pr=document.getElementById('color_pr').value;
             $('#itogkr').text("Пружина");
             document.getElementById('itogkrf').value="Пружина";
 
         }
-        if (typeCalck==3){
+        if (cover_type==3){
             $('#itogkr').text("Клей");
             document.getElementById('itogkrf').value="Клей";
 
         }
-        if (typeCalck==4){
+        if (cover_type==4){
             $('#itogkr').text("Сверление");
             document.getElementById('itogkrf').value="Сверление";
 
@@ -553,7 +528,7 @@ $(document).ready(function() {
         //==== Блокнот :  =====//
         //==== Блокнот количестов страниц:  =====//
 
-                if (typeCalck==1){
+        if (cover_type==1){
             var Nstrvr=document.getElementById('list2').value;
             $('#Nstr').text(Nstrvr);
             document.getElementById('Nstrf').value=Nstrvr;
@@ -609,48 +584,48 @@ $(document).ready(function() {
         var f=document.getElementById('format').value;
 
         //=====Для варианта Клей если выбрали А4-Альбом - заменяем размеры на А4-Книга=========///
-        if ((typeCalck==3)&&(f==7))
+        if ((cover_type==3)&&(f==7))
          {
-             Lbloknot=210;
-             Hbloknot=297;
+             bloknot_width=210;
+             bloknot_height=297;
 
         }
         //=====Для варианта Скоба если выбрали А4-Альбом - заменяем размеры на А4-Книга=========///
-        if ((typeCalck==1)&&(f==7))
+        if ((cover_type==1)&&(f==7))
         {
-            Lbloknot=210;
-            Hbloknot=297;
+            bloknot_width=210;
+            bloknot_height=297;
 
         }
 
         //=====Для варианта Пружина если выбрали А4-Альбом - заменяем размеры на А4-Книга=========///
-        if ((typeCalck==2)&&(f==7))
+        if ((cover_type==2)&&(f==7))
         {
-            Lbloknot=210;
-            Hbloknot=297;
+            bloknot_width=210;
+            bloknot_height=297;
 
         }
 
-        if ((typeCalck==4)&&(f==7))
+        if ((cover_type==4)&&(f==7))
         {
-            Lbloknot=210;
-            Hbloknot=297;
+            bloknot_width=210;
+            bloknot_height=297;
 
         }
 
 
-        var C26=Lsra3/(Lbloknot*2);
+        var C26=Lsra3/(bloknot_width*2);
         C26=Math.trunc(C26);
 
-        var D26=Hsra3/(Hbloknot*1);
+        var D26=Hsra3/(bloknot_height*1);
         D26=Math.trunc(D26);
 
         var V1=C26*D26;
 
-        var C27=Lsra3/(Hbloknot*1);
+        var C27=Lsra3/(bloknot_height*1);
         C27=Math.trunc(C27);
 
-        var D27=Hsra3/(Lbloknot*2);
+        var D27=Hsra3/(bloknot_width*2);
         D27=Math.trunc(D27);
 
         var V2=C27*D27;
@@ -659,7 +634,7 @@ $(document).ready(function() {
 
         //=====Для варианта Пружина если выбрали А3-Альбом - кол-во тиражных листов блока ставим = 2=========///
 
-        if ((typeCalck==2)&&(f==8))
+        if ((cover_type==2)&&(f==8))
         {
             NSpa3=2;
 
@@ -702,7 +677,7 @@ $(document).ready(function() {
 
 
 
-  //=======стоимость печати обложка===========//
+        //=======стоимость печати обложка===========//
         //======кол-во прогонов====//
         var Kcolorb=document.getElementById('colorb').value;
         var NprogonObk=0;
@@ -750,7 +725,7 @@ $(document).ready(function() {
         }
         ZprintObl=ZprintObl.toFixed(5);
 
-    //=======стоимость ламинация обложка===========//
+        //=======стоимость ламинация обложка===========//
 
         var KlaminObl=document.getElementById('laminb').value;
         var ZlaminObl=KlaminObl*Kevro*NtiragList;
@@ -783,7 +758,7 @@ $(document).ready(function() {
 
       //  console.log('=============================');
 
-        if (typeCalck==1){
+        if (cover_type==1){
             var Ntirag_bl=document.getElementById('list2').value;
         }
         else{
@@ -826,7 +801,7 @@ $(document).ready(function() {
         Zlist_bl=Zlist_bl.toFixed(5);
 
 
-   //============Стоимость тиража=============//
+        //============Стоимость тиража=============//
         //============Стоимость тиража бумага=============//
         var Ztirag_bl=Zlist_bl*NtiragList_bl;
 
@@ -939,40 +914,58 @@ $(document).ready(function() {
 
         //=======cтоимость  ПЕРЕПЛЕТА ===========//
         var NtiragP=document.getElementById('tirag').value;
-       // var TypeObl=document.getElementById('typeb').value;
-       if (NtiragP>=1000){
-            NtiragP=1000;
-       }
+        // var TypeObl=document.getElementById('typeb').value;
+        if (NtiragP>=1000){
+                NtiragP=1000;
+        }
         var Kper=0;
-        if (typeCalck==1){
+        if (cover_type==1){
             Kper=Kskoba[NtiragP-1];
         }
-        if (typeCalck==2){
+        if (cover_type==2){
             Kper=Kprug[NtiragP-1];
         }
-        if (typeCalck==3){
+        if (cover_type==3){
             Kper=Kklii[NtiragP-1];
         }
-
-        if (typeCalck==4){
-            Kper=Ksverl[NtiragP-1];
+        if (cover_type==4){
+            Kper=0;
         }
 
 
 
         var ZPerepl=0;
 
-        if (typeCalck==1){
+        if (cover_type==1){
            ZPerepl=NtiragP*Kper+KpriladraSkoba;
         }
-        if (typeCalck==2){
+        if (cover_type==2){
             ZPerepl=NtiragP*Kper+KpriladraPrugina;
         }
-        if (typeCalck==3){
+        if (cover_type==3){
             ZPerepl=NtiragP*Kper+KpriladraKlei;
         }
-        if (typeCalck==4){
-            ZPerepl=NtiragP*Kper+KpriladraSverl;
+        if (cover_type==4){
+            let sverl_lists = $('#list').val();
+            if ( sverl_lists >= 0 ){var sverl_price = 0.7}
+            if ( sverl_lists > 500 ){var sverl_price = 0.6}
+            if ( sverl_lists > 1000 ){var sverl_price = 0.5}
+            if ( sverl_lists > 2000 ){var sverl_price = 0.45}
+            if ( sverl_lists > 3000 ){var sverl_price = 0.4}
+            if ( sverl_lists > 4000 ){var sverl_price = 0.4}
+            if ( sverl_lists > 5000 ){var sverl_price = 0.35}
+            if ( sverl_lists > 6000 ){var sverl_price = 0.325}
+            if ( sverl_lists > 7000 ){var sverl_price = 0.3}
+            if ( sverl_lists > 8000 ){var sverl_price = 0.275}
+            if ( sverl_lists > 10000 ){var sverl_price = 0.25}
+
+            console.log(sverl_lists);
+            console.log(sverl_price);
+            ZPerepl = +KpriladraSverl + (+sverl_lists * +sverl_price);
+
+            if (ZPerepl < 300){
+                ZPerepl = 300;
+            }
         }
 
 
@@ -985,24 +978,24 @@ $(document).ready(function() {
         var ZitogV=ZPerepl*1+Z_blItog*1+ZoblItog*1;
         ZitogV=ZitogV*Kzena;
         //=====Для варианта Клей если выбрали А4-Альбом - заменяем размеры на А4-Книга=========///
-        if ((typeCalck==3)&&(f==7))
+        if ((cover_type==3)&&(f==7))
         {
             ZitogV=ZitogV*KA4Klei;
         }
         //=====Для варианта Скоба если выбрали А4-Альбом - заменяем размеры на А4-Книга=========///
-        if ((typeCalck==1)&&(f==7))
+        if ((cover_type==1)&&(f==7))
         {
             ZitogV=ZitogV*KA4Skoba;
         }
 
         //=====Для варианта Пружина если выбрали А4-Альбом - заменяем размеры на А4-Книга=========///
-        if ((typeCalck==2)&&(f==7))
+        if ((cover_type==2)&&(f==7))
         {
             ZitogV=ZitogV*KA4Prugina;
         }
 
         //=====Для варианта Пружина если выбрали А4-Альбом - заменяем размеры на А4-Книга=========///
-        if ((typeCalck==2)&&(f==8))
+        if ((cover_type==2)&&(f==8))
         {
             ZitogV=ZitogV*KA3Prugina;
         }
@@ -1014,10 +1007,15 @@ $(document).ready(function() {
         //Z_perepl
 
         ZitogV= Math.ceil(ZitogV);
+        // if ( ZitogV < 300 ){
+        //     ZitogV = 300;
+        // }
         $('#Zitog').text(ZitogV+'p');
         document.getElementById('Zitof').value=ZitogV+'p';
 
     };
+
+    
 });
 
 
