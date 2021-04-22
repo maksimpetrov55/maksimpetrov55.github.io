@@ -3,12 +3,12 @@ $(document).ready(function() {
 
 	$('.select__current').click(function(){
 		$('.black').toggleClass("black--open");
-		$(this).toggleClass("select__current--open");
+		$(this).prev().toggleClass("select__arrow--open");
 		$(this).next().toggleClass("select__list--open");
 	});
 	$('.select').on("click",".select__li",function(){
 		let select_li = $(this).text();
-		$(this).parent().prev().text(select_li);
+		$(this).parent().prev().val(select_li);
 		select_close();
 	});
 	$('.black').click(function(){
@@ -16,9 +16,25 @@ $(document).ready(function() {
 	});
 	function select_close(){
 		$(".select__list--open").removeClass("select__list--open");
-		$(".select__current--open").removeClass("select__current--open");
+		$(".select__arrow--open").removeClass("select__arrow--open");
 		$('.black').toggleClass("black--open");
 	}
+
+	$(function(){
+		$('.select__current').on('input', function(){
+			var str = $(this).val().toLowerCase();
+
+			$(this).next().children(".select__li").each(function(e){
+				if ( $(this).text().toLowerCase().includes(str) ) {
+					console.log( $(this).text() );
+					$(this).css({display: "block"});
+				} else {
+					$(this).css({display: "none"});
+				}
+			});
+
+		});
+	});
 
 
 
@@ -46,11 +62,11 @@ $(document).ready(function() {
 		$('.select__list--plenka').append(`<div class="select__li">${plenka_name}</div>`);
 	}
 
-	$('.select__list--obratn').empty();
-	for ( let i = 0; i < array_plenka.length; i++ ) {
-		let plenka_name = array_plenka[i].name;
-		$('.select__list--obratn').append(`<div class="select__li">${plenka_name}</div>`);
-	}
+	// $('.select__list--obratn').empty();
+	// for ( let i = 0; i < array_plenka.length; i++ ) {
+	// 	let plenka_name = array_plenka[i].name;
+	// 	$('.select__list--obratn').append(`<div class="select__li">${plenka_name}</div>`);
+	// }
 
 	$('.select__list--frez').empty();
 	for ( let i = 0; i < array_frez.length; i++ ) {
@@ -98,10 +114,32 @@ $(document).ready(function() {
 	function add_line_1() {
 		let state = $('.calc__line--open').length;
 		$('.calc__line:eq(' + state + ')').addClass("calc__line--open");
+		
+		let scan_1 = $('.calc__line:eq(' + (state - 1) + ')').find(".select__current--osnova").val();
+		let scan_2 = $('.calc__line:eq(' + (state - 1) + ')').find(".calc__input--height").val();
+		let scan_3 = $('.calc__line:eq(' + (state - 1) + ')').find(".calc__input--width").val();
+		let scan_4 = $('.calc__line:eq(' + (state - 1) + ')').find(".calc__input--amount").val();
+		let scan_5 = $('.calc__line:eq(' + (state - 1) + ')').find(".select__current--plenka").val();
+		let scan_6 = $('.calc__line:eq(' + (state - 1) + ')').find(".select__current--frez").val();
+		let scan_7 = $('.calc__line:eq(' + (state - 1) + ')').find(".select__current--kromka").val();
+		let scan_8 = $('.calc__line:eq(' + (state - 1) + ')').find(".select__current--upakovka").val();
+		$('.calc__line:eq(' + state + ')').find(".select__current--osnova").val(scan_1);
+		$('.calc__line:eq(' + state + ')').find(".calc__input--height").val(scan_2);
+		$('.calc__line:eq(' + state + ')').find(".calc__input--width").val(scan_3);
+		$('.calc__line:eq(' + state + ')').find(".calc__input--amount").val(scan_4);
+		$('.calc__line:eq(' + state + ')').find(".select__current--plenka").val(scan_5);
+		$('.calc__line:eq(' + state + ')').find(".select__current--frez").val(scan_6);
+		$('.calc__line:eq(' + state + ')').find(".select__current--kromka").val(scan_7);
+		$('.calc__line:eq(' + state + ')').find(".select__current--upakovka").val(scan_8);
 	}
 	function remove_line_1() {
 		let state = $('.calc__line--open').length;
-		$('.calc__line:eq(' + (state - 1) + ')').removeClass("calc__line--open");
+		if ( state > 1 ) {
+			$('.calc__line:eq(' + (state - 1) + ')').removeClass("calc__line--open");
+
+			$('.calc__line:eq(' + (state - 1) + ')').find(".calc__input--height").val("0");
+			$('.calc__line:eq(' + (state - 1) + ')').find(".calc__input--width").val("0");
+		}
 	}
 	
 	$('.calc__add--2').click(function(){add_line_2();});
@@ -109,10 +147,25 @@ $(document).ready(function() {
 	function add_line_2() {
 		let state = $('.calc__radius--open').length;
 		$('.calc__radius:eq(' + state + ')').addClass("calc__radius--open");
+
+		let scan_1 = $('.calc__radius:eq(' + (state - 1) + ')').find(".select__current--rType").val();
+		let scan_2 = $('.calc__radius:eq(' + (state - 1) + ')').find(".calc__input--rHeight").val();
+		let scan_3 = $('.calc__radius:eq(' + (state - 1) + ')').find(".select__current--rKromka").val();
+		let scan_4 = $('.calc__radius:eq(' + (state - 1) + ')').find(".select__current--rPlenka").val();
+		let scan_5 = $('.calc__radius:eq(' + (state - 1) + ')').find(".select__current--rFrez").val();
+		$('.calc__radius:eq(' + state + ')').find(".select__current--rType").val(scan_1);
+		$('.calc__radius:eq(' + state + ')').find(".calc__input--rHeight").val(scan_2);
+		$('.calc__radius:eq(' + state + ')').find(".select__current--rKromka").val(scan_3);
+		$('.calc__radius:eq(' + state + ')').find(".select__current--rPlenka").val(scan_4);
+		$('.calc__radius:eq(' + state + ')').find(".select__current--rFrez").val(scan_5);
 	}
 	function remove_line_2() {
 		let state = $('.calc__radius--open').length;
-		$('.calc__radius:eq(' + (state - 1) + ')').removeClass("calc__radius--open");
+		if ( state > 1 ) {
+			$('.calc__radius:eq(' + (state - 1) + ')').removeClass("calc__radius--open");
+
+			$('.calc__radius:eq(' + (state - 1) + ')').find(".calc__input--rHeight").val("0");
+		}
 	}
 
 	$('.calc__add--3').click(function(){add_line_3();});
@@ -120,10 +173,23 @@ $(document).ready(function() {
 	function add_line_3() {
 		let state = $('.calc__karniz--open').length;
 		$('.calc__karniz:eq(' + state + ')').addClass("calc__karniz--open");
+
+		let scan_1 = $('.calc__karniz:eq(' + (state - 1) + ')').find(".select__current--kType").val();
+		let scan_2 = $('.calc__karniz:eq(' + (state - 1) + ')').find(".calc__input--kLength").val();
+		let scan_3 = $('.calc__karniz:eq(' + (state - 1) + ')').find(".calc__input--kAmount").val();
+		let scan_4 = $('.calc__karniz:eq(' + (state - 1) + ')').find(".select__current--kPlenka").val();
+		$('.calc__karniz:eq(' + state + ')').find(".select__current--kType").val(scan_1);
+		$('.calc__karniz:eq(' + state + ')').find(".calc__input--kLength").val(scan_2);
+		$('.calc__karniz:eq(' + state + ')').find(".calc__input--kAmount").val(scan_3);
+		$('.calc__karniz:eq(' + state + ')').find(".select__current--kPlenka").val(scan_4);
 	}
 	function remove_line_3() {
 		let state = $('.calc__karniz--open').length;
-		$('.calc__karniz:eq(' + (state - 1) + ')').removeClass("calc__karniz--open");
+		if ( state > 1 ) {
+			$('.calc__karniz:eq(' + (state - 1) + ')').removeClass("calc__karniz--open");
+
+			$('.calc__karniz:eq(' + (state - 1) + ')').find(".calc__input--kLength").val("0");
+		}
 	}
 
 
@@ -158,10 +224,16 @@ $(document).ready(function() {
 	var total = 0;
 	function calculate() {
 		$('.calc__line').each(function(){
-			let osnova_value = +array_osnova.find(a1 => a1.name === $(this).find(".select__current--osnova").text() ).value;
-			let plenka_category = +array_plenka.find(a2 => a2.name === $(this).find(".select__current--plenka").text() ).category;
-			let frez_value = +array_frez.find(a3 => a3.name === $(this).find(".select__current--frez").text() ).value;
-			let plenka_obratn = +array_plenka.find(a4 => a4.name === $(this).find(".select__current--obratn").text() ).obratn;
+			let osnova_value = +array_osnova.find(a1 => a1.name === $(this).find(".select__current--osnova").val() ).value;
+			let plenka_category = +array_plenka.find(a2 => a2.name === $(this).find(".select__current--plenka").val() ).category;
+			let frez_value = +array_frez.find(a3 => a3.name === $(this).find(".select__current--frez").val() ).value;
+			// let plenka_obratn = +array_plenka.find(a4 => a4.name === $(this).find(".select__current--obratn").val() ).obratn;
+			if ( $(this).find(".calc__checkbox").is(":checked") ) {
+				var plenka_obratn = 1000;
+			} else {
+				var plenka_obratn = 0;
+			}
+
 
 			// console.log(osnova_value);
 			// console.log(plenka_category);
@@ -209,27 +281,28 @@ $(document).ready(function() {
 
 
 		$('.calc__radius').each(function(){
-			let r_type_value = +array_rType.find(r1 => r1.name === $(this).find(".select__current--rType").text() ).value;
-			let r_plenka_value = +array_plenka.find(r2 => r2.name === $(this).find(".select__current--rPlenka").text() ).obratn;
+			let r_type_value = +array_rType.find(r1 => r1.name === $(this).find(".select__current--rType").val() ).value;
+			let r_plenka_value = +array_plenka.find(r2 => r2.name === $(this).find(".select__current--rPlenka").val() ).obratn;
+			let r_frez_value = +array_frez.find(r3 => r3.name === $(this).find(".select__current--rFrez").val() ).value;
 
 			let line_height = $(this).find(".calc__input--rHeight").val();
 			$(this).find('.calc__input--rM2price').val( ( (+line_height * 524) / 1000000 ).toFixed(2) );
-			$(this).find('.calc__input--rSumm').val( ( ((+line_height * 524) / 1000000) * 7000 ).toFixed(2) );
+			$(this).find('.calc__input--rSumm').val(  ( (+line_height * 524 / 1000000 * r_frez_value ) + (+line_height * 524 / 1000000 * 7000) ).toFixed(2) );
 		});
 
 		let q = 0;
 		$('.calc__total--2').text(0);
 		while( q < $('.calc__radius').length ){
 			var start_2 = +$('.calc__total--2').text();
-			var total_2 = $('.calc__input--rSumm:eq(' + q + ')').val()
+			var total_2 = $('.calc__input--rSumm:eq(' + q + ')').val();
 			$('.calc__total--2').text( (+start_2 + +total_2).toFixed(2) );
 			q++;
 		}
 
 
 		$('.calc__karniz').each(function(){
-			let k_type_value = +array_kType.find(r1 => r1.name === $(this).find(".select__current--kType").text() ).value;
-			let k_plenka_value = +array_plenka.find(r2 => r2.name === $(this).find(".select__current--kPlenka").text() ).obratn;
+			let k_type_value = +array_kType.find(r1 => r1.name === $(this).find(".select__current--kType").val() ).value;
+			let k_plenka_value = +array_plenka.find(r2 => r2.name === $(this).find(".select__current--kPlenka").val() ).obratn;
 
 			let line_length = $(this).find(".calc__input--kLength").val();
 			let line_amount = $(this).find(".calc__input--kAmount").val();
@@ -265,6 +338,6 @@ $(document).ready(function() {
 
 	$('.select').each(function(){
 		let select_first = $(this).find(".select__li:eq(0)").text();
-		$(this).find(".select__current").text(select_first);
+		$(this).find(".select__current").val(select_first);
 	});
 });

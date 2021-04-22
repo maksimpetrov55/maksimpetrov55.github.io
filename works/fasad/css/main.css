@@ -134,6 +134,10 @@ body {
   border-top: 1px solid #aaa;
 }
 
+.calc__bottom--1 {
+  max-width: 1244px;
+}
+
 .calc__bottom--2 {
   max-width: 894px;
 }
@@ -239,6 +243,43 @@ body {
   font-size: 12px;
 }
 
+.calc__plenka {
+  height: 24px;
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0 3px;
+}
+
+.calc__label {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  margin: 0 0 0 5px;
+}
+
+.calc__radio {
+  margin: 0 5px 0 0;
+}
+
+.calc__radio--margin {
+  margin: 0 5px 0 8px;
+}
+
+.calc__name {
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+
 .select {
   position: relative;
   width: 125px;
@@ -246,7 +287,6 @@ body {
 
 .select__current {
   position: relative;
-  background: #fff;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -257,14 +297,23 @@ body {
   overflow: hidden;
   white-space: nowrap;
   z-index: 10;
+  width: 125px;
+  height: 24px;
+  background: transparent;
 }
 
-.select__current::before {
+.select__arrow {
+  position: relative;
+  background: #fff;
+  z-index: 9;
+}
+
+.select__arrow::before {
   content: "▼";
   font-size: 12px;
   line-height: 1;
   position: absolute;
-  right: 0px;
+  right: 1px;
   top: 1px;
   width: 22px;
   height: 22px;
@@ -279,18 +328,15 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 9;
 }
 
-.select__current--open {
-  z-index: 90;
-}
-
-.select__current--open::before {
+.select__arrow--open::before {
   content: "▼";
   font-size: 12px;
   line-height: 1;
   position: absolute;
-  right: 0px;
+  right: 1px;
   top: 1px;
   width: 22px;
   height: 22px;
@@ -307,6 +353,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background: #fff;
+  z-index: 9;
 }
 
 .select__list {

@@ -5,7 +5,6 @@
 
     &__current
         position: relative
-        background: #fff
         user-select: none
         cursor: pointer
         padding: 3px 20px 3px 3px
@@ -13,13 +12,21 @@
         overflow: hidden
         white-space: nowrap
         z-index: 10
+        width: 125px
+        height: 24px
+        background: transparent
+
+    &__arrow
+        position: relative
+        background: #fff
+        z-index: 9
 
         &::before
             content: "▼"
             font-size: 12px
             line-height: 1
             position: absolute
-            right: 0px
+            right: 1px
             top: 1px
             width: 22px
             height: 22px
@@ -28,15 +35,16 @@
             display: flex
             justify-content: center
             align-items: center
+            z-index: 9
 
         &--open
-            z-index: 90
+
             &::before
                 content: "▼"
                 font-size: 12px
                 line-height: 1
                 position: absolute
-                right: 0px
+                right: 1px
                 top: 1px
                 width: 22px
                 height: 22px
@@ -46,6 +54,7 @@
                 justify-content: center
                 align-items: center
                 background: #fff
+                z-index: 9
 
     &__list
         position: absolute
