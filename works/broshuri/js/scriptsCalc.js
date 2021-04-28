@@ -111,7 +111,7 @@ $(document).ready(function() {
     });
 
 
-    //======================= Заполнение данных по формату блокнотов ========================\\
+    //--- Заполнение данных по формату блокнотов ---\\
     function ADDFormat() {
         var newCategor = $('#format');
         for (var i = 0; i < format.length; i++) {
@@ -120,7 +120,7 @@ $(document).ready(function() {
     }
     ADDFormat();
 
-    //======================= Заполнение данных на первом попап Обложка ========================\\
+    //--- Заполнение данных на первом попап Обложка ---\\
     function ADDOblogka() {
         var newCategor = $('#typeb');
         for (var i = 0; i < typeb.length; i++) {
@@ -140,7 +140,7 @@ $(document).ready(function() {
     }
     ADDOblogka();
 
-    //======================= Заполнение данных на втором попап Блокнот ========================\\
+    //--- Заполнение данных на втором попап Блокнот ---\\
     function ADDBloknot() {
         var newCategor = $('#typeb_bl');
         for (var i = 0; i < typeb.length; i++) {
@@ -160,7 +160,7 @@ $(document).ready(function() {
     }
     ADDBloknot();
 
-    //======================= Пересчет после изменения ТИРАЖа ========================\\
+    //--- Пересчет после изменения ТИРАЖа ---\\
 
     $('#tirag').click(function () {
         calculation();
@@ -170,7 +170,7 @@ $(document).ready(function() {
         calculation();
     });
 
-    //======================= Заполнение данных поле выбоа формата блокнота ========================\\
+    //--- Заполнение данных поле выбоа формата блокнота ---\\
 
     $('#format').click(function () {
         var formatl = document.getElementById('format').value;
@@ -385,7 +385,7 @@ $(document).ready(function() {
 
     });
 
-    //========================= Выбор типа бумаги ОБЛОЖКА   ===========================///
+    //--- Выбор типа бумаги ОБЛОЖКА ---\\
     $('#typeb').change(function () {
         $('#select option:selected').text();
         var typebtext=  $('#typeb option:selected').text();
@@ -395,28 +395,28 @@ $(document).ready(function() {
         calculation();
     });
 
-    //========================= Выбор плотности бумаги ОБЛОЖКА   ===========================///
+    //--- Выбор плотности бумаги ОБЛОЖКА ---\\
     $('#plb').change(function () {
         var pl_otbl=document.getElementById('plb').value;
         $('#pl_otbl').text(pl_otbl+';');
         calculation();
     });
 
-    //========================= Выбор цветности бумаги ОБЛОЖКА   ===========================///
+    //--- Выбор цветности бумаги ОБЛОЖКА ---\\
     $('#colorb').change(function () {
         var colorb=$('#colorb option:selected').text();
         $('#color_obl').text(colorb+';');
         calculation();
     });
 
-    //========================= Выбор ламинции бумаги ОБЛОЖКА   ===========================///
+    //--- Выбор ламинции бумаги ОБЛОЖКА ---\\
     $('#laminb').change(function () {
         var laminb=$('#laminb option:selected').text();
         $('#lamin_obl').text(laminb+';');
         calculation();
     });
 
-    //========================= Выбор типа бумаги БЛОКНОТ   ===========================///
+    //--- Выбор типа бумаги БЛОКНОТ ---\\
     $('#typeb_bl').change(function () {
         var typeb_bl= document.getElementById('typeb_bl').value;
         // var typebtext= document.getElementById('typeb').text;
@@ -427,21 +427,21 @@ $(document).ready(function() {
         calculation();
     });
 
-    //========================= Выбор плотности бумаги БЛОКНОТ   ===========================///
+    //--- Выбор плотности бумаги БЛОКНОТ ---\\
     $('#plb_bl').change(function () {
         var pl_otbl=document.getElementById('plb_bl').value;
         $('#pl_bl').text(pl_otbl+';');
         calculation();
     });
 
-    //========================= Выбор цветности бумаги БЛОКНОТ   ===========================///
+    //--- Выбор цветности бумаги БЛОКНОТ ---\\
     $('#colorb_bl').change(function () {
         var colorb=$('#colorb_bl option:selected').text();
         $('#color_blv').text(colorb+';');
         calculation();
     });
 
-    //========================= Выбор ламинции бумаги БЛОКНОТА   ===========================///
+    //--- Выбор ламинции бумаги БЛОКНОТА ---\\
     $('#laminb_bl').change(function () {
         var laminb=$('#laminb_bl option:selected').text();
         $('#lamin_bl').text(laminb+';');
@@ -453,12 +453,12 @@ $(document).ready(function() {
 
     function calculation(){
 
-        //=====Заполненеи данных по Брошюрв=========///
-        //==== формат:  =====//
+        //--- Заполненеи данных по Брошюрв ---\\
+        //--- формат: ---\\
         var Tbr=$('#format option:selected').text();
         $('#tupblitog').text(Tbr);
         document.getElementById('tupblitogf').value=Tbr;
-        //==== крепление:   =====//
+        //--- крепление:  ---\\
         if (cover_type==1){
             $('#itogkr').text("Cкоба");
             document.getElementById('itogkrf').value="Cкоба";
@@ -480,15 +480,15 @@ $(document).ready(function() {
             document.getElementById('itogkrf').value="Сверление";
 
         }
-        //==== тираж:  =====//
+        //--- тираж: ---\\
         var tiragvr=document.getElementById('tirag').value;
         $('#tiragv').text(tiragvr);
         document.getElementById('tiragvf').value=tiragvr;
 
 
-        //==== Обложка материал:  =====//
+        //--- Обложка материал: ---\\
         var mat_oblv=$('#typeb option:selected').text();
-      //  var tiragvr=document.getElementById('tirag').value;
+        //  var tiragvr=document.getElementById('tirag').value;
         $('#mat_oblv').text(mat_oblv);
 
 
@@ -513,20 +513,20 @@ $(document).ready(function() {
         document.getElementById('mat_oblvf').value=mat_oblv;
 
 
-        //==== Обложка цветность:  =====//
+        //--- Обложка цветность: ---\\
         var color_oblv=$('#colorb option:selected').text();
         //  var tiragvr=document.getElementById('tirag').value;
         $('#color_oblv').text(color_oblv);
         document.getElementById('color_oblvf').value=color_oblv;
 
-        //==== Обложка ламинация:  =====//
+        //--- Обложка ламинация: ---\\
         var lamin_oblv=$('#laminb option:selected').text();
         //  var tiragvr=document.getElementById('tirag').value;
         $('#lamin_oblv').text(lamin_oblv);
         document.getElementById('lamin_oblvf').value=lamin_oblv;
 
-        //==== Блокнот :  =====//
-        //==== Блокнот количестов страниц:  =====//
+        //--- Блокнот : ---\\
+        //--- Блокнот количестов страниц: ---\\
 
         if (cover_type==1){
             var Nstrvr=document.getElementById('list2').value;
@@ -540,7 +540,7 @@ $(document).ready(function() {
 
         }
 
-        //==== Блокнот материал:  =====//
+        //--- Блокнот материал: ---\\
         var mat_blv=$('#typeb_bl option:selected').text();
         //  var tiragvr=document.getElementById('tirag').value;
         $('#mat_blv').text(mat_blv);
@@ -565,12 +565,12 @@ $(document).ready(function() {
         document.getElementById('mat_blvf').value=mat_blv;
 
 
-        //==== Блокнот цветность:  =====//
+        //--- Блокнот цветность: ---\\
         var color_blv=$('#colorb_bl option:selected').text();
         $('#color_blv').text(color_blv);
         document.getElementById('color_blvf').value=color_blv;
 
-        //==== Блокнот ламинация:  =====//
+        //--- Блокнот ламинация: ---\\
         var lamin_blv=$('#laminb_bl option:selected').text();
         $('#lamin_blv').text(lamin_blv);
         document.getElementById('lamin_blvf').value=lamin_blv;
@@ -579,18 +579,18 @@ $(document).ready(function() {
 
 
 
-        //=====Расчет кол-ва тиражных листов блока=========///
+        //--- Расчет кол-ва тиражных листов блока ---\\
 
         var f=document.getElementById('format').value;
 
-        //=====Для варианта Клей если выбрали А4-Альбом - заменяем размеры на А4-Книга=========///
+        //--- Для варианта Клей если выбрали А4-Альбом - заменяем размеры на А4-Книга ---\\
         if ((cover_type==3)&&(f==7))
          {
              bloknot_width=210;
              bloknot_height=297;
 
         }
-        //=====Для варианта Скоба если выбрали А4-Альбом - заменяем размеры на А4-Книга=========///
+        //--- Для варианта Скоба если выбрали А4-Альбом - заменяем размеры на А4-Книга ---\\
         if ((cover_type==1)&&(f==7))
         {
             bloknot_width=210;
@@ -598,7 +598,7 @@ $(document).ready(function() {
 
         }
 
-        //=====Для варианта Пружина если выбрали А4-Альбом - заменяем размеры на А4-Книга=========///
+        //--- Для варианта Пружина если выбрали А4-Альбом - заменяем размеры на А4-Книга ---\\
         if ((cover_type==2)&&(f==7))
         {
             bloknot_width=210;
@@ -632,7 +632,7 @@ $(document).ready(function() {
 
         var NSpa3=4*Math.max(V1, V2);
 
-        //=====Для варианта Пружина если выбрали А3-Альбом - кол-во тиражных листов блока ставим = 2=========///
+        //--- Для варианта Пружина если выбрали А3-Альбом - кол-во тиражных листов блока ставим = 2 ---\\
 
         if ((cover_type==2)&&(f==8))
         {
@@ -641,12 +641,12 @@ $(document).ready(function() {
         }
 
 
-     //======Расчет кол-ва тиражных листов обложки======//
+     //--- Расчет кол-ва тиражных листов обложки ---\\
       var Ntirag=document.getElementById('tirag').value;
       var   NtiragList=(4/NSpa3)*Ntirag;
 
 
-     //======цена листа=====//
+     //--- цена листа ---\\
       var TypeObl=$('#typeb option:selected').text();
 
         var Ztonnab=0;
@@ -671,14 +671,14 @@ $(document).ready(function() {
         ZlistObl=ZlistObl.toFixed(5);
 
 
-       //======== стоимость бумаги обложка ========//
+        //--- стоимость бумаги обложка ---\\
         var ZbumObl=ZlistObl*NtiragList;
         ZbumObl=ZbumObl.toFixed(5);
 
 
 
-        //=======стоимость печати обложка===========//
-        //======кол-во прогонов====//
+        //--- стоимость печати обложка ---\\
+        //--- кол-во прогонов ---\\
         var Kcolorb=document.getElementById('colorb').value;
         var NprogonObk=0;
         if (Kcolorb==1){
@@ -688,7 +688,7 @@ $(document).ready(function() {
             NprogonObk=NtiragList*2;
         }
 
-        //====== цена прогон  ===//
+        //---  цена прогон  ---\\
         var Zprogon=0;
         if (Kcolorb==1){
            Zprogon=0.0425*Kevro+0.0425*Kevro*1497.4*(Math.pow(NprogonObk, -0.436))/100;
@@ -707,9 +707,9 @@ $(document).ready(function() {
 
 
         Zprogon=Zprogon.toFixed(5);
-      //  console.log(Zprogon);
+        //  console.log(Zprogon);
 
-        //====== цена печати обложка  ===//
+        //---  цена печати обложка  ---\\
         var ZprintObl=Zprogon*NprogonObk;
 
 
@@ -725,38 +725,36 @@ $(document).ready(function() {
         }
         ZprintObl=ZprintObl.toFixed(5);
 
-        //=======стоимость ламинация обложка===========//
+        //--- стоимость ламинация обложка ---\\
 
         var KlaminObl=document.getElementById('laminb').value;
         var ZlaminObl=KlaminObl*Kevro*NtiragList;
 
 
-        //=======стоимость  обложка полная ===========//
+        //--- стоимость  обложка полная ---\\
 
-        var ZoblItog=ZlaminObl*1+ZprintObl*1+ZbumObl*1;
-
-
-
-        $('#ZoblItog1').text(ZlaminObl);
-        $('#ZoblItog2').text(ZprintObl);
-        $('#ZoblItog3').text(ZbumObl);
+        var ZoblItog = ZlaminObl / Kzena * 1 + ZprintObl * 1 + ZbumObl * 1;
 
 
 
-       // Lsra3
-        //=======стоимость  обложка полная печать ===========//
+        $('#ZoblItog1').text(ZlaminObl.toFixed(2));
+        $('#ZoblItog2').text((ZprintObl * Kzena).toFixed(2));
+        $('#ZoblItog3').text((ZbumObl * Kzena).toFixed(2));
+
+
+
+        // Lsra3
+        //--- стоимость  обложка полная печать ---\\
         ZoblItog=ZoblItog*1;
         ZoblItog= Math.ceil(ZoblItog);
         if (Nobl==2){
             ZoblItog=0;
         }
-        $('#ZoblItog').text(ZoblItog);
+        $('#ZoblItog').text((ZoblItog * Kzena).toFixed(2));
 
 
-        //======= БЛОКНОТ  ===========//
-        //======Расчет кол-ва тиражных листов БЛОКНОТ======//
-
-      //  console.log('=============================');
+        //--- БЛОКНОТ ---\\
+        //--- Расчет кол-ва тиражных листов БЛОКНОТ ---\\
 
         if (cover_type==1){
             var Ntirag_bl=document.getElementById('list2').value;
@@ -766,9 +764,7 @@ $(document).ready(function() {
         }
        var   NtiragList_bl=Ntirag_bl/NSpa3*Ntirag;
 
-
-
-        //======цена листа БЛОК=====//
+        //--- цена листа БЛОК ---\\
 
 
         var Type_bl=$('#typeb_bl option:selected').text();
@@ -801,14 +797,14 @@ $(document).ready(function() {
         Zlist_bl=Zlist_bl.toFixed(5);
 
 
-        //============Стоимость тиража=============//
-        //============Стоимость тиража бумага=============//
+        //--- Стоимость тиража ---\\
+        //--- Стоимость тиража бумага  ---\\
         var Ztirag_bl=Zlist_bl*NtiragList_bl;
 
         Ztirag_bl=Ztirag_bl.toFixed(5);
 
-        //=======стоимость печати БЛОКНОТ===========//
-        //======кол-во прогонов====//
+        //--- стоимость печати БЛОКНОТ ---\\
+        //--- кол-во прогонов=---\\
         var Kcolor_bl=document.getElementById('colorb_bl').value;
         var Nprogon_bl=0;
 
@@ -822,7 +818,7 @@ $(document).ready(function() {
         //    Nprogon_bl=NtiragList_bl;
         //}
 
-        //====== цена прогон &&&&&&&&&&&&&&&&& ===//
+        //---  цена прогон &&&&&&&&&&&&&&&&& ---\\
         var Zprogon_bl=0;
         var  Zprogon_bl1=0;
         if (Kcolor_bl==1){
@@ -857,7 +853,7 @@ $(document).ready(function() {
         Zprogon_bl=Zprogon_bl.toFixed(5);
 
 
-        //====== цена печати БЛОКНОТ  ===//
+        //---  цена печати БЛОКНОТ  ---\\
         var Zprint_bl=Zprogon_bl*Nprogon_bl;
         if (Kcolor_bl==3){
             Zprint_bl=Zprogon_bl;
@@ -881,15 +877,15 @@ $(document).ready(function() {
         Zprint_bl=Zprint_bl.toFixed(5);
 
 
-        //=======стоимость ламинация БЛОКНОТ===========//
+        //--- стоимость ламинация БЛОКНОТ ---\\
 
         var Klamin_bl=document.getElementById('laminb_bl').value;
         var Zlamin_bl=Klamin_bl*Kevro*NtiragList_bl;
         // console.log(Zlamin_bl);
 
-        //=======стоимость  Блокнот  полная ===========//
+        //--- стоимость  Блокнот  полная  ---\\
 
-        var Z_blItog=Zlamin_bl*1+Zprint_bl*1+Ztirag_bl*1;
+        var Z_blItog = Zlamin_bl / Kzena * 1 + Zprint_bl * 1 + Ztirag_bl * 1;
         //var Kcolorbl = document.getElementById('colorb_bl').value;
         //
         //if ((Kcolorbl==1)||(Kcolorbl==2)){
@@ -900,19 +896,19 @@ $(document).ready(function() {
         //}
 
 
-        //=======стоимость  обложка полная печать ===========//
+        //--- стоимость  обложка полная печать  ---\\
        // Z_blItog=Z_blItog*Kzena;
 
-        $('#Z_blItog1').text(Zlamin_bl);
-        $('#Z_blItog2').text(Zprint_bl);
-        $('#Z_blItog3').text(Ztirag_bl);
+        $('#Z_blItog1').text( Zlamin_bl.toFixed(2));
+        $('#Z_blItog2').text( (Zprint_bl * Kzena).toFixed(2));
+        $('#Z_blItog3').text( (Ztirag_bl * Kzena).toFixed(2));
 
 
-        Z_blItog= Math.ceil(Z_blItog);
-        $('#Z_blItog').text(Z_blItog);
+        Z_blItog = Math.ceil(Z_blItog);
+        $('#Z_blItog').text((Z_blItog * Kzena).toFixed(2));
 
 
-        //=======cтоимость  ПЕРЕПЛЕТА ===========//
+        //--- cтоимость  ПЕРЕПЛЕТА  ---\\
         var NtiragP=document.getElementById('tirag').value;
         // var TypeObl=document.getElementById('typeb').value;
         if (NtiragP>=1000){
@@ -963,38 +959,36 @@ $(document).ready(function() {
             console.log(sverl_price);
             ZPerepl = +KpriladraSverl + (+sverl_lists * +sverl_price);
 
-            // if (ZPerepl < 300){
-            //     ZPerepl = 300;
-            // }
+
         }
 
 
 
 
-        //=======  Общая стоимость по всему ===========//
+        //---   Общая стоимость по всему  ---\\
         if (Nobl==2){
             ZoblItog=0;
         }
         var ZitogV=ZPerepl*1+Z_blItog*1+ZoblItog*1;
         ZitogV=ZitogV*Kzena;
-        //=====Для варианта Клей если выбрали А4-Альбом - заменяем размеры на А4-Книга=========///
+        //--- Для варианта Клей если выбрали А4-Альбом - заменяем размеры на А4-Книга ---\\
         if ((cover_type==3)&&(f==7))
         {
             ZitogV=ZitogV*KA4Klei;
         }
-        //=====Для варианта Скоба если выбрали А4-Альбом - заменяем размеры на А4-Книга=========///
+        //--- Для варианта Скоба если выбрали А4-Альбом - заменяем размеры на А4-Книга ---\\
         if ((cover_type==1)&&(f==7))
         {
             ZitogV=ZitogV*KA4Skoba;
         }
 
-        //=====Для варианта Пружина если выбрали А4-Альбом - заменяем размеры на А4-Книга=========///
+        //--- Для варианта Пружина если выбрали А4-Альбом - заменяем размеры на А4-Книга ---\\
         if ((cover_type==2)&&(f==7))
         {
             ZitogV=ZitogV*KA4Prugina;
         }
 
-        //=====Для варианта Пружина если выбрали А4-Альбом - заменяем размеры на А4-Книга=========///
+        //--- Для варианта Пружина если выбрали А4-Альбом - заменяем размеры на А4-Книга ---\\
         if ((cover_type==2)&&(f==8))
         {
             ZitogV=ZitogV*KA3Prugina;
@@ -1003,14 +997,15 @@ $(document).ready(function() {
 
         ZPerepl=ZPerepl*1;
         ZPerepl= Math.ceil(ZPerepl);
-        $('#Z_perepl').text(ZPerepl+'p');
+        $('#Z_perepl').text(ZPerepl);
         //Z_perepl
 
-        ZitogV= Math.ceil(ZitogV);
-        // if ( ZitogV < 300 ){
-        //     ZitogV = 300;
-        // }
-        $('#Zitog').text(ZitogV+'p');
+        ZitogV = (ZitogV - ZPerepl) * 0.992;
+        ZitogV = Math.ceil(ZitogV);
+        if ( ZitogV < 300 ){
+            ZitogV = 300;
+        }
+        $('#Zitog').text(ZitogV+' pуб');
         document.getElementById('Zitof').value=ZitogV+'p';
 
     };

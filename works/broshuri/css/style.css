@@ -136,7 +136,20 @@ body{
     font-weight: 900;
 }
 
+.itog_block_p {
+    font-size: 16px;
+    font-family: 'Myriad Pro Light';
+    margin: 0 0 5px 0;
+    line-height: 1.2;
+    display: block;
+    letter-spacing: 1px;
+}
 
+.itog_block_title {
+    font-family: 'Myriad Pro Regular';
+    font-size: 1.4em;
+    margin: 0 0 5px 0;
+}
 
 
 
@@ -454,23 +467,6 @@ body{
     /*margin-left: 20px;*/
 }
 
-.content_block3 p{
-    font-family: 'Myriad Pro Regular';
-    font-size: 1.4em;
-    text-align: left;
-    margin: 0 0 5px 0;
-    letter-spacing: 1px;
-    /*margin-left: 20px;*/
-}
-
-.content_block3 a{
-    font-size: 16px;
-    width: 100%;
-    font-family: 'Myriad Pro Light';
-    display: inline-block;
-    line-height: 1.6;
-    letter-spacing: -0.3px;
-}
 
 
 
@@ -535,6 +531,11 @@ body{
 
 .itog_block_open{
     display: block;
+    padding: 8px 0;
+    margin: 0 0 8px 0;
+    border-top: 1px dashed #999;
+    border-bottom: 1px dashed #999;
+    background: #f6f6f6;
 
 }
 .coment{
