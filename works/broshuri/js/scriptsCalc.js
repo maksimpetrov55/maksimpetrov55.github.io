@@ -172,7 +172,7 @@ $(document).ready(function() {
 
     //--- Заполнение данных поле выбоа формата блокнота ---\\
 
-    $('#format').click(function () {
+    function calc_format() {
         var formatl = document.getElementById('format').value;
         if (formatl==1){
             bloknot_width=105;
@@ -265,7 +265,13 @@ $(document).ready(function() {
             document.getElementById('Hlist').setAttribute('disabled', 'disabled');
         }
         calculation();
+    }
+
+    $('#format').click(function () {
+        calc_format();
     });
+
+    calc_format();
 
     $('#Llist').click (function(){
         bloknot_width=document.getElementById('Llist').value;
@@ -728,29 +734,23 @@ $(document).ready(function() {
         //--- стоимость ламинация обложка ---\\
 
         var KlaminObl=document.getElementById('laminb').value;
-        var ZlaminObl=KlaminObl*Kevro*NtiragList;
+        var ZlaminObl = KlaminObl * Kevro * NtiragList;
 
 
         //--- стоимость  обложка полная ---\\
 
-        var ZoblItog = ZlaminObl / Kzena * 1 + ZprintObl * 1 + ZbumObl * 1;
-
-
+        var ZoblItog = (+ZlaminObl / +Kzena + +ZprintObl + +ZbumObl) * Kzena;
 
         $('#ZoblItog1').text(ZlaminObl.toFixed(2));
         $('#ZoblItog2').text((ZprintObl * Kzena).toFixed(2));
         $('#ZoblItog3').text((ZbumObl * Kzena).toFixed(2));
 
 
-
-        // Lsra3
         //--- стоимость  обложка полная печать ---\\
-        ZoblItog=ZoblItog*1;
-        ZoblItog= Math.ceil(ZoblItog);
         if (Nobl==2){
             ZoblItog=0;
         }
-        $('#ZoblItog').text((ZoblItog * Kzena).toFixed(2));
+        $('#ZoblItog').text(ZoblItog.toFixed(2));
 
 
         //--- БЛОКНОТ ---\\
@@ -881,20 +881,10 @@ $(document).ready(function() {
 
         var Klamin_bl=document.getElementById('laminb_bl').value;
         var Zlamin_bl=Klamin_bl*Kevro*NtiragList_bl;
-        // console.log(Zlamin_bl);
 
         //--- стоимость  Блокнот  полная  ---\\
 
-        var Z_blItog = Zlamin_bl / Kzena * 1 + Zprint_bl * 1 + Ztirag_bl * 1;
-        //var Kcolorbl = document.getElementById('colorb_bl').value;
-        //
-        //if ((Kcolorbl==1)||(Kcolorbl==2)){
-        //    Z_blItog=Z_blItog*KzenaBlockColor;
-        //}
-        //if ((Kcolorbl==3)||(Kcolorbl==4)){
-        //    Z_blItog=Z_blItog*KzenaBlockChb;
-        //}
-
+        var Z_blItog = (+Zlamin_bl / +Kzena + +Zprint_bl + +Ztirag_bl) * Kzena;
 
         //--- стоимость  обложка полная печать  ---\\
        // Z_blItog=Z_blItog*Kzena;
@@ -904,15 +894,15 @@ $(document).ready(function() {
         $('#Z_blItog3').text( (Ztirag_bl * Kzena).toFixed(2));
 
 
-        Z_blItog = Math.ceil(Z_blItog);
-        $('#Z_blItog').text((Z_blItog * Kzena).toFixed(2));
+        // Z_blItog = Math.ceil(Z_blItog);
+        $('#Z_blItog').text(Z_blItog.toFixed(2));
 
 
         //--- cтоимость  ПЕРЕПЛЕТА  ---\\
         var NtiragP=document.getElementById('tirag').value;
-        // var TypeObl=document.getElementById('typeb').value;
+
         if (NtiragP>=1000){
-                NtiragP=1000;
+            NtiragP=1000;
         }
         var Kper=0;
         if (cover_type==1){
@@ -963,14 +953,21 @@ $(document).ready(function() {
         }
 
 
-
-
         //---   Общая стоимость по всему  ---\\
         if (Nobl==2){
             ZoblItog=0;
         }
-        var ZitogV=ZPerepl*1+Z_blItog*1+ZoblItog*1;
-        ZitogV=ZitogV*Kzena;
+
+        var ZitogV = ZPerepl + Z_blItog + ZoblItog;
+
+        console.clear();
+        console.log(ZPerepl);
+        console.log(Z_blItog);
+        console.log(ZoblItog);
+        
+        console.log(ZitogV);
+
+
         //--- Для варианта Клей если выбрали А4-Альбом - заменяем размеры на А4-Книга ---\\
         if ((cover_type==3)&&(f==7))
         {
@@ -995,22 +992,19 @@ $(document).ready(function() {
         }
 
 
-        ZPerepl=ZPerepl*1;
-        ZPerepl= Math.ceil(ZPerepl);
-        $('#Z_perepl').text(ZPerepl);
-        //Z_perepl
+        $('#Z_perepl').text(ZPerepl.toFixed(2));
 
-        ZitogV = (ZitogV - ZPerepl) * 0.992;
         ZitogV = Math.ceil(ZitogV);
-        if ( ZitogV < 300 ){
-            ZitogV = 300;
+        if ( ZitogV < 1500 ){
+            ZitogV = 1500;
         }
-        $('#Zitog').text(ZitogV+' pуб');
+        $('#Zitog').text(ZitogV + ' pуб');
         document.getElementById('Zitof').value=ZitogV+'p';
 
     };
 
-    
+
+
 });
 
 
