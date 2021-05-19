@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
-	var calc_rate = 5.5;
+	var calc_rate = 5; // ключевая ставка
+	var calc_moral = 20000; // моральный вред
+	var calc_perc = 0.5; // штраф
 
 	var date = new Date();
 
@@ -71,11 +73,11 @@ $(document).ready(function() {
 		}
 
 
-		var calc_result_1 = (1 / 300) * (+calc_rate / 100) * +val1 * +calc_date_final  * 2;
+		var calc_result_1 = (1 / 300) * (+calc_rate / 100) * +val1 * (+calc_date_final + 1) * 2;
 
 		$('#calc_result_1').text( (+calc_result_1.toFixed(0)).toLocaleString("ru") + " руб" );
-		$('#calc_result_3').text( (+( calc_result_1 * 0.5 ).toFixed(0)).toLocaleString("ru") + " руб" );
-		$('#calc_result_4').text( (+( calc_result_1 + 20000 + (calc_result_1 * 0.5) ).toFixed(0)).toLocaleString("ru") + " руб" );
+		$('#calc_result_3').text( (+( calc_result_1 * calc_perc ).toFixed(0)).toLocaleString("ru") + " руб" );
+		$('#calc_result_4').text( (+( calc_result_1 + calc_moral + (calc_result_1 * 0.5) ).toFixed(0)).toLocaleString("ru") + " руб" );
 	
 
 	}
