@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div class="calc__block">
+			<div class="calc__title">Тип кондиционера</div>
+			<div class="calc__flex">
+				<input class="calc__radio" type="radio" name="calc_type" id="calc_type_1" value="250" checked>
+				<label class="calc__label" for="calc_type_1">Настенный / бытовой</label>
+				<input class="calc__radio" type="radio" name="calc_type" id="calc_type_2" value="300">
+				<label class="calc__label" for="calc_type_2">Кассетный</label>
+				<input class="calc__radio" type="radio" name="calc_type" id="calc_type_3" value="350">
+				<label class="calc__label" for="calc_type_3">Канальный</label>
+			</div>
+		</div>
+
+		<div class="calc__block">
+			<div class="calc__title">Тип компрессора</div>
+			<div class="calc__flex">
+				<input class="calc__radio" type="radio" name="calc_compressor" id="calc_compressor_1" value="onoff" checked>
+				<label class="calc__label" for="calc_compressor_1">ON / OFF</label>
+				<input class="calc__radio" type="radio" name="calc_compressor" id="calc_compressor_2" value="inverter">
+				<label class="calc__label" for="calc_compressor_2">Inverter</label>
+			</div>
+		</div>
+
+		<div class="calc__block">
+			<div class="calc__title">Мощность кондиционера</div>
+			<div id="calc_variant_1" class="calc__variant calc__variant--show">
+				<div class="calc__flex">
+					<input class="calc__radio" type="radio" name="calc_power" id="calc_power_1" value="1200" checked>
+					<label class="calc__label" for="calc_power_1">9000 Btu</label>
+					<input class="calc__radio" type="radio" name="calc_power" id="calc_power_2" value="1300">
+					<label class="calc__label" for="calc_power_2">12000 Btu</label>
+					<input class="calc__radio" type="radio" name="calc_power" id="calc_power_3" value="1600">
+					<label class="calc__label" for="calc_power_3">18000 Btu</label>
+					<input class="calc__radio" type="radio" name="calc_power" id="calc_power_4" value="1800">
+					<label class="calc__label" for="calc_power_4">24000 Btu</label>
+				</div>
+			</div>
+
+			<div id="calc_variant_2" class="calc__variant">
+				<div class="calc__flex">
+					<input class="calc__radio" type="radio" name="calc_power" id="calc_power_5" value="2200">
+					<label class="calc__label" for="calc_power_5">18000 Btu</label>
+					<input class="calc__radio" type="radio" name="calc_power" id="calc_power_6" value="2400">
+					<label class="calc__label" for="calc_power_6">24000 Btu</label>
+					<input class="calc__radio" type="radio" name="calc_power" id="calc_power_7" value="2800">
+					<label class="calc__label" for="calc_power_7">36000 Btu</label>
+					<input class="calc__radio" type="radio" name="calc_power" id="calc_power_8" value="3100">
+					<label class="calc__label" for="calc_power_8">48000 Btu</label>
+					<input class="calc__radio" type="radio" name="calc_power" id="calc_power_9" value="3400">
+					<label class="calc__label" for="calc_power_9">60000 Btu</label>
+				</div>
+			</div>
+
+			<div id="calc_variant_3" class="calc__variant">
+				<div class="calc__flex">
+					<input class="calc__radio" type="radio" name="calc_power" id="calc_power_10" value="2500">
+					<label class="calc__label" for="calc_power_10">24000 Btu</label>
+					<input class="calc__radio" type="radio" name="calc_power" id="calc_power_11" value="2900">
+					<label class="calc__label" for="calc_power_11">36000 Btu</label>
+					<input class="calc__radio" type="radio" name="calc_power" id="calc_power_12" value="3200">
+					<label class="calc__label" for="calc_power_12">48000 Btu</label>
+					<input class="calc__radio" type="radio" name="calc_power" id="calc_power_13" value="3500">
+					<label class="calc__label" for="calc_power_13">60000 Btu</label>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="calc__block">
+			<div class="calc__title">Длина фреонопровода</div>
+			<div class="calc__slider">
+				<div id="polzunok"></div>
+				<input class="calc__length" type="text" id="result-polzunok" disabled>
+			</div>
+		</div>
+
+		<div class="calc__block">
+			<div class="calc__title">Количество отверстий</div>
+			<div class="calc__slider">
+				<div id="polzunok2"></div>
+				<input class="calc__length" type="text" id="result-polzunok2" disabled>
+			</div>
+		</div>
+
+		<div class="calc__bottom">
+			<div class="calc__btn">Рассчитать</div>
+
+			<div class="calc__itog">
+				<div class="calc__title calc__title--itog">Итоговая стоимость:</div>
+				<div class="calc__summ">15 000 руб.</div>
+			</div>
+		</div>
+
+
+	</div>
+	<!-- /.calc -->
+	
+
+
+</body>
+</html>
