@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	var calc_rate = 5; // ключевая ставка
+	var calc_rate = 5.5; // ключевая ставка
 	var calc_moral = 20000; // моральный вред
 	var calc_perc = 0.5; // штраф
 
