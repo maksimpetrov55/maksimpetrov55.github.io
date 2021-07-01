@@ -457,6 +457,10 @@ $(document).ready(function() {
          calculation();
     });
 
+    $('select').change(function(){
+        calculation();
+    });
+
     function calculation(){
 
         //--- Заполненеи данных по Брошюрв ---\\
@@ -464,6 +468,13 @@ $(document).ready(function() {
         var Tbr=$('#format option:selected').text();
         $('#tupblitog').text(Tbr);
         document.getElementById('tupblitogf').value=Tbr;
+        let format = $('#format').val();
+
+        if ( format == 9) {
+            $('#tupblitog').text( Tbr + ", (" + $('#Llist').val() + ") × (" + $('#Hlist').val() + " мм)" );
+            $('#tupblitogf').val( Tbr + ", (" + $('#Llist').val() + ") × (" + $('#Hlist').val() + " мм)" );
+        }
+
         //--- крепление:  ---\\
         if (cover_type==1){
             $('#itogkr').text("Cкоба");
@@ -734,8 +745,11 @@ $(document).ready(function() {
         //--- стоимость ламинация обложка ---\\
 
         var KlaminObl=document.getElementById('laminb').value;
-        var ZlaminObl = KlaminObl * Kevro * NtiragList;
+        var ZlaminObl = ( (KlaminObl * Kevro) + (KlaminObl * Kevro * 7175.8 / 100 * ( NtiragList ** (0.604 - 1) )) ) * NtiragList;
+        // * NtiragList
 
+        console.log( "NtiragList " + NtiragList );
+        console.log("ZlaminObl " + (ZlaminObl / NtiragList));
 
         //--- стоимость  обложка полная ---\\
 
@@ -880,7 +894,9 @@ $(document).ready(function() {
         //--- стоимость ламинация БЛОКНОТ ---\\
 
         var Klamin_bl=document.getElementById('laminb_bl').value;
-        var Zlamin_bl=Klamin_bl*Kevro*NtiragList_bl;
+
+        var Zlamin_bl = ( (Klamin_bl * Kevro) + (Klamin_bl * Kevro * 7175.8 / 100 * ( NtiragList_bl ** (0.604 - 1) )) ) * NtiragList_bl;
+        // * NtiragList_bl
 
         //--- стоимость  Блокнот  полная  ---\\
 
@@ -932,18 +948,19 @@ $(document).ready(function() {
             ZPerepl=NtiragP*Kper+KpriladraKlei;
         }
         if (cover_type==4){
-            let sverl_lists = +$('#list').val() / 2;
+            //let sverl_lists = +$('#list').val() / 2;
+            let sverl_lists = +$('#list').val();
             if ( sverl_lists >= 0 ){var sverl_price = 0.7}
-            if ( sverl_lists > 500 ){var sverl_price = 0.6}
-            if ( sverl_lists > 1000 ){var sverl_price = 0.5}
-            if ( sverl_lists > 2000 ){var sverl_price = 0.45}
-            if ( sverl_lists > 3000 ){var sverl_price = 0.4}
-            if ( sverl_lists > 4000 ){var sverl_price = 0.4}
-            if ( sverl_lists > 5000 ){var sverl_price = 0.35}
-            if ( sverl_lists > 6000 ){var sverl_price = 0.325}
-            if ( sverl_lists > 7000 ){var sverl_price = 0.3}
-            if ( sverl_lists > 8000 ){var sverl_price = 0.275}
-            if ( sverl_lists > 10000 ){var sverl_price = 0.25}
+            if ( sverl_lists >= 2000 ){var sverl_price = 0.6}
+            if ( sverl_lists >= 4000 ){var sverl_price = 0.5}
+            if ( sverl_lists >= 6000 ){var sverl_price = 0.45}
+            if ( sverl_lists >= 8000 ){var sverl_price = 0.4}
+            if ( sverl_lists >= 10000 ){var sverl_price = 0.4}
+            if ( sverl_lists >= 12000 ){var sverl_price = 0.35}
+            if ( sverl_lists >= 14000 ){var sverl_price = 0.325}
+            if ( sverl_lists >= 16000 ){var sverl_price = 0.3}
+            if ( sverl_lists >= 20000 ){var sverl_price = 0.275}
+            if ( sverl_lists >= 25000 ){var sverl_price = 0.25}
 
             console.log(sverl_lists);
             console.log(sverl_price);
@@ -960,7 +977,7 @@ $(document).ready(function() {
 
         var ZitogV = ZPerepl + Z_blItog + ZoblItog;
 
-        console.clear();
+        //console.clear();
         console.log(ZPerepl);
         console.log(Z_blItog);
         console.log(ZoblItog);
@@ -999,6 +1016,7 @@ $(document).ready(function() {
             ZitogV = 1500;
         }
         $('#Zitog').text(ZitogV + ' pуб');
+        $('#Zitog_mobile').text(ZitogV + ' pуб');
         document.getElementById('Zitof').value=ZitogV+'p';
 
     };

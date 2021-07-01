@@ -16,7 +16,7 @@ var Kevro=92;
 
 //======== Курс удорожания ========//
 
-var Kzena=2.05;
+var Kzena=2.1;
 var KzenaOblColor=1;
 var KzenaOblChb=1.2;
 var KzenaBlockColor=1;
@@ -24,14 +24,14 @@ var KzenaBlockChb=1.2;
 
 //======== Цена приладки ========//
 
-var KpriladraSkoba=100;
-var KpriladraPrugina=100;
-var KpriladraKlei=500;
-var KpriladraSverl=100;
+var KpriladraSkoba=300;
+var KpriladraPrugina=500;
+var KpriladraKlei=2000;
+var KpriladraSverl=300;
 
 //======== включение/выключение доп блока расчетов ========//
 
-var BlockOpen=1;  //0- блок не отображается, 1 - блок отображается
+var BlockOpen=0;  //0- блок не отображается, 1 - блок отображается
 
 
 //======== Для варианта Скоба если выбрали А4-Альбом  коэффициент ========//
@@ -195,35 +195,35 @@ var laminir = [
     },
     {
         name: 'Глянец 32 мкр',
-        val: '0.12'
+        val: '0.018'
     },
     {
         name: 'Глянец 75 мкр',
-        val: '0.45'
+        val: '0.048'
     },
     {
         name: 'Глянец 125 мкр',
-        val: '0.660'
+        val: '0.085'
     },
     {
         name: 'Матовая 32 мкр',
-        val: '0.12'
+        val: '0.02'
     },
     {
         name: 'Матовая 75 мкр',
-        val: '0.45'
+        val: '0.050'
     },
     {
         name: 'Матовая 125 мкр',
-        val: '0.66'
+        val: '0.087'
     },
     {
         name: 'Ламинация софтач',
-        val: '0.63'
+        val: '0.080'
     },
     {
         name: 'Прозрачный пластик',
-        val: '0.145'
+        val: '0.013'
     }
 
 ];
