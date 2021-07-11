@@ -38,6 +38,9 @@ $(document).ready(function() {
 		calculation();
 	});
 
+	$('.calc__input').on("focus",function(){
+		$(this).select();
+	});
 
 	function calculation() {
 
