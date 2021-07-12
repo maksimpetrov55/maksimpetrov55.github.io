@@ -8,7 +8,7 @@ body {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "roboto", sans-serif;
   position: relative;
   width: 100%;
   max-width: 700px;
@@ -23,7 +23,7 @@ body {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "roboto", sans-serif;
 }
 
 .calc__wrap {
@@ -71,7 +71,7 @@ body {
   padding: 0 5px;
   font-size: 17px;
   border-radius: 4px;
-  border: 1px solid #aaa;
+  border: 1px solid #404040;
 }
 
 .calc__input {
@@ -81,7 +81,7 @@ body {
   padding: 0 10px;
   font-size: 17px;
   border-radius: 4px;
-  border: 1px solid #aaa;
+  border: 1px solid #404040;
 }
 
 .calc__input--form {
@@ -122,12 +122,14 @@ body {
   text-align: center;
   width: 100%;
   position: relative;
-  height: 50px;
-  background: #1f54ff;
+  height: 40px;
+  background: #32A242;
+  -webkit-box-shadow: 0px 4px 5px #297533;
+          box-shadow: 0px 4px 5px #297533;
   margin: 10px auto 30px auto;
   border-radius: 4px;
   color: #fff;
-  text-transform: uppercase;
+  font-size: 18px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,7 +139,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-weight: 600;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -161,7 +162,7 @@ body {
   width: 100%;
   position: relative;
   padding: 20px 10px;
-  border-top: 1px solid #aaa;
+  border-top: 2px solid #39B54A;
   margin: 20px auto 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -210,8 +211,8 @@ body {
   border-radius: 4px;
   background: #ffffff;
   border: 1px solid #ddd;
-  -webkit-box-shadow: 0 12px 15px 0px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 12px 15px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 4px 9px #404040;
+          box-shadow: 0px 4px 9px #404040;
 }
 
 .calc__close {
@@ -245,13 +246,14 @@ body {
 .calc__submit {
   width: 100%;
   position: relative;
-  height: 50px;
-  font-size: 16px;
-  background: #379e0e;
+  height: 40px;
+  font-size: 18px;
+  background: #32A242;
+  -webkit-box-shadow: 0px 4px 5px #297533;
+          box-shadow: 0px 4px 5px #297533;
   margin: 20px auto 10px auto;
   border-radius: 4px;
   color: #fff;
-  text-transform: uppercase;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -261,7 +263,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-weight: 600;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;

@@ -54,6 +54,12 @@ $(document).ready(function() {
 			var calc_dlina_name = "Обычная";
 		}
 
+		if( $('#calc_arenda').is(":checked",true) ){
+			var calc_arenda = 3000;
+		} else {
+			var calc_arenda = 0;
+		}
+
 		if( $('#calc_nds').is(":checked",true) ){
 			var calc_nds_name = "с НДС";
 
@@ -86,7 +92,7 @@ $(document).ready(function() {
 		}
 
 
-		var calc_final = calc_itog * calc_shtuk;
+		var calc_final = (calc_itog * calc_shtuk) + +calc_arenda;
 
 		$('.calc__itog').text( calc_final.toFixed(0) + " руб.");
 
