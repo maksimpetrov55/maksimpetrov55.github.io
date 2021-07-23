@@ -454,12 +454,14 @@ $(document).ready(function() {
         calculation();
     });
      $('#color_pr').click(function (){
-         calculation();
+        calculation();
     });
 
     $('select').change(function(){
         alert("hello");
-        calculation();
+        setTimeout(() => {
+            calculation();
+        }, 150);
     });
 
     function calculation(){
