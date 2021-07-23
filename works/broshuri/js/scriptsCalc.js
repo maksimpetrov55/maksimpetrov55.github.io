@@ -458,6 +458,7 @@ $(document).ready(function() {
     });
 
     $('select').change(function(){
+        alert("hello");
         calculation();
     });
 
