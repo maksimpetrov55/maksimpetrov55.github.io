@@ -1032,8 +1032,6 @@ $(document).ready(function() {
         document.getElementById('Zitof').value=ZitogV+'p';
 
         console.log("mark_end");
-        alert("we done");
-        
 
     };
 
