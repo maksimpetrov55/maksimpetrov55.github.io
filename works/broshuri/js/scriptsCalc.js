@@ -9,7 +9,7 @@ $(document).ready(function() {
         $('.itog_block').addClass('itog_block_open');
     }
 
-    $('.content_block1_img1').click (function(){
+    $('.content_block1_img1').click(function(){
         $('.content_block1_img1_2').addClass('active_img2');
         $('.content_block1_img1_1').addClass('active_imgnone');
 
@@ -36,7 +36,7 @@ $(document).ready(function() {
 
     });
 
-    $('.content_block1_img2').click (function(){
+    $('.content_block1_img2').click(function(){
         $('.content_block1_img2_1').addClass('active_img2');
         $('.content_block1_img2_2').addClass('active_imgnone');
         $('.content_block1_img2_1').removeClass('active_imgnone');
@@ -60,7 +60,7 @@ $(document).ready(function() {
 
     });
 
-    $('.content_block1_img3').click (function(){
+    $('.content_block1_img3').click(function(){
         $('.content_block1_img3_2').addClass('active_img2');
         $('.content_block1_img3_1').addClass('active_imgnone');
 
@@ -84,7 +84,7 @@ $(document).ready(function() {
         calculation();
     });
 
-    $('.content_block1_img4').click (function(){
+    $('.content_block1_img4').click(function(){
         $('.content_block1_img4_2').addClass('active_img2');
         $('.content_block1_img4_1').addClass('active_imgnone');
 
@@ -136,7 +136,6 @@ $(document).ready(function() {
         for (var i = 0; i < laminir.length; i++) {
             $('<option value="' + laminir[i].val + '">' + laminir[i].name + '</option>').appendTo(newCategor);
         }
-        calculation();
     }
     ADDOblogka();
 
@@ -156,17 +155,18 @@ $(document).ready(function() {
         for (var i = 0; i < laminir.length; i++) {
             $('<option value="' + laminir[i].val + '">' + laminir[i].name + '</option>').appendTo(newCategor);
         }
-        calculation();
     }
     ADDBloknot();
 
+    calculation();
+
     //--- Пересчет после изменения ТИРАЖа ---\\
 
-    $('#tirag').click(function () {
-        calculation();
-    });
+    // $('#tirag').click(function () {
+    //     calculation();
+    // });
 
-    $('#tirag').keyup(function(e){
+    $('#tirag').on("input",function(){
         calculation();
     });
 
@@ -267,15 +267,21 @@ $(document).ready(function() {
         calculation();
     }
 
-    $('#format').click(function () {
+    $('#format').change(function () {
         calc_format();
     });
 
     calc_format();
 
-    $('#Llist').click (function(){
-        bloknot_width=document.getElementById('Llist').value;
-        bloknot_height=document.getElementById('Hlist').value;
+    $('#Llist').on("input",function(){
+        bloknot_width = $('#Llist').val();
+        bloknot_height = $('#Hlist').val();
+        if (bloknot_width < 0) {
+            $('#Llist').val(0);
+        }
+        if (bloknot_height < 0) {
+            $('#Hlist').val(0);
+        }
         $('#Lbl').text(bloknot_width);
         var Lbl2=bloknot_width*2;
         $('#Lb12').text(Lbl2);
@@ -287,9 +293,15 @@ $(document).ready(function() {
         calculation();
     });
 
-    $('#Hlist').click (function(){
-        bloknot_width=document.getElementById('Llist').value;
-        bloknot_height=document.getElementById('Hlist').value;
+    $('#Hlist').on("input",function(){
+        bloknot_width = $('#Llist').val();
+        bloknot_height = $('#Hlist').val();
+        if (bloknot_width < 0) {
+            $('#Llist').val(0);
+        }
+        if (bloknot_height < 0) {
+            $('#Hlist').val(0);
+        }
         $('#Lbl').text(bloknot_width);
         var Lbl2=bloknot_width*2;
         $('#Lb12').text(Lbl2);
@@ -301,62 +313,57 @@ $(document).ready(function() {
         calculation();
     });
 
-    $('#Llist').keyup(function(e){
-        bloknot_width=document.getElementById('Llist').value;
-        if(bloknot_width<0){
-            bloknot_width=0;
-        }
-        document.getElementById('Llist').value=bloknot_width;
-        bloknot_height=document.getElementById('Hlist').value;
-        if(bloknot_height<0){
-            bloknot_height=0;
-        }
-        document.getElementById('Hlist').value=bloknot_height;
+    // $('#Llist').keyup(function(e){
+    //     bloknot_width=document.getElementById('Llist').value;
+    //     if(bloknot_width<0){
+    //         bloknot_width=0;
+    //     }
+    //     document.getElementById('Llist').value=bloknot_width;
+    //     bloknot_height=document.getElementById('Hlist').value;
+    //     if(bloknot_height<0){
+    //         bloknot_height=0;
+    //     }
+    //     document.getElementById('Hlist').value=bloknot_height;
 
-        $('#Lbl').text(bloknot_width);
-        var Lbl2=bloknot_width*2;
-        $('#Lb12').text(Lbl2);
-        $('#Hbl').text(bloknot_height);
-        $('#Lb2').text(bloknot_width);
-        var Lbl2=bloknot_width*2;
-        $('#Lb22').text(Lbl2);
-        $('#Hb2').text(bloknot_height);
+    //     $('#Lbl').text(bloknot_width);
+    //     var Lbl2=bloknot_width*2;
+    //     $('#Lb12').text(Lbl2);
+    //     $('#Hbl').text(bloknot_height);
+    //     $('#Lb2').text(bloknot_width);
+    //     var Lbl2=bloknot_width*2;
+    //     $('#Lb22').text(Lbl2);
+    //     $('#Hb2').text(bloknot_height);
+    //     calculation();
+    // });
+
+    // $('#Hlist').keyup(function(e){
+    //     bloknot_width=document.getElementById('Llist').value;
+    //     if(bloknot_width<0){
+    //         bloknot_width=0;
+    //     }
+    //     document.getElementById('Llist').value=bloknot_width;
+
+    //     bloknot_height=document.getElementById('Hlist').value;
+    //     if(bloknot_height<0){
+    //         bloknot_height=0;
+    //     }
+    //     document.getElementById('Hlist').value=bloknot_height;
+
+    //     $('#Lbl').text(bloknot_width);
+    //     var Lbl2=bloknot_width*2;
+    //     $('#Lb12').text(Lbl2);
+    //     $('#Hbl').text(bloknot_height);
+    //     $('#Lb2').text(bloknot_width);
+    //     var Lbl2=bloknot_width*2;
+    //     $('#Lb22').text(Lbl2);
+    //     $('#Hb2').text(bloknot_height);
+    //     calculation();
+    // });
+
+    $('#list').on("input",function(){
         calculation();
     });
-
-    $('#Hlist').keyup(function(e){
-        bloknot_width=document.getElementById('Llist').value;
-        if(bloknot_width<0){
-            bloknot_width=0;
-        }
-        document.getElementById('Llist').value=bloknot_width;
-
-        bloknot_height=document.getElementById('Hlist').value;
-        if(bloknot_height<0){
-            bloknot_height=0;
-        }
-        document.getElementById('Hlist').value=bloknot_height;
-
-        $('#Lbl').text(bloknot_width);
-        var Lbl2=bloknot_width*2;
-        $('#Lb12').text(Lbl2);
-        $('#Hbl').text(bloknot_height);
-        $('#Lb2').text(bloknot_width);
-        var Lbl2=bloknot_width*2;
-        $('#Lb22').text(Lbl2);
-        $('#Hb2').text(bloknot_height);
-        calculation();
-    });
-
-    $('#list').click(function(){
-        calculation();
-    });
-
-    $('#list').keyup(function(){
-        calculation();
-    });
-
-    $('#list2').click(function(){
+    $('#list2').on("input",function(){
         calculation();
     });
 
@@ -453,18 +460,20 @@ $(document).ready(function() {
         $('#lamin_bl').text(laminb+';');
         calculation();
     });
-     $('#color_pr').click(function (){
-        calculation();
-    });
+    // $('#color_pr').click(function (){
+    //     calculation();
+    // });
 
-    $('select').change(function(){
-        alert("hello");
-        setTimeout(() => {
-            calculation();
-        }, 150);
-    });
+    // $('select').change(function(){
+    //     setTimeout(() => {
+    //         calculation();
+    //     }, 150);
+    // });
 
     function calculation(){
+
+        console.clear();
+        console.log("mark_start");
 
         //--- Заполненеи данных по Брошюрв ---\\
         //--- формат: ---\\
@@ -1021,6 +1030,10 @@ $(document).ready(function() {
         $('#Zitog').text(ZitogV + ' pуб');
         $('#Zitog_mobile').text(ZitogV + ' pуб');
         document.getElementById('Zitof').value=ZitogV+'p';
+
+        console.log("mark_end");
+        alert("we done");
+        
 
     };
 
