@@ -20,7 +20,7 @@
 		<div class="calc__mid">
 			<div class="calc__line">
 				<div class="calc__title">Выберите вещество</div>
-				<select name="" id="" class="calc__select">
+				<select name="" id="calc_gaz" class="calc__select">
 					<option value="0">Вещество ...</option>
 					<option value="15">Азот (N2)</option>
 					<option value="2">Аммиак (NH3)</option>
@@ -77,13 +77,13 @@
 			<div class="calc__line">
 				<div class="calc__title">Выберите еденицы</div>
 				<div class="calc__picker">
-					<input type="radio" name="calc_unit" id="calc_unit_1" class="calc__radio" checked>
+					<input type="radio" name="calc_unit" id="calc_unit_1" class="calc__radio" value="1" checked>
 					<label class="calc__label" for="calc_unit_1">ppm</label>
-					<input type="radio" name="calc_unit" id="calc_unit_2" class="calc__radio">
+					<input type="radio" name="calc_unit" id="calc_unit_2" class="calc__radio" value="2">
 					<label class="calc__label" for="calc_unit_2">мг/м3</label>
-					<input type="radio" name="calc_unit" id="calc_unit_3" class="calc__radio">
+					<input type="radio" name="calc_unit" id="calc_unit_3" class="calc__radio" value="3">
 					<label class="calc__label" for="calc_unit_3">% об. д.</label>
-					<input type="radio" name="calc_unit" id="calc_unit_4" class="calc__radio">
+					<input type="radio" name="calc_unit" id="calc_unit_4" class="calc__radio" value="4">
 					<label class="calc__label" for="calc_unit_4">% НКПР</label>
 				</div>
 			</div>
@@ -91,7 +91,7 @@
 	
 			<div class="calc__line">
 				<div class="calc__title">Введите значение</div>
-				<input type="text" class="calc__input" value="0">
+				<input id="calc_value" type="text" class="calc__input" value="0">
 			</div>
 
 			<div class="calc__line calc__line--btns">
@@ -107,23 +107,22 @@
 					<div class="calcTable__value">Значение</div>
 				</div>
 				<div class="calcTable__line">
-					<div class="calcTable__name">ppm</div>
-					<div class="calcTable__value">-</div>
+					<div id="calcTable_name_1" class="calcTable__name">ppm</div>
+					<div id="calcTable_val_1" class="calcTable__value">-</div>
 				</div>
 				<div class="calcTable__line">
-					<div class="calcTable__name">мг/м3</div>
-					<div class="calcTable__value">-</div>
+					<div id="calcTable_name_2" class="calcTable__name">мг/м3</div>
+					<div id="calcTable_val_2" class="calcTable__value">-</div>
 				</div>
 				<div class="calcTable__line">
-					<div class="calcTable__name">% об. д.</div>
-					<div class="calcTable__value">-</div>
+					<div id="calcTable_name_3" class="calcTable__name">% об. д.</div>
+					<div id="calcTable_val_3" class="calcTable__value">-</div>
 				</div>
 				<div class="calcTable__line">
-					<div class="calcTable__name">% НКПР</div>
-					<div class="calcTable__value">-</div>
+					<div id="calcTable_name_4" class="calcTable__name">% НКПР</div>
+					<div id="calcTable_val_4" class="calcTable__value">-</div>
 				</div>
 			</div>
-
 
 		</div>
 
