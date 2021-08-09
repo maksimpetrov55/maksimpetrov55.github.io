@@ -1,0 +1,199 @@
+
+
+body
+    position: relative
+    background: #ddd
+
+.calc
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: sans-serif
+    position: relative
+    width: 100%
+    max-width: 800px
+    min-height: 300px
+    background: #fff
+    margin: 40px auto
+    padding: 40px 20px
+    @media ( max-width: 570px )
+        padding: 40px 10px
+    @media ( max-width: 570px )
+        padding: 30px 5px
+
+    *
+        padding: 0
+        margin: 0
+        box-sizing: border-box
+        font-family: sans-serif
+
+    &__mid
+        position: relative
+        margin: 0 auto
+        width: 510px
+        @media ( max-width: 570px )
+            width: 100%
+            max-width: 510px
+
+    &__line
+        display: flex
+        align-items: center
+        margin: 0 0 10px 0
+        height: 40px
+        align-items: center
+        &--btns
+            margin: 30px 0 40px 0
+            @media ( max-width: 570px )
+                justify-content: center
+            @media ( max-width: 340px )
+                justify-content: space-between
+        @media ( max-width: 570px )
+            flex-wrap: wrap
+            height: auto
+
+    &__title
+        font-size: 18px
+        width: 210px
+        text-align: right
+        padding: 0 10px 0 0
+        @media ( max-width: 570px )
+            width: 100%
+            text-align: center
+            padding: 10px 0 10px 0
+
+    &__select
+        padding: 0 7px
+        height: 40px
+        font-size: 17px
+        width: 300px
+        border-radius: 4px
+        border: 1px solid #aaa
+        @media ( max-width: 570px )
+            margin: 0 auto
+            width: 100%
+            max-width: 300px
+        @media ( max-width: 340px )
+            max-width: 500px
+
+    &__picker
+        display: flex
+        justify-content: space-between
+        width: 300px
+        @media ( max-width: 570px )
+            margin: 0 auto
+            width: 100%
+            max-width: 300px
+        @media ( max-width: 340px )
+            max-width: 500px
+
+    &__radio
+        display: none
+
+        &:checked + .calc__label
+            background: #3459ff
+            color: #fff
+
+    &__label
+        width: 70px
+        font-size: 14px
+        height: 40px
+        border-radius: 4px
+        border: 1px solid #aaa
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer
+        transition-duration: 0.2s
+
+    &__input
+        padding: 0 7px
+        height: 40px
+        font-size: 17px
+        width: 300px
+        border-radius: 4px
+        border: 1px solid #aaa
+        @media ( max-width: 570px )
+            margin: 0 auto
+            width: 100%
+            max-width: 300px
+        @media ( max-width: 340px )
+            max-width: 500px
+
+    &__btn
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+        height: 40px
+        color: #fff
+        letter-spacing: 1px
+        border-radius: 4px
+        cursor: pointer
+        transition-duration: 0.2s
+        user-select: none
+
+        &:hover
+            opacity: 0.8
+            transform: translateY(-5px)
+        &:active
+            opacity: 0.2
+
+        &--calc
+            width: 190px
+            background: #3459ff
+            margin: 0 10px 0px 0
+            @media ( max-width: 340px )
+                width: 64%
+                margin: 0
+
+        &--clear
+            width: 100px
+            background: #d42c2c
+            margin: 0 0px 0px 0
+            @media ( max-width: 340px )
+                width: 33%
+
+
+
+
+
+
+.calcTable
+    position: relative
+    width: 100%
+    min-height: 100px
+    border-radius: 4px
+    border: 1px solid #aaa
+    border-bottom: none
+    @media ( max-width: 570px )
+        max-width: 520px
+
+    &__line
+        position: relative
+        width: 100%
+        display: flex
+        height: 44px
+        align-items: center
+        border-bottom: 1px solid #aaa
+        &--head
+            background: #eee
+            font-weight: 600
+
+    &__name
+        display: flex
+        line-height: 1
+        align-items: center
+        position: relative
+        width: 50%
+        height: 100%
+        padding: 0 10px
+        border-right: 1px solid #aaa
+
+    &__value
+        display: flex
+        line-height: 1
+        align-items: center
+        position: relative
+        width: 50%
+        height: 100%
+        padding: 0 10px

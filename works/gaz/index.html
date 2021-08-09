@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div class="calc__mid">
+			<div class="calc__line">
+				<div class="calc__title">Выберите вещество</div>
+				<select name="" id="" class="calc__select">
+					<option value="0">Вещество ...</option>
+					<option value="15">Азот (N2)</option>
+					<option value="2">Аммиак (NH3)</option>
+					<option value="1">Ацетилен (C2H2)</option>
+					<option value="25">Ацетон (C3H6O)</option>
+					<option value="27">Ацетон (C3H6O)</option>
+					<option value="3">Бензол (C6H6)</option>
+					<option value="46">Бром (Br2)</option>
+					<option value="4">Бутан (C4H10)</option>
+					<option value="42">Винилхлорид (C2H3Cl)</option>
+					<option value="10">Водород (H2)</option>
+					<option value="9">Гексан (C6H14)</option>
+					<option value="39">Гелий (He)</option>
+					<option value="16">Диоксид азота (NO2)</option>
+					<option value="20">Диоксид углерода (CO2)</option>
+					<option value="28">Изобутан ((CH3)3CH)</option>
+					<option value="18">Кислород (O2)</option>
+					<option value="12">Метан (CH4)</option>
+					<option value="13">Метанол (CH3OH)</option>
+					<option value="44">Метантиол-Метилмеркаптан (CH3SH)</option>
+					<option value="40">Метиламин (CH3NH2)</option>
+					<option value="19">Озон (O3)</option>
+					<option value="36">Оксид азота (NO)</option>
+					<option value="17">Оксид серы (SO2)</option>
+					<option value="5">Оксид углерода (CO)</option>
+					<option value="26">Октан (C8H18)</option>
+					<option value="31">Пентан (C5H12)</option>
+					<option value="14">Пропан (C3H8)</option>
+					<option value="11">Сероводород (H2S)</option>
+					<option value="30">Синильная кислота (HCN)</option>
+					<option value="33">Стирол (C8H8)</option>
+					<option value="47">Толуилендиизоцианат (C9H6N2O2)</option>
+					<option value="34">Толуол (C6H5CH3)</option>
+					<option value="32">Фенол (C6H5OH)</option>
+					<option value="29">Формальдегид (CH2O)</option>
+					<option value="37">Фосфин (PH3)</option>
+					<option value="21">Фтор (F2)</option>
+					<option value="22">Фтороводород (HF)</option>
+					<option value="43">Фурфуриловый спирт (C5H6O2)</option>
+					<option value="23">Хлор (Cl2)</option>
+					<option value="24">Хлороводород (HCl)</option>
+					<option value="41">Циклогексан (C6H12)</option>
+					<option value="45">Циклогексанон (C6H10O)</option>
+					<option value="6">Этан (C2H6)</option>
+					<option value="7">Этанол (C2H5OH)</option>
+					<option value="38">Этантиол-этилмеркаптан (С2H5SH)</option>
+					<option value="48">Этилацетат (C4H8O2)</option>
+					<option value="35">Этилбензол-Ксилол (C8H10)</option>
+					<option value="8">Этилен (C2H4)</option>
+				</select>
+			</div>
+			
+	
+			<div class="calc__line">
+				<div class="calc__title">Выберите еденицы</div>
+				<div class="calc__picker">
+					<input type="radio" name="calc_unit" id="calc_unit_1" class="calc__radio" checked>
+					<label class="calc__label" for="calc_unit_1">ppm</label>
+					<input type="radio" name="calc_unit" id="calc_unit_2" class="calc__radio">
+					<label class="calc__label" for="calc_unit_2">мг/м3</label>
+					<input type="radio" name="calc_unit" id="calc_unit_3" class="calc__radio">
+					<label class="calc__label" for="calc_unit_3">% об. д.</label>
+					<input type="radio" name="calc_unit" id="calc_unit_4" class="calc__radio">
+					<label class="calc__label" for="calc_unit_4">% НКПР</label>
+				</div>
+			</div>
+			
+	
+			<div class="calc__line">
+				<div class="calc__title">Введите значение</div>
+				<input type="text" class="calc__input" value="0">
+			</div>
+
+			<div class="calc__line calc__line--btns">
+				<div class="calc__title"></div>
+				<div class="calc__btn calc__btn--calc">Конвертировать</div>
+				<div class="calc__btn calc__btn--clear">Сброс</div>
+			</div>
+
+
+			<div class="calcTable">
+				<div class="calcTable__line calcTable__line--head">
+					<div class="calcTable__name">Единица измерения</div>
+					<div class="calcTable__value">Значение</div>
+				</div>
+				<div class="calcTable__line">
+					<div class="calcTable__name">ppm</div>
+					<div class="calcTable__value">-</div>
+				</div>
+				<div class="calcTable__line">
+					<div class="calcTable__name">мг/м3</div>
+					<div class="calcTable__value">-</div>
+				</div>
+				<div class="calcTable__line">
+					<div class="calcTable__name">% об. д.</div>
+					<div class="calcTable__value">-</div>
+				</div>
+				<div class="calcTable__line">
+					<div class="calcTable__name">% НКПР</div>
+					<div class="calcTable__value">-</div>
+				</div>
+			</div>
+
+
+		</div>
+
+
+
+	</div>
+
+
+</body>
+</html>
