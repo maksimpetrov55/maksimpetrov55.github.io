@@ -13,6 +13,7 @@
     <meta name="description" content="Калькулятор изготовления блокнотов">
     <link href="css/style.css?v6" rel="stylesheet">
     <link href="css/media.css?v6" rel="stylesheet">
+    <link href="css/wa-btn_styles.css" rel="stylesheet">
     <link href="css/font.css" rel="stylesheet">
 
 
@@ -129,52 +130,74 @@
 
 <div class="content">
 
+    <div class="wa-btn">
+        <a class="wa-btn__link" target="_blank" href="https://wa.me/79265319363?text=Здравствуйте,%20я%20из%20калькулятора%20брошюр"></a>
+        <div class="wa-btn__ring"></div>
+        <div class="wa-btn__note">Написать в WhatsApp!</div>
+    </div>
+
     <div class="content__header">
         <div class="content__headname">Калькулятор брошюр</div>
-        <img src="img/logo2.png" alt="" class="content__logo">
-        <a target="_blank" href="https://wa.me/79265319363?text=Здравствуйте,%20я%20из%20калькулятора%20брошюр" class="content__contacts">
+        <img src="img/logo.png" alt="" class="content__logo">
+        <div class="calc__mail">
+            <a class="content__mail" href="mailto:1000vp@mail.ru">1000vp@mail.ru</a>
+            <a class="content__phone" href="tel:+79265319363">+7 (926) 531 93-63</a>
+        </div>
+        <!-- <a target="_blank" href="https://wa.me/79265319363?text=Здравствуйте,%20я%20из%20калькулятора%20брошюр" class="content__contacts">
             <img src="img/whatsapp.png" alt="" class="content__whatsapp">
             <div class="content__phone">Написать в WhatsApp</div>
-        </a>
+        </a> -->
     </div>
 
     <div class="content_block1">
 
         <div class="content_block1_img">
 
-            <div class="content_block1_img1">
-                <div class="content_block1_img1_1">
-                  <img src="img/Skoba1.png" alt="kl"  class="calc_content_img_block1" >
-                </div>
-                <div class="content_block1_img1_2">
-                    <img src="img/Skoba2.png" alt="kl"  class="calc_content_img_block1">
-                </div>
-            </div>
-
-            <div class="content_block1_img2">
-                <div class="content_block1_img2_1">
-                   <img src="img/Prug2.png"  alt="pr"  class="calc_content_img_block1"  >
-                </div>
-                <div class="content_block1_img2_2">
-                    <img src="img/Prug1.png"  alt="pr"  class="calc_content_img_block1"  >
+            <div style="position: relative;">
+                <div id="calc_note_1" class="calc__note">?</div>
+                <div style="position: relative;" class="content_block1_img1">
+                    <div class="content_block1_img1_1">
+                        <img src="img/Skoba1.png" alt="kl"  class="calc_content_img_block1" >
+                    </div>
+                    <div class="content_block1_img1_2">
+                        <img src="img/Skoba2.png" alt="kl"  class="calc_content_img_block1">
+                    </div>
                 </div>
             </div>
 
-            <div class="content_block1_img3">
-                <div class="content_block1_img3_1">
-                  <img src="img/Klei1.png" alt="sk"  class="calc_content_img_block1" >
-                </div>
-                <div class="content_block1_img3_2">
-                    <img src="img/Klei2.png" alt="sk"  class="calc_content_img_block1" >
+            <div style="position: relative;">
+                <div id="calc_note_2" class="calc__note">?</div>
+                <div class="content_block1_img2">
+                    <div class="content_block1_img2_1">
+                    <img src="img/Prug2.png"  alt="pr"  class="calc_content_img_block1"  >
+                    </div>
+                    <div class="content_block1_img2_2">
+                        <img src="img/Prug1.png"  alt="pr"  class="calc_content_img_block1"  >
+                    </div>
                 </div>
             </div>
 
-            <div class="content_block1_img4">
-                <div class="content_block1_img4_1">
-                  <img src="img/Sverl1.png" alt="sk"  class="calc_content_img_block1" >
+            <div style="position: relative;">
+                <div id="calc_note_3" class="calc__note">?</div>
+                <div class="content_block1_img3">
+                    <div class="content_block1_img3_1">
+                    <img src="img/Klei1.png" alt="sk"  class="calc_content_img_block1" >
+                    </div>
+                    <div class="content_block1_img3_2">
+                        <img src="img/Klei2.png" alt="sk"  class="calc_content_img_block1" >
+                    </div>
                 </div>
-                <div class="content_block1_img4_2">
-                    <img src="img/Sverl2.png" alt="sk"  class="calc_content_img_block1" >
+            </div>
+
+            <div style="position: relative;">
+                <div id="calc_note_4" class="calc__note">?</div>
+                <div class="content_block1_img4">
+                    <div class="content_block1_img4_1">
+                    <img src="img/Sverl1.png" alt="sk"  class="calc_content_img_block1" >
+                    </div>
+                    <div class="content_block1_img4_2">
+                        <img src="img/Sverl2.png" alt="sk"  class="calc_content_img_block1" >
+                    </div>
                 </div>
             </div>
 
@@ -182,6 +205,29 @@
         </div>
 
         <div class="content_block1_content">
+            <div id="calc_popup_1" class="calc__popup">
+                <img src="img/popup/Skoba_2.jpeg" alt="">
+                <img src="img/popup/Skoba_3.jpeg" alt="">
+                <img src="img/popup/Skoba_4.jpeg" alt="">
+                <img src="img/popup/Skoba_6.jpeg" alt="">
+                <img src="img/popup/Skoba_7.jpeg" alt="">
+            </div>
+            <div id="calc_popup_2" class="calc__popup">
+                <img src="img/popup/Pr_1.jpeg" alt="">
+                <img src="img/popup/Pr_2.jpeg" alt="">
+                <img src="img/popup/Pr_3.jpeg" alt="">
+                <img src="img/popup/Pr_4.jpeg" alt="">
+            </div>
+            <div id="calc_popup_3" class="calc__popup">
+                <img src="img/popup/kl_1.jpeg" alt="">
+                <img src="img/popup/kl_2.jpeg" alt="">
+                <img src="img/popup/kl_3.jpeg" alt="">
+            </div>
+            <div id="calc_popup_4" class="calc__popup">
+                <img src="img/popup/Sv_1.jpeg" alt="">
+                <img src="img/popup/Sv_2.jpeg" alt="">
+                <img src="img/popup/Sv_3.jpeg" alt="">
+            </div>
             <div class="calc_content_format">
                 <label class="name">Формат</label>
                 <select required class="format" id="format" >
@@ -233,23 +279,39 @@
         <div class="content_block2_obl">
             <div class="content_block2_cont">
             <h2>Обложка</h2>
+            
             <input type="button" class="button_param" id="button1" value="Убрать" />
             </div>
 
-            <div class="param_obl">
-                <div class="param_block">
+            <div style="position: relative;" class="param_obl">
+                <div style="position: relative;" class="param_block">
+                    <div id="calc_note_5" class="calc__note calc__note--other">?</div>
                     <label class="name">Цветность</label>
                     <select required class="format2" id="colorb" >
                     </select>
                 </div>
 
+                <div id="calc_popup_5" class="calc__popup calc__popup--other">
+                    <div>4+0 — цветное с одной стороны листа</div><br>
+                    <div>4+4 — цветное с двух стороны листа</div><br>
+                    <div>1+0 — черно белое с одной стороны листа</div><br>
+                    <div>1+1 — черно белое с двух стороны листа</div><br>
+                </div>
 
-                <div class="param_block">
+                <div style="position: relative;" class="param_block">
+                    <div id="calc_note_6" class="calc__note calc__note--other">?</div>
                     <label class="name">Материал</label>
                     <select required class="format2" id="typeb" >
                     </select>
                 </div>
 
+                <div id="calc_popup_6" class="calc__popup calc__popup--other">
+                    <div>Например</div><br>
+                    <div>80гр офсетка — это обычная офисная бумага;</div><br>
+                    <div>100-150гр меловка — это бумага для цветных листовок;</div><br>
+                    <div>300гр меловка — это плотная визиточная бумага;</div><br>
+                    <div>300гр картон — это жесче чем визиточная бумага;</div><br>
+                </div>
 
                 <div class="param_block">
                     <label class="name">Ламинация</label>

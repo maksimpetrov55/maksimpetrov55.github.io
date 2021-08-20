@@ -5,6 +5,66 @@ var Nobl = 1;
 
 $(document).ready(function() {
 
+    $(".wa-btn__link").mouseover(function(){
+        $(".wa-btn__note").addClass('wa-btn__note--animation');
+    });
+    $(".wa-btn__link").mouseleave(function(){
+        $(".wa-btn__note").removeClass('wa-btn__note--animation');
+    });
+    $(".wa-btn__link").click(function(){
+        $(".wa-btn__note").removeClass('wa-btn__note--animation');
+    });
+
+    $('.content').click(function(){
+        $('.calc__popup--show').removeClass("calc__popup--show");
+    });
+    $('#calc_note_1').click(function(){
+        setTimeout(() => {
+            $('.calc__popup--show').removeClass("calc__popup--show");
+            $('#calc_popup_1').addClass("calc__popup--show");
+        }, 100);
+    });
+    $('#calc_note_2').click(function(){
+        setTimeout(() => {
+            $('.calc__popup--show').removeClass("calc__popup--show");
+            $('#calc_popup_2').addClass("calc__popup--show");
+        }, 100);
+    });
+    $('#calc_note_3').click(function(){
+        setTimeout(() => {
+            $('.calc__popup--show').removeClass("calc__popup--show");
+            $('#calc_popup_3').addClass("calc__popup--show");
+        }, 100);
+    });
+    $('#calc_note_4').click(function(){
+        setTimeout(() => {
+            $('.calc__popup--show').removeClass("calc__popup--show");
+            $('#calc_popup_4').addClass("calc__popup--show");
+        }, 100);
+    });
+    $('#calc_note_5').click(function(){
+        setTimeout(() => {
+            $('.calc__popup--show').removeClass("calc__popup--show");
+            $('#calc_popup_5').addClass("calc__popup--show");
+        }, 100);
+    });
+    $('#calc_note_6').click(function(){
+        setTimeout(() => {
+            $('.calc__popup--show').removeClass("calc__popup--show");
+            $('#calc_popup_6').addClass("calc__popup--show");
+        }, 100);
+    });
+
+
+
+
+
+
+
+
+
+
+
     if(BlockOpen == 1){
         $('.itog_block').addClass('itog_block_open');
     }

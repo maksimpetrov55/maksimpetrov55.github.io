@@ -113,16 +113,24 @@ body{
     max-height: 40px;
 }
 
+.content__mail{
+    position: relative;
+    text-align: center;
+    display: block;
+    font-size: 21px;
+    text-decoration: none;
+    margin: 0 0 5px 0;
+}
 .content__phone{
+    position: relative;
+    text-align: center;
+    display: block;
     font-size: 18px;
     text-decoration: none;
-    color: #fff;
-    font-weight: 00;
-    text-shadow: 1px 1px 1px #64B16122;
+    color: #000;
+    text-shadow: 0px 0px 1px #00000099;
 }
-.content__phone:visited{
-    color: #fff;
-}
+
 .content__contacts:hover{
     background: #4fbe4b;
 }
@@ -161,10 +169,79 @@ body{
 .itog__mobile{
     display: none;
 }
-
-
-
-
+.calc__note{
+    display: block;
+    text-align: right;
+    margin: 0 5px 0 auto;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    border-radius: 50px;
+    border: 1px solid #222;
+    font-size: 14px;
+    user-select: none;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+.calc__note:hover{
+    background: #0066cc;
+    color: #fff;
+}
+.calc__note--other{
+    position: absolute;
+    right: -5px;
+    margin: 0 0 0 0;
+}
+.calc__popup{
+    margin: -120px 0 0 -160px; 
+    display: none;
+    position: absolute;
+    background: rgb(255, 250, 209);
+    width: 320px;
+    height: 400px;
+    z-index: 999;
+    box-shadow: 0 10px 15px 1px rgba(0,0,0,0.2);
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px 10px 0 10px;
+    transition-duration: 0.2s;
+    left: 50%;
+    overflow-x: scroll;
+}
+.calc__popup--other{
+    margin: -50px 0 0 -160px;
+    overflow: auto;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 1.2;
+    height: auto;
+    padding: 10px 10px 10px 10px;
+}
+.calc__popup--show{
+    display: flex;
+}
+.calc__popup img{
+    position: relative;
+    display: inline-block;
+    height: 100%;
+}
+/* .calc__popup__close{
+    top: -30px;
+    left: 50%;
+    margin: 0 0 0 -13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 100px;
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    z-index: +1;
+    color: #222;
+    font-size: 22px;
+    box-shadow: 0 10px 15px 1px rgba(0,0,0,0.2);
+} */
 
 
 
@@ -183,7 +260,7 @@ body{
 .content_block1_content{
     display: block;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 90%;
     margin: 0 auto;
     border: 1px solid #ddd;
