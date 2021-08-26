@@ -361,7 +361,13 @@ $(document).ready(function() {
             if(i == 1){var t1_cell_add = +amount;}else{var t1_cell_add = +calc_add;}
             if(i == 1){var t1_cell_contract = +t1_contract;}else{
 				if( calc_add > 0 ){
-					var t1_cell_contract = +calc_add + ++t1_contract_ARR[i-2] + +t1_clear_ARR[i-2];
+
+                    if ( (+t1_clear_ARR[i-2] + +calc_add) > +t1_contract_ARR[i-2] ) {
+                        var t1_cell_contract = +t1_clear_ARR[i-2] + +calc_add;
+                    } else {
+                        var t1_cell_contract = +t1_contract_ARR[i-2];
+                    }
+
 				} else {
 					var t1_cell_contract = +t1_contract_ARR[i-2];
 				}
@@ -427,7 +433,11 @@ $(document).ready(function() {
             if(i == 1){var t2_cell_add = +amount;}else{var t2_cell_add = +calc_add;}
             if(i == 1){var t2_cell_contract = +t2_contract;}else{
 				if( calc_add > 0 ){
-					var t2_cell_contract = +calc_add + ++t2_contract_ARR[i-2] + +t2_clear_ARR[i-2];
+                    if ( (+t2_clear_ARR[i-2] + +calc_add) > +t2_contract_ARR[i-2] ) {
+                        var t2_cell_contract = +t2_clear_ARR[i-2] + +calc_add;
+                    } else {
+                        var t2_cell_contract = +t2_contract_ARR[i-2];
+                    }
 				} else {
 					var t2_cell_contract = +t2_contract_ARR[i-2];
 				}
@@ -559,7 +569,11 @@ $(document).ready(function() {
             if(i == 1){var t4_cell_add = +amount;}else{var t4_cell_add = +calc_add;}
             if(i == 1){var t4_cell_contract = +t4_contract;}else{
 				if( calc_add > 0 ){
-					var t4_cell_contract = +calc_add + ++t4_contract_ARR[i-2] + +t4_clear_ARR[i-2];
+                    if ( (+t4_clear_ARR[i-2] + +calc_add) > +t4_contract_ARR[i-2] ) {
+                        var t4_cell_contract = +t4_clear_ARR[i-2] + +calc_add;
+                    } else {
+                        var t4_cell_contract = +t4_contract_ARR[i-2];
+                    }
 				} else {
 					var t4_cell_contract = +t4_contract_ARR[i-2];
 				}
@@ -679,7 +693,6 @@ $(document).ready(function() {
         // t5 ——————————————————————————————————————————————————————————————————————————————————————————————
 
 
-
 		$('#result_cell_1_1').text( $('#result_itog_1_1').text() );
 		$('#result_cell_1_2').text( $('#result_itog_1_2').text() );
 		$('#result_cell_1_3').text( $('#result_itog_1_3').text() );
@@ -705,6 +718,7 @@ $(document).ready(function() {
 		$('#result_cell_5_3').text( $('#result_itog_5_3').text() );
 		$('#result_cell_5_4').text( $('#result_itog_5_4').text() );
 		$('#result_cell_5_5').text( $('#result_itog_5_5').text() );
+
 
     }
 

@@ -11,6 +11,11 @@ body {
   background: #ddd;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 .calc {
   position: relative;
   background: #fff;
@@ -314,7 +319,7 @@ body {
   width: 90px;
   font-size: 18px;
   text-align: center;
-  padding: 6px 0px 6px 15px;
+  padding: 6px 0px 6px 0px;
   border-radius: 8px;
   border: 1px solid #bbb;
   outline: none;
