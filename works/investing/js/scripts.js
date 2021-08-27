@@ -32,7 +32,9 @@ $(document).ready(function() {
 			}
 		});
 	}
-	
+
+
+
 
 	$("#calc_slider_1").slider({
 		animate: "slow",
@@ -166,6 +168,43 @@ $(document).ready(function() {
 
 
 
+
+    // $('#calc_input_1_alt').change(function(){
+    //     $('#calc_input_1').val( $(this).val() );
+    // });
+
+    // function convert() {
+        
+    //     if( $('input[name=valute]:checked').val() == 0 ){
+    //         var valute_sign = "€";
+    //         var valute_val = 1;
+    //     }
+    //     if( $('input[name=valute]:checked').val() == 1 ){
+    //         var valute_sign = "₽";
+    //         var valute_val = +$('#money_rub').val();
+    //     }
+    //     if( $('input[name=valute]:checked').val() == 2 ){
+    //         var valute_sign = "Тен";
+    //         var valute_val = 1;
+    //     }
+    //     if( $('input[name=valute]:checked').val() == 3 ){
+    //         var valute_sign = "Сом";
+    //         var valute_val = 1;
+    //     }
+
+    //     $('#valute_sign_1').text( valute_sign );
+
+    // }
+
+    // setTimeout(() => {
+    //     convert();
+    //     $('#calc_input_1_alt').val( $('#calc_input_1').val() * valute_val ); 
+    // }, 200);
+	// $('input[name=valute]').change(convert);
+    // $('#calc_input_1').change(convert);
+
+
+
 	$('#calc_add').change(function(){
 		if ( $(this).val() == "" ){$(this).val(0);}
 		if ( $(this).val() < ($("#calc_input_1").val() * -1) ){
@@ -175,16 +214,28 @@ $(document).ready(function() {
 	});
 
 	$('#calc_contract').change(function(){
-		if ( $(this).val() == "" && $('input[name=calc_activation]:checked').val() != 0 ){$(this).val(0);} else {$(this).val(10000);}
+		if ( $(this).val() == "" ){
+            if ($('input[name=calc_activation]:checked').val() != 0) {
+                $('#calc_contract').val(0);
+            } else {
+                $('#calc_contract').val(10000);
+            }
+        }
+        if ($('input[name=calc_activation]:checked').val() != 0) {
+            if (  $('#calc_contract').val() != 0 ){
+                if (  $('#calc_contract').val() < 10000 ){
+                    $('#calc_contract').val( 10000 );
+                }
+                if (  $('#calc_contract').val() > 1000000 ){
+                    $('#calc_contract').val( 1000000 );
+                }
+            }
+        } else {
+            if (  $('#calc_contract').val() < 10000 ){
+                $('#calc_contract').val( 10000 );
+            }
+        }
 
-		if ( $(this).val() != 0 ){
-			if ( $(this).val() < 10000 ){
-				$(this).val( 10000 );
-			}
-			if ( $(this).val() > 1000000 ){
-				$(this).val( 1000000 );
-			}
-		}
 		calculation();
 	});
     $('input[name=calc_activation]').change(function(){
@@ -723,6 +774,7 @@ $(document).ready(function() {
                 <div class="out__cell">${t5_cell_end.toFixed(2)}</div>
             </div>`);
         }
+
 
         var t5_sum_month = 0;
         for (i = 0; i < t5_clear_ARR.length; i++){

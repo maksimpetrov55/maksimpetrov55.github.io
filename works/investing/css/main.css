@@ -285,6 +285,18 @@ input::-webkit-inner-spin-button {
   width: 50px;
 }
 
+.out__chart {
+  width: 100%;
+  position: relative;
+  height: 100px;
+  background: #000;
+}
+
+.charts {
+  position: relative;
+  margin: 30px auto 0 auto;
+}
+
 .money {
   width: 100%;
   border-bottom: 1px solid #bbb;
