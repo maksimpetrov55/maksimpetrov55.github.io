@@ -6,12 +6,12 @@
 	<title>Web Mockup</title>
 
 	<link rel="stylesheet" href="css/jquery-ui.css">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/main.css?v1">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/jquery.ui.touch-punch.min.js"></script>
-	<script src="js/scripts.js"></script>
+	<script src="js/scripts.js?v1"></script>
 
 </head>
 <body>
@@ -22,16 +22,38 @@
 
 		<div style="display: none;" id="EUR"></div>
 		<div style="display: none;" id="KZT"></div>
+		<div style="display: none;" id="KGS"></div>
 
 		<div class="calc__body">
 
 			<div class="money">
-				<div class="money__title">Курс евро по ЦБ РФ: </div>
-				<input id="money_cb" class="money__input" type="number">
+				<div id="money_title_rub" class="money__title">Курс евро по ЦБ РФ: </div>
+				<input id="money_rub" class="money__input" type="number">
 				<div class="calc__fly">₽</div>
 			</div>
 
+			<div class="money">
+				<div id="money_title_kzt" class="money__title">Курс тенге по ЦБ РФ: </div>
+				<input id="money_kzt" class="money__input" type="number">
+				<div class="calc__fly">₽</div>
+			</div>
 
+			<div class="money">
+				<div id="money_title_kgs" class="money__title">Курс сома: </div>
+				<input id="money_kgs" class="money__input" type="number">
+				<div class="calc__fly">₽</div>
+			</div>
+
+			<!-- <div class="valute">
+				<input class="valute__radio" type="radio" name="valute" id="valute_0" value="0" checked>
+				<label class="valute__label" for="valute_0">Евро</label>
+				<input class="valute__radio" type="radio" name="valute" id="valute_1" value="1">
+				<label class="valute__label" for="valute_1">Рубль</label>
+				<input class="valute__radio" type="radio" name="valute" id="valute_2" value="2">
+				<label class="valute__label" for="valute_2">Тенге</label>
+				<input class="valute__radio" type="radio" name="valute" id="valute_3" value="3">
+				<label class="valute__label" for="valute_3">Сом</label>
+			</div> -->
 
 			<div class="calc__block">
 				<div class="calc__title">Сумма</div>
@@ -103,7 +125,7 @@
 				<div id="result_itog_1_2" class="result__itog">555</div>
 			</div>
 			<div class="result__line">
-				<div class="result__title">Чистая рибыль за весь срок:</div>
+				<div class="result__title">Чистая прибыль за весь срок:</div>
 				<div id="result_itog_1_3" class="result__itog">555</div>
 			</div>
 			<div class="result__line">
@@ -125,7 +147,7 @@
 				<div id="result_itog_2_2" class="result__itog">555</div>
 			</div>
 			<div class="result__line">
-				<div class="result__title">Чистая рибыль за весь срок:</div>
+				<div class="result__title">Чистая прибыль за весь срок:</div>
 				<div id="result_itog_2_3" class="result__itog">555</div>
 			</div>
 			<div class="result__line">
@@ -147,7 +169,7 @@
 				<div id="result_itog_3_2" class="result__itog">555</div>
 			</div>
 			<div class="result__line">
-				<div class="result__title">Чистая рибыль за весь срок:</div>
+				<div class="result__title">Чистая прибыль за весь срок:</div>
 				<div id="result_itog_3_3" class="result__itog">555</div>
 			</div>
 			<div class="result__line">
@@ -169,7 +191,7 @@
 				<div id="result_itog_4_2" class="result__itog">555</div>
 			</div>
 			<div class="result__line">
-				<div class="result__title">Чистая рибыль за весь срок:</div>
+				<div class="result__title">Чистая прибыль за весь срок:</div>
 				<div id="result_itog_4_3" class="result__itog">555</div>
 			</div>
 			<div class="result__line">
@@ -191,7 +213,7 @@
 				<div id="result_itog_5_2" class="result__itog">555</div>
 			</div>
 			<div class="result__line">
-				<div class="result__title">Чистая рибыль за весь срок:</div>
+				<div class="result__title">Чистая прибыль за весь срок:</div>
 				<div id="result_itog_5_3" class="result__itog">555</div>
 			</div>
 			<div class="result__line">
@@ -208,7 +230,7 @@
 				<div class="result__cell"></div>
 				<div class="result__cell">Внесенная сумма</div>
 				<div class="result__cell">Итоговая сумма</div>
-				<div class="result__cell">Чистая рибыль за весь&nbsp;срок</div>
+				<div class="result__cell">Чистая прибыль за весь&nbsp;срок</div>
 				<div class="result__cell">Средняя прибыль в&nbsp;месяц</div>
 				<div class="result__cell result__cell--last">Заработано в&nbsp;%</div>
 			</div>

@@ -17,8 +17,12 @@ $(document).ready(function() {
 					}
 					if ( valute_ID == "R01335" ) {
 						var KZT = $(this).find('Value').html();
-						$('#KZT').text( KZT.split(',')[0] + "." + KZT.split(',')[1] );
+						$('#KZT').text( (KZT.split(',')[0] + "." + KZT.split(',')[1]) / 100 );
 					}
+                    if ( valute_ID == "R01370" ) {
+                        var KGS = $(this).find('Value').html();
+                        $('#KGS').text( (KGS.split(',')[0] + "." + KGS.split(',')[1]) / 100 );
+                    }
 				});
 
 			},
@@ -111,13 +115,25 @@ $(document).ready(function() {
 
 	setTimeout(() => {
 		var cb_EUR = $('#EUR').text();
-		$('#money_cb').val( (+cb_EUR).toFixed(2) );
+		$('#money_rub').val( (+cb_EUR).toFixed(2) );
+        var cb_KZT = $('#KZT').text();
+		$('#money_kzt').val( (+cb_KZT).toFixed(2) );
+        var cb_KGS = $('#KGS').text();
+		$('#money_kgs').val( (+cb_KGS).toFixed(2) );
 	}, 100);
-	$('.money__title').click(function(){
+	$('.money_title_rub').click(function(){
 		var cb_EUR = $('#EUR').text();
-		$('#money_cb').val( (+cb_EUR).toFixed(2) );
+		$('#money_rub').val( (+cb_EUR).toFixed(2) );
 	});
-	$('#money_cb').on("change", function(){
+    $('.money_title_kzt').click(function(){
+		var cb_KZT = $('#KZT').text();
+		$('#money_kzt').val( (+cb_KZT).toFixed(2) );
+	});
+    $('.money_title_kgs').click(function(){
+		var cb_KGS = $('#KGS').text();
+		$('#money_kgs').val( (+cb_KGS).toFixed(2) );
+	});
+	$('#money_rub').on("change", function(){
 		var cb_EUR = $('#EUR').text();
 		if( $(this).val() > (+cb_EUR + 10) ){
 			$(this).val( (+cb_EUR + 10).toFixed(2) );
@@ -127,6 +143,27 @@ $(document).ready(function() {
 		}
 		calculation();
 	});
+    $('#money_kzt').on("change", function(){
+		var cb_KZT = $('#KZT').text();
+		if( $(this).val() > (+cb_KZT + 10) ){
+			$(this).val( (+cb_KZT + 10).toFixed(2) );
+		}
+		if( $(this).val() < (+cb_KZT - 10) ){
+			$(this).val( (+cb_KZT - 10).toFixed(2) );
+		}
+		calculation();
+	});
+    $('#money_kgz').on("change", function(){
+		var cb_KGS = $('#KGS').text();
+		if( $(this).val() > (+cb_KGS + 10) ){
+			$(this).val( (+cb_KGS + 10).toFixed(2) );
+		}
+		if( $(this).val() < (+cb_KGS - 10) ){
+			$(this).val( (+cb_KGS - 10).toFixed(2) );
+		}
+		calculation();
+	});
+
 
 
 	$('#calc_add').change(function(){
@@ -136,8 +173,10 @@ $(document).ready(function() {
 		}
 		calculation();
 	});
+
 	$('#calc_contract').change(function(){
-		if ( $(this).val() == "" ){$(this).val(0);}
+		if ( $(this).val() == "" && $('input[name=calc_activation]:checked').val() != 0 ){$(this).val(0);} else {$(this).val(10000);}
+
 		if ( $(this).val() != 0 ){
 			if ( $(this).val() < 10000 ){
 				$(this).val( 10000 );
@@ -148,6 +187,11 @@ $(document).ready(function() {
 		}
 		calculation();
 	});
+    $('input[name=calc_activation]').change(function(){
+        if( $('input[name=calc_activation]:checked').val() == 0 && $('#calc_contract').val() < 10000 ) {
+            $('#calc_contract').val(10000);
+        }
+    });
 
 
 
@@ -216,7 +260,7 @@ $(document).ready(function() {
 		var t5_date_month = date.getMonth();
         var t5_date_year = date.getFullYear();
 
-        var euro = $('#money_cb').val();
+        var euro = $('#money_rub').val();
         console.log(euro);
         var calc_add = $('#calc_add').val();
         var amount = $('#calc_input_1').val();
