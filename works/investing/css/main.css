@@ -26,6 +26,12 @@ input::-webkit-inner-spin-button {
   padding: 30px 20px 60px 20px;
 }
 
+@media (max-width: 460px) {
+  .calc {
+    padding: 30px 5px 60px 5px;
+  }
+}
+
 .calc__body {
   position: relative;
   width: 100%;
@@ -72,7 +78,7 @@ input::-webkit-inner-spin-button {
 }
 
 .calc__input--slider {
-  width: 90px;
+  width: 110px;
   font-size: 18px;
   text-align: center;
   padding: 6px;
@@ -113,17 +119,33 @@ input::-webkit-inner-spin-button {
 .buttons {
   position: relative;
   width: 100%;
-  min-height: 100px;
+  min-height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-radius: 20px;
-  background: #ddd;
-  margin: 60px auto 20px auto;
+  border-radius: 20px 20px 0 0;
+  background: #fff;
+  margin: 60px auto 0px auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   overflow: hidden;
+}
+
+@media (max-width: 860px) {
+  .buttons {
+    margin: 60px auto 10px auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 800px) {
+  .buttons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .buttons__radio {
@@ -138,7 +160,7 @@ input::-webkit-inner-spin-button {
 .buttons__label {
   width: 16%;
   position: relative;
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -157,6 +179,25 @@ input::-webkit-inner-spin-button {
   padding: 5px;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
+  border: 1px solid #bbb;
+  border-bottom: none;
+}
+
+@media (max-width: 800px) {
+  .buttons__label {
+    width: 200px;
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 460px) {
+  .buttons__label {
+    width: 140px;
+    height: 50px;
+  }
 }
 
 .result {
@@ -165,14 +206,14 @@ input::-webkit-inner-spin-button {
   min-height: 100px;
   border: 1px solid #ccc;
   border-bottom: none;
-  border-radius: 20px 20px 0 0;
+  border-radius: 0;
   padding: 20px;
 }
 
 .result--last {
   padding: 0 0 40px 0;
   border-bottom: 1px solid #ccc;
-  border-radius: 20px;
+  overflow-x: scroll;
 }
 
 .result__line {
@@ -187,15 +228,50 @@ input::-webkit-inner-spin-button {
           justify-content: center;
 }
 
+@media (max-width: 420px) {
+  .result__line {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .result__title {
   width: 50%;
   text-align: right;
+}
+
+@media (max-width: 540px) {
+  .result__title {
+    width: 65%;
+  }
+}
+
+@media (max-width: 420px) {
+  .result__title {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .result__itog {
   font-weight: 600;
   width: 50%;
   padding: 0 0 0 10px;
+}
+
+@media (max-width: 540px) {
+  .result__itog {
+    width: 35%;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .result__itog {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .result__row {
@@ -205,11 +281,12 @@ input::-webkit-inner-spin-button {
   position: relative;
   font-size: 14px;
   width: 100%;
+  min-width: 650px;
 }
 
 .result__row--head {
   background: #eee;
-  border-radius: 20px 20px 0 0;
+  border-radius: 0;
 }
 
 .result__row:hover {
@@ -235,7 +312,6 @@ input::-webkit-inner-spin-button {
 }
 
 .result__cell--last {
-  border-radius: 0 20px 0 0;
   padding: 10px 10px 10px 5px;
 }
 
@@ -259,6 +335,12 @@ input::-webkit-inner-spin-button {
   display: flex;
 }
 
+@media (max-width: 576px) {
+  .out__row {
+    width: 100%;
+  }
+}
+
 .out__row--head {
   background: #eee;
 }
@@ -277,12 +359,30 @@ input::-webkit-inner-spin-button {
       flex-shrink: 0;
 }
 
+@media (max-width: 576px) {
+  .out__cell {
+    width: 40%;
+  }
+}
+
 .out__cell--long {
   width: 130px;
 }
 
 .out__cell--short {
   width: 50px;
+}
+
+@media (max-width: 576px) {
+  .out__cell--short {
+    width: 20%;
+  }
+}
+
+@media (max-width: 576px) {
+  .out__cell--hide {
+    display: none;
+  }
 }
 
 .out__chart {
@@ -299,7 +399,6 @@ input::-webkit-inner-spin-button {
 
 .money {
   width: 100%;
-  border-bottom: 1px solid #bbb;
   padding: 20px 0 20px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -310,6 +409,28 @@ input::-webkit-inner-spin-button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.money__flex {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.money__check {
+  margin: 0 8px 0 0;
+  width: 16px;
+  height: 16px;
 }
 
 .money__title {
@@ -319,8 +440,9 @@ input::-webkit-inner-spin-button {
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
-  width: 240px;
+  width: 200px;
   text-align: right;
+  text-decoration: underline;
 }
 
 .money__title:hover {
@@ -342,10 +464,15 @@ input::-webkit-inner-spin-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 20px auto;
+  margin: 10px auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.valute__header {
+  text-align: center;
+  margin: 10px auto 0 auto;
 }
 
 .valute__radio {

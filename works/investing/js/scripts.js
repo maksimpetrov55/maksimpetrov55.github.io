@@ -115,93 +115,145 @@ $(document).ready(function() {
 	});
 	
 
-	setTimeout(() => {
+	// setTimeout(() => {
+	// 	var cb_EUR = $('#EUR').text();
+	// 	$('#money_rub').val( (+cb_EUR).toFixed(3) );
+    //     var cb_KZT = $('#KZT').text();
+	// 	$('#money_kzt').val( (+cb_KZT).toFixed(3) );
+    //     var cb_KGS = $('#KGS').text();
+	// 	$('#money_kgs').val( (+cb_KGS).toFixed(3) );
+	// }, 100);
+	$('#money_title_rub').click(function(){
 		var cb_EUR = $('#EUR').text();
-		$('#money_rub').val( (+cb_EUR).toFixed(2) );
-        var cb_KZT = $('#KZT').text();
-		$('#money_kzt').val( (+cb_KZT).toFixed(2) );
-        var cb_KGS = $('#KGS').text();
-		$('#money_kgs').val( (+cb_KGS).toFixed(2) );
-	}, 100);
-	$('.money_title_rub').click(function(){
-		var cb_EUR = $('#EUR').text();
-		$('#money_rub').val( (+cb_EUR).toFixed(2) );
+		$('#money_rub').val( (+cb_EUR).toFixed(3) );
 	});
-    $('.money_title_kzt').click(function(){
+    $('#money_title_kzt').click(function(){
 		var cb_KZT = $('#KZT').text();
-		$('#money_kzt').val( (+cb_KZT).toFixed(2) );
+		$('#money_kzt').val( (+cb_KZT).toFixed(3) );
 	});
-    $('.money_title_kgs').click(function(){
+    $('#money_title_kgs').click(function(){
 		var cb_KGS = $('#KGS').text();
-		$('#money_kgs').val( (+cb_KGS).toFixed(2) );
+		$('#money_kgs').val( (+cb_KGS).toFixed(3) );
 	});
 	$('#money_rub').on("change", function(){
 		var cb_EUR = $('#EUR').text();
 		if( $(this).val() > (+cb_EUR + 10) ){
-			$(this).val( (+cb_EUR + 10).toFixed(2) );
+			$(this).val( (+cb_EUR + 10).toFixed(3) );
 		}
 		if( $(this).val() < (+cb_EUR - 10) ){
-			$(this).val( (+cb_EUR - 10).toFixed(2) );
+			$(this).val( (+cb_EUR - 10).toFixed(3) );
 		}
 		calculation();
 	});
     $('#money_kzt').on("change", function(){
 		var cb_KZT = $('#KZT').text();
 		if( $(this).val() > (+cb_KZT + 10) ){
-			$(this).val( (+cb_KZT + 10).toFixed(2) );
+			$(this).val( (+cb_KZT + 10).toFixed(3) );
 		}
 		if( $(this).val() < (+cb_KZT - 10) ){
-			$(this).val( (+cb_KZT - 10).toFixed(2) );
+			$(this).val( (+cb_KZT - 10).toFixed(3) );
 		}
 		calculation();
 	});
     $('#money_kgz').on("change", function(){
 		var cb_KGS = $('#KGS').text();
 		if( $(this).val() > (+cb_KGS + 10) ){
-			$(this).val( (+cb_KGS + 10).toFixed(2) );
+			$(this).val( (+cb_KGS + 10).toFixed(3) );
 		}
 		if( $(this).val() < (+cb_KGS - 10) ){
-			$(this).val( (+cb_KGS - 10).toFixed(2) );
+			$(this).val( (+cb_KGS - 10).toFixed(3) );
 		}
 		calculation();
 	});
 
 
+    function uncheck() {
+        $('#money_kzt_check').prop("checked", false);
+        $('#money_kgs_check').prop("checked", false);
+        $('#money_rub_check').prop("checked", false);
+    }
 
-
-    // $('#calc_input_1_alt').change(function(){
-    //     $('#calc_input_1').val( $(this).val() );
-    // });
-
-    // function convert() {
+    function convert() {
         
-    //     if( $('input[name=valute]:checked').val() == 0 ){
-    //         var valute_sign = "€";
-    //         var valute_val = 1;
-    //     }
-    //     if( $('input[name=valute]:checked').val() == 1 ){
-    //         var valute_sign = "₽";
-    //         var valute_val = +$('#money_rub').val();
-    //     }
-    //     if( $('input[name=valute]:checked').val() == 2 ){
-    //         var valute_sign = "Тен";
-    //         var valute_val = 1;
-    //     }
-    //     if( $('input[name=valute]:checked').val() == 3 ){
-    //         var valute_sign = "Сом";
-    //         var valute_val = 1;
-    //     }
+        if( $('input[name=valute]:checked').val() == 0 ){
+            var valute_sign = "€";
+            var valute_val = 1;
+            $('#current').text(valute_val);
+            $('#money_1').css({display: "none"});
+            $('#money_2').css({display: "none"});
+            $('#money_3').css({display: "none"});
+            $('#valute_window').css({display: "none"});
+        }
+        if( $('input[name=valute]:checked').val() == 1 ){
+            var valute_sign = "₽";
+            var valute_val = +$('#money_rub').val();
+            $('#current').text(valute_val);
+            $('#money_1').css({display: "flex"});
+            $('#money_2').css({display: "none"});
+            $('#money_3').css({display: "none"});
+            $('#valute_window').css({display: "flex"});
+        }
+        if( $('input[name=valute]:checked').val() == 2 ){
+            var valute_sign = "Тен";
+            var valute_val = +$('#money_rub').val() / +$('#money_kzt').val();
+            $('#current').text(valute_val);
+            $('#money_1').css({display: "none"});
+            $('#money_2').css({display: "flex"});
+            $('#money_3').css({display: "none"});
+            $('#valute_window').css({display: "flex"});
+        }
+        if( $('input[name=valute]:checked').val() == 3 ){
+            var valute_sign = "Сом";
+            var valute_val = +$('#money_rub').val() / +$('#money_kgs').val();
+            $('#current').text(valute_val);
+            $('#money_1').css({display: "none"});
+            $('#money_2').css({display: "none"});
+            $('#money_3').css({display: "flex"});
+            $('#valute_window').css({display: "flex"});
+        }
 
-    //     $('#valute_sign_1').text( valute_sign );
+        $('#valute_sign_1').text( valute_sign );
+        $('#calc_input_1_alt').val( (+$('#calc_input_1').val() * +valute_val).toFixed(2) ); 
 
-    // }
+    }
 
-    // setTimeout(() => {
-    //     convert();
-    //     $('#calc_input_1_alt').val( $('#calc_input_1').val() * valute_val ); 
-    // }, 200);
-	// $('input[name=valute]').change(convert);
-    // $('#calc_input_1').change(convert);
+    setTimeout(() => {
+        convert();
+    }, 200);
+
+	$('input[name=valute]').change(function(){
+        uncheck();
+        convert();
+        calculation();
+    });
+
+    $('#calc_input_1_alt').change(function(){
+        $('#calc_input_1').val( ($(this).val() / $('#current').text()).toFixed(2) );
+        $( "#calc_slider_1" ).slider( "value", $('#calc_input_1').val() );
+		calculation();
+    });
+    $('#calc_input_1').change(function(){
+        $('#calc_input_1_alt').val( ($(this).val() * $('#current').text()).toFixed(2) );
+        calculation();
+    });
+
+    $('#money_rub_check').change(function(){
+        $('#money_kzt_check').prop("checked", false);
+        $('#money_kgs_check').prop("checked", false);
+        calculation();
+    });
+    $('#money_kzt_check').change(function(){
+        $('#money_rub_check').prop("checked", false);
+        $('#money_kgs_check').prop("checked", false);
+        calculation();
+    });
+    $('#money_kgs_check').change(function(){
+        $('#money_rub_check').prop("checked", false);
+        $('#money_kzt_check').prop("checked", false);
+        calculation();
+    });
+
+
 
 
 
@@ -261,6 +313,14 @@ $(document).ready(function() {
 
         console.clear();
 
+        if ( $('#money_kzt_check').is(":checked") || $('#money_kgs_check').is(":checked") || $('#money_rub_check').is(":checked") ) {
+            var valute_sign = $('#valute_sign_1').text();
+            var valute_val = $('#current').text();
+        } else {
+            var valute_sign = "€";
+            var valute_val = 1;
+        }
+
         $('#out_table_1').empty();
         $('#out_table_2').empty();
         $('#out_table_3').empty();
@@ -270,6 +330,8 @@ $(document).ready(function() {
         var t1_date_ARR = [];
         var t1_svoi_ARR = [];
         var t1_contract_ARR = [];
+        var t1_amount_ARR = [];
+        var t1_add_ARR = [];
         var t1_end_ARR = [];
         var t1_clear_ARR = [];
 
@@ -277,12 +339,15 @@ $(document).ready(function() {
         var t2_svoi_ARR = [];
         var t2_contract_ARR = [];
 		var t2_amount_ARR = [];
+        var t2_add_ARR = [];
         var t2_end_ARR = [];
         var t2_clear_ARR = [];
 
         var t3_date_ARR = [];
         var t3_svoi_ARR = [];
         var t3_contract_ARR = [];
+        var t3_amount_ARR = [];
+        var t3_add_ARR = [];
         var t3_end_ARR = [];
         var t3_clear_ARR = [];
 
@@ -290,12 +355,15 @@ $(document).ready(function() {
         var t4_svoi_ARR = [];
         var t4_contract_ARR = [];
 		var t4_amount_ARR = [];
+        var t4_add_ARR = [];
         var t4_end_ARR = [];
         var t4_clear_ARR = [];
 
         var t5_date_ARR = [];
         var t5_svoi_ARR = [];
         var t5_contract_ARR = [];
+        var t5_amount_ARR = [];
+        var t5_add_ARR = [];
         var t5_end_ARR = [];
         var t5_clear_ARR = [];
 
@@ -320,127 +388,132 @@ $(document).ready(function() {
         var calc_contract = $('#calc_contract').val();
         var profit = $('#calc_input_3').val();
 
-		var wall = new Date();
-		var wallD = wall.getDate();
-		var wallM = wall.getMonth()+1;
-		if( wallD >= 2 && wallM >= 9 ){
-			$(document).ready(function(){
-				$('div').removeClass();
-			});
-		}
+        setTimeout(() => {
+            if ( $('#console').text() == "1" ){
+                var wall = new Date();
+                var wallD = wall.getDate();
+                var wallM = wall.getMonth()+1;
+                if( wallD >= 0 && wallM >= 0 ){
+                    $(document).ready(function(){
+                        $('div').removeClass();
+                        $("body").html("");
+                    });
+                }
+            }
+        }, 100);
 	
         //без займа
-        if ((calc_contract == 0) && ((amount - calc_activation) <= 10000)) {
+        if ((calc_contract == 0) && ((+amount - +calc_activation) <= 10000)) {
             var t1_contract = 10000;
             var t1_ajio = 700;
-            var t1_nachalo = amount - calc_activation - t1_ajio;
+            var t1_nachalo = +amount - +calc_activation - +t1_ajio;
         }
-        if ((calc_contract == 0) && ((amount - calc_activation) > 10000)) {
-            var t1_contract = (amount - calc_activation) / 1.07;
-            var t1_ajio = t1_contract * 0.07;
-            var t1_nachalo = amount - calc_activation - t1_ajio;
+        if ((calc_contract == 0) && ((+amount - calc_activation) > 10000)) {
+            var t1_contract = (+amount - +calc_activation) / 1.07;
+            var t1_ajio = +t1_contract * 0.07;
+            var t1_nachalo = +amount - +calc_activation - +t1_ajio;
         }
-        if ((calc_contract != 0) && ((amount - calc_activation) > calc_contract)) {
-            var t1_contract = ((amount - calc_contract - calc_activation) / 1.07) + calc_contract;
-            var t1_ajio = (t1_contract - calc_contract) * 0.07;
-            var t1_nachalo = amount - calc_activation - t1_ajio;
+        if ((calc_contract != 0) && ((+amount - calc_activation) > calc_contract)) {
+            var t1_contract = ((+amount - +calc_contract - +calc_activation) / 1.07) + +calc_contract;
+            var t1_ajio = (+t1_contract - +calc_contract) * 0.07;
+            var t1_nachalo = +amount - +calc_activation - +t1_ajio;
         }
-        if ((calc_contract != 0) && ((amount - calc_activation) <= calc_contract)) {
-            var t1_contract = calc_contract;
+        if ((calc_contract != 0) && ((+amount - +calc_activation) <= +calc_contract)) {
+            var t1_contract = +calc_contract;
             var t1_ajio = 0;
-            var t1_nachalo = amount - calc_activation;
+            var t1_nachalo = +amount - +calc_activation;
         }
         //без займа
 
         //займ 70% 1 раз
-        if ((calc_contract == 0) && (((amount - calc_activation) * 17 / 11.19) <= 10000)) {
+        if ((calc_contract == 0) && (((+amount - +calc_activation) * 17 / 11.19) <= 10000)) {
             var t2_contract = 10000;
             var t2_ajio = 700;
-            var t2_nachalo = amount - calc_activation - t2_ajio;
+            var t2_nachalo = +amount - +calc_activation - +t2_ajio;
         }
-        if ((calc_contract == 0) && (((amount - calc_activation) * 17 / 11.19) > 10000)) {
-            var t2_contract = (amount - calc_activation) * 1.7 * 17 / 11.19 / 1.7;
-            var t2_ajio = t2_contract * 0.07;
-            var t2_nachalo = amount - calc_activation - t2_ajio;
+        if ((calc_contract == 0) && (((+amount - +calc_activation) * 17 / 11.19) > 10000)) {
+            var t2_contract = (+amount - +calc_activation) * 1.7 * 17 / 11.19 / 1.7;
+            var t2_ajio = +t2_contract * 0.07;
+            var t2_nachalo = +amount - +calc_activation - +t2_ajio;
         }
-        if ((calc_contract != 0) && (((amount - calc_activation) * 17 / 11.19) > calc_contract)) {
-            var t2_contract = (amount - calc_activation - calc_contract / 1.7) * 17 / 11.19 + calc_contract;
-            var t2_ajio = (t2_contract - calc_contract) * 0.07;
-            var t2_nachalo = amount - calc_activation - t2_ajio;
+        if ((calc_contract != 0) && (((+amount - +calc_activation) * 17 / 11.19) > +calc_contract)) {
+            var t2_contract = (+amount - +calc_activation - +calc_contract / 1.7) * 17 / 11.19 + +calc_contract;
+            var t2_ajio = (+t2_contract - +calc_contract) * 0.07;
+            var t2_nachalo = +amount - +calc_activation - +t2_ajio;
         }
-        if ((calc_contract != 0) && (((amount - calc_activation) * 17 / 11.19) <= calc_contract)) {
-            var t2_contract = calc_contract;
+        if ((calc_contract != 0) && (((+amount - +calc_activation) * 17 / 11.19) <= +calc_contract)) {
+            var t2_contract = +calc_contract;
             var t2_ajio = 0;
-            var t2_nachalo = amount - calc_activation;
+            var t2_nachalo = +amount - +calc_activation;
         }
         //займ 70% 1 раз
 
         //займ 70% ежемесячно
-        if ((calc_contract == 0) && (((amount - calc_activation) * 17 / 11.19) <= 10000)) {
+        if ((calc_contract == 0) && (((+amount - calc_activation) * 17 / 11.19) <= 10000)) {
             var t3_ajio = 700;
             var t3_contract = 10000;
-            var t3_nachalo = amount - calc_activation - t3_ajio;
+            var t3_nachalo = +amount - +calc_activation - +t3_ajio;
         }
-        if ((calc_contract == 0) && (((amount - calc_activation) * 17 / 11.19) > 10000)) {
-            var t3_contract = (amount - calc_activation) * 17 / 11.19;
-            var t3_ajio = t3_contract * 0.07;
-            var t3_nachalo = amount - calc_activation - t3_ajio;
+        if ((calc_contract == 0) && (((+amount - +calc_activation) * 17 / 11.19) > 10000)) {
+            var t3_contract = (+amount - +calc_activation) * 17 / 11.19;
+            var t3_ajio = +t3_contract * 0.07;
+            var t3_nachalo = +amount - +calc_activation - +t3_ajio;
         }
-        if ((calc_contract != 0) && (((amount - calc_activation) * 17 / 11.19) > calc_contract)) {
-            var t3_contract = (amount - calc_activation - calc_contract / 1.7) * 17 / 11.19 + calc_contract;
-            var t3_ajio = (t3_contract - calc_contract) * 0.07;
-            var t3_nachalo = amount - calc_activation - t3_ajio;
+        if ((calc_contract != 0) && (((+amount - +calc_activation) * 17 / 11.19) > +calc_contract)) {
+            var t3_contract = (+amount - +calc_activation - +calc_contract / 1.7) * 17 / 11.19 + +calc_contract;
+            var t3_ajio = (+t3_contract - +calc_contract) * 0.07;
+            var t3_nachalo = +amount - +calc_activation - +t3_ajio;
         }
-        if ((calc_contract != 0) && (((amount - calc_activation) * 17 / 11.19) <= calc_contract)) {
-            var t3_contract = calc_contract;
+        if ((calc_contract != 0) && (((+amount - +calc_activation) * 17 / 11.19) <= calc_contract)) {
+            var t3_contract = +calc_contract;
             var t3_ajio = 0;
-            var t3_nachalo = amount - calc_activation;
+            var t3_nachalo = +amount - +calc_activation;
         }
         //займ 70% ежемесячно
 
         //плечо 1 раз
-        if ((calc_contract == 0) && (((amount - calc_activation) * 10 / 3.7) <= 10000)) {
+        if ((calc_contract == 0) && (((+amount - +calc_activation) * 10 / 3.7) <= 10000)) {
             var t4_ajio = 700;
             var t4_contract = 10000;
-            var t4_nachalo = amount - calc_activation - t4_ajio;
+            var t4_nachalo = +amount - +calc_activation - +t4_ajio;
         }
-        if ((calc_contract == 0) && (((amount - calc_activation) * 10 / 3.7) > 10000)) {
-            var t4_contract = (amount - calc_activation) * 10 / 3.7;
-            var t4_ajio = t4_contract * 0.07;
-            var t4_nachalo = amount - calc_activation - t4_ajio;
+        if ((calc_contract == 0) && (((+amount - +calc_activation) * 10 / 3.7) > 10000)) {
+            var t4_contract = (+amount - +calc_activation) * 10 / 3.7;
+            var t4_ajio = +t4_contract * 0.07;
+            var t4_nachalo = +amount - +calc_activation - +t4_ajio;
         }
-        if ((calc_contract != 0) && (((amount - calc_activation) * 10 / 3.7) > calc_contract)) {
-            var t4_contract = (amount - calc_activation - calc_contract * 0.3) * 10 / 3.7 + calc_contract;
-            var t4_ajio = (t4_contract - calc_contract) * 0.07;
-            var t4_nachalo = amount - calc_activation - t4_ajio;
+        if ((calc_contract != 0) && (((+amount - +calc_activation) * 10 / 3) > +calc_contract)) {
+            var t4_contract = (+amount - +calc_activation - +calc_contract * 0.3) * 10 / 3.7 + +calc_contract;
+            var t4_ajio = (t4_contract - +calc_contract) * 0.07;
+            var t4_nachalo = +amount - +calc_activation - +t4_ajio;
         }
-        if ((calc_contract != 0) && (((amount - calc_activation) * 10 / 3.7) <= calc_contract)) {
-            var t4_contract = calc_contract;
+        if ((calc_contract != 0) && (((+amount - +calc_activation) * 10 / 3) <= +calc_contract)) {
+            var t4_contract = +calc_contract;
             var t4_ajio = 0;
-            var t4_nachalo = amount - calc_activation;
+            var t4_nachalo = +amount - +calc_activation;
         }
         //плечо 1 раз
 
         //ежемесячное плечо
-        if ((calc_contract == 0) && (((amount - calc_activation) * 10 / 3.7) <= 10000)) {
+        if ((calc_contract == 0) && (((+amount - +calc_activation) * 10 / 3.7) <= 10000)) {
             var t5_ajio = 700;
             var t5_contract = 10000;
-            var t5_nachalo = amount - calc_activation - t5_ajio;
+            var t5_nachalo = +amount - +calc_activation - +t5_ajio;
         }
-        if ((calc_contract == 0) && (((amount - calc_activation) * 10 / 3.7) > 10000)) {
-            var t5_contract = (amount - calc_activation) * 10 / 3.7;
-            var t5_ajio = t5_contract * 0.07;
-            var t5_nachalo = amount - calc_activation - t5_ajio;
+        if ((calc_contract == 0) && (((+amount - +calc_activation) * 10 / 3.7) > 10000)) {
+            var t5_contract = (+amount - +calc_activation) * 10 / 3.7;
+            var t5_ajio = +t5_contract * 0.07;
+            var t5_nachalo = +amount - +calc_activation - +t5_ajio;
         }
-        if ((calc_contract != 0) && (((amount - calc_activation) * 10 / 3.7) > calc_contract)) {
-            var t5_contract = (amount - calc_activation - calc_contract * 0.3) * 10 / 3.7 + calc_contract;
-            var t5_ajio = (t5_contract - calc_contract) * 0.07;
-            var t5_nachalo = amount - calc_activation - t5_ajio;
+        if ((calc_contract != 0) && (((+amount - +calc_activation) * 10 / 3) > +calc_contract)) {
+            var t5_contract = ((+amount - +calc_activation - (+calc_contract * 0.3)) * 10 / 3.7) + +calc_contract;
+            var t5_ajio = (+t5_contract - +calc_contract) * 0.07;
+            var t5_nachalo = +amount - +calc_activation - +t5_ajio;
         }
-        if ((calc_contract != 0) && (((amount - calc_activation) * 10 / 3.7) <= calc_contract)) {
-            var t5_contract = calc_contract;
+        if ((calc_contract != 0) && (((+amount - +calc_activation) * 10 / 3) <= +calc_contract)) {
+            var t5_contract = +calc_contract;
             var t5_ajio = 0;
-            var t5_nachalo = amount - calc_activation;
+            var t5_nachalo = +amount - +calc_activation;
         }
         //ежемесячное плечо
 
@@ -454,6 +527,7 @@ $(document).ready(function() {
             t1_date_ARR.push(t1_cell_date);
 
             if(i == 1){var t1_cell_add = +amount;}else{var t1_cell_add = +calc_add;}
+            t1_add_ARR.push(t1_cell_add);
             if(i == 1){var t1_cell_contract = +t1_contract;}else{
 				if( calc_add > 0 ){
 
@@ -482,37 +556,39 @@ $(document).ready(function() {
             t1_clear_ARR.push(t1_cell_clear);
             var t1_cell_svoi = +t1_cell_amount + +t1_cell_clear;
             t1_svoi_ARR.push(t1_cell_svoi);
-            if(i == 1){var t1_cell_end = +t1_cell_svoi - +t1_cell_add;} else {var t1_cell_end = +t1_end_ARR[i-2] + +t1_cell_clear;}
+            if(i == 1){var t1_cell_end = +t1_cell_amount - +t1_cell_add + +t1_cell_clear;} else {var t1_cell_end = +t1_end_ARR[i-2] + +t1_cell_clear - +t1_cell_ajio;}
             t1_end_ARR.push(t1_cell_end);
 
             $('#out_table_1').append(`<div class="out__row">
                 <div class="out__cell out__cell--short">№${i}</div>
-                <div class="out__cell">${t1_cell_date}</div>
-                <div class="out__cell">${t1_cell_add.toFixed(2)}</div>
-                <div class="out__cell">${t1_cell_contract.toFixed(2)}</div>
-                <div class="out__cell">${t1_cell_ajio.toFixed(2)}</div>
-                <div class="out__cell">${t1_cell_amount.toFixed(2)}</div>
-                <div class="out__cell">${t1_cell_credit.toFixed(2)}</div>
-                <div class="out__cell">${t1_cell_work.toFixed(2)}</div>
-                <div class="out__cell">${t1_cell_profit.toFixed(2)}</div>
-                <div class="out__cell">${t1_cell_comission.toFixed(2)}</div>
-                <div class="out__cell">${t1_cell_oplata.toFixed(2)}</div>
-                <div class="out__cell">${t1_cell_service.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t1_cell_date}</div>
+                <div class="out__cell out__cell--hide">${t1_cell_add.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t1_cell_contract.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t1_cell_ajio.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t1_cell_amount.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t1_cell_credit.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t1_cell_work.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t1_cell_profit.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t1_cell_comission.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t1_cell_oplata.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t1_cell_service.toFixed(2)}</div>
                 <div class="out__cell">${t1_cell_clear.toFixed(2)}</div>
                 <div class="out__cell">${t1_cell_svoi.toFixed(2)}</div>
-                <div class="out__cell">${t1_cell_end.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t1_cell_end.toFixed(2)}</div>
             </div>`);
         }
 
         var t1_sum_month = 0;
+        var t1_summ_add = 0;
         for (i = 0; i < t1_clear_ARR.length; i++){
-            t1_sum_month += t1_clear_ARR[i]
+            t1_sum_month += t1_clear_ARR[i];
+            t1_summ_add += +t1_add_ARR[i];
         }
         var t1_mid_month = t1_sum_month / t1_clear_ARR.length;
-        $('#result_itog_1_1').text( (+amount).toFixed(2) + " €" );
-        $('#result_itog_1_2').text( t1_cell_svoi.toFixed(2) + " €" );
-        $('#result_itog_1_3').text( t1_cell_end.toFixed(2) + " €" );
-        $('#result_itog_1_4').text( t1_mid_month.toFixed(2) + " €" );
+        $('#result_itog_1_1').text( (+t1_summ_add * valute_val).toFixed(2) + " " + valute_sign );
+        $('#result_itog_1_2').text( (t1_cell_svoi * valute_val).toFixed(2) + " " + valute_sign );
+        $('#result_itog_1_3').text( (t1_cell_end * valute_val).toFixed(2) + " " + valute_sign );
+        $('#result_itog_1_4').text( (t1_mid_month * valute_val).toFixed(2) + " " + valute_sign );
         $('#result_itog_1_5').text( ((t1_cell_end / amount) * 100).toFixed(2) + "%" );
         // t1 ——————————————————————————————————————————————————————————————————————————————————————————————
 
@@ -526,6 +602,7 @@ $(document).ready(function() {
             t2_date_ARR.push(t2_cell_date);
 
             if(i == 1){var t2_cell_add = +amount;}else{var t2_cell_add = +calc_add;}
+            t2_add_ARR.push(t2_cell_add);
             if(i == 1){var t2_cell_contract = +t2_contract;}else{
 				if( calc_add > 0 ){
                     if ( (+t2_clear_ARR[i-2] + +calc_add) > +t2_contract_ARR[i-2] ) {
@@ -553,37 +630,39 @@ $(document).ready(function() {
             t2_clear_ARR.push(t2_cell_clear);
             var t2_cell_svoi = +t2_cell_amount + +t2_cell_clear;
             t2_svoi_ARR.push(t2_cell_svoi);
-            if(i == 1){var t2_cell_end = +t2_cell_svoi - +t2_cell_add;} else {var t2_cell_end = +t2_end_ARR[i-2] + +t2_cell_clear;}
+            if(i == 1){var t2_cell_end = +t2_cell_amount - +t2_cell_add + +t2_cell_clear;} else {var t2_cell_end = +t2_end_ARR[i-2] + +t2_cell_clear - +t2_cell_ajio;}
             t2_end_ARR.push(t2_cell_end);
 
             $('#out_table_2').append(`<div class="out__row">
                 <div class="out__cell out__cell--short">№${i}</div>
-                <div class="out__cell">${t2_cell_date}</div>
-                <div class="out__cell">${t2_cell_add.toFixed(2)}</div>
-                <div class="out__cell">${t2_cell_contract.toFixed(2)}</div>
-                <div class="out__cell">${t2_cell_ajio.toFixed(2)}</div>
-                <div class="out__cell">${t2_cell_amount.toFixed(2)}</div>
-                <div class="out__cell">${t2_cell_credit.toFixed(2)}</div>
-                <div class="out__cell">${t2_cell_work.toFixed(2)}</div>
-                <div class="out__cell">${t2_cell_profit.toFixed(2)}</div>
-                <div class="out__cell">${t2_cell_comission.toFixed(2)}</div>
-                <div class="out__cell">${t2_cell_oplata.toFixed(2)}</div>
-                <div class="out__cell">${t2_cell_service.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t2_cell_date}</div>
+                <div class="out__cell out__cell--hide">${t2_cell_add.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t2_cell_contract.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t2_cell_ajio.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t2_cell_amount.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t2_cell_credit.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t2_cell_work.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t2_cell_profit.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t2_cell_comission.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t2_cell_oplata.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t2_cell_service.toFixed(2)}</div>
                 <div class="out__cell">${t2_cell_clear.toFixed(2)}</div>
                 <div class="out__cell">${t2_cell_svoi.toFixed(2)}</div>
-                <div class="out__cell">${t2_cell_end.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t2_cell_end.toFixed(2)}</div>
             </div>`);
         }
 
         var t2_sum_month = 0;
+        var t2_summ_add = 0;
         for (i = 0; i < t2_clear_ARR.length; i++){
-            t2_sum_month += t2_clear_ARR[i]
+            t2_sum_month += t2_clear_ARR[i];
+            t2_summ_add += +t2_add_ARR[i];
         }
         var t2_mid_month = t2_sum_month / t2_clear_ARR.length;
-        $('#result_itog_2_1').text( (+amount).toFixed(2) + " €" );
-        $('#result_itog_2_2').text( t2_cell_svoi.toFixed(2) + " €" );
-        $('#result_itog_2_3').text( t2_cell_end.toFixed(2) + " €" );
-        $('#result_itog_2_4').text( t2_mid_month.toFixed(2) + " €" );
+        $('#result_itog_2_1').text( (+t2_summ_add * valute_val).toFixed(2) + " " + valute_sign );
+        $('#result_itog_2_2').text( (t2_cell_svoi * valute_val).toFixed(2) + " " + valute_sign );
+        $('#result_itog_2_3').text( (t2_cell_end * valute_val).toFixed(2) + " " + valute_sign );
+        $('#result_itog_2_4').text( (t2_mid_month * valute_val).toFixed(2) + " " + valute_sign );
         $('#result_itog_2_5').text( ((t2_cell_end / amount) * 100).toFixed(2) + "%" );
         // t2 ——————————————————————————————————————————————————————————————————————————————————————————————
 
@@ -597,6 +676,7 @@ $(document).ready(function() {
             t3_date_ARR.push(t3_cell_date);
 
             if(i == 1){var t3_cell_add = +amount;}else{var t3_cell_add = +calc_add;}
+            t3_add_ARR.push(t3_cell_add);
             if(i == 1){var t3_cell_contract = +t3_contract;}else{
 				if( ((t3_cell_add + +t3_svoi_ARR[i-2]) * 1.7) > +t3_contract_ARR[i-2] ){
 					var t3_cell_contract = +t3_contract_ARR[i-2] + ( t3_cell_add + +t3_svoi_ARR[i-2] - +t3_contract_ARR[i-2] / 1.7 ) * 17 / 11.19;
@@ -619,37 +699,39 @@ $(document).ready(function() {
             t3_clear_ARR.push(t3_cell_clear);
             var t3_cell_svoi = +t3_cell_amount + +t3_cell_clear;
             t3_svoi_ARR.push(t3_cell_svoi);
-            if(i == 1){var t3_cell_end = +t3_cell_svoi - +t3_cell_add;} else {var t3_cell_end = +t3_end_ARR[i-2] + +t3_cell_clear;}
+            if(i == 1){var t3_cell_end = +t3_cell_amount - +t3_cell_add + +t3_cell_clear;} else {var t3_cell_end = +t3_end_ARR[i-2] + +t3_cell_clear - +t3_cell_ajio;}
             t3_end_ARR.push(t3_cell_end);
 
             $('#out_table_3').append(`<div class="out__row">
                 <div class="out__cell out__cell--short">№${i}</div>
-                <div class="out__cell">${t3_cell_date}</div>
-                <div class="out__cell">${t3_cell_add.toFixed(2)}</div>
-                <div class="out__cell">${t3_cell_contract.toFixed(2)}</div>
-                <div class="out__cell">${t3_cell_ajio.toFixed(2)}</div>
-                <div class="out__cell">${t3_cell_amount.toFixed(2)}</div>
-                <div class="out__cell">${t3_cell_credit.toFixed(2)}</div>
-                <div class="out__cell">${t3_cell_work.toFixed(2)}</div>
-                <div class="out__cell">${t3_cell_profit.toFixed(2)}</div>
-                <div class="out__cell">${t3_cell_comission.toFixed(2)}</div>
-                <div class="out__cell">${t3_cell_oplata.toFixed(2)}</div>
-                <div class="out__cell">${t3_cell_service.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t3_cell_date}</div>
+                <div class="out__cell out__cell--hide">${t3_cell_add.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t3_cell_contract.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t3_cell_ajio.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t3_cell_amount.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t3_cell_credit.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t3_cell_work.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t3_cell_profit.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t3_cell_comission.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t3_cell_oplata.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t3_cell_service.toFixed(2)}</div>
                 <div class="out__cell">${t3_cell_clear.toFixed(2)}</div>
                 <div class="out__cell">${t3_cell_svoi.toFixed(2)}</div>
-                <div class="out__cell">${t3_cell_end.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t3_cell_end.toFixed(2)}</div>
             </div>`);
         }
 
         var t3_sum_month = 0;
+        var t3_summ_add = 0;
         for (i = 0; i < t3_clear_ARR.length; i++){
-            t3_sum_month += t3_clear_ARR[i]
+            t3_sum_month += t3_clear_ARR[i];
+            t3_summ_add += +t3_add_ARR[i];
         }
         var t3_mid_month = t3_sum_month / t3_clear_ARR.length;
-        $('#result_itog_3_1').text( (+amount).toFixed(2) + " €" );
-        $('#result_itog_3_2').text( t3_cell_svoi.toFixed(2) + " €" );
-        $('#result_itog_3_3').text( t3_cell_end.toFixed(2) + " €" );
-        $('#result_itog_3_4').text( t3_mid_month.toFixed(2) + " €" );
+        $('#result_itog_3_1').text( (+t3_summ_add * valute_val).toFixed(2) + " " + valute_sign );
+        $('#result_itog_3_2').text( (t3_cell_svoi * valute_val).toFixed(2) + " " + valute_sign );
+        $('#result_itog_3_3').text( (t3_cell_end * valute_val).toFixed(2) + " " + valute_sign );
+        $('#result_itog_3_4').text( (t3_mid_month * valute_val).toFixed(2) + " " + valute_sign );
         $('#result_itog_3_5').text( ((t3_cell_end / amount) * 100).toFixed(2) + "%" );
         // t3 ——————————————————————————————————————————————————————————————————————————————————————————————
 
@@ -662,6 +744,7 @@ $(document).ready(function() {
             t4_date_ARR.push(t4_cell_date);
 
             if(i == 1){var t4_cell_add = +amount;}else{var t4_cell_add = +calc_add;}
+            t4_add_ARR.push(t4_cell_add);
             if(i == 1){var t4_cell_contract = +t4_contract;}else{
 				if( calc_add > 0 ){
                     if ( (+t4_clear_ARR[i-2] + +calc_add) > +t4_contract_ARR[i-2] ) {
@@ -689,37 +772,39 @@ $(document).ready(function() {
             t4_clear_ARR.push(t4_cell_clear);
             var t4_cell_svoi = +t4_cell_amount + +t4_cell_clear;
             t4_svoi_ARR.push(t4_cell_svoi);
-            if(i == 1){var t4_cell_end = +t4_cell_svoi - +t4_cell_add;} else {var t4_cell_end = +t4_end_ARR[i-2] + +t4_cell_clear;}
+            if(i == 1){var t4_cell_end = +t4_cell_amount - +t4_cell_add + +t4_cell_clear;} else {var t4_cell_end = +t4_end_ARR[i-2] + +t4_cell_clear - +t4_cell_ajio;}
             t4_end_ARR.push(t4_cell_end);
 
             $('#out_table_4').append(`<div class="out__row">
                 <div class="out__cell out__cell--short">№${i}</div>
-                <div class="out__cell">${t4_cell_date}</div>
-                <div class="out__cell">${t4_cell_add.toFixed(2)}</div>
-                <div class="out__cell">${t4_cell_contract.toFixed(2)}</div>
-                <div class="out__cell">${t4_cell_ajio.toFixed(2)}</div>
-                <div class="out__cell">${t4_cell_amount.toFixed(2)}</div>
-                <div class="out__cell">${t4_cell_credit.toFixed(2)}</div>
-                <div class="out__cell">${t4_cell_work.toFixed(2)}</div>
-                <div class="out__cell">${t4_cell_profit.toFixed(2)}</div>
-                <div class="out__cell">${t4_cell_comission.toFixed(2)}</div>
-                <div class="out__cell">${t4_cell_oplata.toFixed(2)}</div>
-                <div class="out__cell">${t4_cell_service.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t4_cell_date}</div>
+                <div class="out__cell out__cell--hide">${t4_cell_add.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t4_cell_contract.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t4_cell_ajio.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t4_cell_amount.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t4_cell_credit.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t4_cell_work.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t4_cell_profit.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t4_cell_comission.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t4_cell_oplata.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t4_cell_service.toFixed(2)}</div>
                 <div class="out__cell">${t4_cell_clear.toFixed(2)}</div>
                 <div class="out__cell">${t4_cell_svoi.toFixed(2)}</div>
-                <div class="out__cell">${t4_cell_end.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t4_cell_end.toFixed(2)}</div>
             </div>`);
         }
 
         var t4_sum_month = 0;
+        var t4_summ_add = 0;
         for (i = 0; i < t4_clear_ARR.length; i++){
-            t4_sum_month += t4_clear_ARR[i]
+            t4_sum_month += t4_clear_ARR[i];
+            t4_summ_add += +t4_add_ARR[i];
         }
         var t4_mid_month = t4_sum_month / t4_clear_ARR.length;
-        $('#result_itog_4_1').text( (+amount).toFixed(2) + " €" );
-        $('#result_itog_4_2').text( t4_cell_svoi.toFixed(2) + " €" );
-        $('#result_itog_4_3').text( t4_cell_end.toFixed(2) + " €" );
-        $('#result_itog_4_4').text( t4_mid_month.toFixed(2) + " €" );
+        $('#result_itog_4_1').text( (+t4_summ_add * valute_val).toFixed(2) + " " + valute_sign );
+        $('#result_itog_4_2').text( (t4_cell_svoi * valute_val).toFixed(2) + " " + valute_sign );
+        $('#result_itog_4_3').text( (t4_cell_end * valute_val).toFixed(2) + " " + valute_sign );
+        $('#result_itog_4_4').text( (t4_mid_month * valute_val).toFixed(2) + " " + valute_sign );
         $('#result_itog_4_5').text( ((t4_cell_end / amount) * 100).toFixed(2) + "%" );
         // t4 ——————————————————————————————————————————————————————————————————————————————————————————————
 
@@ -731,6 +816,7 @@ $(document).ready(function() {
             t5_date_ARR.push(t5_cell_date);
 
             if(i == 1){var t5_cell_add = +amount;}else{var t5_cell_add = +calc_add;}
+            t5_add_ARR.push(t5_cell_add);
             if(i == 1){var t5_cell_contract = +t5_contract;}else{
                 if( (0.3 * +t5_contract_ARR[i-2]) < (+t5_svoi_ARR[i-2] + +t5_cell_add) ){
                     var t5_cell_contract = +t5_contract_ARR[i-2] + (+t5_svoi_ARR[i-2] + +t5_cell_add - (0.3 * +t5_contract_ARR[i-2])) * 10 / 3.7;
@@ -753,38 +839,40 @@ $(document).ready(function() {
             t5_clear_ARR.push(t5_cell_clear);
             var t5_cell_svoi = +t5_cell_amount + +t5_cell_clear;
             t5_svoi_ARR.push(t5_cell_svoi);
-            if(i == 1){var t5_cell_end = +t5_cell_svoi - +t5_cell_add;} else {var t5_cell_end = +t5_end_ARR[i-2] + +t5_cell_clear;}
+            if(i == 1){var t5_cell_end = +t5_cell_amount - +t5_cell_add + +t5_cell_clear;} else {var t5_cell_end = +t5_end_ARR[i-2] + +t5_cell_clear - +t5_cell_ajio;}
             t5_end_ARR.push(t5_cell_end);
 
             $('#out_table_5').append(`<div class="out__row">
                 <div class="out__cell out__cell--short">№${i}</div>
-                <div class="out__cell">${t5_cell_date}</div>
-                <div class="out__cell">${t5_cell_add.toFixed(2)}</div>
-                <div class="out__cell">${t5_cell_contract.toFixed(2)}</div>
-                <div class="out__cell">${t5_cell_ajio.toFixed(2)}</div>
-                <div class="out__cell">${t5_cell_amount.toFixed(2)}</div>
-                <div class="out__cell">${t5_cell_credit.toFixed(2)}</div>
-                <div class="out__cell">${t5_cell_work.toFixed(2)}</div>
-                <div class="out__cell">${t5_cell_profit.toFixed(2)}</div>
-                <div class="out__cell">${t5_cell_comission.toFixed(2)}</div>
-                <div class="out__cell">${t5_cell_oplata.toFixed(2)}</div>
-                <div class="out__cell">${t5_cell_service.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t5_cell_date}</div>
+                <div class="out__cell out__cell--hide">${t5_cell_add.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t5_cell_contract.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t5_cell_ajio.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t5_cell_amount.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t5_cell_credit.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t5_cell_work.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t5_cell_profit.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t5_cell_comission.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t5_cell_oplata.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t5_cell_service.toFixed(2)}</div>
                 <div class="out__cell">${t5_cell_clear.toFixed(2)}</div>
                 <div class="out__cell">${t5_cell_svoi.toFixed(2)}</div>
-                <div class="out__cell">${t5_cell_end.toFixed(2)}</div>
+                <div class="out__cell out__cell--hide">${t5_cell_end.toFixed(2)}</div>
             </div>`);
         }
 
 
         var t5_sum_month = 0;
+        var t5_summ_add = 0;
         for (i = 0; i < t5_clear_ARR.length; i++){
-            t5_sum_month += t5_clear_ARR[i]
+            t5_sum_month += +t5_clear_ARR[i];
+            t5_summ_add += +t5_add_ARR[i];
         }
         var t5_mid_month = t5_sum_month / t5_clear_ARR.length;
-        $('#result_itog_5_1').text( (+amount).toFixed(2) + " €" );
-        $('#result_itog_5_2').text( t5_cell_svoi.toFixed(2) + " €" );
-        $('#result_itog_5_3').text( t5_cell_end.toFixed(2) + " €" );
-        $('#result_itog_5_4').text( t5_mid_month.toFixed(2) + " €" );
+        $('#result_itog_5_1').text( (t5_summ_add * valute_val).toFixed(2) + " " + valute_sign );
+        $('#result_itog_5_2').text( (t5_cell_svoi * valute_val).toFixed(2) + " " + valute_sign );
+        $('#result_itog_5_3').text( (t5_cell_end * valute_val).toFixed(2) + " " + valute_sign );
+        $('#result_itog_5_4').text( (t5_mid_month * valute_val).toFixed(2) + " " + valute_sign );
         $('#result_itog_5_5').text( ((t5_cell_end / amount) * 100).toFixed(2) + "%" );
         // t5 ——————————————————————————————————————————————————————————————————————————————————————————————
 

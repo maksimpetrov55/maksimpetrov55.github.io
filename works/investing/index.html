@@ -6,12 +6,12 @@
 	<title>Web Mockup</title>
 
 	<link rel="stylesheet" href="css/jquery-ui.css">
-	<link rel="stylesheet" href="css/main.css?v2">
+	<link rel="stylesheet" href="css/main.css?v3">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/jquery.ui.touch-punch.min.js"></script>
-	<script src="js/scripts.js?v2"></script>
+	<script src="js/scripts.js?v3"></script>
 
 </head>
 <body>
@@ -23,37 +23,53 @@
 		<div style="display: none;" id="EUR"></div>
 		<div style="display: none;" id="KZT"></div>
 		<div style="display: none;" id="KGS"></div>
+		<div style="display: none;" id="current"></div>
+
+		<div class="valute__header">Выбор валюты:</div>
+		<div class="valute">
+			<input class="valute__radio" type="radio" name="valute" id="valute_0" value="0" checked>
+			<label class="valute__label" for="valute_0">Евро</label>
+			<input class="valute__radio" type="radio" name="valute" id="valute_1" value="1">
+			<label class="valute__label" for="valute_1">Рубль</label>
+			<input class="valute__radio" type="radio" name="valute" id="valute_2" value="2">
+			<label class="valute__label" for="valute_2">Тенге</label>
+			<input class="valute__radio" type="radio" name="valute" id="valute_3" value="3">
+			<label class="valute__label" for="valute_3">Сом</label>
+		</div>
 
 		<div class="calc__body">
 
-			<div class="money">
+			<div style="display: none;" id="money_1" class="money">
 				<div id="money_title_rub" class="money__title">Курс евро по ЦБ РФ: </div>
-				<input id="money_rub" class="money__input" type="number">
+				<input id="money_rub" class="money__input" type="number" value="87.000">
 				<div class="calc__fly">₽</div>
+				<div class="money__flex">
+					<input class="money__check" type="checkbox" name="money_rub_check" id="money_rub_check" value="1">
+					<label for="money_rub_check">Вывод в рублях</label>
+				</div>
 			</div>
 
-			<div class="money">
+			<div style="display: none;" id="money_2" class="money">
 				<div id="money_title_kzt" class="money__title">Курс тенге по ЦБ РФ: </div>
-				<input id="money_kzt" class="money__input" type="number">
+				<input id="money_kzt" class="money__input" type="number" value="0.173">
 				<div class="calc__fly">₽</div>
+				<div class="money__flex">
+					<input class="money__check" type="checkbox" name="money_kzt_check" id="money_kzt_check" value="2">
+					<label for="money_kzt_check">Вывод в тенге</label>
+				</div>
 			</div>
 
-			<div class="money">
-				<div id="money_title_kgs" class="money__title">Курс сома: </div>
-				<input id="money_kgs" class="money__input" type="number">
+			<div style="display: none;" id="money_3" class="money">
+				<div id="money_title_kgs" class="money__title">Курс сома по ЦБ РФ: </div>
+				<input id="money_kgs" class="money__input" type="number" value="0.873">
 				<div class="calc__fly">₽</div>
+				<div class="money__flex">
+					<input class="money__check" type="checkbox" name="money_kgs_check" id="money_kgs_check" value="3">
+					<label for="money_kgs_check">Вывод в сомах</label>
+				</div>
 			</div>
 
-			<!-- <div class="valute">
-				<input class="valute__radio" type="radio" name="valute" id="valute_0" value="0" checked>
-				<label class="valute__label" for="valute_0">Евро</label>
-				<input class="valute__radio" type="radio" name="valute" id="valute_1" value="1">
-				<label class="valute__label" for="valute_1">Рубль</label>
-				<input class="valute__radio" type="radio" name="valute" id="valute_2" value="2">
-				<label class="valute__label" for="valute_2">Тенге</label>
-				<input class="valute__radio" type="radio" name="valute" id="valute_3" value="3">
-				<label class="valute__label" for="valute_3">Сом</label>
-			</div> -->
+
 
 			<div class="calc__block">
 				<div class="calc__title">Сумма</div>
@@ -62,7 +78,7 @@
 				<div class="calc__fly">€</div>
 			</div>
 
-			<div class="calc__block">
+			<div id="valute_window" class="calc__block">
 				<div class="calc__title"></div>
 				<div id="" class="calc__slider"></div>
 				<input type="number" class="calc__input calc__input--slider" id="calc_input_1_alt">
@@ -110,15 +126,16 @@
 			<input type="radio" name="buttons_radio" id="buttons_radio_1" class="buttons__radio" value="1">
 			<label class="buttons__label" for="buttons_radio_1">Без займа</label>
 			<input type="radio" name="buttons_radio" id="buttons_radio_2" class="buttons__radio" value="2">
-			<label class="buttons__label" for="buttons_radio_2">Займ 70% 1 раз</label>
+			<label class="buttons__label" for="buttons_radio_2">Займ 70% 1&nbsp;раз</label>
 			<input type="radio" name="buttons_radio" id="buttons_radio_3" class="buttons__radio" value="3">
 			<label class="buttons__label" for="buttons_radio_3">Займ 70% ежемесячно</label>
 			<input type="radio" name="buttons_radio" id="buttons_radio_4" class="buttons__radio" value="4">
-			<label class="buttons__label" for="buttons_radio_4">Плечо 1 раз</label>
+			<label class="buttons__label" for="buttons_radio_4">Плечо 1&nbsp;раз</label>
 			<input type="radio" name="buttons_radio" id="buttons_radio_5" class="buttons__radio" value="5" checked>
 			<label class="buttons__label" for="buttons_radio_5">Ежемесячное плечо</label>
 			<input type="radio" name="buttons_radio" id="buttons_radio_6" class="buttons__radio" value="6">
 			<label class="buttons__label" for="buttons_radio_6">Сравнить</label>
+			<div style="display: none;" id="console">0</div>
 		</div>
 
 
@@ -285,21 +302,21 @@
 
 		<div class="out">
 			<div class="out__row out__row--head">
-				<div class="out__cell out__cell--short">Номер</div>
-				<div class="out__cell">Месяц</div>
-				<div class="out__cell">Внесено</div>
-				<div class="out__cell">Контракт</div>
-				<div class="out__cell">Ajio</div>
-				<div class="out__cell">Cвои средства (начало месяца)</div>
-				<div class="out__cell">Займ</div>
-				<div class="out__cell">Работает на счете (баланс)</div>
-				<div class="out__cell">Прибыль за месяц</div>
-				<div class="out__cell">Комиссия компании</div>
-				<div class="out__cell">Оплата по займу</div>
-				<div class="out__cell">Обслуживание счета</div>
+				<div class="out__cell out__cell--short">Срок</div>
+				<div class="out__cell out__cell--hide">Месяц</div>
+				<div class="out__cell out__cell--hide">Внесено</div>
+				<div class="out__cell out__cell--hide">Контракт</div>
+				<div class="out__cell out__cell--hide">Ajio</div>
+				<div class="out__cell out__cell--hide">Cвои средства (начало месяца)</div>
+				<div class="out__cell out__cell--hide">Займ</div>
+				<div class="out__cell out__cell--hide">Работает на счете (баланс)</div>
+				<div class="out__cell out__cell--hide">Прибыль за месяц</div>
+				<div class="out__cell out__cell--hide">Комиссия компании</div>
+				<div class="out__cell out__cell--hide">Оплата по займу</div>
+				<div class="out__cell out__cell--hide">Обслуживание счета</div>
 				<div class="out__cell">Прибыль чистая за месяц</div>
 				<div class="out__cell">Свои на конец месяца</div>
-				<div class="out__cell">Прибыль за все время</div>
+				<div class="out__cell out__cell--hide">Прибыль за все время</div>
 			</div>
 			<div style="display: none;" id="out_table_1" class="out__table"></div>
 			<div style="display: none;" id="out_table_2" class="out__table"></div>
