@@ -25,6 +25,17 @@ input::-webkit-inner-spin-button
     @media ( max-width: 460px )
         padding: 30px 5px 60px 5px
 
+    &__header
+        font-size: 24px
+        font-weight: 600
+        text-align: center
+        margin: 10px auto
+
+    &__description
+        margin: 20px auto 40px auto
+        max-width: 700px
+        text-align: center
+
     &__body
         position: relative
         width: 100%
@@ -236,7 +247,7 @@ input::-webkit-inner-spin-button
         position: relative
 
     &__row
-        width: 1730px
+        width: 1131px
         position: relative
         display: flex
         @media ( max-width: 576px )
@@ -264,17 +275,124 @@ input::-webkit-inner-spin-button
         &--hide
             @media ( max-width: 576px )
                 display: none
+        &--none
+            display: none
 
-    &__chart
-        width: 100%
-        position: relative
-        height: 100px
-        background: #000
+
+
+
+.note
+    padding: 20px 0
+    border-left: 1px solid #ccc
+    border-right: 1px solid #ccc
+    display: flex
+    
+    &__text
+        
 
 
 .charts
     position: relative
-    margin: 30px auto 0 auto
+    margin: 0px auto 0 auto
+    border-left: 1px solid #ccc
+    border-right: 1px solid #ccc
+    padding: 40px 0
+
+    &__net
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+
+    &__numb
+        padding: 3px
+        position: absolute
+        width: 70px
+        text-align: center
+        font-size: 14px
+        color: #8a8a8a
+        &--0
+            bottom: 0%
+        &--50
+            bottom: calc( 50% )
+        &--100
+            bottom: calc( 100% )
+
+
+    &__line
+        border-bottom: 1px solid #ddd
+        width: 100%
+        height: 4px
+        position: absolute
+        &--0
+            bottom: 0%
+        &--50
+            bottom: calc( 50% )
+        &--100
+            bottom: calc( 100% )
+
+    &__chart
+        width: 100%
+        position: relative
+        height: 300px
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        padding: 0 10px 0 80px
+
+    &__high
+        //width: 20px
+        margin: 0 0.5px
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        cursor: pointer
+        transition-duration: 0.2s
+        &:hover
+            transform: translateY(-10px)
+
+    &__svoi
+        background: #00a759
+        position: absolute
+        bottom: 0
+        left: 0
+        z-index: 99
+        width: 100%
+
+    &__nachalo
+        background: #333
+        z-index: 109
+
+    &__popolnenie
+        background: #5659ff
+        z-index: 109
+
+    &__window
+        position: absolute
+        width: 300px
+        height: 200px
+        background: #fff
+        border-radius: 15px
+        box-shadow: 0 10px 20px 2px rgba(0,0,0,0.1)
+        border: 1px solid #ddd
+        top: -50px
+        left: 50%
+        margin: 0 0 0 -150px
+        z-index: 299
+        display: none
+        padding: 0 10px
+        justify-content: center
+        align-items: center
+        flex-direction: column
+
+    &__stat
+        display: none
+
+    &__value
+        text-align: center
+        margin: 5px 0
 
 
 

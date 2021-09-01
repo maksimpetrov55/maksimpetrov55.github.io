@@ -6,12 +6,12 @@
 	<title>Web Mockup</title>
 
 	<link rel="stylesheet" href="css/jquery-ui.css">
-	<link rel="stylesheet" href="css/main.css?v3">
+	<link rel="stylesheet" href="css/main.css?v4">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/jquery.ui.touch-punch.min.js"></script>
-	<script src="js/scripts.js?v3"></script>
+	<script src="js/scripts.js?v4"></script>
 
 </head>
 <body>
@@ -19,6 +19,10 @@
 
 
 	<div class="calc">
+
+		<div class="calc__header">КАЛЬКУЛЯТОР СБЕРЕЖЕНИЙ</div>
+
+		<div class="calc__description">Позволяет расчитать будующую доходность и размер сбережений за указанный срок. Процентная ставка и пополнения могут быть как положительными так и отрицательными. Сумма контракта, займа и баланс расчитываются автоматически!</div>
 
 		<div style="display: none;" id="EUR"></div>
 		<div style="display: none;" id="KZT"></div>
@@ -107,7 +111,7 @@
 
 			<div class="calc__block">
 				<div class="calc__title calc__title--long">Начальный контракт</div>
-				<input type="number" class="calc__input calc__input--slider" id="calc_contract" value="10000">
+				<input type="number" class="calc__input calc__input--slider" id="calc_contract" value="0">
 				<div class="calc__fly">€</div>
 			</div>
 
@@ -300,6 +304,16 @@
 			</div>
 		</div>
 
+		<div class="charts">
+			<div style="display: none;" id="chart_1" class="charts__chart"></div>
+			<div style="display: none;" id="chart_2" class="charts__chart"></div>
+			<div style="display: none;" id="chart_3" class="charts__chart"></div>
+			<div style="display: none;" id="chart_4" class="charts__chart"></div>
+			<div style="display: flex;" id="chart_5" class="charts__chart"></div>
+		</div>
+
+		<div class="note"></div>
+
 		<div class="out">
 			<div class="out__row out__row--head">
 				<div class="out__cell out__cell--short">Срок</div>
@@ -307,13 +321,13 @@
 				<div class="out__cell out__cell--hide">Внесено</div>
 				<div class="out__cell out__cell--hide">Контракт</div>
 				<div class="out__cell out__cell--hide">Ajio</div>
-				<div class="out__cell out__cell--hide">Cвои средства (начало месяца)</div>
+				<div class="out__cell out__cell--none">Cвои средства (начало месяца)</div>
 				<div class="out__cell out__cell--hide">Займ</div>
 				<div class="out__cell out__cell--hide">Работает на счете (баланс)</div>
-				<div class="out__cell out__cell--hide">Прибыль за месяц</div>
-				<div class="out__cell out__cell--hide">Комиссия компании</div>
-				<div class="out__cell out__cell--hide">Оплата по займу</div>
-				<div class="out__cell out__cell--hide">Обслуживание счета</div>
+				<div class="out__cell out__cell--none">Прибыль за месяц</div>
+				<div class="out__cell out__cell--none">Комиссия компании</div>
+				<div class="out__cell out__cell--none">Оплата по займу</div>
+				<div class="out__cell out__cell--none">Обслуживание счета</div>
 				<div class="out__cell">Прибыль чистая за месяц</div>
 				<div class="out__cell">Свои на конец месяца</div>
 				<div class="out__cell out__cell--hide">Прибыль за все время</div>
@@ -324,10 +338,6 @@
 			<div style="display: none;" id="out_table_4" class="out__table"></div>
 			<div id="out_table_5" class="out__table"></div>
 		</div>
-
-		<!-- <div class="charts">
-			<div id="chart_1" class="out__chart"></div>
-		</div> -->
 
 	</div>
 	<!-- /.calc -->
