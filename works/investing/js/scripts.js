@@ -931,7 +931,15 @@ $(document).ready(function() {
             var chart_1_width_start = $('#chart_1').width();
             var chart_1_width = chart_1_width_start / period * 0.95;
 
-            var t1_chart_max = t1_svoi_ARR[period-1];
+            if ( t1_svoi_ARR[period-1] >= t1_svoi_ARR[0] ) {
+                var t1_chart_max = t1_svoi_ARR[period-1];
+            } else {
+                if ( t1_svoi_ARR[0] > amount ) {
+                    var t1_chart_max = t1_svoi_ARR[0];
+                } else {
+                    var t1_chart_max = +amount;
+                }
+            }
             var t1_chart_k = 300 / t1_chart_max;
             
             var chart_1_svoi = t1_svoi_ARR[i] * t1_chart_k;
@@ -978,7 +986,15 @@ $(document).ready(function() {
             var chart_2_width_start = $('#chart_2').width();
             var chart_2_width = chart_2_width_start / period * 0.95;
 
-            var t2_chart_max = t2_svoi_ARR[period-1];
+            if ( t2_svoi_ARR[period-1] >= t2_svoi_ARR[0] ) {
+                var t2_chart_max = t2_svoi_ARR[period-1];
+            } else {
+                if ( t2_svoi_ARR[0] > amount ) {
+                    var t2_chart_max = t2_svoi_ARR[0];
+                } else {
+                    var t2_chart_max = +amount;
+                }
+            }
             var t2_chart_k = 300 / t2_chart_max;
             
             var chart_2_svoi = t2_svoi_ARR[i] * t2_chart_k;
@@ -1025,7 +1041,15 @@ $(document).ready(function() {
             var chart_3_width_start = $('#chart_3').width();
             var chart_3_width = chart_3_width_start / period * 0.95;
 
-            var t3_chart_max = t3_svoi_ARR[period-1];
+            if ( t3_svoi_ARR[period-1] >= t3_svoi_ARR[0] ) {
+                var t3_chart_max = t3_svoi_ARR[period-1];
+            } else {
+                if ( t3_svoi_ARR[0] > amount ) {
+                    var t3_chart_max = t3_svoi_ARR[0];
+                } else {
+                    var t3_chart_max = +amount;
+                }
+            }
             var t3_chart_k = 300 / t3_chart_max;
             
             var chart_3_svoi = t3_svoi_ARR[i] * t3_chart_k;
@@ -1072,7 +1096,15 @@ $(document).ready(function() {
             var chart_4_width_start = $('#chart_4').width();
             var chart_4_width = chart_4_width_start / period * 0.95;
 
-            var t4_chart_max = t4_svoi_ARR[period-1];
+            if ( t4_svoi_ARR[period-1] >= t4_svoi_ARR[0] ) {
+                var t4_chart_max = t4_svoi_ARR[period-1];
+            } else {
+                if ( t4_svoi_ARR[0] > amount ) {
+                    var t4_chart_max = t4_svoi_ARR[0];
+                } else {
+                    var t4_chart_max = +amount;
+                }
+            }
             var t4_chart_k = 300 / t4_chart_max;
             
             var chart_4_svoi = t4_svoi_ARR[i] * t4_chart_k;
@@ -1119,7 +1151,15 @@ $(document).ready(function() {
             var chart_5_width_start = $('#chart_5').width();
             var chart_5_width = chart_5_width_start / period * 0.95;
 
-            var t5_chart_max = t5_svoi_ARR[period-1];
+            if ( t5_svoi_ARR[period-1] >= t5_svoi_ARR[0] ) {
+                var t5_chart_max = t5_svoi_ARR[period-1];
+            } else {
+                if ( t5_svoi_ARR[0] > amount ) {
+                    var t5_chart_max = t5_svoi_ARR[0];
+                } else {
+                    var t5_chart_max = +amount;
+                }
+            }
             var t5_chart_k = 300 / t5_chart_max;
             
             var chart_5_svoi = t5_svoi_ARR[i] * t5_chart_k;
