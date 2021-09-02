@@ -341,7 +341,7 @@ input::-webkit-inner-spin-button {
 }
 
 .out__row {
-  width: 1131px;
+  width: 1098px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -363,7 +363,7 @@ input::-webkit-inner-spin-button {
 }
 
 .out__cell {
-  width: 120px;
+  width: 117px;
   padding: 5px;
   border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
@@ -380,6 +380,14 @@ input::-webkit-inner-spin-button {
 
 .out__cell--long {
   width: 130px;
+}
+
+.out__cell--ajio {
+  width: 90px;
+}
+
+.out__cell--month {
+  width: 140px;
 }
 
 .out__cell--short {
@@ -403,12 +411,44 @@ input::-webkit-inner-spin-button {
 }
 
 .note {
-  padding: 20px 0;
+  padding: 0 0 40px 0;
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.note__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px 10px;
+}
+
+.note__round {
+  width: 18px;
+  height: 18px;
+  margin: 0 5px 0 0;
+  border-radius: 50px;
+}
+
+.note__round--1 {
+  background: #333;
+}
+
+.note__round--2 {
+  background: #5659ff;
+}
+
+.note__round--3 {
+  background: #00a759;
 }
 
 .charts {

@@ -346,6 +346,47 @@ $(document).ready(function() {
         $('#chart_5').empty();
 
 
+        var t1_date_ARR = [];
+        var t1_svoi_ARR = [];
+        var t1_contract_ARR = [];
+        var t1_amount_ARR = [];
+        var t1_add_ARR = [];
+        var t1_end_ARR = [];
+        var t1_clear_ARR = [];
+
+        var t2_date_ARR = [];
+        var t2_svoi_ARR = [];
+        var t2_contract_ARR = [];
+        var t2_amount_ARR = [];
+        var t2_add_ARR = [];
+        var t2_end_ARR = [];
+        var t2_clear_ARR = [];
+
+        var t3_date_ARR = [];
+        var t3_svoi_ARR = [];
+        var t3_contract_ARR = [];
+        var t3_amount_ARR = [];
+        var t3_add_ARR = [];
+        var t3_end_ARR = [];
+        var t3_clear_ARR = [];
+
+        var t4_date_ARR = [];
+        var t4_svoi_ARR = [];
+        var t4_contract_ARR = [];
+        var t4_amount_ARR = [];
+        var t4_add_ARR = [];
+        var t4_end_ARR = [];
+        var t4_clear_ARR = [];
+
+        var t5_date_ARR = [];
+        var t5_svoi_ARR = [];
+        var t5_contract_ARR = [];
+        var t5_amount_ARR = [];
+        var t5_add_ARR = [];
+        var t5_end_ARR = [];
+        var t5_clear_ARR = [];
+
+
         var date = new Date();
         var t1_date_month = date.getMonth();
         var t1_date_year = date.getFullYear();
@@ -541,10 +582,10 @@ $(document).ready(function() {
 
             $('#out_table_1').append(`<div class="out__row">
                 <div class="out__cell out__cell--short">№${i}</div>
-                <div class="out__cell out__cell--hide">${t1_cell_date}</div>
+                <div class="out__cell out__cell--month out__cell--hide">${t1_cell_date}</div>
                 <div class="out__cell out__cell--hide">${(valute_val * t1_cell_add).toFixed(2)}</div>
                 <div class="out__cell out__cell--hide">${(valute_val * t1_cell_contract).toFixed(2)}</div>
-                <div class="out__cell out__cell--hide">${(valute_val * t1_cell_ajio).toFixed(2)}</div>
+                <div class="out__cell out__cell--ajio out__cell--hide">${(valute_val * t1_cell_ajio).toFixed(2)}</div>
                 <div class="out__cell out__cell--none">${(valute_val * t1_cell_amount).toFixed(2)}</div>
                 <div class="out__cell out__cell--hide">${(valute_val * t1_cell_credit).toFixed(2)}</div>
                 <div class="out__cell out__cell--hide">${(valute_val * t1_cell_work).toFixed(2)}</div>
@@ -615,10 +656,10 @@ $(document).ready(function() {
 
             $('#out_table_2').append(`<div class="out__row">
                 <div class="out__cell out__cell--short">№${i}</div>
-                <div class="out__cell out__cell--hide">${t2_cell_date}</div>
+                <div class="out__cell out__cell--month out__cell--hide">${t2_cell_date}</div>
                 <div class="out__cell out__cell--hide">${(valute_val * t2_cell_add).toFixed(2)}</div>
                 <div class="out__cell out__cell--hide">${(valute_val * t2_cell_contract).toFixed(2)}</div>
-                <div class="out__cell out__cell--hide">${(valute_val * t2_cell_ajio).toFixed(2)}</div>
+                <div class="out__cell out__cell--ajio out__cell--hide">${(valute_val * t2_cell_ajio).toFixed(2)}</div>
                 <div class="out__cell out__cell--none">${(valute_val * t2_cell_amount).toFixed(2)}</div>
                 <div class="out__cell out__cell--hide">${(valute_val * t2_cell_credit).toFixed(2)}</div>
                 <div class="out__cell out__cell--hide">${(valute_val * t2_cell_work).toFixed(2)}</div>
@@ -684,10 +725,10 @@ $(document).ready(function() {
 
             $('#out_table_3').append(`<div class="out__row">
                 <div class="out__cell out__cell--short">№${i}</div>
-                <div class="out__cell out__cell--hide">${t3_cell_date}</div>
+                <div class="out__cell out__cell--month out__cell--hide">${t3_cell_date}</div>
                 <div class="out__cell out__cell--hide">${(valute_val * t3_cell_add).toFixed(2)}</div>
                 <div class="out__cell out__cell--hide">${(valute_val * t3_cell_contract).toFixed(2)}</div>
-                <div class="out__cell out__cell--hide">${(valute_val * t3_cell_ajio).toFixed(2)}</div>
+                <div class="out__cell out__cell--ajio out__cell--hide">${(valute_val * t3_cell_ajio).toFixed(2)}</div>
                 <div class="out__cell out__cell--none">${(valute_val * t3_cell_amount).toFixed(2)}</div>
                 <div class="out__cell out__cell--hide">${(valute_val * t3_cell_credit).toFixed(2)}</div>
                 <div class="out__cell out__cell--hide">${(valute_val * t3_cell_work).toFixed(2)}</div>
@@ -757,10 +798,10 @@ $(document).ready(function() {
 
             $('#out_table_4').append(`<div class="out__row">
                 <div class="out__cell out__cell--short">№${i}</div>
-                <div class="out__cell out__cell--hide">${t4_cell_date}</div>
+                <div class="out__cell out__cell--month out__cell--hide">${t4_cell_date}</div>
                 <div class="out__cell out__cell--hide">${(valute_val * t4_cell_add).toFixed(2)}</div>
                 <div class="out__cell out__cell--hide">${(valute_val * t4_cell_contract).toFixed(2)}</div>
-                <div class="out__cell out__cell--hide">${(valute_val * t4_cell_ajio).toFixed(2)}</div>
+                <div class="out__cell out__cell--ajio out__cell--hide">${(valute_val * t4_cell_ajio).toFixed(2)}</div>
                 <div class="out__cell out__cell--none">${(valute_val * t4_cell_amount).toFixed(2)}</div>
                 <div class="out__cell out__cell--hide">${(valute_val * t4_cell_credit).toFixed(2)}</div>
                 <div class="out__cell out__cell--hide">${(valute_val * t4_cell_work).toFixed(2)}</div>
@@ -824,10 +865,10 @@ $(document).ready(function() {
 
             $('#out_table_5').append(`<div class="out__row">
                 <div class="out__cell out__cell--short">№${i}</div>
-                <div class="out__cell out__cell--hide">${t5_cell_date}</div>
+                <div class="out__cell out__cell--month out__cell--hide">${t5_cell_date}</div>
                 <div class="out__cell out__cell--hide">${(valute_val * t5_cell_add).toFixed(2)}</div>
                 <div class="out__cell out__cell--hide">${(valute_val * t5_cell_contract).toFixed(2)}</div>
-                <div class="out__cell out__cell--hide">${(valute_val * t5_cell_ajio).toFixed(2)}</div>
+                <div class="out__cell out__cell--ajio out__cell--hide">${(valute_val * t5_cell_ajio).toFixed(2)}</div>
                 <div class="out__cell out__cell--none">${(valute_val * t5_cell_amount).toFixed(2)}</div>
                 <div class="out__cell out__cell--hide">${(valute_val * t5_cell_credit).toFixed(2)}</div>
                 <div class="out__cell out__cell--hide">${(valute_val * t5_cell_work).toFixed(2)}</div>
@@ -905,6 +946,7 @@ $(document).ready(function() {
             if ( i == 0 ) {
                 $('#chart_1').append(`
                     <div id="chart_1_window" class="charts__window">
+                        <div class="charts__value charts__value--0"></div>
                         <div class="charts__value charts__value--1"></div>
                         <div class="charts__value charts__value--2"></div>
                         <div class="charts__value charts__value--3"></div>
@@ -921,6 +963,7 @@ $(document).ready(function() {
             }
             $('#chart_1').append(`
                 <div style="width: ${chart_1_width}px; height: 300px" class="charts__high">
+                    <div class="charts__stat charts__stat--0">Срок №${i+1}</div>
                     <div class="charts__stat charts__stat--1">Начальная сумма: ${(valute_val * amount).toFixed(0)} ${valute_sign}</div>
                     <div class="charts__stat charts__stat--2">Пополнений: ${(valute_val * chart_1_add).toFixed(0)} ${valute_sign}</div>
                     <div class="charts__stat charts__stat--3">Свои на конец месяца: ${(valute_val * t1_svoi_ARR[i]).toFixed(0)} ${valute_sign}</div>
@@ -950,6 +993,7 @@ $(document).ready(function() {
             if ( i == 0 ) {
                 $('#chart_2').append(`
                     <div id="chart_2_window" class="charts__window">
+                        <div class="charts__value charts__value--0"></div>
                         <div class="charts__value charts__value--1"></div>
                         <div class="charts__value charts__value--2"></div>
                         <div class="charts__value charts__value--3"></div>
@@ -966,6 +1010,7 @@ $(document).ready(function() {
             }
             $('#chart_2').append(`
                 <div style="width: ${chart_2_width}px; height: 300px" class="charts__high">
+                    <div class="charts__stat charts__stat--0">Срок №${i+1}</div>
                     <div class="charts__stat charts__stat--1">Начальная сумма: ${(valute_val * amount).toFixed(0)} ${valute_sign}</div>
                     <div class="charts__stat charts__stat--2">Пополнений: ${(valute_val * chart_2_add).toFixed(0)} ${valute_sign}</div>
                     <div class="charts__stat charts__stat--3">Свои на конец месяца: ${(valute_val * t2_svoi_ARR[i]).toFixed(0)} ${valute_sign}</div>
@@ -995,6 +1040,7 @@ $(document).ready(function() {
             if ( i == 0 ) {
                 $('#chart_3').append(`
                     <div id="chart_3_window" class="charts__window">
+                        <div class="charts__value charts__value--0"></div>
                         <div class="charts__value charts__value--1"></div>
                         <div class="charts__value charts__value--2"></div>
                         <div class="charts__value charts__value--3"></div>
@@ -1011,6 +1057,7 @@ $(document).ready(function() {
             }
             $('#chart_3').append(`
                 <div style="width: ${chart_3_width}px; height: 300px" class="charts__high">
+                    <div class="charts__stat charts__stat--0">Срок №${i+1}</div>
                     <div class="charts__stat charts__stat--1">Начальная сумма: ${(valute_val * amount).toFixed(0)} ${valute_sign}</div>
                     <div class="charts__stat charts__stat--2">Пополнений: ${(valute_val * chart_3_add).toFixed(0)} ${valute_sign}</div>
                     <div class="charts__stat charts__stat--3">Свои на конец месяца: ${(valute_val * t3_svoi_ARR[i]).toFixed(0)} ${valute_sign}</div>
@@ -1040,6 +1087,7 @@ $(document).ready(function() {
             if ( i == 0 ) {
                 $('#chart_4').append(`
                     <div id="chart_4_window" class="charts__window">
+                        <div class="charts__value charts__value--0"></div>
                         <div class="charts__value charts__value--1"></div>
                         <div class="charts__value charts__value--2"></div>
                         <div class="charts__value charts__value--3"></div>
@@ -1056,6 +1104,7 @@ $(document).ready(function() {
             }
             $('#chart_4').append(`
                 <div style="width: ${chart_4_width}px; height: 300px" class="charts__high">
+                    <div class="charts__stat charts__stat--0">Срок №${i+1}</div>
                     <div class="charts__stat charts__stat--1">Начальная сумма: ${(valute_val * amount).toFixed(0)} ${valute_sign}</div>
                     <div class="charts__stat charts__stat--2">Пополнений: ${(valute_val * chart_4_add).toFixed(0)} ${valute_sign}</div>
                     <div class="charts__stat charts__stat--3">Свои на конец месяца: ${(valute_val * t4_svoi_ARR[i]).toFixed(0)} ${valute_sign}</div>
@@ -1085,6 +1134,7 @@ $(document).ready(function() {
             if ( i == 0 ) {
                 $('#chart_5').append(`
                     <div id="chart_5_window" class="charts__window">
+                        <div class="charts__value charts__value--0"></div>
                         <div class="charts__value charts__value--1"></div>
                         <div class="charts__value charts__value--2"></div>
                         <div class="charts__value charts__value--3"></div>
@@ -1101,6 +1151,7 @@ $(document).ready(function() {
             }
             $('#chart_5').append(`
                 <div style="width: ${chart_5_width}px; height: 300px" class="charts__high">
+                    <div class="charts__stat charts__stat--0">Срок №${i+1}</div>
                     <div class="charts__stat charts__stat--1">Начальная сумма: ${(valute_val * amount).toFixed(0)} ${valute_sign}</div>
                     <div class="charts__stat charts__stat--2">Пополнений: ${(valute_val * chart_5_add).toFixed(0)} ${valute_sign}</div>
                     <div class="charts__stat charts__stat--3">Свои на конец месяца: ${(valute_val * t5_svoi_ARR[i]).toFixed(0)} ${valute_sign}</div>
@@ -1122,10 +1173,12 @@ $(document).ready(function() {
     $('.charts__chart').on("mouseover",".charts__high",function(){
         $(this).parent().find(".charts__window").css({display: "flex"});
 
+        let chart_stat_0 = $(this).find(".charts__stat--0").text();
         let chart_stat_1 = $(this).find(".charts__stat--1").text();
         let chart_stat_2 = $(this).find(".charts__stat--2").text();
         let chart_stat_3 = $(this).find(".charts__stat--3").text();
 
+        $(this).parent().find(".charts__window").find(".charts__value--0").text(chart_stat_0);
         $(this).parent().find(".charts__window").find(".charts__value--1").text(chart_stat_1);
         $(this).parent().find(".charts__window").find(".charts__value--2").text(chart_stat_2);
         $(this).parent().find(".charts__window").find(".charts__value--3").text(chart_stat_3);
