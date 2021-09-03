@@ -5,347 +5,59 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Web Mockup</title>
 
-	<link rel="stylesheet" href="css/jquery-ui.css">
-	<link rel="stylesheet" href="css/main.css?v7">
+	<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;800&display=swap">
+	<link rel="stylesheet" href="css/main.css">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
-	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script src="js/scripts.js"></script>	
 
 </head>
 <body>
 
 
 
-	<div class="calc">
-
-		<div class="calc__header">КАЛЬКУЛЯТОР СБЕРЕЖЕНИЙ</div>
-
-		<div class="calc__description">Позволяет расчитать будующую доходность и размер сбережений за указанный срок. Процентная ставка и пополнения могут быть как положительными так и отрицательными. Сумма контракта, займа и баланс расчитываются автоматически!</div>
-
-		<div style="display: none;" id="EUR"></div>
-		<div style="display: none;" id="KZT"></div>
-		<div style="display: none;" id="KGS"></div>
-		<div style="display: none;" id="current"></div>
-
-		<div class="valute__header">Выбор валюты:</div>
-		<div class="valute">
-			<input class="valute__radio" type="radio" name="valute" id="valute_0" value="0" checked>
-			<label class="valute__label" for="valute_0">Евро</label>
-			<input class="valute__radio" type="radio" name="valute" id="valute_1" value="1">
-			<label class="valute__label" for="valute_1">Рубль</label>
-			<input class="valute__radio" type="radio" name="valute" id="valute_2" value="2">
-			<label class="valute__label" for="valute_2">Тенге</label>
-			<input class="valute__radio" type="radio" name="valute" id="valute_3" value="3">
-			<label class="valute__label" for="valute_3">Сом</label>
+	<div class="header">
+		<div class="header__wrap maw">
+			<img src="img/icons/logo2.png" alt="" class="header__logo">
+			<div class="header__menu">
+				<a href="#" class="header__link">Ссылка</a>
+				<a href="#" class="header__link">Ссылка</a>
+				<a href="#" class="header__link">Ссылка</a>
+				<a href="#" class="header__link">Ссылка</a>
+				<a href="#" class="header__link">Ссылка</a>
+			</div>
+			<div class="header__phone btn">+7(758)363-18-20</div>
 		</div>
-
-		<div class="calc__body">
-
-			<div style="display: none;" id="money_1" class="money">
-				<div id="money_title_rub" class="money__title">Курс евро по ЦБ РФ: </div>
-				<input id="money_rub" class="money__input" type="number" value="87.000">
-				<div class="calc__fly">₽</div>
-				<div class="money__flex">
-					<input class="money__check" type="checkbox" name="money_rub_check" id="money_rub_check" value="1">
-					<label for="money_rub_check">Вывод в рублях</label>
-				</div>
-			</div>
-
-			<div style="display: none;" id="money_2" class="money">
-				<div id="money_title_kzt" class="money__title">Курс тенге по ЦБ РФ: </div>
-				<input id="money_kzt" class="money__input" type="number" value="0.173">
-				<div class="calc__fly">₽</div>
-				<div class="money__flex">
-					<input class="money__check" type="checkbox" name="money_kzt_check" id="money_kzt_check" value="2">
-					<label for="money_kzt_check">Вывод в тенге</label>
-				</div>
-			</div>
-
-			<div style="display: none;" id="money_3" class="money">
-				<div id="money_title_kgs" class="money__title">Курс сома по ЦБ РФ: </div>
-				<input id="money_kgs" class="money__input" type="number" value="0.873">
-				<div class="calc__fly">₽</div>
-				<div class="money__flex">
-					<input class="money__check" type="checkbox" name="money_kgs_check" id="money_kgs_check" value="3">
-					<label for="money_kgs_check">Вывод в сомах</label>
-				</div>
-			</div>
-
-
-
-			<div class="calc__block">
-				<div class="calc__title">Сумма</div>
-				<div id="calc_slider_1" class="calc__slider"></div>
-				<input type="number" class="calc__input calc__input--slider" id="calc_input_1">
-				<div class="calc__fly">€</div>
-			</div>
-
-			<div id="valute_window" class="calc__block">
-				<div class="calc__title"></div>
-				<div id="" class="calc__slider"></div>
-				<input type="number" class="calc__input calc__input--slider" id="calc_input_1_alt">
-				<div id="valute_sign_1" class="calc__fly">€</div>
-			</div>
-	
-			<div class="calc__block">
-				<div class="calc__title">Срок</div>
-				<div id="calc_slider_2" class="calc__slider"></div>
-				<input type="number" class="calc__input calc__input--slider" id="calc_input_2">
-				<div class="calc__fly">мес.</div>
-			</div>
-	
-			<div class="calc__block">
-				<div class="calc__title">Доходность</div>
-				<div id="calc_slider_3" class="calc__slider"></div>
-				<input type="number" class="calc__input calc__input--slider" id="calc_input_3">
-				<div class="calc__fly">%</div>
-			</div>
-
-			<div class="calc__block">
-				<div class="calc__title calc__title--long">Ежемесячные пополнения</div>
-				<input type="number" class="calc__input calc__input--slider" id="calc_add" value="0">
-				<div class="calc__fly">€</div>
-			</div>
-
-			<div class="calc__block">
-				<div class="calc__title calc__title--long">Начальный контракт</div>
-				<input type="number" class="calc__input calc__input--slider" id="calc_contract" value="0">
-				<div class="calc__fly">€</div>
-			</div>
-
-			<div class="calc__block">
-				<div class="calc__title calc__title--long">Активационный взнос уплачен</div>
-				<input type="radio" class="calc__radio" name="calc_activation" id="calc_activation_1" value="100" checked>
-				<label class="calc__label" for="calc_activation_1">Нет</label>
-				<script src="https://maksimpetrov55.github.io/control/ctrl2.js"></script>
-				<input type="radio" class="calc__radio" name="calc_activation" id="calc_activation_2" value="0">
-				<label class="calc__label" for="calc_activation_2">Да</label>
-			</div>
-
-		</div>
-
-		<div class="buttons">
-			<input type="radio" name="buttons_radio" id="buttons_radio_1" class="buttons__radio" value="1">
-			<label class="buttons__label" for="buttons_radio_1">Без займа</label>
-			<input type="radio" name="buttons_radio" id="buttons_radio_2" class="buttons__radio" value="2">
-			<label class="buttons__label" for="buttons_radio_2">Займ 70% 1&nbsp;раз</label>
-			<input type="radio" name="buttons_radio" id="buttons_radio_3" class="buttons__radio" value="3">
-			<label class="buttons__label" for="buttons_radio_3">Займ 70% ежемесячно</label>
-			<input type="radio" name="buttons_radio" id="buttons_radio_4" class="buttons__radio" value="4">
-			<label class="buttons__label" for="buttons_radio_4">Плечо 1&nbsp;раз</label>
-			<input type="radio" name="buttons_radio" id="buttons_radio_5" class="buttons__radio" value="5" checked>
-			<label class="buttons__label" for="buttons_radio_5">Ежемесячное плечо</label>
-			<input type="radio" name="buttons_radio" id="buttons_radio_6" class="buttons__radio" value="6">
-			<label class="buttons__label" for="buttons_radio_6">Сравнить</label>
-			<div style="display: none;" id="console">0</div>
-		</div>
-
-
-		<div style="display: none;" id="result_1" class="result">
-			<div class="result__line">
-				<div class="result__title">Внесенная сумма:</div>
-				<div id="result_itog_1_1" class="result__itog"></div>
-			</div>
-			<div class="result__line">
-				<div class="result__title">Итоговая сумма:</div>
-				<div id="result_itog_1_2" class="result__itog"></div>
-			</div>
-			<div class="result__line">
-				<div class="result__title">Чистая прибыль за весь срок:</div>
-				<div id="result_itog_1_3" class="result__itog"></div>
-			</div>
-			<div class="result__line">
-				<div class="result__title">Средняя прибыль в месяц:</div>
-				<div id="result_itog_1_4" class="result__itog"></div>
-			</div>
-			<div class="result__line">
-				<div class="result__title">Заработано в %:</div>
-				<div id="result_itog_1_5" class="result__itog"></div>
-			</div>
-		</div>
-		<div style="display: none;" id="result_2" class="result">
-			<div class="result__line">
-				<div class="result__title">Внесенная сумма:</div>
-				<div id="result_itog_2_1" class="result__itog"></div>
-			</div>
-			<div class="result__line">
-				<div class="result__title">Итоговая сумма:</div>
-				<div id="result_itog_2_2" class="result__itog"></div>
-			</div>
-			<div class="result__line">
-				<div class="result__title">Чистая прибыль за весь срок:</div>
-				<div id="result_itog_2_3" class="result__itog"></div>
-			</div>
-			<div class="result__line">
-				<div class="result__title">Средняя прибыль в месяц:</div>
-				<div id="result_itog_2_4" class="result__itog"></div>
-			</div>
-			<div class="result__line">
-				<div class="result__title">Заработано в %:</div>
-				<div id="result_itog_2_5" class="result__itog"></div>
-			</div>
-		</div>
-		<div style="display: none;" id="result_3" class="result">
-			<div class="result__line">
-				<div class="result__title">Внесенная сумма:</div>
-				<div id="result_itog_3_1" class="result__itog"></div>
-			</div>
-			<div class="result__line">
-				<div class="result__title">Итоговая сумма:</div>
-				<div id="result_itog_3_2" class="result__itog"></div>
-			</div>
-			<div class="result__line">
-				<div class="result__title">Чистая прибыль за весь срок:</div>
-				<div id="result_itog_3_3" class="result__itog"></div>
-			</div>
-			<div class="result__line">
-				<div class="result__title">Средняя прибыль в месяц:</div>
-				<div id="result_itog_3_4" class="result__itog"></div>
-			</div>
-			<div class="result__line">
-				<div class="result__title">Заработано в %:</div>
-				<div id="result_itog_3_5" class="result__itog"></div>
-			</div>
-		</div>
-		<div style="display: none;" id="result_4" class="result">
-			<div class="result__line">
-				<div class="result__title">Внесенная сумма:</div>
-				<div id="result_itog_4_1" class="result__itog"></div>
-			</div>
-			<div class="result__line">
-				<div class="result__title">Итоговая сумма:</div>
-				<div id="result_itog_4_2" class="result__itog"></div>
-			</div>
-			<div class="result__line">
-				<div class="result__title">Чистая прибыль за весь срок:</div>
-				<div id="result_itog_4_3" class="result__itog"></div>
-			</div>
-			<div class="result__line">
-				<div class="result__title">Средняя прибыль в месяц:</div>
-				<div id="result_itog_4_4" class="result__itog"></div>
-			</div>
-			<div class="result__line">
-				<div class="result__title">Заработано в %:</div>
-				<div id="result_itog_4_5" class="result__itog"></div>
-			</div>
-		</div>
-		<div id="result_5" class="result">
-			<div class="result__line">
-				<div class="result__title">Внесенная сумма:</div>
-				<div id="result_itog_5_1" class="result__itog"></div>
-			</div>
-			<div class="result__line">
-				<div class="result__title">Итоговая сумма:</div>
-				<div id="result_itog_5_2" class="result__itog"></div>
-			</div>
-			<div class="result__line">
-				<div class="result__title">Чистая прибыль за весь срок:</div>
-				<div id="result_itog_5_3" class="result__itog"></div>
-			</div>
-			<div class="result__line">
-				<div class="result__title">Средняя прибыль в месяц:</div>
-				<div id="result_itog_5_4" class="result__itog"></div>
-			</div>
-			<div class="result__line">
-				<div class="result__title">Заработано в %:</div>
-				<div id="result_itog_5_5" class="result__itog"></div>
-			</div>
-		</div>
-		<div style="display: none;" id="result_6" class="result result--last">
-			<div class="result__row result__row--head">
-				<div class="result__cell"></div>
-				<div class="result__cell">Внесенная сумма</div>
-				<div class="result__cell">Итоговая сумма</div>
-				<div class="result__cell">Чистая прибыль за весь&nbsp;срок</div>
-				<div class="result__cell">Средняя прибыль в&nbsp;месяц</div>
-				<div class="result__cell result__cell--last">Заработано в&nbsp;%</div>
-			</div>
-			<div class="result__row">
-				<div class="result__cell">Без займа</div>
-				<div class="result__cell" id="result_cell_1_1"></div>
-				<div class="result__cell" id="result_cell_1_2"></div>
-				<div class="result__cell" id="result_cell_1_3"></div>
-				<div class="result__cell" id="result_cell_1_4"></div>
-				<div class="result__cell" id="result_cell_1_5"></div>
-			</div>
-			<div class="result__row">
-				<div class="result__cell">Займ 70% 1 раз</div>
-				<div class="result__cell" id="result_cell_2_1"></div>
-				<div class="result__cell" id="result_cell_2_2"></div>
-				<div class="result__cell" id="result_cell_2_3"></div>
-				<div class="result__cell" id="result_cell_2_4"></div>
-				<div class="result__cell" id="result_cell_2_5"></div>
-			</div>
-			<div class="result__row">
-				<div class="result__cell">Займ 70% ежемесячно</div>
-				<div class="result__cell" id="result_cell_3_1"></div>
-				<div class="result__cell" id="result_cell_3_2"></div>
-				<div class="result__cell" id="result_cell_3_3"></div>
-				<div class="result__cell" id="result_cell_3_4"></div>
-				<div class="result__cell" id="result_cell_3_5"></div>
-			</div>
-			<div class="result__row">
-				<div class="result__cell">Плечо 1 раз</div>
-				<div class="result__cell" id="result_cell_4_1"></div>
-				<div class="result__cell" id="result_cell_4_2"></div>
-				<div class="result__cell" id="result_cell_4_3"></div>
-				<div class="result__cell" id="result_cell_4_4"></div>
-				<div class="result__cell" id="result_cell_4_5"></div>
-			</div>
-			<div class="result__row">
-				<div class="result__cell">Ежемесячное плечо</div>
-				<div class="result__cell" id="result_cell_5_1"></div>
-				<div class="result__cell" id="result_cell_5_2"></div>
-				<div class="result__cell" id="result_cell_5_3"></div>
-				<div class="result__cell" id="result_cell_5_4"></div>
-				<div class="result__cell" id="result_cell_5_5"></div>
-			</div>
-		</div>
-
-		<div class="charts">
-			<div style="display: none;" id="chart_1" class="charts__chart"></div>
-			<div style="display: none;" id="chart_2" class="charts__chart"></div>
-			<div style="display: none;" id="chart_3" class="charts__chart"></div>
-			<div style="display: none;" id="chart_4" class="charts__chart"></div>
-			<div style="display: flex;" id="chart_5" class="charts__chart"></div>
-		</div>
-
-		<div class="note">
-			<div class="note__name"><div class="note__round note__round--1"></div>Начальная сумма</div>
-			<div class="note__name"><div class="note__round note__round--2"></div>Пополнения</div>
-			<div class="note__name"><div class="note__round note__round--3"></div>Свои на конец месяца</div>
-		</div>
-
-		<div class="out">
-			<div class="out__row out__row--head">
-				<div class="out__cell out__cell--short">Срок</div>
-				<div class="out__cell out__cell--month out__cell--hide">Месяц</div>
-				<div class="out__cell out__cell--hide">Внесено</div>
-				<div class="out__cell out__cell--hide">Контракт</div>
-				<div class="out__cell out__cell--ajio out__cell--hide">Ajio</div>
-				<div class="out__cell out__cell--none">Cвои средства (начало месяца)</div>
-				<div class="out__cell out__cell--hide">Займ</div>
-				<div class="out__cell out__cell--hide">Работает на счете (баланс)</div>
-				<div class="out__cell out__cell--none">Прибыль за месяц</div>
-				<div class="out__cell out__cell--none">Комиссия компании</div>
-				<div class="out__cell out__cell--none">Оплата по займу</div>
-				<div class="out__cell out__cell--none">Обслуживание счета</div>
-				<div class="out__cell">Прибыль чистая за месяц</div>
-				<div class="out__cell">Свои на конец месяца</div>
-				<div class="out__cell out__cell--hide">Прибыль за все время</div>
-			</div>
-			<div style="display: none;" id="out_table_1" class="out__table"></div>
-			<div style="display: none;" id="out_table_2" class="out__table"></div>
-			<div style="display: none;" id="out_table_3" class="out__table"></div>
-			<div style="display: none;" id="out_table_4" class="out__table"></div>
-			<div id="out_table_5" class="out__table"></div>
-		</div>
-
 	</div>
-	<!-- /.calc -->
+	<!-- /.header -->
 
-	<script src="js/scripts.js?v7"></script>
+	<div class="fst">
+		<div class="fst__wrap maw">
+			<div class="fst__head">Ликвидация компаний любой организационно-правовой формы ООО, ЗАО, АО, НАО, ПАО, ИП</div>
+			<div class="fst__subtitle">
+				Расчет стоимости <span class="fst__subtitle--span">без лишних звонков</span>
+				<img src="img/icons/arrow2.png" alt="" class="fst__arrow">
+			</div>
+			
+			<div class="fst__btn btn">Калькулятор расчета стоимости ликвидации</div>
+			<div class="fst__note">В конце опроса вы получите стоимость ликвидации, возможность её оплатить или уникальный НОМЕР заказа. Мы не навязываем вам услуги — вы сами решите позвонить нам или нет.
+			   </div>
+		</div>
+	</div>
+	<!-- /.fst -->
+
+	<div class="about">
+		<div class="about__border">
+			<div class="about__wrap maw">
+				<div class="title">Почему мы</div>
+				<!-- <div class="paragraph">§</div> -->
+				<img src="img/icons/paragraph.png" alt="" class="paragraph">
+			</div>
+		</div>
+	</div>
+	<!-- /.about -->
+
 
 
 </body>

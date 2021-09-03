@@ -1,0 +1,58 @@
+
+$light: #fffae7
+$yellow: #c5c35e
+$brown: #504432
+$gray: #ddd
+$black: #333
+
+*
+    position: relative
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: 'Lora', serif
+
+body
+    position: relative
+    background: #141414
+
+.maw
+    position: relative
+    max-width: 1440px
+    margin: 0 auto
+
+.link
+    font-size: 1.2rem
+    color: $light
+    text-decoration: none
+    transition-duration: 0.2s
+    user-select: none
+    &:hover
+        color: $yellow
+    &:visited
+        color: $light
+
+.text
+    font-size: 1.2rem
+    color: #333
+
+.paragraph
+    margin: 0 auto 20px auto
+    display: block
+    width: 4rem
+
+.title
+    color: $brown
+    font-size: 3rem
+    font-weight: 600
+    text-align: center
+    margin: 0 auto 20px auto
+    text-transform: uppercase
+    letter-spacing: 1px
+
+.btn
+    user-select: none
+    transition-duration: 0.2s
+    cursor: pointer
+    &:active
+        opacity: 0.2
