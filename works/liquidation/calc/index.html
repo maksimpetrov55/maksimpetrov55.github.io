@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+		<div class="calc__block">
+			<div class="calc__title">Выберите тип организации</div>
+			<div class="calc__box">
+				<input class="calc__radio" type="radio" name="calc_radio_type" id="calc_radio_type_1" checked>
+				<label class="calc__label calc__label--type" for="calc_radio_type_1">Коммерческая организация</label>
+				<input class="calc__radio" type="radio" name="calc_radio_type" id="calc_radio_type_2">
+				<label class="calc__label calc__label--type" for="calc_radio_type_2">Некоммерческая организация</label>
+			</div>
+		</div>
+
+		<div class="calc__block">
+			<div class="calc__title">Коммерческая организация</div>
+			<div class="calc__box">
+				<input class="calc__radio" type="radio" name="calc_radio_org" id="calc_radio_org_1" checked>
+				<label class="calc__label calc__label--org" for="calc_radio_org_1">ООО</label>
+				<input class="calc__radio" type="radio" name="calc_radio_org" id="calc_radio_org_2">
+				<label class="calc__label calc__label--org" for="calc_radio_org_2">ЗАО</label>
+				<input class="calc__radio" type="radio" name="calc_radio_org" id="calc_radio_org_3">
+				<label class="calc__label calc__label--org" for="calc_radio_org_3">АО</label>
+				<input class="calc__radio" type="radio" name="calc_radio_org" id="calc_radio_org_4">
+				<label class="calc__label calc__label--org" for="calc_radio_org_4">ПАО</label>
+				<input class="calc__radio" type="radio" name="calc_radio_org" id="calc_radio_org_5">
+				<label class="calc__label calc__label--org" for="calc_radio_org_5">НАО</label>
+				<input class="calc__radio" type="radio" name="calc_radio_org" id="calc_radio_org_6">
+				<label class="calc__label calc__label--org" for="calc_radio_org_6">ИП</label>
+				<input class="calc__radio" type="radio" name="calc_radio_org" id="calc_radio_org_7">
+				<label class="calc__label calc__label--org" for="calc_radio_org_7">Прочее</label>
+			</div>
+
+		</div>
+
+		<div class="calc__block">
+			<div class="calc__title">Некоммерческая организация</div>
+			<div class="calc__box">
+				<input class="calc__radio" type="radio" name="calc_radio_org" id="calc_radio_org_8">
+				<label class="calc__label calc__label--org" for="calc_radio_org_8">Фонд</label>
+				<input class="calc__radio" type="radio" name="calc_radio_org" id="calc_radio_org_9">
+				<label class="calc__label calc__label--org" for="calc_radio_org_9">Ассоциация</label>
+				<input class="calc__radio" type="radio" name="calc_radio_org" id="calc_radio_org_10">
+				<label class="calc__label calc__label--org" for="calc_radio_org_10">Союз</label>
+				<input class="calc__radio" type="radio" name="calc_radio_org" id="calc_radio_org_11">
+				<label class="calc__label calc__label--org" for="calc_radio_org_11">АНО</label>
+				<input class="calc__radio" type="radio" name="calc_radio_org" id="calc_radio_org_12">
+				<label class="calc__label calc__label--org" for="calc_radio_org_12">Прочее</label>
+			</div>
+		</div>
+
+		<div class="calc__block">
+			<div class="calc__title">Система налогооблажения</div>
+			<div class="calc__box calc__box--half">
+				<div class="calc__half">
+					<div class="calc__title calc__title--sub">С оборотами за последние 3 года</div>
+					<input class="calc__radio" type="radio" name="calc_radio_system" id="calc_radio_system_1" checked>
+					<label class="calc__label calc__label--system" for="calc_radio_system_1">УСН 6%</label>
+					<input class="calc__radio" type="radio" name="calc_radio_system" id="calc_radio_system_2">
+					<label class="calc__label calc__label--system" for="calc_radio_system_2">УСН 15%</label>
+					<input class="calc__radio" type="radio" name="calc_radio_system" id="calc_radio_system_3">
+					<label class="calc__label calc__label--system" for="calc_radio_system_3">ОСНО 20%</label>
+					<input class="calc__radio" type="radio" name="calc_radio_system" id="calc_radio_system_4">
+					<label class="calc__label calc__label--system" for="calc_radio_system_4">ОСНО 10%</label>
+					<input class="calc__radio" type="radio" name="calc_radio_system" id="calc_radio_system_5">
+					<label class="calc__label calc__label--system" for="calc_radio_system_5">ОСНО 0%</label>
+				</div>
+				<div class="calc__half">
+					<div class="calc__title calc__title--sub">Без оборотов</div>
+					<input class="calc__radio" type="radio" name="calc_radio_system" id="calc_radio_system_6">
+					<label class="calc__label calc__label--system" for="calc_radio_system_6">УСН 6%</label>
+					<input class="calc__radio" type="radio" name="calc_radio_system" id="calc_radio_system_7">
+					<label class="calc__label calc__label--system" for="calc_radio_system_7">УСН 15%</label>
+					<input class="calc__radio" type="radio" name="calc_radio_system" id="calc_radio_system_8">
+					<label class="calc__label calc__label--system" for="calc_radio_system_8">ОСНО</label>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="calc__block">
+			<div class="calc__title">Ваша компания использовала за последние 3 года</div>
+			<div class="calc__box calc__box--lines">
+				<div class="calc__line calc__line--800">
+					<div class="calc__name">Договор простого товарищества</div>
+					<div class="calc__flex">
+						<input class="calc__radio" type="radio" name="calc_danet_1" id="calc_danet_1_1">
+						<label class="calc__label calc__label--danet" for="calc_danet_1_1">Да</label>
+						<input class="calc__radio" type="radio" name="calc_danet_1" id="calc_danet_1_2" checked>
+						<label class="calc__label calc__label--danet" for="calc_danet_1_2">Нет</label>
+					</div>
+				</div>
+
+				<div class="calc__line calc__line--800">
+					<div class="calc__name">Являлась ли Комиссионером договора комиссии</div>
+					<div class="calc__flex">
+						<input class="calc__radio" type="radio" name="calc_danet_2" id="calc_danet_2_1">
+						<label class="calc__label calc__label--danet" for="calc_danet_2_1">Да</label>
+						<input class="calc__radio" type="radio" name="calc_danet_2" id="calc_danet_2_2" checked>
+						<label class="calc__label calc__label--danet" for="calc_danet_2_2">Нет</label>
+					</div>
+				</div>
+
+				<div class="calc__line calc__line--800">
+					<div class="calc__name">Внешняя экономическая деятельность</div>
+					<div class="calc__flex">
+						<input class="calc__radio" type="radio" name="calc_danet_3" id="calc_danet_3_1">
+						<label class="calc__label calc__label--danet" for="calc_danet_3_1">Да</label>
+						<input class="calc__radio" type="radio" name="calc_danet_3" id="calc_danet_3_2" checked>
+						<label class="calc__label calc__label--danet" for="calc_danet_3_2">Нет</label>
+					</div>
+				</div>
+
+				<div class="calc__line calc__line--800">
+					<div class="calc__name">Покупка векселей акций</div>
+					<div class="calc__flex">
+						<input class="calc__radio" type="radio" name="calc_danet_4" id="calc_danet_4_1">
+						<label class="calc__label calc__label--danet" for="calc_danet_4_1">Да</label>
+						<input class="calc__radio" type="radio" name="calc_danet_4" id="calc_danet_4_2" checked>
+						<label class="calc__label calc__label--danet" for="calc_danet_4_2">Нет</label>
+					</div>
+				</div>
+
+				<div class="calc__line calc__line--800">
+					<div class="calc__name">Продажа векселей акций</div>
+					<div class="calc__flex">
+						<input class="calc__radio" type="radio" name="calc_danet_5" id="calc_danet_5_1">
+						<label class="calc__label calc__label--danet" for="calc_danet_5_1">Да</label>
+						<input class="calc__radio" type="radio" name="calc_danet_5" id="calc_danet_5_2" checked>
+						<label class="calc__label calc__label--danet" for="calc_danet_5_2">Нет</label>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="calc__block">
+			<div class="calc__title">Кредиты и задолженности</div>
+			<div class="calc__box calc__box--lines">
+
+				<div class="calc__line">
+					<div class="calc__name"></div>
+					<div class="calc__flex">
+						<div class="calc__year">
+							<div class="calc__year--div">2018</div>
+							<div class="calc__year--div">2019</div>
+							<div class="calc__year--div">2020</div>
+							<div class="calc__year--div">2021</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="calc__line">
+					<div class="calc__name">Кредиты в банках овердрафт</div>
+					<div class="calc__flex">
+						<div class="calc__year">
+							<input class="calc__radio" type="radio" name="calc_danet_6_2018" id="calc_danet_6_2018_1">
+							<label class="calc__label calc__label--danet" for="calc_danet_6_2018_1">Да</label>
+							<input class="calc__radio" type="radio" name="calc_danet_6_2018" id="calc_danet_6_2018_2" checked>
+							<label class="calc__label calc__label--danet" for="calc_danet_6_2018_2">Нет</label>
+						</div>
+						<div class="calc__year">
+							<input class="calc__radio" type="radio" name="calc_danet_6_2019" id="calc_danet_6_2019_1">
+							<label class="calc__label calc__label--danet" for="calc_danet_6_2019_1">Да</label>
+							<input class="calc__radio" type="radio" name="calc_danet_6_2019" id="calc_danet_6_2019_2" checked>
+							<label class="calc__label calc__label--danet" for="calc_danet_6_2019_2">Нет</label>
+						</div>
+						<div class="calc__year">
+							<input class="calc__radio" type="radio" name="calc_danet_6_2020" id="calc_danet_6_2020_1">
+							<label class="calc__label calc__label--danet" for="calc_danet_6_2020_1">Да</label>
+							<input class="calc__radio" type="radio" name="calc_danet_6_2020" id="calc_danet_6_2020_2" checked>
+							<label class="calc__label calc__label--danet" for="calc_danet_6_2020_2">Нет</label>
+						</div>
+						<div class="calc__year">
+							<input class="calc__radio" type="radio" name="calc_danet_6_2021" id="calc_danet_6_2021_1">
+							<label class="calc__label calc__label--danet" for="calc_danet_6_2021_1">Да</label>
+							<input class="calc__radio" type="radio" name="calc_danet_6_2021" id="calc_danet_6_2021_2" checked>
+							<label class="calc__label calc__label--danet" for="calc_danet_6_2021_2">Нет</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Задолженность на сайте судебных приставов</div>
+					<div class="calc__flex">
+						<div class="calc__year">
+							<input class="calc__radio" type="radio" name="calc_danet_7_2018" id="calc_danet_7_2018_1">
+							<label class="calc__label calc__label--danet" for="calc_danet_7_2018_1">Да</label>
+							<input class="calc__radio" type="radio" name="calc_danet_7_2018" id="calc_danet_7_2018_2" checked>
+							<label class="calc__label calc__label--danet" for="calc_danet_7_2018_2">Нет</label>
+						</div>
+						<div class="calc__year">
+							<input class="calc__radio" type="radio" name="calc_danet_7_2019" id="calc_danet_7_2019_1">
+							<label class="calc__label calc__label--danet" for="calc_danet_7_2019_1">Да</label>
+							<input class="calc__radio" type="radio" name="calc_danet_7_2019" id="calc_danet_7_2019_2" checked>
+							<label class="calc__label calc__label--danet" for="calc_danet_7_2019_2">Нет</label>
+						</div>
+						<div class="calc__year">
+							<input class="calc__radio" type="radio" name="calc_danet_7_2020" id="calc_danet_7_2020_1">
+							<label class="calc__label calc__label--danet" for="calc_danet_7_2020_1">Да</label>
+							<input class="calc__radio" type="radio" name="calc_danet_7_2020" id="calc_danet_7_2020_2" checked>
+							<label class="calc__label calc__label--danet" for="calc_danet_7_2020_2">Нет</label>
+						</div>
+						<div class="calc__year">
+							<input class="calc__radio" type="radio" name="calc_danet_7_2021" id="calc_danet_7_2021_1">
+							<label class="calc__label calc__label--danet" for="calc_danet_7_2021_1">Да</label>
+							<input class="calc__radio" type="radio" name="calc_danet_7_2021" id="calc_danet_7_2021_2" checked>
+							<label class="calc__label calc__label--danet" for="calc_danet_7_2021_2">Нет</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Задолженность по таможенным платежам</div>
+					<div class="calc__flex">
+						<div class="calc__year">
+							<input class="calc__radio" type="radio" name="calc_danet_9_2018" id="calc_danet_9_2018_1">
+							<label class="calc__label calc__label--danet" for="calc_danet_9_2018_1">Да</label>
+							<input class="calc__radio" type="radio" name="calc_danet_9_2018" id="calc_danet_9_2018_2" checked>
+							<label class="calc__label calc__label--danet" for="calc_danet_9_2018_2">Нет</label>
+						</div>
+						<div class="calc__year">
+							<input class="calc__radio" type="radio" name="calc_danet_9_2019" id="calc_danet_9_2019_1">
+							<label class="calc__label calc__label--danet" for="calc_danet_9_2019_1">Да</label>
+							<input class="calc__radio" type="radio" name="calc_danet_9_2019" id="calc_danet_9_2019_2" checked>
+							<label class="calc__label calc__label--danet" for="calc_danet_9_2019_2">Нет</label>
+						</div>
+						<div class="calc__year">
+							<input class="calc__radio" type="radio" name="calc_danet_9_2020" id="calc_danet_9_2020_1">
+							<label class="calc__label calc__label--danet" for="calc_danet_9_2020_1">Да</label>
+							<input class="calc__radio" type="radio" name="calc_danet_9_2020" id="calc_danet_9_2020_2" checked>
+							<label class="calc__label calc__label--danet" for="calc_danet_9_2020_2">Нет</label>
+						</div>
+						<div class="calc__year">
+							<input class="calc__radio" type="radio" name="calc_danet_9_2021" id="calc_danet_9_2021_1">
+							<label class="calc__label calc__label--danet" for="calc_danet_9_2021_1">Да</label>
+							<input class="calc__radio" type="radio" name="calc_danet_9_2021" id="calc_danet_9_2021_2" checked>
+							<label class="calc__label calc__label--danet" for="calc_danet_9_2021_2">Нет</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Залог, арест, долей  общества арбитражные споры</div>
+					<div class="calc__flex">
+						<div class="calc__year">
+							<input class="calc__radio" type="radio" name="calc_danet_8_2018" id="calc_danet_8_2018_1">
+							<label class="calc__label calc__label--danet" for="calc_danet_8_2018_1">Да</label>
+							<input class="calc__radio" type="radio" name="calc_danet_8_2018" id="calc_danet_8_2018_2" checked>
+							<label class="calc__label calc__label--danet" for="calc_danet_8_2018_2">Нет</label>
+						</div>
+						<div class="calc__year">
+							<input class="calc__radio" type="radio" name="calc_danet_8_2019" id="calc_danet_8_2019_1">
+							<label class="calc__label calc__label--danet" for="calc_danet_8_2019_1">Да</label>
+							<input class="calc__radio" type="radio" name="calc_danet_8_2019" id="calc_danet_8_2019_2" checked>
+							<label class="calc__label calc__label--danet" for="calc_danet_8_2019_2">Нет</label>
+						</div>
+						<div class="calc__year">
+							<input class="calc__radio" type="radio" name="calc_danet_8_2020" id="calc_danet_8_2020_1">
+							<label class="calc__label calc__label--danet" for="calc_danet_8_2020_1">Да</label>
+							<input class="calc__radio" type="radio" name="calc_danet_8_2020" id="calc_danet_8_2020_2" checked>
+							<label class="calc__label calc__label--danet" for="calc_danet_8_2020_2">Нет</label>
+						</div>
+						<div class="calc__year">
+							<input class="calc__radio" type="radio" name="calc_danet_8_2021" id="calc_danet_8_2021_1">
+							<label class="calc__label calc__label--danet" for="calc_danet_8_2021_1">Да</label>
+							<input class="calc__radio" type="radio" name="calc_danet_8_2021" id="calc_danet_8_2021_2" checked>
+							<label class="calc__label calc__label--danet" for="calc_danet_8_2021_2">Нет</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Кредиторская задолженность кроме Банка (товары  авансы от покупателей)</div>
+					<div class="calc__flex">
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_1_2018" id="calc_input_1_2018" placeholder="2018">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_1_2019" id="calc_input_1_2019" placeholder="2019">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_1_2020" id="calc_input_1_2020" placeholder="2020">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_1_2021" id="calc_input_1_2021" placeholder="2021">
+						</div>
+					</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Дебиторская задолженность В связи с чем  (отгрузка  товары и авансы выпл. поставщикам)</div>
+					<div class="calc__flex">
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_2_2018" id="calc_input_2_2018" placeholder="2018">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_2_2019" id="calc_input_2_2019" placeholder="2019">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_2_2020" id="calc_input_2_2020" placeholder="2020">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_2_2021" id="calc_input_2_2021" placeholder="2021">
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+
+		<div class="calc__block">
+			<div class="calc__title">Налоги</div>
+			<div class="calc__box calc__box--lines">
+
+				<!-- <div class="calc__line">
+					<div class="calc__name"></div>
+					<div class="calc__flex">
+						<div class="calc__year">
+							<div class="calc__year--div">2018</div>
+							<div class="calc__year--div">2019</div>
+							<div class="calc__year--div">2020</div>
+							<div class="calc__year--div">2021</div>
+						</div>
+					</div>
+				</div> -->
+
+				<div class="calc__line">
+					<div class="calc__name">Сумма уплаченных налогов (подоходный налог)</div>
+					<div class="calc__flex">
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_3_2018" id="calc_input_3_2018" placeholder="2018">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_3_2019" id="calc_input_3_2019" placeholder="2019">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_3_2020" id="calc_input_3_2020" placeholder="2020">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_3_2021" id="calc_input_3_2021" placeholder="2021">
+						</div>
+					</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Сумма уплаченных налогов УСН 6%</div>
+					<div class="calc__flex">
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_4_2018" id="calc_input_4_2018" placeholder="2018">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_4_2019" id="calc_input_4_2019" placeholder="2019">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_4_2020" id="calc_input_4_2020" placeholder="2020">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_4_2021" id="calc_input_4_2021" placeholder="2021">
+						</div>
+					</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Сумма уплаченных налогов УСН 15%</div>
+					<div class="calc__flex">
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_5_2018" id="calc_input_5_2018" placeholder="2018">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_5_2019" id="calc_input_5_2019" placeholder="2019">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_5_2020" id="calc_input_5_2020" placeholder="2020">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_5_2021" id="calc_input_5_2021" placeholder="2021">
+						</div>
+					</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Сумма уплаченных налогов (налог на прибыль)</div>
+					<div class="calc__flex">
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_6_2018" id="calc_input_6_2018" placeholder="2018">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_6_2019" id="calc_input_6_2019" placeholder="2019">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_6_2020" id="calc_input_6_2020" placeholder="2020">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_6_2021" id="calc_input_6_2021" placeholder="2021">
+						</div>
+					</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Сумма уплаченных налогов (НДС)</div>
+					<div class="calc__flex">
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_7_2018" id="calc_input_7_2018" placeholder="2018">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_7_2019" id="calc_input_7_2019" placeholder="2019">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_7_2020" id="calc_input_7_2020" placeholder="2020">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_7_2021" id="calc_input_7_2021" placeholder="2021">
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+
+		<div class="calc__block">
+			<div class="calc__title">Возмещение НДС возврата переплаты</div>
+			<div class="calc__box calc__box--lines">
+
+				<div class="calc__line">
+					<div class="calc__name">Возмещение НДС</div>
+					<div class="calc__flex">
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_8_2018" id="calc_input_8_2018" placeholder="2018">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_8_2019" id="calc_input_8_2019" placeholder="2019">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_8_2020" id="calc_input_8_2020" placeholder="2020">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_8_2021" id="calc_input_8_2021" placeholder="2021">
+						</div>
+					</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Возврат зачет переплаты НДС</div>
+					<div class="calc__flex">
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_9_2018" id="calc_input_9_2018" placeholder="2018">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_9_2019" id="calc_input_9_2019" placeholder="2019">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_9_2020" id="calc_input_9_2020" placeholder="2020">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_9_2021" id="calc_input_9_2021" placeholder="2021">
+						</div>
+					</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Возврат зачет переплаты налог на прибыль</div>
+					<div class="calc__flex">
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_10_2018" id="calc_input_10_2018" placeholder="2018">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_10_2019" id="calc_input_10_2019" placeholder="2019">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_10_2020" id="calc_input_10_2020" placeholder="2020">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_10_2021" id="calc_input_10_2021" placeholder="2021">
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="calc__block">
+			<div class="calc__title">Имущество на балансе общества</div>
+			<div class="calc__box calc__box--lines">
+
+				<div class="calc__line">
+					<div class="calc__name">Имущество (здания, земельные участки …)</div>
+					<div class="calc__flex">
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_11_2018" id="calc_input_11_2018" placeholder="2018">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_11_2019" id="calc_input_11_2019" placeholder="2019">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_11_2020" id="calc_input_11_2020" placeholder="2020">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_11_2021" id="calc_input_11_2021" placeholder="2021">
+						</div>
+					</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Незавершённое строительство</div>
+					<div class="calc__flex">
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_12_2018" id="calc_input_12_2018" placeholder="2018">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_12_2019" id="calc_input_12_2019" placeholder="2019">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_12_2020" id="calc_input_12_2020" placeholder="2020">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_12_2021" id="calc_input_12_2021" placeholder="2021">
+						</div>
+					</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Продажа помещений, зданий, земли</div>
+					<div class="calc__flex">
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_13_2018" id="calc_input_13_2018" placeholder="2018">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_13_2019" id="calc_input_13_2019" placeholder="2019">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_13_2020" id="calc_input_13_2020" placeholder="2020">
+						</div>
+						<div class="calc__year">
+							<input class="calc__input" type="number" name="calc_input_13_2021" id="calc_input_13_2021" placeholder="2021">
+						</div>
+					</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Будет ли реализовано имущество до начала ликвидации</div>
+					<div class="calc__flex">
+						<input class="calc__radio" type="radio" name="calc_danet_10" id="calc_danet_10_1">
+						<label class="calc__label calc__label--danet" for="calc_danet_10_1">Да</label>
+						<input class="calc__radio" type="radio" name="calc_danet_10" id="calc_danet_10_2" checked>
+						<label class="calc__label calc__label--danet" for="calc_danet_10_2">Нет</label>
+					</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Будет ли реализовано имущество во время ликвидации</div>
+					<div class="calc__flex">
+						<input class="calc__radio" type="radio" name="calc_danet_11" id="calc_danet_11_1">
+						<label class="calc__label calc__label--danet" for="calc_danet_11_1">Да</label>
+						<input class="calc__radio" type="radio" name="calc_danet_11" id="calc_danet_11_2" checked>
+						<label class="calc__label calc__label--danet" for="calc_danet_11_2">Нет</label>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+
+
+		<div class="calc__block">
+			<div class="calc__title">Разрывы НДС по состоянию на дату заполнения</div>
+			<div class="calc__box calc__box--lines">
+				<div class="calc__line calc__line--500">
+					<div class="calc__name">Прямые</div>
+					<input type="number" name="calc_input_14" id="calc_input_14" class="calc__input">
+				</div>
+				<div class="calc__line calc__line--500">
+					<div class="calc__name">Региональные</div>
+					<input type="number" name="calc_input_15" id="calc_input_15" class="calc__input">
+				</div>
+				<div class="calc__line calc__line--500">
+					<div class="calc__name">Сложные</div>
+					<input type="number" name="calc_input_16" id="calc_input_16" class="calc__input">
+				</div>
+				<div class="calc__line calc__line--500">
+					<div class="calc__name">Тематическая проверка </div>
+					<input type="number" name="calc_input_17" id="calc_input_17" class="calc__input">
+				</div>
+				<div class="calc__line calc__line--500">
+					<div class="calc__name">Разрывы есть но затрудняюсь с ответом</div>
+					<div class="calc__flex">
+						<input class="calc__radio" type="radio" name="calc_danet_12" id="calc_danet_12_1">
+						<label class="calc__label calc__label--danet" for="calc_danet_12_1">Да</label>
+						<input class="calc__radio" type="radio" name="calc_danet_12" id="calc_danet_12_2" checked>
+						<label class="calc__label calc__label--danet" for="calc_danet_12_2">Нет</label>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="calc__block">
+			<div class="calc__title">Среднегодовая численность (человек)</div>
+			<input type="number" name="calc_input_18" id="calc_input_18" class="calc__input calc__input--big">
+		</div>
+
+		<div class="calc__block">
+
+		</div>
+	</div>
+	<!-- /.calc -->
+
+
+
+</body>
+</html>

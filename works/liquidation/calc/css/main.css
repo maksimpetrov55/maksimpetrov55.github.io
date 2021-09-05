@@ -1,0 +1,226 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Lora', serif;
+  position: relative;
+}
+
+body {
+  position: relative;
+  background: #aaa;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -webkit-appearance: none;
+          appearance: none;
+  -moz-appearance: textfield;
+}
+
+.calc {
+  position: relative;
+  max-width: 1040px;
+  margin: 100px auto;
+  background: #fff;
+  width: 100%;
+  padding: 40px 30px;
+  min-height: 400px;
+}
+
+.calc__block {
+  padding: 20px 0 60px 0;
+  border-bottom: 1px dashed #000;
+}
+
+.calc__title {
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  margin: 0 auto 40px auto;
+}
+
+.calc__title--sub {
+  font-size: 18px;
+  margin: 0 auto 40px auto;
+}
+
+.calc__name {
+  font-size: 18px;
+  padding: 0 10px 0 0;
+  text-align: left;
+  max-width: 450px;
+}
+
+.calc__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.calc__box--half {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.calc__box--lines {
+  display: block;
+}
+
+.calc__half {
+  width: 50%;
+}
+
+.calc__line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px auto;
+}
+
+.calc__line--800 {
+  max-width: 800px;
+}
+
+.calc__line--500 {
+  max-width: 500px;
+}
+
+.calc__radio {
+  display: none;
+}
+
+.calc__radio:checked + .calc__label--type {
+  background: #fffc48;
+  color: #333;
+}
+
+.calc__radio:checked + .calc__label--org {
+  background: #fffc48;
+  color: #333;
+}
+
+.calc__radio:checked + .calc__label--system {
+  background: #fffc48;
+  color: #333;
+}
+
+.calc__radio:checked + .calc__label--danet {
+  background: #fffc48;
+  color: #333;
+}
+
+.calc__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin: 20px 30px;
+  border: 1px solid #6d6d6d;
+  color: #664E2D;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 5px;
+  border-radius: 6px;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.calc__label:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.calc__label--type {
+  height: 90px;
+  width: 270px;
+}
+
+.calc__label--org {
+  height: 60px;
+  width: 150px;
+  margin: 20px 20px;
+}
+
+.calc__label--system {
+  width: 100%;
+  max-width: 250px;
+  margin: 15px auto;
+  height: 40px;
+}
+
+.calc__label--danet {
+  width: 46px;
+  height: 30px;
+  font-size: 18px;
+  margin: 0 2px;
+}
+
+.calc__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.calc__year {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.calc__year--div {
+  font-weight: 600;
+  width: 100px;
+  text-align: center;
+}
+
+.calc__input {
+  border: 1px solid #6d6d6d;
+  width: 96px;
+  margin: 0 2px;
+  padding: 4px 4px 4px 4px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.calc__input--big {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  padding: 10px;
+  font-size: 19px;
+}
+/*# sourceMappingURL=main.css.map */
