@@ -1,0 +1,155 @@
+$light: #fffae7
+$yellow: #fffc48
+$brown: #664E2D
+$gray: #ddd
+$black: #333
+$dark: #6d6d6d
+
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: 'Lora', serif
+    position: relative
+
+body
+    position: relative
+    background: #aaa
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button
+    -webkit-appearance: none
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus
+    appearance: none
+    -moz-appearance: textfield
+
+.calc
+    position: relative
+    max-width: 1040px
+    margin: 100px auto
+    background: #fff
+    width: 100%
+    padding: 40px 30px
+    min-height: 400px
+
+    &__block
+        padding: 20px 0 60px 0
+        border-bottom: 1px dashed #000
+
+    &__title
+        font-size: 24px
+        font-weight: 500
+        text-align: center
+        margin: 0 auto 40px auto
+        &--sub
+            font-size: 18px
+            margin: 0 auto 40px auto
+
+    &__name
+        font-size: 18px
+        padding: 0 10px 0 0
+        text-align: left
+        max-width: 450px
+
+    &__box
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-wrap: wrap
+        &--half
+            align-items: flex-start
+        &--lines
+            display: block
+
+    &__half
+        width: 50%
+
+    &__line
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin: 10px auto
+        &--800
+            max-width: 800px
+        &--500
+            max-width: 500px
+
+    &__radio
+        display: none
+        &:checked + .calc__label--type
+            background: $yellow
+            color: $black
+        &:checked + .calc__label--org
+            background: $yellow
+            color: $black
+        &:checked + .calc__label--system
+            background: $yellow
+            color: $black
+        &:checked + .calc__label--danet
+            background: $yellow
+            color: $black
+
+    &__label
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        margin: 20px 30px
+        border: 1px solid $dark
+        color: $brown
+        font-size: 20px
+        font-weight: 500
+        padding: 5px
+        border-radius: 6px
+        transition-duration: 0.2s
+        cursor: pointer
+        user-select: none
+        &:hover
+            transform: translateY(-5px)
+        &--type
+            height: 90px
+            width: 270px
+        &--org
+            height: 60px
+            width: 150px
+            margin: 20px 20px
+        &--system
+            width: 100%
+            max-width: 250px
+            margin: 15px auto
+            height: 40px
+        &--danet
+            width: 46px
+            height: 30px
+            font-size: 18px
+            margin: 0 2px
+
+    &__flex
+        display: flex
+
+    &__danet
+
+    &__year
+        display: flex
+        &--div
+            font-weight: 600
+            width: 100px
+            text-align: center
+
+    &__input
+        border: 1px solid $dark
+        width: 96px
+        margin: 0 2px
+        padding: 4px 4px 4px 4px
+        font-size: 16px
+        text-align: center
+        &--big
+            display: block
+            margin: 0 auto
+            width: 200px
+            padding: 10px
+            font-size: 19px
