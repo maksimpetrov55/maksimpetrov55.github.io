@@ -1,0 +1,247 @@
+var CWB_calculation_ON = {
+    Province: "ON",
+    Base_ded_amount: "3000",
+    Rate: "26%",
+    Line_20: "formula",
+    Single_amount: "1381",
+    single_i_spouse_amount: "2379",
+    Line_22: "formula",
+    Base_income_threshold: "13064",
+    Base_income_threshold_i_spouse: "17348",
+    Line_25: "formula",
+    Rate_reduction: "12%",
+    Line_27: "formula",
+};
+
+var CWB_calculation_AB = {
+Province: "AB",
+Base_ded_amount: "2760",
+Rate: "21%",
+Line_20: "formula",
+Single_amount: "1481",
+single_i_spouse_amount: "2216",
+Line_22: "formula",
+Base_income_threshold: "13451",
+Base_income_threshold_i_spouse: "18291",
+Line_25: "formula",
+Rate_reduction: "12%",
+Line_27: "formula",
+};
+
+
+var CWB_calculation_BC = {
+Province: "BC",
+Base_ded_amount: "3000",
+Rate: "26%",
+Line_20: "formula",
+Single_amount: "1381",
+single_i_spouse_amount: "2379",
+Line_22: "formula",
+Base_income_threshold: "13064",
+Base_income_threshold_i_spouse: "17348",
+Line_25: "formula",
+Rate_reduction: "12%",
+Line_27: "formula",
+};
+
+
+var CWB_calculation_MB = {
+Province: "MB",
+Base_ded_amount: "3000",
+Rate: "26%",
+Line_20: "formula",
+Single_amount: "1381",
+single_i_spouse_amount: "2379",
+Line_22: "formula",
+Base_income_threshold: "13064",
+Base_income_threshold_i_spouse: "17348",
+Line_25: "formula",
+Rate_reduction: "12%",
+Line_27: "formula",
+};
+
+
+var CWB_calculation_NB = {
+Province: "NB",
+Base_ded_amount: "3000",
+Rate: "26%",
+Line_20: "formula",
+Single_amount: "1381",
+single_i_spouse_amount: "2379",
+Line_22: "formula",
+Base_income_threshold: "13064",
+Base_income_threshold_i_spouse: "17348",
+Line_25: "formula",
+Rate_reduction: "12%",
+Line_27: "formula",
+};
+
+
+var CWB_calculation_NL = {
+Province: "NL",
+Base_ded_amount: "3000",
+Rate: "26%",
+Line_20: "formula",
+Single_amount: "1381",
+single_i_spouse_amount: "2379",
+Line_22: "formula",
+Base_income_threshold: "13064",
+Base_income_threshold_i_spouse: "17348",
+Line_25: "formula",
+Rate_reduction: "12%",
+Line_27: "formula",
+};
+
+
+var CWB_calculation_NS = {
+Province: "NS",
+Base_ded_amount: "3000",
+Rate: "26%",
+Line_20: "formula",
+Single_amount: "1381",
+single_i_spouse_amount: "2379",
+Line_22: "formula",
+Base_income_threshold: "13064",
+Base_income_threshold_i_spouse: "17348",
+Line_25: "formula",
+Rate_reduction: "12%",
+Line_27: "formula",
+};
+
+
+var CWB_calculation_PE = {
+Province: "PE",
+Base_ded_amount: "3000",
+Rate: "26%",
+Line_20: "formula",
+Single_amount: "1381",
+single_i_spouse_amount: "2379",
+Line_22: "formula",
+Base_income_threshold: "13064",
+Base_income_threshold_i_spouse: "17348",
+Line_25: "formula",
+Rate_reduction: "12%",
+Line_27: "formula",
+};
+
+
+var CWB_calculation_QC = {
+Province: "QC",
+Base_ded_amount: "2400",
+Base_i_spouse_ded_amount: "3600",
+Base_Rate: "27.4%",
+Line_20: "formula",
+Single_amount: "2319",
+single_i_spouse_amount: "3620",
+Line_22: "formula",
+Base_income_threshold: "12308",
+Base_income_threshold_i_spouse: "18898",
+Line_25: "formula",
+Rate_reduction: "20%",
+Line_27: "formula",
+};
+
+
+var CWB_calculation_SK = {
+Province: "SK",
+Base_ded_amount: "3000",
+Rate: "26%",
+Line_20: "formula",
+Single_amount: "1381",
+single_i_spouse_amount: "2379",
+Line_22: "formula",
+Base_income_threshold: "13064",
+Base_income_threshold_i_spouse: "17348",
+Line_25: "formula",
+Rate_reduction: "12%",
+Line_27: "formula",
+};
+
+
+var CWB_calculation_NT = {
+    Province: "NT",
+    Base_ded_amount: "3000",
+    Rate: "26%",
+    Line_20: "formula",
+    Single_amount: "1381",
+    single_i_spouse_amount: "2379",
+    Line_22: "formula",
+    Base_income_threshold: "13064",
+    Base_income_threshold_i_spouse: "17348",
+    Line_25: "formula",
+    Rate_reduction: "12%",
+    Line_27: "formula",
+};
+
+
+var CWB_calculation_NU = {
+Province: "NU",
+Base_ded_amount: "6000",
+Rate_single: "10%",
+Rate_single_i_spouse: "14%",
+Line_20: "formula",
+Single_amount: "1085",
+single_i_spouse_amount: "1630",
+Line_22: "formula",
+Base_income_threshold: "21654",
+Base_income_threshold_i_spouse: "29551",
+Line_25: "formula",
+Rate_reduction: "8%",
+Line_27: "formula",
+};
+
+
+var CWB_calculation_YT = {
+Province: "YT",
+Base_ded_amount: "3000",
+Rate: "26%",
+Line_20: "formula",
+Single_amount: "1381",
+single_i_spouse_amount: "2379",
+Line_22: "formula",
+Base_income_threshold: "13064",
+Base_income_threshold_i_spouse: "17348",
+Line_25: "formula",
+Rate_reduction: "12%",
+Line_27: "formula",
+};
+
+
+
+
+
+
+{Province: "ON", Base_ded_amount: "3000", Rate: "26%", Line_20: "formula", Single_amount: "1381", single_i_spouse_amount: "2379", Line_22: "formula", Base_income_threshold: "13064", Base_income_threshold_i_spouse: "17348", Line_25: "formula", Rate_reduction: "12%", Line_27: "formula" },
+{Province: "ON", Base_ded_amount: "3000", Rate: "26%", Line_20: "formula", Single_amount: "1381", single_i_spouse_amount: "2379", Line_22: "formula", Base_income_threshold: "13064", Base_income_threshold_i_spouse: "17348", Line_25: "formula", Rate_reduction: "12%", Line_27: "formula" },
+{Province: "AB", Base_ded_amount: "2760", Rate: "21%", Line_20: "formula", Single_amount: "1481", single_i_spouse_amount: "2216", Line_22: "formula", Base_income_threshold: "13451", Base_income_threshold_i_spouse: "18291", Line_25: "formula", Rate_reduction: "12%", Line_27: "formula" },
+{Province: "BC", Base_ded_amount: "3000", Rate: "26%", Line_20: "formula", Single_amount: "1381", single_i_spouse_amount: "2379", Line_22: "formula", Base_income_threshold: "13064", Base_income_threshold_i_spouse: "17348", Line_25: "formula", Rate_reduction: "12%", Line_27: "formula" },
+{Province: "MB", Base_ded_amount: "3000", Rate: "26%", Line_20: "formula", Single_amount: "1381", single_i_spouse_amount: "2379", Line_22: "formula", Base_income_threshold: "13064", Base_income_threshold_i_spouse: "17348", Line_25: "formula", Rate_reduction: "12%", Line_27: "formula", },
+{Province: "NB", Base_ded_amount: "3000", Rate: "26%", Line_20: "formula", Single_amount: "1381", single_i_spouse_amount: "2379", Line_22: "formula", Base_income_threshold: "13064", Base_income_threshold_i_spouse: "17348", Line_25: "formula", Rate_reduction: "12%", Line_27: "formula", },
+{Province: "NL", Base_ded_amount: "3000", Rate: "26%", Line_20: "formula", Single_amount: "1381", single_i_spouse_amount: "2379", Line_22: "formula", Base_income_threshold: "13064", Base_income_threshold_i_spouse: "17348", Line_25: "formula", Rate_reduction: "12%", Line_27: "formula", },
+{Province: "NS", Base_ded_amount: "3000", Rate: "26%", Line_20: "formula", Single_amount: "1381", single_i_spouse_amount: "2379", Line_22: "formula", Base_income_threshold: "13064", Base_income_threshold_i_spouse: "17348", Line_25: "formula", Rate_reduction: "12%", Line_27: "formula", },
+{Province: "PE", Base_ded_amount: "3000", Rate: "26%", Line_20: "formula", Single_amount: "1381", single_i_spouse_amount: "2379", Line_22: "formula", Base_income_threshold: "13064", Base_income_threshold_i_spouse: "17348", Line_25: "formula", Rate_reduction: "12%", Line_27: "formula", },
+{Province: "QC", Base_ded_amount: "2400", Base_i_spouse_ded_amount: "3600", Base_Rate: "27.4%", Line_20: "formula", Single_amount: "2319", single_i_spouse_amount: "3620", Line_22: "formula", Base_income_threshold: "12308", Base_income_threshold_i_spouse: "18898", Line_25: "formula", Rate_reduction: "20%", Line_27: "formula", },
+{Province: "SK", Base_ded_amount: "3000", Rate: "26%", Line_20: "formula", Single_amount: "1381", single_i_spouse_amount: "2379", Line_22: "formula", Base_income_threshold: "13064", Base_income_threshold_i_spouse: "17348", Line_25: "formula", Rate_reduction: "12%", Line_27: "formula", },
+{Province: "NT", Base_ded_amount: "3000", Rate: "26%", Line_20: "formula", Single_amount: "1381", single_i_spouse_amount: "2379", Line_22: "formula", Base_income_threshold: "13064", Base_income_threshold_i_spouse: "17348", Line_25: "formula", Rate_reduction: "12%", Line_27: "formula", },
+{Province: "NU", Base_ded_amount: "6000", Rate_single: "10%",Rate_single_i_spouse: "14%", Line_20: "formula",Single_amount: "1085", single_i_spouse_amount: "1630",Line_22: "formula",Base_income_threshold: "21654",Base_income_threshold_i_spouse: "29551",Line_25: "formula",Rate_reduction: "8%",Line_27: "formula",},
+{Province: "YT", Base_ded_amount: "3000", Rate: "26%",Line_20: "formula",Single_amount: "1381", single_i_spouse_amount: "2379", Line_22: "formula", Base_income_threshold: "13064",Base_income_threshold_i_spouse: "17348",Line_25: "formula",Rate_reduction: "12%",Line_27: "formula",}
+
+
+
+
+
+
+{Bracket: "1",Lower end: 0,Higher end: "48535",Tax rate: "0.15",Max amount: "formula",Tax amount: "formula"},
+{Bracket: "2",Lower end: "formula",Higher end: "97069",Tax rate: "0.20",Max amount: "formula",Tax amount: "formula"},
+{Bracket: "3",Lower end: "formula",Higher end: "150473",Tax rate: "0.26",Max amount: "formula",Tax amount: "formula"},
+{Bracket: "4",Lower end: "formula",Higher end: "214368",Tax rate: "0.29",Max amount: "formula",Tax amount: "formula"},
+{Bracket: "5",Lower end: "formula",Higher end: "0",Tax rate: "0.33",Max amount: "formula",Tax amount: "formula"}
+
+
+
+
+
+
+
+
+
