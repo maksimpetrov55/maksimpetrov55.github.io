@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/another.js"></script>
+	<script src="js/tables.js"></script>
+	<script src="js/scripts.js"></script>
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div class="calc__header">Personal Tax Calculator</div>
+
+		<div class="calc__separator"></div>
+
+		<div class="calc__line">
+			<div class="calc__title">Your province</div>
+			<select name="" id="calc_B1" class="calc__select">
+				<option value="AB">Alberta</option>
+				<option value="BC">British Columbia</option>
+				<option value="MB">Manitoba</option>
+				<option value="NB">New Brunswick</option>
+				<option value="NL">Newfoundland and Labrador</option>
+				<option value="NS">Nova Scotia</option>
+				<option value="NT">Northwest Territories</option>
+				<option value="NU">Nunavut</option>
+				<option value="ON">Ontario</option>
+				<option value="PE">P.E.I</option>
+				<option value="QC">Quebec</option>
+				<option value="SK">Saskatchewan</option>
+				<option value="YT">Yukon</option>
+    			<option value="NR">Non-residen</option>
+			</select>
+		</div>
+
+
+		<div class="calc__line">
+			<div class="calc__title">Answer a few questions for an accurate calculation?</div>
+			<select name="" id="calc_C3" class="calc__select">
+				<option value="No">No, time is money!</option>
+				<option value="Yes">Yes, I'm a perfectionist!</option>
+			</select>
+		</div>
+
+		<div class="calc__ask">
+			<div class="calc__line">
+				<div class="calc__title">Spouse / Common law partner/Eligible Dependant</div>
+				<select name="" id="calc_C4" class="calc__select">
+					<option value="Yes">Yes please!</option>
+					<option value="No">No, I'm not ready yet!</option>
+				</select>
+			</div>
+	
+			<div class="calc__line">
+				<div class="calc__title">Net Income of above (line 23600)</div>
+				<input type="number" name="" id="calc_C5" class="calc__input" value="4000">
+			</div>
+	
+			
+			<div class="calc__line">
+				<div class="calc__title">Did you buy a home?</div>
+				<select name="" id="calc_C6" class="calc__select">
+					<option value="0">—</option>
+					<option value="1">Yes, it's a first time I own a property!</option>
+					<option value="2">Yes, but NOT the first time - I own a property!</option>
+					<option value="3">No, who needs a mortgage!</option>
+				</select>
+			</div>
+	
+			<div class="calc__line">
+				<div class="calc__title">Income tax deducted on T4 / T4A / other slips / Instalment payments made</div>
+				<input data-min="0" type="number" id="calc_C7" class="calc__input" value="1000">
+			</div>
+		</div>
+
+		<div class="calc__separator"></div>
+
+		<div class="calc__line">
+			<div class="calc__title">Employment</div>
+			<input type="number" name="" id="calc_C12" class="calc__input" value="32000">
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Self-employed (Business)</div>
+			<input type="number" name="" id="calc_C13" class="calc__input" value="5000">
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Rental income</div>
+			<input type="number" name="" id="calc_C14" class="calc__input" value="15000">
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Other income (CERB, CRB, Interest)</div>
+			<input type="number" name="" id="calc_C15" class="calc__input" value="6000">
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Taxable capital gain</div>
+			<input type="number" name="" id="calc_C16" class="calc__input" value="2500">
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Eligible taxable dividend</div>
+			<input type="number" name="" id="calc_C17" class="calc__input" value="1380">
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Ineligible taxable dividend</div>
+			<input type="number" name="" id="calc_C18" class="calc__input" value="0">
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Total Income</div>
+			<input disabled type="number" name="" id="calc_C19" class="calc__input" value="0">
+		</div>
+
+		<div class="calc__separator"></div>
+
+		<div class="calc__line">
+			<div class="calc__title">RRSP Contributions (on T4 or other)</div>
+			<input type="number" name="" id="calc_C22" class="calc__input" value="200000">
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Self-employed (Business) expenses</div>
+			<input type="number" name="" id="calc_C23" class="calc__input" value="8000">
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Rental expenses</div>
+			<input type="number" name="" id="calc_C24" class="calc__input" value="20000">
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Moving expenses</div>
+			<input type="number" name="" id="calc_C25" class="calc__input" value="1000">
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Employment expenses</div>
+			<input type="number" name="" id="calc_C26" class="calc__input" value="0">
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Other deductions</div>
+			<input type="number" name="" id="calc_C27" class="calc__input" value="0">
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">CPP/QPP & other deduction</div>
+			<input disabled type="number" name="" id="calc_C28" class="calc__input" value="0">
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Total Deductions</div>
+			<input disabled type="number" name="" id="calc_C29" class="calc__input" value="0">
+		</div>
+
+		<div class="calc__separator"></div>
+
+		<div class="calc__line">
+			<div class="calc__title">Taxable Net Income (Loss)</div>
+			<input disabled type="number" name="" id="calc_C32" class="calc__input" value="200000">
+		</div>
+
+		<div class="calc__separator"></div>
+
+		<div class="calc__line">
+			<div class="calc__title">Federal Tax</div>
+			<input disabled type="number" name="" id="calc_C36" class="calc__input" value="">
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">CPP payable on self-employment</div>
+			<input disabled type="number" name="" id="calc_C37" class="calc__input" value="">
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Provincial Tax</div>
+			<input disabled type="number" name="" id="calc_C38" class="calc__input" value="">
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Total Payable</div>
+			<input disabled type="number" name="" id="calc_C39" class="calc__input" value="">
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Income tax deducted</div>
+			<input disabled type="number" name="" id="calc_C40" class="calc__input" value="">
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Climate Action Incentive (CAI)</div>
+			<input disabled type="number" name="" id="calc_C41" class="calc__input" value="">
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Canada workers benefit (CWB)</div>
+			<input disabled type="number" name="" id="calc_C42" class="calc__input" value="">
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Provincial Territories Credit</div>
+			<input disabled type="number" name="" id="calc_C43" class="calc__input" value="">
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Total Credits</div>
+			<input disabled type="number" name="" id="calc_C44" class="calc__input" value="">
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Total Owing</div>
+			<input disabled type="number" name="" id="calc_C46" class="calc__input" value="">
+		</div>
+
+		<div class="calc__line">
+			<div id="final_text" class="calc__final"></div>
+		</div>
+
+	</div>
+	<!-- /.calc -->
+	
+
+
+</body>
+</html>
