@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 	tables_values();
 	function tables_values() {
-		console.clear();
+		//console.clear();
 
 		var C3 = $('#calc_C3').val();
 
@@ -46,7 +46,7 @@ $(document).ready(function() {
 		var C18 = +$('#calc_C18').val();
 
 
-
+		total_income();
 
 
 
@@ -84,7 +84,7 @@ $(document).ready(function() {
 				if( C4 == "Yes" ) {var cwb_B = CWB_calculation[i].Single_i_spouse_amount;} else {var cwb_B = CWB_calculation[i].Single_amount;}
 				if( +cwb_B > +CWB_calculation[i].Line_20 ) {var cwb_C = CWB_calculation[i].Line_20;} else {var cwb_C = cwb_A;}
 				if( B1 == CWB_calculation[i].Province ) {CWB_calculation[i].Line_22 = +cwb_C;} else {CWB_calculation[i].Line_22 = 0;}
-	
+
 				//line_25
 				if( C4 == "Yes" ) {
 					var cwb_D = +CWB_calculation[i].Base_income_threshold_i_spouse;
@@ -92,18 +92,17 @@ $(document).ready(function() {
 					var cwb_D = +CWB_calculation[i].Base_income_threshold;
 				}
 				var cwb_E = Math.max( 0 , (+C32 + +C5 - +cwb_D) );
-				if( B1 == CWB_calculation[i].Province ) {
+				if ( B1 == CWB_calculation[i].Province ) {
 					CWB_calculation[i].Line_25 = cwb_E;
 				} else {
-					CWB_calculation[i].Line_25 = 0 ;
+					CWB_calculation[i].Line_25 = 0;
 				}
-				
-	
+
 				//line_27
 				CWB_calculation[i].Line_27 = CWB_calculation[i].Line_25 * CWB_calculation[i].Rate_reduction;
 	
-				console.log( CWB_calculation[i].Line_22 );
-				console.log( CWB_calculation[i].Line_27 );
+				// console.log( CWB_calculation[i].Line_22 );
+				// console.log( CWB_calculation[i].Line_27 );
 	
 			}
 			if ( province == "QC" ) {
@@ -1317,6 +1316,7 @@ $(document).ready(function() {
 					var Provincial_Deductions_U = 0;
 				}
 			}
+
 			if ( C4 == "Yes" ) {
 				Provincial_Deductions[3].Spouse_amount = Math.max(0, Provincial_Deductions_U) * Provincial_Deductions[3].Tax_rate;
 			} else {
@@ -1679,21 +1679,25 @@ $(document).ready(function() {
 
 		var Provincial_line_16 = +Supplement_basic + +Spouse;
 
+		var Cost_living_credit_J = 0;
 		if ( B1 == "NT" ) {
 			if ( C32 >= 0 && C32 <= 12000 ) {
-				var Cost_living_credit_J = C32 * 0.026;
+				var Cost_living_credit_J = +C32 * 0.026;
 			} else {
 				if ( C32 >= 12001 && C32 <= 48000 ) {
-					var Cost_living_credit_J = (C32 - 12000) * 0.0125 + 312;
+					var Cost_living_credit_J = (+C32 - 12000) * 0.0125 + 312;
 				} else {
 					if ( C32 >= 48001 && C32 <= 9999999999 ) {
-						var Cost_living_credit_J = (C32 - 48000) * 0.01 + 762;
+						var Cost_living_credit_J = (+C32 - 48000) * 0.01 + 762;
 					}
 				}
 			}
 		}
-		var Cost_living_credit = Math.min(Cost_of_living_credit , Cost_living_credit_J);
 
+		
+		var Cost_living_credit = Math.min(Cost_of_living_credit , Cost_living_credit_J);
+		
+		var Cost_living_credit_W = 0;
 		if ( B1 == "NT" ) {
 			if ( C5 >= 0 && C5 <= 12000 ) {
 				var Cost_living_credit_W = C5 * 0.026;
@@ -1710,7 +1714,7 @@ $(document).ready(function() {
 		var Spouse_credit = Math.min(Cost_of_living_credit , Cost_living_credit_W);
 
 		var Supplement_amount = Math.max(0,(+Provincial_line_16 - +Cost_living_credit - +Spouse_credit));
-
+		
 
 		var Sales_tax = 75;
 		var Base_income_threshold = 15000;
@@ -1772,8 +1776,11 @@ $(document).ready(function() {
 			var NU_Provincial_Territories_Credit_2020 = 0;
 		}
 
-		var Provincial_Territories_Credit_2020_itog = MB_Provincial_Territories_Credit_2020 + NU_Provincial_Territories_Credit_2020 + BC_Provincial_Territories_Credit_2020 + Supplement_amount + Cost_living_credit;
+		var Provincial_Territories_Credit_2020_itog = +MB_Provincial_Territories_Credit_2020 + +NU_Provincial_Territories_Credit_2020 + +BC_Provincial_Territories_Credit_2020 + +Supplement_amount + +Cost_living_credit;
+	
 
+
+		
 
 
 		// Provincial Territories Credit 2020 ————————————————————————————————————————————————————————————————
@@ -1965,6 +1972,11 @@ $(document).ready(function() {
 
 		var C43 = Provincial_Territories_Credit_2020_itog;
 		$('#calc_C43').val(C43.toFixed(0));
+
+		var C40 = $('#calc_C40').val();
+		var C41 = $('#calc_C41').val();
+		var C42 = $('#calc_C42').val();
+		var C43 = $('#calc_C43').val();
 
 		var C44 = +C40 + +C41 + +C42 + +C43;
 		$('#calc_C44').val(C44.toFixed(0));
