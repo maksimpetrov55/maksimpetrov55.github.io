@@ -2,13 +2,23 @@ $(document).ready(function() {
 
 	$('select').change(function(){
 		tables_values();
+		tables_values();
 	});
 	$('input').change(function(){
 		tables_values();
+		tables_values();
 	});
 
-	
+	$('.data-min').on("change",function(){
+		let data_min = $(this).data("min");
+		if ($(this).val() < data_min){
+			$(this).val(data_min);
+		}
+		tables_values();
+		tables_values();
+	});
 
+	tables_values();
 	tables_values();
 	function tables_values() {
 		//console.clear();
@@ -17,12 +27,19 @@ $(document).ready(function() {
 
 		if ( C3 == "Yes" ) {
 			$('.calc__ask').css({display: "block"});
+			$('#calc_C5').prop("disabled", false);
+			$('#calc_C7').prop("disabled", false);
+			$('#calc_C6').prop("disabled", false);
 		} else {
 			$('.calc__ask').css({display: "none"});
 			$('#calc_C5').val(0);
 			$('#calc_C7').val(0);
 			$('#calc_C6').val(0);
 			$('#calc_C4').val("No");
+
+			$('#calc_C5').prop("disabled", true);
+			$('#calc_C7').prop("disabled", true);
+			$('#calc_C6').prop("disabled", true);
 		}
 
 		var C4 = $('#calc_C4').val();
@@ -31,6 +48,14 @@ $(document).ready(function() {
 			$('#calc_C5').val(0);
 			$('#calc_C7').val(0);
 			$('#calc_C6').val(0);
+
+			$('#calc_C5').prop("disabled", true);
+			$('#calc_C7').prop("disabled", true);
+			$('#calc_C6').prop("disabled", true);
+		} else {
+			$('#calc_C5').prop("disabled", false);
+			$('#calc_C7').prop("disabled", false);
+			$('#calc_C6').prop("disabled", false);
 		}
 
 
@@ -47,7 +72,6 @@ $(document).ready(function() {
 
 
 		total_income();
-
 
 
 
@@ -77,8 +101,8 @@ $(document).ready(function() {
 			if ( province !=  "QC" && province != "NU" ) {
 	
 				//line_20
-				CWB_calculation[i].Line_20 = Math.max( 0 , (+C12 + +C13 - +C23 + +C5 - +CWB_calculation[i].Base_ded_amount) ) * CWB_calculation[i].Rate;
-	
+				CWB_calculation[i].Line_20 = Math.max( 0 , (+C12 + +C13 - +C23 - +CWB_calculation[i].Base_ded_amount) ) * CWB_calculation[i].Rate;
+				
 				//line_22 
 				if( C4 == "Yes" ) {var cwb_A = CWB_calculation[i].Single_i_spouse_amount;} else {var cwb_A = CWB_calculation[i].Single_amount;}
 				if( C4 == "Yes" ) {var cwb_B = CWB_calculation[i].Single_i_spouse_amount;} else {var cwb_B = CWB_calculation[i].Single_amount;}
@@ -91,7 +115,7 @@ $(document).ready(function() {
 				} else {
 					var cwb_D = +CWB_calculation[i].Base_income_threshold;
 				}
-				var cwb_E = Math.max( 0 , (+C32 + +C5 - +cwb_D) );
+				var cwb_E = Math.max( 0 , (+C12 + +C13 - +C23 + +C5 - +cwb_D) );
 				if ( B1 == CWB_calculation[i].Province ) {
 					CWB_calculation[i].Line_25 = cwb_E;
 				} else {
@@ -101,13 +125,13 @@ $(document).ready(function() {
 				//line_27
 				CWB_calculation[i].Line_27 = CWB_calculation[i].Line_25 * CWB_calculation[i].Rate_reduction;
 	
-				// console.log( CWB_calculation[i].Line_22 );
-				// console.log( CWB_calculation[i].Line_27 );
+				//console.log( CWB_calculation[i].Line_25 );
+				//console.log( CWB_calculation[i].Line_27 );
 	
 			}
 			if ( province == "QC" ) {
 				//line_20
-				CWB_calculation[i].Line_20 = Math.max( 0 , (+C12 + +C13 - +C23 + +C5 - +CWB_calculation[i].Base_i_spouse_ded_amount) ) * CWB_calculation[i].Base_Rate;
+				CWB_calculation[i].Line_20 = Math.max( 0 , (+C12 + +C13 - +C23 - +CWB_calculation[i].Base_i_spouse_ded_amount) ) * CWB_calculation[i].Base_Rate;
 				//line_22 
 				if( C4 == "Yes" ) {var cwb_A = CWB_calculation[i].Base_i_spouse_ded_amount;} else {var cwb_A = CWB_calculation[i].Single_amount;}
 				if( C4 == "Yes" ) {var cwb_B = CWB_calculation[i].Base_i_spouse_ded_amount;} else {var cwb_B = CWB_calculation[i].Single_amount;}
@@ -115,7 +139,7 @@ $(document).ready(function() {
 				if( B1 == CWB_calculation[i].Province ) {CWB_calculation[i].Line_22 = cwb_C;} else {CWB_calculation[i].Line_22 = 0;}
 				//line_25
 				if( C4 == "Yes" ) {var cwb_D = CWB_calculation[i].Base_income_threshold_i_spouse;} else {var cwb_D = CWB_calculation[i].Base_income_threshold;}
-				var cwb_E = Math.max( 0 , (+C32 + +C5 - +cwb_D) );
+				var cwb_E = Math.max( 0 , (+C12 + C13 - +C23 + +C5 - +cwb_D) );
 				if( B1 == CWB_calculation[i].Province ) {CWB_calculation[i].Line_25 = cwb_E;} else {CWB_calculation[i].Line_25 = 0 ;}
 				//line_27
 				CWB_calculation[i].Line_27 = CWB_calculation[i].Line_25 * CWB_calculation[i].Rate_reduction;
@@ -125,7 +149,7 @@ $(document).ready(function() {
 			if ( province == "NU" ) {
 				//line_20
 				if( C4 == "Yes" ) {var cwb_F = CWB_calculation[i].Rate_Single_i_spouse;} else {var cwb_F = CWB_calculation[i].Rate_Single;}
-				CWB_calculation[i].Line_20 = Math.max( 0 , (+C12 + +C13 - +C23 + +C5 - +CWB_calculation[i].Base_ded_amount) ) * cwb_F;
+				CWB_calculation[i].Line_20 = Math.max( 0 , (+C12 + +C13 - +C23 - +CWB_calculation[i].Base_ded_amount) ) * cwb_F;
 				//line_22 
 				if( C4 == "Yes" ) {var cwb_A = CWB_calculation[i].Single_i_spouse_amount;} else {var cwb_A = CWB_calculation[i].Single_amount;}
 				if( C4 == "Yes" ) {var cwb_B = CWB_calculation[i].Single_i_spouse_amount;} else {var cwb_B = CWB_calculation[i].Single_amount;}
@@ -133,7 +157,7 @@ $(document).ready(function() {
 				if( B1 == CWB_calculation[i].Province ) {CWB_calculation[i].Line_22 = cwb_C;} else {CWB_calculation[i].Line_22 = 0;}
 				//line_25
 				if( C4 == "Yes" ) {var cwb_D = CWB_calculation[i].Base_income_threshold_i_spouse;} else {var cwb_D = CWB_calculation[i].Base_income_threshold;}
-				var cwb_E = Math.max( 0 , (+C32 + +C5 - +cwb_D) );
+				var cwb_E = Math.max( 0 , (+C12 + C13 - +C23 + +C5 - +cwb_D) );
 				if( B1 == CWB_calculation[i].Province ) {CWB_calculation[i].Line_25 = cwb_E;} else {CWB_calculation[i].Line_25 = 0 ;}
 				//line_27
 				CWB_calculation[i].Line_27 = CWB_calculation[i].Line_25 * CWB_calculation[i].Rate_reduction;
@@ -158,7 +182,7 @@ $(document).ready(function() {
 		if ( B1 == "YT" ) {var cwb_amount_22 = +CWB_calculation[12].Line_22;	var cwb_amount_27 = +CWB_calculation[12].Line_27;}
 
 
-		var CWB_amount = +cwb_amount_22 - +cwb_amount_27;
+		var CWB_amount = Math.max(0, (+cwb_amount_22 - +cwb_amount_27));
 		
 
 		// CWB_calculation ————————————————————————————————————————————————————————————————
@@ -168,12 +192,15 @@ $(document).ready(function() {
 		// Federal Tax 2020 ————————————————————————————————————————————————————————————————
 		var Federal_Tax = [
 			{Bracket: "1", Lower_end: "formula",Higher_end: "48535",Tax_rate: "0.15",Max_amount: "formula",Tax_amount: "formula"},
-			{Bracket: "2", Lower_end: "formula",Higher_end: "97069",Tax_rate: "0.20",Max_amount: "formula",Tax_amount: "formula"},
+			{Bracket: "2", Lower_end: "formula",Higher_end: "97069",Tax_rate: "0.205",Max_amount: "formula",Tax_amount: "formula"},
 			{Bracket: "3", Lower_end: "formula",Higher_end: "150473",Tax_rate: "0.26",Max_amount: "formula",Tax_amount: "formula"},
 			{Bracket: "4", Lower_end: "formula",Higher_end: "214368",Tax_rate: "0.29",Max_amount: "formula",Tax_amount: "formula"},
 			{Bracket: "5", Lower_end: "formula",Higher_end: "0",Tax_rate: "0.33",Max_amount: "formula",Tax_amount: "formula"}
 		];
-		var Fed_Surtax = 0.48;
+		var Fed_Surtax_rate = 0.48;
+
+		//console.log("c32 " + C32);
+		
 
 		for(i = 0; i < Federal_Tax.length; i++){
 			if ( i == 0 ){
@@ -188,24 +215,41 @@ $(document).ready(function() {
 				Federal_Tax[i].Max_amount = (+Federal_Tax[i].Higher_end - +Federal_Tax[i].Lower_end) * Federal_Tax[i].Tax_rate;
 			}
 
-			if ( (C32 >= +Federal_Tax[i].Lower_end) && (C32 <= +Federal_Tax[i].Higher_end) ){
-				if ( i == 0 ){
-					Federal_Tax[i].Tax_amount = C32 * Federal_Tax[i].Tax_rate;
+			if ( i == 4 ) {
+				if ( C32 >= +Federal_Tax[i].Lower_end ){
+					if( i == 4 ) {Federal_Tax[i].Tax_amount = ((+C32 - +Federal_Tax[i-1].Higher_end) * Federal_Tax[i].Tax_rate) + +Federal_Tax[i-4].Max_amount + +Federal_Tax[i-3].Max_amount + +Federal_Tax[i-2].Max_amount + +Federal_Tax[i-1].Max_amount;}
+				} else {
+					Federal_Tax[i].Tax_amount = 0;
 				}
-				if( i == 1 ) {Federal_Tax[i].Tax_amount = ((+C32 - +Federal_Tax[i-1].Higher_end) * Federal_Tax[i].Tax_rate) + +Federal_Tax[i-1].Max_amount;}
-				if( i == 2 ) {Federal_Tax[i].Tax_amount = ((+C32 - +Federal_Tax[i-1].Higher_end) * Federal_Tax[i].Tax_rate) + +Federal_Tax[i-2].Max_amount + +Federal_Tax[i-1].Max_amount;}
-				if( i == 3 ) {Federal_Tax[i].Tax_amount = ((+C32 - +Federal_Tax[i-1].Higher_end) * Federal_Tax[i].Tax_rate) + +Federal_Tax[i-3].Max_amount + +Federal_Tax[i-2].Max_amount + +Federal_Tax[i-1].Max_amount;}
-				if( i == 4 ) {Federal_Tax[i].Tax_amount = ((+C32 - +Federal_Tax[i-1].Higher_end) * Federal_Tax[i].Tax_rate) + +Federal_Tax[i-4].Max_amount + +Federal_Tax[i-3].Max_amount + +Federal_Tax[i-2].Max_amount + +Federal_Tax[i-1].Max_amount;}
 			} else {
-				Federal_Tax[i].Tax_amount = 0;
+				if ( (C32 >= +Federal_Tax[i].Lower_end) && (C32 <= +Federal_Tax[i].Higher_end) ){
+					if ( i == 0 ){
+						Federal_Tax[i].Tax_amount = C32 * Federal_Tax[i].Tax_rate;
+					}
+					if( i == 1 ) {Federal_Tax[i].Tax_amount = ((+C32 - +Federal_Tax[i-1].Higher_end) * Federal_Tax[i].Tax_rate) + +Federal_Tax[i-1].Max_amount;}
+					if( i == 2 ) {Federal_Tax[i].Tax_amount = ((+C32 - +Federal_Tax[i-1].Higher_end) * Federal_Tax[i].Tax_rate) + +Federal_Tax[i-2].Max_amount + +Federal_Tax[i-1].Max_amount;}
+					if( i == 3 ) {Federal_Tax[i].Tax_amount = ((+C32 - +Federal_Tax[i-1].Higher_end) * Federal_Tax[i].Tax_rate) + +Federal_Tax[i-3].Max_amount + +Federal_Tax[i-2].Max_amount + +Federal_Tax[i-1].Max_amount;}
+					if( i == 4 ) {Federal_Tax[i].Tax_amount = ((+C32 - +Federal_Tax[i-1].Higher_end) * Federal_Tax[i].Tax_rate) + +Federal_Tax[i-4].Max_amount + +Federal_Tax[i-3].Max_amount + +Federal_Tax[i-2].Max_amount + +Federal_Tax[i-1].Max_amount;}
+				} else {
+					Federal_Tax[i].Tax_amount = 0;
+				}
 			}
 
-			//console.log(Federal_Tax[i].Tax_amount);
+
+			//console.log("Max_amount " + Federal_Tax[i].Max_amount);
+			//console.log("Tax_amount " + Federal_Tax[i].Tax_amount);
 		}
-		var Federal_Tax_summ = 0;
+		
+
+		var Federal_Tax_itog = 0;
 		for(i = 0; i < Federal_Tax.length; i++){
-			Federal_Tax_summ = +Federal_Tax_summ + +Federal_Tax[i].Tax_amount;
+			Federal_Tax_itog = +Federal_Tax_itog + +Federal_Tax[i].Tax_amount;
 		}
+
+		//console.log("Federal_Tax_itog " + Federal_Tax_itog);
+		
+		
+
 		// Federal Tax 2020 ————————————————————————————————————————————————————————————————
 
 		// PX table ————————————————————————————————————————————————————————————————
@@ -719,22 +763,44 @@ $(document).ready(function() {
 				Provincial_Tax_Bracket_2021_QC[i].Max_amount = (+Provincial_Tax_Bracket_2021_QC[i].Higher_end - +Provincial_Tax_Bracket_2021_QC[i].Lower_end ) * Provincial_Tax_Bracket_2021_QC[i].Tax_rate;
 			}
 
+			if (i == 0){
+				Provincial_Tax_Bracket_2021_QC[i].Max_amount = Math.max(0, (Math.min(Provincial_Tax_Bracket_2021_QC[i].Lower_end, ((+C12 + +C13 - +C23) * Provincial_Tax_Bracket_2021_QC[i].Tax_rate) )));
+			}
+
 			if( Provincial_Tax_Bracket_2021_QC[i].Province == B1 ) {
-				if ( +C32 >= +Provincial_Tax_Bracket_2021_QC[i].Lower_end && +C32 <= +Provincial_Tax_Bracket_2021_QC[i].Higher_end ) {
-					if ( i == 0 ) {Provincial_Tax_Bracket_2021_QC[i].Tax_amount = +C32 * Provincial_Tax_Bracket_2021_QC[i].Tax_rate;}
-					if ( i == 1 ) {Provincial_Tax_Bracket_2021_QC[i].Tax_amount = (+C32 - +Provincial_Tax_Bracket_2021_QC[i-1].Higher_end) * Provincial_Tax_Bracket_2021_QC[i].Tax_rate + +Provincial_Tax_Bracket_2021_QC[i-1].Max_amount;}
-					if ( i == 2 ) {Provincial_Tax_Bracket_2021_QC[i].Tax_amount = (+C32 - +Provincial_Tax_Bracket_2021_QC[i-1].Higher_end) * Provincial_Tax_Bracket_2021_QC[i].Tax_rate + +Provincial_Tax_Bracket_2021_QC[i-1].Max_amount + +Provincial_Tax_Bracket_2021_QC[i-2].Max_amount;}
-					if ( i == 3 ) {Provincial_Tax_Bracket_2021_QC[i].Tax_amount = (+C32 - +Provincial_Tax_Bracket_2021_QC[i-1].Higher_end) * Provincial_Tax_Bracket_2021_QC[i].Tax_rate + +Provincial_Tax_Bracket_2021_QC[i-1].Max_amount + +Provincial_Tax_Bracket_2021_QC[i-2].Max_amount + +Provincial_Tax_Bracket_2021_QC[i-3].Max_amount;}
-					if ( i == 4 ) {Provincial_Tax_Bracket_2021_QC[i].Tax_amount = (+C32 - +Provincial_Tax_Bracket_2021_QC[i-1].Higher_end) * Provincial_Tax_Bracket_2021_QC[i].Tax_rate + +Provincial_Tax_Bracket_2021_QC[i-1].Max_amount + +Provincial_Tax_Bracket_2021_QC[i-2].Max_amount + +Provincial_Tax_Bracket_2021_QC[i-3].Max_amount + +Provincial_Tax_Bracket_2021_QC[i-4].Max_amount;}
+				// if ( +C32 >= +Provincial_Tax_Bracket_2021_QC[i].Lower_end && +C32 <= +Provincial_Tax_Bracket_2021_QC[i].Higher_end ) {
+				// 	if ( i == 0 ) {Provincial_Tax_Bracket_2021_QC[i].Tax_amount = +C32 * Provincial_Tax_Bracket_2021_QC[i].Tax_rate;}
+				// 	if ( i == 1 ) {Provincial_Tax_Bracket_2021_QC[i].Tax_amount = (+C32 - +Provincial_Tax_Bracket_2021_QC[i-1].Higher_end) * Provincial_Tax_Bracket_2021_QC[i].Tax_rate + +Provincial_Tax_Bracket_2021_QC[i-1].Max_amount;}
+				// 	if ( i == 2 ) {Provincial_Tax_Bracket_2021_QC[i].Tax_amount = (+C32 - +Provincial_Tax_Bracket_2021_QC[i-1].Higher_end) * Provincial_Tax_Bracket_2021_QC[i].Tax_rate + +Provincial_Tax_Bracket_2021_QC[i-1].Max_amount + +Provincial_Tax_Bracket_2021_QC[i-2].Max_amount;}
+				// 	if ( i == 3 ) {Provincial_Tax_Bracket_2021_QC[i].Tax_amount = (+C32 - +Provincial_Tax_Bracket_2021_QC[i-1].Higher_end) * Provincial_Tax_Bracket_2021_QC[i].Tax_rate + +Provincial_Tax_Bracket_2021_QC[i-1].Max_amount + +Provincial_Tax_Bracket_2021_QC[i-2].Max_amount + +Provincial_Tax_Bracket_2021_QC[i-3].Max_amount;}
+				// 	if ( i == 4 ) {Provincial_Tax_Bracket_2021_QC[i].Tax_amount = (+C32 - +Provincial_Tax_Bracket_2021_QC[i-1].Higher_end) * Provincial_Tax_Bracket_2021_QC[i].Tax_rate + +Provincial_Tax_Bracket_2021_QC[i-1].Max_amount + +Provincial_Tax_Bracket_2021_QC[i-2].Max_amount + +Provincial_Tax_Bracket_2021_QC[i-3].Max_amount + +Provincial_Tax_Bracket_2021_QC[i-4].Max_amount;}
+				// } else {
+				// 	Provincial_Tax_Bracket_2021_QC[i].Tax_amount = 0;
+				// }
+
+				if ( (C32 - Provincial_Tax_Bracket_2021_QC[0].Max_amount) >= Provincial_Tax_Bracket_2021_QC[i].Lower_end && (C32 - Provincial_Tax_Bracket_2021_QC[0].Max_amount) <= Provincial_Tax_Bracket_2021_QC[i].Higher_end ) {
+					if ( i == 1 ) {Provincial_Tax_Bracket_2021_QC[i].Tax_amount = (C32 - Provincial_Tax_Bracket_2021_QC[0].Max_amount) * Provincial_Tax_Bracket_2021_QC[i].Tax_rate;}
+					if ( i == 2 ) {Provincial_Tax_Bracket_2021_QC[i].Tax_amount = (C32 - Provincial_Tax_Bracket_2021_QC[0].Max_amount - Provincial_Tax_Bracket_2021_QC[1].Higher_end) * Provincial_Tax_Bracket_2021_QC[i].Tax_rate + Provincial_Tax_Bracket_2021_QC[1].Max_amount;}
+					if ( i == 3 ) {Provincial_Tax_Bracket_2021_QC[i].Tax_amount = (C32 - Provincial_Tax_Bracket_2021_QC[0].Max_amount - Provincial_Tax_Bracket_2021_QC[2].Higher_end) * Provincial_Tax_Bracket_2021_QC[i].Tax_rate + Provincial_Tax_Bracket_2021_QC[1].Max_amount + Provincial_Tax_Bracket_2021_QC[2].Max_amount;}
+					if ( i == 4 ) {Provincial_Tax_Bracket_2021_QC[i].Tax_amount = (C32 - Provincial_Tax_Bracket_2021_QC[0].Max_amount - Provincial_Tax_Bracket_2021_QC[3].Higher_end) * Provincial_Tax_Bracket_2021_QC[i].Tax_rate + Provincial_Tax_Bracket_2021_QC[1].Max_amount + Provincial_Tax_Bracket_2021_QC[2].Max_amount + Provincial_Tax_Bracket_2021_QC[3].Max_amount;}
 				} else {
 					Provincial_Tax_Bracket_2021_QC[i].Tax_amount = 0;
 				}
+
+				if ( i == 0 ) {Provincial_Tax_Bracket_2021_QC[i].Tax_amount = 0;}
+
 			} else {
 				Provincial_Tax_Bracket_2021_QC[i].Tax_amount = 0;
 			}
 			var Provincial_Tax_Bracket_2021_QC_Tax_amount_Summ = +Provincial_Tax_Bracket_2021_QC_Tax_amount_Summ + Provincial_Tax_Bracket_2021_QC[i].Tax_amount;
+		
 		}
 
+		//console.log(Provincial_Tax_Bracket_2021_QC[0].Tax_amount);
+		//console.log(Provincial_Tax_Bracket_2021_QC[1].Tax_amount);
+		//console.log(Provincial_Tax_Bracket_2021_QC[2].Tax_amount);
+		//console.log(Provincial_Tax_Bracket_2021_QC[3].Tax_amount);
+		//console.log(Provincial_Tax_Bracket_2021_QC[4].Tax_amount);
 
 		var Provincial_Tax_Bracket_2021_SK = [
 			{id: 0, Province: "SK",	Lower_end: "0",	Higher_end: "45225",	Tax_rate: "0.1050",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
@@ -1133,8 +1199,10 @@ $(document).ready(function() {
 			+Home_buyers_amount
 		) * +PX_table[11].Base_rate;
 
+		
+
 		if ( B1 == "QC" ) {
-			var Federal_QC_Abatement = Math.max(0 , ((+Federal_Tax_summ - +Federal_Credit) * PX_table[9].Base_rate ) );
+			var Federal_QC_Abatement = Math.max(0 , ((+Federal_Tax_itog - +Federal_Credit) * PX_table[9].Base_rate ) );
 		} else {
 			var Federal_QC_Abatement = 0;
 		}
@@ -1144,7 +1212,25 @@ $(document).ready(function() {
 
 		var Federal_Deduction = +Federal_Credit + +Federal_QC_Abatement + +Federal_DTC;
 
+		// console.log("Federal_Credit " + Federal_Credit);
+		// console.log("Federal_QC_Abatement " + Federal_QC_Abatement);
+		// console.log("Federal_DTC " + Federal_DTC);
+		// console.log("Federal_Deduction " + Federal_Deduction);
+		
+
 		// Federal Deductions 2020 ————————————————————————————————————————————————————————————————
+
+
+		if ( B1 == "NR" ){
+			var Fed_Surtax = Math.max(0,(( +Federal_Tax_itog - +Federal_Deduction ) * Fed_Surtax_rate))
+		} else {
+			var Fed_Surtax = 0;
+		}
+
+		var Federal_Tax_summ = +Federal_Tax_itog + +Fed_Surtax;
+
+
+		//Fconsole.log(Federal_Tax_summ);
 
 
 
@@ -1426,7 +1512,17 @@ $(document).ready(function() {
 		}
 
 		if ( B1 == "NS" ) {
-			Provincial_Deductions[6].Basic_personal_amount = Provincial_Table_1[13].Min_2020 * Provincial_Deductions[6].Tax_rate;
+			//Provincial_Deductions[6].Basic_personal_amount = Provincial_Table_1[13].Min_2020 * Provincial_Deductions[6].Tax_rate;
+
+			if (C32 < Provincial_Table_1[13].Min_Taxable_Threshold) {
+				Provincial_Deductions[6].Basic_personal_amount = Provincial_Table_1[13].Max_2020 * Provincial_Deductions[6].Tax_rate;
+			} else {
+				if (C32 > Provincial_Table_1[13].Max_Taxable_Threshold){
+					Provincial_Deductions[6].Basic_personal_amount = Provincial_Table_1[13].Min_2020 * Provincial_Deductions[6].Tax_rate;
+				} else {
+					Provincial_Deductions[6].Basic_personal_amount = Provincial_Table_1[13].Max_2020 - (C32 - Provincial_Table_1[13].Min_Taxable_Threshold) * Provincial_Table_1[13].Rate * Provincial_Deductions[6].Tax_rate;
+				}
+			}
 
 			if ( C4 == "Yes" ) {
 				Provincial_Deductions[6].Spouse_amount = +Math.min( +Provincial_Table_1[14].Max_2020, (+Provincial_Table_1[14].NS_base_amount - +C5 + +Math.max(0, (+Provincial_Table_1[14].NS_Supplement - +Math.max(0, (+C5 - +Provincial_Table_1[14].Min_Taxable_Threshold)) * +Provincial_Table_1[14].Rate - +C5)) ) ) * Provincial_Deductions[6].Tax_rate;
@@ -1452,6 +1548,12 @@ $(document).ready(function() {
 			+Provincial_Deductions[6].CPP_credit_employment +
 			+Provincial_Deductions[6].CPP_credit_self_employment +
 			+Provincial_Deductions[6].EI_credit;
+
+			console.log(Provincial_Deductions[6].Basic_personal_amount);
+			// console.log(Provincial_Deductions[6].Spouse_amount);
+			// console.log(Provincial_Deductions[6].CPP_credit_employment);
+			// console.log(Provincial_Deductions[6].CPP_credit_self_employment);
+			// console.log(Provincial_Deductions[6].EI_credit);
 		}
 		
 		if ( B1 == "NT" ) {
@@ -1653,7 +1755,7 @@ $(document).ready(function() {
 			+Provincial_Deductions[12].Canada_employment_amount;
 		}
 
-		// console.log(Provincial_Credit);
+		//console.log(Provincial_Credit);
 		
 
 		// Provincial Deductions ————————————————————————————————————————————————————————————————
@@ -1741,6 +1843,9 @@ $(document).ready(function() {
 		}
 
 		var BC_Provincial_Territories_Credit_2020 = Math.max(0, BC_Provincial_Territories_Credit_2020_U);
+		console.log(BC_Provincial_Territories_Credit_2020);
+		
+
 
 		var Personal_tax_credit = 195;
 		var Reduction_rate_MB = 0.01;
@@ -1803,6 +1908,9 @@ $(document).ready(function() {
 		+Provincial_Tax_Bracket_2021_SK_Tax_amount_Summ + 
 		+Provincial_Tax_Bracket_2021_YT_Tax_amount_Summ;
 
+		//console.log(Provincial_Subtotal_Tax);
+		
+
 		if ( B1 == "PE" ) {
 			var PE_Surtax = Math.max(0, ((Provincial_Subtotal_Tax - Provincial_Credit - 12500) * 0.1));
 		} else {
@@ -1828,45 +1936,148 @@ $(document).ready(function() {
 		}
 
 
-		Some_result_Tax_Bracket_1 = Math.max(0, (+Provincial_Subtotal_Tax - +Provincial_Credit + +PE_Surtax - +Provincial_DTC));
+		Prov_Tax_Bracket_Summ_1 = Math.max(0, (+Provincial_Subtotal_Tax - +Provincial_Credit + +PE_Surtax - +Provincial_DTC));
+
+		//console.log(Provincial_Credit);
+		
+		//console.log(Prov_Tax_Bracket_Summ_1);
 
 
-		if ( B1 == "BC" ) {Unnamed_Provincial_Subtotal_Tax_BC = Math.max(0, (476 - ((C32 - 21185) * 0.0356)));} else {Unnamed_Provincial_Subtotal_Tax_BC = 0;}
-		if ( B1 == "NB" ) {Unnamed_Provincial_Subtotal_Tax_NB = Math.max(0, (678 - ((C32 - 17455) * 0.03)));} else {Unnamed_Provincial_Subtotal_Tax_NB = 0;}
-		if ( B1 == "NS" ) {Unnamed_Provincial_Subtotal_Tax_NS = Math.max(0, (300 - ((C32 - 15000) * 0.05)));} else {Unnamed_Provincial_Subtotal_Tax_NS = 0;}
-		if ( B1 == "PE" ) {Unnamed_Provincial_Subtotal_Tax_PE = Math.max(0, (350 - ((C32 - 18000) * 0.05)));} else {Unnamed_Provincial_Subtotal_Tax_PE = 0;}
+		if ( B1 == "BC" ) {Prov_Tax_Bracket_BC = Math.max(0, (476 - ((C32 - 21185) * 0.0356)));} else {Prov_Tax_Bracket_BC = 0;}
+		if ( B1 == "NB" ) {Prov_Tax_Bracket_NB = Math.max(0, (678 - ((C32 - 17455) * 0.03)));} else {Prov_Tax_Bracket_NB = 0;}
+		if ( B1 == "NS" ) {Prov_Tax_Bracket_NS = Math.max(0, (300 - ((C32 - 15000) * 0.05)));} else {Prov_Tax_Bracket_NS = 0;}
+		if ( B1 == "PE" ) {Prov_Tax_Bracket_PE = Math.max(0, (350 - ((C32 - 18000) * 0.05)));} else {Prov_Tax_Bracket_PE = 0;}
 
 		if ( B1 == "NL" ) {
 			if ( C4 == "Yes" ) {
-				Unnamed_Provincial_Subtotal_Tax_NL = Math.max( 0, (859 + 475- ((C5 + C32 - 34727 ) * 0.16)));
+				Prov_Tax_Bracket_NL = Math.max( 0, (859 + 475- ((C5 + C32 - 34727 ) * 0.16)));
 			} else {
-				Unnamed_Provincial_Subtotal_Tax_NL = Math.max(0, (859 - ((C5 + C32 - 20537) * 0.16)));
+				Prov_Tax_Bracket_NL = Math.max(0, (859 - ((C5 + C32 - 20537) * 0.16)));
 			}
 		} else {
-			Unnamed_Provincial_Subtotal_Tax_NL = 0;
+			Prov_Tax_Bracket_NL = 0;
 		}
 
-		// if ( B1 == "ON" ) {}
+		if ( B1 == "ON" ) {
+			if ( C4 == "Yes" ) {
+				var Prov_Tax_Bracket_ON_1 = Math.max(0, ((249 * 2) - Prov_Tax_Bracket_Summ_1) );
+			} else {
+				var Prov_Tax_Bracket_ON_1 = Math.max(0, (249 - Prov_Tax_Bracket_Summ_1) );
+			}
+		} else {
+			var Prov_Tax_Bracket_ON_1 = 0;
+		}
+
+
+		if ( C4 == "Yes" ) {
+			Prov_Tax_Bracket_ON_2_S = Math.max(0, (+C32 - 30000), (+C5 + +C32 - (30000 * 2)) ) * 0.1;
+		} else {
+			Prov_Tax_Bracket_ON_2_S = 0;
+		}
+
+		if ( (C12 * 0.0505) > 850 ) {
+			Prov_Tax_Bracket_ON_2_H = 850;
+		} else {
+			Prov_Tax_Bracket_ON_2_H = C12 * 0.0505;
+		}
+
+		if ( B1 == "ON" ) {
+			var Prov_Tax_Bracket_ON_2 = Math.max(0, (Math.max(0, Prov_Tax_Bracket_ON_2_H) - Prov_Tax_Bracket_ON_2_S))
+		} else {
+			var Prov_Tax_Bracket_ON_2 = 0;
+		}
 
 
 
+		Prov_Tax_Bracket_Summ_2 = Math.max(0 , (Prov_Tax_Bracket_Summ_1 
+			- Prov_Tax_Bracket_BC
+			- Prov_Tax_Bracket_NB
+			- Prov_Tax_Bracket_NS
+			- Prov_Tax_Bracket_PE
+			- Prov_Tax_Bracket_NL
+			- Prov_Tax_Bracket_ON_1
+			- Prov_Tax_Bracket_ON_2) );
+
+		//console.log(Prov_Tax_Bracket_Summ_1);
 
 		if ( B1 == "QC" ) {
 			if (Max_less_Employment_income > PPIP_Premiums) {
-				var Unnamed_Provincial_Subtotal_Tax_QC = Math.max(0, Math.min(PX_table[8].Max_PPIP, Math.max(0, PPIP_Premiums) * PX_table[8].Base_rate ))
+				var Prov_Tax_Bracket_QC_1 = Math.max(0, Math.min(PX_table[8].Max_PPIP, Math.max(0, PPIP_Premiums) * PX_table[8].Base_rate ))
 			} else {
-				var Unnamed_Provincial_Subtotal_Tax_QC = Math.max(0, Math.min(PX_table[8].Max_PPIP, Math.max(0, Max_less_Employment_income) * PX_table[8].Base_rate ))
+				var Prov_Tax_Bracket_QC_1 = Math.max(0, Math.min(PX_table[8].Max_PPIP, Math.max(0, Max_less_Employment_income) * PX_table[8].Base_rate ))
 			}
 		} else {
-			var Unnamed_Provincial_Subtotal_Tax_QC = 0;
+			var Prov_Tax_Bracket_QC_1 = 0;
 		}
 
+		if ( B1 == "QC" ) {
+			Prov_Tax_Bracket_QC_2 = Math.max(0, ( ((+C12 + +C13 - +C23 - 3500) * 0.114) - ( (+C12 - 3500) * (+PX_table[4].Base_rate + +PX_table[5].Base_rate) * 2 ) ) );
+		} else {
+			Prov_Tax_Bracket_QC_2 = 0;
+		}
+		
+		Prov_Tax_Bracket_QC_3 = 0;
 
 
 
+		if ( B1 == "ON" ) {
+			if (C32 >= 0 && C32 <= 20000 ){
+				Prov_Tax_Bracket_ON_3 = 0;
+			} else {
+				if (C32 >= 20001 && C32 <= 25000){
+					Prov_Tax_Bracket_ON_3 = 0.06 * (C32 - 20000);
+				} else {
+					if (C32 >= 25001 && C32 <= 36000){
+						Prov_Tax_Bracket_ON_3 = 300;
+					} else {
+						if (C32 >= 36501 && C32 <= 38500){
+							Prov_Tax_Bracket_ON_3 = .06 * (C32 - 36000) + 300;
+						} else {
+							if (C32 >= 38501 && C32 <= 48000){
+								Prov_Tax_Bracket_ON_3 = 450;
+							} else {
+								if (C32 >= 48001 && C32 <= 48600){
+									Prov_Tax_Bracket_ON_3 = 0.25 * (C32 - 48000) + 450;
+								} else {
+									if (C32 >= 48601 && C32 <= 72000){
+										Prov_Tax_Bracket_ON_3 = 600;
+									} else {
+										if (C32 >= 72000 && C32 <= 72600){
+											Prov_Tax_Bracket_ON_3 = 0.25 * (C32 - 72000) + 600;
+										} else {
+											if (C32 >= 72601 && C32 <= 200000){
+												Prov_Tax_Bracket_ON_3 = 750;
+											} else {
+												if (C32 >= 200001 && C32 <= 200600){
+													Prov_Tax_Bracket_ON_3 = 0.25 * (C32 - 200000) + 750;
+												} else {
+													if (C32 >= 200601 && C32 <= 999999999){
+														Prov_Tax_Bracket_ON_3 = 900;
+													} else {
+														Prov_Tax_Bracket_ON_3 = 0;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		} else {
+			Prov_Tax_Bracket_ON_3 = 0;
+		}
 
+		var Final_Provincial_Tax = 
+			Prov_Tax_Bracket_Summ_2 + 
+			Prov_Tax_Bracket_QC_1 + 
+			Prov_Tax_Bracket_QC_2 + 
+			Prov_Tax_Bracket_QC_3 + 
+			Prov_Tax_Bracket_ON_3
+		;
 
-		var Final_Provincial_Tax = 0;
 
 		// Provincial Tax Bracket 2021 below ————————————————————————————————————————————————————————————————
 
@@ -1886,19 +2097,19 @@ $(document).ready(function() {
 			var calc_C18 = $('#calc_C18').val();
 			$('#calc_C19').val( (+calc_C12 + +calc_C13 + +calc_C14 + +calc_C15 + +calc_C16 + +calc_C17 + +calc_C18).toFixed(0) );
 		}
-		total_income();
+		//total_income();
 		// Total Income
 		
 		// Total Deductions
 		//$('#calc_C22, #calc_C23, #calc_C24, #calc_C25, #calc_C26, #calc_C27, #calc_C28').change(total_deductions);
 		function total_deductions() {
 			var B1 = $('#calc_B1').val();
-			var calc_C22 = $('#calc_C22').val();
-			var calc_C23 = $('#calc_C23').val();
-			var calc_C24 = $('#calc_C24').val();
-			var calc_C25 = $('#calc_C25').val();
-			var calc_C26 = $('#calc_C26').val();
-			var calc_C27 = $('#calc_C27').val();
+			var calc_C22 = +$('#calc_C22').val();
+			var calc_C23 = +$('#calc_C23').val();
+			var calc_C24 = +$('#calc_C24').val();
+			var calc_C25 = +$('#calc_C25').val();
+			var calc_C26 = +$('#calc_C26').val();
+			var calc_C27 = +$('#calc_C27').val();
 
 			
 		
@@ -1915,9 +2126,11 @@ $(document).ready(function() {
 			$('#calc_C28').val( calc_C28.toFixed(0) );
 			$('#calc_C29').val( (+calc_C22 + +calc_C23 + +calc_C24 + +calc_C25 + +calc_C26 + +calc_C27 + +calc_C28).toFixed(0) );
 		}
-		total_deductions();
+		//total_deductions();
 		// Total Deductions
 
+
+		total_deductions();
 
 		var C19 = +$('#calc_C19').val();
 		var C29 = +$('#calc_C29').val();
@@ -1934,15 +2147,14 @@ $(document).ready(function() {
 
 
 
-		// console.log(Federal_Tax_summ);
-		// console.log(Federal_Deduction);
-		
+		//console.log(Federal_Tax_summ);
+		//console.log(Federal_Deduction);
 		
 
-		if ( (Federal_Tax_summ - Federal_Deduction) < 0 ) {
+		if ( (+Federal_Tax_summ - +Federal_Deduction) < 0 ) {
 			var C36 = 0;
 		} else {
-			var C36 = (Federal_Tax_summ - Federal_Deduction);
+			var C36 = (+Federal_Tax_summ - +Federal_Deduction);
 		}
 		$('#calc_C36').val(C36.toFixed(0));
 
