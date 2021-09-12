@@ -181,6 +181,12 @@ $(document).ready(function() {
 		if ( B1 == "NU" ) {var cwb_amount_22 = +CWB_calculation[11].Line_22;	var cwb_amount_27 = +CWB_calculation[11].Line_27;}
 		if ( B1 == "YT" ) {var cwb_amount_22 = +CWB_calculation[12].Line_22;	var cwb_amount_27 = +CWB_calculation[12].Line_27;}
 
+		if ( cwb_amount_22 == undefined ){
+			var cwb_amount_22 = 0;
+		}
+		if ( cwb_amount_27 == undefined ){
+			var cwb_amount_27 = 0;
+		}
 
 		var CWB_amount = Math.max(0, (+cwb_amount_22 - +cwb_amount_27));
 		
@@ -1755,7 +1761,11 @@ $(document).ready(function() {
 			+Provincial_Deductions[12].Canada_employment_amount;
 		}
 
-		//console.log(Provincial_Credit);
+		if ( Provincial_Credit == undefined ){
+			var Provincial_Credit = 0;
+		}
+
+		console.log(Provincial_Credit);
 		
 
 		// Provincial Deductions ————————————————————————————————————————————————————————————————
@@ -1833,17 +1843,18 @@ $(document).ready(function() {
 			if (C4 == "Yes"){
 				BC_Provincial_Territories_Credit_2020_L = Math.max(0,((C5 + C32) - base_income_threshold_i_spouse));
 			} else {
-				BC_Provincial_Territories_Credit_2020_L = Math.max(0,(C32 - Base_income_threshold));
+				BC_Provincial_Territories_Credit_2020_L = Math.max(0,(C32 - Base_income_threshold)) * Reduction_rate_BC;
 			}
 		}
 		if (B1 == "BC"){
-			var BC_Provincial_Territories_Credit_2020_U = (BC_Provincial_Territories_Credit_2020_P - BC_Provincial_Territories_Credit_2020_L) * Reduction_rate_BC;
+			var BC_Provincial_Territories_Credit_2020_U = (BC_Provincial_Territories_Credit_2020_P - BC_Provincial_Territories_Credit_2020_L);
 		} else {
 			var BC_Provincial_Territories_Credit_2020_U = 0;
 		}
 
 		var BC_Provincial_Territories_Credit_2020 = Math.max(0, BC_Provincial_Territories_Credit_2020_U);
-		console.log(BC_Provincial_Territories_Credit_2020);
+
+		//console.log(BC_Provincial_Territories_Credit_2020);
 		
 
 
@@ -1860,17 +1871,20 @@ $(document).ready(function() {
 
 		if (B1 == "MB") {
 			if (C4 == "Yes") {
-				var MB_Provincial_Territories_Credit_2020_X = C5 + C32;
+				var MB_Provincial_Territories_Credit_2020_X = (C5 + C32) * Reduction_rate_MB;
 			} else {
-				var MB_Provincial_Territories_Credit_2020_X = C32;
+				var MB_Provincial_Territories_Credit_2020_X = C32 * Reduction_rate_MB;
 			}
 		}
 
 		if (B1 == "MB") {
-			var MB_Provincial_Territories_Credit_2020 = Math.max(0, ((MB_Provincial_Territories_Credit_2020_R - MB_Provincial_Territories_Credit_2020_X) * Reduction_rate_MB));
+			var MB_Provincial_Territories_Credit_2020 = Math.max(0, (MB_Provincial_Territories_Credit_2020_R - MB_Provincial_Territories_Credit_2020_X));
 		} else {
 			var MB_Provincial_Territories_Credit_2020 = 0;
 		}
+
+		//console.log(MB_Provincial_Territories_Credit_2020);
+		
 
 		var NU_Cost_of_living_credit = 0.02;
 		var NU_blank_value = 1500;
@@ -1935,7 +1949,10 @@ $(document).ready(function() {
 			if ( B1 == "YT") { var Provincial_DTC = (C17 * EDTC_array[1].YT) + (C18 * nonEDTC_array[1].YT); }
 		}
 
-
+		// console.log(Provincial_Subtotal_Tax);
+		// console.log(Provincial_Credit);
+		// console.log(PE_Surtax);
+		// console.log(Provincial_DTC);
 		Prov_Tax_Bracket_Summ_1 = Math.max(0, (+Provincial_Subtotal_Tax - +Provincial_Credit + +PE_Surtax - +Provincial_DTC));
 
 		//console.log(Provincial_Credit);
@@ -1998,7 +2015,8 @@ $(document).ready(function() {
 			- Prov_Tax_Bracket_ON_1
 			- Prov_Tax_Bracket_ON_2) );
 
-		//console.log(Prov_Tax_Bracket_Summ_1);
+		//console.log(Prov_Tax_Bracket_Summ_2);
+
 
 		if ( B1 == "QC" ) {
 			if (Max_less_Employment_income > PPIP_Premiums) {
@@ -2077,6 +2095,8 @@ $(document).ready(function() {
 			Prov_Tax_Bracket_QC_3 + 
 			Prov_Tax_Bracket_ON_3
 		;
+		//console.log(Final_Provincial_Tax);
+
 
 
 		// Provincial Tax Bracket 2021 below ————————————————————————————————————————————————————————————————
