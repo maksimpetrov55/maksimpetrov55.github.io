@@ -28,8 +28,8 @@ $(document).ready(function() {
 		if ( C3 == "Yes" ) {
 			$('.calc__ask').css({display: "block"});
 			$('#calc_C5').prop("disabled", false);
-			$('#calc_C7').prop("disabled", false);
-			$('#calc_C6').prop("disabled", false);
+			// $('#calc_C6').prop("disabled", false);
+			// $('#calc_C7').prop("disabled", false);
 		} else {
 			$('.calc__ask').css({display: "none"});
 			$('#calc_C5').val(0);
@@ -38,27 +38,27 @@ $(document).ready(function() {
 			$('#calc_C4').val("No");
 
 			$('#calc_C5').prop("disabled", true);
-			$('#calc_C7').prop("disabled", true);
-			$('#calc_C6').prop("disabled", true);
+			// $('#calc_C6').prop("disabled", true);
+			// $('#calc_C7').prop("disabled", true);
 		}
 
 		var C4 = $('#calc_C4').val();
 
 		if ( C4 == "No" ) {
 			$('#calc_C5').val(0);
-			$('#calc_C7').val(0);
-			$('#calc_C6').val(0);
+			// $('#calc_C6').val(0);
+			// $('#calc_C7').val(0);
 
 			$('#calc_C5').prop("disabled", true);
-			$('#calc_C7').prop("disabled", true);
-			$('#calc_C6').prop("disabled", true);
+			// $('#calc_C6').prop("disabled", true);
+			// $('#calc_C7').prop("disabled", true);
 		} else {
 			$('#calc_C5').prop("disabled", false);
-			$('#calc_C7').prop("disabled", false);
-			$('#calc_C6').prop("disabled", false);
+			// $('#calc_C6').prop("disabled", false);
+			// $('#calc_C7').prop("disabled", false);
 		}
 
-
+		var C7 = +$('#calc_C7').val();
 		var C12 = +$('#calc_C12').val();
 		var C13 = +$('#calc_C13').val();
 		var C22 = +$('#calc_C22').val();
@@ -69,6 +69,8 @@ $(document).ready(function() {
 		var B1 = $('#calc_B1').val();
 		var C17 = +$('#calc_C17').val();
 		var C18 = +$('#calc_C18').val();
+
+
 
 
 		total_income();
@@ -115,7 +117,7 @@ $(document).ready(function() {
 				} else {
 					var cwb_D = +CWB_calculation[i].Base_income_threshold;
 				}
-				var cwb_E = Math.max( 0 , (+C12 + +C13 - +C23 + +C5 - +cwb_D) );
+				var cwb_E = Math.max( 0 , (+C32 + +C5 - +cwb_D) );
 				if ( B1 == CWB_calculation[i].Province ) {
 					CWB_calculation[i].Line_25 = cwb_E;
 				} else {
@@ -124,7 +126,7 @@ $(document).ready(function() {
 
 				//line_27
 				CWB_calculation[i].Line_27 = CWB_calculation[i].Line_25 * CWB_calculation[i].Rate_reduction;
-	
+
 				//console.log( CWB_calculation[i].Line_25 );
 				//console.log( CWB_calculation[i].Line_27 );
 	
@@ -139,7 +141,7 @@ $(document).ready(function() {
 				if( B1 == CWB_calculation[i].Province ) {CWB_calculation[i].Line_22 = cwb_C;} else {CWB_calculation[i].Line_22 = 0;}
 				//line_25
 				if( C4 == "Yes" ) {var cwb_D = CWB_calculation[i].Base_income_threshold_i_spouse;} else {var cwb_D = CWB_calculation[i].Base_income_threshold;}
-				var cwb_E = Math.max( 0 , (+C12 + C13 - +C23 + +C5 - +cwb_D) );
+				var cwb_E = Math.max( 0 , (+C32 + +C5 - +cwb_D) );
 				if( B1 == CWB_calculation[i].Province ) {CWB_calculation[i].Line_25 = cwb_E;} else {CWB_calculation[i].Line_25 = 0 ;}
 				//line_27
 				CWB_calculation[i].Line_27 = CWB_calculation[i].Line_25 * CWB_calculation[i].Rate_reduction;
@@ -157,7 +159,7 @@ $(document).ready(function() {
 				if( B1 == CWB_calculation[i].Province ) {CWB_calculation[i].Line_22 = cwb_C;} else {CWB_calculation[i].Line_22 = 0;}
 				//line_25
 				if( C4 == "Yes" ) {var cwb_D = CWB_calculation[i].Base_income_threshold_i_spouse;} else {var cwb_D = CWB_calculation[i].Base_income_threshold;}
-				var cwb_E = Math.max( 0 , (+C12 + C13 - +C23 + +C5 - +cwb_D) );
+				var cwb_E = Math.max( 0 , (+C32 + +C5 - +cwb_D) );
 				if( B1 == CWB_calculation[i].Province ) {CWB_calculation[i].Line_25 = cwb_E;} else {CWB_calculation[i].Line_25 = 0 ;}
 				//line_27
 				CWB_calculation[i].Line_27 = CWB_calculation[i].Line_25 * CWB_calculation[i].Rate_reduction;
@@ -201,7 +203,7 @@ $(document).ready(function() {
 			{Bracket: "2", Lower_end: "formula",Higher_end: "97069",Tax_rate: "0.205",Max_amount: "formula",Tax_amount: "formula"},
 			{Bracket: "3", Lower_end: "formula",Higher_end: "150473",Tax_rate: "0.26",Max_amount: "formula",Tax_amount: "formula"},
 			{Bracket: "4", Lower_end: "formula",Higher_end: "214368",Tax_rate: "0.29",Max_amount: "formula",Tax_amount: "formula"},
-			{Bracket: "5", Lower_end: "formula",Higher_end: "0",Tax_rate: "0.33",Max_amount: "formula",Tax_amount: "formula"}
+			{Bracket: "5", Lower_end: "formula",Higher_end: "999999999",Tax_rate: "0.33",Max_amount: "formula",Tax_amount: "formula"}
 		];
 		var Fed_Surtax_rate = 0.48;
 
@@ -387,7 +389,7 @@ $(document).ready(function() {
 			{id: 1, Province: "ON",	Lower_end: "",	Higher_end: "89482",	Tax_rate: "0.0915",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
 			{id: 2, Province: "ON",	Lower_end: "",	Higher_end: "150000",	Tax_rate: "0.1116",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
 			{id: 3, Province: "ON",	Lower_end: "",	Higher_end: "220000",	Tax_rate: "0.1216",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
-			{id: 4, Province: "ON",	Lower_end: "",	Higher_end: "",			Tax_rate: "0.1316",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
+			{id: 4, Province: "ON",	Lower_end: "",	Higher_end: "999999999",			Tax_rate: "0.1316",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
 			{id: 5, Province: "ON",	Lower_end: "",	Higher_end: "",			Tax_rate: "",		Min_amount: "",	Max_amount: "",	Tax_amount: ""}
 		];
 
@@ -429,7 +431,7 @@ $(document).ready(function() {
 			{id: 1, Province: "AB",	Lower_end: "",	Higher_end: "157464",	Tax_rate: "0.12",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
 			{id: 2, Province: "AB",	Lower_end: "",	Higher_end: "209952",	Tax_rate: "0.13",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
 			{id: 3, Province: "AB",	Lower_end: "",	Higher_end: "314928",	Tax_rate: "0.14",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
-			{id: 4, Province: "AB",	Lower_end: "",	Higher_end: "0",		Tax_rate: "0.15",	Min_amount: "",	Max_amount: "",	Tax_amount: ""}
+			{id: 4, Province: "AB",	Lower_end: "",	Higher_end: "999999999",		Tax_rate: "0.15",	Min_amount: "",	Max_amount: "",	Tax_amount: ""}
 		];
 
 		var Provincial_Tax_Bracket_2021_AB_Tax_amount_Summ = 0;
@@ -468,7 +470,7 @@ $(document).ready(function() {
 			{id: 3, Province: "BC",	Lower_end: "",	Higher_end: "116344",	Tax_rate: "0.1229",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
 			{id: 4, Province: "BC",	Lower_end: "",	Higher_end: "157748",	Tax_rate: "0.1470",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
 			{id: 5, Province: "BC",	Lower_end: "",	Higher_end: "220000",	Tax_rate: "0.1680",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
-			{id: 6, Province: "BC",	Lower_end: "",	Higher_end: "0",		Tax_rate: "0.2050",	Min_amount: "",	Max_amount: "",	Tax_amount: ""}
+			{id: 6, Province: "BC",	Lower_end: "",	Higher_end: "999999999",		Tax_rate: "0.2050",	Min_amount: "",	Max_amount: "",	Tax_amount: ""}
 		];
 
 		var Provincial_Tax_Bracket_2021_BC_Tax_amount_Summ = 0;
@@ -505,7 +507,7 @@ $(document).ready(function() {
 		var Provincial_Tax_Bracket_2021_MB = [
 			{id: 0, Province: "MB",	Lower_end: "0",	Higher_end: "33389",	Tax_rate: "0.1080",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
 			{id: 1, Province: "MB",	Lower_end: "",	Higher_end: "72164",	Tax_rate: "0.1275",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
-			{id: 2, Province: "MB",	Lower_end: "",	Higher_end: "0",		Tax_rate: "0.1740",	Min_amount: "",	Max_amount: "",	Tax_amount: ""}
+			{id: 2, Province: "MB",	Lower_end: "",	Higher_end: "999999999",		Tax_rate: "0.1740",	Min_amount: "",	Max_amount: "",	Tax_amount: ""}
 		];
 
 		var Provincial_Tax_Bracket_2021_MB_Tax_amount_Summ = 0;
@@ -540,7 +542,7 @@ $(document).ready(function() {
 			{id: 1, Province: "NB",	Lower_end: "",	Higher_end: "86803",	Tax_rate: "0.1482",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
 			{id: 2, Province: "NB",	Lower_end: "",	Higher_end: "141122",	Tax_rate: "0.1652",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
 			{id: 3, Province: "NB",	Lower_end: "",	Higher_end: "160776",	Tax_rate: "0.1784",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
-			{id: 4, Province: "NB",	Lower_end: "",	Higher_end: "0",		Tax_rate: "0.2030",	Min_amount: "",	Max_amount: "",	Tax_amount: ""}
+			{id: 4, Province: "NB",	Lower_end: "",	Higher_end: "999999999",		Tax_rate: "0.2030",	Min_amount: "",	Max_amount: "",	Tax_amount: ""}
 		];
 
 		var Provincial_Tax_Bracket_2021_NB_Tax_amount_Summ = 0;
@@ -577,7 +579,7 @@ $(document).ready(function() {
 			{id: 1, Province: "NL",	Lower_end: "",	Higher_end: "75858",	Tax_rate: "0.1450",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
 			{id: 2, Province: "NL",	Lower_end: "",	Higher_end: "135432",	Tax_rate: "0.1580",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
 			{id: 3, Province: "NL",	Lower_end: "",	Higher_end: "189604",	Tax_rate: "0.1730",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
-			{id: 4, Province: "NL",	Lower_end: "",	Higher_end: "0",		Tax_rate: "0.1830",	Min_amount: "",	Max_amount: "",	Tax_amount: ""}
+			{id: 4, Province: "NL",	Lower_end: "",	Higher_end: "999999999",		Tax_rate: "0.1830",	Min_amount: "",	Max_amount: "",	Tax_amount: ""}
 		];
 
 		var Provincial_Tax_Bracket_2021_NL_Tax_amount_Summ = 0;
@@ -614,7 +616,7 @@ $(document).ready(function() {
 			{id: 1, Province: "NS",	Lower_end: "",	Higher_end: "59180",	Tax_rate: "0.1495",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
 			{id: 2, Province: "NS",	Lower_end: "",	Higher_end: "93000",	Tax_rate: "0.1667",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
 			{id: 3, Province: "NS",	Lower_end: "",	Higher_end: "150000",	Tax_rate: "0.1750",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
-			{id: 4, Province: "NS",	Lower_end: "",	Higher_end: "0",		Tax_rate: "0.2100",	Min_amount: "",	Max_amount: "",	Tax_amount: ""}
+			{id: 4, Province: "NS",	Lower_end: "",	Higher_end: "999999999",		Tax_rate: "0.2100",	Min_amount: "",	Max_amount: "",	Tax_amount: ""}
 		];
 
 		var Provincial_Tax_Bracket_2021_NS_Tax_amount_Summ = 0;
@@ -650,7 +652,7 @@ $(document).ready(function() {
 			{id: 0, Province: "NT",	Lower_end: "0",	Higher_end: "43957",	Tax_rate: "0.0590",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
 			{id: 1, Province: "NT",	Lower_end: "",	Higher_end: "87916",	Tax_rate: "0.0860",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
 			{id: 2, Province: "NT",	Lower_end: "",	Higher_end: "142932",	Tax_rate: "0.1220",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
-			{id: 3, Province: "NT",	Lower_end: "",	Higher_end: "0",		Tax_rate: "0.1405",	Min_amount: "",	Max_amount: "",	Tax_amount: ""}
+			{id: 3, Province: "NT",	Lower_end: "",	Higher_end: "999999999",		Tax_rate: "0.1405",	Min_amount: "",	Max_amount: "",	Tax_amount: ""}
 		];
 
 		var Provincial_Tax_Bracket_2021_NT_Tax_amount_Summ = 0;
@@ -685,7 +687,7 @@ $(document).ready(function() {
 			{id: 0, Province: "NU",	Lower_end: "0",	Higher_end: "46277",	Tax_rate: "0.0400",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
 			{id: 1, Province: "NU",	Lower_end: "",	Higher_end: "92555",	Tax_rate: "0.0700",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
 			{id: 2, Province: "NU",	Lower_end: "",	Higher_end: "150473",	Tax_rate: "0.0900",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
-			{id: 3, Province: "NU",	Lower_end: "",	Higher_end: "0",		Tax_rate: "0.1150",	Min_amount: "",	Max_amount: "",	Tax_amount: ""}
+			{id: 3, Province: "NU",	Lower_end: "",	Higher_end: "999999999",		Tax_rate: "0.1150",	Min_amount: "",	Max_amount: "",	Tax_amount: ""}
 		];
 
 		var Provincial_Tax_Bracket_2021_NU_Tax_amount_Summ = 0;
@@ -719,7 +721,7 @@ $(document).ready(function() {
 		var Provincial_Tax_Bracket_2021_PE = [
 			{id: 0, Province: "PE",	Lower_end: "0",	Higher_end: "31984",	Tax_rate: "0.0980",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
 			{id: 1, Province: "PE",	Lower_end: "",	Higher_end: "63969",	Tax_rate: "0.1380",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
-			{id: 2, Province: "PE",	Lower_end: "",	Higher_end: "0",		Tax_rate: "0.1670",	Min_amount: "",	Max_amount: "",	Tax_amount: ""}
+			{id: 2, Province: "PE",	Lower_end: "",	Higher_end: "999999999",		Tax_rate: "0.1670",	Min_amount: "",	Max_amount: "",	Tax_amount: ""}
 		];
 
 		var Provincial_Tax_Bracket_2021_PE_Tax_amount_Summ = 0;
@@ -754,7 +756,7 @@ $(document).ready(function() {
 			{id: 1, Province: "QC",	Lower_end: "0",	Higher_end: "44545",	Tax_rate: "0.1500",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
 			{id: 2, Province: "QC",	Lower_end: "",	Higher_end: "89080",	Tax_rate: "0.2000",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
 			{id: 3, Province: "QC",	Lower_end: "",	Higher_end: "108390",	Tax_rate: "0.2400",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
-			{id: 4, Province: "QC",	Lower_end: "",	Higher_end: "0",		Tax_rate: "0.2575",	Min_amount: "",	Max_amount: "",	Tax_amount: ""}
+			{id: 4, Province: "QC",	Lower_end: "",	Higher_end: "999999999",		Tax_rate: "0.2575",	Min_amount: "",	Max_amount: "",	Tax_amount: ""}
 		];
 
 		var Provincial_Tax_Bracket_2021_QC_Tax_amount_Summ = 0;
@@ -811,7 +813,7 @@ $(document).ready(function() {
 		var Provincial_Tax_Bracket_2021_SK = [
 			{id: 0, Province: "SK",	Lower_end: "0",	Higher_end: "45225",	Tax_rate: "0.1050",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
 			{id: 1, Province: "SK",	Lower_end: "",	Higher_end: "129214",	Tax_rate: "0.1250",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
-			{id: 2, Province: "SK",	Lower_end: "",	Higher_end: "0",		Tax_rate: "0.1450",	Min_amount: "",	Max_amount: "",	Tax_amount: ""}
+			{id: 2, Province: "SK",	Lower_end: "",	Higher_end: "999999999",		Tax_rate: "0.1450",	Min_amount: "",	Max_amount: "",	Tax_amount: ""}
 		];
 
 		var Provincial_Tax_Bracket_2021_SK_Tax_amount_Summ = 0;
@@ -846,7 +848,7 @@ $(document).ready(function() {
 			{id: 1, Province: "YT",	Lower_end: "",	Higher_end: "97069",	Tax_rate: "0.0900",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
 			{id: 2, Province: "YT",	Lower_end: "",	Higher_end: "150473",	Tax_rate: "0.1090",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
 			{id: 3, Province: "YT",	Lower_end: "",	Higher_end: "500000",	Tax_rate: "0.1280",	Min_amount: "",	Max_amount: "",	Tax_amount: ""},
-			{id: 4, Province: "YT",	Lower_end: "",	Higher_end: "0",		Tax_rate: "0.1500",	Min_amount: "",	Max_amount: "",	Tax_amount: ""}
+			{id: 4, Province: "YT",	Lower_end: "",	Higher_end: "999999999",		Tax_rate: "0.1500",	Min_amount: "",	Max_amount: "",	Tax_amount: ""}
 		];
 
 		var Provincial_Tax_Bracket_2021_YT_Tax_amount_Summ = 0;
@@ -1555,7 +1557,7 @@ $(document).ready(function() {
 			+Provincial_Deductions[6].CPP_credit_self_employment +
 			+Provincial_Deductions[6].EI_credit;
 
-			console.log(Provincial_Deductions[6].Basic_personal_amount);
+			//console.log(Provincial_Deductions[6].Basic_personal_amount);
 			// console.log(Provincial_Deductions[6].Spouse_amount);
 			// console.log(Provincial_Deductions[6].CPP_credit_employment);
 			// console.log(Provincial_Deductions[6].CPP_credit_self_employment);
@@ -1765,7 +1767,7 @@ $(document).ready(function() {
 			var Provincial_Credit = 0;
 		}
 
-		console.log(Provincial_Credit);
+		//console.log(Provincial_Credit);
 		
 
 		// Provincial Deductions ————————————————————————————————————————————————————————————————
@@ -1960,37 +1962,60 @@ $(document).ready(function() {
 		//console.log(Prov_Tax_Bracket_Summ_1);
 
 
-		if ( B1 == "BC" ) {Prov_Tax_Bracket_BC = Math.max(0, (476 - ((C32 - 21185) * 0.0356)));} else {Prov_Tax_Bracket_BC = 0;}
-		if ( B1 == "NB" ) {Prov_Tax_Bracket_NB = Math.max(0, (678 - ((C32 - 17455) * 0.03)));} else {Prov_Tax_Bracket_NB = 0;}
-		if ( B1 == "NS" ) {Prov_Tax_Bracket_NS = Math.max(0, (300 - ((C32 - 15000) * 0.05)));} else {Prov_Tax_Bracket_NS = 0;}
-		if ( B1 == "PE" ) {Prov_Tax_Bracket_PE = Math.max(0, (350 - ((C32 - 18000) * 0.05)));} else {Prov_Tax_Bracket_PE = 0;}
+		if ( B1 == "BC" ) {Prov_Tax_Bracket_BC = Math.max(0, (476 - (Math.max(0, ((C32 - 21185) * 0.0356) ))));} else {Prov_Tax_Bracket_BC = 0;}
+		if ( B1 == "NB" ) {
+			if ( C4 == "Yes" ) {
+				Prov_Tax_Bracket_NB = Math.max(0, (678 * 2 - Math.max(0, ((C32 + C5 - 17455) * 0.03))) );
+			} else {
+				Prov_Tax_Bracket_NB = Math.max(0, (678 - Math.max(0, ((C32 + C5 - 17455) * 0.03))) );
+			}
+		} else {
+			Prov_Tax_Bracket_NB = 0;
+		}
+		
+		if ( B1 == "NS" ) {
+			if ( C4 == "Yes" ) {
+				Prov_Tax_Bracket_NS = Math.max(0, (300 * 2 - Math.max(0, ((C32 + C5 - 15000) * 0.05))) );
+			} else {
+				Prov_Tax_Bracket_NS = Math.max(0, (300 - Math.max(0, ((C32 + C5 - 15000) * 0.05))) );
+			}
+		} else {
+			Prov_Tax_Bracket_NS = 0;
+		}
+
+		if ( B1 == "PE" ) {
+			if ( C4 == "Yes" ) {
+				Prov_Tax_Bracket_PE = Math.max(0, (350 * 2 - Math.max(0, ((C32 + C5 - 18000) * 0.05))) );
+			} else {
+				Prov_Tax_Bracket_PE = Math.max(0, (350 - Math.max(0, ((C32 + C5 - 18000) * 0.05))) );
+			}
+		} else {
+			Prov_Tax_Bracket_PE = 0;
+		}
 
 		if ( B1 == "NL" ) {
 			if ( C4 == "Yes" ) {
-				Prov_Tax_Bracket_NL = Math.max( 0, (859 + 475- ((C5 + C32 - 34727 ) * 0.16)));
+				Prov_Tax_Bracket_NL = Math.max( 0, (859 + 479 - Math.max(0, ((C5 + C32 - 34727) * 0.16) )) );
 			} else {
-				Prov_Tax_Bracket_NL = Math.max(0, (859 - ((C5 + C32 - 20537) * 0.16)));
+				Prov_Tax_Bracket_NL = 859 - Math.max(0, ((C5 + C32 - 20537) * 0.16) );
 			}
 		} else {
 			Prov_Tax_Bracket_NL = 0;
 		}
 
 		if ( B1 == "ON" ) {
-			if ( C4 == "Yes" ) {
-				var Prov_Tax_Bracket_ON_1 = Math.max(0, ((249 * 2) - Prov_Tax_Bracket_Summ_1) );
-			} else {
-				var Prov_Tax_Bracket_ON_1 = Math.max(0, (249 - Prov_Tax_Bracket_Summ_1) );
-			}
+			var Prov_Tax_Bracket_ON_1 = Math.max(0, ((249 * 2) - Prov_Tax_Bracket_Summ_1) );
 		} else {
 			var Prov_Tax_Bracket_ON_1 = 0;
 		}
 
 
 		if ( C4 == "Yes" ) {
-			Prov_Tax_Bracket_ON_2_S = Math.max(0, (+C32 - 30000), (+C5 + +C32 - (30000 * 2)) ) * 0.1;
+			Prov_Tax_Bracket_ON_2_S = 30000 * 2 * 0.1;
 		} else {
-			Prov_Tax_Bracket_ON_2_S = 0;
+			Prov_Tax_Bracket_ON_2_S = 30000 * 0.1;
 		}
+
 
 		if ( (C12 * 0.0505) > 850 ) {
 			Prov_Tax_Bracket_ON_2_H = 850;
@@ -1999,7 +2024,7 @@ $(document).ready(function() {
 		}
 
 		if ( B1 == "ON" ) {
-			var Prov_Tax_Bracket_ON_2 = Math.max(0, (Math.max(0, Prov_Tax_Bracket_ON_2_H) - Prov_Tax_Bracket_ON_2_S))
+			var Prov_Tax_Bracket_ON_2 = Math.max(0, (Math.max(0, Prov_Tax_Bracket_ON_2_H) - Math.max(0, (C32 + C5 - Prov_Tax_Bracket_ON_2_S))));
 		} else {
 			var Prov_Tax_Bracket_ON_2 = 0;
 		}

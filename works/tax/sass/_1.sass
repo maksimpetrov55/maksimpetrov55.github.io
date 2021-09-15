@@ -21,17 +21,24 @@ body
     @media ( max-width: 670px )
         width: 96%
         max-width: 600px
+    @media print
+        margin: 5px auto
+        padding: 10px 20px
 
     &__header
         font-size: 34px
         font-weight: 600
         text-align: center
         margin: 10px auto 30px auto
+        @media print
+            font-size: 18px
 
     &__separator
         width: 100%
         border-bottom: 1px solid #cacaca
         margin: 30px 0
+        @media print
+            margin: 15px 0
 
     &__line
         display: flex
@@ -39,12 +46,16 @@ body
         margin: 10px 0
         @media ( max-width: 670px )
             flex-wrap: wrap
+        @media print
+            margin: 5px 0
 
     &__title
         padding: 0 10px 0 0
         width: 100%
         max-width: 600px
         text-align: right
+        @media print
+            font-size: 12px
         @media ( max-width: 890px )
             width: 60%
         @media ( max-width: 670px )
@@ -60,6 +71,12 @@ body
         border-radius: 4px
         border: 2px solid #4480a8
         cursor: pointer
+        @media print
+            max-width: 320px !important
+            font-size: 12px
+            height: 30px
+            width: 120px
+            border: 1px solid #4480a8
         @media ( max-width: 670px )
             margin: 10px auto
             width: 100%
@@ -72,11 +89,19 @@ body
         font-size: 16px
         border-radius: 4px
         border: 2px solid #4480a8
+        @media print
+            max-width: 320px !important
+            font-size: 12px
+            height: 30px
+            width: 120px
+            border: 1px solid #4480a8
         &--disabled
             border: 2px solid #aaa
             background: #eee
             color: #444
             font-weight: 600
+            @media print
+                border: 1px solid #aaa
         @media ( max-width: 670px )
             margin: 10px auto
             text-align: center
@@ -94,3 +119,14 @@ body
         height: auto
         min-height: 120px
         width: 100%
+        @media print
+            font-size: 13px
+
+    &__visit
+        text-align: center
+        margin: 10px auto
+
+    &__print
+        display: block
+        text-align: center
+        margin: 10px auto
