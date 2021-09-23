@@ -801,6 +801,8 @@ $(document).ready(function() {
 				Provincial_Tax_Bracket_2021_QC[i].Tax_amount = 0;
 			}
 			var Provincial_Tax_Bracket_2021_QC_Tax_amount_Summ = +Provincial_Tax_Bracket_2021_QC_Tax_amount_Summ + Provincial_Tax_Bracket_2021_QC[i].Tax_amount;
+			//console.log(Provincial_Tax_Bracket_2021_QC_Tax_amount_Summ);
+			
 		
 		}
 
@@ -1116,10 +1118,10 @@ $(document).ready(function() {
 
 		if ( B1 == "QC" ) {
 			if ( Max_less_Employment_income > PPIP_Premiums ) {
-				var Deduction_for_PPIP_on_self_employment = Math.max(0 , (Math.min(0, (PPIP_Premiums * +PX_table[8].Base_rate)) * +PX_table[8].Helper_Column) );
+				var Deduction_for_PPIP_on_self_employment = Math.max(0 , (Math.min(+PX_table[8].Max_Limit, (PPIP_Premiums * +PX_table[8].Base_rate)) * +PX_table[8].Helper_Column) );
 				var Federal_line_31215 = Math.max(0 , (Math.min(PX_table[8].Max_PPIP , (Math.max(0,PPIP_Premiums) * PX_table[8].Base_rate - Deduction_for_PPIP_on_self_employment))));
 			} else {
-				var Deduction_for_PPIP_on_self_employment = Math.max(0 , (Math.min(0, (Max_less_Employment_income * +PX_table[8].Base_rate)) * +PX_table[8].Helper_Column) );
+				var Deduction_for_PPIP_on_self_employment = Math.max(0 , (Math.min(+PX_table[8].Max_Limit, (Max_less_Employment_income * +PX_table[8].Base_rate)) * +PX_table[8].Helper_Column) );
 				var Federal_line_31215 = Math.max(0 , (Math.min(PX_table[8].Max_PPIP , (Math.max(0,Max_less_Employment_income) * PX_table[8].Base_rate - Deduction_for_PPIP_on_self_employment))));
 			}
 		} else {
@@ -1150,7 +1152,7 @@ $(document).ready(function() {
 		}
 
 		if ( B1 == "NR" ) { 
-			var CPP_credit_employment = +Base_CPP + +Base_QPP;
+			var CPP_credit_employment = +Base_CPP + +Base_QPP + +Base_QPP_2;
 			var CPP_credit_self_employment = 0;
 		} else {
 			var CPP_credit_employment = +Base_CPP + +Base_QPP;
@@ -1190,10 +1192,14 @@ $(document).ready(function() {
 			var Canada_employment_amount = +C12;
 		}
 
-		if ( C6 > 0 ) {
-			var Home_buyers_amount = 5000;
-		} else {
+		if ( B1 == "NR") {
 			var Home_buyers_amount = 0;
+		} else {
+			if ( C6 == 0 ) {
+				var Home_buyers_amount = 5000;
+			} else {
+				var Home_buyers_amount = 0;
+			}
 		}
 
 		var Federal_Credit = (
@@ -1528,7 +1534,7 @@ $(document).ready(function() {
 				if (C32 > Provincial_Table_1[13].Max_Taxable_Threshold){
 					Provincial_Deductions[6].Basic_personal_amount = Provincial_Table_1[13].Min_2020 * Provincial_Deductions[6].Tax_rate;
 				} else {
-					Provincial_Deductions[6].Basic_personal_amount = Provincial_Table_1[13].Max_2020 - (C32 - Provincial_Table_1[13].Min_Taxable_Threshold) * Provincial_Table_1[13].Rate * Provincial_Deductions[6].Tax_rate;
+					Provincial_Deductions[6].Basic_personal_amount = (Provincial_Table_1[13].Max_2020 - ((+C32 - +Provincial_Table_1[13].Min_Taxable_Threshold) * Provincial_Table_1[13].Rate)) * Provincial_Deductions[6].Tax_rate;
 				}
 			}
 
@@ -1537,6 +1543,7 @@ $(document).ready(function() {
 			} else {
 				Provincial_Deductions[6].Spouse_amount = 0;
 			}
+
 
 			Provincial_Deductions[6].CPP_credit_employment = CPP_credit_employment * Provincial_Deductions[6].Tax_rate;
 			Provincial_Deductions[6].CPP_credit_self_employment = CPP_credit_self_employment * Provincial_Deductions[6].Tax_rate;
@@ -1557,7 +1564,7 @@ $(document).ready(function() {
 			+Provincial_Deductions[6].CPP_credit_self_employment +
 			+Provincial_Deductions[6].EI_credit;
 
-			//console.log(Provincial_Deductions[6].Basic_personal_amount);
+			// console.log(Provincial_Deductions[6].Basic_personal_amount);
 			// console.log(Provincial_Deductions[6].Spouse_amount);
 			// console.log(Provincial_Deductions[6].CPP_credit_employment);
 			// console.log(Provincial_Deductions[6].CPP_credit_self_employment);
@@ -1951,8 +1958,7 @@ $(document).ready(function() {
 			if ( B1 == "YT") { var Provincial_DTC = (C17 * EDTC_array[1].YT) + (C18 * nonEDTC_array[1].YT); }
 		}
 
-		// console.log(Provincial_Subtotal_Tax);
-		// console.log(Provincial_Credit);
+		//console.log(Provincial_Credit);
 		// console.log(PE_Surtax);
 		// console.log(Provincial_DTC);
 		Prov_Tax_Bracket_Summ_1 = Math.max(0, (+Provincial_Subtotal_Tax - +Provincial_Credit + +PE_Surtax - +Provincial_DTC));
@@ -2040,7 +2046,6 @@ $(document).ready(function() {
 			- Prov_Tax_Bracket_ON_1
 			- Prov_Tax_Bracket_ON_2) );
 
-		//console.log(Prov_Tax_Bracket_Summ_2);
 
 
 		if ( B1 == "QC" ) {
@@ -2053,13 +2058,49 @@ $(document).ready(function() {
 			var Prov_Tax_Bracket_QC_1 = 0;
 		}
 
-		if ( B1 == "QC" ) {
-			Prov_Tax_Bracket_QC_2 = Math.max(0, ( ((+C12 + +C13 - +C23 - 3500) * 0.114) - ( (+C12 - 3500) * (+PX_table[4].Base_rate + +PX_table[5].Base_rate) * 2 ) ) );
+
+		if ( C4 == "Yes" ) {
+			Prov_Tax_Bracket_QC_2_C4 = 27000;
 		} else {
-			Prov_Tax_Bracket_QC_2 = 0;
+			Prov_Tax_Bracket_QC_2_C4 = 16660;
 		}
-		
-		Prov_Tax_Bracket_QC_3 = 0;
+		if ( B1 == "QC" ) {
+			Prov_Tax_Bracket_QC_2_SOME = Math.max(0, (+C5 + +C32 - +Provincial_Tax_Bracket_2021_QC[0].Max_amount - +Prov_Tax_Bracket_QC_2_C4));
+		} else {
+			Prov_Tax_Bracket_QC_2_SOME = 0;
+		}
+
+
+		if ( Prov_Tax_Bracket_QC_2_SOME > 5000 ) {
+			if ( C4 == "Yes" ) {
+				var Prov_Tax_Bracket_QC_2_LONG = ((Prov_Tax_Bracket_QC_2_SOME - 5000) * 0.0501 + 167);
+			} else {
+				var Prov_Tax_Bracket_QC_2_LONG = ((Prov_Tax_Bracket_QC_2_SOME - 5000) * 0.0999 + 332.5);
+			}
+		} else {
+			if ( C4 != "Yes") {
+				var Prov_Tax_Bracket_QC_2_LONG = (Prov_Tax_Bracket_QC_2_SOME * 0.0665);
+			} else {
+				var Prov_Tax_Bracket_QC_2_LONG = (Prov_Tax_Bracket_QC_2_SOME * 0.0334);
+			}
+		}
+
+		Prov_Tax_Bracket_QC_2 = Math.min(648 , Prov_Tax_Bracket_QC_2_LONG);
+
+
+		if ( B1 == "QC" ) {
+			if ( C32 >= 52745 ) {
+				Prov_Tax_Bracket_QC_3 = Math.min( 1000 , ((+C32 - 52745) * 0.01 + 150) );
+			} else {
+				if ( C32 >= 15170 ) {
+					Prov_Tax_Bracket_QC_3 = Math.min(150 , (C32 - 15170 ) * 0.01 );
+				} else {
+					Prov_Tax_Bracket_QC_3 = 0;
+				}
+			}
+		} else {
+			Prov_Tax_Bracket_QC_3 = 0;
+		}
 
 
 
@@ -2158,6 +2199,8 @@ $(document).ready(function() {
 
 			
 		
+			//console.log(Deduction_for_PPIP_on_self_employment);
+			
 			if ( B1 == "NR" ) {
 				var calc_C28 = +Enhanced_CPP;
 			} else {
@@ -2203,10 +2246,14 @@ $(document).ready(function() {
 		}
 		$('#calc_C36').val(C36.toFixed(0));
 
-		if (B1 == "QC" || B1 == "NR" ){
-			var C37 = 0;
+		if (B1 == "QC"){
+			var C37 = +Total_QPP_Payable + +Total_QPP_Payable_2;
 		} else {
-			var C37 = Total_CPP_Payable_2 + Total_CPP_Payable;
+			if ( B1 == "NR" ){
+				var C37 = 0;
+			} else {
+				var C37 = +Total_CPP_Payable_2 + +Total_CPP_Payable;
+			}
 		}
 		$('#calc_C37').val(C37.toFixed(0));
 
@@ -2238,8 +2285,19 @@ $(document).ready(function() {
 		var C44 = +C40 + +C41 + +C42 + +C43;
 		$('#calc_C44').val(C44.toFixed(0));
 
-		var C46 = Math.abs( +C39 - +C44 );
+		if ( C39 > C44 ) {
+			var C46 = Math.abs(+C39 - +C44);
+		} else {
+			var C46 = 0;
+		}
 		$('#calc_C46').val(C46.toFixed(0));
+
+		if ( C39 < C44 ) {
+			var C47 = Math.abs(+C39 - +C44);
+		} else {
+			var C47 = 0;
+		}
+		$('#calc_C47').val(C47.toFixed(0));
 
 		if ( C22 > 0 && C32 < (Federal_Deduction / Federal_Tax[0].Tax_rate ) ) {
 			$('#final_text').text("Tax suggestion: Total income is less than total deductions and credits. To pay less tax in the future, consider carrying forward the RRSP Contribution amount to next year's tax return. Reduce the RRSP Contribution amount so that Federal Tax line is zero");
@@ -2263,7 +2321,7 @@ $(document).ready(function() {
 
 
 
-		//  ————————————————————————————————————————————————————————————————
+	//  ————————————————————————————————————————————————————————————————
 	//  ————————————————————————————————————————————————————————————————
 
 
