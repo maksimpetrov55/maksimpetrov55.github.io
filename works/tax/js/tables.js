@@ -1140,6 +1140,7 @@ $(document).ready(function() {
 		} else {
 			var Basic_personal_amount = Math.max(0, (+PX_table[0].BPA_additional - (C32 - +PX_table[0].BPA_Threshold) / +PX_table[0].BPA_amount * +PX_table[0].BPA_additional)) + +PX_table[0].Base_amount;
 		}
+		
 
 		if ( C4 == "Yes" ) {
 			if ( Math.max(0, (PX_table[0].BPA_additional - (C32 - PX_table[0].BPA_Threshold) / PX_table[0].BPA_amount * PX_table[0].BPA_additional)) > PX_table[0].BPA_additional ) {
@@ -1151,6 +1152,8 @@ $(document).ready(function() {
 			var Spouse_amount = 0
 		}
 
+		
+
 		if ( B1 == "NR" ) { 
 			var CPP_credit_employment = +Base_CPP + +Base_QPP + +Base_QPP_2;
 			var CPP_credit_self_employment = 0;
@@ -1159,6 +1162,8 @@ $(document).ready(function() {
 			var CPP_credit_self_employment = +Base_CPP_2 + +Base_CPP_QPP;
 		}
 		var PPIP_credit_self_employment = +Federal_line_31215;
+		
+
 		
 
 
@@ -1185,6 +1190,9 @@ $(document).ready(function() {
 				var EI_credit = EI_credit_V;
 			}
 		}
+
+		
+		
 		
 		if ( C12 > +PX_table[10].Max_Limit ) {
 			var Canada_employment_amount = +PX_table[10].Max_Limit;
@@ -1195,12 +1203,14 @@ $(document).ready(function() {
 		if ( B1 == "NR") {
 			var Home_buyers_amount = 0;
 		} else {
-			if ( C6 == 0 ) {
+			if ( C6 == 1 ) {
 				var Home_buyers_amount = 5000;
 			} else {
 				var Home_buyers_amount = 0;
 			}
 		}
+
+		//console.log(Home_buyers_amount);
 
 		var Federal_Credit = (
 			+Basic_personal_amount + 
@@ -1213,7 +1223,7 @@ $(document).ready(function() {
 			+Home_buyers_amount
 		) * +PX_table[11].Base_rate;
 
-		
+
 
 		if ( B1 == "QC" ) {
 			var Federal_QC_Abatement = Math.max(0 , ((+Federal_Tax_itog - +Federal_Credit) * PX_table[9].Base_rate ) );
@@ -1485,6 +1495,9 @@ $(document).ready(function() {
 			+Provincial_Deductions[4].CPP_credit_employment +
 			+Provincial_Deductions[4].CPP_credit_self_employment +
 			+Provincial_Deductions[4].EI_credit;
+
+			//console.log(Provincial_Deductions[4].EI_credit);
+
 		}
 
 		if ( B1 == "NL" ) {
@@ -1969,16 +1982,19 @@ $(document).ready(function() {
 
 
 		if ( B1 == "BC" ) {Prov_Tax_Bracket_BC = Math.max(0, (476 - (Math.max(0, ((C32 - 21185) * 0.0356) ))));} else {Prov_Tax_Bracket_BC = 0;}
+
 		if ( B1 == "NB" ) {
 			if ( C4 == "Yes" ) {
-				Prov_Tax_Bracket_NB = Math.max(0, (678 * 2 - Math.max(0, ((C32 + C5 - 17455) * 0.03))) );
+				Prov_Tax_Bracket_NB = Math.max(0, (678 * 2 - Math.max(0, ((+C32 + +C5 - 17455) * 0.03))) );
 			} else {
-				Prov_Tax_Bracket_NB = Math.max(0, (678 - Math.max(0, ((C32 + C5 - 17455) * 0.03))) );
+				Prov_Tax_Bracket_NB = Math.max(0, (678 - Math.max(0, ((+C32 + +C5 - 17455) * 0.03))) );
 			}
 		} else {
 			Prov_Tax_Bracket_NB = 0;
 		}
+		//console.log(Prov_Tax_Bracket_NB);
 		
+
 		if ( B1 == "NS" ) {
 			if ( C4 == "Yes" ) {
 				Prov_Tax_Bracket_NS = Math.max(0, (300 * 2 - Math.max(0, ((C32 + C5 - 15000) * 0.05))) );
@@ -1988,6 +2004,7 @@ $(document).ready(function() {
 		} else {
 			Prov_Tax_Bracket_NS = 0;
 		}
+
 
 		if ( B1 == "PE" ) {
 			if ( C4 == "Yes" ) {
@@ -2045,6 +2062,9 @@ $(document).ready(function() {
 			- Prov_Tax_Bracket_NL
 			- Prov_Tax_Bracket_ON_1
 			- Prov_Tax_Bracket_ON_2) );
+
+		//console.log(Prov_Tax_Bracket_Summ_2);
+		
 
 
 
@@ -2235,8 +2255,8 @@ $(document).ready(function() {
 
 
 
-		//console.log(Federal_Tax_summ);
-		//console.log(Federal_Deduction);
+		// console.log(Federal_Tax_summ);
+		// console.log(Federal_Deduction);
 		
 
 		if ( (+Federal_Tax_summ - +Federal_Deduction) < 0 ) {
