@@ -121,23 +121,23 @@ $(document).ready(function() {
 		} else {
 			if ( calc_vigruzka == 1) {
 				if ( calc_slider == 1 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "Бесплатно по заявке"; }
-				if ( calc_slider == 2 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "9 000 ₽ в год"; }
-				if ( calc_slider == 3 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "13 500 ₽ в год"; }
-				if ( calc_slider == 4 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "19 000 ₽ в год"; }
-				if ( calc_slider == 5 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "28 500 ₽ в год"; }
-				if ( calc_slider == 6 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "42 700 ₽ в год"; }
-				if ( calc_slider == 7 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "64 100 ₽ в год"; }
-				if ( calc_slider == 8 ) { $('.calc__alert').addClass("calc__alert--show"); var calc_price = "144 200 ₽ в год*"; }
+				if ( calc_slider == 2 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "9 000 ₽ за 6 месяцев"; }
+				if ( calc_slider == 3 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "13 500 ₽ за 6 месяцев"; }
+				if ( calc_slider == 4 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "19 000 ₽ за 6 месяцев"; }
+				if ( calc_slider == 5 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "28 500 ₽ за 6 месяцев"; }
+				if ( calc_slider == 6 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "42 700 ₽ за 6 месяцев"; }
+				if ( calc_slider == 7 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "64 100 ₽ за 6 месяцев"; }
+				if ( calc_slider == 8 ) { $('.calc__alert').addClass("calc__alert--show"); var calc_price = "144 200 ₽ за 6 месяцев*"; }
 				if ( calc_slider == 9 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "Цена по запросу"; }
 			} else {
 				if ( calc_slider == 1 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "Недоступно"; }
-				if ( calc_slider == 2 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "11 300 ₽ в год"; }
-				if ( calc_slider == 3 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "16 900 ₽ в год"; }
-				if ( calc_slider == 4 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "23 700 ₽ в год"; }
-				if ( calc_slider == 5 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "35 600 ₽ в год"; }
-				if ( calc_slider == 6 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "53 400 ₽ в год"; }
-				if ( calc_slider == 7 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "80 100 ₽ в год"; }
-				if ( calc_slider == 8 ) { $('.calc__alert').addClass("calc__alert--show"); var calc_price = "180 200 ₽ в год*"; }
+				if ( calc_slider == 2 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "11 300 ₽ за 6 месяцев"; }
+				if ( calc_slider == 3 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "16 900 ₽ за 6 месяцев"; }
+				if ( calc_slider == 4 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "23 700 ₽ за 6 месяцев"; }
+				if ( calc_slider == 5 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "35 600 ₽ за 6 месяцев"; }
+				if ( calc_slider == 6 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "53 400 ₽ за 6 месяцев"; }
+				if ( calc_slider == 7 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "80 100 ₽ за 6 месяцев"; }
+				if ( calc_slider == 8 ) { $('.calc__alert').addClass("calc__alert--show"); var calc_price = "180 200 ₽ за 6 месяцев*"; }
 				if ( calc_slider == 9 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "Цена по запросу"; }
 			}
 		}
