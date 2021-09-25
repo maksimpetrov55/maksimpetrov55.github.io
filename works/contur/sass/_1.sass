@@ -49,6 +49,61 @@ body
             flex-wrap: wrap
             margin: 0 auto 20px auto
 
+    &__select
+        display: block
+        margin: 10px 20px
+        cursor: pointer
+        transition-duration: 0.2s
+        width: 220px
+        text-align: center
+        white-space: nowrap
+        z-index: +1
+        @media ( max-width: 580px )
+            width: 45%
+            margin: 10px 5px
+        @media ( max-width: 500px )
+            width: 100%
+            max-width: 280px
+            margin: 4px 5px
+        @media ( max-width: 350px )
+            font-size: 14px
+
+    &__current
+        user-select: none
+        border-radius: 10px
+        z-index: 20
+        width: 100%
+        height: 100%
+        background: $color1
+        color: #fff
+        height: 43px
+        display: flex
+        justify-content: center
+        align-items: center
+
+    &__drop
+        user-select: none
+        padding: 8px 0 0 0
+        background: #fff
+        position: absolute
+        color: #000
+        width: 100%
+        top: 80%
+        left: 0
+        height: 120%
+        border: 2px solid $color1
+        border-radius: 0 0 10px 10px
+        display: flex
+        justify-content: center
+        align-items: center
+        z-index: 10
+        transition-duration: 0.2s
+        transform: translateY(-40px) scale(1, 0)
+        opacity: 0
+        &--open
+            transform: translateY(0px) scale(1, 1)
+            opacity: 1
+
     &__radio
         display: none
         &:checked + .calc__label
@@ -56,6 +111,7 @@ body
             color: #fff
         
     &__label
+        height: 43px
         padding: 10px 10px
         display: block
         border: 2px solid $color1
@@ -89,12 +145,23 @@ body
         max-width: 800px
         width: 100%
 
+    &__polzunok
+        z-index: 30
+
     &__scale
-        width: 101%
+        width: 99%
         display: flex
         justify-content: space-between
         position: absolute
-        margin: -6px 0 0 0
+        margin: -14px 0 0 1%
+        z-index: 10
+
+    &__bg
+        position: absolute
+        width: 100%
+        background: #ccc
+        height: 2px
+        top: 4px
 
     &__dot
         width: 10px
@@ -104,6 +171,7 @@ body
         transition-duration: 0.25s
         &--color
             background: $color1
+
         &--trans
             background: transparent
 
@@ -343,15 +411,16 @@ body
 
 
 .ui-slider
-    background: #ccc !important
+    background: #cccccc00 !important
     height: 2px !important
-    border: none !important
+    border: 10px solid #cccccc00 !important
     border-radius: 0 !important
 
 .ui-slider-range
     background: $color1 !important
+    height: 2px !important
+    border: 10px solid #cccccc55
     border-radius: 0 !important
-    transition-duration: 0.25s
 
 .ui-slider-handle
     width: 24px !important
@@ -363,7 +432,6 @@ body
     margin-top: -6px !important
     cursor: pointer !important
     box-shadow: 0 0px 10px 1px #5757574d
-    transition-duration: 0.25s
 
 .ui-slider-handle:hover
     //box-shadow: 0 0px 2px 12px rgba(245,165,100,0.3)

@@ -6,12 +6,12 @@
 	<title>Web Mockup</title>
 
 	<link rel="stylesheet" href="css/jquery-ui.css">
-	<link rel="stylesheet" href="css/main.css?v5">
+	<link rel="stylesheet" href="css/main.css?v6">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/jquery.ui.touch-punch.min.js"></script>
-	<script src="js/scripts.js?v5"></script>	
+	<script src="js/scripts.js?v6"></script>	
 
 </head>
 <body>
@@ -69,21 +69,29 @@
 			<label class="calc__label" for="calc_vigruzka_2">Расширенная выгрузка</label>
 		</div>
 
-		<div class="calc__choice">
+		<!-- <div class="calc__choice">
 			<input type="radio" name="calc_srok" id="calc_srok_1" class="calc__radio" value="1" checked>
 			<label class="calc__label" for="calc_srok_1">1 год</label>
 
 			<input type="radio" name="calc_srok" id="calc_srok_2" class="calc__radio" value="2">
 			<label class="calc__label" for="calc_srok_2">6 месяцев</label>
+		</div> -->
+
+		<div class="calc__choice">
+			<div class="calc__select">
+				<div class="calc__current">на 1 год</div>
+				<div class="calc__drop">на 6 месяцев</div>
+			</div>
 		</div>
 
 		<div class="calc__tarif">до 400 организаций ежемесячно</div>
 
 		<div class="calc__slider">
 			<input style="display: none;" type="text" id="calc_input_1">
-			<div id="calc_slider_1"></div>
+			<div class="calc__polzunok" id="calc_slider_1"></div>
 			<div class="calc__scale">
-				<div data-slider="1" class="calc__dot calc__dot--color"></div>
+				<div class="calc__bg"></div>
+				<div data-slider="0" class="calc__dot calc__dot--color"></div>
 				<div data-slider="2" class="calc__dot"></div>
 				<div data-slider="3" class="calc__dot"></div>
 				<div data-slider="4" class="calc__dot"></div>

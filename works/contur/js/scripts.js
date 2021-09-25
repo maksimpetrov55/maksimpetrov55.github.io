@@ -73,13 +73,27 @@ $(document).ready(function() {
 	$('input[name=calc_srok]').change(function(){
 		calculation();
 	});
+	
+	$('.calc__select').click(function(){
+		$('.calc__drop').toggleClass("calc__drop--open");
+	});
+
+	$('.calc__drop').click(function(){
+		let text_1 = $('.calc__current').text();
+		let text_2 = $('.calc__drop').text();
+
+		$('.calc__current').text(text_2);
+		$('.calc__drop').text(text_1);
+		calculation();
+	});
 
 	calculation();
 	function calculation() {
 
 		var calc_slider = $( "#calc_input_1" ).val();
-		var calc_time = $('input[name=calc_srok]:checked').val();
-		var calc_time_name = $('input[name=calc_srok]:checked').next().text();
+		// var calc_time = $('input[name=calc_srok]:checked').val();
+		// var calc_time_name = $('input[name=calc_srok]:checked').next().text();
+		var calc_time = $('.calc__current').text();
 		var calc_vigruzka = $('input[name=calc_vigruzka]:checked').val();
 		var calc_vigruzka_name = $('input[name=calc_vigruzka]:checked').next().text();
 
@@ -96,7 +110,7 @@ $(document).ready(function() {
 		$('.calc__tarif').text( calc_tarif );
 
 
-		if ( calc_time == 1 ) {
+		if ( calc_time == "на 1 год" ) {
 			if ( calc_vigruzka == 1) {
 				if ( calc_slider == 1 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "Бесплатно по заявке"; }
 				if ( calc_slider == 2 ) { $('.calc__alert').removeClass("calc__alert--show"); var calc_price = "13 500 ₽ в год"; }
@@ -149,7 +163,7 @@ $(document).ready(function() {
 
 		$('#form_textarea').val(
 			"Тип выгрузки: " + calc_vigruzka_name + " <br>" + " \n" +
-			"Срок: " + calc_time_name + " <br>" + " \n" +
+			"Срок: " + calc_time + " <br>" + " \n" +
 			"Тариф: " + calc_tarif + " <br>" + " \n" +
 			"Стоимость: " + calc_price
 		);
