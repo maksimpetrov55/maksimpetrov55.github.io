@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+	<div class="black">
+
+		<form action="form.php" method="POST" class="form">
+
+			<div class="form__close">×</div>
+
+			<div class="form__title">Оставьте заявку</div>
+
+			<!-- <div class="form__line">
+				<div class="form__name">Ваш город</div>
+				<input class="form__input" type="text" required>
+			</div> -->
+
+			<div class="form__line">
+				<div class="form__name">Контактное лицо</div>
+				<input class="form__input" type="text" required placeholder="Фамилия Имя Отчество">
+			</div>
+
+			<div class="form__line">
+				<div class="form__name">Электронная почта</div>
+				<input class="form__input" type="email" required placeholder="info@mail.ru">
+			</div>
+
+			<div class="form__line">
+				<div class="form__name">Телефон</div>
+				<input class="form__input" type="text" required placeholder="+7 (---) --- -- --">
+			</div>
+
+			<div class="form__line">
+				<div class="form__name">ИНН</div>
+				<input class="form__input" type="text" required placeholder="xxx xxx xxx xxx">
+			</div>
+
+			<textarea style="display: none;" name="form_textarea" id="form_textarea" cols="30" rows="10"></textarea>
+
+			<input class="form__submit" type="submit" value="Отправить">
+			<div class="form__note">Отправляя заявку, вы соглашаетесь на обработку персональных данных.</div>
+
+		</form>
+
+	</div>
+
+	<div class="calc">
+		<div class="calc__title">Расчитайте стоимость услуг для Вашей организации</div>
+
+		<div class="calc__choice">
+			<input type="radio" name="calc_vigruzka" id="calc_vigruzka_1" class="calc__radio" value="1" checked>
+			<label class="calc__label" for="calc_vigruzka_1">Стандартная выгрузка</label>
+
+			<input type="radio" name="calc_vigruzka" id="calc_vigruzka_2" class="calc__radio" value="2">
+			<label class="calc__label" for="calc_vigruzka_2">Расширенная выгрузка</label>
+		</div>
+
+		<div class="calc__choice">
+			<input type="radio" name="calc_srok" id="calc_srok_1" class="calc__radio" value="1" checked>
+			<label class="calc__label" for="calc_srok_1">1 год</label>
+
+			<input type="radio" name="calc_srok" id="calc_srok_2" class="calc__radio" value="2">
+			<label class="calc__label" for="calc_srok_2">6 месяцев</label>
+		</div>
+
+		<div class="calc__tarif">до 400 организаций ежемесячно</div>
+
+		<div class="calc__slider">
+			<input style="display: none;" type="text" id="calc_input_1">
+			<div id="calc_slider_1"></div>
+			<div class="calc__scale">
+				<div data-slider="20" class="calc__dot calc__dot--trans"></div>
+				<div data-slider="2" class="calc__dot"></div>
+				<div data-slider="3" class="calc__dot"></div>
+				<div data-slider="4" class="calc__dot"></div>
+				<div data-slider="5" class="calc__dot"></div>
+				<div data-slider="6" class="calc__dot"></div>
+				<div data-slider="7" class="calc__dot"></div>
+				<div data-slider="8" class="calc__dot"></div>
+				<div data-slider="20" class="calc__dot calc__dot--trans"></div>
+			</div>
+		</div>
+
+		<div class="calc__itog">5555 руб. в год</div>
+		<div class="calc__alert">* более 12 000 организаций продаётся только на год</div>
+		
+		<div class="calc__btn">Оставить заявку</div>
+
+		<div class="calc__title">Что включено?</div>
+
+		<div class="calc__name">Стандартная выгрузка 
+
+		</div>
+
+		<div class="calc__options">
+			<div class="calc__item"><span class="calc__item--span">✔</span> Наименование</div>
+			<div class="calc__item"><span class="calc__item--span">✔</span> ИНН/КПП</div>
+			<div class="calc__item"><span class="calc__item--span">✔</span> ОГРН</div>
+			<div class="calc__item"><span class="calc__item--span">✔</span> Руководитель (ФИО, должность)</div>
+			<div class="calc__item"><span class="calc__item--span">✔</span> Номер телефона</div>
+			<div class="calc__item"><span class="calc__item--span">✔</span> Ссылка на сайт</div>
+			<div class="calc__item"><span class="calc__item--span">✔</span> Адрес</div>
+			<div class="calc__item"><span class="calc__item--span">✔</span> Электронная почта</div>
+			<div class="calc__item"><span class="calc__item--span">✔</span> Статус</div>
+			<div class="calc__item"><span class="calc__item--span">✔</span> Дата регистрации</div>
+			<div class="calc__item"><span class="calc__item--span">✔</span> Категория МСП</div>
+		</div>
+
+		<div class="calc__name calc__name--gray calc__name--btn">Расширенная выгрузка
+			<div>
+				<input class="calc__checkbox" type="checkbox" name="calc_want" id="calc_want">
+				<label class="calc__want" for="calc_want">Хочу расширенную выгрузку</label>
+			</div>
+		</div>
+
+		<div class="calc__options calc__options--extend calc__options--gray">
+			<div class="calc__item"><span class="calc__item--span">✔</span> Количество сотрудников</div>
+			<div class="calc__item"><span class="calc__item--span">✔</span> Выручка</div>
+			<div class="calc__item"><span class="calc__item--span">✔</span> Чистая прибыль/убыток</div>
+			<div class="calc__item"><span class="calc__item--span">✔</span> Баланс</div>
+			<div class="calc__item"><span class="calc__item--span">✔</span> Сумма арбитража</div>
+			<div class="calc__item"><span class="calc__item--span">✔</span> Наличие лицензий</div>
+			<div class="calc__item"><span class="calc__item--span">✔</span> Основной вид деятельности</div>
+			<div class="calc__item"><span class="calc__item--span">✔</span> Другие виды деятельности</div>
+			<div class="calc__item"><span class="calc__item--span">✔</span> Предметы закупок (ОКПД2)</div>
+			<div class="calc__item"><span class="calc__item--span">✔</span> Регион регистрации</div>
+			<div class="calc__item"><span class="calc__item--span">✔</span> Предмет лизинга</div>
+			<div class="calc__item"><span class="calc__item--span">✔</span> Категория предмета лизинга</div>
+			<div class="calc__item"><span class="calc__item--span">✔</span> Залог имущества</div>
+		</div>
+
+
+	</div>
+	
+
+
+</body>
+</html>

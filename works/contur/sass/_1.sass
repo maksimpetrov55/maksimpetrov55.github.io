@@ -1,0 +1,369 @@
+$color1: #2f89ff
+
+
+
+body
+    position: relative
+    background: #ddd
+
+.calc
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: sans-serif
+    position: relative
+    width: 100%
+    max-width: 1110px
+    background: #fff
+    min-height: 300px
+    margin: 50px auto
+    border-radius: 16px
+    padding: 50px 100px 30px 100px
+    @media ( max-width: 991px )
+        padding: 50px 30px 30px 30px
+    @media ( max-width: 580px )
+        padding: 50px 15px 30px 15px
+
+    *
+        position: relative
+        padding: 0
+        margin: 0
+        box-sizing: border-box
+        font-family: sans-serif
+
+    &__title
+        font-size: 26px
+        font-weight: 600
+        text-align: center
+        margin: 0 auto 40px auto
+        @media ( max-width: 350px )
+            font-size: 22px
+
+
+    &__choice
+        display: flex
+        justify-content: space-around
+        margin: 0 auto 10px auto
+        max-width: 500px
+        @media ( max-width: 500px )
+            flex-wrap: wrap
+            margin: 0 auto 20px auto
+
+    &__radio
+        display: none
+        &:checked + .calc__label
+            background: $color1
+            color: #fff
+        
+    &__label
+        padding: 10px 10px
+        display: block
+        border: 2px solid $color1
+        border-radius: 10px
+        margin: 10px 20px
+        cursor: pointer
+        transition-duration: 0.2s
+        width: 220px
+        text-align: center
+        white-space: nowrap
+        @media ( max-width: 580px )
+            width: 45%
+            margin: 10px 5px
+        @media ( max-width: 500px )
+            width: 100%
+            max-width: 280px
+            margin: 4px 5px
+        @media ( max-width: 350px )
+            font-size: 14px
+
+        &:hover
+            transform: translateY(-6px)
+
+    &__tarif
+        margin: 60px auto 10px auto
+        text-align: center
+        font-size: 20px
+
+    &__slider
+        margin: 30px auto 40px auto
+        max-width: 800px
+        width: 100%
+
+    &__scale
+        width: 101%
+        display: flex
+        justify-content: space-between
+        position: absolute
+        margin: -6px 0 0 0
+
+    &__dot
+        width: 10px
+        height: 10px
+        background: #ccc
+        border-radius: 50px
+        transition-duration: 0.25s
+        &--color
+            background: $color1
+        &--trans
+            background: transparent
+
+    &__itog
+        font-size: 24px
+        font-weight: 600
+        text-align: center
+        margin: 10px auto 10px auto
+
+    &__alert
+        margin: 10px auto 40px auto
+        text-align: center
+        color: #ff2020
+        display: none
+        &--show
+            display: block
+
+    &__btn
+        cursor: pointer
+        width: 220px
+        height: 50px
+        background: $color1
+        border-radius: 50px
+        margin: 20px auto 60px auto
+        color: #fff
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 18px
+        transition-duration: 0.2s
+        &:hover
+            transform: translateY(-6px)
+            box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2)
+        &:active
+            opacity: 0.3
+
+    &__name
+        margin: 20px 0 20px 0
+        font-weight: 600
+        &--gray
+            color: #aaa
+        &--btn
+            display: flex
+            align-items: center
+            @media ( max-width: 500px )
+                display: block
+
+    &__options
+        display: flex
+        flex-direction: column
+        flex-wrap: wrap
+        height: 220px
+        margin: 0 auto 40px auto
+        @media ( max-width: 830px )
+            height: auto
+            max-height: 330px
+        @media ( max-width: 580px )
+            max-height: 600px
+        &--extend
+            height: 280px
+            @media ( max-width: 830px )
+                height: auto
+                max-height: 400px
+            @media ( max-width: 580px )
+                max-height: 900px
+        &--gray
+            *
+                color: #aaa !important
+
+    &__item
+        margin: 10px 0
+        //padding: 0 10px 0 30px
+        @media ( max-width: 580px )
+            margin: 0
+            padding: 0 20px 0 0
+        @media ( max-width: 350px )
+            font-size: 14px
+        &--span
+            font-size: 26px
+            color: $color1
+            margin: 0 5px 0 0
+
+
+    &__checkbox
+        display: none
+
+        &:checked + .calc__want
+            background: $color1
+            color: #fff
+
+    &__want
+        margin: 0 0 0 20px
+        padding: 6px 12px
+        border: 1px solid #ccc
+        border-radius: 50px
+        transition-duration: 0.2s
+        font-size: 14px
+        color: #000
+        user-select: none
+        cursor: pointer
+        white-space: nowrap
+        @media ( max-width: 500px )
+            display: inline-block
+            margin: 10px 0 0 0
+
+
+
+
+
+
+.black
+    z-index: 9999
+    width: 100%
+    height: 100%
+    position: fixed
+    background: #00000088
+    top: 0
+    left: 0
+    display: none
+    justify-content: center
+    align-items: center
+    &--show
+        display: flex
+
+.form
+    position: relative
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: sans-serif
+    width: 98%
+    max-width: 600px
+    background: #fff
+    min-height: 300px
+    border-radius: 20px
+    padding: 40px 30px
+    @media ( max-width: 560px )
+        max-width: 450px
+        padding: 30px 20px
+
+    &__close
+        cursor: pointer
+        position: absolute
+        width: 14px
+        height: 14px
+        right: 15px
+        top: 10px
+        font-size: 30px
+        line-height: 30px
+        color: #ca0000
+        font-weight: 600
+        border-radius: 60px
+        transition-duration: 0.2s
+        &:hover
+            opacity: 0.8
+        &:active
+            opacity: 0.2
+
+    &__title
+        text-transform: uppercase
+        font-size: 24px
+        font-weight: 600
+        text-align: center
+        margin: 0 0 60px 0
+        @media ( max-width: 560px )
+            margin: 0 0 30px 0
+
+
+    &__line
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin: 20px 0
+        @media ( max-width: 560px )
+            flex-wrap: wrap
+            margin: 10px 0
+
+    &__name
+        font-size: 18px
+        @media ( max-width: 560px )
+            width: 100%
+            text-align: center
+            margin: 0 0 5px 0
+            font-size: 16px
+
+    &__input
+        font-size: 18px
+        padding: 12px
+        border: 1px solid #bbb
+        border-radius: 6px
+        width: 290px
+        @media ( max-width: 560px )
+            display: block
+            width: 100%
+            max-width: 320px
+            margin: 0 auto
+            text-align: center
+            font-size: 16px
+
+    &__submit
+        width: 100%
+        max-width: 240px
+        height: 50px
+        border: none
+        display: block
+        background: $color1
+        margin: 60px auto 20px auto
+        cursor: pointer
+        user-select: none
+        font-size: 20px
+        color: #fff
+        border-radius: 50px
+        transition-duration: 0.2s
+        @media ( max-width: 560px )
+            margin: 40px auto 10px auto
+        &:hover
+            transform: translateY(-6px)
+        &:active
+            opacity: 0.3
+
+    &__note
+        color: #aaa
+        text-align: center
+        font-size: 14px
+        max-width: 250px
+        margin: 0 auto
+
+
+
+
+
+
+
+
+
+
+
+
+.ui-slider
+    background: #ccc !important
+    height: 2px !important
+    border: none !important
+    border-radius: 0 !important
+
+.ui-slider-range
+    background: $color1 !important
+    border-radius: 0 !important
+    transition-duration: 0.25s
+
+.ui-slider-handle
+    width: 24px !important
+    height: 24px !important
+    border-radius: 50px !important
+    background: #ffffff !important
+    border: 2px solid #4753ff !important
+    outline: none !important
+    margin-top: -6px !important
+    cursor: pointer !important
+    box-shadow: 0 0px 10px 1px #5757574d
+    transition-duration: 0.25s
+
+.ui-slider-handle:hover
+    //box-shadow: 0 0px 2px 12px rgba(245,165,100,0.3)
