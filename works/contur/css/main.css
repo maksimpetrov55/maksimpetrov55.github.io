@@ -76,14 +76,14 @@ body {
 }
 
 .calc__radio:checked + .calc__label {
-  background: #2f89ff;
+  background: #f03b36;
   color: #fff;
 }
 
 .calc__label {
   padding: 10px 10px;
   display: block;
-  border: 2px solid #2f89ff;
+  border: 2px solid #f03b36;
   border-radius: 10px;
   margin: 10px 20px;
   cursor: pointer;
@@ -154,7 +154,7 @@ body {
 }
 
 .calc__dot--color {
-  background: #2f89ff;
+  background: #f03b36;
 }
 
 .calc__dot--trans {
@@ -183,7 +183,7 @@ body {
   cursor: pointer;
   width: 220px;
   height: 50px;
-  background: #2f89ff;
+  background: #f03b36;
   border-radius: 50px;
   margin: 20px auto 60px auto;
   color: #fff;
@@ -303,7 +303,7 @@ body {
 
 .calc__item--span {
   font-size: 26px;
-  color: #2f89ff;
+  color: #f03b36;
   margin: 0 5px 0 0;
 }
 
@@ -312,7 +312,7 @@ body {
 }
 
 .calc__checkbox:checked + .calc__want {
-  background: #2f89ff;
+  background: #f03b36;
   color: #fff;
 }
 
@@ -482,7 +482,7 @@ body {
   height: 50px;
   border: none;
   display: block;
-  background: #2f89ff;
+  background: #f03b36;
   margin: 60px auto 20px auto;
   cursor: pointer;
   -webkit-user-select: none;
@@ -527,7 +527,7 @@ body {
 }
 
 .ui-slider-range {
-  background: #2f89ff !important;
+  background: #f03b36 !important;
   border-radius: 0 !important;
   -webkit-transition-duration: 0.25s;
           transition-duration: 0.25s;
@@ -538,7 +538,7 @@ body {
   height: 24px !important;
   border-radius: 50px !important;
   background: #ffffff !important;
-  border: 2px solid #4753ff !important;
+  border: 2px solid #f03b36 !important;
   outline: none !important;
   margin-top: -6px !important;
   cursor: pointer !important;
