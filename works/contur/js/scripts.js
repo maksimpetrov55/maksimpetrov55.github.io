@@ -70,6 +70,10 @@ $(document).ready(function() {
 		calculation();
 	});
 
+	$('input[name=calc_srok]').change(function(){
+		calculation();
+	});
+
 	calculation();
 	function calculation() {
 
