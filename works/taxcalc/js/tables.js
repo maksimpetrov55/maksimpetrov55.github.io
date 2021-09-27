@@ -133,7 +133,12 @@ $(document).ready(function() {
 			}
 			if ( province == "QC" ) {
 				//line_20
-				CWB_calculation[i].Line_20 = Math.max( 0 , (+C12 + +C13 - +C23 - +CWB_calculation[i].Base_i_spouse_ded_amount) ) * CWB_calculation[i].Base_Rate;
+				if ( C4 == "Yes" ) {
+					var cwb_X = CWB_calculation[i].Base_i_spouse_ded_amount;
+				} else {
+					var cwb_X = CWB_calculation[i].Base_ded_amount;
+				}
+				CWB_calculation[i].Line_20 = Math.max( 0 , ((+C12 + +C13 - +C23 - +cwb_X) * CWB_calculation[i].Base_Rate) );
 				//line_22 
 				if( C4 == "Yes" ) {var cwb_A = CWB_calculation[i].Base_i_spouse_ded_amount;} else {var cwb_A = CWB_calculation[i].Single_amount;}
 				if( C4 == "Yes" ) {var cwb_B = CWB_calculation[i].Base_i_spouse_ded_amount;} else {var cwb_B = CWB_calculation[i].Single_amount;}
@@ -146,11 +151,14 @@ $(document).ready(function() {
 				//line_27
 				CWB_calculation[i].Line_27 = CWB_calculation[i].Line_25 * CWB_calculation[i].Rate_reduction;
 
-
+				//console.log( "Line_20 " + CWB_calculation[i].Line_20 );
+				// console.log( "Line_22 " + CWB_calculation[i].Line_22 );
+				// console.log( "Line_25 " + CWB_calculation[i].Line_25 );
+				// console.log( "Line_27 " + CWB_calculation[i].Line_27 );
 			}
 			if ( province == "NU" ) {
 				//line_20
-				if( C4 == "Yes" ) {var cwb_F = CWB_calculation[i].Rate_Single_i_spouse;} else {var cwb_F = CWB_calculation[i].Rate_Single;}
+				if( C4 == "Yes" ) {var cwb_F = CWB_calculation[i].Rate_Single_i_spouse;} else {var cwb_F = CWB_calculation[i].Rate_single;}
 				CWB_calculation[i].Line_20 = Math.max( 0 , (+C12 + +C13 - +C23 - +CWB_calculation[i].Base_ded_amount) ) * cwb_F;
 				//line_22 
 				if( C4 == "Yes" ) {var cwb_A = CWB_calculation[i].Single_i_spouse_amount;} else {var cwb_A = CWB_calculation[i].Single_amount;}
@@ -1946,7 +1954,20 @@ $(document).ready(function() {
 		+Provincial_Tax_Bracket_2021_YT_Tax_amount_Summ;
 
 		//console.log(Provincial_Subtotal_Tax);
-		
+
+		if ( B1 == "ON" ) {
+			if ( (+Provincial_Subtotal_Tax - +Provincial_Credit) > PX_table[15].Base_amount ) {
+				var ON_Surtax = (((+Provincial_Subtotal_Tax - +Provincial_Credit) - +PX_table[15].Base_amount) * PX_table[15].Base_rate) + (((+Provincial_Subtotal_Tax - +Provincial_Credit) - +PX_table[14].Base_amount) * PX_table[14].Base_rate);
+			} else {
+				if ( (+Provincial_Subtotal_Tax - +Provincial_Credit) > PX_table[14].Base_amount ) {
+					var ON_Surtax = ((+Provincial_Subtotal_Tax - +Provincial_Credit) - +PX_table[14].Base_amount) * PX_table[14].Base_rate;
+				} else {
+					var ON_Surtax = 0;
+				}
+			}
+		} else {
+			var ON_Surtax = 0;
+		}
 
 		if ( B1 == "PE" ) {
 			var PE_Surtax = Math.max(0, ((Provincial_Subtotal_Tax - Provincial_Credit - 12500) * 0.1));
@@ -1975,7 +1996,7 @@ $(document).ready(function() {
 		//console.log(Provincial_Credit);
 		// console.log(PE_Surtax);
 		// console.log(Provincial_DTC);
-		Prov_Tax_Bracket_Summ_1 = Math.max(0, (+Provincial_Subtotal_Tax - +Provincial_Credit + +PE_Surtax - +Provincial_DTC));
+		Prov_Tax_Bracket_Summ_1 = Math.max(0, (+Provincial_Subtotal_Tax - +Provincial_Credit + +ON_Surtax + +PE_Surtax - +Provincial_DTC));
 
 		//console.log(Provincial_Credit);
 		
@@ -2075,7 +2096,7 @@ $(document).ready(function() {
 		}
 
 
-		console.log(Prov_Tax_Bracket_ON_2);
+		//console.log(Prov_Tax_Bracket_ON_2);
 
 
 		Prov_Tax_Bracket_Summ_2 = Math.max(0 , (Prov_Tax_Bracket_Summ_1 
