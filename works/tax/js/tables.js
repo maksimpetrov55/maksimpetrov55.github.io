@@ -1837,10 +1837,10 @@ $(document).ready(function() {
 				var Cost_living_credit_W = C5 * 0.026;
 			} else {
 				if ( C5 >= 12001 && C5 <= 48000 ) {
-					var Cost_living_credit_W = (C5 - 12000) * 0.0125 + 312;
+					var Cost_living_credit_W = (+C5 - 12000) * 0.0125 + 312;
 				} else {
 					if ( C5 >= 48001 && C5 <= 9999999999 ) {
-						var Cost_living_credit_W = (C5 - 48000) * 0.01 + 762;
+						var Cost_living_credit_W = (+C5 - 48000) * 0.01 + 762;
 					}
 				}
 			}
@@ -1854,6 +1854,7 @@ $(document).ready(function() {
 		var Base_income_threshold = 15000;
 		var base_income_threshold_i_spouse = 18000;
 		var Reduction_rate_BC = 0.02;
+
 		if ( B1 == "BC" ) {
 			if (C4 == "Yes") {
 				BC_Provincial_Territories_Credit_2020_P = Sales_tax * 2;
@@ -1863,13 +1864,13 @@ $(document).ready(function() {
 		}
 		if ( B1 == "BC" ) {
 			if (C4 == "Yes"){
-				BC_Provincial_Territories_Credit_2020_L = Math.max(0,((C5 + C32) - base_income_threshold_i_spouse));
+				BC_Provincial_Territories_Credit_2020_L = Math.max(0,((+C5 + +C32) - +base_income_threshold_i_spouse));
 			} else {
-				BC_Provincial_Territories_Credit_2020_L = Math.max(0,(C32 - Base_income_threshold)) * Reduction_rate_BC;
+				BC_Provincial_Territories_Credit_2020_L = Math.max(0,(+C32 - +Base_income_threshold)) * Reduction_rate_BC;
 			}
 		}
 		if (B1 == "BC"){
-			var BC_Provincial_Territories_Credit_2020_U = (BC_Provincial_Territories_Credit_2020_P - BC_Provincial_Territories_Credit_2020_L);
+			var BC_Provincial_Territories_Credit_2020_U = (+BC_Provincial_Territories_Credit_2020_P - +BC_Provincial_Territories_Credit_2020_L);
 		} else {
 			var BC_Provincial_Territories_Credit_2020_U = 0;
 		}
@@ -1893,14 +1894,14 @@ $(document).ready(function() {
 
 		if (B1 == "MB") {
 			if (C4 == "Yes") {
-				var MB_Provincial_Territories_Credit_2020_X = (C5 + C32) * Reduction_rate_MB;
+				var MB_Provincial_Territories_Credit_2020_X = (+C5 + +C32) * Reduction_rate_MB;
 			} else {
 				var MB_Provincial_Territories_Credit_2020_X = C32 * Reduction_rate_MB;
 			}
 		}
 
 		if (B1 == "MB") {
-			var MB_Provincial_Territories_Credit_2020 = Math.max(0, (MB_Provincial_Territories_Credit_2020_R - MB_Provincial_Territories_Credit_2020_X));
+			var MB_Provincial_Territories_Credit_2020 = Math.max(0, (+MB_Provincial_Territories_Credit_2020_R - +MB_Provincial_Territories_Credit_2020_X));
 		} else {
 			var MB_Provincial_Territories_Credit_2020 = 0;
 		}
@@ -1981,7 +1982,7 @@ $(document).ready(function() {
 		//console.log(Prov_Tax_Bracket_Summ_1);
 
 
-		if ( B1 == "BC" ) {Prov_Tax_Bracket_BC = Math.max(0, (476 - (Math.max(0, ((C32 - 21185) * 0.0356) ))));} else {Prov_Tax_Bracket_BC = 0;}
+		if ( B1 == "BC" ) {Prov_Tax_Bracket_BC = Math.max(0, (476 - (Math.max(0, ((+C32 - 21185) * 0.0356) ))));} else {Prov_Tax_Bracket_BC = 0;}
 
 		if ( B1 == "NB" ) {
 			if ( C4 == "Yes" ) {
@@ -1997,9 +1998,9 @@ $(document).ready(function() {
 
 		if ( B1 == "NS" ) {
 			if ( C4 == "Yes" ) {
-				Prov_Tax_Bracket_NS = Math.max(0, (300 * 2 - Math.max(0, ((C32 + C5 - 15000) * 0.05))) );
+				Prov_Tax_Bracket_NS = Math.max(0, (300 * 2 - Math.max(0, ((+C32 + +C5 - 15000) * 0.05))) );
 			} else {
-				Prov_Tax_Bracket_NS = Math.max(0, (300 - Math.max(0, ((C32 + C5 - 15000) * 0.05))) );
+				Prov_Tax_Bracket_NS = Math.max(0, (300 - Math.max(0, ((+C32 + +C5 - 15000) * 0.05))) );
 			}
 		} else {
 			Prov_Tax_Bracket_NS = 0;
@@ -2008,9 +2009,9 @@ $(document).ready(function() {
 
 		if ( B1 == "PE" ) {
 			if ( C4 == "Yes" ) {
-				Prov_Tax_Bracket_PE = Math.max(0, (350 * 2 - Math.max(0, ((C32 + C5 - 18000) * 0.05))) );
+				Prov_Tax_Bracket_PE = Math.max(0, (350 * 2 - Math.max(0, ((+C32 + +C5 - 18000) * 0.05))) );
 			} else {
-				Prov_Tax_Bracket_PE = Math.max(0, (350 - Math.max(0, ((C32 + C5 - 18000) * 0.05))) );
+				Prov_Tax_Bracket_PE = Math.max(0, (350 - Math.max(0, ((+C32 + +C5 - 18000) * 0.05))) );
 			}
 		} else {
 			Prov_Tax_Bracket_PE = 0;
@@ -2018,16 +2019,18 @@ $(document).ready(function() {
 
 		if ( B1 == "NL" ) {
 			if ( C4 == "Yes" ) {
-				Prov_Tax_Bracket_NL = Math.max( 0, (859 + 479 - Math.max(0, ((C5 + C32 - 34727) * 0.16) )) );
+				Prov_Tax_Bracket_NL = Math.max( 0, (859 + 479 - Math.max(0, ((+C5 + +C32 - 34727) * 0.16) )) );
 			} else {
-				Prov_Tax_Bracket_NL = 859 - Math.max(0, ((C5 + C32 - 20537) * 0.16) );
+				Prov_Tax_Bracket_NL = 859 - Math.max(0, ((+C5 + +C32 - 20537) * 0.16) );
 			}
 		} else {
 			Prov_Tax_Bracket_NL = 0;
 		}
+		console.log(Prov_Tax_Bracket_NL);
+		
 
 		if ( B1 == "ON" ) {
-			var Prov_Tax_Bracket_ON_1 = Math.max(0, ((249 * 2) - Prov_Tax_Bracket_Summ_1) );
+			var Prov_Tax_Bracket_ON_1 = Math.max(0, ((249 * 2) - +Prov_Tax_Bracket_Summ_1) );
 		} else {
 			var Prov_Tax_Bracket_ON_1 = 0;
 		}
@@ -2047,7 +2050,7 @@ $(document).ready(function() {
 		}
 
 		if ( B1 == "ON" ) {
-			var Prov_Tax_Bracket_ON_2 = Math.max(0, (Math.max(0, Prov_Tax_Bracket_ON_2_H) - Math.max(0, (C32 + C5 - Prov_Tax_Bracket_ON_2_S))));
+			var Prov_Tax_Bracket_ON_2 = Math.max(0, (Math.max(0, Prov_Tax_Bracket_ON_2_H) - +Math.max(0, (C32 + C5 - Prov_Tax_Bracket_ON_2_S))));
 		} else {
 			var Prov_Tax_Bracket_ON_2 = 0;
 		}
