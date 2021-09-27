@@ -2026,7 +2026,7 @@ $(document).ready(function() {
 		} else {
 			Prov_Tax_Bracket_NL = 0;
 		}
-		console.log(Prov_Tax_Bracket_NL);
+		//console.log(Prov_Tax_Bracket_NL);
 		
 
 		if ( B1 == "ON" ) {
@@ -2036,25 +2036,46 @@ $(document).ready(function() {
 		}
 
 
+		// if ( C4 == "Yes" ) {
+		// 	Prov_Tax_Bracket_ON_2_S = 30000 * 2 * 0.1;
+		// } else {
+		// 	Prov_Tax_Bracket_ON_2_S = 30000 * 0.1;
+		// }
+
+		// if ( (C12 * 0.0505) > 850 ) {
+		// 	Prov_Tax_Bracket_ON_2_H = 850;
+		// } else {
+		// 	Prov_Tax_Bracket_ON_2_H = C12 * 0.0505;
+		// }
+
+		// if ( B1 == "ON" ) {
+		// 	var Prov_Tax_Bracket_ON_2 = Math.max(0, (Math.max(0, Prov_Tax_Bracket_ON_2_H) - +Math.max(0, (+C32 + +C5 - +Prov_Tax_Bracket_ON_2_S))));
+		// } else {
+		// 	var Prov_Tax_Bracket_ON_2 = 0;
+		// }
+
+		if ( C12 * 0.0505 > 850 ) {
+			var Prov_Tax_Bracket_ON_2_C = 850;
+		} else {
+			var Prov_Tax_Bracket_ON_2_C = C12 * 0.0505;
+		}
+
 		if ( C4 == "Yes" ) {
-			Prov_Tax_Bracket_ON_2_S = 30000 * 2 * 0.1;
+			var Prov_Tax_Bracket_ON_2_S = 30000 * 2;
 		} else {
-			Prov_Tax_Bracket_ON_2_S = 30000 * 0.1;
+			var Prov_Tax_Bracket_ON_2_S = 30000;
 		}
 
-
-		if ( (C12 * 0.0505) > 850 ) {
-			Prov_Tax_Bracket_ON_2_H = 850;
-		} else {
-			Prov_Tax_Bracket_ON_2_H = C12 * 0.0505;
-		}
+		var Prov_Tax_Bracket_ON_2_G = Math.max(0, ((+C32 + +C5 - +Prov_Tax_Bracket_ON_2_S) * 0.1))
 
 		if ( B1 == "ON" ) {
-			var Prov_Tax_Bracket_ON_2 = Math.max(0, (Math.max(0, Prov_Tax_Bracket_ON_2_H) - +Math.max(0, (C32 + C5 - Prov_Tax_Bracket_ON_2_S))));
+			var Prov_Tax_Bracket_ON_2 = Math.max(0, (+Prov_Tax_Bracket_ON_2_C - +Prov_Tax_Bracket_ON_2_G));
 		} else {
 			var Prov_Tax_Bracket_ON_2 = 0;
 		}
 
+
+		console.log(Prov_Tax_Bracket_ON_2);
 
 
 		Prov_Tax_Bracket_Summ_2 = Math.max(0 , (Prov_Tax_Bracket_Summ_1 
