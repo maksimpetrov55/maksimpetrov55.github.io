@@ -7,10 +7,10 @@
 
 	<link rel="stylesheet" href="fonts/bebasneue/bebasneue.css">
 	<link rel="stylesheet" href="fonts/montserrat/montserrat.css">
-	<link rel="stylesheet" href="css/main.css?v2">
+	<link rel="stylesheet" href="css/main.css?v3">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/scripts.js?v2"></script>	
+	<script src="js/scripts.js?v3"></script>
 
 </head>
 <body>
@@ -118,21 +118,21 @@
 			<div class="calc__description">% в год. Включает общую инфляцию с поправкой на более высокую медицинскую инфляцию.</div>
 		</div>
 		<div class="calc__flex calc__flex--aic calc__flex--jcc calc__flex--wrap-900">
-			<div class="calc__notation">минимум*</div>
+			<div class="calc__notation">Фонд финансовой независимости (в&nbsp;будущих&nbsp;ценах)</div>
 			<div>
 				<div class="calc__currency calc__currency--disabled">$</div>
 				<input class="calc__input calc__input--currency" type="text" id="calc_maybe-min" disabled>
 			</div>
 			<div class="calc__description"></div>
 		</div>
-		<div class="calc__flex calc__flex--aic calc__flex--jcc calc__flex--wrap-900">
+		<!-- <div class="calc__flex calc__flex--aic calc__flex--jcc calc__flex--wrap-900">
 			<div class="calc__notation">максимум</div>
 			<div>
 				<div class="calc__currency calc__currency--disabled">$</div>
 				<input class="calc__input calc__input--currency" type="text" id="calc_maybe-max" disabled>
 			</div>
 			<div class="calc__description"></div>
-		</div>
+		</div> -->
 
 		<div class="calc-space-30"></div>
 
@@ -185,16 +185,20 @@
 
 			<div class="calc__title calc__title--footer">Выжимка на основе ваших&nbsp;данных:</div>
 
-			<div class="calc__itog">
+			<!-- <div class="calc__itog">
 				Чтобы иметь <span id="calc_itog_profit">• • •</span> ежемесячно на протяжении <span id="calc_itog_lifetime">• • •</span> лет, вам потребуется капитал размером от <span id="calc_itog_money-min">• • •</span> до <span id="calc_itog_money-max">• • •</span> в зависимости от ваших знаний и отношения к риску, суммы в ценах на <span id="calc_itog_year-today">• • •</span> год.
-			</div>
+			</div> -->
 
 			<div class="calc__itog">
+				Чтобы иметь <span id="calc_itog_profit">• • •</span> ежемесячно на протяжении <span id="calc_itog_lifetime">• • •</span> лет, вам потребуется капитал размером <span id="calc_itog_money-min">• • •</span> в&nbsp;ценах на <span id="calc_itog_year-today">• • •</span> год.
+			</div>
+
+			<!-- <div class="calc__itog">
 				Чем лучше будут ваши знания по финансам и спокойнее отношение к риску, тем меньший капитал нужен будет на счетах через <span id="calc_itog_years-stop1">• • •</span> лет.
-			</div>
+			</div> -->
 
 			<div class="calc__itog">
-				Через <span id="calc_itog_years-stop2">• • •</span> лет это будут примерно такие суммы с поправкой на инфляцию <span id="calc_itog_maybe-percent">• • •</span> в год: от <span id="calc_itog_maybe-min">• • •</span> до <span id="calc_itog_maybe-max">• • •</span>.
+				Через <span id="calc_itog_years-stop2">• • •</span> лет это будут примерно такая сумма, с поправкой на инфляцию <span id="calc_itog_maybe-percent">• • •</span> в год: <span id="calc_itog_maybe-min">• • •</span>.
 			</div>
 
 		</div>
