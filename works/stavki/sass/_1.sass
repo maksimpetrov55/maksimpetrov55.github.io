@@ -17,6 +17,8 @@ body
     margin: 30px auto
     min-height: 300px
     border: 1px solid #aaa
+    @media ( max-width: 350px )
+        padding: 0 10px 30px 10px
 
     *
         position: relative
@@ -34,6 +36,7 @@ body
     &__line
         margin: 0 0 20px 0
         display: flex
+        flex-wrap: wrap
         justify-content: space-between
         &--start
             justify-content: flex-start
@@ -55,7 +58,8 @@ body
         height: 44px
         
         &--short
-            width: 160px
+            width: 90px
+            margin: 0 10px 0 0
 
     &__text
         margin: 0 0 20px 0

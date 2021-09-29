@@ -3,7 +3,30 @@ $(document).ready(function() {
 	
 
 
-
+	$('#calc_inp_3').change(function(){
+		if ( $(this).val() < 1.01 ) {
+			$(this).val(1.01);
+		}
+		calculation();
+	});
+	$('#calc_inp_4').change(function(){
+		if ( $(this).val() < 1.01 ) {
+			$(this).val(1.01);
+		}
+		calculation();
+	});
+	$('#calc_inp_5').change(function(){
+		if ( $(this).val() < 1.01 ) {
+			$(this).val(1.01);
+		}
+		calculation();
+	});
+	$('#calc_inp_6').change(function(){
+		if ( $(this).val() < 1.01 ) {
+			$(this).val(1.01);
+		}
+		calculation();
+	});
 
 
 
@@ -30,7 +53,7 @@ $(document).ready(function() {
 
 		$('#calc_text_1').text("");
 		$('#calc_text_1').append(`
-			«${calc_inp_1}» / 133 = <span id="calc_span_1" class="calc__yellow">${calc_stavka_1} </span><span class="calc__valute">${calc_valute}</span> и «${calc_inp_1}» / 100 = <span id="calc_span_2" class="calc__yellow">${calc_stavka_2}</span> <span class="calc__valute">${calc_valute}</span>
+			Минимальная ставка <span id="calc_span_1" class="calc__yellow">${calc_stavka_1} </span><span class="calc__valute">${calc_valute}</span>. Максимальная ставка <span id="calc_span_2" class="calc__yellow">${calc_stavka_2}</span> <span class="calc__valute">${calc_valute}</span>
 		`);
 
 		$('#calc_span_3').text(calc_stavka_1);
@@ -38,6 +61,7 @@ $(document).ready(function() {
 		$('#calc_span_5').text(calc_stavka_2);
 
 		$('#calc_span_6').text(calc_stavka_1 * 2);
+		$('#calc_span_7').text(calc_stavka_2 * 2);
 
 		var calc_inp_2 = $('#calc_inp_2').val();
 

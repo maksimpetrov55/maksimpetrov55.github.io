@@ -18,6 +18,12 @@ body {
   border: 1px solid #aaa;
 }
 
+@media (max-width: 350px) {
+  .calc {
+    padding: 0 10px 30px 10px;
+  }
+}
+
 .calc * {
   position: relative;
   padding: 0;
@@ -39,6 +45,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -68,7 +76,8 @@ body {
 }
 
 .calc__input--short {
-  width: 160px;
+  width: 90px;
+  margin: 0 10px 0 0;
 }
 
 .calc__text {
