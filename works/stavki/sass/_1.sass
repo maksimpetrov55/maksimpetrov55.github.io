@@ -1,0 +1,87 @@
+
+
+
+body
+    position: relative
+    background: #eee
+
+.calc
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: sans-serif
+    position: relative
+    width: 100%
+    max-width: 740px
+    padding: 0 20px 30px 20px
+    margin: 30px auto
+    min-height: 300px
+    border: 1px solid #aaa
+
+    *
+        position: relative
+        padding: 0
+        margin: 0
+        box-sizing: border-box
+        font-family: sans-serif
+
+    &__header
+        font-size: 22px
+        font-weight: 600
+        text-align: center
+        margin: 50px 0 30px 0
+
+    &__line
+        margin: 0 0 20px 0
+        display: flex
+        justify-content: space-between
+        &--start
+            justify-content: flex-start
+
+    &__title
+        font-size: 18px
+        margin: 10px 0
+
+    &__select
+        font-size: 16px
+        padding: 10px
+        height: 44px
+
+        &--valute
+
+    &__input
+        font-size: 16px
+        padding: 10px
+        height: 44px
+        
+        &--short
+            width: 160px
+
+    &__text
+        margin: 0 0 20px 0
+
+    &__yellow
+        padding: 3px 5px
+        background: #ffff00
+
+    &__teal
+        padding: 3px 5px
+        background: #00dfd3
+
+    &__red
+        padding: 3px 5px
+        background: #cf0034
+        color: #fff
+
+    &__radio
+        display: none
+        &:checked + .calc__label
+            background: #ffff00
+
+    &__label
+        background: #fff
+        border: 1px solid #ddd
+        display: block
+        padding: 15px 30px
+        border-radius: 10px
+        font-size: 17px
