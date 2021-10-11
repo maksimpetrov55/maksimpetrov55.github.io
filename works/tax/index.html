@@ -5,12 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Web Mockup</title>
 
-	<link rel="stylesheet" href="css/main.css?v8">
+	<link rel="stylesheet" href="css/main.css?v9">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/another.js?v8"></script>
-	<script src="js/tables.js?v8"></script>
-	<script src="js/scripts.js?v8"></script>
+	<script src="js/another.js?v9"></script>
+	<script src="js/tables.js?v9"></script>
+	<script src="js/scripts.js?v9"></script>
 
 </head>
 <body>
@@ -50,6 +50,10 @@
 				<option value="YT">Yukon</option>
 				<option value="NR">Non-resident</option>
 			</select>
+			<div class="calc__tip">?</div>
+			<div class="calc__fly">
+				Your province/territory of residence at December 31
+			</div>
 		</div>
 
 		<div class="calc__line">
@@ -100,11 +104,22 @@
 		<div class="calc__line">
 			<div class="calc__title">Self-employed (Business)</div>
 			<input data-min="0" type="number" name="" id="calc_C13" class="calc__input data-min" value="0">
+			<div class="calc__tip">?</div>
+			<div class="calc__fly">
+				If you are earning income from a business that is not incorporated, then most likely you are considered self-employed and will need to include your income on your personal tax return.
+				<br><br>Even if you registered for a Master Business Licence and your business has a unique name, but not incorporated, you are considered self-employed and should include the gross revenue amounts in the "self-employed (business)" section
+			</div>
 		</div>
 
 		<div class="calc__line">
 			<div class="calc__title">Rental income</div>
 			<input data-min="0" type="number" name="" id="calc_C14" class="calc__input data-min" value="0">
+			<div class="calc__tip">?</div>
+			<div class="calc__fly">
+				Rental income are usually generated from a Residential or a Commercial Property.<br>
+				<br>Residential properties do not charge HST
+				<br>Commercial properties charge HST (if you are HST registered - mandatory registration only after gross revenue of $30,000 on commercial property) 
+			</div>
 		</div>
 
 		<div class="calc__line">
@@ -115,6 +130,15 @@
 		<div class="calc__line">
 			<div class="calc__title">Taxable capital gain</div>
 			<input data-min="0" type="number" name="" id="calc_C16" class="calc__input data-min" value="0">
+			<div class="calc__tip">?</div>
+			<div class="calc__fly">
+				Taxable capital gain arise from sale of stock/crypto, property, business etc.<br>
+
+				<br>If you purchased 10 stock x $10 = $100 + $3 transaction fee, the stock cost (ACB) is $103 and sold all stocks 6 months later for proceeds of $200 + $3 transaction fee. ACB - Proceeds = Capital Gain. $103 - $197 = $94
+				<br>Taxable capital gain = 1/2 x Capital gain = $47<br>
+
+				<br>You will include $47 in the "taxable capital gain" section
+			</div>
 		</div>
 
 		<div class="calc__line">
@@ -128,8 +152,8 @@
 		</div>
 
 		<div class="calc__line">
-			<div class="calc__title">Total Income</div>
-			<input disabled type="number" name="" id="calc_C19" class="calc__input data-min calc__input--disabled" value="0">
+			<div class="calc__title calc__title--bold">Total Income</div>
+			<input disabled type="number" name="" id="calc_C19" class="calc__input data-min calc__input--bold calc__input--disabled" value="0">
 		</div>
 
 		<div class="calc__separator"></div>
@@ -142,26 +166,84 @@
 		<div class="calc__line">
 			<div class="calc__title">Self-employed (Business) expenses</div>
 			<input data-min="0" type="number" name="" id="calc_C23" class="calc__input data-min" value="0">
+			<div class="calc__tip">?</div>
+			<div class="calc__fly">
+				Expenses you can include in the "self-employed (Business) expenses" section are:<br>
+				<br>Cost of good sold
+				<br>Subcontractors
+				<br>Advertising
+				<br>Meals & Entertainment (of clients) x 50%
+				<br>Meals & Entertainment (long haul trucker) x 80%
+				<br>Insurance
+				<br>Interest and bank charges
+				<br>Business taxes, licences and memberships
+				<br>Office expenses
+				<br>Professional fees (legal, accounting etc)
+				<br>Management fees
+				<br>Rent
+				<br>Maintenance and repairs (related to equipment)
+				<br>Salaries/wages (include employer CPP)
+				<br>Property taxes
+				<br>Travel expenses
+				<br>Utilities
+				<br>Delivery/freight
+				<br>Vehicle expenses (gas + insurance + repairs + license fee) x business use % + parking
+				<br>Home office (utility + repairs specific to office space + mortgage interest + property tax) x # of rooms used for business/total rooms
+			</div>
 		</div>
 
 		<div class="calc__line">
 			<div class="calc__title">Rental expenses</div>
 			<input data-min="0" type="number" name="" id="calc_C24" class="calc__input data-min" value="0">
+			<div class="calc__tip">?</div>
+			<div class="calc__fly">
+				Expenses you can include in the "Rental expenses" section are:<br>
+				<br>Advertising
+				<br>Insurance
+				<br>Interest and bank charges
+				<br>Office expenses
+				<br>Professional fees (legal, accounting etc)
+				<br>Management fees
+				<br>Maintenance and repairs (related to equipment)
+				<br>Salaries/wages (include employer CPP)
+				<br>Property taxes
+				<br>Travel expenses (if you need to travel to collect rent, supervise repairs and manage property)
+				<br>Utilities (gas, oil, electricity, water and cable)<br>
+				<br>If your Rental Expenss exceed Rental Revenue, losses can be deducted against other revenue lines
+			</div>
 		</div>
 
 		<div class="calc__line">
 			<div class="calc__title">Moving expenses</div>
 			<input data-min="0" type="number" name="" id="calc_C25" class="calc__input data-min" value="0">
+			<div class="calc__tip">?</div>
+			<div class="calc__fly">
+				Expenses you can include in the "Moving expenses" section are:<br>
+				<br>Transportation and storage - parking, truck rental, mover costs, in-transit storage, insurance
+				<br>Travel expenses - vehicle expenses, meals, hotel (expenses must be reasonable)
+				<br>Cost of cancelling lease agreement
+				<br>Incidental costs - replacing driver license, change address on legal documents, utility hook-up/disconnection
+				<br>Cost of maintaining old home when vacant ($5,000 max) - interest, property taxes, insurance, utility
+				<br>Cost of selling your old home - advertising, legal fees, real estate commission, mortgage cancellation penalty
+				<br>Cost of buying a new home - legal fees, land transfer tax paid (does not apply to GST/HST)
+			</div>
 		</div>
 
 		<div class="calc__line">
 			<div class="calc__title">Employment expenses</div>
 			<input data-min="0" type="number" name="" id="calc_C26" class="calc__input data-min" value="0">
+			<div class="calc__tip">?</div>
+			<div class="calc__fly">
+				If you are an employee that earns commission, you can deduct the following:<br>
+				<br>If you are an employee that does not ear commission, you can deduct the following:
+			</div>
 		</div>
 
 		<div class="calc__line">
 			<div class="calc__title">Other deductions</div>
 			<input data-min="0" type="number" name="" id="calc_C27" class="calc__input data-min" value="0">
+			<div class="calc__tip">?</div>
+			<div class="calc__fly">Only use "Other deductions" line if you have other CRA eligible deductions not included anywhere else.</div>
 		</div>
 
 		<div class="calc__line">
@@ -170,72 +252,84 @@
 		</div>
 
 		<div class="calc__line">
-			<div class="calc__title">Total Deductions</div>
-			<input disabled type="number" name="" id="calc_C29" class="calc__input data-min calc__input--disabled" value="0">
-		</div>
-
-		<!-- <div class="calc__separator"></div> -->
-
-		<div class="calc__line">
-			<div class="calc__title">Taxable Net Income (Loss)</div>
-			<input disabled type="number" name="" id="calc_C32" class="calc__input data-min calc__input--disabled" value="0">
+			<div class="calc__title calc__title--bold">Total Deductions</div>
+			<input disabled type="number" name="" id="calc_C29" class="calc__input data-min calc__input--bold calc__input--disabled" value="0">
 		</div>
 
 		<div class="calc__separator"></div>
 
 		<div class="calc__line">
-			<div class="calc__title">Federal Tax</div>
-			<input disabled type="number" name="" id="calc_C36" class="calc__input data-min calc__input--disabled" value="">
+			<div class="calc__title calc__title--bold">Taxable Net Income</div>
+			<input disabled type="number" name="" id="calc_C32" class="calc__input data-min calc__input--bold calc__input--disabled" value="0">
+		</div>
+
+		<div class="calc__separator"></div>
+
+		<div class="calc__line">
+			<div class="calc__title calc__title--plus calc__title--bold">Total Payable
+				<div id="calc_plus_1" class="calc__plus">+</div>
+			</div>
+			<input disabled type="number" name="" id="calc_C39" class="calc__input data-min calc__input--bold calc__input--disabled" value="">
+		</div>
+
+		<div id="calc_closed_1" class="calc__closed">
+			<div class="calc__line">
+				<div class="calc__title">Federal Tax</div>
+				<input disabled type="number" name="" id="calc_C36" class="calc__input data-min calc__input--disabled" value="">
+			</div>
+	
+			<div class="calc__line">
+				<div class="calc__title">CPP payable on self-employment</div>
+				<input disabled type="number" name="" id="calc_C37" class="calc__input data-min calc__input--disabled" value="">
+			</div>
+	
+			<div class="calc__line">
+				<div class="calc__title">Provincial Tax</div>
+				<input disabled type="number" name="" id="calc_C38" class="calc__input data-min calc__input--disabled" value="">
+			</div>
+		</div>
+
+		<div class="calc__separator"></div>
+
+		<div class="calc__line">
+			<div class="calc__title calc__title--plus calc__title--bold">Total Credits
+				<div id="calc_plus_2" class="calc__plus">+</div>
+			</div>
+			<input disabled type="number" name="" id="calc_C44" class="calc__input data-min calc__input--bold calc__input--disabled" value="">
+		</div>
+
+		<div id="calc_closed_2" class="calc__closed">
+			<div class="calc__line">
+				<div class="calc__title">Income tax deducted</div>
+				<input disabled type="number" name="" id="calc_C40" class="calc__input data-min calc__input--disabled" value="">
+			</div>
+	
+			<div class="calc__line">
+				<div class="calc__title">Climate Action Incentive (CAI)</div>
+				<input disabled type="number" name="" id="calc_C41" class="calc__input data-min calc__input--disabled" value="">
+			</div>
+	
+			<div class="calc__line">
+				<div class="calc__title">Canada workers benefit (CWB)</div>
+				<input disabled type="number" name="" id="calc_C42" class="calc__input data-min calc__input--disabled" value="">
+			</div>
+	
+			<div class="calc__line">
+				<div class="calc__title">Provincial Territories Credit</div>
+				<input disabled type="number" name="" id="calc_C43" class="calc__input data-min calc__input--disabled" value="">
+			</div>
+		</div>
+
+		<div class="calc__separator"></div>
+
+		<div class="calc__line">
+			<div class="calc__title calc__title--bold">Total Owing</div>
+			<input disabled type="number" name="" id="calc_C46" class="calc__input data-min calc__input--bold calc__input--disabled" value="">
 		</div>
 
 		<div class="calc__line">
-			<div class="calc__title">CPP payable on self-employment</div>
-			<input disabled type="number" name="" id="calc_C37" class="calc__input data-min calc__input--disabled" value="">
-		</div>
-
-		<div class="calc__line">
-			<div class="calc__title">Provincial Tax</div>
-			<input disabled type="number" name="" id="calc_C38" class="calc__input data-min calc__input--disabled" value="">
-		</div>
-
-		<div class="calc__line">
-			<div class="calc__title">Total Payable</div>
-			<input disabled type="number" name="" id="calc_C39" class="calc__input data-min calc__input--disabled" value="">
-		</div>
-
-		<div class="calc__line">
-			<div class="calc__title">Income tax deducted</div>
-			<input disabled type="number" name="" id="calc_C40" class="calc__input data-min calc__input--disabled" value="">
-		</div>
-
-		<div class="calc__line">
-			<div class="calc__title">Climate Action Incentive (CAI)</div>
-			<input disabled type="number" name="" id="calc_C41" class="calc__input data-min calc__input--disabled" value="">
-		</div>
-
-		<div class="calc__line">
-			<div class="calc__title">Canada workers benefit (CWB)</div>
-			<input disabled type="number" name="" id="calc_C42" class="calc__input data-min calc__input--disabled" value="">
-		</div>
-
-		<div class="calc__line">
-			<div class="calc__title">Provincial Territories Credit</div>
-			<input disabled type="number" name="" id="calc_C43" class="calc__input data-min calc__input--disabled" value="">
-		</div>
-
-		<div class="calc__line">
-			<div class="calc__title">Total Credits</div>
-			<input disabled type="number" name="" id="calc_C44" class="calc__input data-min calc__input--disabled" value="">
-		</div>
-
-		<div class="calc__line">
-			<div class="calc__title">Total Owing</div>
-			<input disabled type="number" name="" id="calc_C46" class="calc__input data-min calc__input--disabled" value="">
-		</div>
-
-		<div class="calc__line">
-			<div class="calc__title">Total Refund</div>
-			<input disabled type="number" name="" id="calc_C47" class="calc__input data-min calc__input--disabled" value="">
+			<div class="calc__title calc__title--bold">Total Refund</div>
+			<input disabled type="number" name="" id="calc_C47" class="calc__input data-min calc__input--bold calc__input--disabled" value="">
 		</div>
 
 		<div class="calc__line">

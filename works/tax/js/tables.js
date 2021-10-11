@@ -1,5 +1,30 @@
 $(document).ready(function() {
 
+	$('.calc__tip').hover(function(){
+		$(this).next().css({display: "block"});
+	}, function(){
+		$(this).next().css({display: "none"});
+	});
+
+	$('#calc_plus_1').click(function(){
+		if ( $(this).text() == "+" ) {
+			$(this).text("–");
+		} else {
+			$(this).text("+");
+		}
+		$('#calc_closed_1').toggleClass("calc__closed--open");
+	});
+
+	$('#calc_plus_2').click(function(){
+		if ( $(this).text() == "+" ) {
+			$(this).text("–");
+		} else {
+			$(this).text("+");
+		}
+		$('#calc_closed_2').toggleClass("calc__closed--open");
+	});
+
+
 	$('select').change(function(){
 		tables_values();
 		tables_values();
@@ -139,11 +164,14 @@ $(document).ready(function() {
 					var cwb_X = CWB_calculation[i].Base_ded_amount;
 				}
 				CWB_calculation[i].Line_20 = Math.max( 0 , ((+C12 + +C13 - +C23 - +cwb_X) * CWB_calculation[i].Base_Rate) );
+				
 				//line_22 
-				if( C4 == "Yes" ) {var cwb_A = CWB_calculation[i].Base_i_spouse_ded_amount;} else {var cwb_A = CWB_calculation[i].Single_amount;}
-				if( C4 == "Yes" ) {var cwb_B = CWB_calculation[i].Base_i_spouse_ded_amount;} else {var cwb_B = CWB_calculation[i].Single_amount;}
+				if( C4 == "Yes" ) {var cwb_A = CWB_calculation[i].Single_i_spouse_amount;} else {var cwb_A = CWB_calculation[i].Single_amount;}
+				if( C4 == "Yes" ) {var cwb_B = CWB_calculation[i].Single_i_spouse_amount;} else {var cwb_B = CWB_calculation[i].Single_amount;}
 				if( +cwb_B > +CWB_calculation[i].Line_20 ) {var cwb_C = CWB_calculation[i].Line_20;} else {var cwb_C = cwb_A;}
 				if( B1 == CWB_calculation[i].Province ) {CWB_calculation[i].Line_22 = cwb_C;} else {CWB_calculation[i].Line_22 = 0;}
+
+
 				//line_25
 				if( C4 == "Yes" ) {var cwb_D = CWB_calculation[i].Base_income_threshold_i_spouse;} else {var cwb_D = CWB_calculation[i].Base_income_threshold;}
 				var cwb_E = Math.max( 0 , (+C32 + +C5 - +cwb_D) );
@@ -151,7 +179,7 @@ $(document).ready(function() {
 				//line_27
 				CWB_calculation[i].Line_27 = CWB_calculation[i].Line_25 * CWB_calculation[i].Rate_reduction;
 
-				//console.log( "Line_20 " + CWB_calculation[i].Line_20 );
+				// console.log( "Line_20 " + CWB_calculation[i].Line_20 );
 				// console.log( "Line_22 " + CWB_calculation[i].Line_22 );
 				// console.log( "Line_25 " + CWB_calculation[i].Line_25 );
 				// console.log( "Line_27 " + CWB_calculation[i].Line_27 );
@@ -1167,7 +1195,7 @@ $(document).ready(function() {
 			var CPP_credit_self_employment = 0;
 		} else {
 			var CPP_credit_employment = +Base_CPP + +Base_QPP;
-			var CPP_credit_self_employment = +Base_CPP_2 + +Base_CPP_QPP;
+			var CPP_credit_self_employment = +Base_CPP_2 + +Base_CPP_QPP + +Base_QPP_2;
 		}
 		var PPIP_credit_self_employment = +Federal_line_31215;
 		
@@ -1231,7 +1259,8 @@ $(document).ready(function() {
 			+Home_buyers_amount
 		) * +PX_table[11].Base_rate;
 
-
+		//console.log(CPP_credit_self_employment);
+		
 
 		if ( B1 == "QC" ) {
 			var Federal_QC_Abatement = Math.max(0 , ((+Federal_Tax_itog - +Federal_Credit) * PX_table[9].Base_rate ) );
@@ -1872,7 +1901,7 @@ $(document).ready(function() {
 		}
 		if ( B1 == "BC" ) {
 			if (C4 == "Yes"){
-				BC_Provincial_Territories_Credit_2020_L = Math.max(0,((+C5 + +C32) - +base_income_threshold_i_spouse));
+				BC_Provincial_Territories_Credit_2020_L = Math.max(0,((+C5 + +C32) - +base_income_threshold_i_spouse)) * Reduction_rate_BC;
 			} else {
 				BC_Provincial_Territories_Credit_2020_L = Math.max(0,(+C32 - +Base_income_threshold)) * Reduction_rate_BC;
 			}
@@ -1978,19 +2007,19 @@ $(document).ready(function() {
 		if ( B1 == "" || B1 == "NR" ) {
 			var Provincial_DTC = 0;
 		} else {
-			if ( B1 == "AB") { var Provincial_DTC = (C17 * EDTC_array[1].AB) + (C18 * nonEDTC_array[1].AB); }
-			if ( B1 == "BC") { var Provincial_DTC = (C17 * EDTC_array[1].BC) + (C18 * nonEDTC_array[1].BC); }
-			if ( B1 == "MB") { var Provincial_DTC = (C17 * EDTC_array[1].MB) + (C18 * nonEDTC_array[1].MB); }
-			if ( B1 == "NB") { var Provincial_DTC = (C17 * EDTC_array[1].NB) + (C18 * nonEDTC_array[1].NB); }
-			if ( B1 == "NL") { var Provincial_DTC = (C17 * EDTC_array[1].NL) + (C18 * nonEDTC_array[1].NL); }
-			if ( B1 == "NS") { var Provincial_DTC = (C17 * EDTC_array[1].NS) + (C18 * nonEDTC_array[1].NS); }
-			if ( B1 == "NT") { var Provincial_DTC = (C17 * EDTC_array[1].NT) + (C18 * nonEDTC_array[1].NT); }
-			if ( B1 == "NU") { var Provincial_DTC = (C17 * EDTC_array[1].NU) + (C18 * nonEDTC_array[1].NU); }
-			if ( B1 == "ON") { var Provincial_DTC = (C17 * EDTC_array[1].ON) + (C18 * nonEDTC_array[1].ON); }
-			if ( B1 == "PE") { var Provincial_DTC = (C17 * EDTC_array[1].PE) + (C18 * nonEDTC_array[1].PE); }
-			if ( B1 == "QC") { var Provincial_DTC = (C17 * EDTC_array[1].QC) + (C18 * nonEDTC_array[1].QC); }
-			if ( B1 == "SK") { var Provincial_DTC = (C17 * EDTC_array[1].SK) + (C18 * nonEDTC_array[1].SK); }
-			if ( B1 == "YT") { var Provincial_DTC = (C17 * EDTC_array[1].YT) + (C18 * nonEDTC_array[1].YT); }
+			if ( B1 == "AB") { var Provincial_DTC = (C17 * EDTC_array[0].AB) + (C18 * nonEDTC_array[0].AB); }
+			if ( B1 == "BC") { var Provincial_DTC = (C17 * EDTC_array[0].BC) + (C18 * nonEDTC_array[0].BC); }
+			if ( B1 == "MB") { var Provincial_DTC = (C17 * EDTC_array[0].MB) + (C18 * nonEDTC_array[0].MB); }
+			if ( B1 == "NB") { var Provincial_DTC = (C17 * EDTC_array[0].NB) + (C18 * nonEDTC_array[0].NB); }
+			if ( B1 == "NL") { var Provincial_DTC = (C17 * EDTC_array[0].NL) + (C18 * nonEDTC_array[0].NL); }
+			if ( B1 == "NS") { var Provincial_DTC = (C17 * EDTC_array[0].NS) + (C18 * nonEDTC_array[0].NS); }
+			if ( B1 == "NT") { var Provincial_DTC = (C17 * EDTC_array[0].NT) + (C18 * nonEDTC_array[0].NT); }
+			if ( B1 == "NU") { var Provincial_DTC = (C17 * EDTC_array[0].NU) + (C18 * nonEDTC_array[0].NU); }
+			if ( B1 == "ON") { var Provincial_DTC = (C17 * EDTC_array[0].ON) + (C18 * nonEDTC_array[0].ON); }
+			if ( B1 == "PE") { var Provincial_DTC = (C17 * EDTC_array[0].PE) + (C18 * nonEDTC_array[0].PE); }
+			if ( B1 == "QC") { var Provincial_DTC = (C17 * EDTC_array[0].QC) + (C18 * nonEDTC_array[0].QC); }
+			if ( B1 == "SK") { var Provincial_DTC = (C17 * EDTC_array[0].SK) + (C18 * nonEDTC_array[0].SK); }
+			if ( B1 == "YT") { var Provincial_DTC = (C17 * EDTC_array[0].YT) + (C18 * nonEDTC_array[0].YT); }
 		}
 
 		//console.log(Provincial_Credit);
