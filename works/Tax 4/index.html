@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div class="calc__header">GST HST Instalment Calculator</div>
+
+		<div class="calc__separator"></div>
+
+		<div class="calc__line">
+			<div class="calc__title calc__title--bold">Is the Fiscal Year shorter than 12 months?</div>
+			<select name="" id="calc_B2" class="calc__select">
+				<option value="Yes">Yes, it's my 1st year!</option>
+				<option value="No">No, I'm past that!</option>
+			</select>
+		</div>
+
+		<div id="block_1">
+			<div class="calc__line">
+				<div class="calc__title calc__title--bold">Is the Corporation an annual filer?</div>
+				<select name="" id="calc_B3" class="calc__select">
+					<option value="Yes">Yes, let's be efficient!</option>
+					<option value="No">No, because CRA says so!</option>
+				</select>
+			</div>
+	
+			<div class="calc__line">
+				<div class="calc__title calc__title--bold">Is the GST/HST Net Tax Owing in the previous fiscal year, $3,000 or more?</div>
+				<select name="" id="calc_B4"  class="calc__select">
+					<option value="Yes">Yes, we're going national!</option>
+					<option value="No">No, we're just a start-up!</option>
+				</select>
+			</div>
+	
+			<div class="calc__line">
+				<div class="calc__title calc__title--bold">Do you expect your GST/HST Net Tax Owing in the current fiscal year, $3,000 or more?</div>
+				<select name="" id="calc_B5"  class="calc__select">
+					<option value="Yes">Yes, we're going national!</option>
+					<option value="No">No, we're just a start-up!</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="calc__separator"></div>
+
+		<div class="calc__line">
+			<div class="calc__title calc__title--bold">Do I have to pay instalments to CRA?</div>
+			<div id="calc_B7" class="calc__text">awdaw</div>
+		</div>
+
+		<div class="calc__separator"></div>
+
+		<div id="block_2">
+			<div class="calc__line">
+				<div class="calc__title calc__title--bold">Date of Incorporation</div>
+				<select name="" id="calc_B9" placeholder="calc_B9" class="calc__select calc__select--date">
+					<option value="1">Jan</option>
+					<option value="2">Feb</option>
+					<option value="3">Mar</option>
+					<option value="4">Apr</option>
+					<option value="5">May</option>
+					<option value="6">Jun</option>
+					<option value="7">Jul</option>
+					<option value="8">Aug</option>
+					<option value="9">Sep</option>
+					<option selected value="10">Oct</option>
+					<option value="11">Nov</option>
+					<option value="12">Dec</option>
+				</select>
+				<select name="" id="calc_C9" placeholder="calc_C9" class="calc__select calc__select--date">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option selected value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+					<option value="25">25</option>
+					<option value="26">26</option>
+					<option value="27">27</option>
+					<option value="28">28</option>
+					<option value="29">29</option>
+					<option value="30">30</option>
+					<option value="31">31</option>
+				</select>
+				<select name="" id="calc_D9" placeholder="calc_D9" class="calc__select calc__select--date">
+					<option value="2020">2020</option>
+					<option value="2021">2021</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title calc__title--bold">Corporation's Year End</div>
+			<select name="" id="calc_B10" placeholder="calc_B10" class="calc__select calc__select--date">
+				<option value="1">Jan</option>
+				<option value="2">Feb</option>
+				<option value="3">Mar</option>
+				<option value="4">Apr</option>
+				<option value="5">May</option>
+				<option value="6">Jun</option>
+				<option value="7">Jul</option>
+				<option value="8">Aug</option>
+				<option value="9">Sep</option>
+				<option value="10">Oct</option>
+				<option value="11">Nov</option>
+				<option selected value="12">Dec</option>
+			</select>
+			<select name="" id="calc_C10" placeholder="calc_C10" class="calc__select calc__select--date">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+				<option value="21">21</option>
+				<option value="22">22</option>
+				<option value="23">23</option>
+				<option value="24">24</option>
+				<option value="25">25</option>
+				<option value="26">26</option>
+				<option value="27">27</option>
+				<option value="28">28</option>
+				<option value="29">29</option>
+				<option value="30">30</option>
+				<option selected value="31">31</option>
+			</select>
+			<select name="" id="calc_D10" placeholder="calc_D10" class="calc__select calc__select--date">
+				<option value="2020">2020</option>
+				<option selected value="2021">2021</option>
+			</select>
+		</div>
+		<div class="calc__alert">Incorporation date and Corporate year end cannot be greater than 365 in a short year</div>
+
+		<div class="calc__separator"></div>
+
+		<div class="calc__line">
+			<div class="calc__title calc__title--bold">Corporate Year</div>
+			<div class="calc__flex">
+				<div class="calc__year">2021</div>
+				<div class="calc__year">2020</div>
+			</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">GST/HST Tax</div>
+			<div class="calc__flex">
+				<input data-min="0" type="text" name="" id="calc_B14" placeholder="calc_B14" class="calc__input calc__input--method data-min" value="3,000">
+				<input data-min="0" type="text" name="" id="calc_C14" placeholder="calc_C14" class="calc__input calc__input--method data-min" value="3,500">
+			</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title calc__title--bold">Instalment base</div>
+			<div class="calc__flex">
+				<input data-min="0" type="text" name="" id="calc_B15" placeholder="calc_B15" class="calc__input calc__input--method data-min calc__input--disabled" value="" disabled>
+				<input data-min="0" type="text" name="" id="calc_C15" placeholder="calc_C15" class="calc__input calc__input--method data-min calc__input--disabled" value="" disabled>
+			</div>
+		</div>
+
+		<div class="calc__separator"></div>
+		
+
+		<div class="calc__line">
+			<div class="calc__title calc__title--bold">Instalment Due Dates - Quarterly</div>
+		</div>
+
+		<div class="calc__line">
+			<div id="calc_A18" class="calc__title">Date</div>
+			<div class="calc__flex">
+				<input data-min="0" type="text" name="" id="calc_B18" placeholder="calc_B18" class="calc__input calc__input--method data-min calc__input--disabled calc__input--other" value="" disabled>
+			</div>
+		</div>
+		<div class="calc__line">
+			<div id="calc_A19" class="calc__title">Date</div>
+			<div class="calc__flex">
+				<input data-min="0" type="text" name="" id="calc_B19" placeholder="calc_B19" class="calc__input calc__input--method data-min calc__input--disabled calc__input--other" value="" disabled>
+			</div>
+		</div>
+		<div class="calc__line">
+			<div id="calc_A20" class="calc__title">Date</div>
+			<div class="calc__flex">
+				<input data-min="0" type="text" name="" id="calc_B20" placeholder="calc_B20" class="calc__input calc__input--method data-min calc__input--disabled calc__input--other" value="" disabled>
+			</div>
+		</div>
+		<div class="calc__line">
+			<div id="calc_A21" class="calc__title">Date</div>
+			<div class="calc__flex">
+				<input data-min="0" type="text" name="" id="calc_B21" placeholder="calc_B21" class="calc__input calc__input--method data-min calc__input--disabled calc__input--other" value="" disabled>
+			</div>
+		</div>
+
+		<div class="calc__line">
+			<div id="calc_A21" class="calc__title calc__title--bold">Total Instalments Due</div>
+			<div class="calc__flex">
+				<input data-min="0" type="text" name="" id="calc_B22" placeholder="calc_B22" class="calc__input calc__input--method data-min calc__input--disabled calc__input--other" value="" disabled>
+			</div>
+		</div>
+
+		<div class="calc__separator"></div>
+
+
+
+		<div class="calc__line calc__line--block">
+			<div class="calc__title calc__title--bold">Penalty on late and overdue instalments <div id="calc_plus_1" class="calc__plus">+</div></div>
+			<div id="calc_info_1" class="calc__info">
+				<b>1)</b> Failure to file GST/HST return with amount owing to CRA will result in penalty
+				<br>Example: GST/HST Owing is $1,500 and was overdue for 5 months. Penalty would be $33.75 = $1,500 x 1% + ($1,500 x 1% x 25% x 5 months)"
+				<br><br><b>2)</b> Demand to file is sent by CRA if your GST/HST return is overdue and you fail to file by CRA specified date, a flat $250 penalty applies.
+				<br><br><b>3)</b> Failure to file electronically a flat fee of $100 for initial return and $250 for any subsequent return
+				<br><br><b>4)</b> Failing to pay the required instalment on time results in instalment interest of 5% charged on the difference between required instalment and what was actually paid and compounded daily.
+			</div>
+		</div>
+
+		<div class="calc__line calc__line--block">
+			<div class="calc__title calc__title--bold">Important Notes <div id="calc_plus_2" class="calc__plus">+</div></div>
+			<div id="calc_info_2" class="calc__info">
+				<b>1)</b> If your business has branches or divisions that file separate returns, the threshold limit of $3,000 applies to the total net tax for the whole business, including all branches and divisions.
+			</div>
+		</div>
+
+		<div class="calc__separator"></div>
+		
+		<div class="calc__line">
+			<div class="calc__title calc__title--bold">Refer to the link below for more information</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">
+				<a href="https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/pay-instalment.html#pmtcy">Pay the GST/HST by instalments - Canada.ca</a>
+			</div>
+		</div>
+		
+
+
+	</div>
+
+
+</body>
+</html>
