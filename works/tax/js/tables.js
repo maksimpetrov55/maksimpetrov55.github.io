@@ -1,5 +1,15 @@
 $(document).ready(function() {
 
+	$('input').focus(function(){
+		$(this).select();
+	});
+
+	$('input').blur(function(){
+		if ( $(this).val() == '' ){
+			$(this).val(0);
+		}
+	});
+
 	$('.calc__tip').hover(function(){
 		$(this).next().css({display: "block"});
 	}, function(){
