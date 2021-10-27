@@ -1,0 +1,575 @@
+$color1: #1f41ff
+$color2: #52b4f5
+
+body
+    position: relative
+    background: #dedede
+
+*
+    position: relative
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: 'Montserrat', sans-serif
+
+.calc
+    width: 100%
+    //max-width: 1140px
+    width: 1140px
+    background: #fff
+    min-height: 300px
+    margin: 0 auto
+    padding: 40px 10px
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button
+        -webkit-appearance: none
+        margin: 0
+    input[type="number"]
+        -moz-appearance: textfield
+
+    input[type="number"]:hover,
+    input[type="number"]:focus
+        -moz-appearance: number-input
+
+    &__header
+        font-size: 36px
+        font-weight: 600
+        margin: 0 0 20px 0
+
+    &__about
+        margin: 0 0 40px 0
+        font-size: 17px
+
+    &__block
+        margin: 0 0 40px 0
+        width: 100%
+
+    &__params
+        display: flex
+        justify-content: space-between
+        max-width: 650px
+        align-items: flex-start
+
+    &__title
+        font-size: 20px
+        margin: 0 0 30px 0
+        font-weight: 600
+
+    &__select
+        font-size: 17px
+        width: 100%
+        max-width: 300px
+        height: 42px
+        border-radius: 4px
+        border: 2px solid #ddd
+
+    &__value
+        font-size: 90px
+        height: 110px
+        line-height: 110px
+        outline: none
+        border: none
+        //background: #eee
+        width: 180px
+        text-align: center
+
+    &__plusminus
+        display: flex
+        align-items: center
+        margin: 20px 0 20px 0
+        flex-shrink: 0
+        padding: 0 0 25px 0
+        &--rooms
+            padding: 0 0 50px 0
+
+    &__minus,
+    &__plus
+        font-size: 40px
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 40px
+        background: $color1
+        height: 40px
+        border-radius: 50px
+        color: #fff
+        font-weight: 300
+        cursor: pointer
+        transition-duration: 0.2s
+        user-select: none
+        &:hover
+            opacity: 0.7
+        &:active
+            opacity: 0.2
+
+    &__minus
+        margin: 0 5px 0 0
+        padding: 0 0 6px 0
+
+    &__plus
+        margin: 0 0 0 5px
+
+    &__descr
+        text-align: center
+        font-size: 19px
+        position: absolute
+        top: calc( 100% - 25px )
+        height: 25px
+        width: 100%
+        user-select: none
+        &--rooms
+            top: calc( 100% - 50px )
+        &--studio
+            display: flex
+            justify-content: center
+            align-items: center
+            cursor: pointer
+            user-select: none
+
+    &__checkbox
+        display: none
+
+        &:checked + .calc__label
+            font-weight: 600
+        &:checked + .calc__label::before
+            content: "✔"
+            border: 2px solid $color1
+            color: $color1
+
+    &__label
+        font-size: 19px
+        cursor: pointer
+        user-select: none
+        margin: 10px 0
+        display: flex
+        &::before
+            content: ""
+            display: flex
+            justify-content: center
+            align-items: center
+            font-size: 20px
+            width: 22px
+            height: 22px
+            margin: 0 10px 0 0
+            border: 2px solid #ddd
+            border-radius: 4px
+
+    &__style
+        display: flex
+        justify-content: space-between
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.option
+    display: flex
+    justify-content: space-between
+    margin: 0 0 15px 0
+
+    &__checkbox
+        display: none
+
+        &:checked + .option__label
+            font-weight: 600
+        &:checked + .option__label::before
+            background: $color1
+        &:checked + .option__label::after
+            transform: translateX(18px)
+
+    &__label
+        user-select: none
+        display: flex
+        align-items: center
+        flex-shrink: 0
+        font-size: 16px
+        cursor: pointer
+        transition-duration: 0.2s
+        &::before
+            content: ""
+            display: block
+            width: 44px
+            height: 26px
+            background: #cdcdcd
+            border-radius: 30px
+            margin: 0 10px 0 0
+            transition-duration: 0.2s
+        &::after
+            content: ""
+            display: block
+            position: absolute
+            left: 2px
+            top: 2px
+            background: #fff
+            width: 22px
+            height: 22px
+            border-radius: 50px
+            transition-duration: 0.2s
+
+    &__space
+        width: 100%
+        border-bottom: 1px dashed #bbb
+        margin: 0 10px
+        height: 26px
+
+    &__price
+        flex-shrink: 0
+        line-height: 26px
+        font-size: 16px
+        &--bold
+            font-weight: 600
+
+    &__switch
+        display: none
+        align-items: center
+        margin: 0 20px 0 0
+        &--window
+            display: flex
+            margin: 0 0 10px 0
+            width: 100%
+            justify-content: center
+
+    &__unit
+        flex-shrink: 0
+        margin: 0 10px 0 0
+        display: block
+        line-height: 26px
+        font-size: 16px
+
+    &__value
+        width: 30px
+        border: none
+        font-size: 16px
+        text-align: center
+        outline: none
+        white-space: nowrap
+        padding: 0 5px
+        user-select: none
+
+    &__minus,
+    &__plus
+        font-size: 22px
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 26px
+        background: $color1
+        height: 26px
+        border-radius: 50px
+        color: #fff
+        font-weight: 400
+        cursor: pointer
+        transition-duration: 0.2s
+        user-select: none
+        &:hover
+            opacity: 0.7
+        &:active
+            opacity: 0.2
+
+    &__minus
+        margin: 0 5px 0 0
+        padding: 0 0 3px 0
+
+    &__plus
+        margin: 0 0 0 5px
+
+    &__itog
+        display: none
+
+    &__windows
+        margin: 30px 0 10px 0
+        padding: 0 0 0 50px 
+        display: none
+        justify-content: space-between
+        max-width: 860px
+
+    &__block
+        width: 100%
+        max-width: 140px
+
+    &__text
+        margin: 0 0 10px 0
+        text-align: center
+        font-size: 15px
+
+    &__img
+        width: 100%
+        margin: 0 0 20px 0
+
+
+
+
+.card
+    width: 32%
+    min-height: 200px
+    box-shadow: 0 6px 15px 2px rgba(0,0,0,0.1)
+    border-radius: 10px
+    overflow: hidden
+    padding: 0 0 30px 0
+
+    &__img
+        width: 100%
+        display: none
+
+    &__wrap
+        width: 100%
+        padding: 30px 30px
+
+    &__title
+        font-size: 22px
+        font-weight: 600
+        margin: 0 0 5px 0
+
+    &__descr
+        font-size: 14px
+        font-weight: 600
+        color: $color2
+        margin: 0 0 30px 0
+
+    &__label
+        font-weight: 600
+        font-size: 17px
+        margin: 20px 0 5px 0
+
+    &__select
+        border: none
+        border-bottom: 1px solid #bbb
+        font-size: 17px
+        border-radius: 0
+        width: 100%
+        outline: none
+        padding: 5px 0
+
+    &__radio
+        display: none
+        &:checked + .card__white
+            display: none
+
+    &__white
+        position: absolute
+        bottom: 0
+        height: 55%
+        width: 100%
+        background: #ffffff
+        display: flex
+        justify-content: center
+        align-items: center
+
+    &__btn
+        border: 3px solid $color1
+        border-radius: 50px
+        width: 70%
+        height: 46px
+        position: absolute
+        display: flex
+        justify-content: center
+        align-items: center
+        bottom: 45%
+        color: $color1
+        font-weight: 600
+        font-size: 18px
+        cursor: pointer
+        transition-duration: 0.2s
+        user-select: none
+        &:hover
+            transform: scale(1.1)
+
+
+
+
+
+.table
+    width: 100%
+    border: 4px solid $color2
+    border-bottom: none
+    display: flex
+    justify-content: space-between
+
+    &__left
+        width: 70%
+
+    &__right
+        width: 30%
+        border-left: 4px solid $color2
+        border-bottom: 4px solid $color2
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+    &__block
+        padding: 30px
+        border-bottom: 4px solid $color2
+
+    &__line
+        display: flex
+        justify-content: space-between
+        margin: 0 0 30px 0
+
+    &__title
+        font-size: 18px
+        font-weight: 600
+        flex-shrink: 0
+
+    &__price
+        font-size: 18px
+        flex-shrink: 0
+
+    &__space
+        border-bottom: 1px dashed #bbb
+        width: 100%
+        margin: 0 10px
+
+    &__info
+        line-height: 2.0
+        &--long
+            width: 100%
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+
+    &__li
+        width: 50%
+        line-height: 1.2
+        margin: 0 0 20px 0
+        &--100
+            width: 100%
+
+    &__bold
+        color: $color2
+        font-weight: 600
+        font-size: 36px
+        margin: 0 0 20px 0
+
+    &__result
+        font-weight: 600
+        font-size: 22px
+        margin: 0 0 50px 0
+
+    &__btn
+        width: 250px
+        height: 52px
+        background: $color1
+        border-radius: 50px
+        color: #fff
+        display: flex
+        justify-content: center
+        align-items: center
+        font-weight: 600
+        font-size: 17px
+        box-shadow: 0 5px 15px 1px rgba(0,0,0,0.2)
+        transition-duration: 0.2s
+        cursor: pointer
+        user-select: none
+        &:hover
+            transform: scale(1.04, 1.04)
+            opacity: 0.9
+            box-shadow: 0 10px 25px 1px rgba(0,0,0,0.3)
+        &:active
+            opacity: 0.3
+
+    &__send
+        margin: 30px 0 0 0
+        font-size: 17px
+        text-align: center
+        cursor: pointer
+        transition-duration: 0.2s
+        &--mail
+            color: $color1
+            font-weight: 600
+            font-size: 30px
+        &:hover
+            color: $color2
+        &:active
+            opacity: 0.3
+
+
+
+
+
+
+
+
+
+
+
+
+.black
+    position: fixed
+    width: 100%
+    height: 100%
+    z-index: 9998
+    background: #00000099
+    display: flex
+    justify-content: center
+    align-items: center
+
+
+
+.form
+    position: relative
+    width: 100%
+    max-width: 800px
+    min-height: 300px
+    background: #fff
+    border-radius: 10px
+    padding: 30px 20px
+
+    &__close
+        position: absolute
+        font-size: 60px
+        height: 60px
+        width: 60px
+        display: flex
+        justify-content: center
+        align-items: center
+        right: -5px
+        top: -5px
+        user-select: none
+        cursor: pointer
+        transition-duration: 0.2s
+        color: #aaa
+        z-index: 9999
+        &:hover
+            color: #f10000
+
+    &__title
+        font-size: 30px
+        font-weight: 600
+        text-align: center
+        margin: 20px 0 60px 0
+
+    &__wrap
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+
+    &__line
+        width: 46%
+        max-width: 500px
+        margin: 0 auto 20px auto
+
+    &__name
+        font-size: 18px
+
+    &__input
+        width: 100%
+        margin: 5px 0 0 0
+        height: 46px
+        border-radius: 2px
+        border: 1px solid #ccc
+        font-size: 18px
+        padding: 0 10px

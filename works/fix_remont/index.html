@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<title>Web Mockup</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+	<!-- <div class="black">
+		<form action="" class="form">
+			<div class="form__close">×</div>
+			<div class="form__title">Оформление заявки</div>
+
+			<div class="form__wrap">
+				<div class="form__line">
+					<div class="form__name">Ваше имя</div>
+					<input type="text" class="form__input">
+				</div>
+	
+				<div class="form__line">
+					<div class="form__name">Ваше имя</div>
+					<input type="text" class="form__input">
+				</div>
+
+				<div class="form__line">
+					<div class="form__name">Ваше имя</div>
+					<input type="text" class="form__input">
+				</div>
+
+				<div class="form__line">
+					<div class="form__name">Ваше имя</div>
+					<input type="text" class="form__input">
+				</div>
+			</div>
+		</form>
+	</div> -->
+
+
+
+	<div class="calc">
+
+		<div class="calc__header">Калькулятор ремонта</div>
+
+		<div class="calc__about">
+			Стоимость ремонта рассчитывается из двух частей — базовой стоимости и дополнительных опций. Дополнительные опции, оплачиваются отдельно и предоставлены на ваш выбор. Базовая стоимость зависит только от площади и параметров квартиры, и не может быть изменена.
+		</div>
+
+		<div class="calc__block">
+			<div class="calc__title">1. Ваш регион</div>
+
+			<select name="" id="calc_city" class="calc__select">
+				<option data-price="100" value="1">Москва</option>
+				<option data-price="50" value="2">Остальные города</option>
+			</select>
+		</div>
+		<!-- /.calc__block -->
+
+		<div class="calc__block calc__block--params">
+			<div class="calc__title">2. Параметры квартиры</div>
+
+			<div class="calc__params">
+				<div class="calc__plusminus">
+					<div class="calc__minus">-</div>
+					<input id="calc_square" type="number" class="calc__value" value="30">
+					<div class="calc__plus">+</div>
+					<div class="calc__descr">Площадь квартиры, м<sup>2</sup></div>
+				</div>
+	
+				<div class="calc__plusminus calc__plusminus--rooms">
+					<div class="calc__minus">-</div>
+					<input id="calc_rooms" type="text" class="calc__value" value="1">
+					<div class="calc__plus">+</div>
+					<div class="calc__descr calc__descr--rooms">Количество комнат</div>
+					<div class="calc__descr calc__descr--studio">
+						<input class="calc__checkbox" type="checkbox" name="" id="calc_studio">
+						<label class="calc__label" for="calc_studio">cтудия</label>
+					</div>
+				</div>
+				
+			</div>
+
+		</div>
+		<!-- /.calc__block -->
+		
+		<div class="calc__block">
+			<div class="calc__title">3. Капитальные работы</div>
+
+			<div>
+				<input class="calc__checkbox" type="checkbox" name="calc_capital" id="calc_capital_1" value="2200">
+				<label class="calc__label" for="calc_capital_1">Разводка электро- и слаботочной проводки</label>
+			</div>
+
+			<div>
+				<input class="calc__checkbox" type="checkbox" name="calc_capital" id="calc_capital_2" value="1875">
+				<label class="calc__label" for="calc_capital_2">Черновая стяжка пола (до 100 мм)</label>
+			</div>
+
+			<div>
+				<input class="calc__checkbox" type="checkbox" name="calc_capital" id="calc_capital_3" value="1600">
+				<label class="calc__label" for="calc_capital_3">Возведение внутренних стен (газобетонные блоки)</label>
+			</div>
+
+		</div>
+		<!-- /.calc__block -->
+
+		<div class="calc__block">
+			<div class="calc__title">4. Стиль отделки</div>
+
+			<div class="calc__style">
+
+				<div class="calc__card card">
+					<img src="img/flat/1_1_1.jpg" alt="" class="card__img card__img--1 card__img--111">
+					<img src="img/flat/1_2_1.jpg" alt="" class="card__img card__img--1 card__img--121">
+					<img src="img/flat/1_3_1.jpg" alt="" class="card__img card__img--1 card__img--131">
+					
+					<div class="card__wrap">
+						<div class="card__title">Скандинавский стиль</div>
+						<div class="card__descr">Лаконичный</div>
+
+						<div class="card__label">Цвет стен</div>
+						<select name="" id="card_select_1_1" class="card__select card__select--1">
+							<option value="1">Белый</option>
+							<option value="2">Светло-серый</option>
+							<option value="3">Голубой</option>
+						</select>
+
+						<div class="card__label">Цвет пола</div>
+						<select name="" id="card_select_1_2" class="card__select card__select--1">
+							<option value="1">Натуральный дуб</option>
+						</select>
+
+						<div class="card__label">Тип напольного покрытия</div>
+						<select name="" id="card_select_1_3" class="card__select card__select--1">
+							<option value="1">Ламинат</option>
+							<option value="2">Паркетная доска</option>
+							<option value="3">Инженерная доска</option>
+						</select>
+					</div>
+					<input class="card__radio" type="radio" name="card_style" id="card_style_1" value="1" checked>
+					<label class="card__white" for="card_style_1">
+						<div class="card__btn">Выбрать стиль</div>
+					</label>
+				</div>
+
+				<div class="calc__card card">
+					<img src="img/flat/2_1_1.jpg" alt="" class="card__img card__img--2 card__img--211">
+					<img src="img/flat/2_2_1.jpg" alt="" class="card__img card__img--2 card__img--221">
+					<img src="img/flat/2_3_1.jpg" alt="" class="card__img card__img--2 card__img--231">
+					<img src="img/flat/2_1_2.jpg" alt="" class="card__img card__img--2 card__img--212">
+					<img src="img/flat/2_2_2.jpg" alt="" class="card__img card__img--2 card__img--222">
+					<img src="img/flat/2_3_2.jpg" alt="" class="card__img card__img--2 card__img--232">
+
+					<div class="card__wrap">
+						<div class="card__title">Классический стиль</div>
+						<div class="card__descr">Строгий</div>
+
+						<div class="card__label">Цвет стен</div>
+						<select name="" id="card_select_2_1" class="card__select card__select--2">
+							<option value="1">Бежевый</option>
+							<option value="2">Светло-зеленый</option>
+							<option value="3">Темно-серый</option>
+						</select>
+
+						<div class="card__label">Цвет пола</div>
+						<select name="" id="card_select_2_2" class="card__select card__select--2">
+							<option value="1">Натуральный дуб</option>
+							<option value="2">Темный дуб</option>
+						</select>
+
+						<div class="card__label">Тип напольного покрытия</div>
+						<select name="" id="card_select_2_3" class="card__select card__select--2">
+							<option value="1">Ламинат</option>
+							<option value="2">Паркетная доска</option>
+							<option value="3">Инженерная доска</option>
+						</select>
+					</div>
+					<input class="card__radio" type="radio" name="card_style" id="card_style_2" value="2">
+					<label class="card__white" for="card_style_2">
+						<div class="card__btn">Выбрать стиль</div>
+					</label>
+				</div>
+
+				<div class="calc__card card">
+					<img src="img/flat/3_1_1.jpg" alt="" class="card__img card__img--3 card__img--311">
+					<img src="img/flat/3_2_1.jpg" alt="" class="card__img card__img--3 card__img--321">
+					<img src="img/flat/3_3_1.jpg" alt="" class="card__img card__img--3 card__img--331">
+					<img src="img/flat/3_1_2.jpg" alt="" class="card__img card__img--3 card__img--312">
+					<img src="img/flat/3_2_2.jpg" alt="" class="card__img card__img--3 card__img--322">
+					<img src="img/flat/3_3_2.jpg" alt="" class="card__img card__img--3 card__img--332">
+
+					<div class="card__wrap">
+						<div class="card__title">Эко-стиль</div>
+						<div class="card__descr">Современный</div>
+
+						<div class="card__label">Цвет стен</div>
+						<select name="" id="card_select_3_1" class="card__select card__select--3">
+							<option value="1">Глубокий-зеленый</option>
+							<option value="2">Розовой глины</option>
+							<option value="3">Дымчатый</option>
+						</select>
+
+						<div class="card__label">Цвет пола</div>
+						<select name="" id="card_select_3_2" class="card__select card__select--3">
+							<option value="1">Натуральный дуб</option>
+							<option value="2">Темный дуб</option>
+						</select>
+
+						<div class="card__label">Тип напольного покрытия</div>
+						<select name="" id="card_select_3_3" class="card__select card__select--3">
+							<option value="1">Ламинат</option>
+							<option value="2">Паркетная доска</option>
+							<option value="3">Инженерная доска</option>
+						</select>
+					</div>
+					<input class="card__radio" type="radio" name="card_style" id="card_style_3" value="3">
+					<label class="card__white" for="card_style_3">
+						<div class="card__btn">Выбрать стиль</div>
+					</label>
+				</div>
+
+			</div>
+		</div>
+		<!-- /.calc__block -->
+
+		<div class="calc__block">
+			<div class="calc__title">5. Дополнительные опции</div>
+
+			<div class="option">
+				<input data-name="Керамогранитный пол" class="option__checkbox" type="checkbox" name="option_check" id="option_1">
+				<label class="option__label" for="option_1">Керамогранитный пол Kerama Marazzi на кухне/в прихожей</label>
+
+				<div class="option__space"></div>
+				<div class="option__switch">
+					<div class="option__minus">-</div>
+					<input data-min="1" data-max="4" data-price="9000" id="option_value_1" class="option__value" value="1">
+					<div class="option__plus">+</div>
+				</div>
+				<div data-default="за пом." class="option__unit">за пом.</div>
+				<div data-default="9 0000 ₽" class="option__price">9 000 ₽</div>
+				<div data-default="9000" class="option__itog">0</div>
+			</div>
+
+			<div class="option">
+				<input data-name="Кухонный фартук" class="option__checkbox" type="checkbox" name="option_check" id="option_2">
+				<label class="option__label" for="option_2">Укладка плитки на кухонный фартук</label>
+
+				<div class="option__space"></div>
+				<div data-default="9 000 ₽" class="option__price">9 000 ₽</div>
+				<div data-default="9000" class="option__itog">0</div>
+			</div>
+
+			<div class="option">
+				<input data-name="Тёплый пол" class="option__checkbox" type="checkbox" name="option_check" id="option_3">
+				<label class="option__label" for="option_3">Устройство теплого пола (3 кв.м)</label>
+
+				<div class="option__space"></div>
+				<div class="option__switch">
+					<div class="option__minus">-</div>
+					<input data-min="1" data-max="3" data-price="13000" id="option_value_2" class="option__value" value="1">
+					<div class="option__plus">+</div>
+				</div>
+				<div data-default="за пом." class="option__unit">за пом.</div>
+				<div data-default="13 000 ₽" class="option__price">13 000 ₽</div>
+				<div data-default="13000" class="option__itog">0</div>
+			</div>
+
+			<div class="option">
+				<input data-name="Замена напольного унитаза на подвесной" class="option__checkbox" type="checkbox" name="option_check" id="option_4">
+				<label class="option__label" for="option_4">Объединение санузла</label>
+
+				<div class="option__space"></div>
+				<div data-default="13 000 ₽" class="option__price">13 000 ₽</div>
+				<div data-default="13000" class="option__itog">0</div>
+			</div>
+
+			<div class="option">
+				<input data-name="Объединение санузла" class="option__checkbox" type="checkbox" name="option_check" id="option_5">
+				<label class="option__label" for="option_5">Замена напольного унитаза на подвесной с кнопкой и инсталляцией</label>
+
+				<div class="option__space"></div>
+				<div data-default="9 000 ₽" class="option__price">9 000 ₽</div>
+				<div data-default="9000" class="option__itog">0</div>
+			</div>
+
+			<div class="option">
+				<input data-name="Гигиенический душ" class="option__checkbox" type="checkbox" name="option_check" id="option_6">
+				<label class="option__label" for="option_6">Гигиенический душ Grohe Bauclassik</label>
+
+				<div class="option__space"></div>
+				<div data-default="20 000 ₽" class="option__price">20 000 ₽</div>
+				<div data-default="20000" class="option__itog">0</div>
+			</div>
+
+			<div class="option">
+				<input data-name="Аквасторож" class="option__checkbox" type="checkbox" name="option_check" id="option_7">
+				<label class="option__label" for="option_7">Система защиты от протечек «Аквасторож»</label>
+
+				<div class="option__space"></div>
+				<div class="option__switch">
+					<div class="option__minus">-</div>
+					<input data-min="1" data-max="2" data-price="31000" id="option_value_3" class="option__value" value="1">
+					<div class="option__plus">+</div>
+				</div>
+				<div data-default="за шт." class="option__unit">за шт.</div>
+				<div data-default="31 000 ₽" class="option__price">31 000 ₽</div>
+				<div data-default="31000" class="option__itog">0</div>
+			</div>
+
+			<div class="option">
+				<input data-name="Накопительный бойлер" class="option__checkbox" type="checkbox" name="option_check" id="option_8">
+				<label class="option__label" for="option_8">Накопительный бойлер Thermex. Вместимость бака — 50 литров</label>
+
+				<div class="option__space"></div>
+				<div data-default="19 000 ₽" class="option__price">19 000 ₽</div>
+				<div data-default="19000" class="option__itog">0</div>
+			</div>
+
+			<div class="option">
+				<input data-name="Замена входной двери" class="option__checkbox" type="checkbox" name="option_check" id="option_9">
+				<label class="option__label" for="option_9">Принудительная вентиляция в санузле</label>
+
+				<div class="option__space"></div>
+				<div data-default="9 000 ₽" class="option__price">9 000 ₽</div>
+				<div data-default="9000" class="option__itog">0</div>
+			</div>
+
+			<div class="option">
+				<input data-name="Принудительная вентиляция в санузле" class="option__checkbox" type="checkbox" name="option_check" id="option_10">
+				<label class="option__label" for="option_10">Замена входной двери. Стальная дверь «Гардиан» с двумя замками и задвижкой</label>
+
+				<div class="option__space"></div>
+				<div data-default="55 000 ₽" class="option__price">55 000 ₽</div>
+				<div data-default="55000" class="option__itog">0</div>
+			</div>
+
+			<div class="option">
+				<input data-name="Замена радиаторов" class="option__checkbox" type="checkbox" name="option_check" id="option_11">
+				<label class="option__label" for="option_11">Установка стальных трубчатых радиаторов Purmo. Цвет: белый (до 20 кв.м)</label>
+
+				<div class="option__space"></div>
+				<div class="option__switch">
+					<div class="option__minus">-</div>
+					<input data-min="1" data-max="20" data-price="35000" id="option_value_4" class="option__value" value="1">
+					<div class="option__plus">+</div>
+				</div>
+				<div data-default="за шт." class="option__unit">за шт.</div>
+				<div data-default="35 000 ₽" class="option__price">35 000 ₽</div>
+				<div data-default="35000" class="option__itog">0</div>
+			</div>
+
+			<div class="option">
+				<input data-name="Террасный настил" class="option__checkbox" type="checkbox" name="option_check" id="option_12">
+				<label class="option__label" for="option_12">Укладка террасного настила ИКЕА Руннен на балконе</label>
+
+				<div class="option__space"></div>
+				<div class="option__switch">
+					<div class="option__minus">-</div>
+					<input data-min="1" data-max="15" data-price="2900" id="option_value_5" class="option__value" value="1">
+					<div class="option__plus">+</div>
+				</div>
+				<div data-default="за кв.м." class="option__unit">за кв.м.</div>
+				<div data-default="2 900 ₽" class="option__price">2 900 ₽</div>
+				<div data-default="2900" class="option__itog">0</div>
+			</div>
+
+			<div class="option">
+				<input data-name="Декоративные обои в детскую" class="option__checkbox" type="checkbox" name="option_check" id="option_13">
+				<label class="option__label" for="option_13">Акцентная стена с декоративными обоями в детскую (5 пог.м)</label>
+
+				<div class="option__space"></div>
+				<div data-default="15 000 ₽" class="option__price">15 000 ₽</div>
+				<div data-default="15000" class="option__itog">0</div>
+			</div>
+
+			<div class="option">
+				<input data-name="Шторы" class="option__checkbox" type="checkbox" name="option_check" id="option_14">
+				<label class="option__label" for="option_14">Двойной карниз для штор и тюли (монтаж вкл. в стоимость)</label>
+
+				<div class="option__space"></div>
+				<div class="option__switch">
+					<div class="option__minus">-</div>
+					<input data-min="1" data-max="10" data-price="5000" id="option_value_6" class="option__value" value="1">
+					<div class="option__plus">+</div>
+				</div>
+				<div data-default="за шт." class="option__unit">за шт.</div>
+				<div data-default="5 000 ₽" class="option__price">5 000 ₽</div>
+				<div data-default="5000" class="option__itog">0</div>
+			</div>
+
+			<div class="option option--window">
+				<input data-name="Замена окон" class="option__checkbox option__checkbox--window" type="checkbox" name="option_check" id="option_15">
+				<label class="option__label" for="option_15">Замена окон. Двухкамерные стеклопакеты на профиле Rehau</label>
+
+				<div class="option__space"></div>
+
+				<div data-default="0 ₽" class="option__price option__price--window">0 ₽</div>
+				<div data-default="0" class="option__itog option__itog--window">0</div>
+			</div>
+
+			<div class="option__windows">
+
+				<div class="option__block">
+					<div class="option__text">Две створки</div>
+					<img src="img/window1.jpg" alt="" class="option__img">
+					<div class="option__switch option__switch--window">
+						<div class="option__minus option__minus--window">-</div>
+						<input data-min="0" data-max="10" data-price="19500" id="option_value_7" class="option__value option__value--window" value="0">
+						<div class="option__plus option__plus--window">+</div>
+					</div>
+					<div class="option__text">19 500 за шт.</div>
+				</div>
+
+				<div class="option__block">
+					<div class="option__text">Три створки</div>
+					<img src="img/window2.jpg" alt="" class="option__img">
+					<div class="option__switch option__switch--window">
+						<div class="option__minus option__minus--window">-</div>
+						<input data-min="0" data-max="10" data-price="29500" id="option_value_8" class="option__value option__value--window" value="0">
+						<div class="option__plus option__plus--window">+</div>
+					</div>
+					<div class="option__text">29 500 за шт.</div>
+				</div>
+
+				<div class="option__block">
+					<div class="option__text">Балконная дверь</div>
+					<img src="img/window3.jpg" alt="" class="option__img">
+					<div class="option__switch option__switch--window">
+						<div class="option__minus option__minus--window">-</div>
+						<input data-min="0" data-max="10" data-price="35000" id="option_value_9" class="option__value option__value--window" value="0">
+						<div class="option__plus option__plus--window">+</div>
+					</div>
+					<div class="option__text">35 000 за шт.</div>
+				</div>
+
+				<div class="option__block">
+					<div class="option__text">Эркер, 5 створок</div>
+					<img src="img/window4.jpg" alt="" class="option__img">
+					<div class="option__switch option__switch--window">
+						<div class="option__minus option__minus--window">-</div>
+						<input data-min="0" data-max="10" data-price="49000" id="option_value_10" class="option__value option__value--window" value="0">
+						<div class="option__plus option__plus--window">+</div>
+					</div>
+					<div class="option__text">49 000 за шт.</div>
+				</div>
+
+				<div class="option__block">
+					<div class="option__text">Эркер, 2 створки</div>
+					<img src="img/window5.jpg" alt="" class="option__img">
+					<div class="option__switch option__switch--window">
+						<div class="option__minus option__minus--window">-</div>
+						<input data-min="0" data-max="10" data-price="33000" id="option_value_11" class="option__value option__value--window" value="0">
+						<div class="option__plus option__plus--window">+</div>
+					</div>
+					<div class="option__text">33 000 за шт.</div>
+				</div>
+
+			</div>
+
+		</div>
+		<!-- /.calc__block -->
+
+		<div class="calc__block">
+			<div class="calc__title">6. Итоговая смета</div>
+
+			<div class="table">
+
+				<div class="table__left">
+
+					<div class="table__block">
+
+						<div class="table__line">
+							<div id="table_title_1" class="table__title">Базовый ремонт в скандинавском стиле</div>
+							<div class="table__space"></div>
+							<div id="table_price_1" class="table__price">730 000 ₽</div>
+						</div>
+
+						<div class="table__info" id="table_info_1">
+							<div class="table__li table__li--100">Цвет стен: Белый</div>
+							<div class="table__li table__li--100">Цвет пола: Натуральный дуб</div>
+							<div class="table__li table__li--100">Тип напольного покрытия: Ламинат</div>
+						</div>
+						
+
+					</div>
+					<div class="table__block">
+
+						<div class="table__line">
+							<div id="table_title_2" class="table__title">Капитальные работы</div>
+							<div class="table__space"></div>
+							<div id="table_price_2" class="table__price">0 ₽</div>
+						</div>
+
+						<div class="table__info" id="table_info_2">
+						</div>
+
+					</div>
+					<div class="table__block">
+
+						<div class="table__line">
+							<div id="table_title_3" class="table__title">Дополнительные опции</div>
+							<div class="table__space"></div>
+							<div id="table_price_3" class="table__price">0 ₽</div>
+						</div>
+
+						<div class="table__info table__info--long" id="table_info_3">
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="table__right">
+
+					<div class="table__bold">Итого</div>
+
+					<div class="table__result">730 000 ₽</div>
+
+					<div class="table__btn">Оформить заявку</div>
+
+					<div class="table__send">Отправить себе на почту</div>
+
+				</div>
+
+			</div>
+
+			<div style="display: none;" id="calc_sum_1">0</div>
+			<div style="display: none;" id="calc_sum_2">0</div>
+
+		</div>
+		<!-- /.calc__block -->
+
+	</div>
+	<!-- /.calc -->
+	
+
+
+</body>
+</html>
