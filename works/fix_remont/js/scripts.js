@@ -14,6 +14,7 @@ $(document).ready(function() {
 		if ( $('#calc_rooms').val() > 5 ) {
 			$('#calc_rooms').val( 5 );
 		}
+		information();
 	});
 
 	$('#calc_rooms').next().click(function(){
@@ -30,6 +31,7 @@ $(document).ready(function() {
 		if ( $('#calc_rooms').val() > 5 ) {
 			$('#calc_rooms').val( 5 );
 		}
+		information();
 	});
 
 	$('#calc_rooms').change(function(){
@@ -46,7 +48,7 @@ $(document).ready(function() {
 		if ( $(this).val() > 5 ) {
 			$(this).val( 5 );
 		}
-		
+		information();
 	});
 
 	$('#calc_studio').change(function(){
@@ -55,6 +57,7 @@ $(document).ready(function() {
 		} else {
 			$('#calc_rooms').val ( 1 );
 		}
+		information();
 	});
 
 	$('#calc_square').prev().click(function(){
@@ -65,6 +68,7 @@ $(document).ready(function() {
 		if ( $('#calc_square').val() > 200 ) {
 			$('#calc_square').val( 200 );
 		}
+		information();
 	});
 
 	$('#calc_square').next().click(function(){
@@ -75,6 +79,7 @@ $(document).ready(function() {
 		if ( $('#calc_square').val() > 200 ) {
 			$('#calc_square').val( 200 );
 		}
+		information();
 	});
 
 	$('#calc_square').change(function(){
@@ -84,6 +89,7 @@ $(document).ready(function() {
 		if ( $(this).val() > 200 ) {
 			$(this).val( 200 );
 		}
+		information();
 	});
 
 
@@ -98,6 +104,7 @@ $(document).ready(function() {
 		$('.card__img--1').css({display: "none"});
 		let card_img = ".card__img--1" + card_select_1_1 + card_select_1_2;
 		$(card_img).css({display: "block"});
+		information();
 	});
 
 	$('.card__select--2').change(function(){
@@ -106,6 +113,7 @@ $(document).ready(function() {
 		$('.card__img--2').css({display: "none"});
 		let card_img = ".card__img--2" + card_select_2_1 + card_select_2_2;
 		$(card_img).css({display: "block"});
+		information();
 	});
 
 	$('.card__select--3').change(function(){
@@ -114,6 +122,7 @@ $(document).ready(function() {
 		$('.card__img--3').css({display: "none"});
 		let card_img = ".card__img--3" + card_select_3_1 + card_select_3_2;
 		$(card_img).css({display: "block"});
+		information();
 	});
 
 
@@ -130,6 +139,7 @@ $(document).ready(function() {
 		
 		$(this).parent().parent().find(".option__itog").text(option_itog);
 		$(this).parent().parent().find(".option__price").text( option_itog.toLocaleString("ru") + " ₽" );
+		information();
 	});
 
 	$('.option__plus').click(function(){
@@ -143,6 +153,7 @@ $(document).ready(function() {
 		
 		$(this).parent().parent().find(".option__itog").text(option_itog);
 		$(this).parent().parent().find(".option__price").text( option_itog.toLocaleString("ru") + " ₽" );
+		information();
 	});
 
 
@@ -165,6 +176,7 @@ $(document).ready(function() {
 			$(this).parent().find(".option__itog").text( 0 );
 			$(this).parent().find(".option__value").val( 1 );
 		}
+		information();
 	});
 
 	$('.option__value').change(function(){
@@ -179,6 +191,7 @@ $(document).ready(function() {
 		
 		$(this).parent().parent().find(".option__itog").text(option_itog);
 		$(this).parent().parent().find(".option__price").text( option_itog.toLocaleString("ru") + " ₽" );
+		information();
 	});
 
 
@@ -188,6 +201,7 @@ $(document).ready(function() {
 		} else {
 			$('.option__windows').css({display: "none"});
 		}
+		information();
 	});
 
 	$('.option__value--window').change(function(){
@@ -201,6 +215,7 @@ $(document).ready(function() {
 
 		$('.option__itog--window').text( option_value_sum );
 		$('.option__price--window').text( option_value_sum.toLocaleString("ru") + " ₽" );
+		information();
 	});
 
 
@@ -215,6 +230,7 @@ $(document).ready(function() {
 
 		$('.option__itog--window').text( option_value_sum );
 		$('.option__price--window').text( option_value_sum.toLocaleString("ru") + " ₽" );
+		information();
 	});
 
 
@@ -230,7 +246,7 @@ $(document).ready(function() {
 
 		$('.option__itog--window').text( option_value_sum );
 		$('.option__price--window').text( option_value_sum.toLocaleString("ru") + " ₽" );
-
+		information();
 	});
 
 
@@ -265,6 +281,7 @@ $(document).ready(function() {
 
 		$('#calc_sum_1').text(+calc_capital_1_price + +calc_capital_2_price + +calc_capital_3_price);
 		calculation();
+		information();
 	});
 
 
@@ -292,6 +309,7 @@ $(document).ready(function() {
 			<div class="table__li table__li--100">Тип напольного покрытия: ${calc_style_floor}</div>
 		`);
 		calculation();
+		information();
 	});
 
 	$('#card_select_1_1, #card_select_1_2, #card_select_1_3, #card_select_2_1, #card_select_2_2, #card_select_2_3, #card_select_3_1, #card_select_3_2, #card_select_3_3').change(function(){
@@ -308,6 +326,7 @@ $(document).ready(function() {
 			<div class="table__li table__li--100">Тип напольного покрытия: ${calc_style_floor}</div>
 		`);
 		calculation();
+		information();
 	});
 
 
@@ -320,11 +339,13 @@ $(document).ready(function() {
 		});
 		options();
 		calculation();
+		information();
 	});
 
 	$('.option__minus, .option__plus').click(function(){
 		options();
 		calculation();
+		information();
 	});
 
 	function options() {
@@ -337,22 +358,28 @@ $(document).ready(function() {
 		$('#calc_sum_2').text(options_sum);
 		$('#table_price_3').text( options_sum.toLocaleString("ru") + " ₽" );
 		calculation();
+		information();
 	}
 
 	$('.calc__minus').click(function(){
 		calculation();
+		information();
 	});
 	$('.calc__plus').click(function(){
 		calculation();
+		information();
 	});
 	$('#calc_square').change(function(){
 		calculation();
+		information();
 	});
 	$('#calc_rooms').change(function(){
 		calculation();
+		information();
 	});
 	$('#calc_studio').change(function(){
 		calculation();
+		information();
 	});
 
 	calculation();
@@ -377,5 +404,125 @@ $(document).ready(function() {
 		$('.table__result').text( calc_itog.toLocaleString("ru") + " ₽" );
 
 	}
+
+
+	$('.black').fadeOut(0);
+	$('.form__close').click(function(){
+		$('.black').fadeOut(250).removeClass("black--open");
+		$('#calc_form').fadeOut(250);
+		$('#calc_mail').fadeOut(250);
+	});
+
+	$('.table__btn').click(function(){
+		$('.black').fadeIn(150).addClass("black--open");;
+		$('#calc_form').fadeIn(250);
+	});
+
+	$('.table__mail').click(function(){
+		$('.black').fadeIn(150).addClass("black--open");;
+		$('#calc_mail').fadeIn(250);
+	});
+
+
+	$('#calc_city').change(function(){
+		if ( $(this).val() == 1 ) {
+			$('.calc__block--forother').css({display: "none"});
+			$('.calc__area').css({display: "block"});
+		}
+		if ( $(this).val() == 2 ) {
+			$('.calc__block--forother').css({display: "flex"});
+			$('.calc__area').css({display: "none"});
+		}
+		information();
+	});
+
+
+	information();
+	function information() {
+
+
+		var info_city = $('#calc_city option:selected').text();
+		var info_square = $('#calc_square').val();
+		var info_rooms = $('#calc_rooms').val();
+
+		if ( $('input[name=card_style]:checked').val() == 1 ) {
+			var info_style = "Ремонт в скандинавском стиле; ";
+		}
+		if ( $('input[name=card_style]:checked').val() == 2 ) {
+			var info_style = "Ремонт в классическом стиле; ";
+		}
+		if ( $('input[name=card_style]:checked').val() == 3 ) {
+			var info_style = "Ремонт в эко-стиле; ";
+		}
+
+		var info_style = info_style +
+		"Цвет стен: " + $('input[name=card_style]:checked').prev().find(".card__select:eq(0) option:selected").text() + "; " +
+		"Цвет пола: " + $('input[name=card_style]:checked').prev().find(".card__select:eq(1) option:selected").text() + "; " +
+		"Тип напольного покрытия: " + $('input[name=card_style]:checked').prev().find(".card__select:eq(2) option:selected").text() + ";";
+
+		var info_capital_1 = "";
+		var info_capital_2 = "";
+		var info_capital_3 = "";
+
+		if ( $('#calc_capital_1').is(":checked") ) {
+			var info_capital_1 = 'Разводка электро- и слаботочной проводки; ';
+		}
+		if ( $('#calc_capital_2').is(":checked") ) {
+			var info_capital_2 = 'Черновая стяжка пола (до 100 мм); ';
+		}
+		if ( $('#calc_capital_3').is(":checked") ) {
+			var info_capital_3 = 'Возведение внутренних стен (газобетонные блоки); ';
+		}
+
+		var info_capital = info_capital_1 + info_capital_2 + info_capital_3;
+
+		var info_options = "";
+
+		$('input[name=option_check]:checked').each(function(){
+			if ( $(this).parent().find(".option__value").val() > 0 ) {
+				info_options = info_options + $(this).data("name") + ", кол-во: " + $(this).parent().find(".option__value").val() + ", Цена: " + $(this).parent().find(".option__price").text() + " <br>" + " \n";
+			} else {
+				info_options = info_options + $(this).data("name") + ", Цена: " + $(this).parent().find(".option__price").text() + " <br>" + " \n";
+			}
+		});
+
+		var info_windows = "";
+
+		$('.option__value--window').each(function(){
+
+			if ( $(this).val() > 0 ) {
+				info_windows = info_windows + $(this).parent().parent().find(".option__text:eq(0)").text() + " Кол-во: " + $(this).val() + " <br>" + " \n";
+			}
+
+		});
+
+		var info_itog = $('.table__result').text();
+
+		if ( $('#calc_city').val() != 1 ) {
+			$('#form_data, #mail_data').val(
+				"Регион: " + info_city + " <br>" + " \n" +
+				"Площадь: " + info_square + " кв.м" + " <br>" + " \n" +
+				"Комнаты: " + info_rooms
+			);
+		} else {
+			$('#form_data, #mail_data').val(
+				"Регион: " + info_city + " <br>" + " \n" +
+				"Площадь: " + info_square + " кв.м" + " <br>" + " \n" +
+				"Комнаты: " + info_rooms + " <br>" + " \n" +
+				"Стиль: " + info_style + " <br>" + " \n" +
+				"Капитальные работы: " + info_capital + " <br>" + " \n" +
+				"Опции: " + info_options + " <br>" + " \n" +
+				"Окна: " + info_windows + " <br>" + " \n" +
+				"Итоговая цена: " + info_itog
+			);
+		}
+
+
+
+
+	}
+
+
+
 
 });

@@ -44,6 +44,8 @@ body
     &__block
         margin: 0 0 40px 0
         width: 100%
+        &--forother
+            display: none
 
     &__params
         display: flex
@@ -159,8 +161,11 @@ body
         display: flex
         justify-content: space-between
 
-
-
+    &__note
+        color: #aaa
+        padding: 5px 0px 5px 30px
+        max-width: 440px
+        font-size: 16px
 
 
 
@@ -460,7 +465,7 @@ body
         margin: 0 0 50px 0
 
     &__btn
-        width: 250px
+        width: 270px
         height: 52px
         background: $color1
         border-radius: 50px
@@ -481,7 +486,7 @@ body
         &:active
             opacity: 0.3
 
-    &__send
+    &__mail
         margin: 30px 0 0 0
         font-size: 17px
         text-align: center
@@ -514,8 +519,12 @@ body
     z-index: 9998
     background: #00000099
     display: flex
+    opacity: 0
+    transition-duration: 0.2s
     justify-content: center
     align-items: center
+    &--open
+        opacity: 1
 
 
 
@@ -526,7 +535,15 @@ body
     min-height: 300px
     background: #fff
     border-radius: 10px
-    padding: 30px 20px
+    padding: 30px 50px 30px 50px
+    //transition-duration: 0.3s
+    transform: scale(1)
+    opacity: 1
+    display: none
+    &--open
+        display: block
+        transform: scale(1)
+        opacity: 1
 
     &__close
         position: absolute
@@ -558,9 +575,12 @@ body
         flex-wrap: wrap
 
     &__line
-        width: 46%
-        max-width: 500px
-        margin: 0 auto 20px auto
+        width: 48%
+        max-width: 550px
+        margin: 0 0 20px 0
+        &--100
+            width: 100%
+            max-width: 900px
 
     &__name
         font-size: 18px
@@ -573,3 +593,47 @@ body
         border: 1px solid #ccc
         font-size: 18px
         padding: 0 10px
+
+    &__textarea
+        width: 100%
+        margin: 5px 0 0 0
+        height: 80px
+        border-radius: 2px
+        border: 1px solid #ccc
+        font-size: 18px
+        padding: 10px
+
+    &__flex
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        width: 100%
+        position: relative
+
+    &__note
+        text-align: center
+        color: #aaa
+
+    &__submit
+        width: 260px
+        height: 52px
+        background: $color1
+        border: none
+        border-radius: 50px
+        margin: 10px auto
+        color: #fff
+        display: flex
+        justify-content: center
+        align-items: center
+        font-weight: 600
+        font-size: 17px
+        box-shadow: 0 5px 15px 1px rgba(0,0,0,0.2)
+        transition-duration: 0.2s
+        cursor: pointer
+        user-select: none
+        &:hover
+            transform: scale(1.04, 1.04)
+            opacity: 0.9
+            box-shadow: 0 10px 25px 1px rgba(0,0,0,0.3)
+        &:active
+            opacity: 0.3
