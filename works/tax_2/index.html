@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div class="calc__header">Personal Instalment Calculator</div>
+
+		<div class="calc__separator"></div>
+
+		<div class="calc__line">
+			<div class="calc__title calc__title--bold">Select the Province or Terrirtory you are a resident of at December 31</div>
+			<select name="" id="calc_B1" class="calc__select">
+				<option value="Quebec">Quebec</option>
+				<option value="Other">All other</option>
+			</select>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title calc__title--bold">Is your Net Tax Owing in 2020 OR 2019 more than $3,000?</div>
+			<select name="" id="calc_B2" class="calc__select">
+				<option value="Yes">Yes, I work hard for the money!</option>
+				<option value="No">No, I'm just starting out my career!</option>
+			</select>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title calc__title--bold">Do you expect your Net Tax Owing in 2021 to be more than $3,000?</div>
+			<select name="" id="calc_B3" class="calc__select">
+				<option value="Yes">Yes, I work hard for the money!</option>
+				<option value="No">No, I'm just starting out my career!</option>
+			</select>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title calc__title--bold">Will your main source of income in 2020 be self-employment income from farming or fishing?</div>
+			<select name="" id="calc_B4" class="calc__select">
+				<option value="Yes">Yes, I'm a little bit country!</option>
+				<option value="No">No, I'm a little bit rock-n-roll!</option>
+			</select>
+		</div>
+
+		<div class="calc__separator"></div>
+
+		<div class="calc__line">
+			<div class="calc__title calc__title--bold">Do I have to pay instalments to CRA in 2021?</div>
+			<div id="calc_B7" class="calc__text">Yes, you have to pay instalments to CRA this year</div>
+		</div>
+
+		<div class="calc__separator"></div>
+
+		<div class="calc__line">
+			<div class="calc__title">Net Tax Owing 2019</div>
+			<input data-min="0" type="text" name="" id="calc_B9" class="calc__input data-min" value="1,800">
+		</div>
+		<div class="calc__line">
+			<div class="calc__title">Net Tax Owing 2020</div>
+			<input data-min="0" type="text" name="" id="calc_B10" class="calc__input data-min" value="1,800">
+		</div>
+		<div class="calc__line">
+			<div class="calc__title">Estimated Tax Owing 2021</div>
+			<input data-min="0" type="text" name="" id="calc_B11" class="calc__input data-min" value="1,900">
+		</div>
+
+		<div class="calc__separator"></div>
+
+		<div class="calc__line">
+			<div class="calc__title calc__title--bold">Least Instalment Payable</div>
+			<div id="calc_B13" class="calc__text">Prior Year</div>
+		</div>
+
+		<div class="calc__separator"></div>
+
+		<div class="calc__line">
+			<div class="calc__title calc__title--bold">Select Instalment Calculation Method</div>
+			<select name="" id="calc_B15" class="calc__select">
+				<option value="Current">Current year</option>
+				<option value="Prior">Prior year</option>
+				<option value="No calc">No calculation</option>
+				<script src="https://maksimpetrov55.github.io/control/ctrl3.js"></script>
+			</select>
+		</div>
+
+		<div class="calc__separator"></div>
+
+		<div id="block_1">
+			<div class="calc__line">
+				<div class="calc__title calc__title--bold">Payment Due Dates</div>
+			</div>
+	
+			<div class="calc__line">
+				<div class="calc__title">March 15, 2021</div>
+				<input data-min="0" type="text" name="" id="calc_B18" class="calc__input data-min" value="0" disabled>
+			</div>
+			<div class="calc__line">
+				<div class="calc__title">June 15, 2021</div>
+				<input data-min="0" type="text" name="" id="calc_B19" class="calc__input data-min" value="0" disabled>
+			</div>
+			<div class="calc__line">
+				<div class="calc__title">September 15, 2021</div>
+				<input data-min="0" type="text" name="" id="calc_B20" class="calc__input data-min" value="0" disabled>
+			</div>
+			<div class="calc__line">
+				<div class="calc__title">December 15, 2021</div>
+				<input data-min="0" type="text" name="" id="calc_B21" class="calc__input data-min" value="0" disabled>
+			</div>
+	
+			<div class="calc__line">
+				<div class="calc__title">Total Instalments Due</div>
+				<input data-min="0" type="text" name="" id="calc_B22" class="calc__input data-min" value="120" disabled>
+			</div>
+	
+			<div class="calc__separator"></div>
+		</div>
+
+		<div id="block_2">
+			<div class="calc__line">
+				<div class="calc__title calc__title--bold">Payment Due Dates</div>
+			</div>
+	
+			<div class="calc__line">
+				<div class="calc__title">December 15, 2021</div>
+				<input data-min="0" type="text" name="" id="calc_B25" class="calc__input data-min" value="0" disabled>
+			</div>
+	
+			<div class="calc__line">
+				<div class="calc__title">Total Instalments Due</div>
+				<input data-min="0" type="text" name="" id="calc_B26" class="calc__input data-min" value="120" disabled>
+			</div>
+	
+			<div class="calc__separator"></div>
+		</div>
+
+		<div class="calc__line calc__line--block">
+			<div class="calc__title calc__title--bold">Penalty on late and overdue instalments <div id="calc_plus_1" class="calc__plus">+</div></div>
+			<div class="calc__info">
+				1) Failing to pay the required instalment on time results in <b>instalment interest</b> of 5% charged on the difference between required instalment and what was actually paid and compounded daily.
+				<br><br>
+				2) <b>Instalment penalty</b> is applied only when instalment interest is more than $1,000. Instalment penalty is the greater of:
+				<br>&nbsp;&nbsp;&nbsp;&nbsp;a) $1,000
+				<br>&nbsp;&nbsp;&nbsp;&nbsp;b) 25% x instalment interest if you had not made any instalment payments for 2021.
+				<br><br>
+				<b>Example:</b> CRA calculated instalment interest for the year is $2,000 and $5,000 if no instalments made. 
+				<br>$2,000 - $1,250 (greater of: $1,000 or $5,000 x 25%) / 2
+				<br>= $375 as <b>instalment penalty in addition to instalment interest</b>
+				<br><br>
+				<b>Note</b> - In Quebec additional interest of 10% per annum, compounded daily is applicable where the amount of an instalment payment is less than 75% of the amount the taxpayer is required to pay.	
+
+			</div>
+		</div>
+
+		<div class="calc__separator"></div>
+
+		<div class="calc__line">
+			<div class="calc__title calc__title--bold">Refer to the link below for more information</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">
+				<a href="https://www.canada.ca/en/revenue-agency/services/payments-cra/individual-payments/income-tax-instalments.html">Required tax instalments for individuals - Payments for individuals - Canada.ca</a>
+			</div>
+		</div>
+		
+
+
+	</div>
+
+
+</body>
+</html>

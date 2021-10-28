@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div class="calc__header">Corporate Instalment Calculator</div>
+
+		<div class="calc__separator"></div>
+
+		<div class="calc__line">
+			<div class="calc__title calc__title--bold">Select the Province or Terrirtory you are a resident of at December 31</div>
+			<select name="" id="calc_B1" class="calc__select">
+				<option value="Other">All other</option>
+				<option value="Alberta">Alberta</option>
+				<option value="Quebec">Quebec</option>
+			</select>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title calc__title--bold">Is your Corporate Tax Owing in the previous fiscal year, $3,000 or more?</div>
+			<select name="" id="calc_B2" class="calc__select">
+				<option value="Yes">Yes, we're growing fast!</option>
+				<option value="No">No, we're just starting out!</option>
+			</select>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title calc__title--bold">Do you expect your Corporate Tax Owing in the current fiscal year, $3,000 or more?</div>
+			<select name="" id="calc_B3" class="calc__select">
+				<option value="Yes">Yes, we're growing fast!</option>
+				<option value="No">No, we're just starting out!</option>
+			</select>
+		</div>
+
+		<div id="block_7">
+			<div class="calc__line">
+				<div class="calc__title calc__title--bold">Does the corporation meet the quarterly instalment criteria (see ? for criteria)?</div>
+				<select name="" id="calc_B4"  class="calc__select">
+					<option value="No">No, Fortune 500, here we come!</option>
+					<option value="Yes">Yes, we are a start-up!</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="calc__separator"></div>
+
+		<div class="calc__line">
+			<div class="calc__title calc__title--bold">Do I have to pay instalments to CRA in 2021?</div>
+			<div id="calc_B5" class="calc__text">Yes, you have to pay instalments to CRA this year</div>
+		</div>
+
+		<div class="calc__separator"></div>
+
+		<div id="block_6">
+			<div id="block_1">
+				<div id="block_4">
+					<div class="calc__line">
+						<div class="calc__title calc__title--bold">Does the corporation meet the quarterly instalment criteria (see ? for criteria)?</div>
+						<select name="" id="calc_B7" class="calc__select">
+							<option value="Yes">Yes, we are a start-up!</option>
+							<option value="No">No, Fortune 500, here we come!</option>
+						</select>
+					</div>
+			
+					<div class="calc__separator"></div>
+	
+					<div class="calc__line">
+						<div class="calc__title calc__title--bold">Instalment Frequency</div>
+						<div id="calc_B9" class="calc__text">awdaw</div>
+					</div>
+			
+					<div class="calc__separator"></div>
+				</div>
+		
+				<div class="calc__line">
+					<div class="calc__title calc__title--bold">Corporation's Year End</div>
+					<select name="" id="calc_B11" placeholder="calc_B11" class="calc__select calc__select--date">
+						<option value="1">Jan</option>
+						<option value="2">Feb</option>
+						<option value="3">Mar</option>
+						<option value="4">Apr</option>
+						<option value="5">May</option>
+						<option value="6">Jun</option>
+						<option value="7">Jul</option>
+						<option value="8">Aug</option>
+						<option value="9">Sep</option>
+						<option value="10">Oct</option>
+						<option value="11">Nov</option>
+						<option value="12">Dec</option>
+					</select>
+					<select name="" id="calc_C11" placeholder="calc_C11" class="calc__select calc__select--date">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20">20</option>
+						<option value="21">21</option>
+						<option value="22">22</option>
+						<option value="23">23</option>
+						<option value="24">24</option>
+						<option value="25">25</option>
+						<option value="26">26</option>
+						<option value="27">27</option>
+						<option value="28">28</option>
+						<option value="29">29</option>
+						<option value="30">30</option>
+						<option value="31">31</option>
+					</select>
+					<select name="" id="calc_D11" placeholder="calc_D11" class="calc__select calc__select--date">
+						<option value="2021">2021</option>
+						<option value="2020">2020</option>
+					</select>
+				</div>
+		
+				<div class="calc__separator"></div>
+
+				<div id="block_8">
+					<div class="calc__line">
+						<div class="calc__title calc__title--bold">Instalment Frequency</div>
+						<select name="" id="calc_B10" class="calc__select">
+							<option value="Monthly">Monthly</option>
+							<option value="Quarterly">Quarterly</option>
+						</select>
+					</div>
+	
+					<div class="calc__separator"></div>
+				</div>
+		
+				<div class="calc__line">
+					<div class="calc__title calc__title--bold">Corporate Year</div>
+					<div class="calc__flex">
+						<div class="calc__year">2021</div>
+						<div class="calc__year">2020</div>
+						<div class="calc__year">2019</div>
+					</div>
+				</div>
+
+				<div id="block_10">
+					<div class="calc__line">
+						<div class="calc__title">Federal Tax</div>
+						<div class="calc__flex">
+							<input data-min="0" type="text" name="" id="calc_B13" placeholder="calc_B13" class="calc__input calc__input--short data-min" value="3,000">
+							<input data-min="0" type="text" name="" id="calc_C13" placeholder="calc_C13" class="calc__input calc__input--short data-min" value="3,100">
+							<input data-min="0" type="text" name="" id="calc_D13" placeholder="calc_D13" class="calc__input calc__input--short data-min" value="1,000">
+						</div>
+					</div>
+				</div>
+		
+				<div class="calc__line">
+					<div class="calc__title">Provincial Tax</div>
+					<div class="calc__flex">
+						<input data-min="0" type="text" name="" id="calc_B14" placeholder="calc_B14" class="calc__input calc__input--short data-min" value="4,000">
+						<input data-min="0" type="text" name="" id="calc_C14" placeholder="calc_C14" class="calc__input calc__input--short data-min" value="5,000">
+						<input data-min="0" type="text" name="" id="calc_D14" placeholder="calc_D14" class="calc__input calc__input--short data-min" value="1,000">
+					</div>
+				</div>
+
+				<div id="block_9">
+					<div class="calc__line">
+						<div class="calc__title">Federal Tax Credit</div>
+						<div class="calc__flex">
+							<input data-min="0" type="text" name="" id="calc_B12" placeholder="calc_B12" class="calc__input calc__input--short data-min" value="1,000">
+							<input data-min="0" type="text" name="" id="calc_C12" placeholder="calc_C12" class="calc__input calc__input--short data-min calc__input--disabled" value="5,000" disabled>
+							<input data-min="0" type="text" name="" id="calc_D12" placeholder="calc_D12" class="calc__input calc__input--short data-min calc__input--disabled" value="1,000" disabled>
+						</div>
+					</div>
+				</div>
+		
+				<div class="calc__line">
+					<div class="calc__title calc__title--bold">Instalment base</div>
+					<div class="calc__flex">
+						<input data-min="0" type="text" name="" id="calc_B15" placeholder="calc_B15" class="calc__input calc__input--short data-min calc__input--disabled" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_C15" placeholder="calc_C15" class="calc__input calc__input--short data-min calc__input--disabled" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_D15" placeholder="calc_D15" class="calc__input calc__input--short data-min calc__input--disabled" value="" disabled>
+					</div>
+				</div>
+		
+				<div class="calc__separator"></div>
+			</div>
+			
+	
+			<div id="block_2">
+				<div class="calc__line">
+					<div class="calc__title calc__title--bold">Instalment Due Dates - Quarterly</div>
+					<div id="calc_names_3" class="calc__flex">
+						<div class="calc__year">Method A</div>
+						<div class="calc__year">Method B</div>
+					</div>
+				</div>
+		
+				<div class="calc__line">
+					<div id="calc_A18" class="calc__title">Date</div>
+					<div class="calc__flex">
+						<input data-min="0" type="text" name="" id="calc_B18" placeholder="calc_B18" class="calc__input calc__input--method data-min calc__input--disabled calc__input--other" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_C18" placeholder="calc_C18" class="calc__input calc__input--method data-min calc__input--disabled calc__input--quebec" value="" disabled>
+					</div>
+				</div>
+				<div class="calc__line">
+					<div id="calc_A19" class="calc__title">Date</div>
+					<div class="calc__flex">
+						<input data-min="0" type="text" name="" id="calc_B19" placeholder="calc_B19" class="calc__input calc__input--method data-min calc__input--disabled calc__input--other" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_C19" placeholder="calc_C19" class="calc__input calc__input--method data-min calc__input--disabled calc__input--quebec" value="" disabled>
+					</div>
+				</div>
+				<div class="calc__line">
+					<div id="calc_A20" class="calc__title">Date</div>
+					<div class="calc__flex">
+						<input data-min="0" type="text" name="" id="calc_B20" placeholder="calc_B20" class="calc__input calc__input--method data-min calc__input--disabled calc__input--other" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_C20" placeholder="calc_C20" class="calc__input calc__input--method data-min calc__input--disabled calc__input--quebec" value="" disabled>
+					</div>
+				</div>
+				<div class="calc__line">
+					<div id="calc_A21" class="calc__title">Date</div>
+					<div class="calc__flex">
+						<input data-min="0" type="text" name="" id="calc_B21" placeholder="calc_B21" class="calc__input calc__input--method data-min calc__input--disabled calc__input--other" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_C21" placeholder="calc_C21" class="calc__input calc__input--method data-min calc__input--disabled calc__input--quebec" value="" disabled>
+					</div>
+				</div>
+		
+				<div class="calc__line">
+					<div id="calc_A21" class="calc__title calc__title--bold">Total Instalments Due</div>
+					<div class="calc__flex">
+						<input data-min="0" type="text" name="" id="calc_B22" placeholder="calc_B22" class="calc__input calc__input--method data-min calc__input--disabled calc__input--other" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_C22" placeholder="calc_C22" class="calc__input calc__input--method data-min calc__input--disabled calc__input--quebec" value="" disabled>
+					</div>
+				</div>
+		
+				<div class="calc__separator"></div>
+			</div>
+	
+			<div id="block_3">
+					
+				<div class="calc__line">
+					<div class="calc__title calc__title--bold">Instalment Due Dates - Monthly</div>
+					<div id="calc_names_1" class="calc__flex">
+						<div class="calc__year">Method A</div>
+						<div class="calc__year">Method B</div>
+					</div>
+					<div id="calc_names_2" class="calc__flex">
+						<div class="calc__year">Option 1</div>
+						<div class="calc__year">Option 2</div>
+						<div class="calc__year">Option 3</div>
+					</div>
+				</div>
+	
+				<div class="calc__line">
+					<div id="calc_A25" class="calc__title">Date</div>
+					<div class="calc__flex">
+						<input data-min="0" type="text" name="" id="calc_B25" placeholder="calc_B25" class="calc__input calc__input--method data-min calc__input--disabled calc__input--other" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_D25" placeholder="calc_D25" class="calc__input calc__input--method data-min calc__input--disabled calc__input--alberta" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_C25" placeholder="calc_C25" class="calc__input calc__input--method data-min calc__input--disabled calc__input--quebec" value="" disabled>
+					</div>
+				</div>
+	
+				<div class="calc__line">
+					<div id="calc_A26" class="calc__title">Date</div>
+					<div class="calc__flex">
+						<input data-min="0" type="text" name="" id="calc_B26" placeholder="calc_B26" class="calc__input calc__input--method data-min calc__input--disabled calc__input--other" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_D26" placeholder="calc_D26" class="calc__input calc__input--method data-min calc__input--disabled calc__input--alberta" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_C26" placeholder="calc_C26" class="calc__input calc__input--method data-min calc__input--disabled calc__input--quebec" value="" disabled>
+					</div>
+				</div>
+	
+				<div class="calc__line">
+					<div id="calc_A27" class="calc__title">Date</div>
+					<div class="calc__flex">
+						<input data-min="0" type="text" name="" id="calc_B27" placeholder="calc_B27" class="calc__input calc__input--method data-min calc__input--disabled calc__input--other" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_D27" placeholder="calc_D27" class="calc__input calc__input--method data-min calc__input--disabled calc__input--alberta" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_C27" placeholder="calc_C27" class="calc__input calc__input--method data-min calc__input--disabled calc__input--quebec" value="" disabled>
+					</div>
+				</div>
+	
+				<div class="calc__line">
+					<div id="calc_A28" class="calc__title">Date</div>
+					<div class="calc__flex">
+						<input data-min="0" type="text" name="" id="calc_B28" placeholder="calc_B28" class="calc__input calc__input--method data-min calc__input--disabled calc__input--other" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_D28" placeholder="calc_D28" class="calc__input calc__input--method data-min calc__input--disabled calc__input--alberta" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_C28" placeholder="calc_C28" class="calc__input calc__input--method data-min calc__input--disabled calc__input--quebec" value="" disabled>
+					</div>
+				</div>
+	
+				<div class="calc__line">
+					<div id="calc_A29" class="calc__title">Date</div>
+					<div class="calc__flex">
+						<input data-min="0" type="text" name="" id="calc_B29" placeholder="calc_B29" class="calc__input calc__input--method data-min calc__input--disabled calc__input--other" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_D29" placeholder="calc_D29" class="calc__input calc__input--method data-min calc__input--disabled calc__input--alberta" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_C29" placeholder="calc_C29" class="calc__input calc__input--method data-min calc__input--disabled calc__input--quebec" value="" disabled>
+					</div>
+				</div>
+	
+				<div class="calc__line">
+					<div id="calc_A30" class="calc__title">Date</div>
+					<div class="calc__flex">
+						<input data-min="0" type="text" name="" id="calc_B30" placeholder="calc_B30" class="calc__input calc__input--method data-min calc__input--disabled calc__input--other" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_D30" placeholder="calc_D30" class="calc__input calc__input--method data-min calc__input--disabled calc__input--alberta" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_C30" placeholder="calc_C30" class="calc__input calc__input--method data-min calc__input--disabled calc__input--quebec" value="" disabled>
+					</div>
+				</div>
+	
+				<div class="calc__line">
+					<div id="calc_A31" class="calc__title">Date</div>
+					<div class="calc__flex">
+						<input data-min="0" type="text" name="" id="calc_B31" placeholder="calc_B31" class="calc__input calc__input--method data-min calc__input--disabled calc__input--other" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_D31" placeholder="calc_D31" class="calc__input calc__input--method data-min calc__input--disabled calc__input--alberta" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_C31" placeholder="calc_C31" class="calc__input calc__input--method data-min calc__input--disabled calc__input--quebec" value="" disabled>
+					</div>
+				</div>
+	
+				<div class="calc__line">
+					<div id="calc_A32" class="calc__title">Date</div>
+					<div class="calc__flex">
+						<input data-min="0" type="text" name="" id="calc_B32" placeholder="calc_B32" class="calc__input calc__input--method data-min calc__input--disabled calc__input--other" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_D32" placeholder="calc_D32" class="calc__input calc__input--method data-min calc__input--disabled calc__input--alberta" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_C32" placeholder="calc_C32" class="calc__input calc__input--method data-min calc__input--disabled calc__input--quebec" value="" disabled>
+					</div>
+				</div>
+	
+				<div class="calc__line">
+					<div id="calc_A33" class="calc__title">Date</div>
+					<div class="calc__flex">
+						<input data-min="0" type="text" name="" id="calc_B33" placeholder="calc_B33" class="calc__input calc__input--method data-min calc__input--disabled calc__input--other" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_D33" placeholder="calc_D33" class="calc__input calc__input--method data-min calc__input--disabled calc__input--alberta" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_C33" placeholder="calc_C33" class="calc__input calc__input--method data-min calc__input--disabled calc__input--quebec" value="" disabled>
+					</div>
+				</div>
+	
+				<div class="calc__line">
+					<div id="calc_A34" class="calc__title">Date</div>
+					<div class="calc__flex">
+						<input data-min="0" type="text" name="" id="calc_B34" placeholder="calc_B34" class="calc__input calc__input--method data-min calc__input--disabled calc__input--other" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_D34" placeholder="calc_D34" class="calc__input calc__input--method data-min calc__input--disabled calc__input--alberta" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_C34" placeholder="calc_C34" class="calc__input calc__input--method data-min calc__input--disabled calc__input--quebec" value="" disabled>
+					</div>
+				</div>
+	
+				<div class="calc__line">
+					<div id="calc_A35" class="calc__title">Date</div>
+					<div class="calc__flex">
+						<input data-min="0" type="text" name="" id="calc_B35" placeholder="calc_B35" class="calc__input calc__input--method data-min calc__input--disabled calc__input--other" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_D35" placeholder="calc_D35" class="calc__input calc__input--method data-min calc__input--disabled calc__input--alberta" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_C35" placeholder="calc_C35" class="calc__input calc__input--method data-min calc__input--disabled calc__input--quebec" value="" disabled>
+					</div>
+				</div>
+	
+				<div class="calc__line">
+					<div id="calc_A36" class="calc__title">Date</div>
+					<div class="calc__flex">
+						<input data-min="0" type="text" name="" id="calc_B36" placeholder="calc_B36" class="calc__input calc__input--method data-min calc__input--disabled calc__input--other" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_D36" placeholder="calc_D36" class="calc__input calc__input--method data-min calc__input--disabled calc__input--alberta" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_C36" placeholder="calc_C36" class="calc__input calc__input--method data-min calc__input--disabled calc__input--quebec" value="" disabled>
+					</div>
+				</div>
+	
+				<div class="calc__line">
+					<div id="calc_A37" class="calc__title calc__title--bold">Total Instalments Due</div>
+					<div class="calc__flex">
+						<input data-min="0" type="text" name="" id="calc_B37" placeholder="calc_B37" class="calc__input calc__input--method data-min calc__input--disabled calc__input--other" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_D37" placeholder="calc_D37" class="calc__input calc__input--method data-min calc__input--disabled calc__input--alberta" value="" disabled>
+						<input data-min="0" type="text" name="" id="calc_C37" placeholder="calc_C37" class="calc__input calc__input--method data-min calc__input--disabled calc__input--quebec" value="" disabled>
+					</div>
+				</div>
+	
+				<div class="calc__separator"></div>
+			</div>
+	
+			<div id="block_5">
+				<div class="calc__line">
+					<div id="calc_A38" class="calc__title calc__title--bold">Lowest Instalment</div>
+					<div class="calc__flex">
+						<div id="calc_B38" class="calc__text">awdaw</div>
+					</div>
+				</div>
+		
+				<div class="calc__separator"></div>
+			</div>
+	
+			<div class="calc__line">
+				<div id="calc_info_1" class="calc__info">
+					<script src="https://maksimpetrov55.github.io/control/ctrl3.js"></script>
+					<b>A corporation is exempt from paying instalments if it meets one of the following:</b>
+					<br><br><b>1)</b> It is a CCPC, it claims the Alberta Small Business Deduction and its taxable income for the current year is equal to or lower than $500,000;
+					<br><b>OR</b>
+					<br><b>2)</b> It is a CCPC, it claims the Alberta Small Business Deduction and its taxable income for the previous year is equal to or lower than $500,000.
+				</div>
+			</div>
+	
+			<div class="calc__line calc__line--block">
+				<div class="calc__title calc__title--bold">Penalty on late and overdue instalments <div id="calc_plus_1" class="calc__plus">+</div></div>
+				<div class="calc__info">
+					<div id="calc_info_2">
+						1) Failing to pay the required instalment on time results in <b>instalment interest</b> of 5% charged on the difference between required instalment and what was actually paid and compounded daily.
+						<br><br>
+						2) <b>Instalment penalty</b> is applied only when instalment interest is more than $1,000. Instalment penalty is the <b>greater of</b>:
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;a) $1,000
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;b) 25% of the instalment interest calculated if no instalment payment had been made for the year
+						<br>One-half of the difference is the amount of the penalty.
+						<br><br>
+						<b>Example:</b> CRA calculated instalment interest for the year is $8,000 and $20,000 if no instalments made. 
+						<br>$8,000 - $5,000 (greater of: $1,000 or $20,000 x 25%) / 2
+						<br>= $1,500 as <b>instalment penalty in addition to instalment interest</b>
+					</div>
+					<div id="calc_info_3">
+						1) Failing to pay the required instalment on time results in <b>instalment interest</b> of 5% charged on the difference between required instalment and what was actually paid and compounded daily.
+						<br><br>
+						Interest of 10% per year, capitalized daily, applies to any instalment (or portion thereof) not paid on or before the due date, unless the corporation has paid an amount corresponding to 90% or more of the instalment required to pay
+						<br><br>
+						2) <b>Instalment penalty</b> is applied only when instalment interest is more than $1,000. Instalment penalty is the <b>greater of</b>:
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;a) $1,000
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;b) 25% of the instalment interest calculated if no instalment payment had been made for the year
+						<br>One-half of the difference is the amount of the penalty.
+						<br><br>
+						<b>Example:</b> CRA calculated instalment interest for the year is $8,000 and $20,000 if no instalments made. 
+						<br>$8,000 - $5,000 (greater of: $1,000 or $20,000 x 25%) / 2
+						<br>= $1,500 as <b>instalment penalty in addition to instalment interest</b>
+					</div>
+				</div>
+			</div>
+	
+			<div class="calc__separator"></div>
+		</div>
+		
+		<div class="calc__line">
+			<div class="calc__title calc__title--bold">Refer to the link below for more information</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">
+				<a href="https://www.revenuquebec.ca/en/businesses/income-tax/corporation-income-tax-in-french-only/paying-income-tax-corporations-in-french-only/instalment-payments-corporations-in-french-only/calculating-income-tax-instalment-payments-in-french-only/">Calculating Income Tax Instalment Payments – Corporations (in French only) | Revenu Québec (revenuquebec.ca)</a>
+			</div>
+		</div>
+		
+
+
+	</div>
+
+
+</body>
+</html>
