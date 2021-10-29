@@ -1,0 +1,434 @@
+$color1: #e2cc00
+
+*
+    position: relative
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: 'Open Sans', sans-serif
+
+body
+    position: relative
+    background: #aaa
+
+
+.calc
+    position: relative
+    width: 98%
+    max-width: 1140px
+    min-height: 300px
+    background: #fff
+    margin: 20px auto
+    border-radius: 15px
+    padding: 40px 20px 20px 20px
+    @media ( max-width: 400px )
+        padding: 30px 10px 10px 10px
+    @media print
+        display: none
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button
+        -webkit-appearance: none
+        margin: 0
+    input[type="number"]
+        -moz-appearance: textfield
+
+    input[type="number"]:hover,
+    input[type="number"]:focus
+        -moz-appearance: number-input
+
+    &__header
+        font-size: 26px
+        font-weight: 600
+        margin: 0 0 40px 0
+        padding: 0 0 30px 0
+        text-align: center
+        border-bottom: 1px solid #bbb
+        text-transform: uppercase
+        letter-spacing: 1px
+        @media ( max-width: 530px )
+            font-size: 22px
+            letter-spacing: 0.5px
+
+    &__title
+        font-size: 20px
+        font-weight: 600
+        margin: 0 0 30px 0
+        &--span
+            color: $color1
+        @media ( max-width: 530px )
+            font-size: 17px
+        @media ( max-width: 400px )
+            font-size: 15px
+            text-align: center
+
+    &__step
+        margin: 0 auto 70px auto
+        &--flex
+            display: flex
+            @media ( max-width: 768px )
+                flex-wrap: wrap
+        &--jcsb
+            justify-content: space-between
+
+    &__select
+        display: flex
+        justify-content: space-between
+        margin: 0 0 30px 0
+        @media ( max-width: 768px )
+            flex-wrap: wrap
+
+    &__radio
+        display: none
+        &:checked + .calc__label
+            border: 3px solid $color1
+            box-shadow: 0 5px 15px 1px rgba(0,0,0,0.1)
+
+    &__label
+        z-index: 89
+        cursor: pointer
+        padding: 15px
+        border: 3px solid #fff
+        border-radius: 8px
+        width: 32%
+        display: block
+        margin: 10px 0
+        box-shadow: 0 5px 15px 1px rgba(0,0,0,0.1)
+        transition-duration: 0.2s
+        @media ( max-width: 991px )
+            padding: 15px 10px
+        @media ( max-width: 768px )
+            width: 48%
+        @media ( max-width: 450px )
+            width: 100%
+        &:hover
+            transform: translateY(-10px)
+
+    &__name
+        font-size: 17px
+        text-align: center
+        margin: 20px auto 0 auto
+        height: 46px
+        max-width: 250px
+        @media ( max-width: 991px )
+            font-size: 15px
+        @media ( max-width: 530px )
+            font-size: 14px
+            height: 58px
+        @media ( max-width: 450px )
+            height: auto
+            margin: 15px auto 0 auto
+            max-width: 900px
+
+    &__img
+        height: 160px
+        margin: 0 auto
+        display: block
+        border-radius: 4px
+        @media ( max-width: 991px )
+            width: 80%
+            height: auto
+        @media ( max-width: 450px )
+            width: 50%
+
+    &__input
+        width: 60%
+        border-radius: 0
+        border: 1px solid #bbb
+        font-size: 60px
+        text-align: center
+        display: block
+        height: 100%
+        outline: none
+        @media ( max-width: 991px )
+            font-size: 40px
+        &--small
+            font-size: 30px
+
+    &__plusminus
+        display: flex
+        align-items: center
+        margin: 20px 0 10px 0
+        flex-shrink: 0
+        height: 80px
+        width: 100%
+        max-width: 350px
+        @media ( max-width: 991px )
+            max-width: 220px
+            height: 60px
+        @media ( max-width: 400px )
+            max-width: 260px
+            margin: 20px auto 10px auto
+        &--small
+            height: 46px
+            max-width: 160px
+            margin: 20px auto 10px auto
+
+    &__minus,
+    &__plus
+        position: relative
+        font-size: 40px
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 20%
+        background: $color1
+        height: 100%
+        border-radius: 0
+        color: #000
+        font-weight: 300
+        cursor: pointer
+        transition-duration: 0.2s
+        user-select: none
+        &:hover
+            opacity: 0.7
+        &:active
+            opacity: 0.2
+
+    &__minus
+        padding: 0 0 6px 0
+        border-radius: 8px 0 0 8px
+        &--small
+            width: 25%
+            font-size: 26px
+            border-radius: 4px 0 0 4px
+
+    &__plus
+        border-radius: 0 8px 8px 0
+        &--small
+            width: 25%
+            font-size: 26px
+            border-radius: 0 4px 4px 0
+
+
+    &__item
+        z-index: 89
+        padding: 15px
+        border: 2px solid #eee
+        border-radius: 8px
+        width: 32%
+        display: block
+        margin: 10px 0
+        //box-shadow: 0 5px 15px 1px rgba(0,0,0,0.1)
+        &--margin
+            margin-right: 2%
+        @media ( max-width: 768px )
+            width: 48%
+        @media ( max-width: 450px )
+            width: 100%
+
+    &__tip
+        z-index: 79
+        position: absolute
+        right: 10px
+        top: 10px
+        font-size: 20px
+        font-weight: 600
+        color: $color1
+        width: 30px
+        height: 30px
+        background: #616161
+        font-family: serif
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 50px
+        border: 1px solid #bbb
+        transition-duration: 0.2s
+        cursor: pointer
+        &:hover
+            background: $color1
+            color: #000
+
+    &__note
+        position: absolute
+        top: 50px
+        width: 94%
+        height: auto
+        min-height: 70%
+        z-index: 99
+        background: #fffde7
+        left: 3%
+        padding: 10px
+        line-height: 1.5
+        display: none
+        box-shadow: 0 5px 15px 1px rgba(0,0,0,0.1)
+        border: 1px solid #bbb
+        border-radius: 4px
+        @media ( max-width: 768px )
+            font-size: 14px
+
+
+    &__result
+        border: 3px solid $color1
+        padding: 50px 10px 70px 10px
+        border-radius: 10px
+        display: flex
+        justify-content: space-between
+        @media ( max-width: 768px )
+            flex-wrap: wrap
+
+
+    &__half
+        padding: 0 30px
+        @media ( max-width: 991px )
+            padding: 0 15px
+        @media ( max-width: 420px )
+            padding: 0
+        &--left
+            width: 35%
+            @media ( max-width: 991px )
+                width: 45%
+            @media ( max-width: 768px )
+                width: 100%
+        &--right
+            width: 64%
+            @media ( max-width: 991px )
+                width: 55%
+            @media ( max-width: 768px )
+                width: 100%
+
+    &__text
+        font-size: 17px
+        margin: 0 0 10px 0
+        @media ( max-width: 768px )
+            min-width: 172px
+        @media ( max-width: 420px )
+            font-size: 15px
+        @media ( max-width: 360px )
+            text-align: center
+            margin: 0 0 5px 0
+            font-size: 15px
+        &--title
+            font-weight: 600
+            margin: 0 0 20px 0
+            height: 47px
+            @media ( max-width: 768px )
+                margin: 0
+            @media ( max-width: 678px )
+                margin: 0 0 20px 0
+                height: auto
+                text-align: center
+        &--tar
+            text-align: right
+            @media ( max-width: 768px )
+                text-align: left
+            @media ( max-width: 678px )
+                text-align: center
+
+    &__square
+        font-weight: 900
+        font-size: 60px
+        color: $color1
+        letter-spacing: 3px
+        @media ( max-width: 768px )
+            margin: 0 0 30px 0
+            line-height: 1
+        @media ( max-width: 678px )
+            text-align: center
+        @media ( max-width: 360px )
+            font-size: 50px
+
+    &__tarif
+        display: flex
+        justify-content: flex-end
+        @media ( max-width: 768px )
+            justify-content: flex-start
+        @media ( max-width: 678px )
+            justify-content: center
+        @media ( max-width: 360px )
+            flex-wrap: wrap
+
+    &__price
+        width: 140px
+        text-align: right
+        font-weight: 900
+        color: $color1
+        @media ( max-width: 420px )
+            font-size: 15px
+        @media ( max-width: 360px )
+            text-align: center
+            width: 100%
+            margin: 0 0 10px 0
+            font-size: 17px
+
+    &__print
+        position: absolute
+        text-transform: uppercase
+        font-size: 14px
+        bottom: 15px
+        text-align: center
+        width: 100%
+        cursor: pointer
+        user-select: none
+        color: #3d4aff
+        font-weight: 600
+        transition-duration: 0.2s
+        left: 0
+        &:hover
+            opacity: 0.7
+
+
+
+
+
+
+
+.print
+    padding: 20px 0
+    width: 100%
+    position: relative
+    display: none
+    @media print
+        display: block
+
+    &__header
+        position: relative
+        display: flex
+        justify-content: space-between
+        width: 100%
+        border-bottom: 1px solid #333
+        padding: 10px 0
+
+    &__ooo
+        font-size: 10px
+
+    &__logo
+        width: 160px
+        height: 70px
+
+    &__title
+        font-weight: 600
+        margin: 0px auto 20px auto
+        text-align: center
+        padding: 10px 0
+        border-bottom: 1px solid #333
+
+
+    &__line
+        display: flex
+        width: 100%
+        justify-content: space-between
+        margin: 5px 0
+
+    &__text
+        font-size: 10px
+        flex-shrink: 0
+
+    &__space
+        position: relative
+        width: 100%
+        margin: 0 10px
+        border-bottom: 1px dotted #999
+
+    &__value
+        font-size: 10px
+        font-weight: 600
+        flex-shrink: 0
+
+    &__blank
+        position: relative
+        width: 100%
+        height: 20px
+        border-bottom: 1px solid #333
+        margin: 0 0 20px 0
