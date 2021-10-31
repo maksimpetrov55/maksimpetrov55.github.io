@@ -1,0 +1,616 @@
+
+
+*
+    position: relative
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: 'Euclid Circular A', sans-serif
+    color: #2C2E4A
+
+body
+    position: relative
+    background: #eee
+
+.calc
+    max-width: 1280px
+    margin: 150px auto
+    width: 100%
+    min-height: 300px
+    justify-content: space-between
+    display: flex
+    @media ( max-width: 1280px )
+        max-width: 1010px
+    @media ( max-width: 991px )
+        flex-wrap: wrap
+        max-width: 768px
+
+    &__left
+        background: #FFFFFF
+        box-shadow: 0px 38px 44px -26px rgba(5, 59, 140, 0.1)
+        border-radius: 30px
+        padding: 60px
+        width: 64%
+        @media ( max-width: 1280px )
+            padding: 40px 35px
+        @media ( max-width: 991px )
+            width: 100%
+            padding: 60px 70px
+            margin: 0 0 60px 0
+        @media ( max-width: 768px )
+            border-radius: 0
+        @media ( max-width: 720px )
+            padding: 60px 35px
+        @media ( max-width: 650px )
+            padding: 60px 10px
+
+    &__right
+        background: linear-gradient(180deg, #2948FF 0%, #396AFC 100%)
+        box-shadow: 0px 38px 44px -26px rgba(5, 59, 140, 0.1)
+        border-radius: 30px
+        padding: 60px
+        width: 34%
+        overflow: hidden
+        @media ( max-width: 1280px )
+            padding: 40px 35px
+        @media ( max-width: 991px )
+            width: 100%
+            padding: 60px 70px
+            display: flex
+        @media ( max-width: 768px )
+            border-radius: 0
+        @media ( max-width: 720px )
+            padding: 60px 35px
+        @media ( max-width: 650px )
+            padding: 60px 10px
+        @media ( max-width: 550px )
+            padding: 40px 10px 20px 10px
+        @media ( max-width: 480px )
+            display: block
+
+    &__head
+        font-size: 47px
+        font-weight: 500
+        margin: 0 0 30px 0
+        @media ( max-width: 1280px )
+            font-size: 36px
+        @media ( max-width: 991px )
+            font-size: 47px
+        @media ( max-width: 650px )
+            font-size: 36px
+        @media ( max-width: 550px )
+            margin: 0 0 10px 0
+        @media ( max-width: 430px )
+            line-height: 1.2
+            margin: 0 0 20px 0
+        &--span
+            color: #007BFB
+
+    &__switch
+        display: flex
+        margin: 0 0 40px 0
+        @media ( max-width: 550px )
+            justify-content: space-between
+            max-width: 430px
+            margin: 0 0 20px 0
+        @media ( max-width: 480px )
+            flex-wrap: wrap
+        @media ( max-width: 430px )
+            margin: 0 0 40px 0
+
+    &__radio
+        display: none
+        &:checked + .calc__variant
+            background: #CCE5FE
+            border: 1px solid #CCE5FE
+
+    &__variant
+        padding: 14px 40px
+        border-radius: 30px
+        font-size: 16px
+        font-weight: 600
+        background: #fff
+        margin: 10px 20px 10px 0
+        border: 1px solid #007BFB
+        color: #007BFB
+        user-select: none
+        cursor: pointer
+        @media ( max-width: 1280px )
+            font-size: 14px
+        @media ( max-width: 991px )
+            font-size: 16px
+        @media ( max-width: 650px )
+            font-size: 14px
+        @media ( max-width: 550px )
+            padding: 14px 20px
+            margin: 10px 0
+        @media ( max-width: 480px )
+            padding: 14px 30px
+            margin: 5px 0
+        @media ( max-width: 430px )
+            width: 100%
+            text-align: center
+
+    &__line
+
+    &__name
+        font-weight: 500
+        font-size: 20px
+        text-align: center
+        display: flex
+        align-items: center
+        @media ( max-width: 1280px )
+            font-size: 18px
+        @media ( max-width: 991px )
+            font-size: 20px
+        @media ( max-width: 650px )
+            font-size: 18px
+
+    &__options
+        margin: 20px 0 0 0
+        flex-wrap: wrap
+
+    &__option
+        font-size: 18px
+        color: #2C2E4A
+        margin: 0 0 15px 0
+        user-select: none
+        cursor: pointer
+        display: inline-flex
+        align-items: center
+        position: relative
+        @media ( max-width: 1280px )
+            font-size: 16px
+        @media ( max-width: 991px )
+            font-size: 18px
+        @media ( max-width: 650px )
+            font-size: 16px
+        &::before
+            content: ""
+            display: block
+            border: 1px solid #69748C
+            border-radius: 6px
+            width: 24px
+            height: 24px
+            margin: 0 10px 0 0
+            box-sizing: border-box
+            flex-shrink: 0
+
+    &__valute
+        height: 50px
+        width: 50px
+        background: #007BFB
+        color: #fff
+        font-weight: 400
+        font-size: 18px
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 0 10px 10px 0
+        @media ( max-width: 480px )
+            height: 40px
+            width: 40px
+            font-size: 16px
+        @media ( max-width: 430px )
+            width: 50px
+
+    &__select
+        height: 50px
+        background: #007BFB
+        width: 70px
+        border-radius: 0 10px 10px 0
+        padding: 0 10px
+        @media ( max-width: 480px )
+            height: 40px
+            width: 60px
+            padding: 0 5px
+        @media ( max-width: 430px )
+            width: 70px
+
+    &__current
+        color: #fff
+        font-size: 18px
+        line-height: 50px
+        cursor: pointer
+        user-select: none
+        text-align: center
+        padding: 0 20px 0 0 
+        @media ( max-width: 480px )
+            line-height: 40px
+            font-size: 16px
+        &::before
+            content: ""
+            display: block
+            width: 7px
+            height: 7px
+            border-bottom: 2px solid #fff
+            border-right: 2px solid #fff
+            position: absolute
+            right: 0
+            top: 19px
+            transform: rotate(45deg)
+            @media ( max-width: 480px )
+                top: 14px
+                right: 5px
+
+    &__list
+        position: absolute
+        width: 100%
+        border: 1px solid #007BFB
+        background: #fff
+        left: 0
+        margin: 0px 0 0 0
+        border-radius: 0 0px 10px 10px
+        padding: 10px
+        transition-duration: 0.2s
+        transform: translateY(-100px) scale(1,0)
+        opacity: 0
+        z-index: 199
+        &--open
+            transform: translateY(0) scale(1,1)
+            opacity: 1
+        &::before
+            content: ""
+            display: block
+            width: 10px
+            height: 10px
+            background: #007BFB
+            position: absolute
+            right: -1px
+            top: -11px
+
+    &__li
+        text-align: center
+        padding: 3px 0
+        transition-duration: 0.1s
+        color: #69748C
+        cursor: pointer
+        &:hover
+            opacity: 0.6
+
+
+    &__slider
+        height: 68px
+        width: 100%
+        max-width: 700px
+        display: flex
+        justify-content: space-between
+        margin: 0 0 30px 0
+        align-items: center
+        @media ( max-width: 430px )
+            flex-wrap: wrap-reverse
+            height: auto
+            margin: 10px 0 50px 0
+
+    &__polzunok
+        width: 100%
+        &::after
+            content: ""
+            position: absolute
+            display: block
+            right: -10px
+            width: 20px
+            height: 10px
+            background: #D1E8FF
+            border-radius: 0 10px 10px 0
+            @media ( max-width: 480px )
+                display: none
+
+
+    &__flex
+        display: flex
+        @media ( max-width: 480px )
+            position: absolute
+            right: 0
+            top: -30px
+        @media ( max-width: 430px )
+            position: relative
+            top: 0
+            margin: 0 0 20px 0
+            width: 100%
+
+    &__scale
+        display: flex
+        position: absolute
+        left: 0
+        bottom: 0
+        justify-content: space-between
+        width: calc( 100% - 230px )
+        @media ( max-width: 550px )
+            width: calc( 100% - 190px )
+        @media ( max-width: 480px )
+            width: 100%
+        @media ( max-width: 430px )
+            bottom: -25px
+
+    &__mln
+        font-size: 14px
+        color: #69748C
+        @media ( max-width: 1280px )
+            font-size: 12px
+        @media ( max-width: 991px )
+            font-size: 14px
+        @media ( max-width: 650px )
+            font-size: 12px
+
+
+    &__credit
+        border: 1px solid #007BFB
+        border-radius: 10px 0 0 10px
+        height: 50px
+        padding: 0 10px
+        font-size: 20px
+        width: 150px
+        outline: none
+        font-weight: 500
+        margin: 0 0 0 40px
+        text-align: center
+        @media ( max-width: 1280px )
+            font-size: 18px
+            width: 130px
+        @media ( max-width: 991px )
+            font-size: 20px
+            width: 150px
+        @media ( max-width: 650px )
+            font-size: 18px
+            width: 130px
+        @media ( max-width: 550px )
+            margin: 0 0 0 20px
+        @media ( max-width: 480px )
+            height: 40px
+        @media ( max-width: 430px )
+            width: 100%
+            margin: 0
+            text-align: left
+            padding: 0 20px
+        &--short
+            width: 130px
+            padding: 0 5px
+            @media ( max-width: 1280px )
+                width: 110px
+            @media ( max-width: 991px )
+                width: 130px
+            @media ( max-width: 650px )
+                width: 110px
+            @media ( max-width: 430px )
+                width: 100%
+                text-align: left
+                padding: 0 20px
+
+
+    &__info
+        width: 20px
+        height: 20px
+        border: 2px solid #007BFB
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 20px
+        font-size: 15px
+        font-weight: 600
+        color: #007BFB
+        margin: 0 0 0 10px
+        transition-duration: 0.2s
+        &:hover
+            background: #007BFB
+            color: #fff
+
+    &__fly
+        position: absolute
+        padding: 15px
+        width: 385px
+        background: rgba(44, 46, 74, 0.7)
+        backdrop-filter: blur(10px)
+        border-radius: 10px
+        color: #fff
+        bottom: 0
+        left: calc( 100% + 10px )
+        display: none
+        z-index: 129
+        @media ( max-width: 650px )
+            width: 320px
+            font-size: 14px
+            bottom: 30px
+            margin: 0 0 0 -150px
+
+    &__btn
+        color: #fff
+        font-weight: 600
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 230px
+        height: 60px
+        background: #007BFB
+        box-shadow: 0px 8px 15px rgba(6, 56, 234, 0.25)
+        border-radius: 20px
+        user-select: none
+        cursor: pointer
+        transition-duration: 0.2s
+        margin: 20px 0 0px auto
+        @media ( max-width: 430px )
+            width: 100%
+        &:hover
+            box-shadow: none
+            background: #3D9CFF
+        &:active
+            background: #2948FF
+            box-shadow: 0px 8px 15px rgba(6, 56, 234, 0.25)
+
+    &__white
+        flex-shrink: 0
+        font-weight: 500
+        font-size: 20px
+        color: #D1E8FF
+        margin: 0 0 5px 0
+        @media ( max-width: 550px )
+            font-size: 18px
+        @media ( max-width: 480px )
+            font-size: 20px
+        &--platej
+            font-size: 36px
+            font-weight: 600
+            margin: 0 0 40px 0
+            @media ( max-width: 550px )
+                font-size: 30px
+            @media ( max-width: 480px )
+                font-size: 36px
+                margin: 0 0 20px 0
+        &--bold
+            font-size: 24px
+            font-weight: 600
+            margin: 0 0 40px 0
+            @media ( max-width: 550px )
+                font-size: 20px
+            @media ( max-width: 480px )
+                font-size: 24px
+                margin: 0 0 20px 0
+
+
+
+    &__checkbox
+        display: none
+        &:checked + .calc__option::after
+            content: ""
+            position: absolute
+            display: block
+            background: linear-gradient(180deg, #2948FF 0%, #396AFC 100%)
+            border-radius: 3px
+            width: 14px
+            height: 14px
+            margin: 0 10px 0 0
+            top: 5px
+            left: 5px
+            box-sizing: border-box
+
+
+    &__pie
+        overflow: hidden
+        z-index: 99
+        position: relative
+        margin: 100px auto 0 auto
+        width: 318px
+        height: 318px
+        display: flex
+        justify-content: center
+        align-items: center
+        @media ( max-width: 1280px )
+            width: 274px
+            height: 274px
+        @media ( max-width: 991px )
+            width: 318px
+            height: 318px
+            margin: 40px 0 40px auto
+        @media ( max-width: 650px )
+            width: 274px
+            height: 274px
+            margin: 60px 0 0 auto
+        @media ( max-width: 480px )
+            margin: 30px auto 10px auto
+
+    &__circle
+        z-index: 109
+        width: 290px
+        height: 290px
+        background: #D1E8FF
+        border-radius: 100%
+        @media ( max-width: 1280px )
+            width: 250px
+            height: 250px
+        @media ( max-width: 991px )
+            width: 290px
+            height: 290px
+        @media ( max-width: 650px )
+            width: 250px
+            height: 250px
+
+    &__part
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        position: absolute
+        z-index: 119
+
+    &__rotate
+        width: 318px
+        height: 318px
+        position: absolute
+        z-index: 129
+        @media ( max-width: 1280px )
+            width: 274px
+            height: 274px
+        @media ( max-width: 991px )
+            width: 318px
+            height: 318px
+        @media ( max-width: 650px )
+            width: 274px
+            height: 274px
+
+    &__percent
+        position: absolute
+        z-index: 139
+        font-size: 18px
+        color: #D1E8FF
+        text-align: center
+        line-height: 1
+        @media ( max-width: 1280px )
+            font-size: 16px
+        @media ( max-width: 991px )
+            font-size: 18px
+        @media ( max-width: 650px )
+            font-size: 16px
+        &--big
+            font-size: 36px
+            font-weight: 600
+            color: #D1E8FF
+            text-align: center
+            line-height: 1.2
+            @media ( max-width: 1280px )
+                font-size: 30px
+            @media ( max-width: 991px )
+                font-size: 36px
+            @media ( max-width: 650px )
+                font-size: 30px
+        &--color
+            color: #2C2E4A
+        &--switch
+            color: #2C2E4A !important
+            * 
+                color: #2C2E4A
+
+
+
+
+
+
+
+
+
+
+
+
+.ui-slider
+    background: #D1E8FF !important
+    height: 10px !important
+    border: none !important
+    border-radius: 10px !important
+
+.ui-slider-range
+    background: #007BFB !important
+    border-radius: 10px !important
+
+.ui-slider-handle
+    width: 24px !important
+    height: 24px !important
+    border-radius: 50px !important
+    background: linear-gradient(180deg, #2948FF 0%, #396AFC 100%) !important
+    border: 6px solid #fff !important
+    outline: none !important
+    margin-top: -3px !important
+    cursor: pointer !important
+    box-shadow: 0px 3px 10px rgba(62, 70, 141, 0.35);
+    // transition-duration: 0.05s
+
+.ui-slider-handle:hover
+    //box-shadow: 0 0px 2px 12px rgba(245,165,100,0.3)

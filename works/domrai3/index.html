@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link rel="stylesheet" href="font/stylesheet.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script src="js/scripts.js"></script>
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div class="calc__left">
+
+			<div class="calc__head">Ипотечный <span class="calc__head--span">калькулятор</span></div>
+
+			<div class="calc__switch">
+				<input class="calc__radio" type="radio" name="calc_variant" value="1" id="calc_variant_1" checked>
+				<label class="calc__variant" for="calc_variant_1">По стоимости недвижимости</label>
+
+				<input class="calc__radio" type="radio" name="calc_variant" value="2" id="calc_variant_2">
+				<label class="calc__variant" for="calc_variant_2">По сумме кредита</label>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__name calc__name--1">Стоимость недвижимости</div>
+
+				<div class="calc__slider">
+					<div class="calc__polzunok" id="calc_slider_1"></div>
+					<div class="calc__scale">
+						<div class="calc__mln">1 млн</div>
+						<div class="calc__mln calc__mln--10">10 млн</div>
+						<div class="calc__mln calc__mln--20">20 млн</div>
+						<div class="calc__mln calc__mln--30">30 млн</div>
+						<div class="calc__mln calc__mln--40">40 млн</div>
+						<div class="calc__mln">50 млн</div>
+					</div>
+		
+					<div class="calc__flex">
+						<input id="calc_value_1" type="text" class="calc__credit" value="25 000 000">
+						<div class="calc__valute">₽</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Первоначальный взнос</div>
+
+				<div class="calc__slider">
+					<div class="calc__polzunok" id="calc_slider_2"></div>
+					<div class="calc__scale">
+						<div class="calc__mln">1 млн</div>
+						<div class="calc__mln calc__mln--10">10 млн</div>
+						<div class="calc__mln calc__mln--20">20 млн</div>
+						<div class="calc__mln calc__mln--30">30 млн</div>
+						<div class="calc__mln calc__mln--40">40 млн</div>
+						<div class="calc__mln">50 млн</div>
+					</div>
+		
+					<div class="calc__flex">
+						<input id="calc_value_2" type="text" class="calc__credit calc__credit--short" value="5 000 000">
+
+						<div class="calc__select">
+							<div class="calc__current">₽</div>
+							<div class="calc__list">
+								<div class="calc__li">₽</div>
+								<div class="calc__li">%</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Срок кредита</div>
+
+				<div class="calc__slider">
+					<div class="calc__polzunok" id="calc_slider_3"></div>
+					<div class="calc__scale">
+						<div class="calc__mln">1 год</div>
+						<div class="calc__mln">10 лет</div>
+						<div class="calc__mln">20 лет</div>
+						<div class="calc__mln">30 лет</div>
+					</div>
+		
+					<div class="calc__flex">
+						<input id="calc_value_3" type="text" class="calc__credit calc__credit--short" value="10">
+
+						<div class="calc__select">
+							<div class="calc__current">лет</div>
+							<div class="calc__list">
+								<div class="calc__li">лет</div>
+								<div class="calc__li">мес</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Процентная ставка</div>
+
+				<div class="calc__slider">
+					<div class="calc__polzunok" id="calc_slider_4"></div>
+					<div class="calc__scale">
+						<div class="calc__mln">1%</div>
+						<div class="calc__mln">5%</div>
+						<div class="calc__mln">10%</div>
+						<div class="calc__mln">15%</div>
+					</div>
+		
+					<div class="calc__flex">
+						<input id="calc_value_4" type="text" class="calc__credit" value="5">
+						<div class="calc__valute">%</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__name">Тип ежемесячных платежей</div>
+
+			<div class="calc__options">
+				<input type="radio" class="calc__checkbox" name="calc_checkbox" id="calc_checkbox_1" value="1" checked>
+				<label for="calc_checkbox_1" class="calc__option">
+					Аннуитетные
+					<div class="calc__info">i</div>
+					<div class="calc__fly">
+						Аннуитетный платеж — вариант ежемесячного платежа по кредиту, когда размер ежемесячного платежа остается постоянным на всем периоде кредитования
+					</div>
+				</label>
+				
+				<br>
+
+				<input type="radio" class="calc__checkbox" name="calc_checkbox" id="calc_checkbox_2" value="2">
+				<label for="calc_checkbox_2" class="calc__option">
+					Дифференцированные
+					<div class="calc__info">i</div>
+					<div class="calc__fly">
+						Дифференцированный платеж — вариант ежемесячного платежа по кредиту, когда размер ежемесячного платежа с каждым разом уменьшается
+					</div>
+				</label>
+			</div>
+
+			<div class="calc__btn">Рассчитать</div>
+
+		</div>
+
+		<div class="calc__right">
+
+			<div>
+				<div class="calc__white">Ежемесячный платеж</div>
+				<div id="calc_result_1" class="calc__white calc__white--platej">212 131,03 ₽</div>
+
+				<div class="calc__white">Сумма кредита </div>
+				<div id="calc_result_2" class="calc__white calc__white--bold">20 000 000 ₽</div>
+
+				<div class="calc__white">Начисленные проценты</div>
+				<div id="calc_result_3" class="calc__white calc__white--bold">5 455 723,60 ₽</div>
+
+				<div class="calc__white">Долг + проценты</div>
+				<div id="calc_result_4" class="calc__white calc__white--bold">25 455 723,60 ₽</div>
+			</div>
+
+			<div class="calc__pie">
+				<div class="calc__percent calc__percent--1"><span class="calc__percent--big">20%</span><br>Проценты</div>
+				<div class="calc__percent calc__percent--2 calc__percent--color"><span class="calc__percent--big calc__percent--color">80%</span><br>Кредит</div>
+				<div class="calc__part">
+					<img src="img/pie.png" alt="" style="transform: rotate(0deg);" class="calc__rotate">
+				</div>
+				<div class="calc__circle"></div>
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+	
+
+
+</body>
+</html>

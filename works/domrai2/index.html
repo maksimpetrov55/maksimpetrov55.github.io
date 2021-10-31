@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link rel="stylesheet" href="font/stylesheet.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script src="js/scripts.js"></script>
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div class="calc__head">Калькулятор <span class="calc__head--span">услуг онлайн</span></div>
+
+		<div class="calc__step">
+
+			<div class="calc__title">Шаг 1: Выберите тип помещения</div>
+
+			<div class="calc__choice">
+	
+				<input type="radio" class="calc__radio" name="calc_type" id="calc_type_1" value="60000" checked>
+				<label for="calc_type_1" class="calc__label">
+					<img src="img/type1.png" alt="" class="calc__img calc__img--blue">
+					<img src="img/type1w.png" alt="" class="calc__img calc__img--white">
+					<div class="calc__name">Дом</div>
+				</label>
+	
+				<input type="radio" class="calc__radio" name="calc_type" id="calc_type_2" value="30000">
+				<label for="calc_type_2" class="calc__label">
+					<img src="img/type2.png" alt="" class="calc__img calc__img--blue">
+					<img src="img/type2w.png" alt="" class="calc__img calc__img--white">
+					<div class="calc__name">Квартира</div>
+				</label>
+	
+				<input type="radio" class="calc__radio" name="calc_type" id="calc_type_3" value="30000">
+				<label for="calc_type_3" class="calc__label">
+					<img src="img/type3.png" alt="" class="calc__img calc__img--blue">
+					<img src="img/type3w.png" alt="" class="calc__img calc__img--white">
+					<div class="calc__name">Комната</div>
+				</label>
+	
+				<input type="radio" class="calc__radio" name="calc_type" id="calc_type_4" value="30000">
+				<label for="calc_type_4" class="calc__label">
+					<img src="img/type4.png" alt="" class="calc__img calc__img--blue">
+					<img src="img/type4w.png" alt="" class="calc__img calc__img--white">
+					<div class="calc__name">Доля</div>
+				</label>
+	
+			</div>
+
+		</div>
+
+
+		<div class="calc__step">
+
+			<div class="calc__title">Шаг 2: Выберите что нужно сделать</div>
+
+			<div class="calc__choice">
+	
+				<input type="radio" class="calc__radio" name="calc_do" id="calc_do_1" value="0" checked>
+				<label for="calc_do_1" class="calc__label">
+					<img src="img/do1.png" alt="" class="calc__img calc__img--blue">
+					<img src="img/do1w.png" alt="" class="calc__img calc__img--white">
+					<div class="calc__name">Купить</div>
+				</label>
+	
+				<input type="radio" class="calc__radio" name="calc_do" id="calc_do_2" value="0">
+				<label for="calc_do_2" class="calc__label">
+					<img src="img/do2.png" alt="" class="calc__img calc__img--blue">
+					<img src="img/do2w.png" alt="" class="calc__img calc__img--white">
+					<div class="calc__name">Продать</div>
+				</label>
+	
+				<input type="radio" class="calc__radio" name="calc_do" id="calc_do_3" value="20000">
+				<label for="calc_do_3" class="calc__label">
+					<img src="img/do3.png" alt="" class="calc__img calc__img--blue">
+					<img src="img/do3w.png" alt="" class="calc__img calc__img--white">
+					<div class="calc__name">Купить и продать</div>
+				</label>
+	
+				<input type="radio" class="calc__radio" name="calc_do" id="calc_do_4" value="20000">
+				<label for="calc_do_4" class="calc__label">
+					<img src="img/do4.png" alt="" class="calc__img calc__img--blue">
+					<img src="img/do4w.png" alt="" class="calc__img calc__img--white">
+					<div class="calc__name">Сопровождение сделки</div>
+				</label>
+	
+			</div>
+
+		</div>
+
+		<div class="calc__step">
+
+			<div class="calc__title calc__title--3">Шаг 3: Укажите стоимость недвижимости</div>
+
+			<div class="calc__slider">
+				<div class="calc__polzunok" id="calc_slider"></div>
+				<div class="calc__scale">
+					<div class="calc__mln">1 млн</div>
+					<div class="calc__mln calc__mln--10">10 млн</div>
+					<div class="calc__mln calc__mln--20">20 млн</div>
+					<div class="calc__mln calc__mln--30">30 млн</div>
+					<div class="calc__mln calc__mln--40">40 млн</div>
+					<div class="calc__mln">50 млн</div>
+				</div>
+	
+				<div class="calc__flex">
+					<input id="calc_credit" type="text" class="calc__credit" value="25 000 000">
+					<div class="calc__valute">₽</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="calc__step">
+
+			<div class="calc__title">Шаг 4: Выберите дополнительные услуги</div>
+
+			<div class="calc__options">
+
+				<input type="checkbox" class="calc__checkbox" name="calc_checkbox" id="calc_checkbox_1">
+				<label for="calc_checkbox_1" class="calc__option">Сопровождение сделки</label>
+
+				<input type="checkbox" class="calc__checkbox" name="calc_checkbox" id="calc_checkbox_2">
+				<label for="calc_checkbox_2" class="calc__option">Юр. проверки объекта</label>
+
+				<input type="checkbox" class="calc__checkbox" name="calc_checkbox" id="calc_checkbox_3">
+				<label for="calc_checkbox_3" class="calc__option">Ипотека</label>
+
+				<input type="checkbox" class="calc__checkbox" name="calc_checkbox" id="calc_checkbox_4">
+				<label for="calc_checkbox_4" class="calc__option">Ипотека с кэшбэком</label>
+
+				<input type="checkbox" class="calc__checkbox" name="calc_checkbox" id="calc_checkbox_5">
+				<label for="calc_checkbox_5" class="calc__option">Сбор документов</label>
+
+				<input type="checkbox" class="calc__checkbox" name="calc_checkbox" id="calc_checkbox_6">
+				<label for="calc_checkbox_6" class="calc__option">Использование мат. кап</label>
+
+				<input type="checkbox" class="calc__checkbox" name="calc_checkbox" id="calc_checkbox_7">
+				<label for="calc_checkbox_7" class="calc__option">Согласование с опекой</label>
+
+				<input type="checkbox" class="calc__checkbox" name="calc_checkbox" id="calc_checkbox_8">
+				<label for="calc_checkbox_8" class="calc__option">Регистрация док. в МФЦ</label>
+
+				<input type="checkbox" class="calc__checkbox" name="calc_checkbox" id="calc_checkbox_9">
+				<label for="calc_checkbox_9" class="calc__option">Оценка недвижимости</label>
+
+				<input type="checkbox" class="calc__checkbox" name="calc_checkbox" id="calc_checkbox_10">
+				<label for="calc_checkbox_10" class="calc__option">Подбор недвижимости</label>
+
+				<input type="checkbox" class="calc__checkbox" name="calc_checkbox" id="calc_checkbox_11">
+				<label for="calc_checkbox_11" class="calc__option">Подготовка объекта</label>
+
+				<input type="checkbox" class="calc__checkbox" name="calc_checkbox" id="calc_checkbox_12">
+				<label for="calc_checkbox_12" class="calc__option">Сделать фотографии</label>
+
+				<input type="checkbox" class="calc__checkbox" name="calc_checkbox" id="calc_checkbox_13">
+				<label for="calc_checkbox_13" class="calc__option">Выезд на показы</label>
+
+				<input type="checkbox" class="calc__checkbox" name="calc_checkbox" id="calc_checkbox_14">
+				<label for="calc_checkbox_14" class="calc__option">Выезд на просмотры</label>
+
+				<input type="checkbox" class="calc__checkbox" name="calc_checkbox" id="calc_checkbox_15">
+				<label for="calc_checkbox_15" class="calc__option">Реклама</label>
+
+				<input type="checkbox" class="calc__checkbox" name="calc_checkbox" id="calc_checkbox_16">
+				<label for="calc_checkbox_16" class="calc__option">Организация просмотров и&nbsp;показов</label>
+
+			</div>
+
+		</div>
+
+		<div class="calc__step">
+
+			<div class="calc__title">Шаг 5: Ваши контактные данные</div>
+
+			<div class="calc__contacts">
+
+				<form action="" class="form">
+
+					<div class="form__name">Ваше ФИО</div>
+					<input type="text" class="form__input" placeholder="В свободной форме" required>
+
+					<div class="form__name">Ваш телефон</div>
+					<input type="text" class="form__input" placeholder="+7 (___) ___-__-__" required>
+
+					<div class="form__name">Ваша электронная почта</div>
+					<input type="text" class="form__input" placeholder="Ваш email" required>
+
+					<input type="submit" value="Заказать звонок" class="form__submit">
+
+					<textarea style="display: none;" name="" id="calc_textarea"></textarea>
+
+				</form>
+
+				<div class="calc__result">
+
+					<div class="calc__white">Стоимость услуг:</div>
+
+					<div class="calc__sum">250 000 ₽</div>
+
+					<div class="calc__note">
+						* Данный расчет является предварительным, детальную стоимость уточняйте у менеджеров компании
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+	
+
+
+</body>
+</html>
