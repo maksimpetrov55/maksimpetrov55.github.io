@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="font/stylesheet.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div style="display: none;" id="calc_base">5000</div>
+
+
+
+		<div class="calc__head">КАЛЬКУЛЯТОР ДЛЯ САМОСТОЯТЕЛЬНОГО РАСЧЕТА СТОИМОСТИ РЕМОНТА С&nbsp;ТОЧНОСТЬЮ&nbsp;90%</div>
+
+		<div class="calc__step">
+			<div class="calc__name">Что представляет собой квартира сейчас? Заполните поля и выберете подходящие ответы.</div>
+
+			<div class="calc__line">
+				<div class="calc__title"><span class="calc__title--span">1.</span> Общая площадь квартиры, включая балконы и лоджии
+					<div class="calc__flex">
+						<select name="" id="calc_select_1" class="calc__select">
+							<option data-k="111.00" value="36">36</option>
+							<option data-k="110.75" value="37">37</option>
+							<option data-k="110.50" value="38">38</option>
+							<option data-k="110.25" value="39">39</option>
+							<option data-k="110.00" value="40">40</option>
+							<option data-k="109.75" value="41">41</option>
+							<option data-k="109.50" value="42">42</option>
+							<option data-k="109.25" value="43">43</option>
+							<option data-k="109.00" value="44">44</option>
+							<option data-k="108.75" value="45">45</option>
+							<option data-k="108.50" value="46">46</option>
+							<option data-k="108.25" value="47">47</option>
+							<option data-k="108.00" value="48">48</option>
+							<option data-k="107.75" value="49">49</option>
+							<option data-k="107.50" value="50">50</option>
+							<option data-k="107.25" value="51">51</option>
+							<option data-k="107.00" value="52">52</option>
+							<option data-k="106.75" value="53">53</option>
+							<option data-k="106.50" value="54">54</option>
+							<option data-k="106.25" value="55">55</option>
+							<option data-k="106.00" value="56">56</option>
+							<option data-k="105.75" value="57">57</option>
+							<option data-k="105.50" value="58">58</option>
+							<option data-k="105.25" value="59">59</option>
+							<option data-k="105.00" value="60">60</option>
+							<option data-k="104.75" value="61">61</option>
+							<option data-k="104.50" value="62">62</option>
+							<option data-k="104.25" value="63">63</option>
+							<option data-k="104.00" value="64">64</option>
+							<option data-k="103.75" value="65">65</option>
+							<option data-k="103.50" value="66">66</option>
+							<option data-k="103.25" value="67">67</option>
+							<option data-k="103.00" value="68">68</option>
+							<option data-k="102.75" value="69">69</option>
+							<option data-k="102.50" value="70">70</option>
+							<option data-k="102.25" value="71">71</option>
+							<option data-k="102.00" value="72">72</option>
+							<option data-k="101.75" value="73">73</option>
+							<option data-k="101.50" value="74">74</option>
+							<option data-k="101.25" selected value="75">75</option>
+							<option data-k="101.00" value="76">76</option>
+							<option data-k="100.75" value="77">77</option>
+							<option data-k="100.50" value="78">78</option>
+							<option data-k="100.25" value="79">79</option>
+							<option data-k="100.00" value="80">80</option>
+							<option data-k="99.75"  value="81">81</option>
+							<option data-k="99.50"  value="82">82</option>
+							<option data-k="99.25"  value="83">83</option>
+							<option data-k="99.00"  value="84">84</option>
+							<option data-k="98.75"  value="85">85</option>
+							<option data-k="98.50"  value="86">86</option>
+							<option data-k="98.25"  value="87">87</option>
+							<option data-k="98.00"  value="88">88</option>
+							<option data-k="97.75"  value="89">89</option>
+							<option data-k="97.50"  value="90">90</option>
+							<option data-k="97.25"  value="91">91</option>
+							<option data-k="97.00"  value="92">92</option>
+							<option data-k="96.75"  value="93">93</option>
+							<option data-k="96.50"  value="94">94</option>
+							<option data-k="96.25"  value="95">95</option>
+							<option data-k="96.00"  value="96">96</option>
+							<option data-k="95.75"  value="97">97</option>
+							<option data-k="95.50"  value="98">98</option>
+							<option data-k="95.25"  value="99">99</option>
+							<option data-k="95.00"  value="100">100</option>
+							<option data-k="94.75"  value="101">101</option>
+							<option data-k="94.50"  value="102">102</option>
+							<option data-k="94.25"  value="103">103</option>
+							<option data-k="94.00"  value="104">104</option>
+							<option data-k="93.75"  value="105">105</option>
+							<option data-k="93.50"  value="106">106</option>
+							<option data-k="93.25"  value="107">107</option>
+							<option data-k="93.00"  value="108">108</option>
+							<option data-k="92.75"  value="109">109</option>
+							<option data-k="92.50"  value="110">110</option>
+							<option data-k="92.25"  value="111">111</option>
+							<option data-k="92.00"  value="112">112</option>
+							<option data-k="91.75"  value="113">113</option>
+							<option data-k="91.50"  value="114">114</option>
+							<option data-k="91.25"  value="115">115</option>
+							<option data-k="91.00"  value="116">116</option>
+							<option data-k="90.75"  value="117">117</option>
+							<option data-k="90.50"  value="118">118</option>
+							<option data-k="90.25"  value="119">119</option>
+							<option data-k="90.00"  value="120">120</option>
+						</select>
+						<div class="calc__unit">м²</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /.calc__step -->
+
+		<div class="calc__step">
+			<div class="calc__title"><span class="calc__title--span">2.</span> Межкомнатные стены</div>
+
+			<div class="calc__choice">
+				<input type="radio" name="calc_mejkomnat" id="calc_mejkomnat_1" class="calc__radio" value="0" checked>
+				<label class="calc__label calc__label--radio" for="calc_mejkomnat_1">Все межкомнатные стены есть, строить ничего не нужно.</label>
+				<input type="radio" name="calc_mejkomnat" id="calc_mejkomnat_2" class="calc__radio" value="175">
+				<label class="calc__label calc__label--radio" for="calc_mejkomnat_2">Межкомнатные стены есть, но нужно кое-какие перенести.</label>
+				<input type="radio" name="calc_mejkomnat" id="calc_mejkomnat_3" class="calc__radio" value="375">
+				<label class="calc__label calc__label--radio" for="calc_mejkomnat_3">Возведены стены только санузлов, остальные перегородки нужно строить.</label>
+				<input type="radio" name="calc_mejkomnat" id="calc_mejkomnat_4" class="calc__radio" value="475">
+				<label class="calc__label calc__label--radio" for="calc_mejkomnat_4">Межкомнатные стены полностью отсутствуют.</label>
+			</div>
+		</div>
+		<!-- /.calc__step -->
+
+		<div class="calc__step">
+			<div class="calc__title"><span class="calc__title--span">3.</span> Стяжка пола</div>
+
+			<div class="calc__choice">
+				<input type="radio" name="calc_styajka" id="calc_styajka_1" class="calc__radio" value="0" checked>
+				<label class="calc__label calc__label--radio" for="calc_styajka_1">Стяжка пола сделана застройщиком. Требуется только выравнивание - тонким нивелирующим слоем наливного пола.</label>
+				<input type="radio" name="calc_styajka" id="calc_styajka_2" class="calc__radio" value="540">
+				<label class="calc__label calc__label--radio" for="calc_styajka_2">Стяжки пола сейчас нет. Нужно делать.</label>
+			</div>
+		</div>
+		<!-- /.calc__step -->
+
+		<div class="calc__step">
+			<div class="calc__title"><span class="calc__title--span">4.</span> Электрика в квартире</div>
+
+			<div class="calc__choice">
+				<input type="radio" name="calc_elektrika" id="calc_elektrika_1" class="calc__radio" value="0" checked>
+				<label class="calc__label calc__label--radio" for="calc_elektrika_1">Вся электрика полностью разведена застройщиком. Нигде, кроме кухни добавлять розетки не нужно.</label>
+				<input type="radio" name="calc_elektrika" id="calc_elektrika_2" class="calc__radio" value="330">
+				<label class="calc__label calc__label--radio" for="calc_elektrika_2">Электрика разведена застройщиком. Но необходимо будет добавить розетки и выключатели к существующей разводки электросети и&nbsp;развести слаботочку по комнатам.</label>
+				<input type="radio" name="calc_elektrika" id="calc_elektrika_3" class="calc__radio" value="690">
+				<label class="calc__label calc__label--radio" for="calc_elektrika_3">Только черновой щиток. Разведенной электрики нет.</label>
+			</div>
+		</div>
+		<!-- /.calc__step -->
+
+		<div class="calc__step">
+			<div class="calc__title"><span class="calc__title--span">5.</span> Заселенность дома</div>
+
+			<div class="calc__choice">
+				<input type="radio" name="calc_zaselennost" id="calc_zaselennost_1" class="calc__radio" value="1" checked>
+				<label class="calc__label calc__label--radio" for="calc_zaselennost_1">Ключи выдали недавно, ремонты только начинаются, постоянно проживающих соседей мало или почти нет.</label>
+				<input type="radio" name="calc_zaselennost" id="calc_zaselennost_2" class="calc__radio" value="1.025">
+				<label class="calc__label calc__label--radio" for="calc_zaselennost_2">В доме еще ведутся ремонты квартир. Постоянно проживает 25 - 50 % соседей.</label>
+				<input type="radio" name="calc_zaselennost" id="calc_zaselennost_3" class="calc__radio" value="1.055">
+				<label class="calc__label calc__label--radio" for="calc_zaselennost_3">Абсолютное большинство соседей давно сделали ремонты и живут постоянно.</label>
+			</div>
+		</div>
+		<!-- /.calc__step -->
+
+
+		<div class="calc__step">
+			<div class="calc__name">Что будет в квартире после окончания ремонта?</div>
+
+			<div class="calc__title"><span class="calc__title--span">6.</span> Отделка стен</div>
+
+			<div class="calc__choice">
+				<input type="radio" name="calc_steni" id="calc_steni_1" class="calc__radio" value="1" checked>
+				<label class="calc__label calc__label--radio" for="calc_steni_1">Отделка стен в комнатах, коридоре и на кухне - везде будут обои.</label>
+				<input type="radio" name="calc_steni" id="calc_steni_2" class="calc__radio" value="1.09">
+				<label class="calc__label calc__label--radio" for="calc_steni_2">Отделка стен в комнатах, коридоре и на кухне - 50 % обои, 50 % покраска.</label>
+				<input type="radio" name="calc_steni" id="calc_steni_3" class="calc__radio" value="1.19">
+				<label class="calc__label calc__label--radio" for="calc_steni_3">Отделка стен в комнатах, коридоре и на кухне - практически везде покраска.</label>
+				<input type="checkbox" name="calc_dekor" id="calc_dekor" class="calc__checkbox" value="1.22">
+				<label class="calc__label calc__label--checkbox" for="calc_dekor">Также на стенах частично будет декоративный клинкерный кирпичик или венецианская штукатурка, или фреска или композиция из гипса/дерева и т.п.</label>
+			</div>
+		</div>
+		<!-- /.calc__step -->
+
+		<div class="calc__step">
+			<div class="calc__title"><span class="calc__title--span">7.</span> Потолки в квартире</div>
+
+			<div class="calc__choice">
+				<input type="radio" name="calc_potolki" id="calc_potolki_1" class="calc__radio" value="0" checked>
+				<label class="calc__label calc__label--radio" for="calc_potolki_1">Потолок в комнатах, коридоре и на кухне - везде штукатурный, побелка/покраска.</label>
+				<input type="radio" name="calc_potolki" id="calc_potolki_2" class="calc__radio" value="190">
+				<label class="calc__label calc__label--radio" for="calc_potolki_2">Потолок - везде натяжной, простой, в один уровень.</label>
+				<input type="radio" name="calc_potolki" id="calc_potolki_3" class="calc__radio" value="400">
+				<label class="calc__label calc__label--radio" for="calc_potolki_3">Потолок - везде натяжной, с дизайнерскими элементами: несколько уровней высоты, LED подсветка по периметру помещений и т.д. и т.п.</label>
+				<input type="radio" name="calc_potolki" id="calc_potolki_4" class="calc__radio" value="500">
+				<label class="calc__label calc__label--radio" for="calc_potolki_4">Потолок - преимущественно гипсокартонный.</label>
+			</div>
+		</div>
+		<!-- /.calc__step -->
+
+		<div class="calc__step">
+			<div class="calc__title"><span class="calc__title--span">8.</span> Пол в квартире</div>
+
+			<div class="calc__choice">
+				<input type="radio" name="calc_pol" id="calc_pol_1" class="calc__radio" value="1" checked>
+				<label class="calc__label calc__label--radio" for="calc_pol_1">Пол во всех помещениях, кроме санузлов - ламинат или паркетная доска или кварцвинил.</label>
+				<input type="radio" name="calc_pol" id="calc_pol_2" class="calc__radio" value="1.04">
+				<label class="calc__label calc__label--radio" for="calc_pol_2">Пол в комнатах - ламинат или паркетная доска или кварцвинил, а в санузлах - плитка и в коридоре, на кухне - тоже плитка.</label>
+			</div>
+		</div>
+		<!-- /.calc__step -->
+
+		<div class="calc__step">
+			<div class="calc__title"><span class="calc__title--span">9.</span> Балконы в квартире</div>
+
+			<div class="calc__choice">
+				<input type="checkbox" name="calc_balkoni_1" id="calc_balkoni_1" class="calc__checkbox" value="0" checked>
+				<label class="calc__label calc__label--checkbox" for="calc_balkoni_1">Балконов/лоджий нет.</label>
+				<input type="checkbox" name="calc_balkoni_2" id="calc_balkoni_2" class="calc__checkbox" value="0.93">
+				<label class="calc__label calc__label--checkbox" for="calc_balkoni_2">Балконы/лоджии есть, но никакой их отделки не требуется.</label>
+				<input type="checkbox" name="calc_balkoni_3" id="calc_balkoni_3" class="calc__checkbox" value="0">
+				<label class="calc__label calc__label--checkbox" for="calc_balkoni_3">Балконы/лоджии, которые нужно только привести в порядок. Укладка напольной плитки и/или оштукатуривание неотделанных стен фасадной штукатуркой типа короед/шуба/барашек и т.п.</label>
+				<input type="checkbox" name="calc_balkoni_4" id="calc_balkoni_4" class="calc__checkbox" value="30000">
+				<label class="calc__label calc__label--checkbox" for="calc_balkoni_4">Балконы/лоджии, требуется утепления (пол, потолок, стены), без присоединения к квартире, в количестве
+					<div class="calc__flex">
+						<select name="" id="calc_select_2" class="calc__select">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+						</select>
+						<div class="calc__unit">шт.</div>
+					</div>
+				</label>
+				<input type="checkbox" name="calc_balkoni_5" id="calc_balkoni_5" class="calc__checkbox" value="40000">
+				<label class="calc__label calc__label--checkbox" for="calc_balkoni_5">Балконы/лоджии, требуется утепления (пол, потолок, стены), с присоединением к квартире, в количестве
+					<div class="calc__flex">
+						<select name="" id="calc_select_3" class="calc__select">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+						</select>
+						<div class="calc__unit">шт.</div>
+					</div>
+				</label>
+			</div>
+		</div>
+		<!-- /.calc__step -->
+
+
+		<div class="calc__step">
+			<div class="calc__line">
+				<div class="calc__title"><span class="calc__title--span">10.</span> Количество межкомнатных дверей, которые необходимо установить:
+					<div class="calc__flex">
+						<select data-value="3000" name="" id="calc_select_4" class="calc__select">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>
+						<div class="calc__unit">шт.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /.calc__step -->
+
+
+
+		<div class="calc__step">
+			<div class="calc__name">Дополнительно</div>
+
+			<div class="calc__title"><span class="calc__title--span">11.</span> Дополнительные работы в квартире</div>
+
+			<div class="calc__choice">
+				<input type="checkbox" name="calc_otoplenie" id="calc_otoplenie" class="calc__checkbox" value="17500">
+				<label class="calc__label calc__label--checkbox" for="calc_otoplenie">Требуется замена существующей тройниковой системы отопления, сделанной застройщиком на лучевую с установкой коллектора внутри квартиры. Материал труб - сшитый полиэтилен Рехау. Количество окон в квартире
+					<div class="calc__flex">
+						<select name="" id="calc_select_5" class="calc__select">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>
+						<div class="calc__unit">шт.</div>
+					</div>
+				</label>
+
+				<input type="checkbox" name="calc_shumpola" id="calc_shumpola" class="calc__checkbox" value="750">
+				<label class="calc__label calc__label--checkbox" for="calc_shumpola">Требуется сделать шумоизоляцию пола. Материал для шумоизоляции - Шуманет 100.</label>
+
+				<input type="checkbox" name="calc_shumsten" id="calc_shumsten" class="calc__checkbox" value="2700">
+				<label class="calc__label calc__label--checkbox" for="calc_shumsten">Требуется сделать шумоизоляцию стен. Материал - минеральная вата. Общая длина шумоизолируемых стен 
+					<div class="calc__flex">
+						<select name="" id="calc_select_6" class="calc__select">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="10">11</option>
+							<option value="10">12</option>
+							<option value="10">13</option>
+							<option value="10">14</option>
+							<option value="10">15</option>
+						</select>
+						<div class="calc__unit">м</div>
+					</div>
+				</label>
+
+				<input type="checkbox" name="calc_shumpotolok" id="calc_shumpotolok" class="calc__checkbox" value="270">
+				<label class="calc__label calc__label--checkbox" for="calc_shumpotolok">Требуется сделать шумоизоляцию потолка, за натяжным или гипсокартонным потолком. Материал - минеральная вата.</label>
+
+				<input type="checkbox" name="calc_dver" id="calc_dver" class="calc__checkbox" value="4000">
+				<label class="calc__label calc__label--checkbox" for="calc_dver">Требуется замена входной двери.</label>
+			</div>
+		</div>
+		<!-- /.calc__step -->
+
+
+		<div class="calc__step calc__step--result">
+
+			<div class="calc__result">ВАШ РЕЗУЛЬТАТ:</div>
+
+			<div class="calc__itog">Общая стоимость всех ремонтно-отделочных работ в квартире <span id="calc_itog" class="calc__itog--bold">516 106 руб. 00 коп.</span></div>
+
+		</div>
+		<!-- /.calc__step -->
+
+
+
+	</div>
+	
+
+
+</body>
+</html>
