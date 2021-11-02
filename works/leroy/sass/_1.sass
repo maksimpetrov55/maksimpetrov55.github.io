@@ -5,6 +5,7 @@ $color1: #66A685
 body
     position: relative
     background: $color1
+    background: #fff
 
 .calc
     position: relative
@@ -13,6 +14,7 @@ body
     box-sizing: border-box
     font-family: 'Century Gothic', sans-serif
     background: #fff
+    background: $color1
     width: 100%
     max-width: 1460px
     min-height: 300px
@@ -42,6 +44,7 @@ body
         font-weight: 900
         letter-spacing: 1px
         font-size: 20px
+        color: #fff
         @media ( max-width: 380px )
             font-size: 18px
 
@@ -60,18 +63,22 @@ body
         font-size: 17px
         margin: 40px 0 20px 0
         font-weight: 600
-        border-top: 1px solid #999
-        border-bottom: 1px solid #999
+        border-top: 1px solid #e4e4e4
+        border-bottom: 1px solid #e4e4e4
         padding: 10px 0
+        color: #e4e4e4
         @media ( max-width: 380px )
             font-size: 16px
         //text-shadow: 1px 1px 3px rgba(0,0,0,0.2)
 
     &__title
+        color: #fff
         font-size: 18px
+        line-height: 28px
         padding: 0 0 0 30px
         @media ( max-width: 450px )
             font-size: 16px
+            line-height: 22px
         @media ( max-width: 380px )
             font-size: 15px
         &--span
@@ -80,6 +87,10 @@ body
             font-weight: 900
             position: absolute
             left: 0
+            line-height: 28px
+            @media ( max-width: 450px )
+                line-height: 22px
+
         
     &__select
         display: inline-block
@@ -112,9 +123,9 @@ body
     &__radio
         display: none
         &:checked + .calc__label::before
-            border: 2px solid $color1
+            border: 2px solid #fff
         &:checked + .calc__label::after
-            background: $color1
+            background: #fff
 
     &__checkbox
         display: none
@@ -122,6 +133,7 @@ body
             content: "✔"
 
     &__label
+        color: #fff
         min-height: 28px
         line-height: 28px
         cursor: pointer
@@ -148,7 +160,6 @@ body
                 height: 12px
                 left: 4px
                 top: 8px
-                background: #fff
                 border-radius: 30px
                 @media ( max-width: 450px )
                     top: 4px
@@ -164,7 +175,7 @@ body
                 width: 20px
                 height: 20px
                 border-radius: 30px
-                border: 1px solid #333
+                border: 1px solid #fff
                 //margin: 0 10px 0 0
                 @media ( max-width: 450px )
                     top: 0px
@@ -180,29 +191,31 @@ body
                 display: flex
                 justify-content: center
                 align-items: center
-                color: $color1
+                color: #fff
                 width: 20px
                 height: 20px
                 line-height: 20px
                 border-radius: 1px
-                border: 1px solid #333
+                border: 1px solid #fff
                 margin: 0 10px 0 0
                 @media ( max-width: 450px )
                     top: 0
 
     &__result
+        color: #fff
         text-align: center
         margin: 0 0 20px 0
         font-weight: 900
         letter-spacing: 1px
         font-size: 20px
         padding: 10px 0
-        border-bottom: 1px solid #999
-        border-top: 1px solid #999
+        border-bottom: 1px solid #e4e4e4
+        border-top: 1px solid #e4e4e4
         @media ( max-width: 380px )
             font-size: 18px
 
     &__itog
+        color: #fff
         font-size: 18px
         text-align: center
         margin: 0 0 40px 0
@@ -211,6 +224,6 @@ body
             font-size: 16px
         &--bold
             font-weight: 600
-            border-bottom: 2px solid $color1
+            border-bottom: 2px solid #e4e4e4
             padding: 3px
             white-space: nowrap
