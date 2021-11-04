@@ -1,0 +1,500 @@
+
+body
+    position: relative
+    background: #ddd
+
+.calc
+    position: relative
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: "Montserrat", sans-serif
+    position: relative
+    width: 100%
+    max-width: 1440px
+    min-height: 300px
+    margin: 50px auto
+    background: #fff
+    padding: 50px 70px
+    @media ( max-width: 1180px )
+        padding: 50px 30px
+    @media ( max-width: 450px )
+        padding: 50px 15px
+    
+    *
+        position: relative
+        padding: 0
+        margin: 0
+        box-sizing: border-box
+        font-family: "Montserrat", sans-serif
+
+    &__black
+        width: 100%
+        height: 100%
+        position: absolute
+        background: #00000000
+        left: 0
+        top: 0
+        z-index: 99
+        display: none
+        &--show
+            display: block
+
+    &__head
+        font-size: 32px
+        font-weight: 600
+        margin: 0 0 20px 0
+        @media ( max-width: 730px )
+            max-width: 345px
+            margin: 0 auto 20px auto
+        @media ( max-width: 360px )
+            font-size: 26px
+        &::before
+            content: ""
+            height: 4px
+            background: #DF0000
+            position: absolute
+            bottom: -5px
+            left: 3px
+            width: 90px
+            @media ( max-width: 360px )
+                width: 70px
+
+    &__wrap
+        display: flex
+        justify-content: space-between
+        margin: 40px auto 40px auto
+        @media ( max-width: 1100px )
+            flex-wrap: wrap
+
+    &__left
+        width: 65%
+        @media ( max-width: 1100px )
+            width: 100%
+
+    &__right
+        width: 360px
+        padding: 0 35px
+        @media ( max-width: 1180px )
+            padding: 0 0 0 35px
+        @media ( max-width: 1100px )
+            width: 100%
+            padding: 0
+
+    &__flex
+        display: flex
+        @media ( max-width: 730px )
+            max-width: 345px
+            margin: 0 auto
+            justify-content: space-between
+        &--aic
+            align-items: center
+
+    &__text
+        font-size: 18px
+        @media ( max-width: 360px )
+            font-size: 16px
+        @media ( max-width: 330px )
+            max-width: 180px
+        &--result
+            text-align: center
+            font-weight: 600
+            @media ( max-width: 330px )
+                max-width: 600px
+                font-size: 18px
+        &--color
+            color: #DF0000
+
+    &__result
+        font-size: 36px
+        margin: 40px auto
+        text-align: center
+        @media ( max-width: 440px )
+            margin: 30px auto
+        @media ( max-width: 330px )
+            margin: 10px auto 20px auto
+
+    &__filial
+        margin: 0 15px
+        height: 32px
+        text-align: center
+        width: 90px
+        border-radius: 6px
+        border: 1px solid #ddd
+        background: rgba(198, 220, 238, 0.15)
+        font-size: 16px
+        @media ( max-width: 730px )
+            margin: 0
+
+    &__body
+        margin: 40px 0 40px 0
+        @media ( max-width: 730px )
+            max-width: 345px
+            margin: 40px auto
+
+    &__line
+        display: flex
+        border-bottom: 1px solid #bbb
+        padding: 15px 0
+        align-items: center
+        @media ( max-width: 730px )
+            max-width: 345px
+            margin: 0 auto
+            flex-wrap: wrap
+
+        &--add
+            justify-content: flex-start
+
+    &__add
+        margin: 0 25px 0 0
+        width: 26px
+        height: 26px
+        background: #C6DCEE
+        border-radius: 50px
+        flex-shrink: 0
+        cursor: pointer
+        transition-duration: 0.2s
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 30px
+        color: #fff
+        user-select: none
+        &:hover
+            background: #95b5cf
+
+    &__delete
+        width: 22px
+        height: 22px
+        background: #DF0000
+        border-radius: 50px
+        cursor: pointer
+        flex-shrink: 0
+        transition-duration: 0.2s
+        &:hover
+            opacity: 0.5
+        &::after
+            content: ""
+            width: 60%
+            background: #fff
+            position: absolute
+            height: 3px
+            border-radius: 20px
+            top: 50%
+            margin: -1.5px 0 0 -30%
+            left: 50%
+
+    &__img
+        height: 30px
+        margin: 0 25px
+        @media ( max-width: 730px )
+            margin: 0 10px
+        @media ( max-width: 450px )
+            height: 27px
+            max-width: 230px
+        @media ( max-width: 360px )
+            max-width: 220px
+            margin: 0 5px 0 10px
+        @media ( max-width: 330px )
+            max-width: 210px
+
+    &__tip
+        flex-shrink: 0
+        @media ( max-width: 730px )
+            position: static
+
+    &__sign
+        flex-shrink: 0
+        width: 20px
+        height: 20px
+        background: #FFD56B
+        border-radius: 30px
+        margin: 0 0 0 5px
+        display: flex
+        justify-content: center
+        align-items: center
+        color: #fff
+        font-weight: 600
+        font-size: 14px
+        cursor: pointer
+        user-select: none
+        transition-duration: 0.2s
+        &:hover
+            background: #e4bb54
+        &:hover + .calc__fly
+            display: block
+
+    &__fly
+        position: absolute
+        width: auto
+        white-space: nowrap
+        top: -8px
+        left: calc( 100% + 10px )
+        background: #FFF6DD
+        z-index: 89
+        padding: 10px 5px 
+        font-size: 10px
+        border-radius: 6px
+        border: 1px solid #a89d7d
+        display: none
+        @media ( max-width: 880px )
+            width: 300px
+            white-space: normal
+            height: 42px
+            top: -11px
+            align-items: center
+        @media ( max-width: 730px )
+            left: 0
+            width: 345px
+            height: 66px
+            top: 42px
+            padding: 20px 10px
+        @media ( max-width: 375px )
+            width: 100%
+            left: 0
+            top: 40px
+
+        &--show
+            display: block
+            @media ( max-width: 880px )
+                display: flex
+            @media ( max-width: 730px )
+                display: flex
+                align-items: center
+
+    &__part
+        display: flex
+        align-items: center
+        width: 50%
+        min-width: 390px
+        @media ( max-width: 730px )
+            width: 345px
+            min-width: auto
+        &--first
+            padding: 0 0 0 45px
+            @media ( max-width: 730px )
+                padding: 0
+
+    &__head730
+        justify-content: space-between
+        display: none
+        width: 100%
+        margin: 10px 0 10px 0
+        @media ( max-width: 730px )
+            display: flex
+
+    &__between
+        display: flex
+        justify-content: space-between
+        width: 50%
+        align-items: center
+        @media ( max-width: 730px )
+            width: 100%
+        &--first
+            @media ( max-width: 730px )
+                display: none
+
+    &__plusminus
+        display: flex
+        justify-content: space-between
+        width: 120px
+        height: 34px
+        border-radius: 4px
+        border: 1px solid #ddd
+        background: rgba(198, 220, 238, 0.15)
+
+    &__input
+        width: 60px
+        height: 100%
+        border: none
+        outline: none
+        text-align: center
+        font-size: 16px
+        background: rgba(198, 220, 238, 0.15)
+
+    &__plus,
+    &__minus
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 25px
+        font-size: 22px
+        user-select: none
+        cursor: pointer
+        font-weight: 300
+        transition-duration: 0.2
+        border-radius: 4px
+        &:hover
+            opacity: 0.4
+        &:active
+            background: #ccc
+
+    &__plus
+        font-size: 28px
+        &::before
+            content: ""
+            display: block
+            position: absolute
+            background: #dedede
+            height: 60%
+            width: 1px
+            left: 0
+            top: 20%
+
+    &__minus
+        padding: 0 0 2px 0
+        &::before
+            content: ""
+            display: block
+            position: absolute
+            background: #dedede
+            height: 60%
+            width: 1px
+            right: 0
+            top: 20%
+
+
+
+
+.drop
+    overflow: hidden
+    z-index: 199
+    position: absolute
+    background: #fff
+    width: 100%
+    max-width: 380px
+    padding: 10px 10px
+    border-radius: 6px
+    border: 1px solid #bbb
+    top: 50%
+    margin: -13px 0 0 0
+    height: 160px
+    overflow-y: scroll
+    display: none
+    @media ( max-width: 730px )
+        max-width: 345px
+    &--show
+        display: block
+
+    &__item
+        padding: 10px 0px 10px 40px
+        border-radius: 6px
+        cursor: pointer
+        &:hover
+            background: #f3f3f3
+
+    &__img
+        display: block
+        max-height: 31px
+
+
+
+
+.drop::-webkit-scrollbar
+    width: 20px
+    border-radius: 20px
+.drop::-webkit-scrollbar-track
+    //background: #C4C4C4
+    border: 7px solid #fff
+    border-radius: 20px
+.drop::-webkit-scrollbar-thumb
+    background-color: #DF0000
+    border: 7px solid #fff
+    border-radius: 20px
+
+
+
+
+
+.form
+    max-width: 400px
+    margin: 0 auto
+    position: relative
+    @media ( max-width: 730px )
+        max-width: 345px
+
+    &__icon
+        position: relative
+        &--mail::before
+            content: "✉"
+            font-size: 20px
+            font-weight: 400
+            display: flex
+            justify-content: center
+            align-items: center
+            position: absolute
+            width: 30px
+            height: 30px
+            margin: 3px 0 0 5px
+            color: #999
+
+        &--phone::before
+            content: "+7"
+            font-size: 16px
+            font-weight: 400
+            display: flex
+            justify-content: center
+            align-items: center
+            position: absolute
+            width: 30px
+            height: 30px
+            margin: 5px 0 0 5px
+            color: #999
+
+    &__file
+        width: 40px
+        height: 40px
+        position: absolute
+        z-index: 199
+        margin: -60px 0 0 10px
+        cursor: pointer
+        transition-duration: 0.2s
+        cursor: pointer
+        &:hover
+            opacity: 0.5
+
+    &__input
+        display: block
+        width: 100%
+        margin: 0 0 10px 0
+        height: 40px
+        border-radius: 6px
+        border: 1px solid #ddd
+        background: #00000005
+        font-size: 16px
+        padding: 0 10px 0 35px
+
+    &__comment
+        display: block
+        width: 100%
+        margin: 0 0 10px 0
+        border-radius: 6px
+        border: 1px solid #ddd
+        background: #fcfcfc
+        font-size: 16px
+        height: 110px
+        padding: 10px
+
+    &__note
+        font-size: 12px
+        color: #999
+        text-align: center
+
+    &__submit
+        width: 100%
+        margin: 20px 0
+        display: block
+        height: 46px
+        background: #DF0000
+        border: none
+        color: #fff
+        font-size: 18px
+        font-weight: 600
+        border-radius: 6px
+        cursor: pointer
+        transition-duration: 0.2s
+        &:hover
+            opacity: 0.7
+        &:active
+            opacity: 0.4

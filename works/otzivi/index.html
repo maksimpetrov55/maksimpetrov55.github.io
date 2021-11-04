@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+	<script src="js/jquery.maskedinput.min.js"></script>
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div class="calc__black"></div>
+
+		<div class="calc__head">Расчёт стоимости</div>
+
+		<div class="calc__wrap">
+
+			<div class="calc__left">
+
+				<div class="calc__flex calc__flex--aic">
+					<div class="calc__text">Количество филиалов</div>
+					<input type="text" class="calc__filial" id="calc_filial" value="10">
+				</div>
+
+				<div class="calc__body">
+
+					<div class="calc__line calc__line--first">
+						<div class="calc__part calc__part--first">
+							<div class="calc__text">Площадка</div>
+						</div>
+						<div class="calc__between calc__between--first">
+							<div class="calc__text">Кол-во отзывов</div>
+							<div class="calc__text">Стоимость</div>
+						</div>
+					</div>
+
+					<div class="calc__table">
+
+						<div data-place="Янднекс.Карты" class="calc__line calc__line--calc calc__line--yandex">
+							<div class="calc__part">
+								<div class="calc__delete"></div>
+								<img src="img/yandex.png" alt="" class="calc__img">
+								<div class="calc__tip">
+									<div class="calc__sign">?</div>
+									<div class="calc__fly">Размещение отзыва не сервисе Янднекс.Карты с гарантией публикации 1 мес*</div>
+								</div>
+							</div>
+							<div class="calc__head730">
+								<div class="calc__text">Кол-во отзывов</div>
+								<div class="calc__text">Стоимость</div>
+							</div>
+							<div class="calc__between">
+								<div class="calc__plusminus">
+									<div class="calc__minus">–</div>
+									<input class="calc__input" type="text" value="0">
+									<div class="calc__plus">+</div>
+								</div>
+								<div class="calc__text calc__text--price">15000 руб.</div>
+							</div>
+						</div>
+	
+						<div data-place="ПРОДОКТОРОВ" class="calc__line calc__line--calc calc__line--prodoc">
+							<div class="calc__part">
+								<div class="calc__delete"></div>
+								<img src="img/prodoc.png" alt="" class="calc__img">
+								<div class="calc__tip">
+									<div class="calc__sign">?</div>
+									<div class="calc__fly">Размещение отзыва не сервисе ПРОДОКТОРОВ с гарантией публикации 1 мес*</div>
+								</div>
+								
+							</div>
+							<div class="calc__head730">
+								<div class="calc__text">Кол-во отзывов</div>
+								<div class="calc__text">Стоимость</div>
+							</div>
+							<div class="calc__between">
+								<div class="calc__plusminus">
+									<div class="calc__minus">–</div>
+									<input class="calc__input" type="text" value="0">
+									<div class="calc__plus">+</div>
+								</div>
+								<div class="calc__text calc__text--price">8000 руб.</div>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="calc__line calc__line--add">
+						<div class="calc__add">+</div>
+						<div class="calc__text">Добавить площадку</div>
+						<div class="drop">
+							<div data-tip="Янднекс.Карты" data-price="15000" data-name="yandex" class="drop__item"><img src="img/yandex.png" alt="" class="drop__img"></div>
+							<div data-tip="Google Maps" data-price="15000" data-name="google" class="drop__item"><img src="img/google.png" alt="" class="drop__img"></div>
+							<div data-tip="2GIS" data-price="10000" data-name="2gis" class="drop__item"><img src="img/2gis.png" alt="" class="drop__img"></div>
+							<div data-tip="ПРОДОКТОРОВ" data-price="8000" data-name="prodoc" class="drop__item"><img src="img/prodoc.png" alt="" class="drop__img"></div>
+							<div data-tip="ZOON" data-price="6000" data-name="zoon" class="drop__item"><img src="img/zoon.png" alt="" class="drop__img"></div>
+							<div data-tip="Flamp" data-price="5555" data-name="flamp" class="drop__item"><img src="img/flamp.png" alt="" class="drop__img"></div>
+							<div data-tip="SPR" data-price="5555" data-name="spr" class="drop__item"><img src="img/spr.png" alt="" class="drop__img"></div>
+							<div data-tip="Yell.ru" data-price="5555" data-name="yell" class="drop__item"><img src="img/yell.png" alt="" class="drop__img"></div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="calc__right">
+
+				<div class="calc__text calc__text--result">Общая стоимость <span class="calc__text--color">проекта</span></div>
+
+				<div class="calc__result">54.000 руб</div>
+
+				<form action="!mail.php" method="POST" class="calc__form form" enctype="multipart/form-data">
+
+					<div class="form__icon form__icon--mail"><input name="form_mail" type="email" class="form__input" required></div>
+
+					<div class="form__icon form__icon--phone"><input name="form_phone" id="form_phone" type="text" class="form__input" required></div>
+
+					<div class="form__icon">
+						<textarea name="form_comment" id="form_comment" class="form__comment"></textarea>
+						<img class="form__file" src="img/file.png" alt="">
+					</div>
+
+					<textarea name="form_data" id="form_data" class="form__data" style="display: none;"></textarea>
+
+					<input type="file" name="userfile[]" multiple="multiple" id="form_file" style="display: none;">
+
+					<div class="form__note">Оставить комментарий или прикрепить техническое задание</div>
+
+					<input type="submit" value="Заказать отзывы" class="form__submit">
+
+				</form>
+
+			</div>
+
+
+
+		</div>
+
+	</div>
+
+
+
+</body>
+</html>
