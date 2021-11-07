@@ -39,9 +39,9 @@ $(document).ready(function() {
 	});
 
 	$('.calc__tip').hover(function(){
-		$(this).next().css({display: "block"});
+		$(this).parent().find(".calc__fly").css({display: "block"});
 	}, function(){
-		$(this).next().css({display: "none"});
+		$(this).parent().find(".calc__fly").css({display: "none"});
 	});
 
 	$('input').keyup(function(){
@@ -77,6 +77,9 @@ $(document).ready(function() {
 			$('#block_8').css({display: "none"});
 			$('#block_9').css({display: "none"});
 			$('#block_10').css({display: "none"});
+			$('.calc__fly--all').css({opacity: "0"});
+			$('.calc__fly--alberta').css({opacity: "0"});
+			$('.calc__fly--quebec').css({opacity: "1"});
 		}
 		if ( calc_B1 == "Alberta" ) {
 			var calc_check_1 = 2000;
@@ -94,6 +97,9 @@ $(document).ready(function() {
 			$('#block_8').css({display: "none"});
 			$('#block_9').css({display: "none"});
 			$('#block_10').css({display: "none"});
+			$('.calc__fly--all').css({opacity: "0"});
+			$('.calc__fly--alberta').css({opacity: "1"});
+			$('.calc__fly--quebec').css({opacity: "0"});
 		}
 		if ( calc_B1 == "Other" ) {
 			var calc_check_1 = 3000;
@@ -112,6 +118,9 @@ $(document).ready(function() {
 			$('#block_8').css({display: "block"});
 			$('#block_9').css({display: "block"});
 			$('#block_10').css({display: "block"});
+			$('.calc__fly--all').css({opacity: "1"});
+			$('.calc__fly--alberta').css({opacity: "0"});
+			$('.calc__fly--quebec').css({opacity: "0"});
 		}
 		
 
@@ -129,9 +138,11 @@ $(document).ready(function() {
 			if ( $('#calc_B2').val() == "Yes" && $('#calc_B3').val() == "Yes" ) {
 				$('#calc_B5').text("Yes, you have to pay instalments to CRA!");
 				$('#block_1').css({display: "block"});
+				$('block_3').css({display: "block"});
 			} else {
 				$('#calc_B5').text("No, you DO NOT have to pay instalments to CRA!");
 				$('#block_1').css({display: "none"});
+				$('block_3').css({display: "none"});
 			}
 		}
 
@@ -154,13 +165,13 @@ $(document).ready(function() {
 
 		if ( calc_B1 == "Quebec") {
 			if ( $('#calc_B7').val() == "Yes" ) {
-				$('#calc_B9').text("Monthly");
-				$('#block_3').css({display: "block"});
-				$('#block_2').css({display: "none"});
-			} else {
 				$('#calc_B9').text("Quarterly");
-				$('#block_3').css({display: "none"});
 				$('#block_2').css({display: "block"});
+				$('#block_3').css({display: "none"});
+			} else {
+				$('#calc_B9').text("Monthly");
+				$('#block_2').css({display: "none"});
+				$('#block_3').css({display: "block"});
 			}
 		}
 
@@ -272,10 +283,14 @@ $(document).ready(function() {
 			var calc_quart_4_year = +calc_quart_3_year;
 		}
 		
-		var calc_quart_1_days = maxDays(calc_quart_1);
-		var calc_quart_2_days = maxDays(calc_quart_2);
-		var calc_quart_3_days = maxDays(calc_quart_3);
-		var calc_quart_4_days = maxDays(calc_quart_4);
+		//var calc_quart_1_days = maxDays(calc_quart_1);
+		//var calc_quart_2_days = maxDays(calc_quart_2);
+		//var calc_quart_3_days = maxDays(calc_quart_3);
+		//var calc_quart_4_days = maxDays(calc_quart_4);
+		if ( calc_C11 > maxDays(calc_quart_1) ) { var calc_quart_1_days = maxDays(calc_quart_1); } else { var calc_quart_1_days = calc_C11; }
+		if ( calc_C11 > maxDays(calc_quart_2) ) { var calc_quart_2_days = maxDays(calc_quart_2); } else { var calc_quart_2_days = calc_C11; }
+		if ( calc_C11 > maxDays(calc_quart_3) ) { var calc_quart_3_days = maxDays(calc_quart_3); } else { var calc_quart_3_days = calc_C11; }
+		if ( calc_C11 > maxDays(calc_quart_4) ) { var calc_quart_4_days = maxDays(calc_quart_4); } else { var calc_quart_4_days = calc_C11; }
 
 		var calc_quart_1_name = mnthName(calc_quart_1);
 		var calc_quart_2_name = mnthName(calc_quart_2);
@@ -409,18 +424,18 @@ $(document).ready(function() {
 		}
 
 
-		$('#calc_B25').val( (Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') ) / 12).toFixed(2) );
-		$('#calc_B26').val( (Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') ) / 12).toFixed(2) );
-		$('#calc_B27').val( (Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') ) / 12).toFixed(2) );
-		$('#calc_B28').val( (Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') ) / 12).toFixed(2) );
-		$('#calc_B29').val( (Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') ) / 12).toFixed(2) );
-		$('#calc_B30').val( (Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') ) / 12).toFixed(2) );
-		$('#calc_B31').val( (Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') ) / 12).toFixed(2) );
-		$('#calc_B32').val( (Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') ) / 12).toFixed(2) );
-		$('#calc_B33').val( (Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') ) / 12).toFixed(2) );
-		$('#calc_B34').val( (Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') ) / 12).toFixed(2) );
-		$('#calc_B35').val( (Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') ) / 12).toFixed(2) );
-		$('#calc_B36').val( (Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') ) / 12).toFixed(2) );
+		$('#calc_B25').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
+		$('#calc_B26').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
+		$('#calc_B27').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
+		$('#calc_B28').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
+		$('#calc_B29').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
+		$('#calc_B30').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
+		$('#calc_B31').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
+		$('#calc_B32').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
+		$('#calc_B33').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
+		$('#calc_B34').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
+		$('#calc_B35').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
+		$('#calc_B36').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
 
 		$('#calc_D25').val( ($('#calc_C15').val().split(',').join('') / 12).toFixed(2) );
 		$('#calc_D26').val( ($('#calc_C15').val().split(',').join('') / 12).toFixed(2) );

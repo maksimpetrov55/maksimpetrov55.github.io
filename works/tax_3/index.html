@@ -28,6 +28,7 @@
 				<option value="Alberta">Alberta</option>
 				<option value="Quebec">Quebec</option>
 			</select>
+			<div class="calc__tip calc__tip--opa">?</div>
 		</div>
 
 		<div class="calc__line">
@@ -36,6 +37,19 @@
 				<option value="Yes">Yes, we're growing fast!</option>
 				<option value="No">No, we're just starting out!</option>
 			</select>
+			<div class="calc__tip">?</div>
+			<div class="calc__fly calc__fly--all">
+				Includes Federal and Provincial Tax Payable:
+				<br>Sum lines 700, 720, 724, 727, 760 from your T2 return
+			</div>
+			<div class="calc__fly calc__fly--alberta">
+				Includes Provincial Tax Payable:
+				<br>Line 760 from your T2 return
+			</div>
+			<div class="calc__fly calc__fly--quebec">
+				Includes Federal and Provincial Tax Payable:
+				<br>Sum lines 700, 720, 724, 727, 760 from your T2 return
+			</div>
 		</div>
 
 		<div class="calc__line">
@@ -44,6 +58,19 @@
 				<option value="Yes">Yes, we're growing fast!</option>
 				<option value="No">No, we're just starting out!</option>
 			</select>
+			<div class="calc__tip">?</div>
+			<div class="calc__fly calc__fly--all">
+				Includes Federal and Provincial Tax Payable:
+				<br>Sum lines 700, 720, 724, 727, 760 from your T2 return
+			</div>
+			<div class="calc__fly calc__fly--alberta">
+				Includes Provincial Tax Payable:
+				<br>Line 760 from your T2 return
+			</div>
+			<div class="calc__fly calc__fly--quebec">
+				Includes Federal and Provincial Tax Payable:
+				<br>Sum lines 700, 720, 724, 727, 760 from your T2 return
+			</div>
 		</div>
 
 		<div id="block_7">
@@ -53,6 +80,12 @@
 					<option value="No">No, Fortune 500, here we come!</option>
 					<option value="Yes">Yes, we are a start-up!</option>
 				</select>
+				<div class="calc__tip">?</div>
+				<div class="calc__fly calc__fly--alberta">
+					Is the corporation a CCPC that claims Alberta Small Business Deduction and its taxable income for the current or previous year is equal to or lower than $500,000?
+					<br><br>
+					A CCPC is a privately owned corporation, which was incorporated in Canada and is not controlled directly or indirectly by non-resident persons or corporations.
+				</div>
 			</div>
 		</div>
 
@@ -74,6 +107,14 @@
 							<option value="Yes">Yes, we are a start-up!</option>
 							<option value="No">No, Fortune 500, here we come!</option>
 						</select>
+						<div class="calc__tip">?</div>
+						<div class="calc__fly calc__fly--quebec">
+							1) A Canadian-controlled private corporation.
+							<br>2) Taxable income for the current taxation year OR the previous year is $500,000 or less.
+							<br>3) Income from a business that it actively carried on during the current taxation year or had such income during the previous year.
+							<br>4) Paid-up capital for the current taxation year or the previous year is $10 million or less.
+							<br>5) Met its tax obligations over the past 12 months.
+						</div>
 					</div>
 			
 					<div class="calc__separator"></div>
@@ -88,7 +129,7 @@
 		
 				<div class="calc__line">
 					<div class="calc__title calc__title--bold">Corporation's Year End</div>
-					<select name="" id="calc_B11" placeholder="calc_B11" class="calc__select calc__select--date">
+					<select name="" id="calc_B11" placeholder="calc_B11" class="calc__select calc__select--date calc__select--margin">
 						<option value="1">Jan</option>
 						<option value="2">Feb</option>
 						<option value="3">Mar</option>
@@ -139,6 +180,7 @@
 						<option value="2021">2021</option>
 						<option value="2020">2020</option>
 					</select>
+					<div class="calc__tip calc__tip--opa">?</div>
 				</div>
 		
 				<div class="calc__separator"></div>
@@ -150,6 +192,7 @@
 							<option value="Monthly">Monthly</option>
 							<option value="Quarterly">Quarterly</option>
 						</select>
+						<div class="calc__tip calc__tip--opa">?</div>
 					</div>
 	
 					<div class="calc__separator"></div>
@@ -162,6 +205,7 @@
 						<div class="calc__year">2020</div>
 						<div class="calc__year">2019</div>
 					</div>
+					<div class="calc__tip calc__tip--opa">?</div>
 				</div>
 
 				<div id="block_10">
@@ -171,6 +215,15 @@
 							<input data-min="0" type="text" name="" id="calc_B13" placeholder="calc_B13" class="calc__input calc__input--short data-min" value="3,000">
 							<input data-min="0" type="text" name="" id="calc_C13" placeholder="calc_C13" class="calc__input calc__input--short data-min" value="3,100">
 							<input data-min="0" type="text" name="" id="calc_D13" placeholder="calc_D13" class="calc__input calc__input--short data-min" value="1,000">
+						</div>
+						<div class="calc__tip">?</div>
+						<div class="calc__fly calc__fly--all">
+							From your corporate tax return T2
+							<br>Sum lines 700, 720, 724, 727
+						</div>
+						<div class="calc__fly calc__fly--alberta">
+						</div>
+						<div class="calc__fly calc__fly--quebec">
 						</div>
 					</div>
 				</div>
@@ -182,6 +235,19 @@
 						<input data-min="0" type="text" name="" id="calc_C14" placeholder="calc_C14" class="calc__input calc__input--short data-min" value="5,000">
 						<input data-min="0" type="text" name="" id="calc_D14" placeholder="calc_D14" class="calc__input calc__input--short data-min" value="1,000">
 					</div>
+					<div class="calc__tip">?</div>
+					<div class="calc__fly calc__fly--all">
+						From your corporate tax return T2 (does not apply to Alberta and Quebec)
+						<br>Line 760 (net of provincial and territorial non-refundable credits)
+					</div>
+					<div class="calc__fly calc__fly--alberta">
+						From your corporate tax return T2
+						<br>Line 760 (net of provincial and territorial non-refundable credits)
+					</div>
+					<div class="calc__fly calc__fly--quebec">
+						From your corporate tax return T2
+						<br>Line 760 (net of provincial and territorial non-refundable credits)
+					</div>
 				</div>
 
 				<div id="block_9">
@@ -191,6 +257,14 @@
 							<input data-min="0" type="text" name="" id="calc_B12" placeholder="calc_B12" class="calc__input calc__input--short data-min" value="1,000">
 							<input data-min="0" type="text" name="" id="calc_C12" placeholder="calc_C12" class="calc__input calc__input--short data-min calc__input--disabled" value="5,000" disabled>
 							<input data-min="0" type="text" name="" id="calc_D12" placeholder="calc_D12" class="calc__input calc__input--short data-min calc__input--disabled" value="1,000" disabled>
+						</div>
+						<div class="calc__tip">?</div>
+						<div class="calc__fly calc__fly--all">
+							These are refundable tax credits. For more information, refer to link at the end of the page.
+						</div>
+						<div class="calc__fly calc__fly--alberta">
+						</div>
+						<div class="calc__fly calc__fly--quebec">
 						</div>
 					</div>
 				</div>
@@ -202,6 +276,7 @@
 						<input data-min="0" type="text" name="" id="calc_C15" placeholder="calc_C15" class="calc__input calc__input--short data-min calc__input--disabled" value="" disabled>
 						<input data-min="0" type="text" name="" id="calc_D15" placeholder="calc_D15" class="calc__input calc__input--short data-min calc__input--disabled" value="" disabled>
 					</div>
+					<div class="calc__tip calc__tip--opa">?</div>
 				</div>
 		
 				<div class="calc__separator"></div>
@@ -415,6 +490,31 @@
 	
 			<div class="calc__line calc__line--block">
 				<div class="calc__title calc__title--bold">Penalty on late and overdue instalments <div id="calc_plus_1" class="calc__plus">+</div></div>
+				<div class="calc__tip calc__tip--posa">?</div>
+				<div class="calc__fly calc__fly--all">
+					You will be charged instalment interest if all the following apply:
+					<br>1) You are required to pay by instalments in 2021
+					<br>2) You receive an instalment reminder in 2021 that shows an amount to pay
+					<br>3) You did not make any of your instalment payments, paid late, or paid less than what you had to pay
+					<br><br>
+					CRA charge instalment interest on all late or insufficient instalment payments. Instalment interest is compounded daily at the prescribed interest rate, which can change every 3 months.
+				</div>
+				<div class="calc__fly calc__fly--alberta">
+					You will be charged instalment interest if all the following apply:
+					<br>1) You are required to pay by instalments in 2021
+					<br>2) You receive an instalment reminder in 2021 that shows an amount to pay
+					<br>3) You did not make any of your instalment payments, paid late, or paid less than what you had to pay
+					<br><br>
+					CRA charge instalment interest on all late or insufficient instalment payments. Instalment interest is compounded daily at the prescribed interest rate, which can change every 3 months.
+				</div>
+				<div class="calc__fly calc__fly--quebec">
+					You will be charged instalment interest if all the following apply:
+					<br>1) You are required to pay by instalments in 2021
+					<br>2) You receive an instalment reminder in 2021 that shows an amount to pay
+					<br>3) You did not make any of your instalment payments, paid late, or paid less than what you had to pay
+					<br><br>
+					CRA charge instalment interest on all late or insufficient instalment payments. Instalment interest is compounded daily at the prescribed interest rate, which can change every 3 months.
+				</div>
 				<div class="calc__info">
 					<div id="calc_info_2">
 						1) Failing to pay the required instalment on time results in <b>instalment interest</b> of 5% charged on the difference between required instalment and what was actually paid and compounded daily.

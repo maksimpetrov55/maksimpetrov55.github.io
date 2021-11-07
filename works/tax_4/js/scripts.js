@@ -93,17 +93,22 @@ $(document).ready(function() {
 
 		if ( calc_B2 == "Yes" ) {
 			$('#calc_B7').text("It depends, fill out section below");
+			$('#block_3').css({display: "block"});
 		} else {
 			if ( calc_B3 == "No" ) {
 				$('#calc_B7').text("No, you DO NOT have to pay instalments to CRA!");
+				$('#block_3').css({display: "none"});
 			} else {
 				if ( calc_B3 == "" || calc_B4 == "" || calc_B5 == "" ) {
 					$('#calc_B7').text("");
+					$('#block_3').css({display: "block"});
 				} else {
 					if ( calc_B3 == "Yes" && calc_B4 == "Yes" && calc_B5 == "Yes" ) {
 						$('#calc_B7').text("Yes, you have to pay instalments to CRA!");
+						$('#block_3').css({display: "block"});
 					} else {
 						$('#calc_B7').text("No, you DO NOT have to pay instalments to CRA!");
+						$('#block_3').css({display: "none"});
 					}
 				}
 			}

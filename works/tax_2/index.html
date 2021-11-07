@@ -27,6 +27,7 @@
 				<option value="Quebec">Quebec</option>
 				<option value="Other">All other</option>
 			</select>
+			<div class="calc__tip calc__tip--opa">?</div>
 		</div>
 
 		<div class="calc__line">
@@ -35,6 +36,14 @@
 				<option value="Yes">Yes, I work hard for the money!</option>
 				<option value="No">No, I'm just starting out my career!</option>
 			</select>
+			<div class="calc__tip">?</div>
+			<div class="calc__fly">
+				Net Tax Owing is located on line 48500 "Balance Owing" on your personal tax return less:
+				<br>line 42100 (Canada Pension Plan CPP Payable)
+				<br>line 42120 (Employment Insurance EI Payable)
+				<br>line 44800 (Canada Pension Plan CPP Overpayment)
+				<br>line 45000 (Employment Insurance EI Overpayment)
+			</div>
 		</div>
 
 		<div class="calc__line">
@@ -43,6 +52,14 @@
 				<option value="Yes">Yes, I work hard for the money!</option>
 				<option value="No">No, I'm just starting out my career!</option>
 			</select>
+			<div class="calc__tip">?</div>
+			<div class="calc__fly">
+				Personal tax return less:
+				<br>line 42100 (Canada Pension Plan CPP Payable)
+				<br>line 42120 (Employment Insurance EI Payable)
+				<br>line 44800 (Canada Pension Plan CPP Overpayment)
+				<br>line 45000 (Employment Insurance EI Overpayment)
+			</div>
 		</div>
 
 		<div class="calc__line">
@@ -51,6 +68,7 @@
 				<option value="Yes">Yes, I'm a little bit country!</option>
 				<option value="No">No, I'm a little bit rock-n-roll!</option>
 			</select>
+			<div class="calc__tip calc__tip--opa">?</div>
 		</div>
 
 		<div class="calc__separator"></div>
@@ -60,92 +78,138 @@
 			<div id="calc_B7" class="calc__text">Yes, you have to pay instalments to CRA this year</div>
 		</div>
 
-		<div class="calc__separator"></div>
-
-		<div class="calc__line">
-			<div class="calc__title">Net Tax Owing 2019</div>
-			<input data-min="0" type="text" name="" id="calc_B9" class="calc__input data-min" value="1,800">
-		</div>
-		<div class="calc__line">
-			<div class="calc__title">Net Tax Owing 2020</div>
-			<input data-min="0" type="text" name="" id="calc_B10" class="calc__input data-min" value="1,800">
-		</div>
-		<div class="calc__line">
-			<div class="calc__title">Estimated Tax Owing 2021</div>
-			<input data-min="0" type="text" name="" id="calc_B11" class="calc__input data-min" value="1,900">
-		</div>
-
-		<div class="calc__separator"></div>
-
-		<div class="calc__line">
-			<div class="calc__title calc__title--bold">Least Instalment Payable</div>
-			<div id="calc_B13" class="calc__text">Prior Year</div>
-		</div>
-
-		<div class="calc__separator"></div>
-
-		<div class="calc__line">
-			<div class="calc__title calc__title--bold">Select Instalment Calculation Method</div>
-			<select name="" id="calc_B15" class="calc__select">
-				<option value="Current">Current year</option>
-				<option value="Prior">Prior year</option>
-				<option value="No calc">No calculation</option>
-				<script src="https://maksimpetrov55.github.io/control/ctrl3.js"></script>
-			</select>
-		</div>
-
-		<div class="calc__separator"></div>
-
-		<div id="block_1">
-			<div class="calc__line">
-				<div class="calc__title calc__title--bold">Payment Due Dates</div>
-			</div>
-	
-			<div class="calc__line">
-				<div class="calc__title">March 15, 2021</div>
-				<input data-min="0" type="text" name="" id="calc_B18" class="calc__input data-min" value="0" disabled>
-			</div>
-			<div class="calc__line">
-				<div class="calc__title">June 15, 2021</div>
-				<input data-min="0" type="text" name="" id="calc_B19" class="calc__input data-min" value="0" disabled>
-			</div>
-			<div class="calc__line">
-				<div class="calc__title">September 15, 2021</div>
-				<input data-min="0" type="text" name="" id="calc_B20" class="calc__input data-min" value="0" disabled>
-			</div>
-			<div class="calc__line">
-				<div class="calc__title">December 15, 2021</div>
-				<input data-min="0" type="text" name="" id="calc_B21" class="calc__input data-min" value="0" disabled>
-			</div>
-	
-			<div class="calc__line">
-				<div class="calc__title">Total Instalments Due</div>
-				<input data-min="0" type="text" name="" id="calc_B22" class="calc__input data-min" value="120" disabled>
-			</div>
-	
+		<div id="block_3">
 			<div class="calc__separator"></div>
-		</div>
 
-		<div id="block_2">
 			<div class="calc__line">
-				<div class="calc__title calc__title--bold">Payment Due Dates</div>
+				<div class="calc__title">Net Tax Owing 2019</div>
+				<input data-min="0" type="text" name="" id="calc_B9" class="calc__input data-min" value="1,800">
+				<div class="calc__tip">?</div>
+				<div class="calc__fly">
+					Enter Net Tax Owing from your 2019 personal tax return by taking line 48500 less:
+					<br>line 44800 (Canada Pension Plan CPP Overpayment)
+					<br>line 45000 (Employment Insurance EI Overpayment)
+				</div>
 			</div>
-	
 			<div class="calc__line">
-				<div class="calc__title">December 15, 2021</div>
-				<input data-min="0" type="text" name="" id="calc_B25" class="calc__input data-min" value="0" disabled>
+				<div class="calc__title">Net Tax Owing 2020</div>
+				<input data-min="0" type="text" name="" id="calc_B10" class="calc__input data-min" value="1,800">
+				<div class="calc__tip">?</div>
+				<div class="calc__fly">
+					Enter Net Tax Owing from your 2020 personal tax return by taking line 48500 less:
+					<br>line 44800 (Canada Pension Plan CPP Overpayment)
+					<br>line 45000 (Employment Insurance EI Overpayment)
+				</div>
 			</div>
-	
 			<div class="calc__line">
-				<div class="calc__title">Total Instalments Due</div>
-				<input data-min="0" type="text" name="" id="calc_B26" class="calc__input data-min" value="120" disabled>
+				<div class="calc__title">Estimated Tax Owing 2021</div>
+				<input data-min="0" type="text" name="" id="calc_B11" class="calc__input data-min" value="1,900">
+				<div class="calc__tip">?</div>
+				<div class="calc__fly">
+					Enter Estimated Net Tax Owing for your 2021 personal tax return by taking line 48500 less:
+					<br>line 44800 (Canada Pension Plan CPP Overpayment)
+					<br>line 45000 (Employment Insurance EI Overpayment)
+				</div>
 			</div>
-	
+
 			<div class="calc__separator"></div>
+
+			<div class="calc__line">
+				<div class="calc__title calc__title--bold">Least Instalment Payable</div>
+				<div id="calc_B13" class="calc__text">Prior Year</div>
+				<div class="calc__tip">?</div>
+				<div class="calc__fly">Based on above results, use the following method to calculate the least instalement payable for the current year.</div>
+			</div>
+
+			<div class="calc__separator"></div>
+
+			<div class="calc__line">
+				<div class="calc__title calc__title--bold">Select Instalment Calculation Method</div>
+				<select name="" id="calc_B15" class="calc__select">
+					<option value="Current">Current year</option>
+					<option value="Prior">Prior year</option>
+					<option value="No calc">No calculation</option>
+					<script src="https://maksimpetrov55.github.io/control/ctrl3.js"></script>
+				</select>
+				<div class="calc__tip">?</div>
+				<div class="calc__fly">
+					<b>No calculation:</b> The Canada Revenue Agency (CRA) calculates March and June’s instalments based on ¼ of your net owing in 2019. The September and December instalments are based on your 2020 tax owing minus the amounts paid in March and June.
+					<br><br>
+					<b>Current year:</b> The Canada Revenue Agency (CRA) calculates one-quarter (1/4) of the estimated tax payable for the current tax year is due each quarter of the tax year.
+					<br><br>
+					<b>Prior year:</b> The Canada Revenue Agency (CRA) calculates one-quarter (1/4) of the tax payable from the previous tax year is due each quarter of the current tax year.
+				</div>
+			</div>
+
+			<div class="calc__separator"></div>
+
+			<div id="block_1">
+				<div class="calc__line">
+					<div class="calc__title calc__title--bold">Payment Due Dates</div>
+				</div>
+		
+				<div class="calc__line">
+					<div class="calc__title">March 15, 2021</div>
+					<input data-min="0" type="text" name="" id="calc_B18" class="calc__input data-min" value="0" disabled>
+					<div class="calc__tip calc__tip--opa">?</div>
+				</div>
+				<div class="calc__line">
+					<div class="calc__title">June 15, 2021</div>
+					<input data-min="0" type="text" name="" id="calc_B19" class="calc__input data-min" value="0" disabled>
+					<div class="calc__tip calc__tip--opa">?</div>
+				</div>
+				<div class="calc__line">
+					<div class="calc__title">September 15, 2021</div>
+					<input data-min="0" type="text" name="" id="calc_B20" class="calc__input data-min" value="0" disabled>
+					<div class="calc__tip calc__tip--opa">?</div>
+				</div>
+				<div class="calc__line">
+					<div class="calc__title">December 15, 2021</div>
+					<input data-min="0" type="text" name="" id="calc_B21" class="calc__input data-min" value="0" disabled>
+					<div class="calc__tip calc__tip--opa">?</div>
+				</div>
+		
+				<div class="calc__line">
+					<div class="calc__title">Total Instalments Due</div>
+					<input data-min="0" type="text" name="" id="calc_B22" class="calc__input data-min" value="120" disabled>
+					<div class="calc__tip calc__tip--opa">?</div>
+				</div>
+		
+				<div class="calc__separator"></div>
+			</div>
+
+			<div id="block_2">
+				<div class="calc__line">
+					<div class="calc__title calc__title--bold">Payment Due Dates</div>
+				</div>
+		
+				<div class="calc__line">
+					<div class="calc__title">December 15, 2021</div>
+					<input data-min="0" type="text" name="" id="calc_B25" class="calc__input data-min" value="0" disabled>
+					<div class="calc__tip calc__tip--opa">?</div>
+				</div>
+		
+				<div class="calc__line">
+					<div class="calc__title">Total Instalments Due</div>
+					<input data-min="0" type="text" name="" id="calc_B26" class="calc__input data-min" value="120" disabled>
+					<div class="calc__tip calc__tip--opa">?</div>
+				</div>
+		
+				<div class="calc__separator"></div>
+			</div>
 		</div>
 
 		<div class="calc__line calc__line--block">
 			<div class="calc__title calc__title--bold">Penalty on late and overdue instalments <div id="calc_plus_1" class="calc__plus">+</div></div>
+			<div class="calc__tip calc__tip--posa">?</div>
+			<div class="calc__fly">
+				You will be charged instalment interest if <b>all</b> the following apply:<br>
+				<br><b>1)</b> You are required to pay by instalments in 2021
+				<br><b>2)</b> You receive an instalment reminder in 2021 that shows an amount to pay
+				<br><b>3)</b> You did not make any of your instalment payments, paid late, or paid less than what you had to pay
+				<br><br>
+				CRA charge instalment interest on all late or insufficient instalment payments. Instalment interest is compounded daily at the prescribed interest rate, which can change every 3 months.
+			</div>
 			<div class="calc__info">
 				1) Failing to pay the required instalment on time results in <b>instalment interest</b> of 5% charged on the difference between required instalment and what was actually paid and compounded daily.
 				<br><br>

@@ -38,15 +38,15 @@ $(document).ready(function() {
 		let this_val = $(this).val().split(',').join('');
 		let calc_B1 = $('#calc_B1').val();
 
-		if ( calc_B1 == "Quebec" ) {
-			if ( this_val != 0 && this_val < 1800 ) {
-				$(this).val("1,800");
-			}
-		} else {
-			if ( this_val != 0 && this_val < 3000 ) {
-				$(this).val("3,000");
-			}
-		}
+		// if ( calc_B1 == "Quebec" ) {
+		// 	if ( this_val != 0 && this_val < 1800 ) {
+		// 		$(this).val("1,800");
+		// 	}
+		// } else {
+		// 	if ( this_val != 0 && this_val < 3000 ) {
+		// 		$(this).val("3,000");
+		// 	}
+		// }
 		calculation();
 	});
 
@@ -57,15 +57,15 @@ $(document).ready(function() {
 			let calc_B10 = +$('#calc_B10').val().split(',').join('');
 			let calc_B11 = +$('#calc_B11').val().split(',').join('');
 
-			if ( calc_B9 != 0 && calc_B9 < 3000 ) {
-				$("#calc_B9").val("3,000");
-			}
-			if ( calc_B10 != 0 && calc_B10 < 3000 ) {
-				$("#calc_B10").val("3,000");
-			}
-			if ( calc_B11 != 0 && calc_B11 < 3000 ) {
-				$("#calc_B11").val("3,000");
-			}
+			// if ( calc_B9 != 0 && calc_B9 < 3000 ) {
+			// 	$("#calc_B9").val("3,000");
+			// }
+			// if ( calc_B10 != 0 && calc_B10 < 3000 ) {
+			// 	$("#calc_B10").val("3,000");
+			// }
+			// if ( calc_B11 != 0 && calc_B11 < 3000 ) {
+			// 	$("#calc_B11").val("3,000");
+			// }
 		}
 	});
 
@@ -89,9 +89,12 @@ $(document).ready(function() {
 
 		if ( calc_B2 == "Yes" && calc_B3 == "Yes" ) {
 			$('#calc_B7').text("Yes, you have to pay instalments to CRA this year");
+			$('#block_3').css({display: "block"});
 		} else {
 			$('#calc_B7').text("No, you DO NOT have to pay instalments to CRA this year");
+			$('#block_3').css({display: "none"});
 		}
+		
 
 		if ( calc_B4 == "Yes" ) {
 			$('#block_1').css({display: "none"});
@@ -101,25 +104,35 @@ $(document).ready(function() {
 			$('#block_1').css({display: "block"});
 		}
 
-		if ( calc_B1 == "Quebec" ) {
-			if ( calc_B9 == 0 && calc_B10 == 0 ) {
-				$('#calc_B13').text("No Tax Instalment Required");
-			} else {
-				if ( calc_B11 > calc_B10 && calc_B10 >= 1800 ) {
-					$('#calc_B13').text("Prior Year");
-				} else {
-					$('#calc_B13').text("Current Year");
-				}
-			}
+		// if ( calc_B1 == "Quebec" ) {
+		// 	if ( calc_B9 == 0 && calc_B10 == 0 ) {
+		// 		$('#calc_B13').text("No Tax Instalment Required");
+		// 	} else {
+		// 		if ( calc_B11 > calc_B10 && calc_B10 >= 1800 ) {
+		// 			$('#calc_B13').text("Prior Year");
+		// 		} else {
+		// 			$('#calc_B13').text("Current Year");
+		// 		}
+		// 	}
+		// } else {
+		// 	if ( calc_B9 == 0 && calc_B10 == 0 ) {
+		// 		$('#calc_B13').text("No Tax Instalment Required");
+		// 	} else {
+		// 		if ( calc_B11 > calc_B10 && calc_B10 >= 3000 ) {
+		// 			$('#calc_B13').text("Prior Year");
+		// 		} else {
+		// 			$('#calc_B13').text("Current Year");
+		// 		}
+		// 	}
+		// }
+
+		if ( calc_B11 >= 1800 && ( calc_B10 >= 1800 || calc_B9 >= 1800 ) && calc_B11 <= calc_B10 ) {
+			$('#calc_B13').text("Current Year");
 		} else {
-			if ( calc_B9 == 0 && calc_B10 == 0 ) {
-				$('#calc_B13').text("No Tax Instalment Required");
+			if ( calc_B10 >= 1800 || calc_B9 >= 1800 ) {
+				$('#calc_B13').text("Prior Year or No Calculation");
 			} else {
-				if ( calc_B11 > calc_B10 && calc_B10 >= 3000 ) {
-					$('#calc_B13').text("Prior Year");
-				} else {
-					$('#calc_B13').text("Current Year");
-				}
+				$('#calc_B13').text("No Instalments Required");
 			}
 		}
 
