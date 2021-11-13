@@ -451,6 +451,12 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .form__line {
+    max-width: 900px;
+  }
+}
+
 .form__name {
   font-weight: 700;
   color: #48647b;
@@ -496,11 +502,38 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .form__submit {
+    max-width: 900px;
+  }
+}
+
 .form__submit:hover {
   background: #543864;
 }
 
 .form__submit:active {
   opacity: 0.4;
+}
+
+.form__note {
+  width: 100%;
+  max-width: 360px;
+  font-size: 14px;
+  color: #999;
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .form__note {
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .form__note {
+    max-width: 900px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
