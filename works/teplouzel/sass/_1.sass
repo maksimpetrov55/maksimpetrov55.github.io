@@ -1,0 +1,305 @@
+
+body
+    position: relative
+
+.calc
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif
+    width: 100%
+    max-width: 1260px
+    min-height: 300px
+    background: #fff
+    margin: 50px auto
+
+    *
+        padding: 0
+        margin: 0
+        box-sizing: border-box
+        font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif
+        font-size: 17px
+        @media ( max-width: 1100px )
+            font-size: 16px
+        @media ( max-width: 350px )
+            font-size: 15px
+
+    &__values
+        flex-shrink: 0
+        width: 470px
+        display: flex
+        align-items: center
+        padding: 0 20px
+        @media ( max-width: 1100px )
+            width: 390px
+        @media ( max-width: 768px )
+            padding: 10px 0
+            width: 100%
+        &--wrap
+            flex-wrap: wrap
+        &--radio
+            width: 100%
+            padding: 10px 0
+            @media ( max-width: 1100px )
+                flex-wrap: wrap
+
+    &__text
+        line-height: 1.6
+        margin: 0 0 20px 0
+
+    &__head
+        font-size: 35px
+        text-align: center
+        font-weight: 700
+        letter-spacing: 0.5px
+        color: #333
+        font-family: 'Roboto Condensed', Arial, sans-serif
+        margin: 0 0 40px 0
+        text-transform: uppercase
+        @media ( max-width: 576px )
+            font-size: 29px
+
+    &__title
+        text-transform: uppercase
+        color: #333
+        font-size: 24px
+        font-weight: 700
+        margin: 0 0 30px 0
+        font-family: 'Roboto Condensed', Arial, sans-serif
+        @media ( max-width: 576px )
+            font-size: 20px
+        @media ( max-width: 350px )
+            font-size: 18px
+
+    &__name
+        font-weight: 700
+        color: #48647b
+        @media ( max-width: 768px )
+            width: 100%
+
+    &__step
+        margin: 0 auto 40px auto
+        padding: 40px 20px
+        border: 1px solid #ccc
+        border-radius: 4px
+        @media ( max-width: 340px )
+            padding: 30px 10px
+
+    &__line
+        margin: 0 0 10px 0
+        display: flex
+        align-items: center
+        justify-content: space-between
+        @media ( max-width: 768px )
+            flex-wrap: wrap
+        &--wrap
+            flex-wrap: wrap
+
+    &__group
+        display: flex
+        align-items: center
+
+    &__input
+        flex-shrink: 0
+        display: block
+        background: #edf2f5
+        width: 100%
+        padding: 10px 10px
+        border: none
+        color: #48647b
+        font-size: 17px
+        border-radius: 4px
+        box-shadow: inset 3px 3px 7px #00000021
+        max-width: 120px
+        @media ( max-width: 1100px )
+            max-width: 90px
+        @media ( max-width: 420px )
+            padding: 10px 7px
+            font-size: 15px
+            max-width: 70px
+
+        &--long
+            max-width: 500px
+            @media ( max-width: 576px )
+                width: 100%
+                max-width: 900px
+
+        &--short
+            max-width: 70px
+            @media ( max-width: 1100px )
+                max-width: 60px
+
+    &__comment
+        display: block
+        background: #edf2f5
+        width: 100%
+        padding: 10px 10px
+        border: none
+        color: #48647b
+        font-size: 17px
+        border-radius: 4px
+        box-shadow: inset 3px 3px 7px #00000021
+        height: 150px
+
+    &__unit
+        font-weight: 400
+        color: #888
+        padding: 0 0 0px 10px
+        line-height: 40px
+        width: 68px
+        font-size: 15px
+        @media ( max-width: 768px )
+            width: 60px
+        @media ( max-width: 420px )
+            font-size: 14px
+            width: 56px
+        &--short
+            width: 20px
+            @media ( max-width: 350px )
+                padding: 0 0 0 5px
+
+    &__slash
+        font-size: 20px
+        color: #48647b
+        padding: 0 20px
+        @media ( max-width: 1100px )
+            padding: 0 10px
+        @media ( max-width: 350px )
+            padding: 0 5px
+            font-size: 18px
+
+    &__separate
+        margin: 40px auto
+        width: 100%
+        height: 1px
+        border-bottom: 1px solid #ccc
+
+    &__radio
+        display: none
+
+        &:checked + .calc__label
+            color: #333
+        &:checked + .calc__label::before
+            content: "✔"
+
+    &__label
+        display: flex
+        align-items: center
+        cursor: pointer
+        user-select: none
+        padding: 5px 0
+        font-weight: 400
+        color: #888
+        margin: 0 30px 0 0
+        min-width: 140px
+        font-size: 15px
+        @media ( max-width: 768px )
+            width: 50%
+            margin: 0
+            padding: 5px 10px 5px 0
+        @media ( max-width: 576px )
+            width: 50%
+        @media ( max-width: 420px )
+            width: 100%
+
+        &--perc
+            @media ( max-width: 1100px )
+                width: 32%
+                margin: 0
+                padding: 5px 10px 5px 0
+            @media ( max-width: 768px )
+                width: 50%
+            @media ( max-width: 420px )
+                width: 100%
+
+        &--w100
+            @media ( max-width: 768px )
+                width: 100%
+
+        &::before
+            flex-shrink: 0
+            content: ""
+            border-radius: 4px
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 30px
+            height: 30px
+            background: #edf2f5
+            color: #48647b
+            font-size: 22px
+            box-shadow: inset 3px 3px 7px #00000021
+            margin: 0 10px 0 0
+
+
+
+
+
+
+.form
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif
+    width: 100%
+
+    *
+        padding: 0
+        margin: 0
+        box-sizing: border-box
+        font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif
+        font-size: 17px
+
+    &__flex
+        display: flex
+        justify-content: space-between
+        @media ( max-width: 768px )
+            flex-wrap: wrap
+
+
+    &__line
+        width: 32%
+        max-width: 360px
+        @media ( max-width: 768px )
+            width: 100%
+
+    &__name
+        font-weight: 700
+        color: #48647b
+        // min-width: 170px
+        // text-align: right
+
+    &__input
+        flex-shrink: 0
+        display: block
+        background: #edf2f5
+        width: 100%
+        padding: 10px 10px
+        border: none
+        color: #48647b
+        font-size: 17px
+        border-radius: 4px
+        box-shadow: inset 3px 3px 7px #00000021
+
+        //margin: 0 0 0 20px
+        margin: 10px 0 20px 0
+
+    &__submit
+        display: block
+        user-select: none
+        cursor: pointer
+        width: 100%
+        max-width: 360px
+        margin: 30px auto 10px auto
+        background: #d9455f
+        color: #ffffff
+        border: none
+        height: 50px
+        transition-duration: 0.3s
+        @media ( max-width: 768px )
+            margin: 30px 0 10px 0
+
+        &:hover
+            background: #543864
+        &:active
+            opacity: 0.4

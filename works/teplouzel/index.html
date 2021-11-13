@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+
+	<div class="calc">
+		<div class="calc__head">Расчёт теплового пункта</div>
+
+		<div class="calc__step">
+			<div class="calc__title">Источник теплоснабжения (греющий контур)</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Температура воды в подающем трубопроводе тепловой сети (зима&nbsp;/&nbsp;лето)</div>
+				<div class="calc__values">
+					<div class="calc__group">
+						<input id="calc_input_1_1" type="number" class="calc__input">
+						<div class="calc__unit">°C</div>
+					</div>
+					<div class="calc__slash">/</div>
+					<div class="calc__group">
+						<input id="calc_input_1_2" type="number" class="calc__input">
+						<div class="calc__unit">°C</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Температура воды в обратном трубопроводе тепловой сети (зима&nbsp;/&nbsp;лето)</div>
+				<div class="calc__values">
+					<div class="calc__group">
+						<input id="calc_input_2_1" type="number" class="calc__input">
+						<div class="calc__unit">°C</div>
+					</div>
+					<div class="calc__slash">/</div>
+					<div class="calc__group">
+						<input id="calc_input_2_2" type="number" class="calc__input">
+						<div class="calc__unit">°C</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="calc__line">
+				<div class="calc__name">Давление в подающем трубопроводе тепловой сети на вводе в ТП</div>
+				<div class="calc__values">
+					<div class="calc__group">
+						<input id="calc_input_3_1" type="number" class="calc__input">
+						<div class="calc__unit">кгс/см²</div>
+					</div>
+					<div class="calc__slash">/</div>
+					<div class="calc__group">
+						<input id="calc_input_3_2" type="number" class="calc__input">
+						<div class="calc__unit">м.в.ст</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Давление в обратном трубопроводе тепловой сети на вводе в ТП</div>
+				<div class="calc__values">
+					<div class="calc__group">
+						<input id="calc_input_4_1" type="number" class="calc__input">
+						<div class="calc__unit">кгс/см²</div>
+					</div>
+					<div class="calc__slash">/</div>
+					<div class="calc__group">
+						<input id="calc_input_4_2" type="number" class="calc__input">
+						<div class="calc__unit">м.в.ст</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /.calc__step -->
+
+		<div class="calc__step">
+			<div class="calc__title">Отопление (нагреваемый контур)</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Расчетная тепловая мощность системы отопления</div>
+				<div class="calc__values">
+					<div class="calc__group">
+						<input id="calc_input_5_1" type="number" class="calc__input">
+						<div class="calc__unit">Гкал/ч</div>
+					</div>
+					<div class="calc__slash">/</div>
+					<div class="calc__group">
+						<input id="calc_input_5_2" type="number" class="calc__input">
+						<div class="calc__unit">кВт</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Расчетная температура воды в подающем трубопроводе системы отопления</div>
+				<div class="calc__values">
+					<div class="calc__group">
+						<input id="calc_input_6_1" type="number" class="calc__input">
+						<div class="calc__unit">°C</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Расчетная температура воды в обратном трубопроводе системы отопления</div>
+				<div class="calc__values">
+					<div class="calc__group">
+						<input id="calc_input_7_1" type="number" class="calc__input">
+						<div class="calc__unit">°C</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Максимальные потери давления в системе отопления</div>
+				<div class="calc__values">
+					<div class="calc__group">
+						<input id="calc_input_8_1" type="number" class="calc__input">
+						<div class="calc__unit">кгс/см²</div>
+					</div>
+					<div class="calc__slash">/</div>
+					<div class="calc__group">
+						<input id="calc_input_8_2" type="number" class="calc__input">
+						<div class="calc__unit">м.в.ст</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Максимальная отметка (высота) системы отопления</div>
+				<div class="calc__values">
+					<div class="calc__group">
+						<input id="calc_input_9_1" type="number" class="calc__input">
+						<div class="calc__unit">м</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Рабочее давление системы отопления</div>
+				<div class="calc__values">
+					<div class="calc__group">
+						<input id="calc_input_10_1" type="number" class="calc__input">
+						<div class="calc__unit">кгс/см²</div>
+					</div>
+					<div class="calc__slash">/</div>
+					<div class="calc__group">
+						<input id="calc_input_10_2" type="number" class="calc__input">
+						<div class="calc__unit">м.в.ст</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Объем воды в системе отопления</div>
+				<div class="calc__values">
+					<div class="calc__group">
+						<input id="calc_input_11_1" type="number" class="calc__input">
+						<div class="calc__unit">м³</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__separate"></div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Тип присоединения системы отопления</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_1" id="calc_radio_1_1" class="calc__radio" checked>
+					<label for="calc_radio_1_1" class="calc__label">Зависимое</label>
+					<input type="radio" name="calc_radio_1" id="calc_radio_1_2" class="calc__radio">
+					<label for="calc_radio_1_2" class="calc__label">Независимое</label>
+				</div>
+			</div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Тип теплообменника</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_2" id="calc_radio_2_1" class="calc__radio" checked>
+					<label for="calc_radio_2_1" class="calc__label">Разборный</label>
+					<input type="radio" name="calc_radio_2" id="calc_radio_2_2" class="calc__radio">
+					<label for="calc_radio_2_2" class="calc__label">Паяный</label>
+				</div>
+			</div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Степень резервирования мощности теплообменников</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_3" id="calc_radio_3_1" class="calc__radio" checked>
+					<label for="calc_radio_3_1" class="calc__label">Без резерва</label>
+					<input type="radio" name="calc_radio_3" id="calc_radio_3_2" class="calc__radio">
+					<label for="calc_radio_3_2" class="calc__label">50%</label>
+					<input type="radio" name="calc_radio_3" id="calc_radio_3_3" class="calc__radio">
+					<label for="calc_radio_3_3" class="calc__label">75%</label>
+					<input type="radio" name="calc_radio_3" id="calc_radio_3_4" class="calc__radio">
+					<label for="calc_radio_3_4" class="calc__label">100%</label>
+				</div>
+			</div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Число теплообменников суммарное в системе</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_4" id="calc_radio_4_1" class="calc__radio" checked>
+					<label for="calc_radio_4_1" class="calc__label">1 шт.</label>
+					<input type="radio" name="calc_radio_4" id="calc_radio_4_2" class="calc__radio">
+					<label for="calc_radio_4_2" class="calc__label">2 шт.</label>
+					<input type="radio" name="calc_radio_4" id="calc_radio_4_3" class="calc__radio">
+					<label for="calc_radio_4_3" class="calc__label">3 шт.</label>
+				</div>
+			</div>
+
+			<div class="calc__separate"></div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Необходимость поставки расширительных баков</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_5" id="calc_radio_5_1" class="calc__radio" checked>
+					<label for="calc_radio_5_1" class="calc__label">Да</label>
+					<input type="radio" name="calc_radio_5" id="calc_radio_5_2" class="calc__radio">
+					<label for="calc_radio_5_2" class="calc__label">Нет</label>
+				</div>
+			</div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Необходимость установки расходомера на подпитку</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_6" id="calc_radio_6_1" class="calc__radio" checked>
+					<label for="calc_radio_6_1" class="calc__label">Да</label>
+					<input type="radio" name="calc_radio_6" id="calc_radio_6_2" class="calc__radio">
+					<label for="calc_radio_6_2" class="calc__label">Нет</label>
+				</div>
+			</div>
+
+		</div>
+		<!-- /.calc__step -->
+
+		<div class="calc__step">
+			<div class="calc__title">ГВС (нагреваемый контур)</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Расчетная тепловая мощность системы ГВС</div>
+				<div class="calc__values">
+					<div class="calc__group">
+						<input id="calc_input_12_1" type="number" class="calc__input">
+						<div class="calc__unit">Гкал/ч</div>
+					</div>
+					<div class="calc__slash">/</div>
+					<div class="calc__group">
+						<input id="calc_input_12_2" type="number" class="calc__input">
+						<div class="calc__unit">кВт</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Температура холодной воды</div>
+				<div class="calc__values">
+					<div class="calc__group">
+						<input id="calc_input_13_1" type="number" class="calc__input">
+						<div class="calc__unit">°C</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Расчетная температура горячей воды на выходе из ТП</div>
+				<div class="calc__values">
+					<div class="calc__group">
+						<input id="calc_input_14_1" type="number" class="calc__input">
+						<div class="calc__unit">°C</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Давление холодной воды перед теплообменником</div>
+				<div class="calc__values">
+					<div class="calc__group">
+						<input id="calc_input_15_1" type="number" class="calc__input">
+						<div class="calc__unit">кгс/см²</div>
+					</div>
+					<div class="calc__slash">/</div>
+					<div class="calc__group">
+						<input id="calc_input_15_2" type="number" class="calc__input">
+						<div class="calc__unit">м.в.ст</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Необходимое давление горячей воды на выходе из ТП</div>
+				<div class="calc__values">
+					<div class="calc__group">
+						<input id="calc_input_16_1" type="number" class="calc__input">
+						<div class="calc__unit">кгс/см²</div>
+					</div>
+					<div class="calc__slash">/</div>
+					<div class="calc__group">
+						<input id="calc_input_16_2" type="number" class="calc__input">
+						<div class="calc__unit">м.в.ст</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Максимальный часовой расход воды в системе ГВС</div>
+				<div class="calc__values">
+					<div class="calc__group">
+						<input id="calc_input_17_1" type="number" class="calc__input">
+						<div class="calc__unit">м³/ч</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Расход воды на циркуляцию ГВС</div>
+				<div class="calc__values">
+					<div class="calc__group">
+						<input id="calc_input_18_1" type="number" class="calc__input">
+						<div class="calc__unit">%</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Потери давления в циркуляционной линии системы ГВС</div>
+				<div class="calc__values">
+					<div class="calc__group">
+						<input id="calc_input_19_1" type="number" class="calc__input">
+						<div class="calc__unit">кгс/см²</div>
+					</div>
+					<div class="calc__slash">/</div>
+					<div class="calc__group">
+						<input id="calc_input_19_2" type="number" class="calc__input">
+						<div class="calc__unit">м.в.ст</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__separate"></div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Тип присоединения системы ГВС</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_7" id="calc_radio_7_1" class="calc__radio" checked>
+					<label for="calc_radio_7_1" class="calc__label">С теплообменником</label>
+					<input type="radio" name="calc_radio_7" id="calc_radio_7_2" class="calc__radio">
+					<label for="calc_radio_7_2" class="calc__label">Открытая</label>
+				</div>
+			</div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Схема включения теплообменников ГВС</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_8" id="calc_radio_8_1" class="calc__radio" checked>
+					<label for="calc_radio_8_1" class="calc__label">Одноступенчатая</label>
+					<input type="radio" name="calc_radio_8" id="calc_radio_8_2" class="calc__radio">
+					<label for="calc_radio_8_2" class="calc__label">Двухступенчатая</label>
+				</div>
+			</div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Вариант исполнения двухступенчатой схемы</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_9" id="calc_radio_9_1" class="calc__radio" checked>
+					<label for="calc_radio_9_1" class="calc__label">Два теплообменника</label>
+					<input type="radio" name="calc_radio_9" id="calc_radio_9_2" class="calc__radio">
+					<label for="calc_radio_9_2" class="calc__label">Моноблок</label>
+				</div>
+			</div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Тип теплообменника</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_10" id="calc_radio_10_1" class="calc__radio" checked>
+					<label for="calc_radio_10_1" class="calc__label">Разборный</label>
+					<input type="radio" name="calc_radio_10" id="calc_radio_10_2" class="calc__radio">
+					<label for="calc_radio_10_2" class="calc__label">Паяный</label>
+				</div>
+			</div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Степень резервирования мощности теплообменников</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_11" id="calc_radio_11_1" class="calc__radio" checked>
+					<label for="calc_radio_11_1" class="calc__label">Без резерва</label>
+					<input type="radio" name="calc_radio_11" id="calc_radio_11_2" class="calc__radio">
+					<label for="calc_radio_11_2" class="calc__label">50%</label>
+					<input type="radio" name="calc_radio_11" id="calc_radio_11_3" class="calc__radio">
+					<label for="calc_radio_11_3" class="calc__label">75%</label>
+					<input type="radio" name="calc_radio_11" id="calc_radio_11_4" class="calc__radio">
+					<label for="calc_radio_11_4" class="calc__label">100%</label>
+				</div>
+			</div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Число теплообменников в каждой ступени</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_12" id="calc_radio_12_1" class="calc__radio" checked>
+					<label for="calc_radio_12_1" class="calc__label">1 шт.</label>
+					<input type="radio" name="calc_radio_12" id="calc_radio_12_2" class="calc__radio">
+					<label for="calc_radio_12_2" class="calc__label">2 шт.</label>
+					<input type="radio" name="calc_radio_12" id="calc_radio_12_3" class="calc__radio">
+					<label for="calc_radio_12_3" class="calc__label">3 шт.</label>
+				</div>
+			</div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Схема включения насосов</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_13" id="calc_radio_13_1" class="calc__radio" checked>
+					<label for="calc_radio_13_1" class="calc__label">Циркуляционно-повысительная</label>
+					<input type="radio" name="calc_radio_13" id="calc_radio_13_2" class="calc__radio">
+					<label for="calc_radio_13_2" class="calc__label">Циркуляционная</label>
+				</div>
+			</div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Необходимость установки водосчетчика</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_14" id="calc_radio_14_1" class="calc__radio" checked>
+					<label for="calc_radio_14_1" class="calc__label">Да</label>
+					<input type="radio" name="calc_radio_14" id="calc_radio_14_2" class="calc__radio">
+					<label for="calc_radio_14_2" class="calc__label">Нет</label>
+				</div>
+			</div>
+
+
+		</div>
+		<!-- /.calc__step -->
+
+		<div class="calc__step">
+			<div class="calc__title">Вентиляция (нагреваемый контур)</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Расчетная тепловая мощность системы вентиляции</div>
+				<div class="calc__values">
+					<div class="calc__group">
+						<input id="calc_input_20_1" type="number" class="calc__input">
+						<div class="calc__unit">кгс/см²</div>
+					</div>
+					<div class="calc__slash">/</div>
+					<div class="calc__group">
+						<input id="calc_input_20_2" type="number" class="calc__input">
+						<div class="calc__unit">м.в.ст</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Расчетная температура воды в подающем трубопроводе системы вентиляции</div>
+				<div class="calc__values">
+					<div class="calc__group">
+						<input id="calc_input_21_1" type="number" class="calc__input">
+						<div class="calc__unit">°C</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Расчетная температура воды в обратном трубопроводе системы вентиляции</div>
+				<div class="calc__values">
+					<div class="calc__group">
+						<input id="calc_input_21_1" type="number" class="calc__input">
+						<div class="calc__unit">°C</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Максимальные потери давления в системе вентиляции</div>
+				<div class="calc__values">
+					<div class="calc__group">
+						<input id="calc_input_22_1" type="number" class="calc__input">
+						<div class="calc__unit">кгс/см²</div>
+					</div>
+					<div class="calc__slash">/</div>
+					<div class="calc__group">
+						<input id="calc_input_22_2" type="number" class="calc__input">
+						<div class="calc__unit">м.в.ст</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Максимальная отметка (высота) системы вентиляции</div>
+				<div class="calc__values">
+					<div class="calc__group">
+						<input id="calc_input_23_1" type="number" class="calc__input">
+						<div class="calc__unit">°C</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Рабочее давление системы вентиляции</div>
+				<div class="calc__values">
+					<div class="calc__group">
+						<input id="calc_input_24_1" type="number" class="calc__input">
+						<div class="calc__unit">кгс/см²</div>
+					</div>
+					<div class="calc__slash">/</div>
+					<div class="calc__group">
+						<input id="calc_input_24_2" type="number" class="calc__input">
+						<div class="calc__unit">м.в.ст</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Объем воды в системе вентиляции</div>
+				<div class="calc__values">
+					<div class="calc__group">
+						<input id="calc_input_25_1" type="number" class="calc__input">
+						<div class="calc__unit">м³</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__separate"></div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Тип присоединения системы вентиляции</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_15" id="calc_radio_15_1" class="calc__radio" checked>
+					<label for="calc_radio_15_1" class="calc__label">Зависимое</label>
+					<input type="radio" name="calc_radio_15" id="calc_radio_15_2" class="calc__radio">
+					<label for="calc_radio_15_2" class="calc__label">Независимое</label>
+				</div>
+			</div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Тип теплообменника</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_16" id="calc_radio_16_1" class="calc__radio" checked>
+					<label for="calc_radio_16_1" class="calc__label">Разборный</label>
+					<input type="radio" name="calc_radio_16" id="calc_radio_16_2" class="calc__radio">
+					<label for="calc_radio_16_2" class="calc__label">Паяный</label>
+				</div>
+			</div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Степень резервирования мощности теплообменников</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_17" id="calc_radio_17_1" class="calc__radio" checked>
+					<label for="calc_radio_17_1" class="calc__label">Без резерва</label>
+					<input type="radio" name="calc_radio_17" id="calc_radio_17_2" class="calc__radio">
+					<label for="calc_radio_17_2" class="calc__label">50%</label>
+					<input type="radio" name="calc_radio_17" id="calc_radio_17_3" class="calc__radio">
+					<label for="calc_radio_17_3" class="calc__label">75%</label>
+					<input type="radio" name="calc_radio_17" id="calc_radio_17_4" class="calc__radio">
+					<label for="calc_radio_17_4" class="calc__label">100%</label>
+				</div>
+			</div>
+			
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Число теплообменников суммарное в системе</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_18" id="calc_radio_18_1" class="calc__radio" checked>
+					<label for="calc_radio_18_1" class="calc__label">1 шт.</label>
+					<input type="radio" name="calc_radio_18" id="calc_radio_18_2" class="calc__radio">
+					<label for="calc_radio_18_2" class="calc__label">2 шт.</label>
+					<input type="radio" name="calc_radio_18" id="calc_radio_18_3" class="calc__radio">
+					<label for="calc_radio_18_3" class="calc__label">3 шт.</label>
+				</div>
+			</div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Необходимость поставки расширительных баков</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_19" id="calc_radio_19_1" class="calc__radio" checked>
+					<label for="calc_radio_19_1" class="calc__label">Да</label>
+					<input type="radio" name="calc_radio_19" id="calc_radio_19_2" class="calc__radio">
+					<label for="calc_radio_19_2" class="calc__label">Нет</label>
+				</div>
+			</div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Необходимость установки расходомера на подпитку</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_20" id="calc_radio_20_1" class="calc__radio" checked>
+					<label for="calc_radio_20_1" class="calc__label">Да</label>
+					<input type="radio" name="calc_radio_20" id="calc_radio_20_2" class="calc__radio">
+					<label for="calc_radio_20_2" class="calc__label">Нет</label>
+				</div>
+			</div>
+
+		</div>
+		<!-- /.calc__step -->
+
+		<div class="calc__step">
+			<div class="calc__title">Насосное оборудование</div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Система отопления</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_21" id="calc_radio_21_1" class="calc__radio" checked>
+					<label for="calc_radio_21_1" class="calc__label calc__label--perc">Необходимость поставки</label>
+					<input type="radio" name="calc_radio_21" id="calc_radio_21_2" class="calc__radio">
+					<label for="calc_radio_21_2" class="calc__label calc__label--perc">Частотное регулирование</label>
+					<input type="radio" name="calc_radio_21" id="calc_radio_21_3" class="calc__radio">
+					<label for="calc_radio_21_3" class="calc__label calc__label--perc">Без резерва</label>
+					<input type="radio" name="calc_radio_21" id="calc_radio_21_4" class="calc__radio">
+					<label for="calc_radio_21_4" class="calc__label calc__label--perc">Резерв 100%</label>
+					<input type="radio" name="calc_radio_21" id="calc_radio_21_5" class="calc__radio">
+					<label for="calc_radio_21_5" class="calc__label calc__label--perc">Сдвоенный насос</label>
+					<input type="radio" name="calc_radio_21" id="calc_radio_21_5" class="calc__radio">
+					<label for="calc_radio_21_5" class="calc__label calc__label--perc">Насос на склад</label>
+				</div>
+			</div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Система вентиляции</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_22" id="calc_radio_22_1" class="calc__radio" checked>
+					<label for="calc_radio_22_1" class="calc__label calc__label--perc">Необходимость поставки</label>
+					<input type="radio" name="calc_radio_22" id="calc_radio_22_2" class="calc__radio">
+					<label for="calc_radio_22_2" class="calc__label calc__label--perc">Частотное регулирование</label>
+					<input type="radio" name="calc_radio_22" id="calc_radio_22_3" class="calc__radio">
+					<label for="calc_radio_22_3" class="calc__label calc__label--perc">Без резерва</label>
+					<input type="radio" name="calc_radio_22" id="calc_radio_22_4" class="calc__radio">
+					<label for="calc_radio_22_4" class="calc__label calc__label--perc">Резерв 100%</label>
+					<input type="radio" name="calc_radio_22" id="calc_radio_22_5" class="calc__radio">
+					<label for="calc_radio_22_5" class="calc__label calc__label--perc">Сдвоенный насос</label>
+					<input type="radio" name="calc_radio_22" id="calc_radio_22_5" class="calc__radio">
+					<label for="calc_radio_22_5" class="calc__label calc__label--perc">Насос на склад</label>
+				</div>
+			</div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Подпитка</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_23" id="calc_radio_23_1" class="calc__radio" checked>
+					<label for="calc_radio_23_1" class="calc__label calc__label--perc">Необходимость поставки</label>
+					<input type="radio" name="calc_radio_23" id="calc_radio_23_2" class="calc__radio">
+					<label for="calc_radio_23_2" class="calc__label calc__label--perc">Частотное регулирование</label>
+					<input type="radio" name="calc_radio_23" id="calc_radio_23_3" class="calc__radio">
+					<label for="calc_radio_23_3" class="calc__label calc__label--perc">Без резерва</label>
+					<input type="radio" name="calc_radio_23" id="calc_radio_23_4" class="calc__radio">
+					<label for="calc_radio_23_4" class="calc__label calc__label--perc">Резерв 100%</label>
+					<input type="radio" name="calc_radio_23" id="calc_radio_23_5" class="calc__radio">
+					<label for="calc_radio_23_5" class="calc__label calc__label--perc">Сдвоенный насос</label>
+					<input type="radio" name="calc_radio_23" id="calc_radio_23_5" class="calc__radio">
+					<label for="calc_radio_23_5" class="calc__label calc__label--perc">Насос на склад</label>
+				</div>
+			</div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">ГВС</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_24" id="calc_radio_24_1" class="calc__radio" checked>
+					<label for="calc_radio_24_1" class="calc__label calc__label--perc">Необходимость поставки</label>
+					<input type="radio" name="calc_radio_24" id="calc_radio_24_2" class="calc__radio">
+					<label for="calc_radio_24_2" class="calc__label calc__label--perc">Частотное регулирование</label>
+					<input type="radio" name="calc_radio_24" id="calc_radio_24_3" class="calc__radio">
+					<label for="calc_radio_24_3" class="calc__label calc__label--perc">Без резерва</label>
+					<input type="radio" name="calc_radio_24" id="calc_radio_24_4" class="calc__radio">
+					<label for="calc_radio_24_4" class="calc__label calc__label--perc">Резерв 100%</label>
+					<input type="radio" name="calc_radio_24" id="calc_radio_24_5" class="calc__radio">
+					<label for="calc_radio_24_5" class="calc__label calc__label--perc">Сдвоенный насос</label>
+					<input type="radio" name="calc_radio_24" id="calc_radio_24_5" class="calc__radio">
+					<label for="calc_radio_24_5" class="calc__label calc__label--perc">Насос на склад</label>
+				</div>
+			</div>
+
+		</div>
+		<!-- /.calc__step -->
+
+		<div class="calc__step">
+			<div class="calc__title">Узел ввода</div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Необходимость поставки узла ввода</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_25" id="calc_radio_25_1" class="calc__radio" checked>
+					<label for="calc_radio_25_1" class="calc__label">Да</label>
+					<input type="radio" name="calc_radio_25" id="calc_radio_25_2" class="calc__radio">
+					<label for="calc_radio_25_2" class="calc__label">Нет</label>
+				</div>
+			</div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Тип запорной арматуры на вводе теплосети</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_26" id="calc_radio_26_1" class="calc__radio" checked>
+					<label for="calc_radio_26_1" class="calc__label">Сварная</label>
+					<input type="radio" name="calc_radio_26" id="calc_radio_26_2" class="calc__radio">
+					<label for="calc_radio_26_2" class="calc__label">Фланцевая</label>
+				</div>
+			</div>
+
+		</div>
+		<!-- /.calc__step -->
+
+		<div class="calc__step">
+			<div class="calc__title">Узел учета тепла</div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Необходимость поставки узла учета тепловой энергии</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_27" id="calc_radio_27_1" class="calc__radio" checked>
+					<label for="calc_radio_27_1" class="calc__label">Да</label>
+					<input type="radio" name="calc_radio_27" id="calc_radio_27_2" class="calc__radio">
+					<label for="calc_radio_27_2" class="calc__label">Нет</label>
+				</div>
+			</div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Необходимость установки датчиков давления</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_28" id="calc_radio_28_1" class="calc__radio" checked>
+					<label for="calc_radio_28_1" class="calc__label">Да</label>
+					<input type="radio" name="calc_radio_28" id="calc_radio_28_2" class="calc__radio">
+					<label for="calc_radio_28_2" class="calc__label">Нет</label>
+				</div>
+			</div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Комплектация узла учета тепла</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_29" id="calc_radio_29_1" class="calc__radio" checked>
+					<label for="calc_radio_29_1" class="calc__label">Адаптер переноса данных</label>
+					<input type="radio" name="calc_radio_29" id="calc_radio_29_2" class="calc__radio">
+					<label for="calc_radio_29_2" class="calc__label">Принтер</label>
+					<input type="radio" name="calc_radio_29" id="calc_radio_29_3" class="calc__radio">
+					<label for="calc_radio_29_3" class="calc__label">Ethernet</label>
+					<input type="radio" name="calc_radio_29" id="calc_radio_29_4" class="calc__radio">
+					<label for="calc_radio_29_4" class="calc__label">Протокол уд. доступа Modbus</label>
+				</div>
+			</div>
+
+		</div>
+		<!-- /.calc__step -->
+
+		<div class="calc__step">
+			<div class="calc__title">Система Диспетчеризации</div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Тип системы диспетчеризации</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_30" id="calc_radio_30_1" class="calc__radio" checked>
+					<label for="calc_radio_30_1" class="calc__label">Локальная</label>
+					<input type="radio" name="calc_radio_30" id="calc_radio_30_2" class="calc__radio">
+					<label for="calc_radio_30_2" class="calc__label">Удаленная</label>
+					<input type="radio" name="calc_radio_30" id="calc_radio_30_3" class="calc__radio">
+					<label for="calc_radio_30_3" class="calc__label">Телемеханика</label>
+				</div>
+			</div>
+
+			<div class="calc__text">При использовании удаленной диспетчеризации и телемеханики необходимо дополнительно направить техническое задание на автоматизацию теплового пункта</div>
+
+		</div>
+		<!-- /.calc__step -->
+
+		<div class="calc__step">
+			<div class="calc__title">Габаритные размеры теплового пункта</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Максимально допустимые габариты теплового пункта (Д&nbsp;x&nbsp;Ш&nbsp;x&nbsp;В)</div>
+				<div class="calc__values">
+					<div class="calc__group">
+						<input id="calc_input_26_1" type="number" class="calc__input calc__input--short">
+						<div class="calc__unit calc__unit--short">м</div>
+						<div class="calc__slash">x</div>
+						<input id="calc_input_26_2" type="number" class="calc__input calc__input--short">
+						<div class="calc__unit calc__unit--short">м</div>
+						<div class="calc__slash">x</div>
+						<input id="calc_input_26_2" type="number" class="calc__input calc__input--short">
+						<div class="calc__unit calc__unit--short">м</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Максимально допустимые габариты теплового пункта (Ш&nbsp;х&nbsp;В)</div>
+				<div class="calc__values">
+					<div class="calc__group">
+						<input id="calc_input_27_1" type="number" class="calc__input calc__input--short">
+						<div class="calc__unit calc__unit--short">м</div>
+						<div class="calc__slash">x</div>
+						<input id="calc_input_27_2" type="number" class="calc__input calc__input--short">
+						<div class="calc__unit calc__unit--short">м</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- /.calc__step -->
+
+		<div class="calc__step">
+			<div class="calc__title">Исполнение теплового пункта</div>
+
+			<div class="calc__line calc__line--wrap">
+				<div class="calc__name">Тип исполнение теплового пункта</div>
+				<div class="calc__values calc__values--radio">
+					<input type="radio" name="calc_radio_31" id="calc_radio_31_1" class="calc__radio" checked>
+					<label for="calc_radio_31_1" class="calc__label calc__label--w100">Блочный на рамах для монтажа в здании</label>
+					<input type="radio" name="calc_radio_31" id="calc_radio_31_2" class="calc__radio">
+					<label for="calc_radio_31_2" class="calc__label calc__label--w100">Блочно-модульный со зданием контейнерного типа</label>
+				</div>
+			</div>
+
+		</div>
+		<!-- /.calc__step -->
+
+		<div class="calc__step">
+			<div class="calc__title">Данные об объекте</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Наименование объекта</div>
+				<div class="calc__values">
+					<input id="calc_input_28_1" type="text" class="calc__input calc__input--long">
+				</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__name">Адрес объекта</div>
+				<div class="calc__values">
+					<input id="calc_input_29_1" type="text" class="calc__input calc__input--long">
+				</div>
+			</div>
+			
+		</div>
+		<!-- /.calc__step -->
+
+		<div class="calc__step">
+			<div class="calc__title">Дополнительные сведения и требования</div>
+
+			<textarea name="calc_comment" id="calc_comment" class="calc__comment"></textarea>
+		</div>
+		<!-- /.calc__step -->
+		
+		<div class="calc__step">
+			<div class="calc__title">Контактные данные</div>
+
+			<form action="!mail.php" method="POST" class="form">
+
+				<div class="form__flex">
+					<div class="form__line">
+						<div class="form__name">Ваше имя</div>
+						<input name="form_name" type="text" class="form__input">
+					</div>
+	
+					<div class="form__line">
+						<div class="form__name">Ваш телефон</div>
+						<input name="form_phone" type="text" class="form__input" required>
+					</div>
+	
+					<div class="form__line">
+						<div class="form__name">Электронная почта</div>
+						<input name="form_mail" type="mail" class="form__input" required>
+					</div>
+				</div>
+
+				<textarea style="display: none;" name="form_data" id="form_data" class="form__data"></textarea>
+
+				<input type="submit" value="Отправить" class="form__submit">
+
+			</form>
+		</div>
+		<!-- /.calc__step -->
+
+	</div>
+	<!-- /.calc -->
+
+
+</body>
+</html>
