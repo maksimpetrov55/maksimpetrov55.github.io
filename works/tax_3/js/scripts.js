@@ -6,7 +6,7 @@ $(document).ready(function() {
 		} else {
 			$(this).text("+");
 		}
-		$(this).parent().next().toggleClass("calc__info--open");
+		$(this).parent().parent().find(".calc__info").toggleClass("calc__info--open");
 	});
 
 	$('#calc_B11, #calc_C11, #calc_D11').change(function(){
@@ -124,9 +124,13 @@ $(document).ready(function() {
 		}
 		
 
+
 		if ( calc_B1 == "Alberta" ) {
+			$('#calc_B2').prev().text("Is your Corporate Tax Owing in the previous fiscal year, $2,000 or more?");
+			$('#calc_B3').prev().text("Do you expect your Corporate Tax Owing in the current fiscal year, $2,000 or more?");
 			if ( $('#calc_B2').val() == "Yes" && $('#calc_B3').val() == "Yes" && $('#calc_B4').val() == "No" ) {
 				$('#calc_B5').text("Yes, you have to pay instalments to CRA!");
+				$('#block_1').css({display: "block"});
 				$('#block_6').css({display: "block"});
 			} else {
 				$('#calc_B5').text("No, you DO NOT have to pay instalments to CRA!");
@@ -135,16 +139,23 @@ $(document).ready(function() {
 		}
 
 		if ( calc_B1 == "Quebec" || calc_B1 == "Other" ) {
+			$('#calc_B2').prev().text("Is your Corporate Tax Owing in the previous fiscal year, $3,000 or more?");
+			$('#calc_B3').prev().text("Do you expect your Corporate Tax Owing in the current fiscal year, $3,000 or more?");
 			if ( $('#calc_B2').val() == "Yes" && $('#calc_B3').val() == "Yes" ) {
 				$('#calc_B5').text("Yes, you have to pay instalments to CRA!");
 				$('#block_1').css({display: "block"});
-				$('block_3').css({display: "block"});
+				$('#block_2').css({display: "block"});
+				$('#block_3').css({display: "block"});
+				$('#block_11').css({display: "block"});
 			} else {
 				$('#calc_B5').text("No, you DO NOT have to pay instalments to CRA!");
 				$('#block_1').css({display: "none"});
-				$('block_3').css({display: "none"});
+				$('#block_2').css({display: "none"});
+				$('#block_3').css({display: "none"});
+				$('#block_11').css({display: "none"});
 			}
 		}
+
 
 		var calc_B10 = $('#calc_B10').val();
 
@@ -173,8 +184,25 @@ $(document).ready(function() {
 				$('#block_2').css({display: "none"});
 				$('#block_3').css({display: "block"});
 			}
+
+			if ( $('#calc_B5').text() == "No, you DO NOT have to pay instalments to CRA!" ){
+				$('#block_2').css({display: "none"});
+			}
 		}
 
+
+
+		
+
+		if ( calc_B1 == "Other" ) {
+
+			if ( $('#calc_B2').val() == "Yes" && $('#calc_B3').val() == "No" ) {
+				$('#calc_B1 option[value=Alberta]').prop('selected', true);
+				$('#calc_B3 option[value=Yes]').prop('selected', true);
+				calculation();
+			}
+
+		}
 
 
 

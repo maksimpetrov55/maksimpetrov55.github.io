@@ -6,7 +6,7 @@ $(document).ready(function() {
 		} else {
 			$(this).text("+");
 		}
-		$(this).parent().next().toggleClass("calc__info--open");
+		$(this).parent().parent().find(".calc__info").toggleClass("calc__info--open");
 	});
 
 	$('.data-min').on("change",function(){
@@ -126,32 +126,56 @@ $(document).ready(function() {
 		// 	}
 		// }
 
-		if ( calc_B11 >= 1800 && ( calc_B10 >= 1800 || calc_B9 >= 1800 ) && calc_B11 <= calc_B10 ) {
+		if ( calc_B1 == "Quebec" ) {
+			var calc_point = 1800;
+		} else {
+			var calc_point = 3000;
+		}
+
+		if ( calc_B11 >= calc_point && ( calc_B10 >= calc_point || calc_B9 >= calc_point ) && calc_B11 <= calc_B10 ) {
 			$('#calc_B13').text("Current Year");
 		} else {
-			if ( calc_B10 >= 1800 || calc_B9 >= 1800 ) {
+			if ( calc_B10 >= calc_point || calc_B9 >= calc_point ) {
 				$('#calc_B13').text("Prior Year or No Calculation");
 			} else {
 				$('#calc_B13').text("No Instalments Required");
 			}
 		}
 
+
 		var calc_B15 = $('#calc_B15').val();
 
 		if ( calc_B15 == "Current" ) {
-			var calc_value_1 = calc_B11 / 4;
-			var calc_value_2 = calc_B11 / 4;
-			var calc_value_3 = calc_B11 / 4;
-			var calc_value_4 = calc_B11 / 4;
+			if ( calc_B11 >= calc_point && ( calc_B9 >= calc_point || calc_B10 >= calc_point ) ) {
+				var calc_value_1 = calc_B11 / 4;
+				var calc_value_2 = calc_B11 / 4;
+				var calc_value_3 = calc_B11 / 4;
+				var calc_value_4 = calc_B11 / 4;
+			} else {
+				var calc_value_1 = 0;
+				var calc_value_2 = 0;
+				var calc_value_3 = 0;
+				var calc_value_4 = 0;
+			}
+
 			var calc_value_summ = +calc_value_1 + +calc_value_2 + +calc_value_3 + +calc_value_4;
 			var calc_value_066 = (calc_value_summ * 0.66).toFixed(2);
 		}
 
 		if ( calc_B15 == "Prior" ) {
-			var calc_value_1 = calc_B10 / 4;
-			var calc_value_2 = calc_B10 / 4;
-			var calc_value_3 = calc_B10 / 4;
-			var calc_value_4 = calc_B10 / 4;
+
+			if ( calc_B11 >= calc_point && ( calc_B9 >= calc_point || calc_B10 >= calc_point ) ) {
+				var calc_value_1 = calc_B10 / 4;
+				var calc_value_2 = calc_B10 / 4;
+				var calc_value_3 = calc_B10 / 4;
+				var calc_value_4 = calc_B10 / 4;
+			} else {
+				var calc_value_1 = 0;
+				var calc_value_2 = 0;
+				var calc_value_3 = 0;
+				var calc_value_4 = 0;
+			}
+
 			var calc_value_summ = +calc_value_1 + +calc_value_2 + +calc_value_3 + +calc_value_4;
 			var calc_value_066 = (calc_value_summ * 0.66).toFixed(2);
 		}
@@ -171,28 +195,16 @@ $(document).ready(function() {
 
 		if ( calc_B15 == "No calc" ) {
 
-			if ( calc_B9 < 1800 || calc_B10 < 1800 ) {
-				var calc_value_1 = 0;
-			} else {
+			if ( calc_B11 >= calc_point && ( calc_B9 >= calc_point || calc_B10 >= calc_point ) ) {
 				var calc_value_1 = calc_B9 / 4;
-			}
-
-			if ( calc_B9 < 1800 || calc_B10 < 1800 ) {
-				var calc_value_2 = 0;
-			} else {
 				var calc_value_2 = calc_B9 / 4;
-			}
-
-			if ( calc_B9 < 1800 || calc_B10 < 1800 ) {
-				var calc_value_3 = 0;
-			} else {
 				var calc_value_3 = calc_B10 / 2 - calc_value_2;
-			}
-
-			if ( calc_B9 < 1800 || calc_B10 < 1800 ) {
-				var calc_value_4 = 0;
-			} else {
 				var calc_value_4 = calc_B10 / 2 - calc_value_2;
+			} else {
+				var calc_value_1 = 0;
+				var calc_value_2 = 0;
+				var calc_value_3 = 0;
+				var calc_value_4 = 0;
 			}
 
 			var calc_value_summ = +calc_value_1 + +calc_value_2 + +calc_value_3 + +calc_value_4;

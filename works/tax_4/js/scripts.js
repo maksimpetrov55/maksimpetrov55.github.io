@@ -257,16 +257,16 @@ $(document).ready(function() {
 		$('#calc_A20').text( calc_quart_3_name + " " + calc_quart_3_days + " " + calc_quart_3_year );
 		$('#calc_A21').text( calc_quart_4_name + " " + calc_quart_4_days + " " + calc_quart_4_year );
 
-		$('#calc_B18').val( Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') ) / 4 );
-		$('#calc_B19').val( Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') ) / 4 );
-		$('#calc_B20').val( Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') ) / 4 );
-		$('#calc_B21').val( Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') ) / 4 );
+		$('#calc_B18').val( (Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') ) / 4).toFixed(2) );
+		$('#calc_B19').val( (Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') ) / 4).toFixed(2) );
+		$('#calc_B20').val( (Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') ) / 4).toFixed(2) );
+		$('#calc_B21').val( (Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') ) / 4).toFixed(2) );
 
-		$('#calc_B22').val( 
+		$('#calc_B22').val((
 			+$('#calc_B18').val().split(',').join('') + 
 			+$('#calc_B19').val().split(',').join('') + 
 			+$('#calc_B20').val().split(',').join('') + 
-			+$('#calc_B21').val().split(',').join('')
+			+$('#calc_B21').val().split(',').join('')).toFixed(2)
 		);
 
 
