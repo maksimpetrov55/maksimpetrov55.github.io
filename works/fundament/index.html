@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/price.js"></script>	
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div class="calc__black">
+
+			<form action="!mail.php" method="POST" class="form">
+
+				<div class="form__close">×</div>
+
+				<div class="form__title">Расчет уже готов!<br>Заполните форму для просмотра стоимости.</div>
+
+				<input name="form_name" type="text" class="form__input" required placeholder="Ваше Имя">
+				<input name="form_email" type="email" class="form__input" required placeholder="Ваш Email">
+				<input name="form_phone" type="text" class="form__input" required placeholder="Ваш Телефон">
+				<input name="form_adres" type="text" class="form__input" required placeholder="Адрес объекта">
+
+				<textarea style="display: none;" name="form_data" id="form_data" cols="30" rows="10"></textarea>
+
+				<input class="form__btn" type="submit" value="Узнать стоимость">
+
+			</form>
+
+		</div>
+
+		<div class="calc__head">Расчет сметы строительства УШП</div>
+
+		<div class="calc__wrap">
+
+			<div class="calc__left">
+				<div class="calc__title">Размеры</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Длина постройки</div>
+					<input id="calc_input_1" type="number" class="calc__input" value="10">
+					<div class="calc__unit">м</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Ширина постройки</div>
+					<input id="calc_input_2" type="number" class="calc__input" value="20">
+					<div class="calc__unit">м</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Периметр фундамента</div>
+					<input id="calc_input_3" type="number" class="calc__input" disabled>
+					<div class="calc__unit">м.п</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Площадь фундамента</div>
+					<input id="calc_input_4" type="number" class="calc__input" disabled>
+					<div class="calc__unit">м2</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Высота песка</div>
+					<input id="calc_input_5" type="number" class="calc__input" value="450">
+					<div class="calc__unit">мм</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Высота ребра</div>
+					<input id="calc_input_6" type="number" class="calc__input" value="300">
+					<div class="calc__unit">мм</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Крыльцо (кол-во свай)</div>
+					<input id="calc_input_7" type="number" class="calc__input" value="0">
+					<div class="calc__unit">шт</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Шаг теплого пола</div>
+					<input id="calc_input_8" type="number" class="calc__input" value="200">
+					<div class="calc__unit">мм</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Арматура на ребра</div>
+					<input id="calc_input_9" type="number" class="calc__input" value="12">
+					<div class="calc__unit">мм</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Арматура на плиту</div>
+					<input id="calc_input_10" type="number" class="calc__input" value="8">
+					<div class="calc__unit">мм</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Шаг арматуры</div>
+					<input id="calc_input_11" type="number" class="calc__input" value="150">
+					<div class="calc__unit">м</div>
+				</div>
+				
+				<div class="calc__line">
+					<div class="calc__name">Ввод воды, электричества и т.д</div>
+					<input id="calc_input_12" type="number" class="calc__input" value="3">
+					<div class="calc__unit">шт</div>
+				</div>
+
+
+			</div>
+
+			<div class="calc__right">
+
+				<img src="img/6.png" alt="" class="calc__img calc__img--6">
+				<img src="img/1.png" alt="" class="calc__img calc__img--1 calc__img--show">
+				<img src="img/2.png" alt="" class="calc__img calc__img--2">
+				<img src="img/3.png" alt="" class="calc__img calc__img--3">
+				<img src="img/4.png" alt="" class="calc__img calc__img--4">
+				<img src="img/5.png" alt="" class="calc__img calc__img--5">
+				<img src="img/7.png" alt="" class="calc__img calc__img--7">
+
+			</div>
+
+		</div>
+
+		<div class="calc__separate"></div>
+
+		<div class="calc__title">Дополнительные услуги</div>
+
+		<div class="calc__options">
+
+			<label class="calc__label" for="calc_check_1">
+				<input type="checkbox" name="calc_check_1" id="calc_check_1" class="calc__check">
+				<div class="calc__opt">Устройство дренажа</div>
+			</label>
+			
+			<label class="calc__label" for="calc_check_2">
+				<input type="checkbox" name="calc_check_2" id="calc_check_2" class="calc__check">
+				<div class="calc__opt">Устройство бетонной отмостки с утеплением 50мм</div>
+			</label>
+			
+			<label class="calc__label" for="calc_check_3">
+				<input type="checkbox" name="calc_check_3" id="calc_check_3" class="calc__check">
+				<div class="calc__opt">Коллекторная разводка труб ХВС и ГВС по точкам потребления</div>
+			</label>
+			
+			<label class="calc__label" for="calc_check_4">
+				<input type="checkbox" name="calc_check_4" id="calc_check_4" class="calc__check">
+				<div class="calc__opt">Аренда вагончика для проживания бригады</div>
+			</label>
+			
+			<label class="calc__label" for="calc_check_5">
+				<input type="checkbox" name="calc_check_5" id="calc_check_5" class="calc__check">
+				<div class="calc__opt">Устройство ливневой канализации</div>
+			</label>
+			
+			<label class="calc__label" for="calc_check_6">
+				<input type="checkbox" name="calc_check_6" id="calc_check_6" class="calc__check">
+				<div class="calc__opt">Монтаж закладных под воду, электричество и канализацию</div>
+			</label>
+			
+			<label class="calc__label" for="calc_check_7">
+				<input type="checkbox" name="calc_check_7" id="calc_check_7" class="calc__check">
+				<div class="calc__opt">Обеспечение электричеством</div>
+			</label>
+		</div>
+
+		<div class="calc__btn">Получить смету</div>
+
+		<div class="table">
+
+			<div class="table__head">Смета стоимости строительства УШП</div>
+
+			<div class="table__title">Работы:</div>
+
+			<div class="table__body">
+				<div class="table__row table__row--head">
+					<div class="table__cell table__cell--1">№</div>
+					<div class="table__cell table__cell--2">Наименование</div>
+					<div class="table__cell table__cell--3">Ед. изм.</div>
+					<div class="table__cell table__cell--4">Кол-во</div>
+					<div class="table__cell table__cell--5">Цена</div>
+					<div class="table__cell table__cell--6">Итого</div>
+				</div>
+
+				<div id="row_1_1" class="table__row">
+					<div class="table__cell table__cell--1">1</div>
+					<div class="table__cell table__cell--2">Разметка, вынос осей, высотные отметки</div>
+					<div class="table__cell table__cell--3">шт</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_1_2" class="table__row">
+					<div class="table__cell table__cell--1">2</div>
+					<div class="table__cell table__cell--2">Земляные работы, подчистка грунта (дна траншей)</div>
+					<div class="table__cell table__cell--3">м2</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_1_3" class="table__row">
+					<div class="table__cell table__cell--1">3</div>
+					<div class="table__cell table__cell--2">Устройство ввода водопровода и электричества</div>
+					<div class="table__cell table__cell--3">шт</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_1_4" class="table__row">
+					<div class="table__cell table__cell--1">4</div>
+					<div class="table__cell table__cell--2">Устройство дренажа по пиреметру дома</div>
+					<div class="table__cell table__cell--3">м.п.</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_1_5" class="table__row">
+					<div class="table__cell table__cell--1">5</div>
+					<div class="table__cell table__cell--2">Укладка геотекстиля</div>
+					<div class="table__cell table__cell--3">м2</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_1_6" class="table__row">
+					<div class="table__cell table__cell--1">6</div>
+					<div class="table__cell table__cell--2">Устройство песчаной подушки с послойной трамбовкой виброплитой</div>
+					<div class="table__cell table__cell--3">м3</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_1_7" class="table__row">
+					<div class="table__cell table__cell--1">7</div>
+					<div class="table__cell table__cell--2">Монтаж канализации под плитой</div>
+					<div class="table__cell table__cell--3">м.п.</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_1_8" class="table__row">
+					<div class="table__cell table__cell--1">8</div>
+					<div class="table__cell table__cell--2">Укладка технической пленки</div>
+					<div class="table__cell table__cell--3">м2</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_1_9" class="table__row">
+					<div class="table__cell table__cell--1">9</div>
+					<div class="table__cell table__cell--2">Укладка утеплителя под плиту (ЭППС/ПСБ)</div>
+					<div class="table__cell table__cell--3">м2</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_1_10" class="table__row">
+					<div class="table__cell table__cell--1">10</div>
+					<div class="table__cell table__cell--2">Отделка цоколя плоским шифером</div>
+					<div class="table__cell table__cell--3">м.п.</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_1_11" class="table__row">
+					<div class="table__cell table__cell--1">11</div>
+					<div class="table__cell table__cell--2">Установка опалубки</div>
+					<div class="table__cell table__cell--3">м.п.</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_1_12" class="table__row">
+					<div class="table__cell table__cell--1">12</div>
+					<div class="table__cell table__cell--2">Разводка электрических сетей под свет и розетки*</div>
+					<div class="table__cell table__cell--3">м.п.</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_1_13" class="table__row">
+					<div class="table__cell table__cell--1">13</div>
+					<div class="table__cell table__cell--2">Разводка водопроводных сетей к потребителям*</div>
+					<div class="table__cell table__cell--3">м.п.</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_1_14" class="table__row">
+					<div class="table__cell table__cell--1">14</div>
+					<div class="table__cell table__cell--2">Изготовление и установка арматурных каркасов, монтаж арматурной сетки</div>
+					<div class="table__cell table__cell--3">м2</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_1_15" class="table__row">
+					<div class="table__cell table__cell--1">15</div>
+					<div class="table__cell table__cell--2">Монтаж теплого пола и коллектора</div>
+					<div class="table__cell table__cell--3">м2</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_1_16" class="table__row">
+					<div class="table__cell table__cell--1">16</div>
+					<div class="table__cell table__cell--2">Устройство свай под крыльцо (опционально)</div>
+					<div class="table__cell table__cell--3">шт</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_1_17" class="table__row">
+					<div class="table__cell table__cell--1">17</div>
+					<div class="table__cell table__cell--2">Укладка бетона с вибрированием </div>
+					<div class="table__cell table__cell--3">м3</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_1_18" class="table__row">
+					<div class="table__cell table__cell--1">18</div>
+					<div class="table__cell table__cell--2">Затирка поверхности плиты затирочными машинами</div>
+					<div class="table__cell table__cell--3">м2</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_1_19" class="table__row table__row--head">
+					<div class="table__cell table__cell--1"></div>
+					<div class="table__cell table__cell--2">Итого работы</div>
+					<div class="table__cell table__cell--3"></div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+
+			</div>
+
+			<div class="table__title">Материалы:</div>
+
+			<div class="table__body">
+
+				<div class="table__row table__row--head">
+					<div class="table__cell table__cell--1">№</div>
+					<div class="table__cell table__cell--2">Наименование</div>
+					<div class="table__cell table__cell--3">Ед. изм.</div>
+					<div class="table__cell table__cell--4">Кол-во</div>
+					<div class="table__cell table__cell--5">Цена</div>
+					<div class="table__cell table__cell--6">Итого</div>
+				</div>
+
+				<div id="row_2_1" class="table__row">
+					<div class="table__cell table__cell--1">1</div>
+					<div class="table__cell table__cell--2">Песок строительный с учетом доставки</div>
+					<div class="table__cell table__cell--3">м3</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_2" class="table__row">
+					<div class="table__cell table__cell--1">2</div>
+					<div class="table__cell table__cell--2">Щебень гранитный с учетом доставки</div>
+					<div class="table__cell table__cell--3">м3</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_3" class="table__row">
+					<div class="table__cell table__cell--1">3</div>
+					<div class="table__cell table__cell--2">Доска 40*200*6000</div>
+					<div class="table__cell table__cell--3">м3</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_4" class="table__row">
+					<div class="table__cell table__cell--1">4</div>
+					<div class="table__cell table__cell--2">Геотекстиль для фундамента</div>
+					<div class="table__cell table__cell--3">м2</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_5" class="table__row">
+					<div class="table__cell table__cell--1">5</div>
+					<div class="table__cell table__cell--2">Труба ПНД для ввода сетей</div>
+					<div class="table__cell table__cell--3">м.п.</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_6" class="table__row">
+					<div class="table__cell table__cell--1">6</div>
+					<div class="table__cell table__cell--2">Труба канализационная </div>
+					<div class="table__cell table__cell--3">м.п.</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_7" class="table__row">
+					<div class="table__cell table__cell--1">7</div>
+					<div class="table__cell table__cell--2">Труба дренажная в геотекстиле</div>
+					<div class="table__cell table__cell--3">м.п.</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_8" class="table__row">
+					<div class="table__cell table__cell--1">8</div>
+					<div class="table__cell table__cell--2">Дренажный колодец D300</div>
+					<div class="table__cell table__cell--3">шт</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_9" class="table__row">
+					<div class="table__cell table__cell--1">9</div>
+					<div class="table__cell table__cell--2">Геотекстиль для дренажа</div>
+					<div class="table__cell table__cell--3">м2</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_10" class="table__row">
+					<div class="table__cell table__cell--1">10</div>
+					<div class="table__cell table__cell--2">ЭППС Технониколь Carbon Eco 100 (первый слой и л-блоки)</div>
+					<div class="table__cell table__cell--3">м3</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_11" class="table__row">
+					<div class="table__cell table__cell--1">11</div>
+					<div class="table__cell table__cell--2">Пенопласт ПСБ-25 второй слой</div>
+					<div class="table__cell table__cell--3">м3</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_12" class="table__row">
+					<div class="table__cell table__cell--1">12</div>
+					<div class="table__cell table__cell--2">Плоский шифер 1500*300</div>
+					<div class="table__cell table__cell--3">м.п.</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_13" class="table__row">
+					<div class="table__cell table__cell--1">13</div>
+					<div class="table__cell table__cell--2">Труба гофрированная для электрического кабеля</div>
+					<div class="table__cell table__cell--3">м.п.</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_14" class="table__row">
+					<div class="table__cell table__cell--1">14</div>
+					<div class="table__cell table__cell--2">Труба гофрированная для ввода коммуникаций</div>
+					<div class="table__cell table__cell--3">м.п.</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_15" class="table__row">
+					<div class="table__cell table__cell--1">15</div>
+					<div class="table__cell table__cell--2">Провод электрический</div>
+					<div class="table__cell table__cell--3">м.п.</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_16" class="table__row">
+					<div class="table__cell table__cell--1">16</div>
+					<div class="table__cell table__cell--2">Труба водопроводная Pex-a</div>
+					<div class="table__cell table__cell--3">м.п.</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_17" class="table__row">
+					<div class="table__cell table__cell--1">17</div>
+					<div class="table__cell table__cell--2">Пленка гидроизоляционная </div>
+					<div class="table__cell table__cell--3">м2</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_18" class="table__row">
+					<div class="table__cell table__cell--1">18</div>
+					<div class="table__cell table__cell--2">Термоклипы для пенопласта</div>
+					<div class="table__cell table__cell--3">шт</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_19" class="table__row">
+					<div class="table__cell table__cell--1">19</div>
+					<div class="table__cell table__cell--2">Клей-Пена монтажная</div>
+					<div class="table__cell table__cell--3">шт</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_20" class="table__row">
+					<div class="table__cell table__cell--1">20</div>
+					<div class="table__cell table__cell--2">Стяжки пластиковые</div>
+					<div class="table__cell table__cell--3">шт</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_21" class="table__row">
+					<div class="table__cell table__cell--1">21</div>
+					<div class="table__cell table__cell--2">Труба теплого пола </div>
+					<div class="table__cell table__cell--3">м.п.</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_22" class="table__row">
+					<div class="table__cell table__cell--1">22</div>
+					<div class="table__cell table__cell--2">Коллектор</div>
+					<div class="table__cell table__cell--3">шт</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_23" class="table__row">
+					<div class="table__cell table__cell--1">23</div>
+					<div class="table__cell table__cell--2">Энэргофлекс</div>
+					<div class="table__cell table__cell--3">м.п.</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_24" class="table__row">
+					<div class="table__cell table__cell--1">24</div>
+					<div class="table__cell table__cell--2">Арматура стальная Ø 12 (на ребра)</div>
+					<div class="table__cell table__cell--3">т</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_25" class="table__row">
+					<div class="table__cell table__cell--1">25</div>
+					<div class="table__cell table__cell--2">Арматура стальная  Ø 12 (на силовые элементы)</div>
+					<div class="table__cell table__cell--3">т</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_26" class="table__row">
+					<div class="table__cell table__cell--1">26</div>
+					<div class="table__cell table__cell--2">Арматура стальная Ø 8 (на хомуты)</div>
+					<div class="table__cell table__cell--3">т</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_27" class="table__row">
+					<div class="table__cell table__cell--1">27</div>
+					<div class="table__cell table__cell--2">Арматура стальная Ø 8 (на плиту)</div>
+					<div class="table__cell table__cell--3">т</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_28" class="table__row">
+					<div class="table__cell table__cell--1">28</div>
+					<div class="table__cell table__cell--2">Проволока вязальная 1,2 мм</div>
+					<div class="table__cell table__cell--3">кг</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_29" class="table__row">
+					<div class="table__cell table__cell--1">29</div>
+					<div class="table__cell table__cell--2">Подставка под арматурный каркас</div>
+					<div class="table__cell table__cell--3">шт</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_30" class="table__row">
+					<div class="table__cell table__cell--1">30</div>
+					<div class="table__cell table__cell--2">Бетон, м300  с учетом доставки</div>
+					<div class="table__cell table__cell--3">м3</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_2_31" class="table__row table__row--head">
+					<div class="table__cell table__cell--1"></div>
+					<div class="table__cell table__cell--2">Итого материалы</div>
+					<div class="table__cell table__cell--3"></div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+
+			</div>
+
+			<div class="table__title">Прочие расходы:</div>
+
+			<div class="table__body">
+
+				<div id="row_3_1" class="table__row">
+					<div class="table__cell table__cell--1">1</div>
+					<div class="table__cell table__cell--2">Экскаватор</div>
+					<div class="table__cell table__cell--3">смена</div>
+					<div class="table__cell table__cell--4">1.0</div>
+					<div class="table__cell table__cell--5">16000.00</div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_3_2" class="table__row">
+					<div class="table__cell table__cell--1">2</div>
+					<div class="table__cell table__cell--2">Доставка материала (ЭППС, арматура, теплый пол)</div>
+					<div class="table__cell table__cell--3">шт</div>
+					<div class="table__cell table__cell--4">1.0</div>
+					<div class="table__cell table__cell--5">7000.00</div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_3_3" class="table__row">
+					<div class="table__cell table__cell--1">3</div>
+					<div class="table__cell table__cell--2">Накладные расходы 2%</div>
+					<div class="table__cell table__cell--3"></div>
+					<div class="table__cell table__cell--4">1.0</div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_3_4" class="table__row">
+					<div class="table__cell table__cell--1">4</div>
+					<div class="table__cell table__cell--2">Бетононасос</div>
+					<div class="table__cell table__cell--3">смена</div>
+					<div class="table__cell table__cell--4">1.0</div>
+					<div class="table__cell table__cell--5">19800.00</div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+
+				<div id="row_3_5" class="table__row table__row--head">
+					<div class="table__cell table__cell--1"></div>
+					<div class="table__cell table__cell--2">Итого прочие</div>
+					<div class="table__cell table__cell--3"></div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+
+			</div>
+
+
+			<div class="table__body table__body--itog">
+				<div class="table__row">
+					<div class="table__result">Итого работ</div>
+					<div id="table_itog_1" class="table__itog"></div>
+				</div>
+				<div class="table__row">
+					<div class="table__result">Итого материалов</div>
+					<div id="table_itog_2" class="table__itog"></div>
+				</div>
+				<div class="table__row">
+					<div class="table__result">Прочие расходы</div>
+					<div id="table_itog_3" class="table__itog"></div>
+				</div>
+				<div class="table__row table__row--itog">
+					<div class="table__result">Итого сумма</div>
+					<div id="table_itog_4" class="table__itog"></div>
+				</div>
+
+				<div class="table__note">
+					* Усредненные значения исходя из размера дома. 
+					<br><br>
+					Данная смета является предварительной. Объемы и стоимость работ будут скорректированы после выезда нашего специалиста на участок и разработки рабочей документации по фундаменту.
+				</div>
+			</div>
+
+
+
+			<div class="table__title">Дополнительно Предлагаем выполнить</div>
+
+			<div class="table__body">
+
+				<div id="row_4_1" class="table__row">
+					<div class="table__cell table__cell--1">1</div>
+					<div class="table__cell table__cell--2">ЭППС Технониколь Carbon Eco 50 (отмоска)</div>
+					<div class="table__cell table__cell--3">м3</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_4_2" class="table__row">
+					<div class="table__cell table__cell--1">2</div>
+					<div class="table__cell table__cell--2">Укладка утеплителя под отмостку</div>
+					<div class="table__cell table__cell--3">м.п.</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_4_3" class="table__row">
+					<div class="table__cell table__cell--1">3</div>
+					<div class="table__cell table__cell--2">Заземление</div>
+					<div class="table__cell table__cell--3">шт</div>
+					<div class="table__cell table__cell--4">1.0</div>
+					<div class="table__cell table__cell--5">14000.00</div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+				
+				<div id="row_4_4" class="table__row">
+					<div class="table__cell table__cell--1">4</div>
+					<div class="table__cell table__cell--2">Монтаж ливневой канализации (работа + материалы)</div>
+					<div class="table__cell table__cell--3">м.п.</div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+
+				<div id="row_4_5" class="table__row table__row--head">
+					<div class="table__cell table__cell--1"></div>
+					<div class="table__cell table__cell--2">Итого дополнительно</div>
+					<div class="table__cell table__cell--3"></div>
+					<div class="table__cell table__cell--4"></div>
+					<div class="table__cell table__cell--5"></div>
+					<div class="table__cell table__cell--6"></div>
+				</div>
+
+			</div>
+
+
+		</div>
+
+
+
+	</div>
+	
+
+
+</body>
+</html>
