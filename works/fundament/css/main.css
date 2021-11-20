@@ -86,7 +86,18 @@ body {
 .calc__input {
   padding: 8px;
   font-size: 16px;
-  width: 110px;
+  width: 130px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  text-align: left;
+  border-radius: 4px;
+  border: 1px solid #999;
+}
+
+.calc__select {
+  padding: 8px;
+  font-size: 16px;
+  width: 160px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   text-align: left;
@@ -95,10 +106,10 @@ body {
 }
 
 .calc__unit {
-  width: 20px;
+  width: 25px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  margin: 0 0 0 10px;
+  margin: 0 0 0 5px;
 }
 
 .calc__img {
@@ -106,6 +117,7 @@ body {
   display: none;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  width: 100%;
 }
 
 .calc__img--show {
@@ -202,6 +214,111 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.table {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+  position: relative;
+  width: 100%;
+  margin: 100px 0;
+  display: none;
+}
+
+.table * {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.table__head {
+  font-size: 26px;
+  text-align: center;
+  margin: 0 0 40px 0;
+  text-transform: uppercase;
+}
+
+.table__title {
+  font-size: 20px;
+  text-align: center;
+  margin: 40px 0 20px 0;
+}
+
+.table__body--itog {
+  margin: 50px 0 0 0;
+}
+
+.table__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #ccc;
+}
+
+.table__row--head {
+  font-weight: 600;
+}
+
+.table__row--itog {
+  border-top: 1px solid #ccc;
+  margin: 40px 0 0 0;
+}
+
+.table__cell--1 {
+  width: 5%;
+}
+
+.table__cell--2 {
+  width: 49%;
+}
+
+.table__cell--3 {
+  width: 6%;
+  text-align: right;
+}
+
+.table__cell--4 {
+  width: 10%;
+  text-align: right;
+}
+
+.table__cell--5 {
+  width: 15%;
+  text-align: right;
+}
+
+.table__cell--6 {
+  width: 15%;
+  text-align: right;
+}
+
+.table__result {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.table__itog {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.table__note {
+  font-size: 14px;
+  color: #999;
+  text-align: center;
+  max-width: 800px;
+  margin: 20px auto;
 }
 
 .form {
@@ -311,110 +428,5 @@ body {
 
 .form__close:hover {
   opacity: 0.7;
-}
-
-.table {
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: sans-serif;
-  position: relative;
-  width: 100%;
-  margin: 100px 0;
-  display: none;
-}
-
-.table * {
-  position: relative;
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: sans-serif;
-}
-
-.table__head {
-  font-size: 26px;
-  text-align: center;
-  margin: 0 0 40px 0;
-  text-transform: uppercase;
-}
-
-.table__title {
-  font-size: 20px;
-  text-align: center;
-  margin: 40px 0 20px 0;
-}
-
-.table__body--itog {
-  margin: 50px 0 0 0;
-}
-
-.table__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 10px 0;
-  font-size: 14px;
-  border-bottom: 1px solid #ccc;
-}
-
-.table__row--head {
-  font-weight: 600;
-}
-
-.table__row--itog {
-  border-top: 1px solid #ccc;
-  margin: 40px 0 0 0;
-}
-
-.table__cell--1 {
-  width: 5%;
-}
-
-.table__cell--2 {
-  width: 49%;
-}
-
-.table__cell--3 {
-  width: 6%;
-  text-align: right;
-}
-
-.table__cell--4 {
-  width: 10%;
-  text-align: right;
-}
-
-.table__cell--5 {
-  width: 15%;
-  text-align: right;
-}
-
-.table__cell--6 {
-  width: 15%;
-  text-align: right;
-}
-
-.table__result {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.table__itog {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.table__note {
-  font-size: 14px;
-  color: #999;
-  text-align: center;
-  max-width: 800px;
-  margin: 20px auto;
 }
 /*# sourceMappingURL=main.css.map */

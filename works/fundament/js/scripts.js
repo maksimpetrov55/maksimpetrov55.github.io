@@ -1,18 +1,42 @@
 $(document).ready(function() {
 
-	$('.form__btn').click(function(e){
-		e.preventDefault();
-		$('.calc__black').fadeOut(300);
+	// $('.form__btn').click(function(e){
+	// 	e.preventDefault();
+	// 	$('.calc__black').fadeOut(300);
+	// 	$('.table').css({display: "block"});
+	// });
+
+	// $('.form__close').click(function(){
+	// 	$('.calc__black').fadeOut(300);
+	// });
+
+	$('.calc__btn').click(function(){
+		// $('.calc__black').css({display: "flex"});
+		// $('.form').fadeIn(300);
+
 		$('.table').css({display: "block"});
 	});
 
-	$('.form__close').click(function(){
-		$('.calc__black').fadeOut(300);
+	$('#calc_input_1, #calc_input_2').change(function(){
+		var calc_input_1 = $('#calc_input_1').val();
+		var calc_input_2 = $('#calc_input_2').val();
+		$('#calc_input_3').val( (calc_input_1 * 2) + (calc_input_2 * 2) );
+		$('#calc_input_4').val( calc_input_1 * calc_input_2 );
+		calculation();
 	});
 
-	$('.calc__btn').click(function(){
-		$('.calc__black').css({display: "flex"});
-		$('.form').fadeIn(300);
+	$('#calc_input_3').change(function(){
+		var calc_input_2 = $('#calc_input_2').val();
+		var calc_input_3 = $('#calc_input_3').val();
+		$('#calc_input_1').val( (calc_input_3 - (calc_input_2 * 2)) / 2 );
+		calculation();
+	});
+
+	$('#calc_input_4').change(function(){
+		var calc_input_2 = $('#calc_input_2').val();
+		var calc_input_4 = $('#calc_input_4').val();
+		$('#calc_input_1').val( calc_input_4 / calc_input_2 );
+		calculation();
 	});
 
 	$('.calc__input').change(function(){
@@ -26,32 +50,45 @@ $(document).ready(function() {
 		calculation();
 	});
 
+	$('.calc__select').change(function(){
+		calculation();
+	});
+
 	calculation();
 
 	function calculation() {
 
+		var calc_type = $('#calc_select').val();
+
 		var calc_input_1 = $('#calc_input_1').val();
 		var calc_input_2 = $('#calc_input_2').val();
 
-		if ( calc_input_1 > 0 && calc_input_2 > 0 ) {
+		if ( calc_type >= 300 ) {
 			$('.calc__img--2').css({display: "block"});
+			$('.calc__img--1').css({display: "none"});
 		} else {
 			$('.calc__img--2').css({display: "none"});
+			$('.calc__img--1').css({display: "block"});
 		}
-
-		$('#calc_input_3').val( (calc_input_1 * 2) + (calc_input_2 * 2) );
-		$('#calc_input_4').val( calc_input_1 * calc_input_2 );
 
 		var calc_input_3 = $('#calc_input_3').val();
 		var calc_input_4 = $('#calc_input_4').val();
 		var calc_input_5 = $('#calc_input_5').val();
 		var calc_input_6 = $('#calc_input_6').val();
-		var calc_input_7 = $('#calc_input_7').val();
-		var calc_input_8 = $('#calc_input_8').val();
-		var calc_input_9 = $('#calc_input_9').val();
-		var calc_input_10 = $('#calc_input_10').val();
-		var calc_input_11 = $('#calc_input_11').val();
-		var calc_input_12 = $('#calc_input_12').val();
+		//var calc_input_7 = $('#calc_input_7').val();
+		//var calc_input_8 = $('#calc_input_8').val();
+		//var calc_input_9 = $('#calc_input_9').val();
+		//var calc_input_10 = $('#calc_input_10').val();
+		//var calc_input_11 = $('#calc_input_11').val();
+		//var calc_input_12 = $('#calc_input_12').val();
+
+		var calc_input_7 = 0;
+		var calc_input_8 = 150;
+		var calc_input_9 = 12;
+		var calc_input_10 = 8;
+		var calc_input_11 = 150;
+		var calc_input_12 = 3;
+
 
 		var calc_options = '';
 		$('.calc__check:checked').each(function(){
@@ -78,35 +115,7 @@ $(document).ready(function() {
 		);
 
 		
-		if ( $('#calc_check_1').is(":checked") == true ){
-			$('.calc__img--4').css({display: "block"});
-		} else {
-			$('.calc__img--4').css({display: "none"});
-		}
 
-		if ( $('#calc_check_2').is(":checked") == true ){
-			$('.calc__img--3').css({display: "block"});
-		} else {
-			$('.calc__img--3').css({display: "none"});
-		}
-
-		if ( $('#calc_check_4').is(":checked") == true ){
-			$('.calc__img--6').css({display: "block"});
-		} else {
-			$('.calc__img--6').css({display: "none"});
-		}
-
-		if ( $('#calc_check_6').is(":checked") == true ){
-			$('.calc__img--5').css({display: "block"});
-		} else {
-			$('.calc__img--5').css({display: "none"});
-		}
-
-		if ( $('#calc_check_7').is(":checked") == true ){
-			$('.calc__img--7').css({display: "block"});
-		} else {
-			$('.calc__img--7').css({display: "none"});
-		}
 
 
 
@@ -184,10 +193,13 @@ $(document).ready(function() {
 		$('#row_1_5').find(".table__cell--4").text( formula_2.toFixed(1) );
 		$('#row_1_6').find(".table__cell--4").text( formula_45.toFixed(1) );
 		$('#row_1_7').find(".table__cell--4").text( formula_8.toFixed(1) );
-		$('#row_1_8').find(".table__cell--4").text( formula_2.toFixed(1) );
+		//$('#row_1_8').find(".table__cell--4").text( formula_2.toFixed(1) );
+		$('#row_1_8').find(".table__cell--4").text( formula_6.toFixed(2) );
 		$('#row_1_9').find(".table__cell--4").text( formula_1.toFixed(1) );
-		$('#row_1_10').find(".table__cell--4").text( formula_4.toFixed(1) );
-		$('#row_1_11').find(".table__cell--4").text( formula_4.toFixed(1) );
+		//$('#row_1_10').find(".table__cell--4").text( formula_4.toFixed(1) );
+		$('#row_1_10').find(".table__cell--4").text( formula_4.toFixed(2) );
+		//$('#row_1_11').find(".table__cell--4").text( formula_4.toFixed(1) );
+		$('#row_1_11').find(".table__cell--4").text( "1.00" );
 		$('#row_1_12').find(".table__cell--4").text( formula_3.toFixed(1) );
 		$('#row_1_13').find(".table__cell--4").text( formula_3.toFixed(1) );
 		$('#row_1_14').find(".table__cell--4").text( formula_1.toFixed(1) );
@@ -203,10 +215,12 @@ $(document).ready(function() {
 		$('#row_1_5').find(".table__cell--5").text( price_work_7.toFixed(2) );
 		$('#row_1_6').find(".table__cell--5").text( price_work_8.toFixed(2) );
 		$('#row_1_7').find(".table__cell--5").text( price_work_9.toFixed(2) );
-		$('#row_1_8').find(".table__cell--5").text( price_work_10.toFixed(2) );
+		//$('#row_1_8').find(".table__cell--5").text( price_work_10.toFixed(2) );
+		$('#row_1_8').find(".table__cell--5").text( price_work_6.toFixed(2) );
 		$('#row_1_9').find(".table__cell--5").text( price_work_11.toFixed(2) );
-		$('#row_1_10').find(".table__cell--5").text( price_work_12.toFixed(2) );
-		$('#row_1_11').find(".table__cell--5").text( price_work_13.toFixed(2) );
+		//$('#row_1_10').find(".table__cell--5").text( price_work_12.toFixed(2) );
+		$('#row_1_10').find(".table__cell--5").text( price_work_14.toFixed(2) );
+		//$('#row_1_11').find(".table__cell--5").text( price_work_13.toFixed(2) );
 		$('#row_1_12').find(".table__cell--5").text( price_work_15.toFixed(2) );
 		$('#row_1_13').find(".table__cell--5").text( price_work_16.toFixed(2) );
 		$('#row_1_14').find(".table__cell--5").text( price_work_17.toFixed(2) );
@@ -214,6 +228,132 @@ $(document).ready(function() {
 		$('#row_1_16').find(".table__cell--5").text( price_work_19.toFixed(2) );
 		$('#row_1_17').find(".table__cell--5").text( price_work_20.toFixed(2) );
 		$('#row_1_18').find(".table__cell--5").text( price_work_21.toFixed(2) );
+
+		
+
+
+
+
+
+
+
+		$('#row_2_1').find(".table__cell--4").text(  formula_45.toFixed(2) );
+		$('#row_2_2').find(".table__cell--4").text(  formula_43.toFixed(2) );
+		$('#row_2_3').find(".table__cell--4").text(  formula_35.toFixed(2) );
+		$('#row_2_4').find(".table__cell--4").text(  formula_46.toFixed(2) );
+		$('#row_2_5').find(".table__cell--4").text(  (+calc_input_1).toFixed(2) );
+		$('#row_2_6').find(".table__cell--4").text(  formula_8.toFixed(2) );
+		$('#row_2_7').find(".table__cell--4").text(  formula_41.toFixed(2) );
+		$('#row_2_8').find(".table__cell--4").text(  formula_42.toFixed(2) );
+		$('#row_2_9').find(".table__cell--4").text(  formula_44.toFixed(2) );
+		$('#row_2_10').find(".table__cell--4").text( (+formula_21 + +formula_27).toFixed(2) );
+		$('#row_2_11').find(".table__cell--4").text( (+formula_23 + +formula_25).toFixed(2) );
+		//$('#row_2_12').find(".table__cell--4").text( formula_4.toFixed(2) );
+		$('#row_2_12').find(".table__cell--4").text( formula_29.toFixed(2) );
+		$('#row_2_13').find(".table__cell--4").text( (formula_3 * 1.2).toFixed(2) );
+		$('#row_2_14').find(".table__cell--4").text( "20.0" );
+		$('#row_2_15').find(".table__cell--4").text( formula_3.toFixed(2) );
+		$('#row_2_16').find(".table__cell--4").text( formula_3.toFixed(2) );
+		$('#row_2_17').find(".table__cell--4").text( formula_2.toFixed(2) );
+		$('#row_2_18').find(".table__cell--4").text( formula_49.toFixed(2) );
+		$('#row_2_19').find(".table__cell--4").text( formula_47.toFixed(2) );
+		$('#row_2_20').find(".table__cell--4").text( formula_39.toFixed(2) );
+		$('#row_2_21').find(".table__cell--4").text( formula_40.toFixed(2) );
+		$('#row_2_22').find(".table__cell--4").text( "1.0" );
+		$('#row_2_23').find(".table__cell--4").text( formula_48.toFixed(2) );
+		$('#row_2_24').find(".table__cell--4").text( formula_18.toFixed(2) );
+		$('#row_2_25').find(".table__cell--4").text( formula_13.toFixed(2) );
+		$('#row_2_26').find(".table__cell--4").text( formula_16.toFixed(2) );
+		$('#row_2_27').find(".table__cell--4").text( formula_17.toFixed(2) );
+		$('#row_2_28').find(".table__cell--4").text( formula_19.toFixed(2) );
+		$('#row_2_29').find(".table__cell--4").text( formula_36.toFixed(2) );
+		$('#row_2_30').find(".table__cell--4").text( formula_34.toFixed(2) );
+
+		$('#row_2_1').find(".table__cell--5").text(  price_material_1.toFixed(2) );
+		$('#row_2_2').find(".table__cell--5").text(  price_material_2.toFixed(2) );
+		$('#row_2_3').find(".table__cell--5").text(  price_material_3.toFixed(2) );
+		$('#row_2_4').find(".table__cell--5").text(  price_material_4.toFixed(2) );
+		$('#row_2_5').find(".table__cell--5").text(  price_material_5.toFixed(2) );
+		$('#row_2_6').find(".table__cell--5").text(  price_material_6.toFixed(2) );
+		$('#row_2_7').find(".table__cell--5").text(  price_material_7.toFixed(2) );
+		$('#row_2_8').find(".table__cell--5").text(  price_material_8.toFixed(2) );
+		$('#row_2_9').find(".table__cell--5").text(  price_material_9.toFixed(2) );
+		$('#row_2_10').find(".table__cell--5").text( (+price_material_10).toFixed(2) );
+		$('#row_2_11').find(".table__cell--5").text( price_material_30.toFixed(2) );
+		//$('#row_2_12').find(".table__cell--5").text( price_material_12.toFixed(2) );
+		$('#row_2_12').find(".table__cell--5").text( price_material_11.toFixed(2) );
+		$('#row_2_13').find(".table__cell--5").text( price_material_13.toFixed(2) );
+		$('#row_2_14').find(".table__cell--5").text( price_material_14.toFixed(2) );
+		$('#row_2_15').find(".table__cell--5").text( price_material_15.toFixed(2) );
+		$('#row_2_16').find(".table__cell--5").text( price_material_16.toFixed(2) );
+		$('#row_2_17').find(".table__cell--5").text( price_material_17.toFixed(2) );
+		$('#row_2_18').find(".table__cell--5").text( "18.00" );
+		$('#row_2_19').find(".table__cell--5").text( price_material_18.toFixed(2) );
+		$('#row_2_20').find(".table__cell--5").text( price_material_20.toFixed(2) );
+		$('#row_2_21').find(".table__cell--5").text( price_material_21.toFixed(2) );
+		$('#row_2_22').find(".table__cell--5").text( price_material_22.toFixed(2) );
+		$('#row_2_23').find(".table__cell--5").text( price_material_23.toFixed(2) );
+		$('#row_2_24').find(".table__cell--5").text( price_material_24.toFixed(2) );
+		$('#row_2_25').find(".table__cell--5").text( price_material_24.toFixed(2) );
+		$('#row_2_26').find(".table__cell--5").text( price_material_25.toFixed(2) );
+		$('#row_2_27').find(".table__cell--5").text( price_material_26.toFixed(2) );
+		$('#row_2_28').find(".table__cell--5").text( price_material_27.toFixed(2) );
+		$('#row_2_29').find(".table__cell--5").text( price_material_28.toFixed(2) );
+		$('#row_2_30').find(".table__cell--5").text( price_material_29.toFixed(2) );
+
+
+
+
+
+
+
+
+
+
+
+
+
+		if ( $('#calc_check_1').is(":checked") == true ){
+			$('.calc__img--7').css({display: "block"});
+		} else {
+			$('.calc__img--7').css({display: "none"});
+			$('#row_1_4').find(".table__cell--4").text( 0 );
+			$('#row_2_2').find(".table__cell--4").text( 0 );
+			$('#row_2_8').find(".table__cell--4").text( 0 );
+			$('#row_2_9').find(".table__cell--4").text( 0 );
+		}
+
+		if ( $('#calc_check_2').is(":checked") == true ){
+			$('.calc__img--3').css({display: "block"});
+		} else {
+			$('.calc__img--3').css({display: "none"});
+			$('#row_1_10').find(".table__cell--4").text( 0 );
+			$('#row_2_12').find(".table__cell--4").text( 0 );
+		}
+
+		if ( $('#calc_check_5').is(":checked") == true ){
+			$('.calc__img--5').css({display: "block"});
+		} else {
+			$('.calc__img--5').css({display: "none"});
+			$('#row_1_8').find(".table__cell--4").text( 0 );
+		}
+
+		if ( $('#calc_check_8').is(":checked") == true ){
+			$('.calc__img--6').css({display: "block"});
+		} else {
+			$('.calc__img--6').css({display: "none"});
+			$('#row_1_12').find(".table__cell--4").text( 0 );
+			$('#row_2_13').find(".table__cell--4").text( 0 );
+			$('#row_2_15').find(".table__cell--4").text( 0 );
+		}
+
+		if ( $('#calc_check_9').is(":checked") == true ){
+			$('.calc__img--4').css({display: "block"});
+		} else {
+			$('.calc__img--4').css({display: "none"});
+			$('#row_1_11').find(".table__cell--4").text( 0 );
+		}
+
 
 		$('#row_1_1').find(".table__cell--6").text( ($('#row_1_1').find(".table__cell--4").text() * $('#row_1_1').find(".table__cell--5").text()).toFixed(2) );
 		$('#row_1_2').find(".table__cell--6").text( ($('#row_1_2').find(".table__cell--4").text() * $('#row_1_2').find(".table__cell--5").text()).toFixed(2) );
@@ -258,70 +398,6 @@ $(document).ready(function() {
 
 
 
-
-
-
-		$('#row_2_1').find(".table__cell--4").text(  formula_45.toFixed(2) );
-		$('#row_2_2').find(".table__cell--4").text(  formula_43.toFixed(2) );
-		$('#row_2_3').find(".table__cell--4").text(  formula_35.toFixed(2) );
-		$('#row_2_4').find(".table__cell--4").text(  formula_46.toFixed(2) );
-		$('#row_2_5').find(".table__cell--4").text(  (+calc_input_1).toFixed(2) );
-		$('#row_2_6').find(".table__cell--4").text(  formula_8.toFixed(2) );
-		$('#row_2_7').find(".table__cell--4").text(  formula_41.toFixed(2) );
-		$('#row_2_8').find(".table__cell--4").text(  formula_42.toFixed(2) );
-		$('#row_2_9').find(".table__cell--4").text(  formula_44.toFixed(2) );
-		$('#row_2_10').find(".table__cell--4").text( (+formula_21 + +formula_27).toFixed(2) );
-		$('#row_2_11').find(".table__cell--4").text( (+formula_23 + +formula_25).toFixed(2) );
-		$('#row_2_12').find(".table__cell--4").text( formula_4.toFixed(2) );
-		$('#row_2_13').find(".table__cell--4").text( (formula_3 * 1.2).toFixed(2) );
-		$('#row_2_14').find(".table__cell--4").text( "20.0" );
-		$('#row_2_15').find(".table__cell--4").text( formula_3.toFixed(2) );
-		$('#row_2_16').find(".table__cell--4").text( formula_3.toFixed(2) );
-		$('#row_2_17').find(".table__cell--4").text( formula_2.toFixed(2) );
-		$('#row_2_18').find(".table__cell--4").text( formula_49.toFixed(2) );
-		$('#row_2_19').find(".table__cell--4").text( formula_47.toFixed(2) );
-		$('#row_2_20').find(".table__cell--4").text( formula_39.toFixed(2) );
-		$('#row_2_21').find(".table__cell--4").text( formula_40.toFixed(2) );
-		$('#row_2_22').find(".table__cell--4").text( "1.0" );
-		$('#row_2_23').find(".table__cell--4").text( formula_48.toFixed(2) );
-		$('#row_2_24').find(".table__cell--4").text( formula_18.toFixed(2) );
-		$('#row_2_25').find(".table__cell--4").text( formula_13.toFixed(2) );
-		$('#row_2_26').find(".table__cell--4").text( formula_16.toFixed(2) );
-		$('#row_2_27').find(".table__cell--4").text( formula_17.toFixed(2) );
-		$('#row_2_28').find(".table__cell--4").text( formula_19.toFixed(2) );
-		$('#row_2_29').find(".table__cell--4").text( formula_36.toFixed(2) );
-		$('#row_2_30').find(".table__cell--4").text( formula_34.toFixed(2) );
-
-		$('#row_2_1').find(".table__cell--5").text(  price_material_1.toFixed(2) );
-		$('#row_2_2').find(".table__cell--5").text(  price_material_2.toFixed(2) );
-		$('#row_2_3').find(".table__cell--5").text(  price_material_3.toFixed(2) );
-		$('#row_2_4').find(".table__cell--5").text(  price_material_4.toFixed(2) );
-		$('#row_2_5').find(".table__cell--5").text(  price_material_5.toFixed(2) );
-		$('#row_2_6').find(".table__cell--5").text(  price_material_6.toFixed(2) );
-		$('#row_2_7').find(".table__cell--5").text(  price_material_7.toFixed(2) );
-		$('#row_2_8').find(".table__cell--5").text(  price_material_8.toFixed(2) );
-		$('#row_2_9').find(".table__cell--5").text(  price_material_9.toFixed(2) );
-		$('#row_2_10').find(".table__cell--5").text( (+price_material_10).toFixed(2) );
-		$('#row_2_11').find(".table__cell--5").text( price_material_30.toFixed(2) );
-		$('#row_2_12').find(".table__cell--5").text( price_material_12.toFixed(2) );
-		$('#row_2_13').find(".table__cell--5").text( price_material_13.toFixed(2) );
-		$('#row_2_14').find(".table__cell--5").text( price_material_14.toFixed(2) );
-		$('#row_2_15').find(".table__cell--5").text( price_material_15.toFixed(2) );
-		$('#row_2_16').find(".table__cell--5").text( price_material_16.toFixed(2) );
-		$('#row_2_17').find(".table__cell--5").text( price_material_17.toFixed(2) );
-		$('#row_2_18').find(".table__cell--5").text( "18.00" );
-		$('#row_2_19').find(".table__cell--5").text( price_material_18.toFixed(2) );
-		$('#row_2_20').find(".table__cell--5").text( price_material_20.toFixed(2) );
-		$('#row_2_21').find(".table__cell--5").text( price_material_21.toFixed(2) );
-		$('#row_2_22').find(".table__cell--5").text( price_material_22.toFixed(2) );
-		$('#row_2_23').find(".table__cell--5").text( price_material_23.toFixed(2) );
-		$('#row_2_24').find(".table__cell--5").text( price_material_24.toFixed(2) );
-		$('#row_2_25').find(".table__cell--5").text( price_material_24.toFixed(2) );
-		$('#row_2_26').find(".table__cell--5").text( price_material_25.toFixed(2) );
-		$('#row_2_27').find(".table__cell--5").text( price_material_26.toFixed(2) );
-		$('#row_2_28').find(".table__cell--5").text( price_material_27.toFixed(2) );
-		$('#row_2_29').find(".table__cell--5").text( price_material_28.toFixed(2) );
-		$('#row_2_30').find(".table__cell--5").text( price_material_29.toFixed(2) );
 
 
 		$('#row_2_1').find(".table__cell--6").text( ($('#row_2_1').find(".table__cell--4").text() * $('#row_2_1').find(".table__cell--5").text()).toFixed(2) );
@@ -390,53 +466,69 @@ $(document).ready(function() {
 			).toFixed(2)
 		);
 
+
+
+
+
+
+
 		var formula_9 = (+$('#row_2_31').find(".table__cell--6").text() + +$('#row_1_19').find(".table__cell--6").text()) / 100 * 2;
 
-		$('#row_3_3').find(".table__cell--5").text( formula_9.toFixed(2) );
+		$('#row_3_1').find(".table__cell--5").text( price_work_22.toFixed(2) );
+		$('#row_5_2').find(".table__cell--5").text( (formula_9 / 2).toFixed(2) );
+		$('#row_3_4').find(".table__cell--5").text( price_work_23.toFixed(2) );
 
 		$('#row_3_1').find(".table__cell--6").text( ($('#row_3_1').find(".table__cell--4").text() * $('#row_3_1').find(".table__cell--5").text()).toFixed(2) );
-		$('#row_3_2').find(".table__cell--6").text( ($('#row_3_2').find(".table__cell--4").text() * $('#row_3_2').find(".table__cell--5").text()).toFixed(2) );
-		$('#row_3_3').find(".table__cell--6").text( ($('#row_3_3').find(".table__cell--4").text() * $('#row_3_3').find(".table__cell--5").text()).toFixed(2) );
+		$('#row_5_1').find(".table__cell--6").text( ($('#row_5_1').find(".table__cell--4").text() * $('#row_5_1').find(".table__cell--5").text()).toFixed(2) );
+		$('#row_5_2').find(".table__cell--6").text( ($('#row_5_2').find(".table__cell--4").text() * $('#row_5_2').find(".table__cell--5").text()).toFixed(2) );
 		$('#row_3_4').find(".table__cell--6").text( ($('#row_3_4').find(".table__cell--4").text() * $('#row_3_4').find(".table__cell--5").text()).toFixed(2) );
 
 		$('#row_3_5').find(".table__cell--6").text(
-			(+$('#row_3_1').find(".table__cell--6").text() + 
-			+$('#row_3_2').find(".table__cell--6").text() + 
-			+$('#row_3_3').find(".table__cell--6").text() + 
+			(
+			+$('#row_3_1').find(".table__cell--6").text() + 
 			+$('#row_3_4').find(".table__cell--6").text()
+			).toFixed(2)
+		);
+
+		$('#row_5_3').find(".table__cell--6").text(
+			(
+			+$('#row_5_1').find(".table__cell--6").text() + 
+			+$('#row_5_2').find(".table__cell--6").text()
 			).toFixed(2)
 		);
 
 		$('#table_itog_1').text( $('#row_1_19').find(".table__cell--6").text() );
 		$('#table_itog_2').text( $('#row_2_31').find(".table__cell--6").text() );
 		$('#table_itog_3').text( $('#row_3_5').find(".table__cell--6").text() );
-		$('#table_itog_4').text(
+		$('#table_itog_4').text( $('#row_5_3').find(".table__cell--6").text() );
+		$('#table_itog_5').text(
 			(+$('#table_itog_1').text() + 
 			+$('#table_itog_2').text() + 
-			+$('#table_itog_3').text()).toFixed(2)
+			+$('#table_itog_3').text() + 
+			+$('#table_itog_4').text()).toFixed(2)
 		);
 
 
-		$('#row_4_1').find(".table__cell--4").text( formula_29.toFixed(2) );
-		$('#row_4_2').find(".table__cell--4").text( formula_4.toFixed(2) );
-		$('#row_4_4').find(".table__cell--4").text( formula_6.toFixed(2) );
+		//$('#row_4_1').find(".table__cell--4").text( formula_29.toFixed(2) );
+		//$('#row_4_2').find(".table__cell--4").text( formula_4.toFixed(2) );
+		//$('#row_4_4').find(".table__cell--4").text( formula_6.toFixed(2) );
 
-		$('#row_4_1').find(".table__cell--5").text( price_material_11.toFixed(2) );
-		$('#row_4_2').find(".table__cell--5").text( price_work_14.toFixed(2) );
-		$('#row_4_4').find(".table__cell--5").text( price_work_6.toFixed(2) );
+		//$('#row_4_1').find(".table__cell--5").text( price_material_11.toFixed(2) );
+		//$('#row_4_2').find(".table__cell--5").text( price_work_14.toFixed(2) );
+		//$('#row_4_4').find(".table__cell--5").text( price_work_6.toFixed(2) );
 
-		$('#row_4_1').find(".table__cell--6").text( ($('#row_4_1').find(".table__cell--4").text() * $('#row_4_1').find(".table__cell--5").text()).toFixed(2) );
-		$('#row_4_2').find(".table__cell--6").text( ($('#row_4_2').find(".table__cell--4").text() * $('#row_4_2').find(".table__cell--5").text()).toFixed(2) );
-		$('#row_4_3').find(".table__cell--6").text( ($('#row_4_3').find(".table__cell--4").text() * $('#row_4_3').find(".table__cell--5").text()).toFixed(2) );
-		$('#row_4_4').find(".table__cell--6").text( ($('#row_4_4').find(".table__cell--4").text() * $('#row_4_4').find(".table__cell--5").text()).toFixed(2) );
+		// $('#row_4_1').find(".table__cell--6").text( ($('#row_4_1').find(".table__cell--4").text() * $('#row_4_1').find(".table__cell--5").text()).toFixed(2) );
+		// $('#row_4_2').find(".table__cell--6").text( ($('#row_4_2').find(".table__cell--4").text() * $('#row_4_2').find(".table__cell--5").text()).toFixed(2) );
+		// $('#row_4_3').find(".table__cell--6").text( ($('#row_4_3').find(".table__cell--4").text() * $('#row_4_3').find(".table__cell--5").text()).toFixed(2) );
+		// $('#row_4_4').find(".table__cell--6").text( ($('#row_4_4').find(".table__cell--4").text() * $('#row_4_4').find(".table__cell--5").text()).toFixed(2) );
 
-		$('#row_4_5').find(".table__cell--6").text(
-			(+$('#row_4_1').find(".table__cell--6").text() + 
-			+$('#row_4_2').find(".table__cell--6").text() + 
-			+$('#row_4_3').find(".table__cell--6").text() + 
-			+$('#row_4_4').find(".table__cell--6").text()
-			).toFixed(2)
-		);
+		// $('#row_4_5').find(".table__cell--6").text(
+		// 	(+$('#row_4_1').find(".table__cell--6").text() + 
+		// 	+$('#row_4_2').find(".table__cell--6").text() + 
+		// 	+$('#row_4_3').find(".table__cell--6").text() + 
+		// 	+$('#row_4_4').find(".table__cell--6").text()
+		// 	).toFixed(2)
+		// );
 
 	}
 
