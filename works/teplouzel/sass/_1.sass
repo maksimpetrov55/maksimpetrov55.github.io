@@ -64,12 +64,19 @@ body
         color: #333
         font-size: 24px
         font-weight: 700
-        margin: 0 0 30px 0
+        margin: 0 0 20px 0
         font-family: 'Roboto Condensed', Arial, sans-serif
         @media ( max-width: 576px )
             font-size: 20px
         @media ( max-width: 350px )
             font-size: 18px
+
+    &__open
+        color: #594ef5
+        cursor: pointer
+        transition-duration: 0.2s
+        &:hover
+            opacity: 0.4
 
     &__name
         font-weight: 700
@@ -84,6 +91,12 @@ body
         border-radius: 4px
         @media ( max-width: 340px )
             padding: 30px 10px
+
+    &__slide
+        display: none
+        margin: 20px 0 0 0
+        &--open
+            display: block
 
     &__line
         margin: 0 0 10px 0

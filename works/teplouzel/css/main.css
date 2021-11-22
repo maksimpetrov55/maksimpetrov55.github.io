@@ -107,7 +107,7 @@ body {
   color: #333;
   font-size: 24px;
   font-weight: 700;
-  margin: 0 0 30px 0;
+  margin: 0 0 20px 0;
   font-family: 'Roboto Condensed', Arial, sans-serif;
 }
 
@@ -121,6 +121,17 @@ body {
   .calc__title {
     font-size: 18px;
   }
+}
+
+.calc__open {
+  color: #594ef5;
+  cursor: pointer;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+.calc__open:hover {
+  opacity: 0.4;
 }
 
 .calc__name {
@@ -145,6 +156,15 @@ body {
   .calc__step {
     padding: 30px 10px;
   }
+}
+
+.calc__slide {
+  display: none;
+  margin: 20px 0 0 0;
+}
+
+.calc__slide--open {
+  display: block;
 }
 
 .calc__line {
