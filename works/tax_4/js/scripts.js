@@ -125,11 +125,6 @@ $(document).ready(function() {
 		}
 
 
-		var calc_B14 = $('#calc_B14').val().split(',').join('');
-		var calc_C14 = $('#calc_C14').val().split(',').join('');
-
-		if ( calc_B14 >= 3000 ) {$('#calc_B15').val( calc_B14 );} else {$('#calc_B15').val( 0 );}
-		if ( calc_C14 >= 3000 ) {$('#calc_C15').val( calc_C14 );} else {$('#calc_C15').val( 0 );}
 
 
 		var calc_B9 = $('#calc_B9').val();
@@ -145,7 +140,19 @@ $(document).ready(function() {
 
 		var calc_date_diff = new Date( calc_date_2 - calc_date_1)
 		var calc_date_final = calc_date_diff / 1000 / 60 / 60 / 24;
+
 		
+		
+		var calc_B14 = $('#calc_B14').val().split(',').join('');
+		var calc_C14 = $('#calc_C14').val().split(',').join('');
+
+		if ( calc_B14 >= 3000 ) {$('#calc_B15').val( calc_B14 );} else {$('#calc_B15').val( 0 );}
+		//if ( calc_C14 >= 3000 ) {$('#calc_C15').val( calc_C14 );} else {$('#calc_C15').val( 0 );}
+		if ( calc_B2 == "Yes" ) {
+			$('#calc_C15').val( (calc_C14 / calc_date_final * 365).toFixed(0) );
+		} else {
+			if ( calc_C14 >= 3000 ) {$('#calc_C15').val( calc_C14 );} else {$('#calc_C15').val( 0 );}
+		}
 
 		if ( $('#calc_B7').text() == "It depends, fill out section below" ) {
 			$('#block_2').css({display: "block"});
