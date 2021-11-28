@@ -128,8 +128,12 @@ $(document).ready(function() {
 
 		if ( calc_B1 == "Quebec" ) {
 			var calc_point = 1800;
+			$('#calc_B2').prev().text("Is your Net Tax Owing in 2020 OR 2019 more than $1,800?");
+			$('#calc_B3').prev().text("Do you expect your Net Tax Owing in 2021 to be more than $1,800?");
 		} else {
 			var calc_point = 3000;
+			$('#calc_B2').prev().text("Is your Net Tax Owing in 2020 OR 2019 more than $3,000?");
+			$('#calc_B3').prev().text("Do you expect your Net Tax Owing in 2021 to be more than $3,000?");
 		}
 
 		if ( calc_B11 >= calc_point && ( calc_B10 >= calc_point || calc_B9 >= calc_point ) && calc_B11 <= calc_B10 ) {

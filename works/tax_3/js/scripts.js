@@ -185,24 +185,25 @@ $(document).ready(function() {
 				$('#block_3').css({display: "block"});
 			}
 
-			if ( $('#calc_B5').text() == "No, you DO NOT have to pay instalments to CRA!" ){
-				$('#block_2').css({display: "none"});
-			}
 		}
 
+		if ( $('#calc_B5').text() == "No, you DO NOT have to pay instalments to CRA!" ){
+			$('#block_2').css({display: "none"});
+			$('#block_3').css({display: "none"});
+		}
 
 
 		
 
-		if ( calc_B1 == "Other" ) {
+		// if ( calc_B1 == "Other" ) {
 
-			if ( $('#calc_B2').val() == "Yes" && $('#calc_B3').val() == "No" ) {
-				$('#calc_B1 option[value=Alberta]').prop('selected', true);
-				$('#calc_B3 option[value=Yes]').prop('selected', true);
-				calculation();
-			}
+		// 	if ( $('#calc_B2').val() == "Yes" && $('#calc_B3').val() == "No" ) {
+		// 		$('#calc_B1 option[value=Alberta]').prop('selected', true);
+		// 		$('#calc_B3 option[value=Yes]').prop('selected', true);
+		// 		calculation();
+		// 	}
 
-		}
+		// }
 
 
 
@@ -375,10 +376,15 @@ $(document).ready(function() {
 		$('#calc_A20').text( calc_quart_3_name + " " + calc_quart_3_days + " " + calc_quart_3_year );
 		$('#calc_A21').text( calc_quart_4_name + " " + calc_quart_4_days + " " + calc_quart_4_year );
 
-		$('#calc_B18').val( Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') ) / 4 );
-		$('#calc_B19').val( Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') ) / 4 );
-		$('#calc_B20').val( Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') ) / 4 );
-		$('#calc_B21').val( Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') ) / 4 );
+		$('#calc_B18').val( (Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') ) / 4).toFixed(2) );
+		$('#calc_B19').val( (Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') ) / 4).toFixed(2) );
+		$('#calc_B20').val( (Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') ) / 4).toFixed(2) );
+		$('#calc_B21').val( (Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') ) / 4).toFixed(2) );
+
+		if ( $('#calc_B18').val() == 0 ) { $('#calc_B18').val( "0.00" ); }
+		if ( $('#calc_B19').val() == 0 ) { $('#calc_B19').val( "0.00" ); }
+		if ( $('#calc_B20').val() == 0 ) { $('#calc_B20').val( "0.00" ); }
+		if ( $('#calc_B21').val() == 0 ) { $('#calc_B21').val( "0.00" ); }
 
 		$('#calc_B22').val( 
 			+$('#calc_B18').val().split(',').join('') + 
@@ -388,9 +394,9 @@ $(document).ready(function() {
 		);
 
 		if ( $('#calc_C15').val().split(',').join('') == 0 ) {
-			$('#calc_C18').val(0);
+			$('#calc_C18').val( "0.00" );
 		} else {
-			$('#calc_C18').val( $('#calc_D15').val().split(',').join('') / 4 );
+			$('#calc_C18').val( ($('#calc_D15').val().split(',').join('') / 4).toFixed(2) );
 		}
 
 		$('#calc_C19').val( (Math.max(0, (+$('#calc_C15').val().split(',').join('') - +$('#calc_C18').val().split(',').join('')) / 3 )).toFixed(2) );
@@ -452,43 +458,88 @@ $(document).ready(function() {
 		}
 
 
-		$('#calc_B25').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
-		$('#calc_B26').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
-		$('#calc_B27').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
-		$('#calc_B28').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
-		$('#calc_B29').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
-		$('#calc_B30').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
-		$('#calc_B31').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
-		$('#calc_B32').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
-		$('#calc_B33').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
-		$('#calc_B34').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
-		$('#calc_B35').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
-		$('#calc_B36').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
 
-		$('#calc_D25').val( ($('#calc_C15').val().split(',').join('') / 12).toFixed(2) );
-		$('#calc_D26').val( ($('#calc_C15').val().split(',').join('') / 12).toFixed(2) );
-		$('#calc_D27').val( ($('#calc_C15').val().split(',').join('') / 12).toFixed(2) );
-		$('#calc_D28').val( ($('#calc_C15').val().split(',').join('') / 12).toFixed(2) );
-		$('#calc_D29').val( ($('#calc_C15').val().split(',').join('') / 12).toFixed(2) );
-		$('#calc_D30').val( ($('#calc_C15').val().split(',').join('') / 12).toFixed(2) );
-		$('#calc_D31').val( ($('#calc_C15').val().split(',').join('') / 12).toFixed(2) );
-		$('#calc_D32').val( ($('#calc_C15').val().split(',').join('') / 12).toFixed(2) );
-		$('#calc_D33').val( ($('#calc_C15').val().split(',').join('') / 12).toFixed(2) );
-		$('#calc_D34').val( ($('#calc_C15').val().split(',').join('') / 12).toFixed(2) );
-		$('#calc_D35').val( ($('#calc_C15').val().split(',').join('') / 12).toFixed(2) );
-		$('#calc_D36').val( ($('#calc_C15').val().split(',').join('') / 12).toFixed(2) );
+		// !!!!!!! ----------------------------------------------
 
-		if ( $('#calc_C15').val().split(',').join('') > 0 ) {
-			$('#calc_C25').val( ($('#calc_D15').val().split(',').join('') / 12).toFixed(2) );
+		var calc_quebec_min_1 = Math.min( $('#calc_B15').val().split(',').join(''), $('#calc_C15').val().split(',').join('') );
+		//alert(calc_quebec_min);
+		
+		if ( calc_B1 == "Quebec" ) {
+			$('#calc_B25').val( (calc_quebec_min_1 / 12).toFixed(2) );
+			$('#calc_B26').val( (calc_quebec_min_1 / 12).toFixed(2) );
+			$('#calc_B27').val( (calc_quebec_min_1 / 12).toFixed(2) );
+			$('#calc_B28').val( (calc_quebec_min_1 / 12).toFixed(2) );
+			$('#calc_B29').val( (calc_quebec_min_1 / 12).toFixed(2) );
+			$('#calc_B30').val( (calc_quebec_min_1 / 12).toFixed(2) );
+			$('#calc_B31').val( (calc_quebec_min_1 / 12).toFixed(2) );
+			$('#calc_B32').val( (calc_quebec_min_1 / 12).toFixed(2) );
+			$('#calc_B33').val( (calc_quebec_min_1 / 12).toFixed(2) );
+			$('#calc_B34').val( (calc_quebec_min_1 / 12).toFixed(2) );
+			$('#calc_B35').val( (calc_quebec_min_1 / 12).toFixed(2) );
+			$('#calc_B36').val( (calc_quebec_min_1 / 12).toFixed(2) );
+	
+			if ( $('#calc_C15').val().split(',').join('') > 0 ) {
+				$('#calc_C25').val( ( $('#calc_D15').val().split(',').join('') / 12).toFixed(2) );
+				$('#calc_C26').val( ( $('#calc_D15').val().split(',').join('') / 12).toFixed(2) );
+			} else {
+				$('#calc_C25').val( "0.00" );
+				$('#calc_C26').val( "0.00" );
+			}
+
+			$('#calc_C27').val( Math.max(0, (+$('#calc_C15').val().split(',').join('') - +$('#calc_D25').val().split(',').join('') - +$('#calc_D26').val().split(',').join('')) ) / 10 );
+			$('#calc_C28').val( Math.max(0, (+$('#calc_C15').val().split(',').join('') - +$('#calc_D25').val().split(',').join('') - +$('#calc_D26').val().split(',').join('')) ) / 10 );
+			$('#calc_C29').val( Math.max(0, (+$('#calc_C15').val().split(',').join('') - +$('#calc_D25').val().split(',').join('') - +$('#calc_D26').val().split(',').join('')) ) / 10 );
+			$('#calc_C30').val( Math.max(0, (+$('#calc_C15').val().split(',').join('') - +$('#calc_D25').val().split(',').join('') - +$('#calc_D26').val().split(',').join('')) ) / 10 );
+			$('#calc_C31').val( Math.max(0, (+$('#calc_C15').val().split(',').join('') - +$('#calc_D25').val().split(',').join('') - +$('#calc_D26').val().split(',').join('')) ) / 10 );
+			$('#calc_C32').val( Math.max(0, (+$('#calc_C15').val().split(',').join('') - +$('#calc_D25').val().split(',').join('') - +$('#calc_D26').val().split(',').join('')) ) / 10 );
+			$('#calc_C33').val( Math.max(0, (+$('#calc_C15').val().split(',').join('') - +$('#calc_D25').val().split(',').join('') - +$('#calc_D26').val().split(',').join('')) ) / 10 );
+			$('#calc_C34').val( Math.max(0, (+$('#calc_C15').val().split(',').join('') - +$('#calc_D25').val().split(',').join('') - +$('#calc_D26').val().split(',').join('')) ) / 10 );
+			$('#calc_C35').val( Math.max(0, (+$('#calc_C15').val().split(',').join('') - +$('#calc_D25').val().split(',').join('') - +$('#calc_D26').val().split(',').join('')) ) / 10 );
+			$('#calc_C36').val( Math.max(0, (+$('#calc_C15').val().split(',').join('') - +$('#calc_D25').val().split(',').join('') - +$('#calc_D26').val().split(',').join('')) ) / 10 );
 		} else {
-			$('#calc_C25').val(0);
+			$('#calc_B25').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
+			$('#calc_B26').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
+			$('#calc_B27').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
+			$('#calc_B28').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
+			$('#calc_B29').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
+			$('#calc_B30').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
+			$('#calc_B31').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
+			$('#calc_B32').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
+			$('#calc_B33').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
+			$('#calc_B34').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
+			$('#calc_B35').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
+			$('#calc_B36').val( ($('#calc_B15').val().split(',').join('') / 12).toFixed(2) );
+	
+			$('#calc_D25').val( ($('#calc_C15').val().split(',').join('') / 12).toFixed(2) );
+			$('#calc_D26').val( ($('#calc_C15').val().split(',').join('') / 12).toFixed(2) );
+			$('#calc_D27').val( ($('#calc_C15').val().split(',').join('') / 12).toFixed(2) );
+			$('#calc_D28').val( ($('#calc_C15').val().split(',').join('') / 12).toFixed(2) );
+			$('#calc_D29').val( ($('#calc_C15').val().split(',').join('') / 12).toFixed(2) );
+			$('#calc_D30').val( ($('#calc_C15').val().split(',').join('') / 12).toFixed(2) );
+			$('#calc_D31').val( ($('#calc_C15').val().split(',').join('') / 12).toFixed(2) );
+			$('#calc_D32').val( ($('#calc_C15').val().split(',').join('') / 12).toFixed(2) );
+			$('#calc_D33').val( ($('#calc_C15').val().split(',').join('') / 12).toFixed(2) );
+			$('#calc_D34').val( ($('#calc_C15').val().split(',').join('') / 12).toFixed(2) );
+			$('#calc_D35').val( ($('#calc_C15').val().split(',').join('') / 12).toFixed(2) );
+			$('#calc_D36').val( ($('#calc_C15').val().split(',').join('') / 12).toFixed(2) );
+		
+		
+			if ( $('#calc_C15').val().split(',').join('') > 0 ) {
+				$('#calc_C25').val( ($('#calc_D15').val().split(',').join('') / 12).toFixed(2) );
+			} else {
+				$('#calc_C25').val( "0.00" );
+			}
+	
+			if ( $('#calc_C15').val().split(',').join('') > 0 ) {
+				$('#calc_C26').val( ($('#calc_D15').val().split(',').join('') / 12).toFixed(2) );
+			} else {
+				$('#calc_C26').val( "0.00" );
+			}
 		}
+		
 
-		if ( $('#calc_C15').val().split(',').join('') > 0 ) {
-			$('#calc_C26').val( ($('#calc_D15').val().split(',').join('') / 12).toFixed(2) );
-		} else {
-			$('#calc_C26').val(0);
-		}
+
+
 		
 		$('#calc_C27').val( (Math.max(0, ( +$('#calc_C15').val().split(',').join('') - +$('#calc_C25').val().split(',').join('') - +$('#calc_C26').val().split(',').join('') ) ) / 10).toFixed(2) );
 		$('#calc_C28').val( (Math.max(0, ( +$('#calc_C15').val().split(',').join('') - +$('#calc_C25').val().split(',').join('') - +$('#calc_C26').val().split(',').join('') ) ) / 10).toFixed(2) );

@@ -266,7 +266,7 @@ $(document).ready(function() {
 			+$('#calc_B18').val().split(',').join('') + 
 			+$('#calc_B19').val().split(',').join('') + 
 			+$('#calc_B20').val().split(',').join('') + 
-			+$('#calc_B21').val().split(',').join('')).toFixed(2)
+			+$('#calc_B21').val().split(',').join('')).toFixed(0)
 		);
 
 
