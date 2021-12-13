@@ -63,6 +63,12 @@ body {
   }
 }
 
+@media (max-width: 380px) {
+  .calc__step--start {
+    padding: 0 20px;
+  }
+}
+
 .calc__text--note {
   color: #999;
   margin: 20px 0 0 0;
@@ -124,6 +130,13 @@ body {
   }
 }
 
+@media (max-width: 380px) {
+  .calc__text--start {
+    font-size: 20px;
+    max-width: 200px;
+  }
+}
+
 .calc__btn {
   width: 100%;
   height: 64px;
@@ -179,6 +192,13 @@ body {
   .calc__cover {
     width: 50%;
     right: -10%;
+  }
+}
+
+@media (max-width: 380px) {
+  .calc__cover {
+    right: -20%;
+    bottom: -10%;
   }
 }
 
