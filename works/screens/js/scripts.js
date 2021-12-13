@@ -259,15 +259,17 @@ $(document).ready(function() {
 		$('.calc__cell').css({background: calc_color_hex});
 
 
-		$('#var2').text( (calc_height * 16) + " x " + (calc_width * 32) + " см" );
-		$('#var3').text( (calc_height * 16) + " x " + (calc_width * 32) + " см" );
-		$('#var4').text( (calc_height * select_pixel_1) + " x " + (calc_width * select_pixel_2) + " px" );
+		// $('#var2').text( (calc_height * 16) + " x " + (calc_width * 32) + " см" );
+		// $('#var3').text( (calc_height * 16) + " x " + (calc_width * 32) + " см" );
+		$('#var2').text( (calc_width * 16) + " x " + (calc_height * 32) + " см" );
+		$('#var3').text( (calc_width * 16) + " x " + (calc_height * 32) + " см" );
+		$('#var4').text( (calc_width * select_pixel_1) + " x " + (calc_height * select_pixel_2) + " px" );
 		$('#var5').text( calc_select + " мм" );
 		$('#var6').text( calc_select + " мм" );
 		$('#var7').text( select_size_1 + " x " + select_size_2 + " мм" );
 		$('#var8').text( select_pixel_1 + " x " + select_pixel_2 + " px" );
-		$('#var9').text( (calc_height * 16) + " x " + (calc_width * 32) + " см" );
-		$('#var10').text( (calc_height * select_pixel_1) + " x " + (calc_width * select_pixel_2) + " px" );
+		$('#var9').text( (calc_width * 16) + " x " + (calc_height * 32) + " см" );
+		$('#var10').text( (calc_width * select_pixel_1) + " x " + (calc_height * select_pixel_2) + " px" );
 
 		
 		if ( $('#calc_montaj_1').is(':checked') ){calc_montag_1 = $('#calc_montaj_1').val() * calc_height * calc_width;} else { var calc_montag_1 = 0;}
