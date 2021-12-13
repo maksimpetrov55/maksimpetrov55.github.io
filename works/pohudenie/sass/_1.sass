@@ -1,0 +1,154 @@
+
+body
+    position: relative
+
+.calc
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: sans-serif
+    position: relative
+    width: 100%
+    max-width: 1190px
+    min-height: 250px
+    margin: 50px auto
+    display: flex
+    flex-direction: column
+
+
+    *
+        padding: 0
+        margin: 0
+        box-sizing: border-box
+        font-family: sans-serif
+        position: relative
+
+    &__step
+        width: 100%
+        max-width: 600px
+        padding: 30px 10px
+        min-height: 250px
+        margin: 0 auto 30px auto
+        overflow: hidden
+        &--start
+            padding: 30px
+            //background: #86BB5B
+            background: #4D3BFE
+            border-radius: 20px
+            display: flex
+            justify-content: center
+            flex-direction: column
+
+    &__text
+        &--title
+            font-size: 18px
+            font-weight: 600
+            margin: 20px 0 10px 0
+        &--start
+            font-size: 30px
+            color: #fff
+            font-weight: 600
+            max-width: 300px
+            margin: 20px 0 0 0
+
+    &__btn
+        width: 100%
+        height: 64px
+        background: #4D3BFE
+        color: #fff
+        font-size: 22px
+        border-radius: 10px
+        display: flex
+        justify-content: center
+        align-items: center
+        font-weight: 600
+        margin: 50px 0 10px 0
+        cursor: pointer
+        transition-duration: 0.2s
+        user-select: none
+        box-shadow: 0 8px 12px 1px rgba(0,0,0,0.2)
+        &--start
+            background: #fff
+            color: #333
+            width: 180px
+            height: 54px
+            margin: 20px 0
+        &:hover
+            opacity: 0.8
+        &:active
+            opacity: 0.2
+
+    &__cover
+        position: absolute
+        bottom: -50px
+        right: 20px
+
+    &__navigation
+        display: flex
+        justify-content: space-between
+
+    &__back
+        cursor: pointer
+        transition-duration: 0.2s
+        &:hover
+            color: #4D3BFE
+
+    &__count
+        &--span
+            color: #4D3BFE
+            font-weight: 600
+
+    &__title
+        font-size: 36px
+        font-weight: 600
+        margin: 20px 0 40px 0
+
+    &__choice
+        display: flex
+        justify-content: space-between
+        &--wrap
+            flex-wrap: wrap
+
+    &__radio
+        display: none
+        &:checked + .calc__label
+            border: 3px solid #4D3BFE
+            background: #fff
+
+    &__icon
+        width: 40px
+        height: 40px
+
+    &__label
+        border-radius: 10px
+        background: #eee
+        border: 3px solid #eee
+        padding: 20px
+        height: 64px
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 20px
+        color: #444
+        font-weight: 600
+        width: 48%
+        transition-duration: 0.2s
+        cursor: pointer
+        margin: 0 0 10px 0
+        &--between
+            justify-content: space-between
+        &--long
+            width: 100%
+        &:hover
+            background: #d3dfff
+            border: 3px solid #d3dfff
+
+    &__input
+        height: 64px
+        width: 100%
+        font-size: 24px
+        color: #444
+        padding: 0 20px
+        border-radius: 10px
+        border: 2px solid #222
+        font-weight: 600

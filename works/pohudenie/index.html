@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div id="calc_step_start" class="calc__step calc__step--start">
+
+			<div class="calc__text calc__text--start">Калькулятор снижения веса</div>
+			<div id="calc_btn_start" class="calc__btn calc__btn--start">Начать</div>
+			<img src="img/1.svg" alt="" class="calc__cover">
+
+		</div>
+
+		<div id="calc_step_1" class="calc__step">
+			
+			<div class="calc__navigation">
+				<div id="calc_back_1" class="calc__back">Предыдущий шаг</div>
+				<div class="calc__count"><span class="calc__count--span">1</span>/4</div>
+			</div>
+
+			<div class="calc__title">Выберите пол</div>
+
+			<div class="calc__choice">
+				<input type="radio" name="calc_sex" id="calc_sex_1" class="calc__radio" value="1">
+				<label class="calc__label calc__label--between" for="calc_sex_1">Женщина
+					<img src="img/woman.png" alt="" class="calc__icon">
+				</label>
+
+				<input type="radio" name="calc_sex" id="calc_sex_2" class="calc__radio" value="2">
+				<label class="calc__label calc__label--between" for="calc_sex_2">Мужчина
+					<img src="img/man.png" alt="" class="calc__icon">
+				</label>
+			</div>
+
+			<div id="calc_btn_1" class="calc__btn">Продолжить</div>
+
+		</div>
+
+		<div id="calc_step_2" class="calc__step">
+			
+			<div class="calc__navigation">
+				<div id="calc_back_2" class="calc__back">Предыдущий шаг</div>
+				<div class="calc__count"><span class="calc__count--span">2</span>/4</div>
+			</div>
+
+			<div class="calc__title">Хорошо, какой для вас идеальный вес?</div>
+
+			<div class="calc__text calc__text--title">Желаемый вес</div>
+			<div class="calc__choice">
+				<input type="text" id="calc_weight" class="calc__input" placeholder="00 (кг)">
+			</div>
+
+			<div id="calc_btn_2" class="calc__btn">Продолжить</div>
+
+		</div>
+
+		<div id="calc_step_3" class="calc__step">
+			
+			<div class="calc__navigation">
+				<div id="calc_back_3" class="calc__back">Предыдущий шаг</div>
+				<div class="calc__count"><span class="calc__count--span">3</span>/4</div>
+			</div>
+
+			<div class="calc__title">Какие ваши параметры в данный момент?</div>
+
+			<div class="calc__text calc__text--title">Возраст</div>
+			<div class="calc__choice">
+				<input type="text" id="calc_age" class="calc__input" placeholder="00 (лет)">
+			</div>
+			<div class="calc__text calc__text--title">Рост</div>
+			<div class="calc__choice">
+				<input type="text" id="calc_height" class="calc__input" placeholder="00 (см)">
+			</div>
+			<!-- <div class="calc__text calc__text--title">Текущий вес</div>
+			<div class="calc__choice">
+				<input type="text" id="calc_now" class="calc__input" placeholder="00 (кг)">
+			</div> -->
+
+			<div id="calc_btn_3" class="calc__btn">Продолжить</div>
+
+		</div>
+
+		<div id="calc_step_4" class="calc__step">
+			
+			<div class="calc__navigation">
+				<div id="calc_back_4" class="calc__back">Предыдущий шаг</div>
+				<div class="calc__count"><span class="calc__count--span">4</span>/4</div>
+			</div>
+
+			<div class="calc__title">Ваша физическая активность</div>
+
+			<div class="calc__choice calc__choice--wrap">
+				<input type="radio" name="calc_activity" id="calc_activity_1" class="calc__radio" value="1.2">
+				<label class="calc__label calc__label--long" for="calc_activity_1">Минимальная</label>
+
+				<input type="radio" name="calc_activity" id="calc_activity_2" class="calc__radio" value="1.375">
+				<label class="calc__label calc__label--long" for="calc_activity_2">Небольшие нагрузки</label>
+
+				<input type="radio" name="calc_activity" id="calc_activity_3" class="calc__radio" value="1.55">
+				<label class="calc__label calc__label--long" for="calc_activity_3">Средние нагрузки</label>
+
+				<input type="radio" name="calc_activity" id="calc_activity_4" class="calc__radio" value="1.7">
+				<label class="calc__label calc__label--long" for="calc_activity_4">Интенсивные нагрузки</label>
+
+				<input type="radio" name="calc_activity" id="calc_activity_5" class="calc__radio" value="1.9">
+				<label class="calc__label calc__label--long" for="calc_activity_5">Тяжелые нагрузки</label>
+			</div>
+
+			<div id="calc_btn_4" class="calc__btn">Продолжить</div>
+
+		</div>
+
+		<div id="calc_result" class="calc__result">
+
+			<div class="calc__title">Прогноз на основе ваших ответов</div>
+
+			<div class="calc__bmr"></div>
+
+		</div>
+
+	</div>
+	<!-- /.calc -->
+	
+
+
+</body>
+</html>
