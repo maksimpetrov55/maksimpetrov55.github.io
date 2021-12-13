@@ -1,0 +1,613 @@
+
+
+
+
+body
+    position: relative
+    background: #EFF4FA
+
+.calc
+    position: relative
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: 'Montserrat', sans-serif
+    width: 100%
+    max-width: 1540px
+    min-height: 300px
+    margin: 50px auto
+    @media ( max-width: 1365px )
+        max-width: 1040px
+    @media ( max-width: 1365px )
+        max-width: 768px
+
+    *
+        position: relative
+        padding: 0
+        margin: 0
+        box-sizing: border-box
+        font-family: 'Montserrat', sans-serif
+
+    &__step
+        display: flex
+        justify-content: space-between
+        margin: 0 0 100px 0
+        @media ( max-width: 1365px )
+            margin: 0 0 40px 0
+        &--0
+            justify-content: flex-start
+            margin: 0 0 40px 0
+        &--1
+            @media ( max-width: 1365px )
+                flex-wrap: wrap
+        &--2
+            @media ( max-width: 991px )
+                flex-wrap: wrap
+        &--3
+            @media ( max-width: 1365px )
+                flex-wrap: wrap
+        &--4
+            @media ( max-width: 1365px )
+                flex-wrap: wrap
+        &--5
+            @media ( max-width: 1365px )
+                flex-wrap: wrap
+
+    &__block
+        padding: 30px 30px
+        width: 32%
+        min-height: 100px
+        background-color: #ffffff
+        box-shadow: 5px 4px 19px 5px rgba(7,97,127,0.15)
+        border-radius: 20px
+        overflow: hidden
+        &--option
+            width: 25%
+            @media ( max-width: 1365px )
+                margin: 40px auto 0 auto
+                width: 100%
+        &--itog
+            width: 49%
+            padding: 40px 40px 40px 40px
+            display: flex
+            justify-content: space-between
+            flex-direction: column
+            @media ( max-width: 1365px )
+                width: 100%
+                margin: 0 0 40px 0
+                padding: 30px
+            @media ( max-width: 400px )
+                padding: 25px 15px
+        &--form
+            width: 49%
+            padding: 20px 40px 20px 40px
+            background: transparent
+            box-shadow: none
+            @media ( max-width: 1365px )
+                padding: 30px 0
+                width: 100%
+            @media ( max-width: 400px )
+                padding: 25px 15px
+        &--param
+            margin: 0 auto
+            width: 49%
+            padding: 40px 40px 40px 40px
+            @media ( max-width: 1365px )
+                padding: 30px
+                width: 100%
+                margin: 0 0 40px 0
+            @media ( max-width: 400px )
+                padding: 25px 15px
+        &--stats
+            width: 49%
+            display: flex
+            justify-content: space-between
+            flex-direction: column
+            padding: 40px 40px 40px 40px
+            margin: 80px 0
+            @media ( max-width: 1365px )
+                margin: 0
+                width: 56%
+                padding: 30px
+            @media ( max-width: 991px )
+                width: 100%
+            @media ( max-width: 400px )
+                padding: 25px 15px
+        &--img
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 0
+            @media ( max-width: 1365px )
+                width: 49%
+            @media ( max-width: 991px )
+                width: 100%
+                margin: 0 0 40px 0
+                padding: 30px 90px
+            @media ( max-width: 550px )
+                padding: 30px
+            @media ( max-width: 400px )
+                padding: 25px 15px
+        &--center
+            padding: 30px 30px 0 30px
+            display: flex
+            justify-content: space-between
+            flex-direction: column
+            width: 40%
+            @media ( max-width: 1365px )
+                width: 49%
+            @media ( max-width: 991px )
+                width: 100%
+        &--screen
+            background: transparent
+            width: 49%
+            display: flex
+            justify-content: center
+            align-items: center
+            box-shadow: none
+            @media ( max-width: 991px )
+                width: 60%
+                margin: 0 auto
+            @media ( max-width: 550px )
+                width: 80%
+        @media ( max-width: 400px )
+            padding: 25px 15px
+
+    &__params
+        @media ( max-width: 1365px )
+            display: flex
+            flex-direction: column
+            flex-wrap: wrap
+            max-height: 230px
+        @media ( max-width: 640px )
+            max-height: 900px
+
+    &__screen
+        width: 100%
+
+    &__mainimg
+        height: 100%
+        width: 100%
+
+    &__title
+        font-weight: 700
+        line-height: 1.2
+        font-size: 21px
+        margin: 0 0 30px 0
+        color: #5a3131
+        @media ( max-width: 991px )
+            font-size: 18px
+        @media ( max-width: 640px )
+            text-align: center
+        @media ( max-width: 550px )
+            width: 100%
+        &--itog
+            font-size: 54px
+            font-weight: 700
+            color: #000000
+            margin: 0 0 40px 0
+            @media ( max-width: 991px )
+                font-size: 42px
+        &--tac
+            text-align: center
+            margin: 0 0 70px 0
+        &--bold
+            font-size: 30px
+            font-weight: 700
+            color: #464646
+            @media ( max-width: 991px )
+                font-size: 25px
+        &--size
+            margin: 0 15px 0 0
+            font-size: 18px
+            color: #888
+            font-weight: 600
+            @media ( max-width: 991px )
+                font-size: 16px
+            @media ( max-width: 640px )
+                text-align: left
+            @media ( max-width: 550px )
+                text-align: center
+        &--gray
+            font-size: 18px
+            color: #888
+            font-weight: 600
+            margin: 0px 0 10px 0
+            @media ( max-width: 991px )
+                font-size: 16px
+            @media ( max-width: 640px )
+                text-align: left
+            @media ( max-width: 550px )
+                text-align: center
+
+    &__checkbox
+        display: none
+        &:checked + .calc__label::after
+                content: ""
+                position: absolute
+                width: 12px
+                height: 12px
+                background: #00ACE5
+                border-radius: 50px
+                left: 4px
+                top: 6px
+                box-sizing: border-box
+                z-index: 89
+                flex-shrink: 0
+
+    &__label
+        user-select: none
+        line-height: 24px
+        display: flex
+        align-items: center
+        font-size: 16px
+        color: #888
+        cursor: pointer
+        margin: 0 0 10px 0
+        @media ( max-width: 991px )
+            font-size: 15px
+        &::before
+            content: ""
+            display: block
+            box-sizing: border-box
+            width: 20px
+            height: 20px
+            border-radius: 50px
+            border: 2px solid #00ACE5
+            margin: 0 10px 0 0
+            z-index: 99
+            flex-shrink: 0
+
+    &__colors
+        display: flex
+        justify-content: space-between
+        margin: 0px 0 50px 0
+
+    &__radio
+        display: none
+        &:checked + .calc__color::before
+            transform: scale(1)
+
+    &__color
+        user-select: none
+        height: 30px
+        width: 15%
+        cursor: pointer
+        background: #000
+        border-radius: 8px
+        &--1
+            background: #CA321E
+        &--2
+            background: #2457D8
+        &--3
+            background: #219015
+        &--4
+            background: #fff
+            border: 1px solid #333
+        &--5
+            background: #E8D505
+        &--6
+            background: linear-gradient(90deg, rgba(255,0,0,1) 15%, rgba(255,128,0,1) 30%, rgba(0,255,0,1) 50%, rgba(0,240,255,1) 70%, rgba(0,0,255,1) 85%, rgba(255,0,255,1) 100%)
+        &::before
+            content: "✔"
+            display: flex
+            justify-content: center
+            align-items: center
+            line-height: 1
+            position: absolute
+            left: 50%
+            bottom: -4px
+            padding: 2px 0 0 0
+            margin: 0 0 0 -11px
+            width: 22px
+            height: 22px
+            flex-shrink: 0
+            box-sizing: border-box
+            background: #fff
+            border-radius: 50px
+            font-weight: 600
+            z-index: 199
+            font-size: 16px
+            box-shadow: 0 5px 10px 3px rgba(0,0,0,0.3)
+            transform: scale(0)
+            transition-duration: .2s
+
+
+    &__sizes
+        display: flex
+        justify-content: space-between
+        margin: 0px 0 50px 0
+        flex-wrap: wrap
+
+    &__size
+        display: flex
+        align-items: center
+        justify-content: center
+
+    &__input
+        width: 70px
+        height: 30px
+        text-align: center
+        border: none
+        font-size: 20px
+        outline: none
+        color: #888
+        @media ( max-width: 991px )
+            font-size: 17px
+
+    &__plus,
+    &__minus
+        cursor: pointer
+        user-select: none
+        font-size: 30px
+        width: 30px
+        text-align: center
+        font-weight: 600
+        color: #888
+        transition-duration: 0.2s
+        &:hover
+            color: #111
+        &:active
+            opacity: 0.3
+
+    &__bottom
+        padding: 0px 0 30px 0
+        //background: #f6f9fe
+        display: flex
+        justify-content: space-between
+        @media ( max-width: 550px )
+            flex-wrap: wrap
+        div
+            @media ( max-width: 550px )
+                width: 100%
+
+    &__bold
+        font-size: 19px
+        font-weight: 700
+        color: #464646
+        margin: 5px 0
+        flex-shrink: 0
+        @media ( max-width: 991px )
+            font-size: 17px
+        @media ( max-width: 550px )
+            width: 100%
+            text-align: center
+
+    &__btn
+        text-decoration: none
+        width: 220px
+        height: 54px
+        background-color: #00ace5
+        box-shadow: 2px 2px 5px 3px rgba(7,97,127,0.12)
+        border-radius: 5px
+        color: #fff
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        font-size: 15px
+        font-weight: 600
+        transition-duration: 0.2s
+        user-select: none
+        cursor: pointer
+        @media ( max-width: 550px )
+            margin: 20px auto
+            width: 100%
+        &:hover
+            opacity: 0.7
+            transform: translateY(-6px)
+        &:active
+            opacity: 0.2
+
+    &__text
+        font-size: 20px
+        font-weight: 400
+        line-height: 1.4
+        color: #464646
+        @media ( max-width: 991px )
+            font-size: 17px
+        @media ( max-width: 640px )
+            width: 100%
+            text-align: center
+        &--bold
+            font-size: 21px
+            font-weight: 700
+            color: #464646
+            @media ( max-width: 991px )
+                font-size: 18px
+
+    &__line
+        display: flex
+        justify-content: space-between
+        margin: 10px 0
+        z-index: 29
+        @media ( max-width: 640px )
+            flex-wrap: wrap
+        @media ( max-width: 550px )
+            justify-content: center
+        &--marg
+            margin: 20px 0
+            @media ( max-width: 1365px )
+                margin: 10px 0
+
+    &__235
+        min-width: 235px
+
+    &__bgimg
+        display: block
+        position: absolute
+        &--1
+            opacity: 0.27
+            right: 50px
+            top: 140px
+        &--2
+            opacity: 0.6
+            right: 50px
+            top: 160px
+        &--3
+            opacity: 0.6
+            right: 50px
+            top: 110px
+
+
+    &__space
+        width: 100%
+        height: 2px
+        border-bottom: 1px solid #b1b1b1
+        height: 30px
+        margin: 0 30px
+        @media ( max-width: 640px )
+            display: none
+
+    &__slider
+        width: 100%
+        &--last
+            margin: 0 0 50px 0
+
+    &__range
+        width: 100%
+
+    &__value
+        color: #888
+        font-weight: 600
+
+    &__flex
+        display: flex
+        &--jcsb
+            justify-content: space-between
+
+    &__radio
+        display: none
+        &:checked + .calc__type
+            background: #00ACE5
+        &:checked + .calc__type > .calc__name
+            color: #fff
+
+        &:checked + .calc__year::before
+            content: ""
+            position: absolute
+            width: 12px
+            height: 12px
+            background: #00ACE5
+            border-radius: 50px
+            left: 50%
+            bottom: 4px
+            margin: 0 0 0 -6px
+            box-sizing: border-box
+            z-index: 89
+
+
+    &__type
+        padding: 20px 35px
+        width: 23.5%
+        min-height: 100px
+        background: #ffffff
+        box-shadow: 5px 4px 19px 5px rgba(7,97,127,0.15)
+        border-radius: 20px
+        overflow: hidden
+        margin: 0 1.5% 0 0
+        display: flex
+        align-items: center
+        justify-content: center
+        user-select: none
+        cursor: pointer
+
+    &__icon
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 90px
+        height: 90px
+        margin: 0 30px 0 0
+        border: 2px solid #00ACE5
+        border-radius: 100px
+        flex-shrink: 0
+        background: #fff
+
+    &__name
+        font-size: 19px
+        font-weight: 700
+        color: #00ACE5
+
+    &__year
+        margin: 10px 10px 0 0
+        width: 60px
+        text-align: center
+        display: block
+        color: #888
+        font-weight: 600
+        &::after
+            content: ""
+            display: block
+            box-sizing: border-box
+            width: 20px
+            height: 20px
+            border-radius: 50px
+            border: 2px solid #00ACE5
+            margin: 0 auto
+            z-index: 99
+            flex-shrink: 0
+
+    
+    &__event
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        z-index: 99
+
+    &__module
+        box-shadow: 0 0 2px 5px #333
+        background: #000
+        width: 100px
+        height: 100px
+        &--transform1
+            transform: perspective(837) rotateY(54deg) rotateZ(3deg) rotateX(2deg) skewY(3deg)
+        &--transform2
+            transform: perspective(868) rotateY(51deg) rotateZ(12deg) rotateX(8deg)
+
+    &__row
+        display: flex
+
+    &__cell
+        height: 10px
+        width: 15px
+        border: 1px solid #000
+
+    &__more
+        margin: 0 0 20px 0
+
+    &__select
+        padding: 0 10px
+        height: 42px
+        width: 220px
+        border-radius: 8px
+        font-size: 18px
+        border: 1px solid #888
+
+    &__video
+        position: relative
+        width: 100%
+        height: 100%
+        object-fit: fill
+        overflow: hidden
+
+    &__bgvideo
+        position: absolute
+
+        object-fit: fill
+        z-index: 19
+        &--1
+            width: 170%
+            height: 110%
+            top: 0
+            left: 0
+        &--2
+            top: -20%
+            left: -22%
+            width: 204%
+            height: 132%
