@@ -85,10 +85,10 @@
 			<div class="calc__choice">
 				<input type="text" id="calc_height" class="calc__input" placeholder="00 (см)">
 			</div>
-			<!-- <div class="calc__text calc__text--title">Текущий вес</div>
+			<div class="calc__text calc__text--title">Текущий вес</div>
 			<div class="calc__choice">
 				<input type="text" id="calc_now" class="calc__input" placeholder="00 (кг)">
-			</div> -->
+			</div>
 
 			<div id="calc_btn_3" class="calc__btn">Продолжить</div>
 
@@ -128,7 +128,78 @@
 
 			<div class="calc__title">Прогноз на основе ваших ответов</div>
 
-			<div class="calc__bmr"></div>
+			<div class="calc__itog">
+				<div class="calc__box">
+					<div class="calc__text calc__text--blue">Прогноз потери веса</div>
+					<div class="calc__flex">
+						<div class="calc__scale">
+							<div id="weight_1">1</div>
+							<div id="weight_2">2</div>
+							<div id="weight_3">3</div>
+							<div id="weight_4">4</div>
+						</div>
+						<img src="img/chart2.jpg" alt="" class="calc__chart">
+					</div>
+					<div class="calc__scale calc__scale--hor">
+						<div>День №1</div>
+						<div>День №15</div>
+						<div>День №30</div>
+					</div>
+				</div>
+
+				<div class="calc__box calc__box--nobor">
+					<div class="calc__item">
+						<div class="calc__pict calc__pict--1"></div>
+						<div>
+							<div class="calc__text calc__text--gray">Суточный минимум воды</div>
+							<div class="calc__text calc__text--value">2.0 л</div>
+						</div>
+					</div>
+					<div class="calc__item">
+						<div class="calc__pict calc__pict--2"></div>
+						<div>
+							<div class="calc__text calc__text--gray">Суточная норма калорий</div>
+							<div id="calc_calory" class="calc__text calc__text--value">2151 ккал</div>
+						</div>
+					</div>
+					<div class="calc__item">
+						<div class="calc__pict calc__pict--3"></div>
+						<div>
+							<div class="calc__text calc__text--gray">Рекомендуемая длительность плана</div>
+							<div class="calc__text calc__text--value">30 дней</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__itog">
+				<div class="calc__box calc__box--calory">
+					<div class="calc__burn">
+						<div class="calc__text calc__text--blue">Характер дефицита "Небольшой"</div>
+						<div class="calc__text calc__text--calory">Потеря веса тела в неделю</div>
+						<div id="result_kg_1" class="calc__text calc__text--value">2 кг</div>
+						<div class="calc__text calc__text--calory">Суточная норма калорий</div>
+						<div id="result_calory_1" class="calc__text calc__text--value">1500 ккал</div>
+						<div class="calc__text calc__text--note">Подходит для людей с небольшим процентом жира (для женщин процент жира в теле менее 25%, для мужчин – менее 16%) для комфортного похудения.</div>
+					</div>
+					<div class="calc__burn">
+						<div class="calc__text calc__text--blue">Характер дефицита "Умеренный"</div>
+						<div class="calc__text calc__text--calory">Потеря веса тела в неделю</div>
+						<div id="result_kg_2" class="calc__text calc__text--value">4 кг</div>
+						<div class="calc__text calc__text--calory">Суточная норма калорий</div>
+						<div id="result_calory_2" class="calc__text calc__text--value">1500 ккал</div>
+						<div class="calc__text calc__text--note">Для женщин с процентом жира в теле 25-34%, для&nbsp;мужчин – 16-25%.</div>
+					</div>
+					<div class="calc__burn">
+						<div class="calc__text calc__text--blue">Характер дефицита "Высокий"</div>
+						<div class="calc__text calc__text--calory">Потеря веса тела в неделю</div>
+						<div id="result_kg_3" class="calc__text calc__text--value">6 кг</div>
+						<div class="calc__text calc__text--calory">Суточная норма калорий</div>
+						<div id="result_calory_3" class="calc__text calc__text--value">1500 ккал</div>
+						<div class="calc__text calc__text--note">Для женщин с процентом жира 35% и более, для мужчин с процентом жира 26% и более, а также для быстрых, но кратковременных результатов у людей с меньшим процентом жира.</div>
+					</div>
+				</div>
+			</div>
 
 		</div>
 
