@@ -545,4 +545,115 @@ body {
     margin: 0 auto;
   }
 }
+
+.calc__loading {
+  width: 100%;
+  max-width: 600px;
+  padding: 30px 10px;
+  min-height: 250px;
+  margin: 0 auto 30px auto;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.calc__blink {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 40px 0 0 0;
+  -webkit-animation: shadow 1s ease-in-out 0.5s infinite;
+          animation: shadow 1s ease-in-out 0.5s infinite;
+}
+
+@-webkit-keyframes shadow {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shadow {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.block {
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  background: #000;
+}
+
+.bg-style {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0 auto;
+}
+
+.counter {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  cursor: pointer;
+  width: 250px;
+  height: 250px;
+  max-width: 100%;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 25px;
+  font-weight: 500;
+  -webkit-transition: height .2s ease-in-out;
+  transition: height .2s ease-in-out;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.percentage {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  font-weight: 600;
+  left: 0;
+  right: 0;
+  vertical-align: middle;
+  -webkit-transform: translate3d(0, -50%, 0);
+          transform: translate3d(0, -50%, 0);
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 /*# sourceMappingURL=main.css.map */
