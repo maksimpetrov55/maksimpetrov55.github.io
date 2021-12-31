@@ -1,0 +1,102 @@
+
+.ui-slider
+    background: #eee !important
+    height: 10px !important
+    border: none !important
+    border-radius: 1px !important
+
+.ui-slider-range
+    background: #38638b !important
+    border-radius: 1px !important
+
+.ui-slider-handle
+    width: 24px !important
+    height: 24px !important
+    border-radius: 50px !important
+    background: linear-gradient(180deg, #38638b 0%, #3372ac 100%) !important
+    border: 6px solid #fff !important
+    outline: none !important
+    margin-top: -3px !important
+    cursor: pointer !important
+    box-shadow: 0px 3px 10px rgba(62, 70, 141, 0.35);
+    // transition-duration: 0.05s
+
+.ui-slider-handle:hover
+    //box-shadow: 0 0px 2px 12px rgba(245,165,100,0.3)
+
+
+
+
+
+
+
+.form
+    width: 100%
+    border: 6px solid $color1
+    min-height: 200px
+    margin: 70px auto 20px auto
+    border-radius: 2px
+    padding: 40px 40px 50px 40px
+    @media ( max-width: 768px )
+        padding: 40px 20px 50px 20px
+    @media ( max-width: 420px )
+        padding: 30px 10px 40px 10px
+
+    &__title
+        font-size: 20px
+        line-height: 1.4
+        font-weight: 700
+        color: #444
+        text-transform: uppercase
+        text-align: center
+        margin: 0 auto 40px auto
+        max-width: 400px
+        @media ( max-width: 420px )
+            font-size: 16px
+
+    &__wrap
+        display: flex
+        justify-content: space-between
+        @media ( max-width: 768px )
+            flex-wrap: wrap
+
+    &__input
+        height: 54px
+        width: 31%
+        border-radius: 2px
+        border: 1px solid $color2
+        background: #eee
+        font-size: 18px
+        padding: 0 10px
+        max-width: 400px
+        margin: 0 auto 15px auto
+        display: block
+        @media ( max-width: 768px )
+            width: 100%
+            font-size: 16px
+
+    &__submit
+        height: 54px
+        width: 31%
+        max-width: 400px
+        margin: 30px auto 0px auto
+        display: block
+        border-radius: 2px
+        border: none
+        background: $color1
+        color: #fff
+        font-size: 16px
+        text-transform: uppercase
+        padding: 0 10px
+        cursor: pointer
+        transition-duration: 0.2s
+        box-shadow: 0 8px 10px 1px rgba(0,0,0,0.15)
+        letter-spacing: 1px
+        text-shadow: 0 0 1px #fff
+        @media ( max-width: 768px )
+            width: 100%
+        &:hover
+            transform: translateY(-5px)
+            opacity: 0.8
+            text-shadow: 0 0 1px $color1
+            box-shadow: 0 2px 8px 0px rgba(0,0,0,0.15)

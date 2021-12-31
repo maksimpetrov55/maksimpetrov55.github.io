@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=1a352e1f-92fc-4695-8b7f-d4773ffe6baf" type="text/javascript"></script>
+	<script src="js/map.js"></script>
+	<script src="js/scripts.js"></script>
+
+</head>
+<body>
+
+	
+
+	<div class="calc">
+
+		<div class="calc__header">Калькулятор стоимость стяжки</div>
+
+		<div class="calc__body">
+
+			<div class="calc__wrap">
+
+				<div class="calc__left">
+
+					<div class="calc__text calc__text--title">Укажите адрес объекта на карте</div>
+
+					<div id="map" class="calc__map">
+					</div>
+
+				</div>
+
+				<div class="calc__right">
+
+					<div class="calc__text calc__text--title">Характеристики объекта</div>
+
+					<div class="calc__line">
+						<input type="radio" name="calc_type" class="calc__radio" id="calc_type_1" checked>
+						<label class="calc__label" for="calc_type_1">Квартира</label>
+						<input type="radio" name="calc_type" class="calc__radio" id="calc_type_2">
+						<label class="calc__label" for="calc_type_2">Коттедж</label>
+						<input type="radio" name="calc_type" class="calc__radio" id="calc_type_3">
+						<label class="calc__label" for="calc_type_3">Прочее</label>
+					</div>
+
+					<div class="calc__line">
+						<div class="calc__text calc__text--line">Площадь помещения (м2)</div>
+						<input id="calc_square" type="text" class="calc__input" value="20">
+					</div>
+
+					<div class="calc__line">
+						<div class="calc__text calc__text--line">Этаж</div>
+						<input id="calc_floor" type="text" class="calc__input" value="1">
+					</div>
+
+					<div class="calc__line">
+						<div class="calc__text calc__text--line">Толщина стяжки (мм)</div>
+						<input id="calc_styajka" type="text" class="calc__input" value="40">
+					</div>
+
+					<div class="calc__line calc__line--block">
+						<div class="calc__slider">
+							<div id="calc_slider"></div>
+						</div>
+						<div class="calc__scale">
+							<div class="calc__mark calc__mark--40">40</div>
+							<div class="calc__mark calc__mark--50">50</div>
+							<div class="calc__mark calc__mark--60">60</div>
+							<div class="calc__mark calc__mark--70">70</div>
+							<div class="calc__mark calc__mark--80">80</div>
+							<div class="calc__mark calc__mark--90">90</div>
+							<div class="calc__mark calc__mark--100">100</div>
+							<div class="calc__mark calc__mark--110">110</div>
+							<div class="calc__mark calc__mark--120">120</div>
+							<div class="calc__mark calc__mark--130">130</div>
+							<div class="calc__mark calc__mark--140">140</div>
+							<div class="calc__mark calc__mark--150">150</div>
+						</div>
+					</div>
+
+
+					<div class="calc__line">
+						<div class="calc__text calc__text--line">Разуклонка</div>
+						<input type="radio" name="calc_uklon" class="calc__radio" id="calc_uklon_1" checked>
+						<label class="calc__label" for="calc_uklon_1">Нет</label>
+						<input type="radio" name="calc_uklon" class="calc__radio" id="calc_uklon_2">
+						<label class="calc__label" for="calc_uklon_2">Да</label>
+					</div>
+
+					<div class="calc__line">
+						<div class="calc__text calc__text--line">Дополнительное армирование</div>
+						<input type="radio" name="calc_arm" class="calc__radio" id="calc_arm_1" checked>
+						<label class="calc__label" for="calc_arm_1">Нет</label>
+						<input type="radio" name="calc_arm" class="calc__radio" id="calc_arm_2">
+						<label class="calc__label" for="calc_arm_2">Да</label>
+					</div>
+
+					<div class="calc__line">
+						<div class="calc__text calc__text--line">Шумоизоляция</div>
+						<input type="radio" name="calc_shum" class="calc__radio" id="calc_shum_1" checked>
+						<label class="calc__label" for="calc_shum_1">Нет</label>
+						<input type="radio" name="calc_shum" class="calc__radio" id="calc_shum_2">
+						<label class="calc__label" for="calc_shum_2">Да</label>
+					</div>
+
+
+
+
+				</div>
+
+			</div>
+
+			<div class="calc__info">
+				<div class="calc__result">
+					<div class="calc__text calc__text--result">Срок выполнения работ</div>
+					<div class="calc__text calc__text--bold">5 дней</div>
+				</div>
+
+				<div class="calc__result">
+					<div class="calc__text calc__text--result">Стоимость за 1 м2</div>
+					<div class="calc__text calc__text--bold">2 000 руб</div>
+				</div>
+
+				<div class="calc__result">
+					<div class="calc__text calc__text--result">Общая стоимость работ</div>
+					<div class="calc__text calc__text--bold">30 000 руб</div>
+				</div>
+
+			</div>
+
+
+			<div class="form">
+
+				<div class="form__title">
+					Получить подробную смету
+				</div>
+
+				<div class="form__wrap">
+					<input type="text" class="form__input" required placeholder="Ваше Имя *">
+
+					<input type="text" class="form__input" required placeholder="Ваш Телефон *">
+	
+					<input type="text" class="form__input" placeholder="Ваш Адрес">
+				</div>
+
+				<input type="submit" class="form__submit" value="Отправить">
+
+			</div>
+			<!-- /.form -->
+
+		</div>
+
+	</div>
+	<!-- /.calc -->
+
+
+
+</body>
+</html>

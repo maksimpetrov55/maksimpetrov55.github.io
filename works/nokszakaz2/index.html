@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>
+
+</head>
+<body>
+
+	
+
+	<div class="calc">
+
+		<div class="calc__header">Калькулятор стоимости электромонтажа</div>
+
+		<div class="calc__body">
+
+			<div class="calc__wrap">
+
+				<div class="calc__left">
+					<div class="calc__line">
+						<div class="calc__text calc__text--line">Площадь помещения м2</div>
+						<input id="calc_input_0" type="text" class="calc__input" value="20">
+					</div>
+
+					<div class="calc__line">
+						<div class="calc__text calc__text--line">Розетки 220 В</div>
+						<div class="calc__plusminus">
+							<div class="calc__minus">−</div>
+							<input id="calc_input_1" type="text" class="calc__input calc__input--short" value="0">
+							<div class="calc__plus">+</div>
+						</div>
+					</div>
+
+					<div class="calc__line">
+						<div class="calc__text calc__text--line">Розетки ТВ</div>
+						<div class="calc__plusminus">
+							<div class="calc__minus">−</div>
+							<input id="calc_input_1" type="text" class="calc__input calc__input--short" value="0">
+							<div class="calc__plus">+</div>
+						</div>
+					</div>
+
+					<div class="calc__line">
+						<div class="calc__text calc__text--line">Интернет-разъем</div>
+						<div class="calc__plusminus">
+							<div class="calc__minus">−</div>
+							<input id="calc_input_1" type="text" class="calc__input calc__input--short" value="0">
+							<div class="calc__plus">+</div>
+						</div>
+					</div>
+
+					<div class="calc__line">
+						<div class="calc__text calc__text--line">Выключатели</div>
+						<div class="calc__plusminus">
+							<div class="calc__minus">−</div>
+							<input id="calc_input_1" type="text" class="calc__input calc__input--short" value="0">
+							<div class="calc__plus">+</div>
+						</div>
+					</div>
+
+					<div class="calc__line">
+						<div class="calc__text calc__text--line">Люстра, бра</div>
+						<div class="calc__plusminus">
+							<div class="calc__minus">−</div>
+							<input id="calc_input_1" type="text" class="calc__input calc__input--short" value="0">
+							<div class="calc__plus">+</div>
+						</div>
+					</div>
+
+					<div class="calc__line">
+						<div class="calc__text calc__text--line">Точечный светильник</div>
+						<div class="calc__plusminus">
+							<div class="calc__minus">−</div>
+							<input id="calc_input_1" type="text" class="calc__input calc__input--short" value="0">
+							<div class="calc__plus">+</div>
+						</div>
+					</div>
+
+					<div class="calc__line">
+						<div class="calc__text calc__text--line">Кондиционер</div>
+						<div class="calc__plusminus">
+							<div class="calc__minus">−</div>
+							<input id="calc_input_1" type="text" class="calc__input calc__input--short" value="0">
+							<div class="calc__plus">+</div>
+						</div>
+					</div>
+
+					<div class="calc__line">
+						<div class="calc__text calc__text--line">Электроплита</div>
+						<input type="radio" name="calc_plita" class="calc__radio" id="calc_plita_1" checked>
+						<label class="calc__label" for="calc_plita_1">Нет</label>
+						<input type="radio" name="calc_plita" class="calc__radio" id="calc_plita_2">
+						<label class="calc__label" for="calc_plita_2">Да</label>
+					</div>
+
+					<div class="calc__line">
+						<div class="calc__text calc__text--line">Теплый пол</div>
+						<input type="radio" name="calc_pol" class="calc__radio" id="calc_pol_1" checked>
+						<label class="calc__label" for="calc_pol_1">Нет</label>
+						<input type="radio" name="calc_pol" class="calc__radio" id="calc_pol_2">
+						<label class="calc__label" for="calc_pol_2">Да</label>
+					</div>
+
+				</div>
+
+				<div class="calc__right">
+
+					<div class="calc__text calc__text--title">Ваш расчет:</div>
+
+					<div class="calc__result">
+						<div class="calc__text calc__text--result">Срок выполнения работ</div>
+						<div class="calc__text calc__text--bold">4 дня</div>
+					</div>
+
+					<div class="calc__result">
+						<div class="calc__text calc__text--result">Стоимость работы</div>
+						<div class="calc__text calc__text--bold">0 руб.</div>
+					</div>
+
+					<div class="calc__result">
+						<div class="calc__text calc__text--result">Стоимость материалов</div>
+						<div class="calc__text calc__text--bold">0 руб.</div>
+					</div>
+
+					<div class="calc__result">
+						<div class="calc__text calc__text--result">Общая стоимость</div>
+						<div class="calc__text calc__text--bold">0 руб.</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="calc__info">
+				<div>
+					<div class="calc__item calc__item--title">Перечень материалов</div>
+					<div class="calc__materials">
+						<div class="calc__item">— Электрощит ABB (Германия)</div>
+						<div class="calc__item">— Автоматы ABB (Германия)</div>
+						<div class="calc__item">— Дифференциальный автомат ABB (Германия)</div>
+						<div class="calc__item">— Устройство защитного отключения (УЗО) ABB (Германия)</div>
+						<div class="calc__item">— Слаботочный щиток ABB (Германия)</div>
+						<div class="calc__item">— Подрозетники и распределительные коробки HEGEL</div>
+						<div class="calc__item">— Обжимные гильзы</div>
+						<div class="calc__item">— Медный негорючий кабель ВВГ НГ Ls (ГОСТ)</div>
+						<div class="calc__item">— Гофрированная ПВХ труба</div>
+						<div class="calc__item">— Кабель для телевидения SAT 703 CAVEL (Италия)</div>
+						<div class="calc__item">— Витая пара UTP</div>
+					</div>
+				</div>
+				<div>
+					<div class="calc__item calc__item--title">Перечень работ</div>
+					<div class="calc__works">
+						<div class="calc__item">— Штробление стен</div>
+						<div class="calc__item">— Укладка кабеля</div>
+						<div class="calc__item">— Сборка и монтаж щитка</div>
+						<div class="calc__item">— Установка подрозетников</div>
+						<div class="calc__item">— Установка розеток/выключателей </div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="form">
+
+				<div class="form__title">
+					Получить подробную смету
+				</div>
+
+				<div class="form__wrap">
+					<input type="text" class="form__input" required placeholder="Ваше Имя *">
+
+					<input type="text" class="form__input" required placeholder="Ваш Телефон *">
+	
+					<input type="text" class="form__input" placeholder="Ваш Адрес">
+				</div>
+
+				<input type="submit" class="form__submit" value="Отправить">
+
+			</div>
+			<!-- /.form -->
+
+		</div>
+
+	</div>
+	<!-- /.calc -->
+
+
+
+</body>
+</html>

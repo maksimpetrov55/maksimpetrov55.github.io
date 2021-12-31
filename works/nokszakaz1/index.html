@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>
+
+</head>
+<body>
+
+	
+
+	<div class="calc">
+
+		<div class="calc__header">Калькулятор перегородок</div>
+
+		<div class="calc__body">
+
+			<div class="calc__text calc__text--descr">
+				Что бы рассчитать стоимость материалов и&nbsp;работ воспользуйтесь&nbsp;калькулятором.<br><br>Калькулятор не учитывает стоимость погрузочно-разгрузочных работ и&nbsp;устройство перемычек (дверных&nbsp;проемов).
+			</div>
+
+			<div class="calc__wrap">
+
+				<div class="calc__item">
+					<div class="calc__text calc__text--input">Площадь стен</div>
+					<input type="text" id="calc_square" class="calc__input" value="15">
+				</div>
+
+				<div class="calc__item">
+					<div class="calc__text calc__text--input">Материал</div>
+					<select name="" id="calc_select" class="calc__select">
+						<option value="material1">ПГП Knauf 80 мм</option>
+						<option value="material2">ПГП Knauf 100 мм</option>
+						<option value="material3">ПГП Волма 80 мм</option>
+						<option value="material4">ПГП Волма 100 мм</option>
+						<option value="material5">Газоблок Bonolit 100 мм</option>
+						<option value="material6">Газоблок Ytong 100 мм</option>
+						<option value="material7">Газоблок ЭКО 100 мм</option>
+						<option value="material8">Кладка керамических блоков</option>
+						<option value="material9">Перегородки из кирпича</option>
+						<option value="material10">Перегородки из ГКл</option>
+					</select>
+				</div>
+
+				<div class="calc__item">
+					<input type="button" class="calc__button" value="Рассчитать">
+				</div>
+
+			</div>
+
+			<!-- <div class="calc__separator"></div> -->
+
+			<div class="calc__title">Расчет работ</div>
+
+			<div class="table">
+
+				<div class="table__scroll">
+					<div id="table_row_0" class="table__row">
+						<div class="table__cell table__cell--1">Работы/материалы</div>
+						<div class="table__cell">Кол-во</div>
+						<div class="table__cell">Цена</div>
+						<div class="table__cell">Сумма</div>
+					</div>
+	
+					<div id="table_row_1" class="table__row">
+						<div class="table__cell table__cell--1">ПГП Knauf 80 мм</div>
+						<div class="table__cell"></div>
+						<div class="table__cell"></div>
+						<div class="table__cell"></div>
+					</div>
+	
+					<div id="table_row_2" class="table__row">
+						<div class="table__cell table__cell--1">Расходные материалы</div>
+						<div class="table__cell"></div>
+						<div class="table__cell"></div>
+						<div class="table__cell"></div>
+					</div>
+	
+					<div id="table_row_3" class="table__row">
+						<div class="table__cell table__cell--1">Работы по монтажу</div>
+						<div class="table__cell"></div>
+						<div class="table__cell"></div>
+						<div class="table__cell"></div>
+					</div>
+	
+					<div id="table_row_4" class="table__row table__row--border table__row--end">
+						<div class="table__cell table__cell--gray table__cell--bold">Итого:</div>
+						<div class="table__cell table__cell--gray table__cell--bold"></div>
+					</div>
+				</div>
+
+			</div>
+			<!-- /.table -->
+
+			<div class="form">
+
+				<div class="form__title">
+					Бесплатный вызов мастера для составления итоговой&nbsp;сметы
+				</div>
+
+				<div class="form__wrap">
+					<input type="text" class="form__input" required placeholder="Ваше Имя *">
+
+					<input type="text" class="form__input" required placeholder="Ваш Телефон *">
+	
+					<input type="text" class="form__input" placeholder="Ваш Адрес">
+				</div>
+
+				<input type="submit" class="form__submit" value="Отправить">
+
+			</div>
+			<!-- /.form -->
+
+		</div>
+
+	</div>
+	<!-- /.calc -->
+
+
+
+</body>
+</html>
