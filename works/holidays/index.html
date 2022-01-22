@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	
+
+</head>
+<body>
+
+	<script> 
+		$(document).ready(function() {var t = setTimeout( function() { $.ajax({ url: "../parts/part_AB.html", cache: true, async: true, success: function(html){ $("#part_AB").append(html); } }); }, 100 );});
+		$(document).ready(function() {var t = setTimeout( function() { $.ajax({ url: "../parts/part_BC.html", cache: true, async: true, success: function(html){ $("#part_BC").append(html); } }); }, 100 );});
+		$(document).ready(function() {var t = setTimeout( function() { $.ajax({ url: "../parts/part_MB.html", cache: true, async: true, success: function(html){ $("#part_MB").append(html); } }); }, 100 );});
+		$(document).ready(function() {var t = setTimeout( function() { $.ajax({ url: "../parts/part_NB.html", cache: true, async: true, success: function(html){ $("#part_NB").append(html); } }); }, 100 );});
+		$(document).ready(function() {var t = setTimeout( function() { $.ajax({ url: "../parts/part_NL.html", cache: true, async: true, success: function(html){ $("#part_NL").append(html); } }); }, 100 );});
+		$(document).ready(function() {var t = setTimeout( function() { $.ajax({ url: "../parts/part_NS.html", cache: true, async: true, success: function(html){ $("#part_NS").append(html); } }); }, 100 );});
+		$(document).ready(function() {var t = setTimeout( function() { $.ajax({ url: "../parts/part_NT.html", cache: true, async: true, success: function(html){ $("#part_NT").append(html); } }); }, 100 );});
+		$(document).ready(function() {var t = setTimeout( function() { $.ajax({ url: "../parts/part_NU.html", cache: true, async: true, success: function(html){ $("#part_NU").append(html); } }); }, 100 );});
+		$(document).ready(function() {var t = setTimeout( function() { $.ajax({ url: "../parts/part_ON.html", cache: true, async: true, success: function(html){ $("#part_ON").append(html); } }); }, 100 );});
+		$(document).ready(function() {var t = setTimeout( function() { $.ajax({ url: "../parts/part_PE.html", cache: true, async: true, success: function(html){ $("#part_PE").append(html); } }); }, 100 );});
+		$(document).ready(function() {var t = setTimeout( function() { $.ajax({ url: "../parts/part_QC.html", cache: true, async: true, success: function(html){ $("#part_QC").append(html); } }); }, 100 );});
+		$(document).ready(function() {var t = setTimeout( function() { $.ajax({ url: "../parts/part_SK.html", cache: true, async: true, success: function(html){ $("#part_SK").append(html); } }); }, 100 );});
+		$(document).ready(function() {var t = setTimeout( function() { $.ajax({ url: "../parts/part_YT.html", cache: true, async: true, success: function(html){ $("#part_YT").append(html); } }); }, 100 );});
+	</script>
+
+
+	<div class="calc">
+
+		<div class="tech"></div>
+
+		<div class="calc__header">Holiday Calculator</div>
+
+		<div class="calc__separator"></div>
+
+		<div class="calc__line">
+			<div class="calc__title calc__title--bold">Select your province</div>
+			<select name="" id="calc_province" class="calc__select">
+				<option value="AB">Alberta</option>
+				<option value="BC">British Columbia</option>
+				<option value="MB">Manitoba</option>
+				<option value="NB">New Brunswick</option>
+				<option value="NL">Newfound Land</option>
+				<option value="NS">Nova Scotia</option>
+				<option value="NT">Northwest Territories</option>
+				<option value="NU">Nunavut</option>
+				<option value="ON">Ontario</option>
+				<option value="PE">P.E.I</option>
+				<option value="QC">Quebec</option>
+				<option value="SK">Saskatchewan</option>
+				<option value="YT">Yukon</option>
+			</select>
+		</div>
+
+		<div class="calc__separator"></div>
+
+		<div class="calc__part calc__part--show" id="part_AB"></div>
+		<div class="calc__part" id="part_BC"></div>
+		<div class="calc__part" id="part_MB"></div>
+		<div class="calc__part" id="part_NB"></div>
+		<div class="calc__part" id="part_NL"></div>
+		<div class="calc__part" id="part_NS"></div>
+		<div class="calc__part" id="part_NT"></div>
+		<div class="calc__part" id="part_NU"></div>
+		<div class="calc__part" id="part_ON"></div>
+		<div class="calc__part" id="part_PE"></div>
+		<div class="calc__part" id="part_QC"></div>
+		<div class="calc__part" id="part_SK"></div>
+		<div class="calc__part" id="part_YT"></div>
+
+
+	</div>
+
+</body>
+</html>
