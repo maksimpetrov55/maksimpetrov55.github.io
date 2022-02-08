@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<h2 class="calc__header">Расчет стоимости производства пластиковых&nbsp;карт</h2>
+
+		<div class="calc__part">
+			<div class="calc__title">Введите параметры заказа:</div>
+			<div class="calc__flex">
+				<div class="calc__line">
+					<div class="calc__name">Тираж</div>
+					<input type="text" id="calc_tiraj" class="calc__input" value="500">
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Тип карты</div>
+					<select name="" id="calc_type" class="calc__select">
+						<option value="standard">Стандартная</option>
+						<option value="mifare">Mifare</option>
+						<option value="marine">Em-marine</option>
+					</select>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Цвет пластика</div>
+					<select name="" id="calc_color" class="calc__select">
+						<option value="white">Белый</option>
+						<option value="silver">Серебрянный</option>
+						<option value="gold">Золотой</option>
+					</select>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__name">Макет</div>
+					<select name="" id="calc_maket" class="calc__select">
+						<option value="no">Нет макета</option>
+						<option value="yes">Есть макет</option>
+						<option value="rework">Требуется доработка</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<!-- /.calc__part -->
+
+		<div class="calc__part">
+			<div class="calc__title">Выберите опции:</div>
+			<div class="calc__flex">
+				<input type="checkbox" name="calc_option" id="calc_option_1" class="calc__checkbox">
+				<label for="calc_option_1" class="calc__label">Магнитная полоса</label>
+
+				<input type="checkbox" name="calc_option" id="calc_option_2" class="calc__checkbox">
+				<label for="calc_option_2" class="calc__label">Полоса для подписи</label>
+
+				<input type="checkbox" name="calc_option" id="calc_option_3" class="calc__checkbox">
+				<label for="calc_option_3" class="calc__label">Эмбоссирование</label>
+
+				<input type="checkbox" name="calc_option" id="calc_option_4" class="calc__checkbox">
+				<label for="calc_option_4" class="calc__label">Скретч-панель</label>
+
+				<input type="checkbox" name="calc_option" id="calc_option_5" class="calc__checkbox">
+				<label for="calc_option_5" class="calc__label">Штрих-код</label>
+
+				<input type="checkbox" name="calc_option" id="calc_option_6" class="calc__checkbox">
+				<label for="calc_option_6" class="calc__label">Переменные данные</label>
+
+				<input type="checkbox" name="calc_option" id="calc_option_7" class="calc__checkbox">
+				<label for="calc_option_7" class="calc__label">УФ лак</label>
+
+				<input type="checkbox" name="calc_option" id="calc_option_8" class="calc__checkbox">
+				<label for="calc_option_8" class="calc__label">Фольгирование</label>
+			</div>
+		</div>
+		<!-- /.calc__part -->
+
+		<div class="calc__part">
+			<div class="calc__picture">
+				<img src="img/add_1.png"  alt="" class="calc__img calc__img--add calc__img--add1">
+				<img src="img/add_2.png"  alt="" class="calc__img calc__img--add calc__img--add2">
+				<img src="img/add_3.png"  alt="" class="calc__img calc__img--add calc__img--add3">
+				<img src="img/add_4.png"  alt="" class="calc__img calc__img--add calc__img--add4">
+				<img src="img/add_5.png"  alt="" class="calc__img calc__img--add calc__img--add5">
+				<img src="img/add_6.png"  alt="" class="calc__img calc__img--add calc__img--add6">
+				<img src="img/add_7.png"  alt="" class="calc__img calc__img--add calc__img--add7">
+				<img src="img/add_8.png"  alt="" class="calc__img calc__img--add calc__img--add8">
+				
+				<img src="img/base_white.png"  alt="" class="calc__img calc__img--white">
+				<img src="img/base_silver.png" alt="" class="calc__img calc__img--silver">
+				<img src="img/base_gold.png"   alt="" class="calc__img calc__img--gold">
+			</div>
+		</div>
+		<!-- /.calc__part -->
+
+		<div class="calc__part calc__part--white">
+
+			<div class="calc__title">Ваш заказ:</div>
+
+			<div class="calc__itog">
+
+				<div class="calc__cell">
+					<div class="calc__name calc__name--itog">Цена за шт.</div>
+					<div id="calc_summ_1" class="calc__summ">0.00 руб.</div>
+				</div>
+				
+				<div class="calc__cell">
+					<div class="calc__name calc__name--itog">Цена тиража</div>
+					<div id="calc_summ_2" class="calc__summ">0.00 руб.</div>
+				</div>
+				
+				<div class="calc__cell">
+					<div class="calc__name calc__name--itog">Вес партии</div>
+					<div id="calc_summ_3" class="calc__summ">0.00 г</div>
+				</div>
+
+			</div>
+
+			<form action="" class="calc__form form">
+
+				<div class="form__flex">
+
+					<input type="text" id="form_name" class="form__input" placeholder="Ваше имя *" required>
+					<input type="text" id="form_phone" class="form__input" placeholder="Ваш телефон *" required>
+					<input type="email" id="form_email" class="form__input" placeholder="Ваш email *" required>
+
+				</div>
+
+				<div class="form__note">
+					* Поле обязательно для заполнения.
+				</div>
+
+				<input type="submit" value="Отправить" class="form__submit">
+
+				<div class="form__note">
+					Указана ориентировочная цена.<br>Окончательную стоимость Вам сообщит наш менеджер после отправки заявки.
+					<br><br>
+					Нажимая кнопку "Отправить", вы соглашаетесь на обработку персональных данных.
+				</div>
+
+				<textarea name="calc_data" id="calc_data" style="display: none; width: 100%;"></textarea>
+
+			</form>
+
+			
+
+		</div>
+		<!-- /.calc__part -->
+
+	</div>
+	<!-- /.calc -->
+
+
+
+</body>
+</html>

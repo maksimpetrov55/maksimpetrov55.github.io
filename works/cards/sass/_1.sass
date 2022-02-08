@@ -1,0 +1,255 @@
+$color1: #263f6d
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: sans-serif
+    position: relative
+
+body
+    position: relative
+
+.calc
+    width: 100%
+    max-width: 1040px
+    margin: 50px auto
+    min-height: 400px
+
+    *
+        font-family: 'Ubuntu', sans-serif
+
+    &__header
+        text-align: center
+        margin: 0 0 30px 0
+        color: $color1
+        font-size: 28px
+        @media ( max-width: 450px )
+            font-size: 22px
+            padding: 0 10px
+
+    &__part
+        background: #eee
+        width: 100%
+        min-height: 200px
+        margin: 10px auto
+        padding: 30px 60px 40px 60px
+        border-radius: 4px
+        @media ( max-width: 768px )
+            padding: 30px 30px 40px 30px
+        @media ( max-width: 450px )
+            padding: 30px 10px 40px 10px
+
+        &--white
+            background: transparent
+            padding: 30px 0 40px 0
+
+    &__title
+        font-size: 22px
+        margin: 0 0 40px 0
+        color: $color1
+        text-align: center
+
+    &__flex
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+
+    &__line
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin: 0 0 10px 0
+        width: 45%
+        @media ( max-width: 991px )
+            flex-wrap: wrap
+        @media ( max-width: 450px )
+            width: 100%
+
+
+    &__name
+        font-size: 18px
+        @media ( max-width: 991px )
+            width: 100%
+            text-align: center
+
+        &--itog
+            color: #fff
+            text-align: center
+            font-size: 20px
+            margin: 0 0 10px 0
+
+    &__input
+        font-size: 18px
+        padding: 0 10px
+        height: 40px
+        width: 260px
+        border: 1px solid #ddd
+        border-radius: 2px
+        @media ( max-width: 991px )
+            margin: 10px auto
+            width: 100%
+            max-width: 400px
+
+    &__select
+        font-size: 18px
+        padding: 0 10px
+        height: 40px
+        width: 260px
+        border: 1px solid #ddd
+        border-radius: 2px
+        @media ( max-width: 991px )
+            margin: 10px auto
+            width: 100%
+            max-width: 400px
+
+    &__checkbox
+        display: none
+
+        &:checked + .calc__label
+            background: $color1
+            color: #fff
+
+    &__label
+        width: 22%
+        margin: 10px 0
+        background: #fff
+        text-align: center
+        padding: 10px
+        user-select: none
+        transition-duration: 0.2s
+        cursor: pointer
+        @media ( max-width: 991px )
+            width: 48%
+        @media ( max-width: 450px )
+            width: 100%
+            margin: 2px 0
+
+    &__picture
+        width: 100%
+
+    &__img
+        width: 100%
+        margin: 20px auto
+        display: none
+        z-index: 19
+
+        &--add
+            z-index: 29
+            position: absolute
+            left: 0
+            top: -20px
+
+        &--show
+            display: block
+
+    &__itog
+        width: 100%
+        min-height: 100px
+        display: flex
+        justify-content: space-between
+        @media ( max-width: 1040px )
+            padding: 0 60px
+        @media ( max-width: 768px )
+            padding: 0 30px
+        @media ( max-width: 660px )
+            min-height: 70px
+        @media ( max-width: 576px )
+            flex-wrap: wrap
+        @media ( max-width: 450px )
+            padding: 0 10px
+
+    &__cell
+        width: 33%
+        background: $color1
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        border-radius: 4px
+        padding: 15px
+        @media ( max-width: 576px )
+            width: 100%
+            max-width: 440px
+            margin: 2px auto
+            padding: 8px 0
+
+    &__summ
+        font-size: 22px
+        font-weight: 600
+        color: #fff
+        text-align: center
+        @media ( max-width: 660px )
+            font-size: 19px
+
+
+
+
+
+
+
+
+
+.form
+    position: relative
+    margin: 30px auto
+    @media ( max-width: 1040px )
+        padding: 0 60px
+    @media ( max-width: 768px )
+            padding: 0 30px
+    @media ( max-width: 450px )
+            padding: 0 10px
+
+    &__flex
+        display: flex
+        justify-content: space-between
+        @media ( max-width: 576px )
+            flex-wrap: wrap
+
+    &__input
+        width: 33%
+        font-size: 18px
+        padding: 0 15px
+        height: 50px
+        border: 1px solid $color1
+        border-radius: 4px
+        @media ( max-width: 660px )
+            padding: 0 10px
+            height: 44px
+            font-size: 15px
+        @media ( max-width: 576px )
+            width: 100%
+            max-width: 440px
+            margin: 5px auto
+            text-align: center
+
+    &__note
+        text-align: center
+        color: #aaa
+        font-size: 14px
+        margin: 20px auto
+        @media ( max-width: 576px )
+            padding: 0 30px
+            font-size: 12px
+
+    &__submit
+        display: block
+        width: 33%
+        height: 50px
+        margin: 20px auto
+        background: $color1
+        color: #fff
+        text-transform: uppercase
+        border-radius: 4px
+        border: none
+        font-size: 18px
+        transition-duration: 0.2s
+        @media ( max-width: 660px )
+            height: 44px
+        @media ( max-width: 576px )
+            width: 100%
+            max-width: 260px
+
+        &:hover
+            opacity: 0.7
+            cursor: pointer
