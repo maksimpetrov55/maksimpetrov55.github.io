@@ -125,6 +125,7 @@ body
             width: 100%
             text-align: center
             padding: 0
+            margin: 0 0 5px 0
         &--bold
             font-weight: 600
             @media ( max-width: 670px )
@@ -154,7 +155,7 @@ body
         @media ( max-width: 670px )
             margin: 10px auto
             width: calc( 100% - 40px )
-            margin: 10px 0
+            margin: 0 auto
         @media ( max-width: 420px )
             width: 86%
         &--date
@@ -193,6 +194,8 @@ body
         font-size: 16px
         border-radius: 4px
         border: 2px solid #4480a8
+        @media ( max-width: 420px )
+            width: 86%
         @media print
             max-width: 320px !important
             font-size: 12px
@@ -224,3 +227,52 @@ body
                 text-align: center
                 width: 100%
                 max-width: 400px
+
+    &__tip
+        width: 24px
+        height: 24px
+        display: flex
+        justify-content: center
+        align-items: center
+        background: #e6e6e6
+        border-radius: 50px
+        z-index: 999
+        flex-shrink: 0
+        cursor: pointer
+        margin: 0 5px
+        @media ( max-width: 670px )
+            position: absolute
+            right: 70px
+            bottom: 10px
+        @media ( max-width: 550px )
+            position: absolute
+            right: -15px
+            bottom: 10px
+        &--opa
+            opacity: 0
+        &:hover
+            background: #c1f0ff
+
+    &__fly
+        position: absolute
+        width: 440px
+        top: 0px
+        right: 200px
+        z-index: 997
+        background: #fbffe2
+        padding: 12px 15px
+        box-shadow: 0 4px 15px 1px rgba(0,0,0,0.2)
+        font-size: 15px
+        line-height: 1.3
+        display: none
+        @media ( max-width: 890px )
+            width: 90%
+            max-width: 500px
+        @media ( max-width: 670px )
+            margin: 0 auto
+            max-width: 900px
+            right: 40px
+            top: auto
+            bottom: 10px
+        @media ( max-width: 420px )
+            right: 20px

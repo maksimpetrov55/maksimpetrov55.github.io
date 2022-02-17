@@ -77,8 +77,10 @@ $(document).ready(function() {
 		} else {
 			if ( $('#AB_select_4').val() == "yes" ) {
 				$('#AB_inp_10').val( AB_inp_6 * AB_inp_8 * AB_inp_9 );
+				$('.calc__hide--ab').css({display: "block"});
 			} else {
 				$('#AB_inp_10').val( AB_inp_7 * AB_inp_8 * AB_inp_9 );
+				$('.calc__hide--ab').css({display: "none"});
 			}
 		}
 
@@ -133,8 +135,10 @@ $(document).ready(function() {
 		} else {
 			if ( $('#BC_select_3').val() == "yes" ) {
 				$('#BC_inp_10').val( BC_inp_6 * BC_inp_8 * BC_inp_9 );
+				$('.calc__hide--bc').css({display: "block"});
 			} else {
 				$('#BC_inp_10').val( BC_inp_7 * BC_inp_8 * BC_inp_9 );
+				$('.calc__hide--bc').css({display: "none"});
 			}
 		}
 
@@ -189,8 +193,10 @@ $(document).ready(function() {
 		} else {
 			if ( $('#ON_select_3').val() == "yes" ) {
 				$('#ON_inp_10').val( ON_inp_6 * ON_inp_8 * ON_inp_9 );
+				$('.calc__hide--on').css({display: "block"});
 			} else {
 				$('#ON_inp_10').val( ON_inp_7 * ON_inp_8 * ON_inp_9 );
+				$('.calc__hide--on').css({display: "none"});
 			}
 		}
 
@@ -245,8 +251,10 @@ $(document).ready(function() {
 		} else {
 			if ( $('#NL_select_2').val() == "yes" ) {
 				$('#NL_inp_10').val( NL_inp_6 * NL_inp_8 * NL_inp_9 );
+				$('.calc__hide--nl').css({display: "block"});
 			} else {
 				$('#NL_inp_10').val( NL_inp_7 * NL_inp_8 * NL_inp_9 );
+				$('.calc__hide--nl').css({display: "none"});
 			}
 		}
 
@@ -293,8 +301,10 @@ $(document).ready(function() {
 		} else {
 			if ( $('#NT_select_2').val() == "yes" ) {
 				$('#NT_inp_10').val( NT_inp_6 * NT_inp_8 * NT_inp_9 );
+				$('.calc__hide--nt').css({display: "block"});
 			} else {
 				$('#NT_inp_10').val( NT_inp_7 * NT_inp_8 * NT_inp_9 );
+				$('.calc__hide--nt').css({display: "none"});
 			}
 		}
 
@@ -341,8 +351,10 @@ $(document).ready(function() {
 		} else {
 			if ( $('#NS_select_2').val() == "yes" ) {
 				$('#NS_inp_10').val( NS_inp_6 * NS_inp_8 * NS_inp_9 );
+				$('.calc__hide--ns').css({display: "block"});
 			} else {
 				$('#NS_inp_10').val( NS_inp_7 * NS_inp_8 * NS_inp_9 );
+				$('.calc__hide--ns').css({display: "none"});
 			}
 		}
 
@@ -389,8 +401,10 @@ $(document).ready(function() {
 		} else {
 			if ( $('#NU_select_2').val() == "yes" ) {
 				$('#NU_inp_10').val( NU_inp_6 * NU_inp_8 * NU_inp_9 );
+				$('.calc__hide--nu').css({display: "block"});
 			} else {
 				$('#NU_inp_10').val( NU_inp_7 * NU_inp_8 * NU_inp_9 );
+				$('.calc__hide--nu').css({display: "none"});
 			}
 		}
 
@@ -441,8 +455,10 @@ $(document).ready(function() {
 		} else {
 			if ( $('#PE_select_3').val() == "yes" ) {
 				$('#PE_inp_10').val( PE_inp_6 * PE_inp_8 * PE_inp_9 );
+				$('.calc__hide--pe').css({display: "block"});
 			} else {
 				$('#PE_inp_10').val( PE_inp_7 * PE_inp_8 * PE_inp_9 );
+				$('.calc__hide--pe').css({display: "none"});
 			}
 		}
 
@@ -502,8 +518,10 @@ $(document).ready(function() {
 		} else {
 			if ( $('#QC_select_3').val() == "yes" ) {
 				$('#QC_inp_10').val( QC_inp_6 * QC_inp_8 * QC_inp_9 );
+				$('.calc__hide--qc').css({display: "block"});
 			} else {
 				$('#QC_inp_10').val( QC_inp_7 * QC_inp_8 * QC_inp_9 );
+				$('.calc__hide--qc').css({display: "none"});
 			}
 		}
 
@@ -608,8 +626,10 @@ $(document).ready(function() {
 			} else {
 				if ( $('#MB_select_3').val() == "yes" ) {
 					$('#MB_inp_10').val( MB_inp_6 * MB_inp_8 * MB_inp_9 );
+					$('.calc__hide--mb').css({display: "block"});
 				} else {
 					$('#MB_inp_10').val( MB_inp_7 * MB_inp_8 * MB_inp_9 );
+					$('.calc__hide--mb').css({display: "none"});
 				}
 			}
 		}
@@ -724,8 +744,10 @@ $(document).ready(function() {
 			} else {
 				if ( $('#SK_select_2').val() == "yes" ) {
 					$('#SK_inp_10').val( SK_inp_6 * SK_inp_8 * SK_inp_9 );
+					$('.calc__hide--sk').css({display: "block"});
 				} else {
 					$('#SK_inp_10').val( SK_inp_7 * SK_inp_8 * SK_inp_9 );
+					$('.calc__hide--sk').css({display: "none"});
 				}
 			}
 		}
@@ -814,8 +836,10 @@ $(document).ready(function() {
 			} else {
 				if ( $('#NB_select_2').val() == "yes" ) {
 					$('#NB_inp_10').val( NB_inp_6 * NB_inp_8 * NB_inp_9 );
+					$('.calc__hide--nb').css({display: "block"});
 				} else {
 					$('#NB_inp_10').val( NB_inp_7 * NB_inp_8 * NB_inp_9 );
+					$('.calc__hide--nb').css({display: "none"});
 				}
 			}
 		}
@@ -897,8 +921,10 @@ $(document).ready(function() {
 			} else {
 				if ( $('#YT_select_2').val() == "yes" ) {
 					$('#YT_inp_10').val( YT_inp_6 * YT_inp_8 * YT_inp_9 );
+					$('.calc__hide--yt').css({display: "block"});
 				} else {
 					$('#YT_inp_10').val( YT_inp_7 * YT_inp_8 * YT_inp_9 );
+					$('.calc__hide--yt').css({display: "none"});
 				}
 			}
 		}
@@ -921,5 +947,11 @@ $(document).ready(function() {
 
 	}
 	// _YT
+
+	$('.calc__tip').hover(function(){
+		$(this).next().css({display: "block"});
+	}, function(){
+		$(this).next().css({display: "none"});
+	});
 
 });

@@ -2,7 +2,7 @@
     <div class="calc__title calc__title--bold">Public Holiday Eligibility Criteria <div id="" class="calc__plus">+</div></div>
     <div id="" class="calc__info">
         <b>To qualify for pay for a Public Holiday, individuals must meet all of the following:</b>
-        <br><b>1)</b> Be employed for/with the same employer for 30 calendar days prior to the holiday 
+        <br><b>1)</b> Be employed for/with the same employer for 30 calendar days prior to the holiday 
         <br><b>2)</b> Have earned pay on at least 15 of the 30 calendar days before the holiday
         <br><b>3)</b> Have worked his/her last scheduled shift before the holiday and his/her first scheduled shift after the holiday
     </div>
@@ -20,21 +20,33 @@
 <div class="calc__line">
     <div class="calc__title calc__title--bold">Gross Wages</div>
     <input type="text" name="" id="QC_inp_1" placeholder="QC_inp_1" class="calc__input" value="5,000">
+    <div class="calc__tip">?</div>
+    <div class="calc__fly">
+        Include commission, holiday paid (do not include overtime)
+        <br>
+        Enter Gross Wages paid 4 weeks immediately before the holiday.
+    </div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title">Hours Worked</div>
     <input type="text" name="" id="QC_inp_12" placeholder="QC_inp_12" class="calc__input" value="160">
+    <div class="calc__tip">?</div>
+    <div class="calc__fly">
+        4 weeks immediately before the holiday.
+    </div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title">Days Worked</div>
     <input type="text" name="" id="QC_inp_2" placeholder="QC_inp_2" class="calc__input calc__input--disabled" value="20" disabled>
+    <div class="calc__tip calc__tip--opa">&nbsp;</div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title calc__title--bold">Holiday Pay</div>
     <input type="text" name="" id="QC_inp_3" placeholder="QC_inp_3" class="calc__input calc__input--bold calc__input--disabled" value="" disabled>
+    <div class="calc__tip calc__tip--opa">&nbsp;</div>
 </div>
 
 <div class="calc__separator"></div>
@@ -45,6 +57,10 @@
         <option value="yes">Yes</option>
         <option value="no">No</option>
     </select>
+    <div class="calc__tip">?</div>
+    <div class="calc__fly">
+        If the employee had agreed electronically or in writing to work on the public holiday for public holiday pay plus premium pay for each hour worked.
+    </div>
 </div>
 
 <div class="calc__line">
@@ -53,50 +69,75 @@
         <option value="yes">Yes</option>
         <option value="no">No</option>
     </select>
+    <div class="calc__tip">?</div>
+    <div class="calc__fly">
+        An employee who works on a holiday and who is qualified to be paid holiday pay is entitled to receive the following: 
+        <br>A regular day's pay; plus one and one-half times the employee's regular rate of wages for the number of hours worked on that holiday; 
+        <br>OR
+        <br>A regular rate of wages for the number of hours worked on that day; plus, another day off with the employee's regular day of pay on a date agreed upon by the employer and employee before the employee's next paid vacation.
+    </div>
 </div>
 
 
 <div class="calc__line">
     <div class="calc__title calc__title--bold">Salaried Employee?</div>
     <select name="" id="QC_select_3" class="calc__select">
+        <option value="---">---</option>
         <option value="yes">Yes</option>
         <option value="no">No</option>
     </select>
+    <div class="calc__tip">?</div>
+    <div class="calc__fly">
+        Select "Yes" if you know your annual salary, or "No" if you are an hourly employee or you are salaried but already know your hourly rate
+    </div>
 </div>
 
-<div class="calc__line">
-    <div class="calc__title">Annual Salary</div>
-    <input type="text" name="" id="QC_inp_4" placeholder="QC_inp_4" class="calc__input" value="100,000">
+<div class="calc__hide calc__hide--qc">
+    <div class="calc__line">
+        <div class="calc__title">Annual Salary</div>
+        <input type="text" name="" id="QC_inp_4" placeholder="QC_inp_4" class="calc__input" value="100,000">
+        <div class="calc__tip calc__tip--opa">&nbsp;</div>
+    </div>
+    
+    <div class="calc__line">
+        <div class="calc__title">Work Hours per Week</div>
+        <input type="text" name="" id="QC_inp_5" placeholder="QC_inp_5" class="calc__input" value="40">
+        <div class="calc__tip calc__tip--opa">&nbsp;</div>
+    </div>
+    
+    <div class="calc__line">
+        <div class="calc__title">Annual Salary to Hourly Wage</div>
+        <input type="text" name="" id="QC_inp_6" placeholder="QC_inp_6" class="calc__input calc__input--disabled" value="" disabled>
+        <div class="calc__tip calc__tip--opa">&nbsp;</div>
+    </div>
 </div>
 
-<div class="calc__line">
-    <div class="calc__title">Work Hours per Week</div>
-    <input type="text" name="" id="QC_inp_5" placeholder="QC_inp_5" class="calc__input" value="40">
-</div>
-
-<div class="calc__line">
-    <div class="calc__title">Annual Salary to Hourly Wage</div>
-    <input type="text" name="" id="QC_inp_6" placeholder="QC_inp_6" class="calc__input calc__input--disabled" value="" disabled>
-</div>
 
 <div class="calc__line">
     <div class="calc__title">Hourly Wage</div>
     <input type="text" name="" id="QC_inp_7" placeholder="QC_inp_7" class="calc__input" value="20">
+    <div class="calc__tip">?</div>
+    <div class="calc__fly">
+        Salaried employees: Annual Salary / Annual working days (251 +/-1 day) / working hours per day
+    </div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title">Holiday hours worked</div>
     <input type="text" name="" id="QC_inp_8" placeholder="QC_inp_8" class="calc__input" value="8">
+    <div class="calc__tip calc__tip--opa">&nbsp;</div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title">Holiday Premium Rate</div>
     <input type="text" name="" id="QC_inp_9" placeholder="QC_inp_9" class="calc__input calc__input--disabled" value="" disabled>
+    <div class="calc__tip calc__tip--opa">&nbsp;</div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title calc__title--bold">Holiday Premium</div>
     <input type="text" name="" id="QC_inp_10" placeholder="QC_inp_10" class="calc__input calc__input--bold calc__input--disabled" value="" disabled>
+    <div class="calc__tip calc__tip--opa">&nbsp;</div>
 </div>
 
 <div class="calc__separator"></div>
@@ -104,6 +145,7 @@
 <div class="calc__line">
     <div class="calc__title calc__title--bold">Holiday Pay + Holiday Premium</div>
     <input type="text" name="" id="QC_inp_11" placeholder="QC_inp_11" class="calc__input calc__input--bold calc__input--disabled" value="" disabled>
+    <div class="calc__tip calc__tip--opa">&nbsp;</div>
 </div>
 
 <div class="calc__line calc__line--block">

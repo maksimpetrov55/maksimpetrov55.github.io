@@ -17,26 +17,50 @@
         <option value="irregular">Irregular Hours/Pay</option>
         <option value="contruction">Contruction Employee</option>
     </select>
+    <div class="calc__tip">?</div>
+    <div class="calc__fly">
+        Regular:
+        <br>Employees (other than construction) who consistently work the same number of hours
+        <br>An employee who always works 8 hours a day, 40 hours a week,
+        <br>OR
+        <br>an employee always works 6 hours each Monday, Wednesday, Friday
+        <br>These would be salaried or hourly employees with consistent work hours each week
+
+        <br>Irregular
+        <br>For employees (other than construction) whose hours of work or wages vary
+        <br>OR
+        <br>who receive incentive pay such as commission, flat rate or pieceworkers and DO NOT work regular hours.
+    </div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title calc__title--bold">Gross Wages</div>
     <input type="text" name="" id="MB_inp_1" placeholder="MB_inp_1" class="calc__input" value="2,400">
+    <div class="calc__tip">?</div>
+    <div class="calc__fly">
+        Include commission, holiday paid (do not include overtime) in the last 4 weeks before the holiday
+    </div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title">Days Worked</div>
     <input type="text" name="" id="MB_inp_2" placeholder="MB_inp_2" class="calc__input calc__input--disabled" value="20" disabled>
+    <div class="calc__tip">?</div>
+    <div class="calc__fly">
+        Days worked in the 4 week period immediately before the holiday (include sick, holiday for which Gross Wages were paid)
+    </div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title">Holiday Rate, %</div>
     <input type="text" name="" id="MB_inp_12" placeholder="MB_inp_12" class="calc__input" value="5">
+    <div class="calc__tip calc__tip--opa">&nbsp;</div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title calc__title--bold">Holiday Pay</div>
     <input type="text" name="" id="MB_inp_3" placeholder="MB_inp_3" class="calc__input calc__input--bold calc__input--disabled" value="" disabled>
+    <div class="calc__tip calc__tip--opa">&nbsp;</div>
 </div>
 
 <div class="calc__separator"></div>
@@ -47,6 +71,10 @@
         <option value="yes">Yes</option>
         <option value="no">No</option>
     </select>
+    <div class="calc__tip">?</div>
+    <div class="calc__fly">
+        if the employee had agreed electronically or in writing to work on the public holiday for public holiday pay plus premium pay for each hour worked.
+    </div>
 </div>
 
 <div class="calc__line">
@@ -55,50 +83,76 @@
         <option value="yes">Yes</option>
         <option value="no">No</option>
     </select>
+    <div class="calc__tip">?</div>
+    <div class="calc__fly">
+        Employers operating a gas station, hospital, hotel, restaurant, place of amusement, continuously operating business, climate-controlled agricultural business, or a seasonal industry (excluding construction), or those employing domestic workers are NOT required to pay the 1.5 holiday rate BUT, are
+        required to provide another day off with general holiday pay within the next 30 days
+    </div>
 </div>
 
 
 <div class="calc__line">
     <div class="calc__title calc__title--bold">Salaried Employee?</div>
     <select name="" id="MB_select_3" class="calc__select">
+        <option value="---">---</option>
         <option value="yes">Yes</option>
         <option value="no">No</option>
     </select>
+    <div class="calc__tip">?</div>
+    <div class="calc__fly">
+        Select "Yes" if you know your annual salary, or "No" if you are an hourly employee or you are salaried but already know your hourly rate
+    </div>
 </div>
 
-<div class="calc__line">
-    <div class="calc__title">Annual Salary</div>
-    <input type="text" name="" id="MB_inp_4" placeholder="MB_inp_4" class="calc__input" value="100,000">
-</div>
-
-<div class="calc__line">
-    <div class="calc__title">Work Hours per Week</div>
-    <input type="text" name="" id="MB_inp_5" placeholder="MB_inp_5" class="calc__input" value="40">
-</div>
-
-<div class="calc__line">
-    <div class="calc__title">Annual Salary to Hourly Wage</div>
-    <input type="text" name="" id="MB_inp_6" placeholder="MB_inp_6" class="calc__input calc__input--disabled" value="" disabled>
+<div class="calc__hide calc__hide--mb">
+    <div class="calc__line">
+        <div class="calc__title">Annual Salary</div>
+        <input type="text" name="" id="MB_inp_4" placeholder="MB_inp_4" class="calc__input" value="100,000">
+        <div class="calc__tip calc__tip--opa">&nbsp;</div>
+    </div>
+    
+    <div class="calc__line">
+        <div class="calc__title">Work Hours per Week</div>
+        <input type="text" name="" id="MB_inp_5" placeholder="MB_inp_5" class="calc__input" value="40">
+        <div class="calc__tip calc__tip--opa">&nbsp;</div>
+    </div>
+    
+    <div class="calc__line">
+        <div class="calc__title">Annual Salary to Hourly Wage</div>
+        <input type="text" name="" id="MB_inp_6" placeholder="MB_inp_6" class="calc__input calc__input--disabled" value="" disabled>
+        <div class="calc__tip calc__tip--opa">&nbsp;</div>
+    </div>
+    
 </div>
 
 <div class="calc__line">
     <div class="calc__title">Hourly Wage</div>
     <input type="text" name="" id="MB_inp_7" placeholder="MB_inp_7" class="calc__input" value="20">
+    <div class="calc__tip">?</div>
+    <div class="calc__fly">
+        Salaried employees: Annual Salary / Annual working days (251 +/-1 day) / working hours per day
+    </div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title">Holiday hours worked</div>
     <input type="text" name="" id="MB_inp_8" placeholder="MB_inp_8" class="calc__input" value="8">
+    <div class="calc__tip">?</div>
+    <div class="calc__fly">
+        Example: Worked 40 hours the week of the holiday. Of those 40 hours, 8 hours worked during holiday
+    </div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title">Holiday Premium Rate</div>
     <input type="text" name="" id="MB_inp_9" placeholder="MB_inp_9" class="calc__input calc__input--disabled" value="" disabled>
+    <div class="calc__tip calc__tip--opa">&nbsp;</div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title calc__title--bold">Holiday Premium</div>
     <input type="text" name="" id="MB_inp_10" placeholder="MB_inp_10" class="calc__input calc__input--bold calc__input--disabled" value="" disabled>
+    <div class="calc__tip calc__tip--opa">&nbsp;</div>
 </div>
 
 <div class="calc__separator"></div>
@@ -106,6 +160,7 @@
 <div class="calc__line">
     <div class="calc__title calc__title--bold">Holiday Pay + Holiday Premium</div>
     <input type="text" name="" id="MB_inp_11" placeholder="MB_inp_11" class="calc__input calc__input--bold calc__input--disabled" value="" disabled>
+    <div class="calc__tip calc__tip--opa">&nbsp;</div>
 </div>
 
 <div class="calc__line calc__line--block">

@@ -18,21 +18,33 @@
         <option value="yes">Yes</option>
         <option value="no">No</option>
     </select>
+    <div class="calc__tip calc__tip--opa">&nbsp;</div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title calc__title--bold">Gross Wages</div>
     <input type="text" name="" id="AB_inp_1" placeholder="AB_inp_1" class="calc__input" value="2,000">
+    <div class="calc__tip">?</div>
+    <div class="calc__fly">
+        Include all wages – this includes salary, commission, statutory holiday pay and paid vacation. Don't include overtime.
+        <br>
+        Days worked during the 28 calendar days preceeding the general holiday OR the last day of the pay period before the holiday.
+    </div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title">Days Worked</div>
     <input type="text" name="" id="AB_inp_2" placeholder="AB_inp_2" class="calc__input" value="20">
+    <div class="calc__tip">?</div>
+    <div class="calc__fly">
+        Days worked during the 28 calendar days preceeding the general holiday OR the last day of the pay period before the holiday.
+    </div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title calc__title--bold">Holiday Pay</div>
     <input type="text" name="" id="AB_inp_3" placeholder="AB_inp_3" class="calc__input calc__input--bold calc__input--disabled" value="" disabled>
+    <div class="calc__tip calc__tip--opa">&nbsp;</div>
 </div>
 
 <div class="calc__separator"></div>
@@ -43,6 +55,10 @@
         <option value="yes">Yes</option>
         <option value="no">No</option>
     </select>
+    <div class="calc__tip">?</div>
+    <div class="calc__fly">
+        If the employee had agreed electronically or in writing to work on the public holiday for public holiday pay plus premium pay for each hour worked.
+    </div>
 </div>
 
 <div class="calc__line">
@@ -51,49 +67,73 @@
         <option value="no">No</option>
         <option value="yes">Yes</option>
     </select>
+    <div class="calc__tip">?</div>
+    <div class="calc__fly">
+        An employee who works on a holiday and who is qualified to be paid holiday pay is entitled to receive the following: 
+        <br>A regular day's pay; plus one and one-half times the employee's regular rate of wages for the number of hours worked on that holiday; 
+        <br>OR
+        <br>A regular rate of wages for the number of hours worked on that day; plus, another day off with the employee's regular day of pay on a date agreed upon by the employer and employee before the employee's next paid vacation.
+    </div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title calc__title--bold">Salaried Employee?</div>
     <select name="" id="AB_select_4" class="calc__select">
+        <option value="---">---</option>
         <option value="yes">Yes</option>
         <option value="no">No</option>
     </select>
+    <div class="calc__tip">?</div>
+    <div class="calc__fly">
+        Select "Yes" if you know your annual salary, or "No" if you are an hourly employee or you are salaried but already know your hourly rate
+    </div>
 </div>
 
-<div class="calc__line">
-    <div class="calc__title">Annual Salary</div>
-    <input type="text" name="" id="AB_inp_4" placeholder="AB_inp_4" class="calc__input" value="100,000">
-</div>
-
-<div class="calc__line">
-    <div class="calc__title">Work Hours per Week</div>
-    <input type="text" name="" id="AB_inp_5" placeholder="AB_inp_5" class="calc__input" value="40">
-</div>
-
-<div class="calc__line">
-    <div class="calc__title">Annual Salary to Hourly Wage</div>
-    <input type="text" name="" id="AB_inp_6" placeholder="AB_inp_6" class="calc__input calc__input--disabled" value="" disabled>
+<div class="calc__hide calc__hide--ab">
+    <div class="calc__line">
+        <div class="calc__title">Annual Salary</div>
+        <input type="text" name="" id="AB_inp_4" placeholder="AB_inp_4" class="calc__input" value="100,000">
+        <div class="calc__tip calc__tip--opa">&nbsp;</div>
+    </div>
+    
+    <div class="calc__line">
+        <div class="calc__title">Work Hours per Week</div>
+        <input type="text" name="" id="AB_inp_5" placeholder="AB_inp_5" class="calc__input" value="40">
+        <div class="calc__tip calc__tip--opa">&nbsp;</div>
+    </div>
+    
+    <div class="calc__line">
+        <div class="calc__title">Annual Salary to Hourly Wage</div>
+        <input type="text" name="" id="AB_inp_6" placeholder="AB_inp_6" class="calc__input calc__input--disabled" value="" disabled>
+        <div class="calc__tip calc__tip--opa">&nbsp;</div>
+    </div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title">Hourly Wage</div>
     <input type="text" name="" id="AB_inp_7" placeholder="AB_inp_7" class="calc__input" value="25">
+    <div class="calc__tip">?</div>
+    <div class="calc__fly">
+        Salaried employees: Annual Salary / Annual working days (251 +/-1 day) / working hours per day
+    </div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title">Holiday hours worked</div>
     <input type="text" name="" id="AB_inp_8" placeholder="AB_inp_8" class="calc__input" value="8">
+    <div class="calc__tip calc__tip--opa">&nbsp;</div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title">Holiday Premium Rate</div>
     <input type="text" name="" id="AB_inp_9" placeholder="AB_inp_9" class="calc__input calc__input--disabled" value="" disabled>
+    <div class="calc__tip calc__tip--opa">&nbsp;</div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title calc__title--bold">Holiday Premium</div>
     <input type="text" name="" id="AB_inp_10" placeholder="AB_inp_10" class="calc__input calc__input--bold calc__input--disabled" value="" disabled>
+    <div class="calc__tip calc__tip--opa">&nbsp;</div>
 </div>
 
 <div class="calc__separator"></div>
@@ -101,6 +141,7 @@
 <div class="calc__line">
     <div class="calc__title calc__title--bold">Holiday Pay + Holiday Premium</div>
     <input type="text" name="" id="AB_inp_11" placeholder="AB_inp_11" class="calc__input calc__input--bold calc__input--disabled" value="" disabled>
+    <div class="calc__tip calc__tip--opa">&nbsp;</div>
 </div>
 
 <div class="calc__line calc__line--block">

@@ -11,6 +11,12 @@
         <option value="other">Other Than Construction</option>
         <option value="contruction">Contruction Employee</option>
     </select>
+    <div class="calc__tip">?</div>
+    <div class="calc__fly">
+        Other Than Construction - Employee receiving salary or hourly wage.
+        <br>
+        Construction Employee - receiving salary or hourly wage.
+    </div>
 </div>
 
 <div class="calc__line">
@@ -19,6 +25,7 @@
         <option value="yes">Yes</option>
         <option value="no">No</option>
     </select>
+    <div class="calc__tip calc__tip--opa">&nbsp;</div>
 </div>
 
 <div class="calc__line">
@@ -27,6 +34,7 @@
         <option value="yes">Yes</option>
         <option value="no">No</option>
     </select>
+    <div class="calc__tip calc__tip--opa">&nbsp;</div>
 </div>
 
 <div class="calc__separator"></div>
@@ -34,36 +42,56 @@
 <div class="calc__line">
     <div class="calc__title calc__title--bold">Gross Wages</div>
     <input type="text" name="" id="SK_inp_1" placeholder="SK_inp_1" class="calc__input" value="2,400">
+    <div class="calc__tip">?</div>
+    <div class="calc__fly">
+        Include all wages – this includes salary, statutory holiday pay and paid vacation. Exclude overtime for both and exclude vacation pay only for construction employee.
+        <br>
+        Days worked during the 28 calendar days (4 weeks) before the statutory holiday – include vacation days.
+        <br>
+        New employees are entitled to holiday pay even if worked less than 4 weeks before the holiday.
+    </div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title calc__title--bold">Commission</div>
     <input type="text" name="" id="SK_inp_12" placeholder="SK_inp_12" class="calc__input" value="1,000">
+    <div class="calc__tip calc__tip--opa">&nbsp;</div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title">Holiday Pay, %</div>
     <input type="text" name="" id="SK_inp_13" placeholder="SK_inp_13" class="calc__input calc__input--disabled" value="5" disabled>
+    <div class="calc__tip calc__tip--opa">&nbsp;</div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title">Entitled Holiday Pay</div>
     <input type="text" name="" id="SK_inp_14" placeholder="SK_inp_14" class="calc__input calc__input--disabled" value="" disabled>
+    <div class="calc__tip calc__tip--opa">&nbsp;</div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title">Days Worked</div>
     <input type="text" name="" id="SK_inp_2" placeholder="SK_inp_2" class="calc__input calc__input--disabled" value="20" disabled>
+    <div class="calc__tip">?</div>
+    <div class="calc__fly">
+        Days worked in the past 4 weeks preceeding the holiday (include sick, vacation days for which gross wages were paid)
+    </div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title">Less: Day Off With Pay Adjustment</div>
     <input type="text" name="" id="SK_inp_15" placeholder="SK_inp_15" class="calc__input calc__input--disabled" value="20" disabled>
+    <div class="calc__tip">?</div>
+    <div class="calc__fly">
+        If salaried employee receives day off with pay, an automatic adjustment is calculated.
+    </div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title calc__title--bold">Holiday Pay</div>
     <input type="text" name="" id="SK_inp_3" placeholder="SK_inp_3" class="calc__input calc__input--bold calc__input--disabled" value="" disabled>
+    <div class="calc__tip calc__tip--opa">&nbsp;</div>
 </div>
 
 <div class="calc__separator"></div>
@@ -74,49 +102,70 @@
         <option value="yes">Yes</option>
         <option value="no">No</option>
     </select>
+    <div class="calc__tip">?</div>
+    <div class="calc__fly">
+        if the employee had agreed electronically or in writing to work on the public holiday for public holiday pay plus premium pay for each hour worked.
+    </div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title calc__title--bold">Salaried Employee?</div>
     <select name="" id="SK_select_2" class="calc__select">
+        <option value="---">---</option>
         <option value="yes">Yes</option>
         <option value="no">No</option>
     </select>
+    <div class="calc__tip">?</div>
+    <div class="calc__fly">
+        Select "Yes" if you know your annual salary, or "No" if you are an hourly employee or you are salaried but already know your hourly rate
+    </div>
 </div>
 
-<div class="calc__line">
-    <div class="calc__title">Annual Salary</div>
-    <input type="text" name="" id="SK_inp_4" placeholder="SK_inp_4" class="calc__input" value="100,000">
-</div>
-
-<div class="calc__line">
-    <div class="calc__title">Work Hours per Week</div>
-    <input type="text" name="" id="SK_inp_5" placeholder="SK_inp_5" class="calc__input" value="40">
-</div>
-
-<div class="calc__line">
-    <div class="calc__title">Annual Salary to Hourly Wage</div>
-    <input type="text" name="" id="SK_inp_6" placeholder="SK_inp_6" class="calc__input calc__input--disabled" value="" disabled>
+<div class="calc__hide calc__hide--sk">
+    <div class="calc__line">
+        <div class="calc__title">Annual Salary</div>
+        <input type="text" name="" id="SK_inp_4" placeholder="SK_inp_4" class="calc__input" value="100,000">
+        <div class="calc__tip calc__tip--opa">&nbsp;</div>
+    </div>
+    
+    <div class="calc__line">
+        <div class="calc__title">Work Hours per Week</div>
+        <input type="text" name="" id="SK_inp_5" placeholder="SK_inp_5" class="calc__input" value="40">
+        <div class="calc__tip calc__tip--opa">&nbsp;</div>
+    </div>
+    
+    <div class="calc__line">
+        <div class="calc__title">Annual Salary to Hourly Wage</div>
+        <input type="text" name="" id="SK_inp_6" placeholder="SK_inp_6" class="calc__input calc__input--disabled" value="" disabled>
+        <div class="calc__tip calc__tip--opa">&nbsp;</div>
+    </div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title">Hourly Wage</div>
     <input type="text" name="" id="SK_inp_7" placeholder="SK_inp_7" class="calc__input" value="20">
+    <div class="calc__tip">?</div>
+    <div class="calc__fly">
+        Salaried employees: Annual Salary / Annual working days (251 +/-1 day) / working hours per day
+    </div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title">Holiday hours worked</div>
     <input type="text" name="" id="SK_inp_8" placeholder="SK_inp_8" class="calc__input" value="8">
+    <div class="calc__tip calc__tip--opa">&nbsp;</div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title">Holiday Premium Rate</div>
     <input type="text" name="" id="SK_inp_9" placeholder="SK_inp_9" class="calc__input calc__input--disabled" value="" disabled>
+    <div class="calc__tip calc__tip--opa">&nbsp;</div>
 </div>
 
 <div class="calc__line">
     <div class="calc__title calc__title--bold">Holiday Premium</div>
     <input type="text" name="" id="SK_inp_10" placeholder="SK_inp_10" class="calc__input calc__input--bold calc__input--disabled" value="" disabled>
+    <div class="calc__tip calc__tip--opa">&nbsp;</div>
 </div>
 
 <div class="calc__separator"></div>
@@ -124,6 +173,7 @@
 <div class="calc__line">
     <div class="calc__title calc__title--bold">Holiday Pay + Holiday Premium</div>
     <input type="text" name="" id="SK_inp_11" placeholder="SK_inp_11" class="calc__input calc__input--bold calc__input--disabled" value="" disabled>
+    <div class="calc__tip calc__tip--opa">&nbsp;</div>
 </div>
 
 <div class="calc__line calc__line--block">
