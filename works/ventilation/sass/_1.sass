@@ -1,0 +1,133 @@
+
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: sans-serif
+
+body
+    position: relative
+    background: #eee
+
+.calc
+    position: relative
+    width: 100%
+    max-width: 800px
+    margin: 50px auto
+    background: #fff
+    padding: 40px 10px
+
+    &__head
+        font-size: 26px
+        font-weight: 600
+        text-align: center
+        margin: 0 0 50px 0
+
+    &__choice
+        // display: flex
+        // align-items: center
+        // justify-content: center
+        width: 100%
+        max-width: 360px
+        margin: 0 auto
+
+    &__radio
+        display: none
+
+        &:checked + .calc__label
+            background: #438abd
+            color: #fff
+
+    &__label
+        display: block
+        transition-duration: 0.2s
+        // display: flex
+        // justify-content: center
+        // align-items: center
+        width: 100%
+        height: 44px
+        border: 1px solid #ccc
+        text-align: center
+        margin: 10px 0 10px 0
+        border-radius: 6px
+        padding: 10px
+        cursor: pointer
+
+    &__title
+        font-size: 17px
+        text-align: center
+        margin: 20px 0 0 0
+        &--itog
+            color: #438abd
+
+    &__line
+        display: flex
+        margin: 10px auto 10px auto
+        align-items: center
+        width: 100%
+        max-width: 360px
+        &--itog
+            justify-content: center
+
+    &__input
+        text-align: right
+        margin: 0 10px 0 0
+        padding: 0px 10px
+        width: 100%
+        max-width: 320px
+        border: 1px solid #ccc
+        height: 44px
+        border-radius: 6px
+        outline: none
+        font-size: 18px
+        &--long
+            max-width: 360px
+
+    &__select
+        margin: 0 10px 0 0
+        padding: 0px 5px
+        width: 100%
+        max-width: 360px
+        border: 1px solid #ccc
+        height: 44px
+        border-radius: 6px
+        outline: none
+        font-size: 15px
+
+    &__sign
+        
+
+    &__button
+        background: #438abd
+        color: #fff
+        height: 46px
+        width: 100%
+        max-width: 360px
+        margin: 40px auto
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        font-size: 15px
+        text-transform: uppercase
+        letter-spacing: 1px
+        border-radius: 6px
+        user-select: none
+        cursor: pointer
+        box-shadow: 0 5px 15px 0 rgba(0,0,0,0.1)
+        transition-duration: 0.2s
+
+        &:hover
+            opacity: 0.8
+            transform: translateY(-5px)
+
+        &:active
+            opacity: 0.2
+
+    &__result
+        display: none
+
+    &__itog
+        font-size: 20px
+        margin: 0 10px 0 0

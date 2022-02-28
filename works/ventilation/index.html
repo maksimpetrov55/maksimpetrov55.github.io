@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div class="calc__head">Расчет системы вентиляции воздуха</div>
+
+		<div class="calc__title">Тип расчета вентиляции:</div>
+
+		<div class="calc__choice">
+
+			<input type="radio" name="calc_type" id="calc_type_1" class="calc__radio" value="1" checked>
+			<label class="calc__label" for="calc_type_1" class="calc__label">По кратности воздухообмена</label>
+
+			<input type="radio" name="calc_type" id="calc_type_2" class="calc__radio" value="2">
+			<label class="calc__label" for="calc_type_2" class="calc__label">По количеству людей</label>
+
+		</div>
+
+		<div id="part_1" class="calc__part">
+			<div class="calc__title">Площадь помещения:</div>
+
+			<div class="calc__line">
+				<input id="calc_square" type="text" class="calc__input">
+				<div class="calc__sign">м<sup>2</sup></div>
+			</div>
+
+			<div class="calc__title">Высота помещения:</div>
+
+			<div class="calc__line">
+				<input id="calc_height" type="text" class="calc__input">
+				<div class="calc__sign">м</div>
+			</div>
+
+			<div class="calc__title">Тип помещения:</div>
+
+			<div class="calc__line">
+				<select name="" id="calc_rate" class="calc__select">
+					<option value="1.0">Жилое помещение (минимум) [1]</option>
+					<option value="1.5">Жилое помещение (комфорт) [1.5]</option>
+					<option value="6.0">Офисное помещение [6]</option>
+					<option value="3.0">Банк [3]</option>
+					<option value="9.0">Ресторан [9]</option>
+					<option value="10.0">Бар, кафе, пивной зал, бильярдная [10]</option>
+					<option value="12.0">Кухонное помещение в кафе, ресторане [12]</option>
+					<option value="2.5">Универсальный магазин [2.5]</option>
+					<option value="3.0">Аптека (торговый зал) [3]</option>
+					<option value="7.0">Гараж и авторемонтная мастерская [7]</option>
+					<option value="11.0">Туалет (ощественный) [11]</option>
+					<option value="9.0">Танцевальный зал, дискотека [9]</option>
+					<option value="10.0">Комната для курения [10]</option>
+					<option value="2.0">Парикмахерская (до 5 рабочих мест) [2]</option>
+					<option value="3.0">Парикмахерская (более 5 рабочих мест) [3]</option>
+					<option value="2.0">Склад [2]</option>
+					<option value="12.0">Прачечная [12]</option>
+					<option value="15.0">Бассейн [15]</option>
+					<option value="34.0">Промышленный красильный цех [34]</option>
+					<option value="4.0">Механическая мастерская [4]</option>
+					<option value="6.0">Школьный класс [6]</option>
+				</select>
+			</div>
+		</div>
+
+		<div id="part_2" class="calc__part">
+			<div class="calc__title">Число людей в помещении:</div>
+
+			<div class="calc__line">
+				<input id="calc_people" type="text" class="calc__input calc__input--long">
+			</div>
+	
+			<div class="calc__title">Активность людей в помещении:</div>
+	
+			<div class="calc__line">
+				<select name="" id="calc_activity" class="calc__select">
+					<option value="20">Спокойное состояние</option>
+					<option value="40">Умеренная деятельность</option>
+					<option value="60">Активная деятельность</option>
+				</select>
+			</div>
+		</div>
+
+
+		<div class="calc__button">Расчет системы</div>
+
+
+		<div class="calc__result">
+
+			<div class="calc__title calc__title--itog">Необходимая производительность системы вентиляции воздуха в помещении составляет:</div>
+
+			<div class="calc__line calc__line--itog">
+				<div class="calc__itog">00</div>
+				<div class="calc__sign">м<sup>3</sup>/ч</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+</body>
+</html>
