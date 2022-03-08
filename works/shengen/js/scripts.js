@@ -1,16 +1,30 @@
 $(document).ready(function() {
 
-	// var today = new Date();
-	// var time = new Date( today.getTime() + (24 * 3600 * 1000 * 2 ) );
+	var today = new Date();
+	var time = new Date( today.getTime() + (24 * 3600 * 1000 * 2 ) );
 
-	// var timeD = time.getDate();
-	// var timeM = time.getMonth() + 1;
-	// var timeY = time.getFullYear();
+	var timeD = time.getDate();
+	var timeM = time.getMonth() + 1;
+	var timeY = time.getFullYear();
 
-	// if ( timeM < 10 ) {timeM = "0" + timeM;}
-	// if ( timeD < 10 ) {timeD = "0" + timeD;}
+	if ( timeM < 10 ) {timeM = "0" + timeM;}
+	if ( timeD < 10 ) {timeD = "0" + timeD;}
 
-	// $('#inp1').val( timeY + "-" + timeM + "-" + timeD );
+	$('#inp1').val( timeY + "-" + timeM + "-" + timeD );
+
+	var inp1 = $('#inp1').val();
+	var date_check = new Date(inp1);
+	var date_90 = Math.ceil(Math.abs(date_check.getTime() - (24 * 3600 * 1000 * (90 + 1) ) ));
+	var date_180 = Math.ceil(Math.abs(date_check.getTime() - (24 * 3600 * 1000 * (180 + 1) ) ));
+
+	var date_90_value = new Date(date_90);
+	var date_180_value = new Date(date_180);
+
+	if ( inp1 != "" ){
+		$('.calc__date--90').text( date_90_value.getDate() + "." + (date_90_value.getMonth() + 1) + "." + date_90_value.getFullYear() );
+		$('.calc__date--180').text( date_180_value.getDate() + "." + (date_180_value.getMonth() + 1) + "." + date_180_value.getFullYear() );
+	}
+
 
 
 	$('input').change(function(){
