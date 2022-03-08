@@ -17,6 +17,8 @@ body
     padding: 40px
     width: 100%
     max-width: 600px
+    @media ( max-width: 550px )
+        padding: 40px 10px
 
     *
         padding: 0
@@ -30,6 +32,8 @@ body
         margin: 0 0 30px 0
         font-weight: 600
         text-align: center
+        @media ( max-width: 450px )
+            font-size: 20px
 
     &__title
         margin: 0 0 10px 0
@@ -41,10 +45,15 @@ body
         &--date
             margin: 20px 0
             justify-content: space-between
+            @media ( max-width: 370px )
+                flex-wrap: wrap
+
 
     &__date
         font-weight: 600
         margin: 0 0 0 10px
+        @media ( max-width: 450px )
+            margin: 0 0 0 5px
 
     &__list
         margin: 40px 0 0 0
@@ -57,8 +66,17 @@ body
         height: 40px
         padding: 0 5px
         width: 42%
+        @media ( max-width: 450px )
+            width: 100%
+            margin: 0 5px 0 0
+            font-size: 16px
+        @media ( max-width: 370px )
+            width: 84%
+            margin: 0 5px 5px 0
         &--first
-            margin: 0 10px 20px 0
+            margin: 0 0 20px 0
+            @media ( max-width: 370px )
+                width: 100%
 
     &__count
         font-size: 17px
@@ -68,12 +86,16 @@ body
         justify-content: center
         align-items: center
         width: 12%
+        @media ( max-width: 450px )
+            min-width: 40px
+        @media ( max-width: 370px )
+            margin: 0 0 5px 0
 
     &__result
         background: $green
         width: 100%
         border-radius: 4px
-        padding: 15px 20px
+        padding: 15px 5px
         color: #fff
         font-size: 18px
         text-align: center
