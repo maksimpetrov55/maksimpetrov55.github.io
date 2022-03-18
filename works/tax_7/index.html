@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css?v1">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	
+
+</head>
+<body>
+
+	<div class="calc">
+
+		<!-- <div class="tech"></div> -->
+
+		<div class="calc__header">Sales Tax Calculator</div>
+
+		<div class="calc__description">
+			Select the GST/HST calculator
+		</div>
+
+		<div class="calc__separator"></div>
+
+		<div class="calc__choice">
+			<input id="calc_choice_1" name="calc_choice" type="radio" class="calc__radio" value="1">
+			<label for="calc_choice_1" class="calc__label">I want to calculate the sales tax!</label>
+
+			<input id="calc_choice_2" name="calc_choice" type="radio" class="calc__radio" value="2">
+			<label for="calc_choice_2" class="calc__label">Do I need to register for GST/HST account with CRA?</label>
+		</div>
+
+
+
+
+
+		<div id="block_1" style="display: none;">
+
+			<div class="calc__separator"></div>
+
+			<div class="calc__description">
+				This calculator will provide accurate distribution of GST, PST/QST and HST. Perfect for determining tax from expenses and preparing GST/HST tax filing.
+			</div>
+
+			<div class="calc__separator"></div>
+
+			<div class="calc__line">
+				<div class="calc__title calc__title--bold">Select your province</div>
+				<select name="" id="calc_province" class="calc__select">
+					<option value="0">Alberta</option>
+					<option value="1">British Columbia</option>
+					<option value="2">Manitoba</option>
+					<option value="3">New Brunswick</option>
+					<option value="4">Newfound Land</option>
+					<option value="5">Nova Scotia</option>
+					<option value="6">Northwest Territories</option>
+					<option value="7">Nunavut</option>
+					<option value="8">Ontario</option>
+					<option value="9">P.E.I</option>
+					<option value="10">Quebec</option>
+					<option value="11">Saskatchewan</option>
+					<option value="12">Yukon</option>
+				</select>
+				<div class="calc__tip calc__tip--opa">&nbsp;</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__title calc__title--bold">Calculate tax based on</div>
+				<select name="" id="calc_based" class="calc__select">
+					<option value="gross">Gross amount</option>
+					<option value="net">Net amount</option>
+				</select>
+				<div class="calc__tip">?</div>
+				<div class="calc__fly">
+					Gross: Expense/revenue with tax.
+					<br>Net: Expense/revenue without tax.
+				</div>
+			</div>
+
+			<div id="block_3">
+
+				<div class="calc__line">
+					<div class="calc__title">Gross Amount</div>
+					<input type="text" name="" id="inp_1" placeholder="inp_1" class="calc__input" value="115">
+					<div class="calc__tip calc__tip--opa">&nbsp;</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__title">GST</div>
+					<input type="text" name="" id="inp_2" placeholder="inp_2" class="calc__input calc__input--disabled" disabled value="">
+					<div class="calc__tip calc__tip--opa">&nbsp;</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__title">PST/QST</div>
+					<input type="text" name="" id="inp_3" placeholder="inp_3" class="calc__input calc__input--disabled" disabled value="">
+					<div class="calc__tip calc__tip--opa">&nbsp;</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__title">HST</div>
+					<input type="text" name="" id="inp_4" placeholder="inp_4" class="calc__input calc__input--disabled" disabled value="">
+					<div class="calc__tip calc__tip--opa">&nbsp;</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__title calc__title--bold">Net Amount</div>
+					<input type="text" name="" id="inp_5" placeholder="inp_5" class="calc__input calc__input--disabled" disabled value="">
+					<div class="calc__tip calc__tip--opa">&nbsp;</div>
+				</div>
+
+			</div>
+
+			<div id="block_4" style="display: none;">
+
+				<div class="calc__line">
+					<div class="calc__title">Net Amount</div>
+					<input type="text" name="" id="inp_6" placeholder="inp_6" class="calc__input" value="100">
+					<div class="calc__tip calc__tip--opa">&nbsp;</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__title">GST</div>
+					<input type="text" name="" id="inp_7" placeholder="inp_7" class="calc__input calc__input--disabled" disabled value="">
+					<div class="calc__tip calc__tip--opa">&nbsp;</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__title">PST/QST</div>
+					<input type="text" name="" id="inp_8" placeholder="inp_8" class="calc__input calc__input--disabled" disabled value="">
+					<div class="calc__tip calc__tip--opa">&nbsp;</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__title">HST</div>
+					<input type="text" name="" id="inp_9" placeholder="inp_9" class="calc__input calc__input--disabled" disabled value="">
+					<div class="calc__tip calc__tip--opa">&nbsp;</div>
+				</div>
+
+				<div class="calc__line">
+					<div class="calc__title calc__title--bold">Gross Amount</div>
+					<input type="text" name="" id="inp_10" placeholder="inp_10" class="calc__input calc__input--disabled" disabled value="">
+					<div class="calc__tip calc__tip--opa">&nbsp;</div>
+				</div>
+				
+			</div>
+
+		</div>
+
+		<div id="block_2" style="display: none;">
+
+			<div class="calc__separator"></div>
+
+			<div class="calc__description">
+				This following questioneer will determine if you need to register for GST/HST for corporations and sole proprioters.
+			</div>
+
+			<div class="calc__separator"></div>
+
+			<div class="calc__line">
+				<div class="calc__title">Do you provide taxable supplies in Canada?</div>
+				<select name="" id="calc_supplies" class="calc__select">
+					<option value="yes">Yes, all the time!</option>
+					<option value="no">No, my supplies are different!</option>
+				</select>
+				<div class="calc__tip">?</div>
+				<div class="calc__fly">
+					Taxable supplies are: 
+					<br>1) Sale or rental of commercial property/automobiles
+					<br>2) Mechanics
+					<br>3) Clothing and footwear
+					<br>4) Advertising
+					<br>5) Taxi or car sharing services like Uber
+					<br>6) Professional services like legal/accounting
+					<br>7) Personal services such as barber, landscaping
+				</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__title">Are you a small supplier?</div>
+				<select name="" id="calc_small" class="calc__select">
+					<option value="yes">Yes, but we're growing!</option>
+					<option value="no">No, our business is booming!</option>
+				</select>
+				<div class="calc__tip">?</div>
+				<div class="calc__fly">
+					A small supplier is:
+					<br>1) A sole proprietor, partnership or corporation AND the total amount of all revenues (before expenses) is $30,000 or less in any single calendar quarter and in the last four consecutive calendar quarters
+					<br>OR
+					<br>2) Public service body - a charity, non-profit organization, municipality, university, public college, school authority, or hospital authority AND the total amount of all revenues (before expenses) is $50,000 or less in any single calendar quarter and in the last four consecutive calendar quarters
+				</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__title">What type of supplies do you provide?</div>
+				<select name="" id="calc_provide" class="calc__select">
+					<option value="zero">Zero-rated supplies</option>
+					<option value="exempt">Exempt supplies</option>
+				</select>
+				<div class="calc__tip calc__tip--opa">&nbsp;</div>
+			</div>
+			
+			<div class="calc__line">
+				<div class="calc__title">Mandatory GST/HST CRA Registration?</div>
+				<div class="calc__textarea" id="calc_text_1"></div>
+				<div class="calc__tip calc__tip--opa">&nbsp;</div>
+			</div>
+
+			<div class="calc__line">
+				<div class="calc__title">Should I voluntarily register for GST/HST account?</div>
+				<div class="calc__textarea" id="calc_text_2"></div>
+				<div class="calc__tip calc__tip--opa">&nbsp;</div>
+			</div>
+
+
+			<div class="calc__separator"></div>
+
+			<div class="calc__description calc__description--bold">
+				FAQs
+			</div>
+	
+			<div class="calc__separator"></div>
+	
+			<div class="calc__line calc__line--block">
+				<div class="calc__title calc__title--faq calc__title--bold">What if I sell in Canada and Internationally? <div class="calc__plus">+</div></div>
+				<div class="calc__info">
+					You always charge tax rate based on the place of supply. Example, if you operate out of Ontario and sell a product/service to a customer in BC, then you would charge 7% PST and 5% GST rates as per province of BC. Selling outside of Canada would mean you do not charge any GST/PST/HST.
+				</div>
+			</div>
+	
+			<div class="calc__line calc__line--block">
+				<div class="calc__title calc__title--faq calc__title--bold">What if my input tax credits are really low because I purchase good/services without any tax? <div class="calc__plus">+</div></div>
+				<div class="calc__info">
+					You can do a GST74 election to use the quick method of accounting and potentially save how much GST/HST you need to pay to CRA. Election can be done online through my business account or a completed form can be mailed to CRA.
+				</div>
+			</div>
+	
+			<div class="calc__line calc__line--block">
+				<div class="calc__title calc__title--faq calc__title--bold">Who benefits using the quick method of accounting for GST/HST? <div class="calc__plus">+</div></div>
+				<div class="calc__info">
+					Usually small business that provide services and do not have expenses that include GST/HST on them. These include IT consultants, message therapists and more.
+				</div>
+			</div>
+	
+			<div class="calc__line calc__line--block">
+				<div class="calc__title calc__title--faq calc__title--bold">How much can I save using the quick method of accounting for GST/HST? <div class="calc__plus">+</div></div>
+				<div class="calc__info">
+					It depends on two factors, 1) if you resell goods or provide a service and 2) the permanent establishment of your business. For more information check out our GST/HST info page.
+				</div>
+			</div>
+	
+			<div class="calc__line calc__line--block">
+				<div class="calc__title calc__title--faq calc__title--bold">Difference between zero rated and exempt supplies? <div class="calc__plus">+</div></div>
+				<div class="calc__info">
+					<b>Zero rated supplies:</b> means that you do not charge GST/HST on these supplies, but you may be eligible to claim input tax credits for the GST/HST paid on property and services acquired to provide these supplies. 
+					<br><br>
+					<b>The following are examples of supplies taxable at 0% (zero-rated):</b>
+					<br>1) basic groceries such as milk, bread, and vegetables;
+					<br>2) agricultural products such as grain, raw wool, and dried tobacco leaves;
+					<br>3) most farm livestock;
+					<br>4) most fishery products such as fish for human consumption;
+					<br>5) prescription drugs and drug-dispensing services;
+					<br>6) certain medical devices such as hearing aids and artificial teeth;
+					<br>7) feminine hygiene products;
+					<br>8) exports (most goods and services for which you charge and collect the GST/HST in Canada, are zero-rated when exported); and
+					<br>9) many transportation services where the origin or destination is outside Canada.		
+					<br><br>
+					<b>Exempt supplies:</b> means that you do not charge the GST/HST on these supplies of property and services, and are not entitled to claim input tax credits on property and services acquired to provide these supplies. Generally, you cannot register for the GST/HST if your business provides only exempt supplies.
+					<br><br>
+					<b>The following are examples of exempt supplies:</b>
+					<br>1) a sale of housing that was last used by an individual as a place of residence;
+					<br>2) long-term rentals of residential accommodation (of one month or more) and residential condominium fees;
+					<br>3) health, medical, and dental services performed by licensed physicians or dentists for medical reasons;
+					<br>4) child care services, where the primary purpose is to provide care and supervision to children 14 years of age or under for periods of less than 24 hours per day;
+					<br>5) domestic ferry services;
+					<br>6) legal aid services;
+					<br>7) educational services
+					<br>8) music lessons;
+					<br>9) services provided by financial institutions such as lending money
+					<br>10) the issuance of insurance policies by an insurer
+				</div>
+			</div>
+
+		</div>
+
+		
+
+		<div class="calc__separator"></div>
+
+
+	</div>
+
+	<script src="js/scripts.js?v1"></script>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css?v1">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	
+
+</head>
+<body>
+
+	<div class="calc">
+
+		<!-- <div class="tech"></div> -->
+
+		<div class="calc__header">Dividend Calculator</div>
+
+		<div class="calc__description">
+			This calculator will accurately provide you with amounts you need to prepare a T5 slip to be filed with CRA. This&nbsp;is useful for small and medium sized corporations for owners that are taking a dividend.
+		</div>
+
+		<div class="calc__separator"></div>
+
+		<div class="calc__line">
+			<div class="calc__title calc__title--bold">Select year</div>
+			<select name="" id="calc_year" class="calc__select">
+				<option value="0">2022</option>
+				<option value="1">2021</option>
+				<option value="2">2020</option>
+			</select>
+			<div class="calc__tip calc__tip--opa">&nbsp;</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title calc__title--bold">Select your province</div>
+			<select name="" id="calc_province" class="calc__select">
+				<option value="AB">Alberta</option>
+				<option value="BC">British Columbia</option>
+				<option value="MB">Manitoba</option>
+				<option value="NB">New Brunswick</option>
+				<option value="NL">Newfound Land</option>
+				<option value="NS">Nova Scotia</option>
+				<option value="NT">Northwest Territories</option>
+				<option value="NU">Nunavut</option>
+				<option value="ON">Ontario</option>
+				<option value="PE">P.E.I</option>
+				<option value="QC">Quebec</option>
+				<option value="SK">Saskatchewan</option>
+				<option value="YT">Yukon</option>
+			</select>
+			<div class="calc__tip calc__tip--opa">&nbsp;</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title calc__title--bold">Type of dividend</div>
+			<select name="" id="calc_dividend" class="calc__select">
+				<option value="eligible">Eligible dividend</option>
+				<option value="non-eligible">Non-eligible dividend</option>
+			</select>
+			<div class="calc__tip">?</div>
+			<div class="calc__fly">
+				<br><b>Eligible dividend:</b> are generally received from public corporations (who do not receive the small business deduction) or private corporations with net income over the $500,000.
+				<br>
+				<br><b>Non-eligible dividend:</b> are received from small business corporations that earn under $500,000 of net income (most companies).
+			</div>
+		</div>
+
+		<div class="calc__separator"></div>
+
+		<!-- <div class="calc__line calc__line--block">
+			<div class="calc__title calc__title--bold">Public Holiday Eligibility Criteria <div id="" class="calc__plus">+</div></div>
+			<div id="" class="calc__info">
+				<b>To qualify for pay for a Public Holiday, individuals must meet all of the following:</b>
+				<br><b>1)</b> Employed 30 calendar days before the holiday.
+				<br><b>2)</b> Work your last scheduled shift before the holiday and your first scheduled shift after the holiday, unless your absence is permitted by the ESA (like sick leave or a day off that you requested and approved)
+				<br><b>3)</b> You are required to work on the holiday if called to work, but would be entitled to additional pay depending on whether you work regular hours and how you're paid.
+			</div>
+		</div> -->
+		
+		<!-- <div class="calc__line">
+			<div class="calc__title calc__title--bold">&nbsp;</div>
+			<select name="" id="YT_select_4" class="calc__select">
+				<option value="regular">Regular Hours</option>
+				<option value="irregular">Irregular Hours</option>
+			</select>
+			<div class="calc__tip calc__tip--opa">&nbsp;</div>
+		</div> -->
+
+
+		<div id="block_1">
+			<div class="calc__line">
+				<div class="calc__title">Actual amount of eligible dividends</div>
+				<input type="text" name="" id="inp_1" placeholder="inp_1" class="calc__input" value="10,000">
+				<div class="calc__tip calc__tip--opa">&nbsp;</div>
+			</div>
+			
+			<div class="calc__line">
+				<div class="calc__title">Taxable amount of eligible dividends</div>
+				<input type="text" name="" id="inp_2" placeholder="inp_2" class="calc__input calc__input--disabled" value="" disabled>
+				<div class="calc__tip calc__tip--opa">&nbsp;</div>
+			</div>
+			
+			<div class="calc__line">
+				<div class="calc__title">Dividend tax credit for eligible dividend</div>
+				<input type="text" name="" id="inp_3" placeholder="inp_3" class="calc__input calc__input--disabled" value="" disabled>
+				<div class="calc__tip calc__tip--opa">&nbsp;</div>
+			</div>
+		</div>
+
+
+		<div id="block_2" style="display: none;">
+			<div class="calc__line">
+				<div class="calc__title">Actual amount of non-eligible dividends</div>
+				<input type="text" name="" id="inp_4" placeholder="inp_4" class="calc__input" value="10,000">
+				<div class="calc__tip calc__tip--opa">&nbsp;</div>
+			</div>
+	
+			<div class="calc__line">
+				<div class="calc__title">Taxable amount of non-eligible dividends</div>
+				<input type="text" name="" id="inp_5" placeholder="inp_5" class="calc__input calc__input--disabled" value="" disabled>
+				<div class="calc__tip calc__tip--opa">&nbsp;</div>
+			</div>
+	
+			<div class="calc__line">
+				<div class="calc__title">Dividend tax credit for non-eligible dividend</div>
+				<input type="text" name="" id="inp_6" placeholder="inp_6" class="calc__input calc__input--disabled" value="" disabled>
+				<div class="calc__tip calc__tip--opa">&nbsp;</div>
+			</div>
+		</div>
+
+
+		<div class="calc__separator"></div>
+		
+
+		<div class="calc__line">
+			<div class="calc__title">Federal dividend tax credit</div>
+			<input type="text" name="" id="inp_7" placeholder="inp_7" class="calc__input calc__input--disabled" value="" disabled>
+			<div class="calc__tip">?</div>
+			<div class="calc__fly">
+				This is the federal tax credit you can expect to see on a personal tax return.
+			</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Provincial/Territorial dividend tax credit</div>
+			<input type="text" name="" id="inp_8" placeholder="inp_8" class="calc__input calc__input--disabled" value="" disabled>
+			<div class="calc__tip">?</div>
+			<div class="calc__fly">
+				This is the provincial/territorial tax credit you can expect to see on a personal tax return.
+			</div>
+		</div>
+
+		<div class="calc__separator"></div>
+
+
+	</div>
+
+	<script src="js/scripts.js?v1"></script>
+
+</body>
+</html>

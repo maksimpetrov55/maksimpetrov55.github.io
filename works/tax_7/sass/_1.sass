@@ -1,0 +1,325 @@
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: sans-serif
+
+.tech
+    position: fixed
+    right: 0
+    top: 0
+    background: #000
+    color: #fff
+    padding: 30px 20px
+
+body
+    position: relative
+    background: #424242
+
+.holidays
+    margin: 0 auto
+
+    &__flex
+        display: flex
+        width: 100%
+        margin: 10px 0
+        align-items: center
+
+    &__text
+        text-align: center
+        padding: 0 10px 0 0
+        width: 50%
+        max-width: 600px
+        font-size: 18px
+        text-align: right
+        &--left
+            text-align: center
+            max-width: 280px
+            width: 100%
+            font-weight: 600
+
+    &__date
+        width: 140px
+        text-align: center
+        font-size: 18px
+        &--bold
+            font-weight: 600
+
+    &__note
+        margin: 20px auto
+        width: 100%
+        max-width: 520px
+        font-weight: 600
+        text-align: right
+
+
+.calc
+    position: relative
+    width: 100%
+    min-height: 500px
+    max-width: 1000px
+    margin: 30px auto
+    padding: 30px 20px
+    background: #fff
+    @media ( max-width: 670px )
+        width: 96%
+        max-width: 600px
+    @media print
+        margin: 5px auto
+        padding: 10px 20px
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button
+        -webkit-appearance: none
+
+    input[type='number']
+        -moz-appearance: textfield
+
+
+    &__header
+        font-size: 30px
+        font-weight: 600
+        text-align: center
+        margin: 10px auto 30px auto
+        @media print
+            font-size: 18px
+
+    &__description
+        text-align: center
+        max-width: 550px
+        margin: 0 auto
+        &--bold
+            font-size: 20px
+            font-weight: 600
+
+    &__choice
+        display: flex
+        justify-content: space-around
+        max-width: 800px
+        margin: 20px auto
+
+    &__radio
+        display: none
+        &:checked + .calc__label
+            background: #d1ddff
+
+    &__label
+        width: 100%
+        max-width: 320px
+        height: 100px
+        text-align: center
+        justify-content: center
+        align-items: center
+        display: flex
+        border: 1px solid #cacaca
+        padding: 20px
+        transition-duration: 0.2s
+        cursor: pointer
+        &:hover
+            background: #eee
+
+    &__textarea
+        padding: 5px
+        width: 280px
+        height: auto
+        min-height: 40px
+        font-size: 16px
+        @media ( max-width: 420px )
+            width: 86%
+
+    &__separator
+        width: 100%
+        border-bottom: 1px solid #cacaca
+        margin: 30px 0
+        @media print
+            margin: 15px 0
+
+    &__part
+        display: none
+        &--show
+            display: block
+
+    &__line
+        width: 100%
+        position: relative
+        display: flex
+        align-items: center
+        margin: 10px 0
+        @media ( max-width: 670px )
+            flex-wrap: wrap
+            justify-content: center
+        @media print
+            margin: 5px 0
+        &--block
+            display: block
+
+    &__title
+        padding: 0 10px 0 0
+        width: 50%
+        max-width: 600px
+        font-size: 18px
+        text-align: right
+        @media print
+            font-size: 12px
+        @media ( max-width: 890px )
+            width: 60%
+        @media ( max-width: 670px )
+            width: 100%
+            text-align: center
+            padding: 0
+            margin: 0 0 5px 0
+        &--bold
+            font-weight: 600
+            @media ( max-width: 670px )
+                margin: 0 0 5px 0
+        &--plus
+            //padding: 0 30px 0 0
+        &--tac
+            width: 100%
+            text-align: center
+            margin: 0 auto
+        &--faq
+            width: 100%
+            max-width: 900px
+            text-align: right
+
+    &__select
+        padding: 5px
+        width: 280px
+        max-width: 280px
+        height: 40px
+        font-size: 16px
+        border-radius: 4px
+        border: 2px solid #4480a8
+        cursor: pointer
+        @media print
+            max-width: 320px !important
+            font-size: 12px
+            height: 30px
+            width: 120px
+            border: 1px solid #4480a8
+        @media ( max-width: 670px )
+            margin: 10px auto
+            width: calc( 100% - 40px )
+            margin: 0 auto
+        @media ( max-width: 420px )
+            width: 86%
+        &--date
+            width: 89px
+            margin: 0 5px 0 0
+            @media ( max-width: 670px )
+                margin: 10px 5px 10px 0
+                width: 25%
+            @media ( max-width: 420px )
+                width: 27%
+        &--margin
+            @media ( max-width: 670px )
+                margin: 10px 5px 10px 40px
+            @media ( max-width: 420px )
+                margin: 10px 5px
+
+    &__plus
+        display: inline-block
+        padding: 5px 7px
+        cursor: pointer
+        font-size: 20px
+        user-select: none
+
+    &__info
+        //max-width: 900px
+        padding: 20px 0
+        display: none
+        &--open
+            display: block
+
+    &__input
+        padding: 5px
+        width: 280px
+        //text-align: right
+        height: 40px
+        font-size: 16px
+        border-radius: 4px
+        border: 2px solid #4480a8
+        @media ( max-width: 420px )
+            width: 86%
+        @media print
+            max-width: 320px !important
+            font-size: 12px
+            height: 30px
+            width: 120px
+            border: 1px solid #4480a8
+        &--disabled
+            border: 2px solid #aaa
+            background: #eee
+            color: #444
+            @media print
+                border: 1px solid #aaa
+        // &--other
+        //     max-width: 89px
+        &--bold
+            font-weight: 600
+        &--short
+            width: 89px
+            text-align: center
+            margin: 0 5px 0 0
+        &--method
+            width: 100%
+            max-width: 135px
+            position: relative
+            text-align: center
+            margin: 0 5px 0 0
+            @media ( max-width: 670px )
+                margin: 10px 10px
+                text-align: center
+                width: 100%
+                max-width: 400px
+
+    &__tip
+        width: 24px
+        height: 24px
+        display: flex
+        justify-content: center
+        align-items: center
+        background: #e6e6e6
+        border-radius: 50px
+        z-index: 999
+        flex-shrink: 0
+        cursor: pointer
+        margin: 0 5px
+        @media ( max-width: 670px )
+            position: absolute
+            right: 70px
+            bottom: 10px
+        @media ( max-width: 550px )
+            position: absolute
+            right: -15px
+            bottom: 10px
+        &--opa
+            opacity: 0
+        &:hover
+            background: #c1f0ff
+
+    &__fly
+        position: absolute
+        width: 440px
+        top: 0px
+        right: 200px
+        z-index: 997
+        background: #fbffe2
+        padding: 12px 15px
+        box-shadow: 0 4px 15px 1px rgba(0,0,0,0.2)
+        font-size: 15px
+        line-height: 1.3
+        display: none
+        @media ( max-width: 890px )
+            width: 90%
+            max-width: 500px
+        @media ( max-width: 670px )
+            margin: 0 auto
+            max-width: 900px
+            right: 40px
+            top: auto
+            bottom: 10px
+        @media ( max-width: 420px )
+            right: 20px
