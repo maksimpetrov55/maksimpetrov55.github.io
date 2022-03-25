@@ -5,10 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Web Mockup</title>
 
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/main.css?v1">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/scripts.js"></script>	
+	<script src="js/scripts.js?v1"></script>	
 
 </head>
 <body>
@@ -17,85 +17,134 @@
 
 	<div class="calc">
 
-		<div class="calc__header">Калькулятор для расчета допустимого срока пребывания по&nbsp;краткосрочной Шенгенской&nbsp;визе</div>
+		<div class="calc__header calc__header--rus">Калькулятор для расчета допустимого срока пребывания по&nbsp;краткосрочной Шенгенской&nbsp;визе</div>
+		<div style="display: none;" class="calc__header calc__header--eng">Calculator of available days for stay remaining under a&nbsp;Schengen short-stay&nbsp;visa</div>
+		<div style="display: none;" class="calc__header calc__header--spn">Calculadora de días de viaje restantes con un visado de corta duración de&nbsp;Schengen</div>
+		<div style="display: none;" class="calc__header calc__header--frn">Calculatrice des jours de voyage restant à accomplir sous couvert d'un visa de&nbsp;court séjour&nbsp;Schengen</div>
+		<div style="display: none;" class="calc__header calc__header--trk">Schengen kısa süreli kalma vizesi kapsamında kalan seyahat günleri&nbsp;hesaplayıcısı</div>
 
-		<div class="calc__title">Дата въезда/контроля:</div>
-		<input type="date" id="inp1" class="calc__input calc__input--first">
+		<div class="calc__title calc__title--rus">Выберите язык:</div>
+		<div style="display: none;" class="calc__title calc__title--eng">Select language:</div>
+		<div style="display: none;" class="calc__title calc__title--spn">Seleccione el idioma:</div>
+		<div style="display: none;" class="calc__title calc__title--frn">Choisir la langue:</div>
+		<div style="display: none;" class="calc__title calc__title--trk">Dil Seçin:</div>
+		<div class="calc__choice">
+			<input type="radio" name="calc_language" id="calc_language_1" class="calc__language" value="rus" checked>
+			<label for="calc_language_1" class="calc__flag"><img src="img/flag_1.png" alt=""></label>
+			<input type="radio" name="calc_language" id="calc_language_2" class="calc__language" value="eng">
+			<label for="calc_language_2" class="calc__flag"><img src="img/flag_2.png" alt=""></label>
+			<input type="radio" name="calc_language" id="calc_language_3" class="calc__language" value="spn">
+			<label for="calc_language_3" class="calc__flag"><img src="img/flag_3.png" alt=""></label>
+			<input type="radio" name="calc_language" id="calc_language_4" class="calc__language" value="frn">
+			<label for="calc_language_4" class="calc__flag"><img src="img/flag_4.png" alt=""></label>
+			<input type="radio" name="calc_language" id="calc_language_5" class="calc__language" value="trk">
+			<label for="calc_language_5" class="calc__flag"><img src="img/flag_5.png" alt=""></label>
+		</div>
+
+		<!-- <div class="calc__title calc__title--rus">Дата въезда/контроля:</div>
+		<div style="display: none;" class="calc__title calc__title--eng">Date of entry/control:</div>
+		<div style="display: none;" class="calc__title calc__title--spn">Fecha de entrada/control:</div>
+		<div style="display: none;" class="calc__title calc__title--frn">Date d'entrée/contrôle:</div>
+		<div style="display: none;" class="calc__title calc__title--trk">Giriş tarihi/kontrol:</div> -->
+		<div class="calc__title calc__title--rus">Дата контроля:</div>
+		<div style="display: none;" class="calc__title calc__title--eng">Date of control:</div>
+		<div style="display: none;" class="calc__title calc__title--spn">Fecha de control:</div>
+		<div style="display: none;" class="calc__title calc__title--frn">Date de contrôle:</div>
+		<div style="display: none;" class="calc__title calc__title--trk">Giriş kontrol:</div>
+		<input type="date" id="inp1" class="calc__input calc__input--first" disabled>
 	
 		<div class="calc__line">
-			<div class="calc__title">Начало 90-дневного периода:</div>
+			<div class="calc__title calc__title--rus">Начало 90-дневного периода:</div>
+			<div style="display: none;" class="calc__title calc__title--eng">Start of 90 days period:</div>
+			<div style="display: none;" class="calc__title calc__title--spn">Inicio del periodo de 90 días:</div>
+			<div style="display: none;" class="calc__title calc__title--frn">Début de la période de 90 jours:</div>
+			<div style="display: none;" class="calc__title calc__title--trk">90 günlük sürenin başlangıcı:</div>
 			<div class="calc__date calc__date--90">--.--.----</div>
 		</div>
 
 		<div class="calc__line">
-			<div class="calc__title">Начало 180-дневного периода:</div>
+			<div class="calc__title calc__title--rus">Начало 180-дневного периода:</div>
+			<div style="display: none;" class="calc__title calc__title--eng">Start of 180 days period:</div>
+			<div style="display: none;" class="calc__title calc__title--spn">Inicio del periodo de 180 días:</div>
+			<div style="display: none;" class="calc__title calc__title--frn">Début de la période de 180 jours:</div>
+			<div style="display: none;" class="calc__title calc__title--trk">180 günlük sürenin başlangıcı:</div>
 			<div class="calc__date calc__date--180">--.--.----</div>
 		</div>
 
 		
 		<div class="calc__list">
 
+			<div class="calc__title calc__title--rus">Ваши поездки:</div>
+			<div style="display: none;" class="calc__title calc__title--eng">Your trips:</div>
+			<div style="display: none;" class="calc__title calc__title--spn">Tus viajes:</div>
+			<div style="display: none;" class="calc__title calc__title--frn">Vos voyages:</div>
+			<div style="display: none;" class="calc__title calc__title--trk">Gezileriniz:</div>
+
 			<div style="display: none;" class="calc__mark"></div>
 			<div style="display: none;" class="calc__diff"></div>
 
 			<div class="calc__line calc__line--date">
-				<input type="date" class="calc__input calc__input--date1">
-				<input type="date" class="calc__input calc__input--date2">
+				<input type="date" class="calc__input calc__input--date calc__input--date1">
+				<input type="date" class="calc__input calc__input--date calc__input--date2">
 				<div class="calc__count"></div>
 			</div>
 		
 			<div class="calc__line calc__line--date">
-				<input type="date" class="calc__input calc__input--date1">
-				<input type="date" class="calc__input calc__input--date2">
+				<input type="date" class="calc__input calc__input--date calc__input--date1">
+				<input type="date" class="calc__input calc__input--date calc__input--date2">
 				<div class="calc__count"></div>
 			</div>
 		
 			<div class="calc__line calc__line--date">
-				<input type="date" class="calc__input calc__input--date1">
-				<input type="date" class="calc__input calc__input--date2">
+				<input type="date" class="calc__input calc__input--date calc__input--date1">
+				<input type="date" class="calc__input calc__input--date calc__input--date2">
 				<div class="calc__count"></div>
 			</div>
 			
 			<div class="calc__line calc__line--date">
-				<input type="date" class="calc__input calc__input--date1">
-				<input type="date" class="calc__input calc__input--date2">
-				<div class="calc__count"></div>
-			</div>
-	
-			<div class="calc__line calc__line--date">
-				<input type="date" class="calc__input calc__input--date1">
-				<input type="date" class="calc__input calc__input--date2">
-				<div class="calc__count"></div>
-			</div>
-	
-			<div class="calc__line calc__line--date">
-				<input type="date" class="calc__input calc__input--date1">
-				<input type="date" class="calc__input calc__input--date2">
-				<div class="calc__count"></div>
-			</div>
-	
-			<div class="calc__line calc__line--date">
-				<input type="date" class="calc__input calc__input--date1">
-				<input type="date" class="calc__input calc__input--date2">
-				<div class="calc__count"></div>
-			</div>
-	
-			<div class="calc__line calc__line--date">
-				<input type="date" class="calc__input calc__input--date1">
-				<input type="date" class="calc__input calc__input--date2">
+				<input type="date" class="calc__input calc__input--date calc__input--date1">
+				<input type="date" class="calc__input calc__input--date calc__input--date2">
 				<div class="calc__count"></div>
 			</div>
 
-			<div class="calc__line calc__line--date">
-				<input type="date" class="calc__input calc__input--date1">
-				<input type="date" class="calc__input calc__input--date2">
-				<div class="calc__count"></div>
-			</div>
-
-			<div class="calc__line calc__line--date">
-				<input type="date" class="calc__input calc__input--date1">
-				<input type="date" class="calc__input calc__input--date2">
-				<div class="calc__count"></div>
+			<div class="calc__show">+</div>
+	
+			<div style="display: none;" class="calc__hidden">
+				<div class="calc__line calc__line--date">
+					<input type="date" class="calc__input calc__input--date calc__input--date1">
+					<input type="date" class="calc__input calc__input--date calc__input--date2">
+					<div class="calc__count"></div>
+				</div>
+		
+				<div class="calc__line calc__line--date">
+					<input type="date" class="calc__input calc__input--date calc__input--date1">
+					<input type="date" class="calc__input calc__input--date calc__input--date2">
+					<div class="calc__count"></div>
+				</div>
+		
+				<div class="calc__line calc__line--date">
+					<input type="date" class="calc__input calc__input--date calc__input--date1">
+					<input type="date" class="calc__input calc__input--date calc__input--date2">
+					<div class="calc__count"></div>
+				</div>
+		
+				<div class="calc__line calc__line--date">
+					<input type="date" class="calc__input calc__input--date calc__input--date1">
+					<input type="date" class="calc__input calc__input--date calc__input--date2">
+					<div class="calc__count"></div>
+				</div>
+	
+				<div class="calc__line calc__line--date">
+					<input type="date" class="calc__input calc__input--date calc__input--date1">
+					<input type="date" class="calc__input calc__input--date calc__input--date2">
+					<div class="calc__count"></div>
+				</div>
+	
+				<div class="calc__line calc__line--date">
+					<input type="date" class="calc__input calc__input--date calc__input--date1">
+					<input type="date" class="calc__input calc__input--date calc__input--date2">
+					<div class="calc__count"></div>
+				</div>
 			</div>
 
 		</div>
