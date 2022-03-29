@@ -46,7 +46,7 @@ $(document).ready(function() {
 	});
 
 
-	$('input').change(function(){
+	$('.calc__input--date').on("change", function(){
 
 		var date_biggest = 0;
 		$('.calc__input--date').each(function(){
@@ -58,7 +58,7 @@ $(document).ready(function() {
 				}
 			}
 
-			console.log(date_biggest);
+			//console.log(date_biggest);
 			
 
 			var time = new Date(date_biggest);
@@ -80,8 +80,8 @@ $(document).ready(function() {
 		var date_90 = Math.ceil(Math.abs(date_check.getTime() - (24 * 3600 * 1000 * (90 - 1) ) ));
 		var date_180 = Math.ceil(Math.abs(date_check.getTime() - (24 * 3600 * 1000 * (180 - 1) ) ));
 
-		console.log( new Date(date_90) );
-		console.log( new Date(date_180) );
+		// console.log( new Date(date_90) );
+		// console.log( new Date(date_180) );
 
 		var date_90_value = new Date(date_90);
 		var date_180_value = new Date(date_180);
@@ -118,18 +118,20 @@ $(document).ready(function() {
 			}
 
 			if ( value1 != "" && value2 != "" ) {
-				let date_calculation = Math.ceil(Math.abs(date2.getTime() - date1.getTime()) / (1000 * 3600 * 24)) + 1;
+				var date_calculation = Math.ceil(Math.abs(date2.getTime() - date1.getTime()) / (1000 * 3600 * 24)) + 1;
 				count.text( date_calculation );
+
+				if ( date1.getTime() < date_180_value.getTime() ) {
+					var date_start = date_180_value.getTime();
+					var date_cut = Math.ceil( Math.abs(date2.getTime() - date_start ) / (1000 * 3600 * 24)) + 1;
+					var date_calculation = Math.ceil(Math.abs(date2.getTime() - date1.getTime()) / (1000 * 3600 * 24)) + 1;
+					$('.calc__diff').text( date_calculation - date_cut );
+					$('.calc__mark').text( 1 );
+					console.log( $('.calc__diff').text() );
+				}
 			}
 
-			if ( date1.getTime() < date_180_value.getTime() ) {
-				var date_start = date_180_value.getTime();
-				var date_cut = Math.ceil( Math.abs(date2.getTime() - date_start ) / (1000 * 3600 * 24)) + 1;
-				var date_calculation = Math.ceil(Math.abs(date2.getTime() - date1.getTime()) / (1000 * 3600 * 24)) + 1;
-				$('.calc__diff').text( date_calculation - date_cut );
-				$('.calc__mark').text( 1 );
-				console.log( $('.calc__diff').text() );
-			}
+
 
 		});
 
@@ -144,7 +146,7 @@ $(document).ready(function() {
 			count_summ = count_summ - +$('.calc__diff').text();
 		}
 
-		console.log(count_summ);
+		//console.log(count_summ);
 
 		var count_itog = 90 - +count_summ;
 
