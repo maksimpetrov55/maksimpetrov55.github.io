@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div class="calc__block">
+			<div class="calc__text calc__text--title"><span class="calc__text--bold calc__text--margin">Стоимость аренды</span> за смену 7+1</div>
+
+			<div id="calc_smena" data-val="27360" class="calc__smena">27 360 ₽</div>
+		</div>
+
+		<div class="calc__line"></div>
+
+		<div class="calc__block">
+			<div class="calc__text calc__text--bold calc__text--title"><span class="calc__text--bold">Кол-во смен</span></div>
+
+			<div class="calc__flex calc__flex--jcsb">
+				<input type="text" class="calc__input" id="calc_kolvoSmen" value="1">
+				<div class="calc__slider" id="">
+					<div style="margin: 0 10px 0 0;" id="calc_slider"></div>
+					<div class="calc__scale">
+						<div>1</div>
+						<div>120</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="calc__line"></div>
+
+		<div class="calc__block">
+			<div class="calc__text calc__text--title"><span class="calc__text--bold calc__text--margin">Стоимость доставки</span> 39 руб/км</div>
+
+			<div class="calc__flex calc__flex--jcsb">
+				<select name="" id="calc_distance" class="calc__select">
+					<option value="100">Внутри мкад</option>
+					<option value="200">1 - 15 км от МКАД</option>
+					<option value="300">16 - 30 км от МКАД</option>
+					<option value="400">31 - 45 км от МКАД</option>
+					<option value="500">46 - 60 км от МКАД</option>
+					<option value="600">61 - 75 км от МКАД</option>
+					<option value="700">76 - 90 км от МКАД</option>
+				</select>
+				<div class="calc__text"><span class="calc__text--bold">=</span></div>
+				<div class="calc__text"><span id="calc_delivery" class="calc__text--bold">100</span></div>
+			</div>
+
+		</div>
+
+		<div class="calc__line"></div>
+
+		<div class="calc__block">
+			<div class="calc__text calc__text--bold calc__text--title"><span class="calc__text--bold">Итого</span></div>
+
+			<div id="calc_itog" class="calc__text">1 смена x (16 304 аренда техники) + доставка 100 = 16 404 ₽</div>
+		</div>
+
+		<div class="calc__line"></div>
+
+		<div class="calc__block">
+			<div class="calc__flex calc__flex--jcsb">
+				<div class="calc__text calc__text--bold calc__text--title"><span class="calc__text--bold">Ваша экономия</span></div>
+
+				<div class="calc__economy">— 0 ₽</div>
+			</div>
+
+			<div class="calc__text">А при оплате сразу за 4 смены стоимость аренды с доставкой техники выйдет дешевле на 2 000 ₽</div>
+
+			<div class="calc__btn">
+				<div id="calc_price" class="calc__price">840 000 ₽</div>
+				<div class="calc__zakaz">Заказать</div>
+			</div>
+		</div>
+
+		
+
+
+
+	</div>
+	
+
+
+</body>
+</html>
