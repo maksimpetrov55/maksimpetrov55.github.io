@@ -6,13 +6,13 @@
 	<title>Web Mockup</title>
 
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/main.css?v1">
 	<link rel="stylesheet" href="css/jquery-ui.css">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/jquery.ui.touch-punch.min.js"></script>
-	<script src="js/scripts.js"></script>	
+	<script src="js/scripts.js?v1"></script>	
 
 </head>
 <body>
@@ -32,7 +32,7 @@
 		<div class="calc__block">
 			<div class="calc__text calc__text--bold calc__text--title"><span class="calc__text--bold">Кол-во смен</span></div>
 
-			<div class="calc__flex calc__flex--jcsb">
+			<div class="calc__flex calc__flex--aic calc__flex--jcsb">
 				<input type="text" class="calc__input" id="calc_kolvoSmen" value="1">
 				<div class="calc__slider" id="">
 					<div style="margin: 0 10px 0 0;" id="calc_slider"></div>
@@ -49,7 +49,7 @@
 		<div class="calc__block">
 			<div class="calc__text calc__text--title"><span class="calc__text--bold calc__text--margin">Стоимость доставки</span> 39 руб/км</div>
 
-			<div class="calc__flex calc__flex--jcsb">
+			<div class="calc__flex calc__flex--aic calc__flex--jcsb">
 				<select name="" id="calc_distance" class="calc__select">
 					<option value="100">Внутри мкад</option>
 					<option value="200">1 - 15 км от МКАД</option>
@@ -76,13 +76,13 @@
 		<div class="calc__line"></div>
 
 		<div class="calc__block">
-			<div class="calc__flex calc__flex--jcsb">
+			<div class="calc__flex calc__flex--aic calc__flex--jcsb">
 				<div class="calc__text calc__text--bold calc__text--title"><span class="calc__text--bold">Ваша экономия</span></div>
 
 				<div id="calc_economy" class="calc__economy">— 0 ₽</div>
 			</div>
 
-			<div class="calc__text">А при оплате сразу за 4 смены стоимость аренды с доставкой техники выйдет дешевле на 2 000 ₽</div>
+			<div id="calc_note" class="calc__text">А при оплате сразу за 4 смены стоимость аренды с доставкой техники выйдет дешевле на 2 000 ₽</div>
 
 			<div class="calc__btn">
 				<div id="calc_price" class="calc__price">840 000 ₽</div>
@@ -91,6 +91,28 @@
 		</div>
 
 		
+		<div class="calc__window">
+			<form action="" class="calc__form">
+
+				<div class="calc__close">✖</div>
+
+				<div class="calc__text calc__text--form">Заказать</div>
+
+				<input type="text" class="calc__input calc__input--form" name="calc_name" placeholder="Ваше Имя" required>
+				
+				<input type="text" class="calc__input calc__input--form" name="calc_phone" placeholder="Ваш телефон" required>
+
+				<textarea name="calc_data" id="calc_data" style="width: 100%; display: none;"></textarea>
+				
+				<input type="submit" value="Оформить заказ" class="calc__submit">
+
+				<div class="calc__flex">
+					<input type="checkbox" name="" id="calc_agree" class="calc__check" required checked>
+					<label class="calc__agree" for="calc_agree">Даю согласие на обработку персональных данных</label>
+				</div>
+
+			</form>
+		</div>
 
 
 
