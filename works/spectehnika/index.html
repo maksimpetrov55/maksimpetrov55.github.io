@@ -5,19 +5,42 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Web Mockup</title>
 
-	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/main.css?v1">
+	<link rel="stylesheet" href="css/main.css?v2">
 	<link rel="stylesheet" href="css/jquery-ui.css">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="js/jquery.ui.touch-punch.min.js"></script>
-	<script src="js/scripts.js?v1"></script>	
+	<script src="js/scripts.js?v2"></script>	
 
 </head>
 <body>
 
+	<div class="calcform">
+		<div class="calcform__black"></div>
+		<div class="calcform__wrap">
+			<div class="calcform__img"></div>
+			<div class="calcform__esc"></div>
+			<div class="calcform__close"></div>
+			<div class="calcform__flex">
+				<div class="calcform__titles">
+					<div class="calcform__title">НУЖНА ПОМОЩЬ?</div>
+					<div class="calcform__undertitle">ОСТАВЬТЕ ЗАЯВКУ, МЫ ПЕРЕЗВОНИМ</div>
+				</div>
 
+				<div class="calcform__container">
+					<form class="calcform__form" method="POST" action="../mail.php">
+						<input type="hidden" name="title" value="">
+						<input name="phone" type="text" class="input calcform__input" placeholder="Ваш телефон" required name="calc_phone" maxlength="18">
+						<textarea name="calc_data" id="calc_data" style="width: 100%; display: none;"></textarea>
+						<input type="submit" class="calcform__submit" value="Оставить заявку">
+					</form>
+
+					<div class="calcform__note">Нажимая на кнопку «Оставить заявку», вы соглашаетесь с нашей <a href="#"><span class="custom-polite">Политикой</span> конфиденциальности</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div class="calc">
 
@@ -91,7 +114,7 @@
 		</div>
 
 		
-		<div class="calc__window">
+		<!-- <div class="calc__window">
 			<form action="" class="calc__form">
 
 				<div class="calc__close">✖</div>
@@ -112,7 +135,7 @@
 				</div>
 
 			</form>
-		</div>
+		</div> -->
 
 
 

@@ -25,14 +25,25 @@ $(document).ready(function() {
 		$( "#calc_slider" ).slider( "value", sliderInput );
 		calculation();
 	});
-	
+
+	// $('.calc__btn').click(function(){
+	// 	$('.calc__window').addClass("calc__window--open");
+	// });
+
+	// $('.calc__close').click(function(){
+	// 	$('.calc__window').removeClass("calc__window--open");
+	// });
 
 	$('.calc__btn').click(function(){
-		$('.calc__window').addClass("calc__window--open");
+		$('.calcform').css({display: "flex"});
 	});
 
-	$('.calc__close').click(function(){
-		$('.calc__window').removeClass("calc__window--open");
+	$('.calcform__black').click(function(){
+		$('.calcform').css({display: "none"});
+	});
+
+	$('.calcform__close').click(function(){
+		$('.calcform').css({display: "none"});
 	});
 
 	$('#calc_distance').change(calculation);

@@ -129,7 +129,7 @@
         //width: 101%
 
     &__btn
-        background: #F77E21
+        background: linear-gradient(to bottom, #fdab1b 0%, #f67c21 100%)
         font-size: 16px
         color: #fff
         display: inline-flex
@@ -155,92 +155,256 @@
         padding: 20px
         text-align: center
 
-    &__window
+    // &__window
+    //     position: absolute
+    //     width: 100%
+    //     height: 100%
+    //     display: flex
+    //     justify-content: center
+    //     align-items: center
+    //     top: 0
+    //     left: 0
+    //     transition-duration: 0.2s
+    //     opacity: 0
+    //     z-index: 9999
+    //     transform: translateY(-100px) scale(0)
+    //     &--open
+    //         transform: translateY(0px) scale(1)
+    //         opacity: 1
+
+    // &__form
+    //     width: 100%
+    //     max-width: 400px
+    //     min-height: 300px
+    //     background: #fff
+    //     padding: 30px 60px 50px 60px
+    //     border-radius: 25px
+    //     box-shadow: 0 10px 30px 5px rgba(0,0,0,0.2)
+    //     @media ( max-width: 470px )
+    //         padding: 30px 30px 40px 30px
+    //         border-radius: 15px
+
+    // &__submit
+    //     background: linear-gradient(to bottom, #fdab1b 0%, #f67c21 100%)
+    //     font-size: 16px
+    //     color: #fff
+    //     display: flex
+    //     align-items: center
+    //     justify-content: center
+    //     margin: 30px 0 20px 0
+    //     border-radius: 8px
+    //     transition-duration: 0.2s
+    //     user-select: none
+    //     cursor: pointer
+    //     width: 200px
+    //     height: 50px
+    //     border: none
+    //     &:hover
+    //         opacity: 0.8
+    //     &:active
+    //         opacity: 0.2
+
+    // &__check
+    //     margin: 2px 0 0 0
+
+    // &__agree
+    //     color: #aaa
+    //     font-size: 13px
+    //     max-width: 200px
+    //     display: inline-block
+    //     margin: 0 0 0 5px
+
+    // &__close
+    //     position: absolute
+    //     top: -10px
+    //     right: -10px
+    //     width: 40px
+    //     height: 40px
+    //     background: linear-gradient(to bottom, #fdab1b 0%, #f67c21 100%)
+    //     border-radius: 8px
+    //     cursor: pointer
+    //     user-select: none
+    //     color: #fff
+    //     box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1)
+    //     display: flex
+    //     justify-content: center
+    //     align-items: center
+    //     font-size: 20px
+    //     line-height: 20px
+    //     padding: 0 0 1px 0
+    //     @media ( max-width: 470px )
+    //         top: 5px
+    //         right: 5px
+    //         box-shadow: none
+    //         border-radius: 10px
+    //     &:hover
+    //         color: #ffffff77
+    //     &:active
+    //         color: #ffffff11
+
+
+.calcform
+    position: fixed
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    z-index: 9999
+    display: none
+    justify-content: center
+    align-items: center
+
+    &__black
         position: absolute
         width: 100%
         height: 100%
-        display: flex
-        justify-content: center
-        align-items: center
         top: 0
         left: 0
-        transition-duration: 0.2s
-        opacity: 0
-        z-index: 9999
-        transform: translateY(-100px) scale(0)
-        &--open
-            transform: translateY(0px) scale(1)
-            opacity: 1
+        background: rgba(0, 0, 0, 0.83)
 
-    &__form
-        width: 100%
-        max-width: 400px
-        min-height: 300px
+    &__wrap
+        position: relative
+        width: 90%
+        max-width: 1200px
+        height: 192px
         background: #fff
-        padding: 30px 60px 50px 60px
-        border-radius: 25px
-        box-shadow: 0 10px 30px 5px rgba(0,0,0,0.2)
-        @media ( max-width: 470px )
-            padding: 30px 30px 40px 30px
-            border-radius: 15px
+        @media ( max-width: 992px )
+            width: 100%
+            max-width: 720px
+            height: auto
+        @media ( max-width: 768px )
+            max-width: 523px
 
-    &__submit
-        background: #F77E21
-        font-size: 16px
-        color: #fff
-        display: flex
-        align-items: center
-        justify-content: center
-        margin: 30px 0 20px 0
-        border-radius: 8px
-        transition-duration: 0.2s
-        user-select: none
-        cursor: pointer
-        width: 200px
-        height: 50px
-        border: none
-        &:hover
-            opacity: 0.8
-        &:active
-            opacity: 0.2
+    &__img
+        position: absolute
+        background: url("https://mvm24.ru/wp-content/themes/twentyten/resources/img/questions-bg.png") no-repeat
+        width: 523px
+        height: 100%
+        right: 0
+        top: 0
+        z-index: 1
+        @media ( max-width: 992px )
+            background-size: auto 100%
 
-    &__check
-        margin: 2px 0 0 0
-
-    &__agree
-        color: #aaa
-        font-size: 13px
-        max-width: 200px
-        display: inline-block
-        margin: 0 0 0 5px
+    &__esc
+        position: absolute
+        background: url("https://mvm24.ru/wp-content/themes/twentyten/resources/img/questions-tractor.png") no-repeat
+        width: 385px
+        height: 313px
+        right: -60px
+        top: -80px
+        z-index: 2
+        @media ( max-width: 992px )
+            display: none
 
     &__close
+        width: 31px
+        height: 31px
         position: absolute
-        top: -10px
-        right: -10px
-        width: 40px
-        height: 40px
-        background: #F77E21
-        border-radius: 8px
+        background: url("https://mvm24.ru/wp-content/themes/twentyten/resources/img/close.png") no-repeat
+        right: -50px
+        top: -50px
         cursor: pointer
-        user-select: none
-        color: #fff
-        box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1)
+        z-index: 3
+
+    &__flex
         display: flex
-        justify-content: center
         align-items: center
-        font-size: 20px
+        position: relative
+        padding: 40px 40px 0 40px
+        z-index: 6
+        @media ( max-width: 992px )
+            padding: 20px 30px 20px 30px
+        @media ( max-width: 768px )
+            flex-direction: column
+            align-items: flex-start
+
+    &__titles
+        @media ( max-width: 768px )
+            margin: 0 0 20px 0
+
+    &__title
+        font-size: 50px
+        line-height: 57px
+        color: #000
+        font-family: 'AA Bebas Neue'
+        overflow-wrap: break-word
+        margin: 0
+        max-width: 275px
+        margin-right: 75px
+        z-index: 6
+        white-space: nowrap
+
+    &__undertitle
+        font-size: 33px
+        line-height: 31px
+        color: #ff9109
+        font-family: 'AA Bebas Neue'
+        overflow-wrap: break-word
+        max-width: 275px
+        margin-right: 75px
+        z-index: 6
+
+    &__input
+        border: none
+        background: none
+        font-weight: 300
+        font-size: 15px
+        color: #000
+        border-bottom: 1px solid #686868
+        outline: none
+        height: 57px
+        font-family: 'Lato'
+        z-index: 6
+        width: 234px
+        @media ( max-width: 992px )
+            height: 48px
+
+    &__note
+        font-size: 13px
+        font-weight: 300
+        max-width: 380px
         line-height: 20px
-        padding: 0 0 1px 0
-        @media ( max-width: 470px )
-            top: 5px
-            right: 5px
-            box-shadow: none
-            border-radius: 10px
-        &:hover
-            color: #ffffff77
-        &:active
-            color: #ffffff11
+        z-index: 6
+        color: #888
+        @media ( max-width: 992px )
+            max-width: 330px
+        a
+            color: #000
+
+    &__container
+        display: flex
+        flex-direction: column
+        max-width: 505px
+        color: #bdb8b8
+        z-index: 6
+
+    &__form
+        margin: 0 0 35px 0
+        z-index: 6
+        @media ( max-width: 992px )
+            margin: 0 0 20px 0
+
+    &__submit
+        font-size: 16px
+        color: #fff
+        font-weight: 700
+        cursor: pointer
+        border: none
+        border-radius: 50px
+        outline: none
+        background: linear-gradient(to bottom, #fdab1b 0%, #f67c21 100%)
+        width: 234px
+        height: 57px
+        z-index: 6
+        @media ( max-width: 992px )
+            margin: 20px 0 0 0
+
+
+
+
+
+
 
 
 
