@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/scripts.js"></script>
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div class="calc__header">Калькулятор ущерба от залива квартиры</div>
+
+		<div class="calc__descr">Работаем без предоплаты и даём гарантию 100% по договору</div>
+
+		<div class="calc__wrap">
+
+			<div class="calc__left">
+
+				<div class="calc__step">
+					<div class="calc__title">Тип ремонта</div>
+
+					<div class="calc__line">
+						<input type="radio" name="calc_remont" id="calc_remont_1" class="calc__radio" value="1" checked>
+						<label class="calc__remont" for="calc_remont_1">Эконом</label>
+					</div>
+
+					<div class="calc__line">
+						<input type="radio" name="calc_remont" id="calc_remont_2" class="calc__radio" value="1.2">
+						<label class="calc__remont" for="calc_remont_2">Стандарт</label>
+					</div>
+
+					<div class="calc__line">
+						<input type="radio" name="calc_remont" id="calc_remont_3" class="calc__radio" value="1.4">
+						<label class="calc__remont" for="calc_remont_3">Евро</label>
+					</div>
+				</div>
+				
+				<div class="calc__step">
+					<div class="calc__title">Пострадавшие помещения</div>
+
+					<div class="calc__line">
+						<input type="checkbox" name="calc_option_1" class="calc__check" id="calc_option_1" value="25000">
+						<label class="calc__label" for="calc_option_1">Прихожая</label>
+					</div>
+
+					<div class="calc__line">
+						<input type="checkbox" name="calc_option_2" class="calc__check" id="calc_option_2" value="25000">
+						<label class="calc__label" for="calc_option_2">Ванная</label>
+					</div>
+
+					<div class="calc__line">
+						<input type="checkbox" name="calc_option_3" class="calc__check" id="calc_option_3" value="30000">
+						<label class="calc__label" for="calc_option_3">Кухня</label>
+					</div>
+
+					<div class="calc__line">
+						<input type="checkbox" name="calc_option_4" class="calc__check" id="calc_option_4" value="55000">
+						<label class="calc__label" for="calc_option_4">Комната 1</label>
+					</div>
+
+					<div class="calc__line">
+						<input type="checkbox" name="calc_option_5" class="calc__check" id="calc_option_5" value="55000">
+						<label class="calc__label" for="calc_option_5">Комната 2</label>
+					</div>
+
+					<div class="calc__line">
+						<input type="checkbox" name="calc_option_6" class="calc__check" id="calc_option_6" value="55000">
+						<label class="calc__label" for="calc_option_6">Комната 3</label>
+					</div>
+
+					<div class="calc__line">
+						<input type="checkbox" name="calc_option_7" class="calc__check" id="calc_option_7" value="55000">
+						<label class="calc__label" for="calc_option_7">Комната 4</label>
+					</div>
+
+				</div>
+
+				<div class="calc__step">
+					<div class="calc__title">Какие дефекты</div>
+
+					<div class="calc__line">
+						<input type="checkbox" name="calc_defects_1" class="calc__check" id="calc_defects_1" value="0.05">
+						<label class="calc__label" for="calc_defects_1">Вздутый пол</label>
+					</div>
+
+					<div class="calc__line">
+						<input type="checkbox" name="calc_defects_2" class="calc__check" id="calc_defects_2" value="0.05">
+						<label class="calc__label" for="calc_defects_2">Потолок</label>
+					</div>
+
+					<div class="calc__line">
+						<input type="checkbox" name="calc_defects_3" class="calc__check" id="calc_defects_3" value="0.05">
+						<label class="calc__label" for="calc_defects_3">Отслоились обои</label>
+					</div>
+
+					<div class="calc__line">
+						<input type="checkbox" name="calc_defects_4" class="calc__check" id="calc_defects_4" value="0.05">
+						<label class="calc__label" for="calc_defects_4">Подтеки, пятна</label>
+					</div>
+
+					<div class="calc__title">Что пострадало</div>
+
+					<div class="calc__line">
+						<input type="checkbox" name="calc_defects_5" class="calc__check" id="calc_defects_5" value="0.05">
+						<label class="calc__label" for="calc_defects_5">Техника</label>
+					</div>
+
+					<div class="calc__line">
+						<input type="checkbox" name="calc_defects_6" class="calc__check" id="calc_defects_6" value="0.05">
+						<label class="calc__label" for="calc_defects_6">Мебель</label>
+					</div>
+				</div>
+
+
+			</div>
+
+			<div class="calc__right">
+
+				<div class="calc__result">
+					<div id="calc_price_1" class="calc__block">134 815 руб</div>
+					<div class="calc__math">+</div>
+					<div id="calc_price_2" class="calc__block">134 815 руб</div>
+					<div class="calc__math">+</div>
+					<div id="calc_price_3" class="calc__block">134 815 руб</div>
+					<div class="calc__math">=</div>
+					<div id="calc_price_4" class="calc__block">134 815 руб</div>
+				</div>
+
+				<div class="calc__result">
+					<div class="calc__block calc__block--label">Неустойка</div>
+					<div class="calc__math"></div>
+					<div class="calc__block calc__block--label">Моральный вред</div>
+					<div class="calc__math"></div>
+					<div class="calc__block calc__block--label">Штраф 50%</div>
+					<div class="calc__math"></div>
+					<div class="calc__block calc__block--label">Итого к взысканию</div>
+				</div>
+
+
+			</div>
+
+			<form action="!mail.php" method="POST" class="calc__form">
+
+				<input type="text" name="calc_name" class="calc__input" placeholder="Ваше Имя">
+				
+				<input type="text" name="calc_phone" class="calc__input calc__input--phone" required placeholder="Ваш телефон">
+
+				<textarea name="calc_data" id="calc_data" cols="30" rows="10" style="position: absolute; display: none;"></textarea>
+
+				<input class="calc__submit" type="submit" value="Заказать оценку ущерба">
+
+			</form>
+
+		</div>
+
+	</div>
+	
+
+
+</body>
+</html>

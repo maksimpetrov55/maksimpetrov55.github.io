@@ -1,0 +1,200 @@
+
+
+body
+    background: #eee
+
+.calc
+    position: relative
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: sans-serif
+    margin: 100px auto
+    background: #fff
+    width: 100%
+    max-width: 1100px
+    padding: 40px 30px
+
+    *
+        padding: 0
+        margin: 0
+        box-sizing: border-box
+        font-family: sans-serif
+        position: relative
+
+    &__header
+        color: #242632
+        font-size: 32px
+        font-weight: 600
+        margin: 0 0 10px 0
+        text-align: center
+
+    &__descr
+        text-align: center
+        margin: 20px 0
+        font-size: 18px
+        color: #397AC4
+
+    &__wrap
+        // display: flex
+        // justify-content: space-between
+        margin: 50px 0 0 0
+        padding: 0 20px
+
+    &__left
+        width: 100%
+        display: flex
+        min-height: 200px
+        justify-content: space-between
+        padding: 0 20px
+
+    &__right
+        width: 100%
+        border-top: 1px solid #ddd
+        margin: 30px 0 30px 0
+        padding: 30px 20px
+
+    &__step
+        margin: 0 0 20px 0
+
+    &__title
+        font-size: 18px
+        font-weight: 600
+        margin: 0 0 20px 0
+
+    &__radio
+        display: none
+        &:checked + .calc__remont::after
+            display: block
+
+    &__remont
+        display: flex
+        user-select: none
+        align-items: center
+        margin: 0 15px 0 0
+        font-size: 17px
+        cursor: pointer
+        &::after
+            content: ""
+            display: none
+            width: 20px
+            height: 20px
+            left: 0
+            background: #397AC4
+            border-radius: 50px
+            position: absolute
+            box-sizing: border-box
+            border: 3px solid #fff
+            box-shadow: 0 0 0 1px #bbb
+        &::before
+            content: ""
+            display: block
+            width: 20px
+            height: 20px
+            border: 1px solid #bbb
+            border-radius: 50px
+            margin: 0 8px 0 0
+            box-sizing: border-box
+            background: #fff
+
+    &__line
+        margin: 0 0 20px 0
+
+    &__check
+        display: none
+        &:checked + .calc__label::before
+            content: "✔"
+
+    &__label
+        display: flex
+        font-size: 17px
+        user-select: none
+        align-items: center
+        cursor: pointer
+        &::before
+            content: ""
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 0 0 2px 0
+            width: 20px
+            height: 20px
+            border: 1px solid #bbb
+            color: #397AC4
+            border-radius: 2px
+            margin: 0 8px 0 0
+            box-sizing: border-box
+            background: #fff
+
+    &__result
+        display: flex
+        justify-content: space-between
+
+    &__block
+        width: 20%
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 23px
+        color: #242632
+        font-weight: 600
+        text-align: center
+        &--label
+            font-size: 16px
+            font-weight: 400
+            margin: 10px 0 0 0
+
+    &__math
+        width: 5%
+        display: flex
+        justify-content: center
+        align-items: center
+        font-weight: 900
+        color: #FFDD76
+        font-size: 40px
+        text-align: center
+
+    &__btn
+        margin: 10px auto 10px auto
+        width: 100%
+        max-width: 400px
+        height: 50px
+        background: #397AC4
+        
+    &__form
+        border: 1px solid #ddd
+        box-shadow: 0 8px 15px 1px rgba(0,0,0,0.1)
+        padding: 50px 30px
+        display: flex
+        justify-content: center
+        background: #fff
+
+    &__input
+        text-transform: uppercase
+        padding: 14px
+        border: 1px solid #FFB022
+        width: 100%
+        max-width: 250px
+        margin: 0 15px
+        border-radius: 4px
+        outline: none
+
+    &__submit
+        display: flex
+        justify-content: center
+        align-items: center
+        text-transform: uppercase
+        width: 100%
+        max-width: 250px
+        padding: 14px
+        margin: 0 15px
+        border-radius: 4px
+        border: none
+        background: #FFB022
+        color: #fff
+        cursor: pointer
+        font-size: 15px
+        outline: none
+        transition-duration: 0.2s
+        &:hover
+            background: #E59300
