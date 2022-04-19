@@ -46,7 +46,7 @@ $(document).ready(function() {
 	});
 
 
-	$('.calc__input--date').on("change", function(){
+	$('.calc__input--date').change(function(){
 
 		var date_biggest = 0;
 		$('.calc__input--date').each(function(){
@@ -107,18 +107,20 @@ $(document).ready(function() {
 			let date1 = new Date(value1);
 			let date2 = new Date(value2);
 			
-			if ( date1 > date_check.getTime() ) {
-				date1 = new Date(inp1);
-				$(this).find(".calc__input--date1").val( inp1 );
-			}
+			// if ( date1 > date_check.getTime() ) {
+			// 	date1 = new Date(inp1);
+			// 	$(this).find(".calc__input--date1").val( inp1 );
+			// }
 
-			if ( date2 > date_check.getTime() ) {
-				date2 = new Date(inp1);
-				$(this).find(".calc__input--date2").val( inp1 );
-			}
+			// if ( date2 > date_check.getTime() ) {
+			// 	date2 = new Date(inp1);
+			// 	$(this).find(".calc__input--date2").val( inp1 );
+			// }
 
 			if ( value1 != "" && value2 != "" ) {
+
 				var date_calculation = Math.ceil(Math.abs(date2.getTime() - date1.getTime()) / (1000 * 3600 * 24)) + 1;
+
 				count.text( date_calculation );
 
 				if ( date1.getTime() < date_180_value.getTime() ) {
@@ -146,9 +148,13 @@ $(document).ready(function() {
 			count_summ = count_summ - +$('.calc__diff').text();
 		}
 
-		//console.log(count_summ);
+		console.log(count_summ);
 
 		var count_itog = 90 - +count_summ;
+
+		// if ( count_itog < -365 ) {
+		// 	count_itog = -365;
+		// }
 
 		var calc_lang = $('input[name=calc_language]:checked').val();
 
