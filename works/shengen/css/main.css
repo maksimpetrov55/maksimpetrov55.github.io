@@ -244,4 +244,48 @@ body {
 .calc__show:hover {
   opacity: 0.8;
 }
+
+.calc__btn {
+  width: 100%;
+  max-width: 200px;
+  padding: 15px 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 30px auto 0 auto;
+  background: #e0e0e0;
+  color: #111;
+  font-size: 18px;
+  font-weight: 600;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-box-shadow: 0 4px 10px 0px #00000011;
+          box-shadow: 0 4px 10px 0px #00000011;
+}
+
+@media (max-width: 400px) {
+  .calc__btn {
+    max-width: 400px;
+  }
+}
+
+.calc__btn:hover {
+  background: #d8d8d8;
+}
+
+.calc__btn:active {
+  opacity: 0.3;
+}
 /*# sourceMappingURL=main.css.map */
