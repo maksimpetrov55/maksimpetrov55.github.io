@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div class="calc__step calc__step--shadow">
+
+			<h1 class="calc__head">Кредитный калькулятор</h1>
+
+			<div class="calc__description">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, deserunt? Accusantium excepturi repellat nesciunt eligendi quisquam. Repudiandae quod facere deserunt debitis harum? Facilis, libero cumque. Ab, aut! Similique, neque sed.
+			</div>
+
+			<div class="calc__wrap">
+				<div class="calc__block">
+					<div class="calc__name">Сумма кредита</div>
+					<input id="calc_credit" type="text" class="calc__input calc__input--padding" value="1000000">
+					<div class="calc__unit">₽</div>
+				</div>
+		
+				<div class="calc__block">
+					<div class="calc__name">Процентная ставка</div>
+					<input id="calc_percent" type="text" class="calc__input calc__input--padding" value="10">
+					<div class="calc__unit">%</div>
+				</div>
+				
+				<div class="calc__block">
+					<div class="calc__name">Период расчета</div>
+					<select name="" id="calc_period" class="calc__select">
+						<option value="dd">Дни</option>
+						<option value="mm">Месяцы</option>
+						<option selected value="yy">Годы</option>
+					</select>
+				</div>
+
+				<div class="calc__block">
+					<div class="calc__name">Срок кредита</div>
+					<input id="calc_srok" type="text" class="calc__input calc__input--padding" value="5">
+					<!-- <div class="calc__unit">лет</div> -->
+				</div>
+		
+				<!-- <div class="calc__block">
+					<div class="calc__name">Дата выдачи</div>
+					<input id="calc_date" type="date" class="calc__input">
+				</div> -->
+
+				<div class="calc__block">
+					<div class="calc__name">Льготный период</div>
+					<input id="calc_free" type="text" class="calc__input calc__input--padding" value="6">
+					<!-- <div class="calc__unit">%</div> -->
+				</div>
+
+				<div class="calc__block">
+					<div class="calc__name">Вид платежа</div>
+					<select name="" id="calc_type" class="calc__select">
+						<option value="1">Аннуитетный</option>
+						<option value="2">Дифференцированный</option>
+					</select>
+				</div>
+
+
+			</div>
+
+			<div class="calc__between">
+
+				<!-- <div class="calc__type">
+
+					<div class="calc__name">Вид платежа</div>
+
+					<input class="calc__radio" type="radio" name="calc_type" id="calc_type_1" value="1" checked>
+					<label class="calc__label" for="calc_type_1">Аннуитетный</label>
+
+					<input class="calc__radio" type="radio" name="calc_type" id="calc_type_2" value="2">
+					<label class="calc__label" for="calc_type_2">Дифференцированный</label>
+
+				</div> -->
+
+				<div class="calc__btn">Рассчитать кредит</div>
+
+			</div>
+
+		</div>
+
+		<h2 class="calc__title">Информация по кредиту</h2>
+
+		<div class="calc__step calc__step--flex">
+
+			<div class="calc__left">
+
+				<div class="calc__descr">
+					<span class="calc__descr--name">Проценты</span>
+					<span class="calc__descr--value">347 812 ₽</span>
+					<span class="calc__descr--perc1">28%</span>
+					<span class="calc__descr--perc2">28%</span>
+				</div>
+
+				<div class="compare">
+					<div class="compare__credit">80%</div>
+					<div class="compare__percent">20%</div>
+				</div>
+
+				<div class="calc__legend">
+					<div class="calc__note">
+						<div class="calc__color calc__color--1"></div>
+						Сумма кредита
+					</div>
+					<div class="calc__note">
+						<div class="calc__color calc__color--2"></div>
+						Проценты
+					</div>
+				</div>
+
+			</div>
+
+			<div class="calc__right">
+
+				<div class="calc__result calc__result--bg">
+					<div class="calc__text">Ежемесячный платеж:</div>
+					<div id="calc_result_1" class="calc__price">26 910 ₽</div>
+				</div>
+
+				<div class="calc__result">
+					<div class="calc__text">&nbsp;</div>
+				</div>
+
+				<div class="calc__result">
+					<div class="calc__text">К возврату:</div>
+					<div id="calc_result_2" class="calc__price">---</div>
+				</div>
+
+				<div class="calc__result">
+					<div class="calc__text">Сумма кредита:</div>
+					<div id="calc_result_3" class="calc__price">---</div>
+				</div>
+
+				<div class="calc__result">
+					<div class="calc__text">Сумма процентов:</div>
+					<div id="calc_result_4" class="calc__price">---</div>
+				</div>
+
+				<div class="calc__result">
+					<div class="calc__text">Процентная ставка:</div>
+					<div id="calc_result_5" class="calc__price">---</div>
+				</div>
+
+				<!-- <div class="calc__result">
+					<div class="calc__text">Дата последнего платежа:</div>
+					<div id="calc_result_6" class="calc__price">---</div>
+				</div> -->
+
+			</div>
+		</div>
+		
+
+
+		<h2 class="calc__title">&nbsp;</h2>
+
+		<div class="calc__step">
+
+			<div class="chart__scroll">
+				<div class="chart">
+
+					<div class="chart__line chart__line--1"></div>
+					<div class="chart__line chart__line--2"></div>
+					<div class="chart__line chart__line--3"></div>
+					<div class="chart__line chart__line--4"></div>
+					<div class="chart__line chart__line--5"></div>
+	
+					<div class="chart__wrap">
+						<div class="chart__bar">
+							<div class="chart__perc"></div>
+						</div>
+					</div>
+					
+					<div class="chart__fly">
+						<!-- <span class="chart__fly--date">20.20.2021</span> -->
+						<span class="chart__fly--number">Платеж №20</span>
+						<span class="chart__fly--perc">Проценты: 5649.21 ₽</span>
+						<span class="chart__fly--credit">Тело кредита: 5809.37 ₽</span>
+					</div>
+	
+					<div class="chart__scale">
+						<div class="chart__year">2021</div>
+					</div>
+	
+				</div>
+			</div>
+
+		</div>
+
+
+		<h2 class="calc__title">График платежей</h2>
+
+		<div class="calc__step">
+
+			<div class="table__scroll">
+				<div class="table">
+					<div class="table__row table__row--head">
+						<div class="table__cell">Номер платежа</div>
+						<div class="table__cell">Задолжность</div>
+						<div class="table__cell">Проценты</div>
+						<div class="table__cell">Тело кредита</div>
+						<div class="table__cell">Сумма платежа</div>
+					</div>
+					<div class="table__body table__body--closed"></div>
+					<div class="table__open">Показать полностью</div>
+				</div>
+			</div>
+
+
+		</div>
+
+
+
+	</div>
+	
+
+
+</body>
+</html>
