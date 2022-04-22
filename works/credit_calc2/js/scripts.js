@@ -43,6 +43,36 @@ $(document).ready(function() {
 		}
 	});
 
+	$('#calc_period').change(function(){
+
+		var calc_period = $('#calc_period').val();
+
+		if ( calc_period == 'mm' ) {
+			$('.calc__block--tohide1').css({display: "none"});
+			$('.calc__block--tohide2').css({display: "block"});
+			//$('.calc__block--space').css({display: "none"});
+		}
+		if ( calc_period == 'yy' ) {
+			$('.calc__block--tohide1').css({display: "none"});
+			$('.calc__block--tohide2').css({display: "block"});
+			//$('.calc__block--space').css({display: "none"});
+		}
+		if ( calc_period == 'dd' ) {
+			$('.calc__block--tohide1').css({display: "block"});
+			$('.calc__block--tohide2').css({display: "none"});
+			//$('.calc__block--space').css({display: "block"});
+		}
+
+	});
+
+
+
+
+
+
+
+
+
 	calculation();
 
 	function calculation() {
@@ -83,6 +113,7 @@ $(document).ready(function() {
 			var calc_rate = 1;
 			var calc_months = calc_srok;
 			var calc_years = calc_srok / 12;
+			$('.calc__block--tohide2').css({display: "block"});
 		}
 		if ( calc_period == 'yy' ) {
 			$('#calc_pay').text("Ежегодный платеж:");
@@ -90,6 +121,7 @@ $(document).ready(function() {
 			var calc_rate = 1;
 			var calc_months = calc_srok * 12;
 			var calc_years = calc_srok;
+			$('.calc__block--tohide2').css({display: "block"});
 		}
 		if ( calc_period == 'dd' ) {
 			$('#calc_pay').text("Ежедневный платеж:");
@@ -97,6 +129,8 @@ $(document).ready(function() {
 			var calc_rate = 1;
 			var calc_months = calc_srok / 12;
 			var calc_years = calc_srok / 12 / 30.4166667;
+			$('.calc__block--tohide2').css({display: "none"});
+			calc_type = 3;
 		}
 
 		// for (y = 0; y <= calc_years; y++) {
@@ -212,8 +246,9 @@ $(document).ready(function() {
 
 			var calc_compare = (((+calc_sum_platej - +calc_credit)) / calc_sum_platej).toFixed(2) * 100;
 
-		} else {
-			
+		}
+		
+		if ( calc_type == 2 ) {
 
 			for (i = 0; i < calc_srok; i++) {
 
@@ -226,6 +261,58 @@ $(document).ready(function() {
 				} else {
 					var calc_C = (calc_credit / calc_rate / calc_srok);
 					var calc_P = ((+calc_credit - (calc_C * i)) * calc_percent * calc_rate / 100)
+					var calc_F = +calc_C + +calc_P;
+					calc_sum_perc = calc_sum_perc + calc_P;
+					calc_sum_platej = calc_sum_platej + calc_F;
+				}
+
+				calc_platej_cred.push(calc_C.toFixed(0));
+				calc_platej_perc.push(calc_P.toFixed(0));
+				calc_platej_full.push(calc_F.toFixed(0));
+
+				calc_sum_dolg = calc_sum_dolg - calc_C;
+				if ( calc_sum_dolg < 0 ) {
+					calc_sum_dolg = 0;
+				}
+
+				calc_dolg.push(calc_sum_dolg.toFixed(0));
+
+				$('#calc_result_1').text( "~" + (+(calc_sum_platej / calc_srok).toFixed(0)).toLocaleString("ru") + " ₽" );
+				$('#calc_result_2').text( (+calc_sum_platej.toFixed(0)).toLocaleString("ru") + " ₽" );
+				$('#calc_result_3').text( (+calc_credit).toLocaleString("ru") + " ₽" );
+				$('#calc_result_4').text( (+(+calc_sum_platej - +calc_credit).toFixed(0)).toLocaleString("ru") + " ₽" );
+				$('#calc_result_5').text( calc_percent + "%" );
+				// $('#calc_result_6').text( calc_date_new );
+				var calc_compare = (calc_sum_perc / (+calc_credit + +calc_sum_perc)).toFixed(2) * 100;
+			}
+
+		}
+
+		if ( calc_type == 3 ) {
+
+			for (i = 0; i < calc_srok; i++) {
+
+				if ( i == 0 ) {
+					var calc_C = (calc_credit / calc_rate / calc_srok);
+					
+					if ( i < calc_free ) {
+						var calc_P = 0;
+					} else {
+						var calc_P = (calc_credit * calc_percent * calc_rate / 100) * (+i - +calc_free + 1);
+					}
+
+					var calc_F = +calc_C + +calc_P;
+					calc_sum_perc = calc_sum_perc + calc_P;
+					calc_sum_platej = calc_sum_platej + calc_F;
+				} else {
+					var calc_C = (calc_credit / calc_rate / calc_srok);
+
+					if ( i < calc_free ) {
+						var calc_P = 0;
+					} else {
+						var calc_P = (calc_credit * calc_percent * calc_rate / 100) * (+i - +calc_free + 1);
+					}
+
 					var calc_F = +calc_C + +calc_P;
 					calc_sum_perc = calc_sum_perc + calc_P;
 					calc_sum_platej = calc_sum_platej + calc_F;
@@ -281,11 +368,28 @@ $(document).ready(function() {
 		$('.chart__wrap').empty();
 		for (z = 0; z < calc_srok; z++) {
 
+			if ( calc_type == 1 ) {
+				var bar_rate = calc_platej_full[0] / 100;
 
-			var bar_rate = calc_platej_full[0] / 100;
+				var bar_height_1 = calc_platej_perc[z] / bar_rate;
+				var bar_height_2 = 100 - +bar_height_1;
+			} 
+			
+			if ( calc_type == 2 ) {
+				var bar_rate = calc_platej_full[0] / 100;
 
-			var bar_height_1 = calc_platej_perc[z] / bar_rate;
-			var bar_height_2 = 100 - +bar_height_1;
+				var bar_height_1 = calc_platej_perc[z] / bar_rate;
+				var bar_height_2 = calc_platej_cred[z] / bar_rate;
+			}
+
+			if ( calc_type == 3 ) {
+				var bar_rate = calc_platej_full[calc_srok-1] / 100;
+
+				var bar_height_1 = calc_platej_perc[z] / bar_rate;
+				var bar_height_2 = calc_platej_cred[z] / bar_rate;
+			}
+
+
 
 			$('.chart__wrap').append(`
 
