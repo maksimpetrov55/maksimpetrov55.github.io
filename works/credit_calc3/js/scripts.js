@@ -140,7 +140,7 @@ $(document).ready(function() {
 			var calc_chart_period = calc_month;
 		}
 		if ( calc_period == 'yy' ) {
-			$('#calc_pay').text("Ежегодный платеж:");
+			$('#calc_pay').text("Ежемесячный платеж:");
 			//var calc_rate = 1;
 			//var calc_rate = 1;
 			//var calc_months = calc_srok * 12;
@@ -151,7 +151,7 @@ $(document).ready(function() {
 			var calc_chart_period = calc_month;
 		}
 		if ( calc_period == 'dd' ) {
-			$('#calc_pay').text("Ежедневный платеж:");
+			$('#calc_pay').text("Итоговый платеж:");
 			//var calc_rate = 30.4166667;
 			var calc_rate = 1;
 			//var calc_months = calc_srok / 12;
@@ -185,7 +185,9 @@ $(document).ready(function() {
 		// var calc_date_item_year = +calc_date[0];
 
 
-		for (d = 0; d < calc_month; d++) {
+
+
+		for (d = 0; d < calc_chart_period; d++) {
 
 			// var calc_date_item_day = +calc_date[2];
 			// if ( calc_date_item_day < 10 ) {
@@ -215,6 +217,8 @@ $(document).ready(function() {
 			var calc_date_item = "Платеж №" + (+d + 1);
 			calc_dateARR.push( calc_date_item );
 		}
+
+
 
 		// console.log(calc_dateARR);
 		// console.log(calc_dateARR[calc_srok-1]);
@@ -273,7 +277,8 @@ $(document).ready(function() {
 			$('#calc_result_5').text( calc_percent + "%" );
 			// $('#calc_result_6').text( calc_date_new );
 
-			var calc_compare = (((+calc_sum_platej - +calc_credit)) / calc_sum_platej).toFixed(2) * 100;
+			var calc_compare = (calc_credit / (calc_sum_platej / 100)).toFixed(2);
+			//var calc_compare = (((+calc_sum_platej - +calc_credit)) / calc_sum_platej).toFixed(2) * 100;
 
 		}
 		
@@ -312,7 +317,9 @@ $(document).ready(function() {
 				$('#calc_result_4').text( (+(+calc_sum_platej - +calc_credit).toFixed(0)).toLocaleString("ru") + " ₽" );
 				$('#calc_result_5').text( calc_percent + "%" );
 				// $('#calc_result_6').text( calc_date_new );
-				var calc_compare = (calc_sum_perc / (+calc_credit + +calc_sum_perc)).toFixed(2) * 100;
+
+				var calc_compare = (calc_credit / (calc_sum_platej / 100)).toFixed(2);
+				//var calc_compare = (calc_sum_perc / (+calc_credit + +calc_sum_perc)).toFixed(2) * 100;
 			}
 
 		}
@@ -321,59 +328,57 @@ $(document).ready(function() {
 
 			for (i = 0; i < calc_srok; i++) {
 
-				if ( i == 0 ) {
-					var calc_C = (calc_credit / calc_rate / calc_srok);
-					
-					if ( i < calc_free ) {
-						var calc_P = 0;
-					} else {
-						var calc_P = (calc_credit * calc_percent * calc_rate / 100) * (+i - +calc_free + 1);
-					}
 
-					var calc_F = +calc_C + +calc_P;
-					calc_sum_perc = calc_sum_perc + calc_P;
-					calc_sum_platej = calc_sum_platej + calc_F;
+				//var calc_C = (calc_credit / calc_rate / calc_srok);
+				var calc_C = +calc_credit;
+
+				if ( i < calc_free ) {
+					var calc_P = 0;
 				} else {
-					var calc_C = (calc_credit / calc_rate / calc_srok);
-
-					if ( i < calc_free ) {
-						var calc_P = 0;
-					} else {
-						var calc_P = (calc_credit * calc_percent * calc_rate / 100) * (+i - +calc_free + 1);
-					}
-
-					var calc_F = +calc_C + +calc_P;
-					calc_sum_perc = calc_sum_perc + calc_P;
-					calc_sum_platej = calc_sum_platej + calc_F;
+					var calc_P = (calc_credit * calc_percent * calc_rate / 100) * (+i - +calc_free + 1);
 				}
+
+				var calc_F = +calc_C + +calc_P;
+				calc_sum_perc = calc_sum_perc + calc_P;
+				
+				calc_sum_platej = calc_sum_platej + calc_F;
+
+				
 
 				calc_platej_cred.push(calc_C.toFixed(0));
 				calc_platej_perc.push(calc_P.toFixed(0));
 				calc_platej_full.push(calc_F.toFixed(0));
 
-				calc_sum_dolg = calc_sum_dolg - calc_C;
+				calc_sum_dolg = +calc_credit + +calc_P;
 				if ( calc_sum_dolg < 0 ) {
 					calc_sum_dolg = 0;
 				}
 
+				
+
 				calc_dolg.push(calc_sum_dolg.toFixed(0));
 
-				$('#calc_result_1').text( "~" + (+(calc_sum_platej / calc_srok).toFixed(0)).toLocaleString("ru") + " ₽" );
-				$('#calc_result_2').text( (+calc_sum_platej.toFixed(0)).toLocaleString("ru") + " ₽" );
+				$('#calc_result_1').text( (+calc_sum_dolg.toFixed(0)).toLocaleString("ru") + " ₽" );
+				$('#calc_result_2').text( (+calc_sum_dolg.toFixed(0)).toLocaleString("ru") + " ₽" );
 				$('#calc_result_3').text( (+calc_credit).toLocaleString("ru") + " ₽" );
-				$('#calc_result_4').text( (+(+calc_sum_platej - +calc_credit).toFixed(0)).toLocaleString("ru") + " ₽" );
+				$('#calc_result_4').text( (+calc_P.toFixed(0)).toLocaleString("ru") + " ₽" );
 				$('#calc_result_5').text( calc_percent + "%" );
 				// $('#calc_result_6').text( calc_date_new );
-				var calc_compare = (calc_sum_perc / (+calc_credit + +calc_sum_perc)).toFixed(2) * 100;
+
+				var calc_compare = (calc_credit / (calc_sum_dolg / 100)).toFixed(2);
+				//var calc_compare = (calc_P / (+calc_credit)).toFixed(2) * 100;
 			}
 
 		}
 
-		$('.compare__credit').text( (100 - +calc_compare).toFixed(0) + "%" );
-		$('.compare__percent').text( calc_compare.toFixed(0) + "%" );
+		// $('.compare__credit').text( (100 - +calc_compare).toFixed(0) + "%" );
+		// $('.compare__percent').text( calc_compare.toFixed(0) + "%" );
 
-		$('.compare__credit').css({width: (100 - +calc_compare) + "%"});
-		$('.compare__percent').css({width: calc_compare + "%"});
+		$('.compare__credit').text( (+calc_compare).toFixed(1) + "%" );
+		$('.compare__percent').text( (100 - +calc_compare).toFixed(1) + "%" );
+
+		$('.compare__percent').css({width: (100 - +calc_compare) + "%"});
+		$('.compare__credit').css({width: calc_compare + "%"});
 		
 		if ( calc_compare < 9 ) {
 			$('.compare__percent').text( "" );
@@ -422,8 +427,8 @@ $(document).ready(function() {
 			}
 
 
-
-			$('.chart__wrap').append(`
+			if ( calc_type == 1 || calc_type == 2 ) {
+				$('.chart__wrap').append(`
 
 				<div style="width: ${bar_width}px; padding: 0 ${bar_padding}px" class="chart__bar" data-date="${calc_dateARR[z]}" data-numb="№${z+1}" data-perc="${calc_platej_perc[z]} ₽" data-credit="${calc_platej_cred[z]} ₽">
 					<div style="height: ${bar_height_1}%;" class="chart__perc chart__perc--1"></div>
@@ -431,14 +436,26 @@ $(document).ready(function() {
 				</div>
 
 			`);
+			} else {
+				$('.chart__wrap').append(`
+
+				<div style="width: ${bar_width}px; padding: 0 ${bar_padding}px" class="chart__bar" data-date="${calc_dateARR[z]}" data-numb="№${z+1}" data-perc="${calc_platej_perc[z]} ₽" data-credit="${calc_platej_cred[z]} ₽">
+					<div style="height: ${bar_height_1}%;" class="chart__perc chart__perc--1"></div>
+					<div style="height: ${bar_height_2}%;" class="chart__perc chart__perc--2"></div>
+				</div>
+
+			`);
+			}
+
 
 		}
 
 
+		
 		$('.table__body').empty();
 		for (t = 0; t < calc_chart_period; t++) {
 
-			$('.table__body').append(`
+				$('.table__body').append(`
 
 				<div class="table__row">
 					<div class="table__cell">${calc_dateARR[t]}</div>
