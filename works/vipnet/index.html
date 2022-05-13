@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>
+	
+
+</head>
+<body>
+
+
+    <div class="calc">
+
+        <div class="calc__header">Расчет стоимости услуг</div>
+
+        <div class="calc__border"></div>
+        <div class="calc__title">Выберите услугу</div>
+
+        <div class="calc__choice">
+
+            <input type="radio" name="calc_type" id="calc_type_1" class="calc__radio" value="1" checked>
+            <label for="calc_type_1" class="calc__label">
+                Предоставлению доступа к&nbsp;электронному ресурсу
+            </label>
+
+            <input type="radio" name="calc_type" id="calc_type_2" class="calc__radio" value="2">
+            <label for="calc_type_2" class="calc__label">
+                Приобретение программного обеспечения
+            </label>
+
+            <input type="radio" name="calc_type" id="calc_type_3" class="calc__radio" value="3">
+            <label for="calc_type_3" class="calc__label">
+                Аренда программного обеспечения
+            </label>
+
+            <input type="radio" name="calc_type" id="calc_type_4" class="calc__radio" value="4">
+            <label for="calc_type_4" class="calc__label">
+                Телемедицина
+            </label>
+
+        </div>
+
+        <div class="calc__hide calc__border"></div>
+        <div class="calc__hide calc__title">Выберите конфигурацию</div>
+
+        <div id="calc_body_1" class="calc__body">
+
+            <div class="calc__line">
+                <div class="calc__element">
+                    <div class="calc__fly">&nbsp;</div>
+
+                    <div class="calc__text">Услуги по предоставлению доступа к электронному ресурсу eln.online-visit.ru <span class="calc__italic">(Количество рабочих мест не ограничено)</span> </div>
+                </div>
+
+                <div class="calc__flex">
+                    <!-- <div class="calc__element">
+                        <div class="calc__fly">Рабочих мест</div>
+    
+                        <div class="calc__plusminus">
+                            <div class="calc__minus">-</div>
+                            <input type="text" class="calc__input calc__input--inf" value="∞" disabled>
+                            <div class="calc__plus">+</div>
+                        </div>
+                        
+                    </div> -->
+    
+                    <div class="calc__element">
+                        <div class="calc__fly">Кол-во месяцев</div>
+    
+                        <div class="calc__plusminus">
+                            <div class="calc__minus">-</div>
+                            <input id="calc_inp_1_1_1" type="text" class="calc__input" value="12" disabled>
+                            <div class="calc__plus">+</div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="calc_body_2" class="calc__body">
+
+            <div class="calc__line">
+
+                <div class="calc__element">
+                    <div class="calc__fly">&nbsp;</div>
+
+                    <div class="calc__text">ПАК ViPNet Client for Windows&nbsp;C&nbsp;4.x. Бессрочная лицензия.</div>
+                </div>
+
+                <div class="calc__flex">
+                    <div class="calc__element">
+                        <div class="calc__fly">Кол-во</div>
+    
+                        <div class="calc__plusminus">
+                            <div class="calc__minus">-</div>
+                            <input id="calc_inp_2_1_1" type="text" class="calc__input" value="1" disabled>
+                            <div class="calc__plus">+</div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="calc__line">
+                <div class="calc__element">
+                    <div class="calc__serv">Дополнительно</div>
+                </div>
+            </div> -->
+
+            <div class="calc__line">
+
+                <div class="calc__element calc__element--100">
+                    <div class="calc__fly calc__fly--blue">&nbsp;</div>
+
+                    <div class="calc__text"><span class="calc__more">[ дополнительно ]</span> Настройка ViPNet Client for Windows&nbsp;C&nbsp;4.x</div>
+                </div>
+
+                <div class="calc__flex">
+                    <div class="calc__element">
+                        <div class="calc__fly">Кол-во</div>
+    
+                        <div class="calc__plusminus">
+                            <div class="calc__minus">-</div>
+                            <input id="calc_inp_2_2_1" type="text" class="calc__input" value="1" disabled>
+                            <div class="calc__plus">+</div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="calc__line">
+
+                <div class="calc__element calc__element--100">
+                    <div class="calc__fly calc__fly--blue">&nbsp;</div>
+
+                    <div class="calc__text"><span class="calc__more">[ дополнительно ]</span> Абонентское обслуживание защищенного соединения сети VipNet&nbsp;№1638</div>
+                </div>
+
+                <div class="calc__flex">
+                    <div class="calc__element">
+                        <div class="calc__fly">Рабочих мест</div>
+    
+                        <div class="calc__plusminus">
+                            <div class="calc__minus">-</div>
+                            <input id="calc_inp_2_3_1" type="text" class="calc__input" value="1" disabled>
+                            <div class="calc__plus">+</div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="calc__element">
+                        <div class="calc__fly">Кол-во месяцев</div>
+    
+                        <div class="calc__plusminus">
+                            <div class="calc__minus">-</div>
+                            <input id="calc_inp_2_3_2" type="text" class="calc__input" value="12" disabled>
+                            <div class="calc__plus">+</div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div id="calc_body_3" class="calc__body">
+
+            <div class="calc__line">
+
+                <div class="calc__element">
+                    <div class="calc__fly calc__fly--blue">&nbsp;</div>
+
+                    <div class="calc__text">Услуги по предоставлению во временное пользование программного обеспечения</div>
+                </div>
+
+                <div class="calc__flex">
+                    <div class="calc__element">
+                        <div class="calc__fly">Рабочих мест</div>
+    
+                        <div class="calc__plusminus">
+                            <div class="calc__minus">-</div>
+                            <input id="calc_inp_3_1_1" type="text" class="calc__input" value="1" disabled>
+                            <div class="calc__plus">+</div>
+                        </div>
+                    </div>
+    
+                    <div class="calc__element">
+                        <div class="calc__fly">Кол-во месяцев</div>
+    
+                        <div class="calc__plusminus">
+                            <div class="calc__minus">-</div>
+                            <input id="calc_inp_3_1_2" type="text" class="calc__input" value="12" disabled>
+                            <div class="calc__plus">+</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="calc__line">
+                <div class="calc__element">
+                    <div class="calc__fly calc__fly--blue">&nbsp;</div>
+
+                    <div class="calc__text"><span class="calc__more">[ дополнительно ]</span> Настройка ViPNet Client for Windows&nbsp;C&nbsp;4.x</div>
+                </div>
+
+                <div class="calc__flex">
+                    <div class="calc__element">
+                        <div class="calc__fly">Рабочих мест</div>
+    
+                        <div class="calc__plusminus">
+                            <div class="calc__minus">-</div>
+                            <input id="calc_inp_3_2_1" type="text" class="calc__input" value="1" disabled>
+                            <div class="calc__plus">+</div>
+                        </div>
+                    </div>
+    
+
+                </div>
+            </div>
+
+            <div class="calc__line">
+                <div class="calc__element">
+                    <div class="calc__fly calc__fly--blue">&nbsp;</div>
+
+                    <div class="calc__text"><span class="calc__more">[ дополнительно ]</span> Абонентское обслуживание защищенного соединения сети VipNet&nbsp;№1638 (ежемесячная оплата)</div>
+                </div>
+
+                <div class="calc__flex">
+                    <div class="calc__element">
+                        <div class="calc__fly">Рабочих мест</div>
+    
+                        <div class="calc__plusminus">
+                            <div class="calc__minus">-</div>
+                            <input id="calc_inp_3_3_1" type="text" class="calc__input" value="1" disabled>
+                            <div class="calc__plus">+</div>
+                        </div>
+                    </div>
+    
+                    <div class="calc__element">
+                        <div class="calc__fly">Кол-во месяцев</div>
+    
+                        <div class="calc__plusminus">
+                            <div class="calc__minus">-</div>
+                            <input id="calc_inp_3_3_2" type="text" class="calc__input" value="12" disabled>
+                            <div class="calc__plus">+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- id="calc_body_4" <div class="calc__body">
+
+            <div class="calc__line">
+                <div class="calc__element">
+                    <div class="calc__fly calc__fly--blue">&nbsp;</div>
+
+                    <div class="calc__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, impedit.</div>
+                </div>
+            </div>
+
+        </div> -->
+
+        <div class="calc__result">
+            <div class="calc__big">Итоговая годовая стоимость</div>
+
+            <div class="calc__summ">
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
