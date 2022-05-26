@@ -1,0 +1,152 @@
+$color1: #FFC107
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: sans-serif
+    position: relative
+
+body
+    position: relative
+    background: #eee
+
+.calc
+    width: 100%
+    max-width: 960px
+    background: #fff
+    border-radius: 4px
+    overflow: hidden
+    margin: 100px auto
+    @media ( max-width: 991px )
+        width: 98%
+
+    &__choice
+        display: flex
+        flex-wrap: wrap
+        margin: 30px 0 0 0
+        padding: 0 10px
+
+    &__wrap
+        display: flex
+        flex-wrap: wrap
+        margin: 30px 0 50px 0
+        padding: 0 10px
+        &--show
+            display: flex !important
+
+    &__box
+        width: 33.33%
+        padding: 10px 20px
+        @media ( max-width: 991px )
+            padding: 10px
+        @media ( max-width: 800px )
+            width: 50%
+        @media ( max-width: 650px )
+            width: 100%
+            max-width: 450px
+            margin: 0 auto
+        &--special
+            display: flex
+            align-items: center
+            width: 66.66%
+            @media ( max-width: 800px )
+                width: 50%
+            @media ( max-width: 650px )
+                width: 100%
+                max-width: 450px
+                margin: 0 auto
+                justify-content: center
+        &--50
+            width: 50%
+            @media ( max-width: 650px )
+                width: 100%
+                max-width: 450px
+                margin: 0 auto
+
+    &__title
+        font-weight: 600
+        font-size: 18px
+        @media ( max-width: 450px )
+            font-size: 16px
+        &--result
+            font-size: 16px
+            font-weight: 400
+            color: #222
+            text-align: center
+
+    &__arrow
+        margin: 0 10px
+        color: #aaa
+        &::before
+            content: "◄"
+            position: absolute
+            left: -10px
+            font-size: 16px
+            margin: 3px 0 0 0
+            color: #aaa
+            @media ( max-width: 650px )
+                transform: rotate(90deg)
+                margin: -2px 0 0 0
+
+    &__border
+        background: #eee
+        width: 100%
+        margin: 30px auto
+        height: 1px
+
+    &__drop
+        padding: 10px
+        width: 100%
+        display: block
+        font-size: 17px
+        margin: 10px 0
+        border-radius: 4px
+        border: 2px solid $color1
+        &__value
+        &__list
+            display: none
+            position: absolute
+            margin: 15px 0 0 0
+            border-radius: 4px
+            border: 2px solid $color1
+            padding: 10px 0
+            left: -2px
+            width: calc( 100% + 4px )
+            z-index: 99
+            background: #fff
+        &__li
+
+    &__select
+        padding: 10px
+        width: 100%
+        display: block
+        font-size: 17px
+        margin: 10px 0
+        border-radius: 4px
+        border: 2px solid $color1
+        @media ( max-width: 450px )
+            font-size: 16px
+
+    &__input
+        padding: 10px
+        width: 100%
+        display: block
+        font-size: 17px
+        margin: 10px 0
+        border-radius: 4px
+        border: 2px solid $color1
+        @media ( max-width: 450px )
+            font-size: 16px
+
+
+    &__result
+        background: $color1
+        padding: 20px
+        box-shadow: 0 -10px 20px 1px rgba(0,0,0,0.08)
+
+    &__summ
+        font-size: 20px
+        font-weight: 600
+        text-align: center
+        margin: 10px 0 0 0

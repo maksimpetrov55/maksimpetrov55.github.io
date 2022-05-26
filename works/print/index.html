@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>
+
+</head>
+<body>
+
+    <div class="calc">
+
+        <div class="calc__choice">
+            <div class="calc__box">
+                <select name="" id="calc_material" class="calc__select">
+                    <option value="1">Наклейки</option>
+                    <option value="2">Аппликация</option>
+                    <option value="3">Бэклит</option>
+                    <option value="4">Баннер</option>
+                    <option value="5">Магнит</option>
+                    <option value="6">Таблички</option>
+                    <option value="7">Постерная бумага</option>
+                </select>
+            </div>
+            <div class="calc__box calc__box--special">
+                <div class="calc__title"><span class="calc__arrow">——</span> Выберите материал</div>
+            </div>
+        </div>
+
+        <div class="calc__border"></div>
+
+        <div class="calc__wrap calc__wrap--1">
+            <div class="calc__box">
+                <div class="calc__title">Ширина (см)</div>
+                <input id="calc_inp_1_1" type="number" class="calc__input" value="0" min="0">
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Высота (см)</div>
+                <input id="calc_inp_1_2" type="number" class="calc__input" value="0" min="0">
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Тираж (см)</div>
+                <input id="calc_inp_1_3" type="number" class="calc__input" value="0" min="0">
+            </div>
+
+            <div class="calc__box">
+                <div class="calc__title">Материал</div>
+
+                <!-- <div class="calc__drop">
+                    <div class="calc__drop__value">1</div>
+                    <div class="calc__drop__list">
+                        <div class="calc__drop__li">1</div>
+                        <div class="calc__drop__li">2</div>
+                    </div>
+                </div> -->
+
+                <select id="calc_sel_1_1" class="calc__select">
+                    <option value="800">Белая самоклейка</option>
+                    <option value="1100">Цветная самоклейка</option>
+                    <option value="1500">Голографическая пленка</option>
+                    <option value="5000">ФЭС24</option>
+                </select>
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Резка</div>
+                <select id="calc_sel_1_2" class="calc__select">
+                    <option value="300">Плоттерная резка (круг, квадрат и т. д.)</option>
+                    <option value="600">Резка сложного контура (фигурная)</option>
+                    <option value="530">Плоттерная резка + поштучная резка</option>
+                    <option value="830">Резка сложного контура  + поштучная резка</option>
+                    <option value="0">Без резки</option>
+                </select>
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Качество печати</div>
+                <select id="calc_sel_1_3" class="calc__select">
+                    <option value="290">720dpi</option>
+                    <option value="380">1440dpi</option>
+                    <option value="0">Без печати (только резка)</option>
+                </select>
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Ламинация</div>
+                <select id="calc_sel_1_4" class="calc__select">
+                    <option value="0">Без ламинации</option>
+                    <option value="420">Матовая/глянцевая</option>
+                    <option value="420">Глянцевая</option>
+                </select>
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Монтажная пленка</div>
+                <select id="calc_sel_1_5" class="calc__select">
+                    <option value="0">Без монтажной пленки</option>
+                    <option value="420">С монтажной пленкой</option>
+                </select>
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Срок изготовления</div>
+                <select id="calc_sel_1_6" class="calc__select">
+                    <option value="1">3 дня</option>
+                    <option value="1.8">1 день</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="calc__wrap calc__wrap--2">
+            <div class="calc__box">
+                <div class="calc__title">Ширина (см)</div>
+                <input id="calc_inp_2_1" type="number" class="calc__input" value="0" min="0">
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Высота (см)</div>
+                <input id="calc_inp_2_2" type="number" class="calc__input" value="0" min="0">
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Тираж (см)</div>
+                <input id="calc_inp_2_3" type="number" class="calc__input" value="0" min="0">
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Резка</div>
+                <select id="calc_sel_2_1" class="calc__select">
+                    <option value="300">Плоттерная резка (круг, квадрат и т. д.)</option>
+                    <option value="600">Резка сложного контура (фигурная)</option>
+                    <option value="530">Плоттерная резка + поштучная резка</option>
+                    <option value="830">Резка сложного контура  + поштучная резка</option>
+                </select>
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Монтажная пленка</div>
+                <select id="calc_sel_2_2" class="calc__select">
+                    <option value="0">Без монтажной пленки</option>
+                    <option value="420">С монтажной пленкой</option>
+                </select>
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Срок изготовления</div>
+                <select id="calc_sel_2_3" class="calc__select">
+                    <option value="1">3 дня</option>
+                    <option value="1.8">1 день</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="calc__wrap calc__wrap--3">
+            <div class="calc__box calc__box--50">
+                <div class="calc__title">Ширина (см)</div>
+                <input id="calc_inp_3_1" type="number" class="calc__input" value="0" min="0">
+            </div>
+            <div class="calc__box calc__box--50">
+                <div class="calc__title">Высота (см)</div>
+                <input id="calc_inp_3_2" type="number" class="calc__input" value="0" min="0">
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Плотность цвета</div>
+                <select id="calc_sel_3_1" class="calc__select">
+                    <option value="1">1 слой краски</option>
+                    <option value="1.3">2 слоя краски</option>
+                </select>
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Качество печати</div>
+                <select id="calc_sel_3_2" class="calc__select">
+                    <option value="1">720dpi</option>
+                    <option value="1.3">1440dpi</option>
+                </select>
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Срок изготовления</div>
+                <select id="calc_sel_3_3" class="calc__select">
+                    <option value="1">3 дня</option>
+                    <option value="1.8">1 день</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="calc__wrap calc__wrap--4">
+            <div class="calc__box">
+                <div class="calc__title">Высота (см)</div>
+                <input id="calc_inp_4_1" type="number" class="calc__input" value="0" min="0">
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Ширина (см)</div>
+                <input id="calc_inp_4_2" type="number" class="calc__input" value="0" min="0">
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Количество люверсов</div>
+                <input id="calc_inp_4_3" type="number" class="calc__input" value="0" min="0">
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Загибы</div>
+                <select id="calc_sel_4_1" class="calc__select">
+                    <option value="200">Да</option>
+                    <option value="0">Нет</option>
+                </select>
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Качество печати</div>
+                <select id="calc_sel_4_2" class="calc__select">
+                    <option value="1">720dpi</option>
+                    <option value="1.3">1440dpi</option>
+                </select>
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Срок изготовления</div>
+                <select id="calc_sel_4_3" class="calc__select">
+                    <option value="1">3 дня</option>
+                    <option value="1.8">1 день</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="calc__wrap calc__wrap--5">
+            <div class="calc__box calc__box--50">
+                <div class="calc__title">Высота (см)</div>
+                <input id="calc_inp_5_1" type="number" class="calc__input" value="0" min="0">
+            </div>
+            <div class="calc__box calc__box--50">
+                <div class="calc__title">Ширина (см)</div>
+                <input id="calc_inp_5_2" type="number" class="calc__input" value="0" min="0">
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Ламинация</div>
+                <select id="calc_sel_5_1" class="calc__select">
+                    <option value="0">Без ламинации</option>
+                    <option value="420">Матовая/глянцевая</option>
+                </select>
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Качество печати</div>
+                <select id="calc_sel_5_2" class="calc__select">
+                    <option value="1">720dpi</option>
+                    <option value="1.3">1440dpi</option>
+                </select>
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Срок изготовления</div>
+                <select id="calc_sel_5_3" class="calc__select">
+                    <option value="1">3 дня</option>
+                    <option value="1.8">1 день</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="calc__wrap calc__wrap--6">
+            <div class="calc__box">
+                <div class="calc__title">Высота (см)</div>
+                <input id="calc_inp_6_1" type="number" class="calc__input" value="0" min="0">
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Ширина (см)</div>
+                <input id="calc_inp_6_2" type="number" class="calc__input" value="0" min="0">
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Тираж</div>
+                <input id="calc_inp_6_3" type="number" class="calc__input" value="0" min="0">
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Толщина пластика</div>
+                <select id="calc_sel_6_1" class="calc__select">
+                    <option value="2488">1 мм</option>
+                    <option value="2796">3 мм</option>
+                    <option value="3088">5 мм</option>
+                    <option value="3688">10 мм</option>
+                    <option value="5500">ФЭС (3 мм)</option>
+                </select>
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Ламинация</div>
+                <select id="calc_sel_6_2" class="calc__select">
+                    <option value="0">Без ламинации</option>
+                    <option value="420">Матовая/глянцевая</option>
+                </select>
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Резка</div>
+                <select id="calc_sel_6_3" class="calc__select">
+                    <option value="1">Квадрат/прямоугольник</option>
+                    <option value="1.5">Круг, закругленные края, треугольник и т. д.</option>
+                    <option value="1.9">Трафарет</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="calc__wrap calc__wrap--7">
+            <div class="calc__box">
+                <div class="calc__title">Высота (см)</div>
+                <input id="calc_inp_7_1" type="number" class="calc__input" value="0" min="0">
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Ширина (см)</div>
+                <input id="calc_inp_7_2" type="number" class="calc__input" value="0" min="0">
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Тираж</div>
+                <input id="calc_inp_7_3" type="number" class="calc__input" value="0" min="0">
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Тип бумаги</div>
+                <select id="calc_sel_7_1" class="calc__select">
+                    <option value="600">BlueBack</option>
+                    <option value="900">Постерная бумага</option>
+                    <option value="1200">Фотобумага</option>
+                </select>
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Качество печати</div>
+                <select id="calc_sel_7_2" class="calc__select">
+                    <option value="1">720dpi</option>
+                    <option value="1.3">1440dpi</option>
+                </select>
+            </div>
+            <div class="calc__box">
+                <div class="calc__title">Срок изготовления</div>
+                <select id="calc_sel_7_3" class="calc__select">
+                    <option value="1">3 дня</option>
+                    <option value="1.8">1 день</option>
+                </select>
+            </div>
+        </div>
+
+
+
+
+        <div class="calc__result">
+
+            <div class="calc__title calc__title--result">Результат</div>
+
+            <div class="calc__summ">0.00 ₽</div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
