@@ -111,8 +111,9 @@ $(document).ready(function() {
 			var calc_sel_5_1 = $('#calc_sel_5_1').val();
 			var calc_sel_5_2 = $('#calc_sel_5_2').val();
 			var calc_sel_5_3 = $('#calc_sel_5_3').val();
+			var calc_sel_5_4 = $('#calc_sel_5_4').val();
 
-			var calc_formula = ( +calc_sel_5_1 + 2400 ) * calc_inp_5_1 * calc_inp_5_2 * calc_sel_5_2 * calc_sel_5_3 / 10000;
+			var calc_formula = ( +calc_sel_5_1 + 2400 ) * calc_inp_5_1 * calc_inp_5_2 * calc_sel_5_2 * calc_sel_5_3 * calc_sel_5_4 / 10000;
 		}
 
 		if ( calc_type == 6 ) {
@@ -122,8 +123,9 @@ $(document).ready(function() {
 			var calc_sel_6_1 = $('#calc_sel_6_1').val();
 			var calc_sel_6_2 = $('#calc_sel_6_2').val();
 			var calc_sel_6_3 = $('#calc_sel_6_3').val();
+			var calc_sel_6_4 = $('#calc_sel_6_4').val();
 
-			var calc_formula = ( +calc_sel_6_1 + +calc_sel_6_2 ) * calc_inp_6_1 * calc_inp_6_2 * calc_inp_6_3 * calc_sel_6_3 / 10000;
+			var calc_formula = ( +calc_sel_6_1 + +calc_sel_6_2 ) * calc_inp_6_1 * calc_inp_6_2 * calc_inp_6_3 * calc_sel_6_3 * calc_sel_6_4 / 10000;
 		}
 
 		if ( calc_type == 7 ) {
