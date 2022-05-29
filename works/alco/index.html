@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>
+
+</head>
+<body>
+
+
+    <div class="calc">
+
+        <div class="calc__header">Калькулятор концентрации спирта в&nbsp;крови</div>
+
+        <div class="calc__border"></div>
+
+        <div class="calc__title">Ваш пол:</div>
+
+        <div class="calc__choice">
+            <input class="calc__radio" type="radio" name="calc_sex" id="calc_radio_1" value="0.7" checked>
+            <label class="calc__label" for="calc_radio_1">Мужской</label>
+
+            <input class="calc__radio" type="radio" name="calc_sex" id="calc_radio_2" value="0.6">
+            <label class="calc__label" for="calc_radio_2">Женский</label>
+        </div>
+
+        <div class="calc__border"></div>
+
+        <div class="calc__block calc__flex">
+
+            <div class="calc__box">
+                <div class="calc__title">Масса тела (40-150 кг):</div>
+                <input id="calc_mass" type="text" class="calc__input" value="60">
+            </div>
+
+            <div class="calc__box">
+                <div class="calc__title">Рост (120-200 см):</div>
+                <input id="calc_height" type="text" class="calc__input" value="170">
+            </div>
+
+        </div>
+
+        <div class="calc__border"></div>
+
+        <div class="calc__block calc__flex">
+
+            <div class="calc__box">
+                <div class="calc__title">Скорость употребления:</div>
+                <select id="calc_time_1" class="calc__select">
+                    <option value="0">выпил все сразу</option>
+                    <option value="1">равномерно за 1 час.</option><option value="2">равномерно за 2 час.</option>
+                    <option value="3">равномерно за 3 час.</option><option value="4">равномерно за 4 час.</option>
+                    <option value="5">равномерно за 5 час.</option><option value="6">равномерно за 6 час.</option>
+                    <option value="7">равномерно за 7 час.</option><option value="8">равномерно за 8 час.</option>
+                    <option value="9">равномерно за 9 час.</option><option value="10">равномерно за 10 час.</option>
+                    <option value="11">равномерно за 11 час.</option><option value="12">равномерно за 12 час.</option>
+                </select>
+            </div>
+
+            <div class="calc__box">
+                <div class="calc__title">Времени после употребления:</div>
+                <select id="calc_time_2" class="calc__select">
+                    <option value="0">Закончил только что</option>
+                    <option value="1">1 час.</option><option value="2">2 час.</option><option value="3">3 час.</option>
+                    <option value="4">4 час.</option><option value="5">5 час.</option><option value="6">6 час.</option>
+                    <option value="7">7 час.</option><option value="8">8 час.</option><option value="9">9 час.</option>
+                    <option value="10">10 час.</option><option value="11">11 час.</option><option value="12">12 час.</option>
+                    <option value="13">13 час.</option><option value="14">14 час.</option><option value="15">15 час.</option>
+                    <option value="16">16 час.</option><option value="17">17 час.</option><option value="18">18 час.</option>
+                    <option value="19">19 час.</option><option value="20">20 час.</option><option value="21">21 час.</option>
+                    <option value="22">22 час.</option><option value="23">23 час.</option><option value="24">24 час.</option>
+                    <option value="25">25 час.</option><option value="26">26 час.</option><option value="27">27 час.</option>
+                    <option value="28">28 час.</option><option value="29">29 час.</option><option value="30">30 час.</option>
+                    <option value="31">31 час.</option><option value="32">32 час.</option><option value="33">33 час.</option>
+                    <option value="34">34 час.</option><option value="35">35 час.</option><option value="36">36 час.</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="calc__border"></div>
+
+        <div class="calc__title">Наполненность&nbsp;&nbsp; желудка:</div>
+
+        <div class="calc__choice">
+            <input class="calc__radio" type="radio" name="calc_eat" id="calc_radio_3" value="1" checked>
+            <label class="calc__label" for="calc_radio_3">Пустой</label>
+
+            <input class="calc__radio" type="radio" name="calc_eat" id="calc_radio_4" value="0.937">
+            <label class="calc__label" for="calc_radio_4">Сытый</label>
+            
+            <input class="calc__radio" type="radio" name="calc_eat" id="calc_radio_5" value="0.873">
+            <label class="calc__label" for="calc_radio_5">Полный</label>
+        </div>
+
+        <div class="calc__border"></div>
+
+        <div class="calc__block">
+
+            <div class="calc__title">Напитки:</div>
+
+            <div class="calc__line">
+                <select id="calc_drink1_perc" class="calc__select">
+                    <option value="0.5">Безалкогольное пиво (0.5%)</option>
+                    <option value="0.9">Кефир старше 3х дней (0.7%)</option>
+                    <option value="0.9">Хлебный квас (0.9%)</option>
+                    <option value="1.2">Кумыс (1.2%)</option>
+                    <option value="4">Пиво лёгкое (4%)</option>
+                    <option value="5">Пиво обычное/Сидр (5%)</option>
+                    <option value="6">Пиво портер/темное (6%)</option>
+                    <option value="7">Cлабоалкоголки (7%)</option>
+                    <option value="8">Пиво крепкое (8%)</option>
+                    <option value="10">Шампанское (10%)</option>
+                    <option value="12">Вино (12%)</option>
+                    <option value="15">Вермут (Martini и пр.) (15%)</option>
+                    <option value="17">Мягкие ликёры (Baileys и пр.) (17%)</option>
+                    <option value="20">Портвейн (20%)</option>
+                    <option value="20">Средние ликёры (Malibu и пр.) (20%)</option>
+                    <option value="30">Рижский бальзам и т.п. (30%)</option>
+                    <option value="35">Крепкие ликёры (Jagermeister и т.п.) (35%)</option>
+                    <option value="38">Текила/Бренди/Бехеровка и т.п. (38%)</option>
+                    <option value="39">Ром, Джин (39%)</option>
+                    <option selected value="40">Водка (40%)</option>
+                    <option value="40">Коньяк (40%)</option>
+                    <option value="40">Виски/Бурбон/Скотч (40%)</option>
+                    <option value="40">Самбука (40%)</option>
+                    <option value="60">Абсент лёгкий (60%)</option>
+                    <option value="69">Абсент средний (69%)</option>
+                    <option value="70">Настойка боярышника (70%)</option>
+                    <option value="80">Абсент крепкий (80%)</option>
+                    <option value="95">Чистый спирт (95%)</option>
+                </select>
+
+                <!-- <div class="calc__note calc__note--small">%</div> -->
+
+                <input id="calc_drink1_ml" type="text" class="calc__input" value="300">
+
+                <div class="calc__note calc__note--small">мл</div>
+
+            </div>
+
+            <div class="calc__line calc__line--hidden">
+                <select id="calc_drink2_perc" class="calc__select">
+                    <option value="0.5">Безалкогольное пиво (0.5%)</option>
+                    <option value="0.9">Кефир старше 3х дней (0.7%)</option>
+                    <option value="0.9">Хлебный квас (0.9%)</option>
+                    <option value="1.2">Кумыс (1.2%)</option>
+                    <option value="4">Пиво лёгкое (4%)</option>
+                    <option value="5">Пиво обычное/Сидр (5%)</option>
+                    <option value="6">Пиво портер/темное (6%)</option>
+                    <option value="7">Cлабоалкоголки (7%)</option>
+                    <option value="8">Пиво крепкое (8%)</option>
+                    <option value="10">Шампанское (10%)</option>
+                    <option value="12">Вино (12%)</option>
+                    <option value="15">Вермут (Martini и пр.) (15%)</option>
+                    <option value="17">Мягкие ликёры (Baileys и пр.) (17%)</option>
+                    <option value="20">Портвейн (20%)</option>
+                    <option value="20">Средние ликёры (Malibu и пр.) (20%)</option>
+                    <option value="30">Рижский бальзам и т.п. (30%)</option>
+                    <option value="35">Крепкие ликёры (Jagermeister и т.п.) (35%)</option>
+                    <option value="38">Текила/Бренди/Бехеровка и т.п. (38%)</option>
+                    <option value="39">Ром, Джин (39%)</option>
+                    <option value="40">Водка (40%)</option>
+                    <option value="40">Коньяк (40%)</option>
+                    <option value="40">Виски/Бурбон/Скотч (40%)</option>
+                    <option value="40">Самбука (40%)</option>
+                    <option value="60">Абсент лёгкий (60%)</option>
+                    <option value="69">Абсент средний (69%)</option>
+                    <option value="70">Настойка боярышника (70%)</option>
+                    <option value="80">Абсент крепкий (80%)</option>
+                    <option value="95">Чистый спирт (95%)</option>
+                </select>
+
+                <!-- <div class="calc__note calc__note--small">%</div> -->
+
+                <input id="calc_drink2_ml" type="text" class="calc__input" value="0">
+
+                <div class="calc__note calc__note--small">мл</div>
+
+            </div>
+
+            <div class="calc__line calc__line--hidden">
+                <select id="calc_drink3_perc" class="calc__select">
+                    <option value="0.5">Безалкогольное пиво (0.5%)</option>
+                    <option value="0.9">Кефир старше 3х дней (0.7%)</option>
+                    <option value="0.9">Хлебный квас (0.9%)</option>
+                    <option value="1.2">Кумыс (1.2%)</option>
+                    <option value="4">Пиво лёгкое (4%)</option>
+                    <option value="5">Пиво обычное/Сидр (5%)</option>
+                    <option value="6">Пиво портер/темное (6%)</option>
+                    <option value="7">Cлабоалкоголки (7%)</option>
+                    <option value="8">Пиво крепкое (8%)</option>
+                    <option value="10">Шампанское (10%)</option>
+                    <option value="12">Вино (12%)</option>
+                    <option value="15">Вермут (Martini и пр.) (15%)</option>
+                    <option value="17">Мягкие ликёры (Baileys и пр.) (17%)</option>
+                    <option value="20">Портвейн (20%)</option>
+                    <option value="20">Средние ликёры (Malibu и пр.) (20%)</option>
+                    <option value="30">Рижский бальзам и т.п. (30%)</option>
+                    <option value="35">Крепкие ликёры (Jagermeister и т.п.) (35%)</option>
+                    <option value="38">Текила/Бренди/Бехеровка и т.п. (38%)</option>
+                    <option value="39">Ром, Джин (39%)</option>
+                    <option value="40">Водка (40%)</option>
+                    <option value="40">Коньяк (40%)</option>
+                    <option value="40">Виски/Бурбон/Скотч (40%)</option>
+                    <option value="40">Самбука (40%)</option>
+                    <option value="60">Абсент лёгкий (60%)</option>
+                    <option value="69">Абсент средний (69%)</option>
+                    <option value="70">Настойка боярышника (70%)</option>
+                    <option value="80">Абсент крепкий (80%)</option>
+                    <option value="95">Чистый спирт (95%)</option>
+                </select>
+
+                <!-- <div class="calc__note calc__note--small">%</div> -->
+
+                <input id="calc_drink3_ml" type="text" class="calc__input" value="0">
+
+                <div class="calc__note calc__note--small">мл</div>
+
+            </div>
+
+            <div class="calc__line calc__line--hidden">
+                <select id="calc_drink4_perc" class="calc__select">
+                    <option value="0.5">Безалкогольное пиво (0.5%)</option>
+                    <option value="0.9">Кефир старше 3х дней (0.7%)</option>
+                    <option value="0.9">Хлебный квас (0.9%)</option>
+                    <option value="1.2">Кумыс (1.2%)</option>
+                    <option value="4">Пиво лёгкое (4%)</option>
+                    <option value="5">Пиво обычное/Сидр (5%)</option>
+                    <option value="6">Пиво портер/темное (6%)</option>
+                    <option value="7">Cлабоалкоголки (7%)</option>
+                    <option value="8">Пиво крепкое (8%)</option>
+                    <option value="10">Шампанское (10%)</option>
+                    <option value="12">Вино (12%)</option>
+                    <option value="15">Вермут (Martini и пр.) (15%)</option>
+                    <option value="17">Мягкие ликёры (Baileys и пр.) (17%)</option>
+                    <option value="20">Портвейн (20%)</option>
+                    <option value="20">Средние ликёры (Malibu и пр.) (20%)</option>
+                    <option value="30">Рижский бальзам и т.п. (30%)</option>
+                    <option value="35">Крепкие ликёры (Jagermeister и т.п.) (35%)</option>
+                    <option value="38">Текила/Бренди/Бехеровка и т.п. (38%)</option>
+                    <option value="39">Ром, Джин (39%)</option>
+                    <option value="40">Водка (40%)</option>
+                    <option value="40">Коньяк (40%)</option>
+                    <option value="40">Виски/Бурбон/Скотч (40%)</option>
+                    <option value="40">Самбука (40%)</option>
+                    <option value="60">Абсент лёгкий (60%)</option>
+                    <option value="69">Абсент средний (69%)</option>
+                    <option value="70">Настойка боярышника (70%)</option>
+                    <option value="80">Абсент крепкий (80%)</option>
+                    <option value="95">Чистый спирт (95%)</option>
+                </select>
+
+                <!-- <div class="calc__note calc__note--small">%</div> -->
+
+                <input id="calc_drink4_ml" type="text" class="calc__input" value="0">
+
+                <div class="calc__note calc__note--small">мл</div>
+
+            </div>
+
+            <div class="calc__line calc__line--hidden">
+                <select id="calc_drink5_perc" class="calc__select">
+                    <option value="0.5">Безалкогольное пиво (0.5%)</option>
+                    <option value="0.9">Кефир старше 3х дней (0.7%)</option>
+                    <option value="0.9">Хлебный квас (0.9%)</option>
+                    <option value="1.2">Кумыс (1.2%)</option>
+                    <option value="4">Пиво лёгкое (4%)</option>
+                    <option value="5">Пиво обычное/Сидр (5%)</option>
+                    <option value="6">Пиво портер/темное (6%)</option>
+                    <option value="7">Cлабоалкоголки (7%)</option>
+                    <option value="8">Пиво крепкое (8%)</option>
+                    <option value="10">Шампанское (10%)</option>
+                    <option value="12">Вино (12%)</option>
+                    <option value="15">Вермут (Martini и пр.) (15%)</option>
+                    <option value="17">Мягкие ликёры (Baileys и пр.) (17%)</option>
+                    <option value="20">Портвейн (20%)</option>
+                    <option value="20">Средние ликёры (Malibu и пр.) (20%)</option>
+                    <option value="30">Рижский бальзам и т.п. (30%)</option>
+                    <option value="35">Крепкие ликёры (Jagermeister и т.п.) (35%)</option>
+                    <option value="38">Текила/Бренди/Бехеровка и т.п. (38%)</option>
+                    <option value="39">Ром, Джин (39%)</option>
+                    <option value="40">Водка (40%)</option>
+                    <option value="40">Коньяк (40%)</option>
+                    <option value="40">Виски/Бурбон/Скотч (40%)</option>
+                    <option value="40">Самбука (40%)</option>
+                    <option value="60">Абсент лёгкий (60%)</option>
+                    <option value="69">Абсент средний (69%)</option>
+                    <option value="70">Настойка боярышника (70%)</option>
+                    <option value="80">Абсент крепкий (80%)</option>
+                    <option value="95">Чистый спирт (95%)</option>
+                </select>
+
+                <!-- <div class="calc__note calc__note--small">%</div> -->
+
+                <input id="calc_drink5_ml" type="text" class="calc__input" value="0">
+
+                <div class="calc__note calc__note--small">мл</div>
+
+            </div>
+
+            <div class="calc__add">+</div>
+
+        </div>
+
+        <div class="calc__border"></div>
+
+        <div class="calc__btn">Рассчитать</div>
+
+
+        <div class="calc__result">
+
+            <img src="img/1.png" alt="" class="calc__icon">
+            <div class="calc__title">Максимальная концентрация алкоголя в крови:</div>
+
+            <div id="calc_promille" class="calc__itog">---</div>
+
+            <!-- <div class="calc__remark"></div> -->
+
+            <img src="img/3.png" alt="" class="calc__icon">
+            <div class="calc__title">В выдыхаемом воздухе указанная концентрация соответствует:</div>
+
+            <div id="calc_mlnal" class="calc__itog">---</div>
+
+            <img src="img/2.png" alt="" class="calc__icon">
+            <div class="calc__title">Время выведения из организма:</div>
+
+            <div id="calc_clear" class="calc__itog">---</div>
+
+            <div class="calc__title">Краткая информация о состоянии:</div>
+            <div class="calc__text calc__text--0">
+                <br><span></span> Какие-либо эффекты отсутствуют
+            </div>
+
+            <div class="calc__text calc__text--01">
+                <br><span></span> Практически нормальное поведение
+                <br><span></span> Возможны скрытые проявления
+            </div>
+
+            <div class="calc__text calc__text--03">
+                <br><span></span> Расслабление
+                <br><span></span> Нарушение концентрации
+            </div>
+
+            <div class="calc__text calc__text--06">
+                 <br><span></span> Притупление ощущений
+                 <br><span></span> Заторможенность
+                 <br><span></span> Нарушение когнетивных функций 
+                 <br><span></span> Нарушение восприятия 
+                 <br><span></span> Нарушение периферического зрения 
+                 <br><span></span> Замедленное приспособление зрачка к свету
+            </div>
+
+            <div class="calc__text calc__text--1">
+                 <br><span></span> Экспрессивность
+                 <br><span></span> Переменчивость эмоций
+                 <br><span></span> Нарушение рефлексов 
+                 <br><span></span> Сильное снижение времени реакции
+                 <br><span></span> Нарушение контроля движения
+                 <br><span></span> Нечленораздельная речь
+                 <br><span></span> Вероятность легкого алкогольного отравления
+            </div>
+
+            <div class="calc__text calc__text--2">
+                 <br><span></span> Тяжелое нарушение моторики 
+                 <br><span></span> Ступор
+                 <br><span></span> Потеря способности к пониманию
+                 <br><span></span> Вероятность потери сознания
+                 <br><span></span> Потеря памяти
+            </div>
+
+            <div class="calc__text calc__text--3">
+                 <br><span></span> Сильное угнетение функций центральной нервной системы
+                 <br><span></span> Потеря сознания
+                 <br><span></span> Возможность сильного алкогольного отравления
+                 <br><span></span> Нарушение дыхание 
+                 <br><span></span> Потеря или полная утрата равновесия
+            </div>
+
+            <div class="calc__text calc__text--4">
+                 <br><span></span> Полная утрата контроля за поведением 
+                 <br><span></span> Потеря сознания 
+                 <br><span></span> Нарушение дыхание 
+                 <br><span></span> Вероятность смерти
+                 <br><span></span> Нарушение сердцебиения
+                 <br><span></span> Сильное алкогольное отравление
+            </div>
+
+            <div class="calc__text calc__text--5">
+                 <br><span></span> Сильное алкогольное отравление
+                 <br><span></span> Высокий риск смерти
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>
