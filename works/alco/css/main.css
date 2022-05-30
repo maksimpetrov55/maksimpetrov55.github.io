@@ -21,12 +21,30 @@ body {
   max-width: 960px;
 }
 
+@media (max-width: 768px) {
+  .calc {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 520px) {
+  .calc {
+    padding: 40px 10px;
+  }
+}
+
 .calc__header {
   font-size: 32px;
   font-weight: 600;
   text-align: center;
   margin: 10px 0 10px 0;
   color: #0D68DA;
+}
+
+@media (max-width: 520px) {
+  .calc__header {
+    font-size: 26px;
+  }
 }
 
 .calc__border {
@@ -43,6 +61,12 @@ body {
   font-weight: 600;
 }
 
+@media (max-width: 520px) {
+  .calc__title {
+    font-size: 17px;
+  }
+}
+
 .calc__choice {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,7 +77,14 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 10px 0 0 0;
+  margin: 10px 0 30px 0;
+}
+
+@media (max-width: 680px) {
+  .calc__choice {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .calc__radio {
@@ -87,6 +118,13 @@ body {
   border: 1px solid #c6c6c6;
 }
 
+@media (max-width: 520px) {
+  .calc__label {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
 .calc__block {
   max-width: 780px;
   margin: 0 auto;
@@ -98,8 +136,22 @@ body {
   display: flex;
 }
 
+@media (max-width: 680px) {
+  .calc__flex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .calc__box {
   width: 50%;
+}
+
+@media (max-width: 680px) {
+  .calc__box {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
 }
 
 .calc__input {
@@ -117,9 +169,29 @@ body {
   display: block;
 }
 
+@media (max-width: 520px) {
+  .calc__input {
+    width: 100%;
+    max-width: 340px;
+  }
+}
+
+@media (max-width: 520px) {
+  .calc__input {
+    max-width: 500px;
+  }
+}
+
 .calc__input:focus {
   border: 1px solid #0D68DA;
   background: #f5f5ff;
+}
+
+@media (max-width: 520px) {
+  .calc__input--small {
+    width: 60px;
+    font-size: 16px;
+  }
 }
 
 .calc__line {
@@ -153,6 +225,21 @@ body {
           transition-duration: 0.5s;
   display: block;
   padding: 0 8px;
+}
+
+@media (max-width: 520px) {
+  .calc__select {
+    width: 100%;
+    max-width: 340px;
+  }
+}
+
+@media (max-width: 520px) {
+  .calc__select {
+    max-width: 500px;
+    font-size: 16px;
+    min-width: 200px;
+  }
 }
 
 .calc__note {
@@ -239,6 +326,13 @@ body {
 @media (max-width: 768px) {
   .calc__btn {
     margin: 40px auto 50px auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .calc__btn {
+    width: 100%;
+    max-width: 500px;
   }
 }
 
