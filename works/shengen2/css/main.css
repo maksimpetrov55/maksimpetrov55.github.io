@@ -39,7 +39,7 @@ body {
   text-align: center;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .calc__header {
     font-size: 20px;
   }
@@ -56,14 +56,22 @@ body {
   margin: 5px 0;
 }
 
+@media (max-width: 500px) {
+  .calc__line {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .calc__line--date {
-  margin: 20px 0;
+  margin: 10px 0 10px 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-@media (max-width: 370px) {
+@media (max-width: 450px) {
   .calc__line--date {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -75,7 +83,7 @@ body {
   margin: 0 0 0 10px;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .calc__date {
     margin: 0 0 0 5px;
   }
@@ -85,6 +93,96 @@ body {
   margin: 40px 0 0 0;
 }
 
+.calc__labels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 10px 0;
+}
+
+@media (max-width: 450px) {
+  .calc__labels {
+    display: none;
+  }
+}
+
+.calc__name {
+  line-height: 1.1;
+  width: 27%;
+  font-size: 13px;
+  text-align: center;
+  background: #eee;
+  height: 34px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.calc__name--short {
+  width: 12%;
+}
+
+.calc__text {
+  display: none;
+}
+
+@media (max-width: 450px) {
+  .calc__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 40px;
+    width: 38%;
+  }
+}
+
+.calc__last {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 17px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  height: 40px;
+  padding: 5px;
+  width: 27%;
+}
+
+@media (max-width: 500px) {
+  .calc__last {
+    margin: 0;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 450px) {
+  .calc__last {
+    width: 84%;
+    margin: 0 5px 5px 0;
+  }
+}
+
 .calc__input {
   margin: 0px;
   font-size: 17px;
@@ -92,18 +190,16 @@ body {
   border: 1px solid #ccc;
   height: 40px;
   padding: 0 5px;
-  width: 42%;
+  width: 27%;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .calc__input {
-    width: 100%;
-    margin: 0 5px 0 0;
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 450px) {
   .calc__input {
     width: 84%;
     margin: 0 5px 5px 0;
@@ -114,7 +210,7 @@ body {
   margin: 0 0 20px 0;
 }
 
-@media (max-width: 370px) {
+@media (max-width: 450px) {
   .calc__input--first {
     width: 100%;
   }
@@ -134,15 +230,16 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 12%;
+  height: 40px;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .calc__count {
     min-width: 40px;
   }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 450px) {
   .calc__count {
     margin: 0 0 5px 0;
   }
@@ -170,7 +267,7 @@ body {
   margin: 15px 0 30px 0;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .calc__choice {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -196,7 +293,7 @@ body {
           transition-duration: 0.2s;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .calc__flag {
     margin: 0 0 10px 0;
     width: 17%;
@@ -303,5 +400,10 @@ body {
 
 .calc__examp:hover {
   opacity: 0.7;
+}
+
+.calc__note {
+  text-align: center;
+  margin: 10px auto;
 }
 /*# sourceMappingURL=main.css.map */

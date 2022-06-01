@@ -47,14 +47,14 @@ $(document).ready(function() {
 
 
 	$('.calc__examp').click(function(){
-		$('.calc__input--date1:eq(0)').val("2021-01-01");
-		$('.calc__input--date2:eq(0)').val("2021-01-10");
+		$('.calc__input--date1:eq(0)').val("2022-01-01");
+		$('.calc__input--date2:eq(0)').val("2022-01-10");
 
-		$('.calc__input--date1:eq(1)').val("2021-03-01");
-		$('.calc__input--date2:eq(1)').val("2021-03-30");
+		$('.calc__input--date1:eq(1)').val("2022-03-01");
+		$('.calc__input--date2:eq(1)').val("2022-03-30");
 
-		$('.calc__input--date1:eq(2)').val("2021-05-01");
-		$('.calc__input--date2:eq(2)').val("2021-06-09");
+		$('.calc__input--date1:eq(2)').val("2022-05-01");
+		$('.calc__input--date2:eq(2)').val("2022-06-09");
 	});
 
 
@@ -104,6 +104,9 @@ $(document).ready(function() {
 			}
 		});
 
+		// console.log("date_biggest " + toDate( date_biggest + (24*3600*1000*91) ) );
+		
+
 		if ( date_biggest > 0 ){
 
 			$('#inp1').val( toDate( date_biggest ) );
@@ -116,8 +119,7 @@ $(document).ready(function() {
 
 		}
 
-		
-
+		var calc_count = 0;
 		var calc_diff = 0;
 		$('.calc__line--date').each(function(){
 
@@ -141,15 +143,32 @@ $(document).ready(function() {
 				}
 			}
 
+			if ( value1 > 0 ) {
+				if ( (90 - 1 - +calc_count) >= 0 ) {
+					var calc_left = toFormat (toDate (+value1 + ((24 * 3600 * 1000 ) * (90 - 1 - +calc_count)) ));
+				} else {
+					var calc_left = toFormat (toDate (+value1 + ((24 * 3600 * 1000 ) * 0) ));
+				}
+				
+			}
+
+			$(this).find(".calc__last").text(calc_left);
+			
+
+			calc_count += +$(this).find(".calc__count").text();
+
+			// if ( calc_count > 90 && value1 > 0 ) {
+			// 	$(this).find(".calc__last").text("---");
+			// }
 
 		});
 
 		console.log("calc_diff " + calc_diff);
 
-		var calc_count = 0;
-		$(".calc__count").each(function(){
-			calc_count += +$(this).text();
-		});
+		
+		// $(".calc__count").each(function(){
+		// 	calc_count += +$(this).text();
+		// });
 
 		console.log("calc_count " + calc_count);
 		
@@ -197,6 +216,13 @@ $(document).ready(function() {
 			$('.calc__result').text( calc_lang_text_bad + (count_itog * (-1) ) );
 			$('.calc__result').addClass("calc__result--bad");
 		}
+
+		$('.calc__note--1').text(
+			"Если вы повторно въедете в Шенгенскую зону " + toFormat( toDate( date_biggest + (24*3600*1000*91) )) + 
+			", вы можете остаться на 90 дней до " + toFormat( toDate( date_biggest + (24*3600*1000*180) )) + 
+			"."
+			
+		);
 
 	});
 

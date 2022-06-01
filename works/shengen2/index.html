@@ -5,10 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Web Mockup</title>
 
-	<link rel="stylesheet" href="css/main.css?v4">
+	<link rel="stylesheet" href="css/main.css?v6">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/scripts.js?v4"></script>	
+	<script src="js/scripts.js?v6"></script>	
 
 </head>
 <body>
@@ -46,12 +46,17 @@
 		<div style="display: none;" class="calc__title calc__title--spn">Fecha de entrada/control:</div>
 		<div style="display: none;" class="calc__title calc__title--frn">Date d'entrée/contrôle:</div>
 		<div style="display: none;" class="calc__title calc__title--trk">Giriş tarihi/kontrol:</div> -->
-		<div class="calc__title calc__title--rus">Дата контроля:</div>
-		<div style="display: none;" class="calc__title calc__title--eng">Date of control:</div>
-		<div style="display: none;" class="calc__title calc__title--spn">Fecha de control:</div>
-		<div style="display: none;" class="calc__title calc__title--frn">Date de contrôle:</div>
-		<div style="display: none;" class="calc__title calc__title--trk">Giriş kontrol:</div>
-		<input type="date" id="inp1" class="calc__input calc__input--first" disabled>
+
+		<div style="display: none;" class="calc__none">
+			<div class="calc__title calc__title--rus">Дата контроля:</div>
+			<div style="display: none;" class="calc__title calc__title--eng">Date of control:</div>
+			<div style="display: none;" class="calc__title calc__title--spn">Fecha de control:</div>
+			<div style="display: none;" class="calc__title calc__title--frn">Date de contrôle:</div>
+			<div style="display: none;" class="calc__title calc__title--trk">Giriş kontrol:</div>
+			<input type="date" id="inp1" class="calc__input calc__input--first" disabled>
+		</div>
+
+
 	
 		<div class="calc__line">
 			<div class="calc__title calc__title--rus">Начало 90-дневного периода:</div>
@@ -74,39 +79,50 @@
 		
 		<div class="calc__list">
 
+			<div class="calc__examp">Пример</div><br>
+
 			<div class="calc__title calc__title--rus">Ваши поездки:</div>
 			<div style="display: none;" class="calc__title calc__title--eng">Your trips:</div>
 			<div style="display: none;" class="calc__title calc__title--spn">Tus viajes:</div>
 			<div style="display: none;" class="calc__title calc__title--frn">Vos voyages:</div>
 			<div style="display: none;" class="calc__title calc__title--trk">Gezileriniz:</div>
 
-			<div class="calc__examp">Пример</div>
-
 			<div style="display: none;" class="calc__mark"></div>
 			<div style="display: none;" class="calc__diff"></div>
 
+			<div class="calc__labels">
+				<div class="calc__name">Дата въезда</div>
+				<div class="calc__name">Дата выезда</div>
+				<div class="calc__name calc__name--short">Кол-во дней</div>
+				<div class="calc__name">Последний день проживания</div>
+			</div>
+
 			<div class="calc__line calc__line--date">
 				<input type="date" class="calc__input calc__input--date calc__input--date1">
 				<input type="date" class="calc__input calc__input--date calc__input--date2">
-				<div class="calc__count"></div>
+				<div class="calc__count">&nbsp;</div>
+				<div class="calc__last"></div>
 			</div>
 		
 			<div class="calc__line calc__line--date">
 				<input type="date" class="calc__input calc__input--date calc__input--date1">
 				<input type="date" class="calc__input calc__input--date calc__input--date2">
 				<div class="calc__count"></div>
+				<div class="calc__last"></div>
 			</div>
 		
 			<div class="calc__line calc__line--date">
 				<input type="date" class="calc__input calc__input--date calc__input--date1">
 				<input type="date" class="calc__input calc__input--date calc__input--date2">
 				<div class="calc__count"></div>
+				<div class="calc__last"></div>
 			</div>
 			
 			<div class="calc__line calc__line--date">
 				<input type="date" class="calc__input calc__input--date calc__input--date1">
 				<input type="date" class="calc__input calc__input--date calc__input--date2">
 				<div class="calc__count"></div>
+				<div class="calc__last"></div>
 			</div>
 
 			<div class="calc__show">+</div>
@@ -116,36 +132,42 @@
 					<input type="date" class="calc__input calc__input--date calc__input--date1">
 					<input type="date" class="calc__input calc__input--date calc__input--date2">
 					<div class="calc__count"></div>
+					<div class="calc__last"></div>
 				</div>
 		
 				<div class="calc__line calc__line--date">
 					<input type="date" class="calc__input calc__input--date calc__input--date1">
 					<input type="date" class="calc__input calc__input--date calc__input--date2">
 					<div class="calc__count"></div>
+					<div class="calc__last"></div>
 				</div>
 		
 				<div class="calc__line calc__line--date">
 					<input type="date" class="calc__input calc__input--date calc__input--date1">
 					<input type="date" class="calc__input calc__input--date calc__input--date2">
 					<div class="calc__count"></div>
+					<div class="calc__last"></div>
 				</div>
 		
 				<div class="calc__line calc__line--date">
 					<input type="date" class="calc__input calc__input--date calc__input--date1">
 					<input type="date" class="calc__input calc__input--date calc__input--date2">
 					<div class="calc__count"></div>
+					<div class="calc__last"></div>
 				</div>
 	
 				<div class="calc__line calc__line--date">
 					<input type="date" class="calc__input calc__input--date calc__input--date1">
 					<input type="date" class="calc__input calc__input--date calc__input--date2">
 					<div class="calc__count"></div>
+					<div class="calc__last"></div>
 				</div>
 	
 				<div class="calc__line calc__line--date">
 					<input type="date" class="calc__input calc__input--date calc__input--date1">
 					<input type="date" class="calc__input calc__input--date calc__input--date2">
 					<div class="calc__count"></div>
+					<div class="calc__last"></div>
 				</div>
 			</div>
 
@@ -157,6 +179,7 @@
 			Ваш возможный срок пребывания (дней) — 90
 		</div>
 
+		<div class="calc__note calc__note--1"></div>
 
 	</div>
 
