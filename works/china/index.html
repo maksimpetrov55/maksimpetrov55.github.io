@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Mockup</title>
+
+    <link rel="stylesheet" href="FuturaPT/stylesheet.css">
+    <link rel="stylesheet" href="css/main.css">
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+
+</head>
+<body>
+
+    <div class="calc">
+
+        <div class="calc__header">Калькулятор доставки товаров&nbsp;из&nbsp;Китая</div>
+
+        <div class="calc__wrap">
+
+            <div class="calc__block">
+                <div class="calc__title">Стоимость 1 еденицы товара</div>
+                <div class="calc__flex">
+                    <input type="number" id="calc_input_1" class="calc__input" value="50" min="0">
+                    <div class="calc__sign">¥</div>
+                </div>
+            </div>
+            <div class="calc__block">
+                <div class="calc__title">Количество заказанного товара</div>
+                <div class="calc__flex">
+                    <input type="number" id="calc_input_2" class="calc__input" value="100" min="0">
+                    <div class="calc__sign">шт</div>
+                </div>
+            </div>
+            <div class="calc__block">
+                <div class="calc__title">Вес товара</div>
+                <div class="calc__flex">
+                    <input type="number" id="calc_input_3" class="calc__input" value="300" min="0">
+                    <div class="calc__sign">кг</div>
+                </div>
+            </div>
+            <div class="calc__block">
+                <div class="calc__title">Объем товара</div>
+                <div class="calc__flex">
+                    <input type="number" id="calc_input_4" class="calc__input" value="1" min="0">
+                    <div class="calc__sign">м3</div>
+                </div>
+            </div>
+            <div class="calc__block">
+                <div class="calc__title">Курс доллара</div>
+                <div class="calc__flex">
+                    <input type="number" id="calc_input_5" class="calc__input" value="80" min="0">
+                    <div class="calc__sign">₽</div>
+                </div>
+            </div>
+            <div class="calc__block">
+                <div class="calc__title">Курс юаня</div>
+                <div class="calc__flex">
+                    <input type="number" id="calc_input_6" class="calc__input" value="12.5" min="0">
+                    <div class="calc__sign">₽</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="calc__btn">Рассчитать</div>
+
+        <div class="calc__result calc__result--hide">
+
+            <div class="calc__text">Тариф доставки: </div>
+            <div id="calc_itog_1" class="calc__itog">---</div>
+            <div class="calc__text">Стоимость доставки товара до Санкт‑Петербурга: </div>
+            <div id="calc_itog_2" class="calc__itog">---</div>
+            <div class="calc__text">Себестоимость 1 единицы товара: </div>
+            <div id="calc_itog_3" class="calc__itog">---</div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
