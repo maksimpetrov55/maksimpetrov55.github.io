@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css?v1">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>	
+	<script src="js/scripts.js?v1"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div class="calc__page calc__page1">
+
+			<div class="calc__logo">
+				<img src="img/logo.svg" alt="" class="">
+			</div>
+
+			<div class="calc__auth calc__auth--h19">
+				<div class="calc__title">Авторизация по номеру телефона</div>
+			</div>
+
+			<div class="calc__auth calc__auth--h9">
+				<input type="text" class="calc__number" placeholder="Введите номер" required>
+			</div>
+
+			<div class="calc__auth calc__auth--h9">
+				<input type="text" class="calc__code" placeholder="Код подтверждения" required>
+			</div>
+
+			<div class="calc__auth calc__auth--h16">
+				<div class="calc__enter">
+					<input type="submit" class="calc__submit" value="">
+				</div>
+				
+			</div>
+
+		</div>
+		<!-- /.calc__page1 -->
+
+		<div class="calc__page calc__page2 calc__page--hidden">
+
+			<div class="calc__header">
+				<div class="calc__icon"></div>
+				<div class="calc__title calc__title--header">Welcome!</div>
+				<div class="calc__cart"></div>
+			</div>
+
+			<div class="calc__choice">
+				<input class="calc__radio" type="radio" name="calc_category" id="calc_category_1" value="Man" checked>
+				<label class="calc__label" for="calc_category_1">Man</label>
+				<input class="calc__radio" type="radio" name="calc_category" id="calc_category_2" value="Woman">
+				<label class="calc__label" for="calc_category_2">Woman</label>
+				<input class="calc__radio" type="radio" name="calc_category" id="calc_category_3" value="Kids">
+				<label class="calc__label" for="calc_category_3">Kids</label>
+			</div>
+
+			<div class="calc__products calc__products--man">
+				<div class="item">
+					<img src="img/mock.jpg" class="item__icon" alt="">
+					<div class="item__title">Заголовок товара</div>
+					<div class="item__price">$600</div>
+				</div>
+
+				<div class="item">
+					<img src="img/mock.jpg" class="item__icon" alt="">
+					<div class="item__title">Заголовок товара</div>
+					<div class="item__price">$600</div>
+				</div>
+
+				<div class="item">
+					<img src="img/mock.jpg" class="item__icon" alt="">
+					<div class="item__title">Заголовок товара</div>
+					<div class="item__price">$600</div>
+				</div>
+
+				<div class="item">
+					<img src="img/mock.jpg" class="item__icon" alt="">
+					<div class="item__title">Заголовок товара</div>
+					<div class="item__price">$600</div>
+				</div>
+
+				<div class="item">
+					<img src="img/mock.jpg" class="item__icon" alt="">
+					<div class="item__title">Заголовок товара</div>
+					<div class="item__price">$600</div>
+				</div>
+			</div>
+
+			<div class="calc__products calc__products--hidden calc__products--woman">
+				<div class="item">
+					<img src="img/mock.jpg" class="item__icon" alt="">
+					<div class="item__title">Заголовок товара</div>
+					<div class="item__price">$600</div>
+				</div>
+			</div>
+
+			<div class="calc__products calc__products--hidden calc__products--kids">
+				<div class="item">
+					<img src="img/mock.jpg" class="item__icon" alt="">
+					<div class="item__title">Заголовок товара</div>
+					<div class="item__price">$600</div>
+				</div>
+
+				<div class="item">
+					<img src="img/mock.jpg" class="item__icon" alt="">
+					<div class="item__title">Заголовок товара</div>
+					<div class="item__price">$600</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- /.calc__page2 -->
+
+		<div class="calc__page calc__page3 calc__page--hidden">
+
+			<div class="calc__header">
+				<div class="calc__back calc__back--profile"></div>
+				<div class="calc__title calc__title--header">Мой профиль</div>
+			</div>
+
+			<div class="profile">
+				<img src="img/avatar.png" alt="" class="profile__img">
+				<div class="profile__info">
+					<div class="profile__name">Пользователь</div>
+					<div class="profile__phone">+7 (913) 480-88-20</div>
+				</div>
+				<div class="profile__history">
+					<div class="profile__wallet"></div>
+					<div class="profile__title">История покупок</div>
+					<div class="profile__forward"></div>
+				</div>
+			</div>
+
+		</div>
+		<!-- /.calc__page3 -->
+
+		<div class="calc__page calc__page4 calc__page--hidden">
+
+			<div class="calc__header">
+				<div class="calc__back calc__back--history"></div>
+				<div class="calc__title calc__title--header">История покупок</div>
+			</div>
+
+			<div class="history">
+				<div class="history__item">
+					<img src="img/mock.jpg" alt="" class="history__img">
+					<div>
+						<div class="history__title">Товар 1</div>
+						<div class="history__text">Заголовок товара</div>
+						<div class="history__price">$600</div>
+					</div>
+				</div>
+				<div class="history__item">
+					<img src="img/mock.jpg" alt="" class="history__img">
+					<div>
+						<div class="history__title">Товар 1</div>
+						<div class="history__text">Заголовок товара</div>
+						<div class="history__price">$600</div>
+					</div>
+				</div>
+				<div class="history__item">
+					<img src="img/mock.jpg" alt="" class="history__img">
+					<div>
+						<div class="history__title">Товар 1</div>
+						<div class="history__text">Заголовок товара</div>
+						<div class="history__price">$600</div>
+					</div>
+				</div>
+				<div class="history__item">
+					<img src="img/mock.jpg" alt="" class="history__img">
+					<div>
+						<div class="history__title">Товар 1</div>
+						<div class="history__text">Заголовок товара</div>
+						<div class="history__price">$600</div>
+					</div>
+				</div>
+				<div class="history__item">
+					<img src="img/mock.jpg" alt="" class="history__img">
+					<div>
+						<div class="history__title">Товар 1</div>
+						<div class="history__text">Заголовок товара</div>
+						<div class="history__price">$600</div>
+					</div>
+				</div>
+				<div class="history__item">
+					<img src="img/mock.jpg" alt="" class="history__img">
+					<div>
+						<div class="history__title">Товар 1</div>
+						<div class="history__text">Заголовок товара</div>
+						<div class="history__price">$600</div>
+					</div>
+				</div>
+				<div class="history__item">
+					<img src="img/mock.jpg" alt="" class="history__img">
+					<div>
+						<div class="history__title">Товар 1</div>
+						<div class="history__text">Заголовок товара</div>
+						<div class="history__price">$600</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- /.calc__page4 -->
+
+		<div class="calc__page calc__page5 calc__page--hidden">
+
+			<div class="calc__header">
+				<div class="calc__back calc__back--cart"></div>
+				<div class="calc__title calc__title--header">Корзина</div>
+			</div>
+
+			<div class="cart__list">
+				<div class="cart__item">
+					<img src="img/mock.jpg" alt="" class="cart__img">
+					<div>
+						<div class="cart__text">Заголовок товара</div>
+						<div class="cart__count">
+							<div class="cart__minus">–</div>
+							<div class="cart__amount">1</div>
+							<div class="cart__plus">+</div>
+						</div>
+					</div>
+					<div class="cart__price">$600</div>
+					<div class="cart__close">✖</div>
+				</div>
+
+				<div class="cart__item">
+					<img src="img/mock.jpg" alt="" class="cart__img">
+					<div>
+						<div class="cart__text">Заголовок товара</div>
+						<div class="cart__count">
+							<div class="cart__minus">–</div>
+							<div class="cart__amount">1</div>
+							<div class="cart__plus">+</div>
+						</div>
+					</div>
+					<div class="cart__price">$600</div>
+					<div class="cart__close">✖</div>
+				</div>
+
+				<div class="cart__item">
+					<img src="img/mock.jpg" alt="" class="cart__img">
+					<div>
+						<div class="cart__text">Заголовок товара</div>
+						<div class="cart__count">
+							<div class="cart__minus">–</div>
+							<div class="cart__amount">1</div>
+							<div class="cart__plus">+</div>
+						</div>
+					</div>
+					<div class="cart__price">$600</div>
+					<div class="cart__close">✖</div>
+				</div>
+
+				
+			</div>
+
+			<div class="cart__bot">
+
+				<button class="cart__pay">Оплатить</button>
+
+			</div>
+
+		</div>
+		<!-- /.calc__page5 -->
+
+		<div class="calc__page calc__page6 calc__page--hidden">
+
+			<div class="calc__header">
+				<div class="calc__back calc__back--product"></div>
+				<div class="calc__title calc__title--header"></div>
+				<div class="calc__zoom"></div>
+			</div>
+
+			<div class="product">
+
+				<img src="img/product_1.png" alt="" class="product__img">
+
+				<div class="product__shape">
+					<div class="product__price">$600</div>
+				</div>
+
+				<div class="product__info">
+					<div class="product__title">Выберете размер</div>
+
+					<div class="product__choice">
+						<input type="radio" name="product_size" id="product_size_1" class="product__radio">
+						<label class="product__label" for="product_size_1">
+							<div class="product__size">
+								<div class="product__letter">S</div>
+								<div class="product__text">плечи-90см</div>
+								<div class="product__text">талия-60см</div>
+								<div class="product__text">бёдра-90см</div>
+							</div>
+						</label>
+
+						<input type="radio" name="product_size" id="product_size_2" class="product__radio">
+						<label class="product__label" for="product_size_2">
+							<div class="product__size">
+								<div class="product__letter">M</div>
+								<div class="product__text">плечи-90см</div>
+								<div class="product__text">талия-60см</div>
+								<div class="product__text">бёдра-90см</div>
+							</div>
+						</label>
+
+						<input type="radio" name="product_size" id="product_size_3" class="product__radio">
+						<label class="product__label" for="product_size_3">
+							<div class="product__size">
+								<div class="product__letter">L</div>
+								<div class="product__text">плечи-90см</div>
+								<div class="product__text">талия-60см</div>
+								<div class="product__text">бёдра-90см</div>
+							</div>
+						</label>
+
+						<input type="radio" name="product_size" id="product_size_4" class="product__radio">
+						<label class="product__label" for="product_size_4">
+							<div class="product__size">
+								<div class="product__letter">XL</div>
+								<div class="product__text">плечи-90см</div>
+								<div class="product__text">талия-60см</div>
+								<div class="product__text">бёдра-90см</div>
+							</div>
+						</label>
+					</div>
+
+					<div class="product__description product__description--title">Заголовок описания</div>
+
+					<div class="product__description">
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis quasi accusantium expedita eius porro ullam eum eos asperiores voluptatum culpa modi saepe non laudantium accusamus, corporis suscipit quidem quibusdam quisquam quaerat quia veniam aspernatur nostrum. Corporis est tempora, reprehenderit iste soluta ullam eos dignissimos dolorem, fugit et ea iusto saepe?
+					</div>
+
+				</div>
+
+				<div class="product__buttons">
+
+					<button disabled class="product__buy product__buy--disabled">Купить</button>
+
+					<button class="product__personal">Сшить под меня</button>
+
+				</div>
+
+			</div>
+
+		</div>
+		<!-- /.calc__page6 -->
+
+		<div class="calc__page calc__page7 calc__page--hidden">
+
+			<div class="calc__header">
+				<div class="calc__back calc__back--visual"></div>
+			</div>
+
+			<div class="visual">
+
+				<div class="visual__content">
+					<img class="visual__item" src="img/product_1.png" alt="">
+					<img class="visual__item" src="img/product_2.png" alt="">
+					<img class="visual__item" src="img/product_3.png" alt="">
+					<img class="visual__item" src="img/product_4.png" alt="">
+					<img class="visual__item" src="img/product_5.png" alt="">
+				</div>
+
+				<div class="visual__control">
+					<div class="visual__back"></div>
+					<div class="visual__forward"></div>
+				</div>
+
+			</div>
+
+		</div>
+		<!-- /.calc__page7 -->
+
+	</div>
+
+
+
+</body>
+</html>

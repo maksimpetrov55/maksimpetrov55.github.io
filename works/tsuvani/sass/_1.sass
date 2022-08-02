@@ -1,0 +1,229 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: "Roboto", sans-serif
+    position: relative
+
+body
+    position: relative
+    background: #000
+
+.calc
+    width: 100%
+    height: 100vh
+    max-height: 920px
+    max-width: 420px
+    background: #000
+    margin: 0 auto
+
+    &__page
+        width: 100%
+        height: 100%
+        transition-duration: 0.3s
+        transform: translateX(0)
+        overflow: hidden
+        &--hidden
+            position: absolute
+            opacity: 0
+            transform: translateX(1000px) scale(0,1)
+        
+    &__page1
+        background: #000 linear-gradient(169.56deg, rgba(255, 255, 255, 0.79) -3.94%, rgba(0, 0, 0, 0.16) 49.56%, #000000 106.71%)
+    &__page2
+        background: #000 linear-gradient(160.94deg, #070707 41.56%, #797777 76.26%)
+    &__page3
+        background: #000 linear-gradient(163.34deg, rgba(0, 0, 0, 0.83) 45.06%, rgba(45, 43, 43, 0.911304) 68.41%)
+    &__page4
+        background: #000 linear-gradient(163.34deg, rgba(0, 0, 0, 0.83) 45.06%, rgba(45, 43, 43, 0.911304) 68.41%)
+    &__page5
+        background: #000
+    &__page6
+        background: #212020
+    &__page7
+        background: #212020
+
+    &__logo
+        width: 100%
+        height: 45%
+        display: flex
+        justify-content: center
+        align-items: center
+
+    &__auth
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        padding: 0 10%
+        &--h19
+            height: 19%
+        &--h9
+            height: 9%
+        &--h16
+            height: 16%
+
+    &__title
+        font-size: 1.5rem
+        line-height: 1.5
+        color: #fff
+        &--header
+            padding: 0 5%
+            width: 100%
+
+    &__number
+        display: block
+        width: 100%
+        background: #fff
+        padding: 0 5%
+        border-radius: 50px
+        height: 50px
+        text-align: center
+        border: none
+        font-size: 1.2rem
+        outline: none
+
+    &__code
+        display: block
+        width: 100%
+        background: transparent
+        padding: 0 5%
+        border-radius: 50px
+        height: 50px
+        text-align: center
+        border: 2px solid #fff
+        //box-shadow: 0 0 1px 1px #fff
+        font-size: 1.2rem
+        outline: none
+        color: #fff
+
+    &__enter
+        width: 90px
+        height: 90px
+        display: flex
+        justify-content: center
+        align-items: center
+        &:hover::before
+            transform: rotate(225deg)
+
+        &::before
+            content: ""
+            display: block
+            position: absolute
+            width: 60px
+            height: 60px
+            border: 2px solid #fff
+            //box-shadow: 0 0 1px 1px rgba(255,255,255,0.9)
+            border-radius: 20px
+            transition-duration: 0.5s
+            transform: rotate(45deg)
+            z-index: 1
+        &::after
+            content: ""
+            display: block
+            position: absolute
+            width: 51px
+            height: 51px
+            border-radius: 20px
+            background: linear-gradient(96.53deg, #100E0C -3.19%, #C8C8CC 105.27%)
+            box-shadow: 0px 8px 23px 6px rgba(109, 97, 242, 0.22)
+            transform: rotate(45deg)
+            z-index: 1
+
+    &__submit
+        display: block
+        width: 68px
+        height: 68px
+        background: url("../img/arrow.svg") no-repeat
+        background-size: contain
+        font-size: 1.5rem
+        font-weight: 600
+        border: none
+        z-index: 2
+
+    &__header
+        display: flex
+        margin: 0 5%
+        align-items: center
+        height: 15%
+        z-index: 99
+
+    &__icon
+        width: 46px
+        height: 46px
+        background: url("../img/account.svg") no-repeat
+        background-size: contain
+        flex-shrink: 0
+        cursor: pointer
+
+    &__cart
+        width: 46px
+        height: 46px
+        background: url("../img/cart.svg") no-repeat
+        background-size: contain
+        flex-shrink: 0
+        cursor: pointer
+
+    &__choice
+        display: flex
+        align-items: center
+        justify-content: space-between
+        max-width: 260px
+        width: 100%
+        padding: 0 5%
+        margin: 0 0 10% 0
+        height: 5%
+
+    &__radio
+        display: none
+        &:checked + .calc__label
+            color: #c3c3c3
+            background: linear-gradient(149.85deg, rgba(120, 120, 120, 0.39) 19.35%, #DFF1FF 155.35%)
+
+    &__label
+        color: #fff
+        font-size: 1.3rem
+        padding: 6px 15px
+        cursor: pointer
+        user-select: none
+        border-radius: 50px
+        transition-duration: 0.3s
+
+    &__products
+        width: 100%
+        padding: 0 5%
+        height: 70%
+        overflow-y: scroll
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        transition-duration: 0.3s
+        position: absolute
+
+        &--hidden
+            opacity: 0
+            transform: scale(0)
+
+    &__back
+        width: 46px
+        height: 46px
+        background: url("../img/back.svg")
+        background-size: contain
+        border: 2px solid #fff
+        border-radius: 17px
+        flex-shrink: 0
+        cursor: pointer
+        &--product,
+        &--visual
+            background: #9FA3AC url("../img/back.svg")
+            border: none
+
+    &__zoom
+        width: 46px
+        height: 46px
+        background: url("../img/zoom.svg")
+        background-size: contain
+        border-radius: 17px
+        flex-shrink: 0
+        cursor: pointer
