@@ -75,7 +75,9 @@ $(document).ready(function() {
     });
     
 
-
+    $('.product__link').click(function(){
+        $('.product__table').toggleClass("product__table--show");
+    });
 
 
     $('.calc__submit').click(function(){

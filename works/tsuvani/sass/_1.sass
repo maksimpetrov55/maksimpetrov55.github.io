@@ -2,7 +2,7 @@
     padding: 0
     margin: 0
     box-sizing: border-box
-    font-family: "Roboto", sans-serif
+    font-family: "Proxima Nova Cn Rg", sans-serif
     position: relative
 
 body
@@ -13,6 +13,7 @@ body
     width: 100%
     height: 100vh
     max-height: 920px
+    min-height: 568px
     max-width: 420px
     background: #000
     margin: 0 auto
@@ -30,8 +31,10 @@ body
         
     &__page1
         background: #000 linear-gradient(169.56deg, rgba(255, 255, 255, 0.79) -3.94%, rgba(0, 0, 0, 0.16) 49.56%, #000000 106.71%)
+        background: #000
     &__page2
-        background: #000 linear-gradient(160.94deg, #070707 41.56%, #797777 76.26%)
+        //background: #000 linear-gradient(160.94deg, #070707 41.56%, #797777 76.26%)
+        background: #000 linear-gradient(163.34deg, rgba(0, 0, 0, 0.83) 45.06%, rgba(45, 43, 43, 0.911304) 68.41%)
     &__page3
         background: #000 linear-gradient(163.34deg, rgba(0, 0, 0, 0.83) 45.06%, rgba(45, 43, 43, 0.911304) 68.41%)
     &__page4
@@ -45,10 +48,13 @@ body
 
     &__logo
         width: 100%
-        height: 45%
+        height: 40%
         display: flex
         justify-content: center
         align-items: center
+        img
+            width: 80%
+            height: 80%
 
     &__auth
         width: 100%
@@ -60,12 +66,13 @@ body
         &--h19
             height: 19%
         &--h9
-            height: 9%
+            height: 20%
+            display: block
         &--h16
-            height: 16%
+            height: 20%
 
     &__title
-        font-size: 1.5rem
+        font-size: 1.6rem
         line-height: 1.5
         color: #fff
         &--header
@@ -83,6 +90,7 @@ body
         border: none
         font-size: 1.2rem
         outline: none
+        margin: 0 0 5% 0
 
     &__code
         display: block

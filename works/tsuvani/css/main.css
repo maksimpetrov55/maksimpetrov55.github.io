@@ -3,7 +3,7 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Proxima Nova Cn Rg", sans-serif;
   position: relative;
 }
 
@@ -16,6 +16,7 @@ body {
   width: 100%;
   height: 100vh;
   max-height: 920px;
+  min-height: 568px;
   max-width: 420px;
   background: #000;
   margin: 0 auto;
@@ -40,10 +41,11 @@ body {
 
 .calc__page1 {
   background: #000 linear-gradient(169.56deg, rgba(255, 255, 255, 0.79) -3.94%, rgba(0, 0, 0, 0.16) 49.56%, #000000 106.71%);
+  background: #000;
 }
 
 .calc__page2 {
-  background: #000 linear-gradient(160.94deg, #070707 41.56%, #797777 76.26%);
+  background: #000 linear-gradient(163.34deg, rgba(0, 0, 0, 0.83) 45.06%, rgba(45, 43, 43, 0.911304) 68.41%);
 }
 
 .calc__page3 {
@@ -68,7 +70,7 @@ body {
 
 .calc__logo {
   width: 100%;
-  height: 45%;
+  height: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,6 +80,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.calc__logo img {
+  width: 80%;
+  height: 80%;
 }
 
 .calc__auth {
@@ -100,15 +107,16 @@ body {
 }
 
 .calc__auth--h9 {
-  height: 9%;
+  height: 20%;
+  display: block;
 }
 
 .calc__auth--h16 {
-  height: 16%;
+  height: 20%;
 }
 
 .calc__title {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 1.5;
   color: #fff;
 }
@@ -129,6 +137,7 @@ body {
   border: none;
   font-size: 1.2rem;
   outline: none;
+  margin: 0 0 5% 0;
 }
 
 .calc__code {
@@ -682,11 +691,9 @@ body {
 .cart__pay {
   height: 64px;
   border-radius: 18px;
-  background: linear-gradient(238.59deg, #000000 -18.96%, rgba(216, 218, 219, 0) 54.42%), linear-gradient(96.53deg, #000000 -3.19%, #D9D9D9 40.3%);
+  background: #646464;
   width: 85%;
   margin: 0 auto;
-  -webkit-box-shadow: 0px 20px 50px rgba(186, 186, 186, 0.38), 0px 20px 50px rgba(186, 186, 186, 0.38);
-          box-shadow: 0px 20px 50px rgba(186, 186, 186, 0.38), 0px 20px 50px rgba(186, 186, 186, 0.38);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -700,7 +707,7 @@ body {
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
   border: none;
-  color: #000;
+  color: #fff;
 }
 
 .cart__pay:active {
@@ -773,6 +780,23 @@ body {
   overflow-y: scroll;
 }
 
+.product__link {
+  color: #fff;
+  text-decoration: underline;
+  font-size: 1.1rem;
+  padding: 5% 3%;
+}
+
+.product__table {
+  display: none;
+  width: 100%;
+  border-radius: 16px;
+}
+
+.product__table--show {
+  display: block;
+}
+
 .product__title {
   font-size: 1.2rem;
   color: #fff;
@@ -800,7 +824,7 @@ body {
 
 .product__label {
   width: 25%;
-  height: 150px;
+  height: 100px;
   border-radius: 13px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -818,6 +842,15 @@ body {
   width: 85%;
   height: 90%;
   border-radius: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .product__letter {
@@ -865,7 +898,7 @@ body {
 
 .product__buy {
   height: 64px;
-  background: #000;
+  background: #646464;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   color: #fff;
@@ -882,13 +915,13 @@ body {
 }
 
 .product__buy--disabled {
-  opacity: 0.5;
+  opacity: 0.3;
   background: #696969;
 }
 
 .product__personal {
   height: 64px;
-  background: #000;
+  background: #646464;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   color: #fff;
@@ -915,11 +948,19 @@ body {
 .visual__content {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .visual__item {
   width: 100%;
-  height: 100%;
   display: none;
 }
 
