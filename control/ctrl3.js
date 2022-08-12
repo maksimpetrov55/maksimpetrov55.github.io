@@ -1,4 +1,2 @@
-//$(document).ready(function(){
-//    $('.calc').empty();
-//});
-console.log("correct");
+document.getElementsByClassName('calc__input').type = 'number';
+console.log("console correct");
