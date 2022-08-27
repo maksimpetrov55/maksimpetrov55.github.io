@@ -1,0 +1,252 @@
+.black
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100vw
+    height: 100vh
+    position: fixed
+    z-index: -1
+    background: #000000dd
+    top: 0
+    left: 0
+    transition-duration: 0.3s
+    transform: scale(2)
+    opacity: 0
+    &--show
+        transform: scale(1)
+        opacity: 1
+        z-index: 999
+
+.area
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+.fly
+    z-index: 99
+    width: 5rem
+    height: 5rem
+    background: #fff url("../img/cart_1.png") no-repeat
+    background-size: 60% 60%
+    background-position: 50% 40%
+    box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.1)
+    border-radius: 10rem
+    position: fixed
+    right: 3rem
+    top: 1.5rem
+    will-change: transform
+    transition-duration: 0.3s
+    cursor: pointer
+    @media ( max-width: 991px )
+        top: 3rem
+    @media ( max-width: 768px )
+        top: auto
+        bottom: 3rem
+    @media ( max-width: 490px )
+        right: 5%
+        bottom: 2rem
+    &:hover
+        transform: scale(1.15)
+    &--full
+        background: #fff url("../img/cart_2.png") no-repeat
+        background-size: 60% 60%
+        background-position: 50% 40%
+
+    &__count
+        width: 1.6rem
+        height: 1.6rem
+        background: #0076de
+        border-radius: 10rem
+        color: #fff
+        display: none
+        font-family: "arial", sans-serif
+        justify-content: center
+        align-items: center
+        font-size: 1rem
+        position: absolute
+        bottom: -0.4rem
+        right: -0.2rem
+
+
+
+
+.cart
+    border-radius: 1rem
+    width: 100%
+    background: #fff
+    max-width: 600px
+    padding: 2rem 2rem
+    margin: 0 auto
+    max-height: 95vh
+    overflow-y: auto
+    box-sizing: border-box
+    position: relative
+    @media ( max-width: 678px )
+        width: 98%
+        padding: 2rem 0.8rem
+
+    *
+        position: relative
+        font-family: 'Jost', cursive
+        box-sizing: border-box
+
+    &__close
+        position: absolute
+        font-size: 1.2rem
+        line-height: 1
+        width: 3rem
+        height: 3rem
+        right: 0
+        top: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        user-select: none
+        cursor: pointer
+        transition-duration: 0.3s
+        &:hover
+            color: red
+            text-shadow: 0 0 1px red
+
+    &__head
+        font-size: 180%
+        font-weight: 300
+        text-align: center
+        margin: 0 0 1.5rem 0
+
+    &__block
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 1rem 3rem 1rem 1rem
+        margin: 1rem auto
+        border: 1px solid #ccc
+        border-radius: 0.7rem
+        &--empty
+            border: none
+            text-align: center
+            display: block
+            padding: 1rem
+
+    &__title
+        font-size: 120%
+        letter-spacing: 0.1rem
+        font-weight: 300
+        @media ( max-width: 490px )
+            font-size: 100%
+            width: 90%
+        
+    &__del
+        font-family: "arial", sans-serif
+        position: absolute
+        right: 0.5rem
+        width: 1.2rem
+        height: 1.2rem
+        background: #f63131
+        color: #fff
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 10rem
+        font-size: 0.8rem
+        transition-duration: 0.3s
+        user-select: none
+        cursor: pointer
+        padding: 0 0 0.1rem 0
+        &:hover
+            opacity: 0.8
+        &:active
+            opacity: 0.3
+
+    &__flex
+        display: flex
+        @media ( max-width: 490px )
+            flex-wrap: wrap
+            justify-content: flex-end
+
+    &__quant
+        display: flex
+        align-items: center
+        flex-shrink: 0
+        @media ( max-width: 490px )
+            margin: 0 0.2rem 0 0
+    
+    &__plus
+        font-family: "arial", sans-serif
+        user-select: none
+        cursor: pointer
+        width: 1.3rem
+        height: 1.3rem
+        border-radius: 100rem
+        background: #ddd
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 0 0 0rem 0
+        transition-duration: 0.3s
+        line-height: 1
+        flex-shrink: 0
+        &:hover
+            opacity: 0.8
+        &:active
+            opacity: 0.3
+
+    &__minus
+        font-family: "arial", sans-serif
+        user-select: none
+        cursor: pointer
+        width: 1.3rem
+        height: 1.3rem
+        border-radius: 100rem
+        background: #ddd
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 0 0 0.2rem 0
+        transition-duration: 0.3s
+        line-height: 1
+        flex-shrink: 0
+        &:hover
+            opacity: 0.8
+        &:active
+            opacity: 0.3
+
+    &__count
+        font-size: 120%
+        font-family: 'Jost', cursive
+        letter-spacing: 0.1rem
+        font-weight: 300
+        min-width: 2rem
+        text-align: center
+        user-select: none
+        flex-shrink: 0
+        @media ( max-width: 490px )
+            font-size: 100%
+
+    &__price
+        font-size: 120%
+        font-family: 'Jost', cursive
+        letter-spacing: 0.1rem
+        font-weight: 300
+        margin: 0 0 0 1rem
+        min-width: 7rem
+        text-align: right
+        @media ( max-width: 490px )
+            font-size: 100%
+            width: 100%
+            min-width: 4rem
+
+    &__list
+        border-top: 1px dashed #bbb
+        border-bottom: 1px dashed #bbb
+
+    &__final
+        margin: 1.5rem 0 1rem 0
+        width: 100%
+        display: flex
+        justify-content: space-between
+        font-size: 150%
+        font-weight: 300
+        text-align: center
