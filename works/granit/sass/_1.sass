@@ -1,0 +1,117 @@
+
+
+body
+    position: relative
+    background: #3a3a43
+
+.calc
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: sans-serif
+    position: relative
+    background: #fff
+    padding: 30px
+    width: 100%
+    max-width: 640px
+    margin: 50px auto
+    border-radius: 10px
+
+    *
+        padding: 0
+        margin: 0
+        box-sizing: border-box
+        font-family: sans-serif
+        position: relative
+        
+    &__line
+        display: flex
+        align-items: center
+        justify-content: center
+        margin: 10px auto
+        padding: 15px 0 0 0 
+        max-width: 430px
+
+    &__title
+        font-size: 16px
+        margin: 0 10px 0 0
+        width: 180px
+
+    &__select
+        font-size: 14px
+        height: 34px
+        padding: 0 2px
+        width: 240px
+        border: 1px solid #bbb
+        border-radius: 4px
+        &--small
+            width: 70px
+
+    &__input
+        height: 34px
+        padding: 0 6px
+        border: 1px solid #bbb
+        border-radius: 4px
+        font-size: 14px
+        width: 70px
+
+    &__fly
+        position: absolute
+        width: 240px
+        right: 0
+        top: -15px
+        height: 15px
+        display: flex
+        justify-content: space-between
+    
+    &__name
+        font-size: 13px
+        width: 70px
+        text-align: center
+        color: #888
+
+    &__size
+        display: flex
+        align-items: center
+
+    &__sign
+        width: 15px
+        text-align: center
+
+    &__button
+        margin: 0 0 0 auto
+        width: 240px
+        height: 40px
+        background: #3d57c0
+        border-radius: 4px
+        color: #fff
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer
+        user-select: none
+        transition-duration: 0.3s
+        &:hover
+            opacity: 0.8
+        &:active
+            opacity: 0.3
+
+    &__itog
+        border-top: 1px dashed #bbb
+        border-bottom: 1px dashed #bbb
+        padding: 20px 0px
+        width: 100%
+
+    &__result
+        margin: 10px 0
+        display: flex
+
+    &__text
+        flex-shrink: 0
+        &--bold
+            font-weight: 700
+
+    &__space
+        width: 100%
+        margin: 0 5px
+        border-bottom: 1px solid #bbb

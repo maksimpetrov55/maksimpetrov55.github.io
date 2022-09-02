@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css?v1">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/tables.js?v1"></script>
+	<script src="js/scripts.js?v1"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div class="calc__line">
+			<div class="calc__title">Тип гранита</div>
+
+			<select name="calc_granit" id="calc_granit" class="calc__select">
+				<option value="1">Габбро-Диабаз</option>
+				<option value="2">Мансур</option>
+				<option value="2">Балтийский</option>
+				<option value="2">Амфиболит</option>
+				<option value="3">Маславский</option>
+				<option value="3">Капустянский</option>
+				<option value="3">Токовский</option>
+				<option value="3">Пакост</option>
+				<option value="3">Лабрадорит</option>
+				<option value="4">Лезниковский</option>
+				<option value="5">Baltik-Green</option>
+				<option value="5">Curu-grey</option>
+				<option value="5">Eagle Red</option>
+				<option value="6">AURORA</option>
+				<option value="6">Absolut-Black</option>
+				<option value="7">Blue-Pearl</option>
+			</select>
+		</div>
+
+		<div class="calc__line">
+
+			<div class="calc__title">Размер стелы (см)</div>
+
+			<!-- <div class="calc__size">
+				<div class="calc__fly">
+					<div class="calc__name">Длина</div>
+					<div class="calc__name">Ширина</div>
+					<div class="calc__name">Толщина</div>
+				</div>
+				<input id="calc_stele_x" type="text" class="calc__input" placeholder="" value="100">
+				<div class="calc__sign">x</div>
+				<input id="calc_stele_y" type="text" class="calc__input" placeholder="" value="50">
+				<div class="calc__sign">x</div>
+				<select name="calc_stele_z" id="calc_stele_z" class="calc__select calc__select--small">
+					<option value="5">5 см</option>
+				</select>
+			</div> -->
+			<select name="calc_stele" id="calc_stele" class="calc__select">
+				<option value="80*40*5">80 x 40 x 5</option>
+				<option value="100*50*5">100 x 50 x 5</option>
+				<option value="100*60*5">100 x 60 x 5</option>
+				<option value="100*50*8">100 x 50 x 8</option>
+				<option value="100*60*8">100 x 60 x 8</option>
+				<option value="120*60*8">120 x 60 x 8</option>
+			</select>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Форма стелы</div>
+			<select name="calc_stele_form" id="calc_stele_form" class="calc__select">
+				<option value="A1">A1</option>
+				<option value="A2">A2</option>
+				<option value="AЗ">AЗ</option>
+				<option value="A4">A4</option>
+				<option value="A5">A5</option>
+				<option value="A6">A6</option>
+				<option value="A7">A7</option>
+				<option value="A8">A8</option>
+				<option value="A9">A9</option>
+				<option value="A10">A10</option>
+				<option value="A12">A12</option>
+				<option value="A13">A13</option>
+				<option value="A16">A16</option>
+				<option value="A17">A17</option>
+				<option value="A18">A18</option>
+				<option value="A19">A19</option>
+				<option value="A20">A20</option>
+				<option value="A21">A21</option>
+				<option value="A22">A22</option>
+				<option value="A23">A23</option>
+				<option value="A25">A25</option>
+				<option value="A27">A27</option>
+				<option value="A28">A28</option>
+				<option value="A29">A29</option>
+				<option value="AЗО">AЗО</option>
+				<option value="A31">A31</option>
+				<option value="A32">A32</option>
+				<option value="AЗЗ">AЗЗ</option>
+				<option value="A34">A34</option>
+				<option value="A35">A35</option>
+				<option value="A36">A36</option>
+				<option value="A37">A37</option>
+				<option value="A38">A38</option>
+				<option value="A39">A39</option>
+				<option value="A41">A41</option>
+				<option value="A42">A42</option>
+				<option value="A45">A45</option>
+				<option value="A50">A50</option>
+				<option value="A51">A51</option>
+				<option value="A52">A52</option>
+				<option value="A64">A64</option>
+				<option value="A65">A65</option>
+				<option value="A66">A66</option>
+				<option value="A67">A67</option>
+				<option value="A68">A68</option>
+				<option value="A69">A69</option>
+				<option value="A71">A71</option>
+				<option value="A72">A72</option>
+				<option value="B1">B1</option>
+				<option value="B2">B2</option>
+				<option value="B3">B3</option>
+				<option value="B4">B4</option>
+				<option value="B5">B5</option>
+				<option value="B6">B6</option>
+				<option value="B7">B7</option>
+				<option value="B8">B8</option>
+				<option value="B9">B9</option>
+				<option value="B10">B10</option>
+				<option value="B11">B11</option>
+				<option value="B12">B12</option>
+				<option value="B13">B13</option>
+				<option value="B14">B14</option>
+				<option value="B15">B15</option>
+				<option value="B16">B16</option>
+				<option value="B17">B17</option>
+				<option value="B19">B19</option>
+				<option value="B20">B20</option>
+				<option value="B21">B21</option>
+				<option value="B22">B22</option>
+				<option value="B24">B24</option>
+				<option value="B25">B25</option>
+				<option value="B27">B27</option>
+				<option value="B29">B29</option>
+				<option value="BЗЗ">BЗЗ</option>
+				<option value="B34">B34</option>
+				<option value="B35">B35</option>
+				<option value="B36">B36</option>
+				<option value="B37">B37</option>
+				<option value="B38">B38</option>
+				<option value="B39">B39</option>
+			</select>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Размер тумбы (см)</div>
+			<div class="calc__size">
+				<div class="calc__fly">
+					<div class="calc__name">Длина</div>
+					<div class="calc__name">Ширина</div>
+					<div class="calc__name">Толщина</div>
+				</div>
+				<input id="calc_tumb_x" type="text" class="calc__input" placeholder="" value="60">
+				<div class="calc__sign">x</div>
+				<input id="calc_tumb_y" type="text" class="calc__input" placeholder="" value="20">
+				<div class="calc__sign">x</div>
+				<select name="calc_tumb_z" id="calc_tumb_z" class="calc__select calc__select--small">
+					<option value="15">15 см</option>
+					<option value="20">20 см</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Размер цветника (см)</div>
+			<div class="calc__size">
+				<div class="calc__fly">
+					<div class="calc__name">Длина</div>
+					<div class="calc__name">Ширина</div>
+					<div class="calc__name">Толщина</div>
+				</div>
+				<input id="calc_garden_x" type="text" class="calc__input" placeholder="" value="100">
+				<div class="calc__sign">x</div>
+				<input id="calc_garden_y" type="text" class="calc__input" placeholder="" value="50">
+				<div class="calc__sign">x</div>
+				<select name="calc_garden_z" id="calc_garden_z" class="calc__select calc__select--small">
+					<option value="5*5">5*5</option>
+					<option selected value="5*8">5*8</option>
+					<option value="8*8">8*8</option>
+					<option value="8*10">8*10</option>
+					<option value="10*10">10*10</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Размер плиты (см)</div>
+			<div class="calc__size">
+				<div class="calc__fly">
+					<div class="calc__name">Длина</div>
+					<div class="calc__name">Ширина</div>
+					<div class="calc__name">Толщина</div>
+				</div>
+				<input id="calc_plate_x" type="text" class="calc__input" placeholder="" value="200">
+				<div class="calc__sign">x</div>
+				<input id="calc_plate_y" type="text" class="calc__input" placeholder="" value="80">
+				<div class="calc__sign">x</div>
+				<select name="calc_plate_z" id="calc_plate_z" class="calc__select calc__select--small">
+					<option value="3">3</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__button">Рассчитать</div>
+		</div>
+		
+		<div class="calc__line">
+			<div class="calc__itog">
+				
+				<div class="calc__result">
+					<div class="calc__text">Стоимость стелы:</div>
+					<div class="calc__space"></div>
+					<div id="calc_result_1" class="calc__text">0 $</div>
+				</div>
+
+				<div class="calc__result">
+					<div class="calc__text">Стоимость резки:</div>
+					<div class="calc__space"></div>
+					<div id="calc_result_2" class="calc__text">0 $</div>
+				</div>
+
+				<div class="calc__result">
+					<div class="calc__text">Стоимость тумбы:</div>
+					<div class="calc__space"></div>
+					<div id="calc_result_3" class="calc__text">0 $</div>
+				</div>
+
+				<div class="calc__result">
+					<div class="calc__text">Стоимость цветника:</div>
+					<div class="calc__space"></div>
+					<div id="calc_result_4" class="calc__text">0 $</div>
+				</div>
+
+				<div class="calc__result">
+					<div class="calc__text">Стоимость плиты:</div>
+					<div class="calc__space"></div>
+					<div id="calc_result_5" class="calc__text">0 $</div>
+				</div>
+
+				<div class="calc__result">
+					<div class="calc__text calc__text--bold">Итоговая стоимость:</div>
+					<div class="calc__space"></div>
+					<div id="calc_result_6" class="calc__text calc__text--bold">0 $</div>
+				</div>
+
+			</div>
+		</div>
+
+
+	</div>
+
+
+
+</body>
+</html>
