@@ -2,7 +2,11 @@ $(document).ready(function() {
 
 
 
-
+    $('#calc_stele_form').change(function(){
+        let name = "img/form/" + $('#calc_stele_form').val() + ".jpg";
+        console.log( name );
+        $('.calc__img').attr("src", name);
+    });
 
 
     $('.calc__button').click(function(){
