@@ -73,6 +73,7 @@ body
     &__size
         display: flex
         align-items: center
+        width: 240px
 
     &__sign
         width: 15px
@@ -129,3 +130,22 @@ body
         display: block
         border: 1px solid #bbb
         border-radius: 4px
+
+    &__radio
+        display: none
+        &:checked + .calc__label
+            background: #cbe0fb
+            
+
+    &__label
+        height: 34px
+        padding: 0 6px
+        border: 1px solid #bbb
+        border-radius: 4px
+        font-size: 14px
+        width: 70px
+        margin: 0 15px 0 0
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer

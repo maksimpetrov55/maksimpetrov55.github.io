@@ -12,6 +12,7 @@ $(document).ready(function() {
     $('.calc__button').click(function(){
 
         var arr_form_name = $('#calc_stele').val();
+        var calc_heel = $('#calc_heel').val();
     
         if ( arr_form_name == "80*40*5" ) {
             var array_form = arr_form_80_40_5;
@@ -71,20 +72,49 @@ $(document).ready(function() {
             }
         }
 
-  
+        if ( $('input[name=calc_faska-garden]:checked').val() == 1 ) {
+            var calc_faska_garden = $('#calc_faska-garden_z').val();
+        } else {
+            var calc_faska_garden = 0;
+        }
+
+        if ( $('input[name=calc_polirovka-plate]:checked').val() == 1 ) {
+            var calc_polirovka_plate = 5.4;
+        } else {
+            var calc_polirovka_plate = 0;
+        }
+
+
+        if ( $('input[name=calc_faska-plate]:checked').val() == 1 ) {
+            var calc_faska_plate = $('#calc_faska-plate_z').val();
+        } else {
+            var calc_faska_plate = 0;
+        }
+
+
         
         var calc_result_1 = ( calc_stele_x * calc_stele_y / 10000 * arr_stele_value );
         var calc_result_2 = +arr_form_value;
         var calc_result_3 = ( calc_tumb_x * calc_tumb_y * calc_tumb_z / 1000000 * arr_tumb_value );
-        var calc_result_4 = ( calc_garden_x * calc_garden_y * calc_garden_z.split("*")[0] / 10000 * arr_garden_value );
-        var calc_result_5 = ( calc_plate_x * calc_plate_y / 10000 * arr_plate_value );
+        var calc_result_4 = ( calc_garden_x * calc_garden_y * calc_garden_z.split("*")[0] / 10000 * arr_garden_value ) + (+calc_heel * 1) + ( calc_garden_x * calc_garden_y * calc_garden_z.split("*")[0] / 10000 * calc_faska_garden );
+        var calc_result_5 = ( calc_plate_x * calc_plate_y / 10000 * arr_plate_value ) + ( calc_plate_x * calc_plate_y / 10000 * calc_faska_plate ) + ( calc_plate_x * calc_plate_y / 10000 * calc_polirovka_plate );
+        var calc_result_6 = 
+        +calc_result_1 + 
+        +calc_result_2 + 
+        +calc_result_3 + 
+        +calc_result_4 + 
+        +calc_result_5;
         
+
+        var profit = 1.0; // Наценка к общей стоимости.
+        
+
         $('#calc_result_1').text( calc_result_1.toFixed(1) + " $" );
         $('#calc_result_2').text( calc_result_2.toFixed(1) + " $" );
         $('#calc_result_3').text( calc_result_3.toFixed(1) + " $" );
         $('#calc_result_4').text( calc_result_4.toFixed(1) + " $" );
         $('#calc_result_5').text( calc_result_5.toFixed(1) + " $" );
-        $('#calc_result_6').text( (+calc_result_1 + +calc_result_2 + +calc_result_3 + +calc_result_4 + +calc_result_5).toFixed(1) + " $" );
+        $('#calc_result_6').text( (calc_result_6 * profit).toFixed(1) + " $" );
 
 
     });

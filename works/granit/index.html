@@ -5,11 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Web Mockup</title>
 
-	<link rel="stylesheet" href="css/main.css?v2">
+	<link rel="stylesheet" href="css/main.css?v3">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/tables.js?v2"></script>
-	<script src="js/scripts.js?v2"></script>	
+	<script src="js/tables.js?v3"></script>
+	<script src="js/scripts.js?v3"></script>	
 
 </head>
 <body>
@@ -179,6 +179,21 @@
 		</div>
 
 		<div class="calc__line">
+			<div class="calc__title">Фаска для тумбы</div>
+			<div class="calc__size">
+				<div class="calc__fly">
+					<div class="calc__name"></div>
+					<div class="calc__name"></div>
+					<div class="calc__name"></div>
+				</div>
+				<input type="radio" name="calc_faska-tumba" id="calc_faska-tumba_1" class="calc__radio" value="0" checked>
+				<label class="calc__label" for="calc_faska-tumba_1">Нет</label>
+				<input type="radio" name="calc_faska-tumba" id="calc_faska-tumba_2" class="calc__radio" value="6">
+				<label class="calc__label" for="calc_faska-tumba_2">Да</label>
+			</div>
+		</div>
+
+		<div class="calc__line">
 			<div class="calc__title">Размер цветника (см)</div>
 			<div class="calc__size">
 				<div class="calc__fly">
@@ -201,6 +216,41 @@
 		</div>
 
 		<div class="calc__line">
+			<div class="calc__title">Полировка пяток</div>
+			<div class="calc__size">
+				<div class="calc__fly">
+					<div class="calc__name">шт</div>
+					<div class="calc__name"></div>
+					<div class="calc__name"></div>
+				</div>
+				<input id="calc_heel" type="text" class="calc__input" placeholder="" value="0">
+			</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Фаска для цветника</div>
+			<div class="calc__size">
+				<div class="calc__fly">
+					<div class="calc__name"></div>
+					<div class="calc__name"></div>
+					<div class="calc__name">Размер</div>
+				</div>
+				<input type="radio" name="calc_faska-garden" id="calc_faska-garden_1" class="calc__radio" value="0" checked>
+				<label class="calc__label" for="calc_faska-garden_1">Нет</label>
+				<input type="radio" name="calc_faska-garden" id="calc_faska-garden_2" class="calc__radio" value="1">
+				<label class="calc__label" for="calc_faska-garden_2">Да</label>
+				<select name="calc_faska-garden_z" id="calc_faska-garden_z" class="calc__select calc__select--small">
+					<option value="2.7">0.5</option>
+					<option value="5.4">1</option>
+					<option value="5.4">1.5</option>
+					<option value="5.4">2</option>
+					<option value="5.4">2.5</option>
+					<option value="5.4">3</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="calc__line">
 			<div class="calc__title">Размер плиты (см)</div>
 			<div class="calc__size">
 				<div class="calc__fly">
@@ -214,6 +264,44 @@
 				<div class="calc__sign">x</div>
 				<select name="calc_plate_z" id="calc_plate_z" class="calc__select calc__select--small">
 					<option value="3">3</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Полировка торцов плиты</div>
+			<div class="calc__size">
+				<div class="calc__fly">
+					<div class="calc__name"></div>
+					<div class="calc__name"></div>
+					<div class="calc__name"></div>
+				</div>
+				<input type="radio" name="calc_polirovka-plate" id="calc_polirovka-plate_1" class="calc__radio" value="0" checked>
+				<label class="calc__label" for="calc_polirovka-plate_1">Нет</label>
+				<input type="radio" name="calc_polirovka-plate" id="calc_polirovka-plate_2" class="calc__radio" value="1">
+				<label class="calc__label" for="calc_polirovka-plate_2">Да</label>
+			</div>
+		</div>
+
+		<div class="calc__line">
+			<div class="calc__title">Фаска для плиты</div>
+			<div class="calc__size">
+				<div class="calc__fly">
+					<div class="calc__name"></div>
+					<div class="calc__name"></div>
+					<div class="calc__name">Размер</div>
+				</div>
+				<input type="radio" name="calc_faska-plate" id="calc_faska-plate_1" class="calc__radio" value="0" checked>
+				<label class="calc__label" for="calc_faska-plate_1">Нет</label>
+				<input type="radio" name="calc_faska-plate" id="calc_faska-plate_2" class="calc__radio" value="1">
+				<label class="calc__label" for="calc_faska-plate_2">Да</label>
+				<select name="calc_faska-plate_z" id="calc_faska-plate_z" class="calc__select calc__select--small">
+					<option value="2.7">0.5</option>
+					<option value="5.4">1</option>
+					<option value="5.4">1.5</option>
+					<option value="5.4">2</option>
+					<option value="5.4">2.5</option>
+					<option value="5.4">3</option>
 				</select>
 			</div>
 		</div>

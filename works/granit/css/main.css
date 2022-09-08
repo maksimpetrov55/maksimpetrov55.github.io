@@ -73,6 +73,7 @@ body {
 .calc__size {
   display: flex;
   align-items: center;
+  width: 240px;
 }
 .calc__sign {
   width: 15px;
@@ -135,4 +136,23 @@ body {
   display: block;
   border: 1px solid #bbb;
   border-radius: 4px;
+}
+.calc__radio {
+  display: none;
+}
+.calc__radio:checked + .calc__label {
+  background: #cbe0fb;
+}
+.calc__label {
+  height: 34px;
+  padding: 0 6px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 70px;
+  margin: 0 15px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
