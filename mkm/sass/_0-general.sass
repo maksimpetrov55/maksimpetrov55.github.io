@@ -9,6 +9,7 @@ $blue2: #0a438d
 
 
 *
+    user-select: none
     font-family: sans-serif
     padding: 0
     margin: 0
@@ -73,8 +74,14 @@ textarea:focus, input:focus
 
     &__img
         position: absolute
-        height: 100%
-        top: 0px
+        //height: 100%
+        top: 30px
+        left: 50%
+        margin: 0 0 0 -950px
+        @media ( min-width: 1900px )
+            width: 100%
+            margin: 0
+            left: 0
 
     &::before
         content: ""

@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Мой Квадратный Метр | Агентство недвижимости</title>
+
+	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
+	<link rel="icon" href="img/favicon.png" type="image/png">
+	
+	<link rel="stylesheet" href="css/main.css?v5">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/arrays.js"></script>
+	<script src="js/arrays_2.js"></script>
+	<script src="js/arrays_3.js"></script>
+	<script src="js/streets.js"></script>
+	<script src="js/streets2.js"></script>
+	<script src="js/calc.js"></script>
+	<script src="js/calc_1.js"></script>
+	<script src="js/calc_2.js"></script>
+	<script src="js/calc_3.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
+
+</head>
+<body>
+
+	<div id="calc_1_criteria" class="calc__criteria">71703</div> <!-- критерий 1 -->
+	<div id="calc_2_criteria" class="calc__criteria">37807.5</div> <!-- критерий 2 -->
+	<div id="calc_3_criteria" class="calc__criteria">1.45</div> <!-- критерий 3 -->
+	<div id="calc_4_criteria" class="calc__criteria">272254</div> <!-- критерий 4 -->
+
+	<div class="blackout"></div>
+
+	<script>
+		$(document).ready(function() {
+			var t = setTimeout( function() {
+				$.ajax({
+					url: "parts/form.html",
+					cache: true,
+					async: true,
+					success: function(html){
+						$("#form").append(html);
+					}
+				});
+			}, 500 );
+		});
+	</script>
+
+	<script>
+		$(document).ready(function() {
+			var t = setTimeout( function() {
+				$.ajax({
+					url: "parts/header.html",
+					cache: true,
+					async: true,
+					success: function(html){
+						$("#header").append(html);
+					}
+				});
+			}, 500 );
+		});
+	</script>
+
+	<script>
+		$(document).ready(function() {
+			var t = setTimeout( function() {
+				$.ajax({
+					url: "parts/footer.html",
+					cache: true,
+					async: true,
+					success: function(html){
+						$("#footer").append(html);
+					}
+				});
+			}, 500 );
+		});
+	</script>
+
+	<div id="tnks" class="tnks">
+		<div class="tnks__wrap">
+
+			<div class="tnks__text tnks__text--bold">Спасибо!</div>
+		
+			<div class="tnks__text">Ваша заявка принята в работу, мы свяжемся с вами в ближайшее время</div>
+		
+			<div class="tnks__close">Отлично</div>
+		
+		</div>
+		
+	</div>
+	<!-- /.tnks -->
+
+	<div class="form" id="form"></div>
+	<!-- /.form -->
+
+	<div id="header" class="header"></div>
+	<!-- /.header -->
+
+	<div class="g-wall">
+		<img class="g-wall__img" src="img/walls/10.jpg" alt="">
+	</div>
+
+	<div class="calcpage">
+
+		<div class="g-head">Калькуляторы</div>
+
+		<div class="calcpage__choice maw1440">
+			<div id="calcpage_appear_1" class="calcpage__appear calcpage__appear--active">Калькулятор оценки стоимости&nbsp;квартиры</div>
+			<div id="calcpage_appear_2" class="calcpage__appear">Калькулятор оценки стоимости земельного&nbsp;участка и дома</div>
+			<div id="calcpage_appear_3" class="calcpage__appear">Калькулятор ремонта квартиры</div>
+		</div>
+
+		<div class="calcpage__wrap maw1440">
+
+
+			<div id="calc_1" class="calc--1 calc calc--show">
+
+				<div class="calc__close"></div>
+
+				<h2 class="calc__h2">Калькулятор оценки стоимости&nbsp;квартиры</h2>
+
+				<div class="calc__remark">Внимание! Расчеты калькулятора носят ознакомительный характер! Минимальная погрешность возможна исключительно при полном совпадении заложенных параметров</div>
+
+				<div class="calc__space"></div>
+				<div class="calc__space"></div>
+				<div class="calc__space calc__space--border"></div>
+				<div class="calc__space"></div>
+
+				<div id="calc_popup_1" class="calc__popup">
+					<div class="calc__popup__close">×</div>
+					<div class="calc__popup__wrap">
+						<div class="calc__popup__text calc__popup__text--title calc__popup__text--bold">ЭКОНОМ КЛАСС</div>
+						<div class="calc__popup__text">
+							<span class="calc__popup__text--bold">Архитектура</span> – стандартная (серийный проект), проекты повторного применения<br>
+							<span class="calc__popup__text--bold">Потолки</span> – менее 2,7 м. в «чистоте»<br>
+							<span class="calc__popup__text--bold">Внутренняя отделка общественных помещений</span> - стандартная<br>
+							<span class="calc__popup__text--bold">S квартир</span> (1 к. – от 28 , 2-х – от 44 , 3-х – от 56 , 4-х – от 70 кв.м.)<br>
+							<span class="calc__popup__text--bold">Входные группы и дверные блоки</span> – без требований<br>
+							<span class="calc__popup__text--bold">Придомовая территория и безопасность</span> – стандартное благоустройство<br>
+							<span class="calc__popup__text--bold">Инфраструктура дома</span> – наличие площадей помещений нежилого назначения<br>
+						</div>
+
+						<div class="calc__popup__text calc__popup__text--title calc__popup__text--bold">КОМФОРТ КЛАСС</div>
+						<div class="calc__popup__text">
+							<span class="calc__popup__text--bold">Архитектура</span> – большое разнообразие архитектурных опций (переменная этажность, фасады, планировки), усовершенствованные серийные проекты, проекты повторного применения, индивидуальные проекты<br>
+							<span class="calc__popup__text--bold">Потолки</span> – более 2,7 м. в «чистоте»<br>
+							<span class="calc__popup__text--bold">Внутренняя отделка общественных помещений</span> - улучшенная<br>
+							<span class="calc__popup__text--bold">S квартир</span> (1 к. – от 34 (студии от 28), 2-х – от 50 , 3-х – от 65 , 4-х – от 85 кв.м.)<br>
+							<span class="calc__popup__text--bold">Входные группы и дверные блоки</span> – металлические двери с домофоном в подъездах, помещение для консьержа, металлические входные двери квартир<br>
+							<span class="calc__popup__text--bold">Придомовая территория и безопасность</span> – возможна ограда по периметру, наличие типовых детских и хозяйственных площадок, общее озеленение территории, охрана периметра возможна, но не обязательна<br>
+							<span class="calc__popup__text--bold">Инфраструктура дома</span> – наличие площадей помещений нежилого назначения, размещение службы эксплуатации на площадях нежилого назначения<br>
+						</div>
+
+						<div class="calc__popup__text calc__popup__text--title calc__popup__text--bold">БИЗНЕС КЛАСС</div>
+						<div class="calc__popup__text">
+							<span class="calc__popup__text--bold">Архитектура</span> – индивидуальный проект с подчеркнутой проработкой архитектурного облика<br>
+							<span class="calc__popup__text--bold">Потолки</span> – более 2,75 м. в «чистоте»<br>
+							<span class="calc__popup__text--bold">Внутренняя отделка общественных помещений</span> - высококачественная (декоративная штукатурка, керамическая плитка, искусственный камень и т.д.)<br>
+							<span class="calc__popup__text--bold">S квартир</span> (1 к. – от 45, 2-х – от 65 , 3-х – от 85 , 4-х – от 120 кв.м.)<br>
+							<span class="calc__popup__text--bold">Входные группы и дверные блоки</span> – металлические двери с домофоном в подъездах, повышенная тепло и звукоизоляция входных групп, помещение для консьержа, металлические сейф двери квартир с наружной и внутренней отделкой с 4-х сторонним запиранием в квартирах<br>
+							<span class="calc__popup__text--bold">Придомовая территория и безопасность</span> – благоустроенная, конструктивно выделенная территория с согласованным на основании проекта огороженным периметром,  выделение площадей под детские и хозяйственные площадки,  ландшафтный дизайн, консьерж, электромагнитный замок, собственная служба охраны, стационарные посты на въездах во двор, на паркинг, на входе в дом, видеонаблюдение на входе в дом и по периметру дома, система уведомления о доступе 3-х лиц на территорию через консьержа.<br>
+							<span class="calc__popup__text--bold">Инфраструктура дома</span> – широкий набор объектов социальной и коммерческой инфраструктуры с возможностью контроля доступа посторонних лиц, собственная служба эксплуатации<br>
+						</div>
+					
+						<div class="calc__popup__text calc__popup__text--title calc__popup__text--bold">ЭЛИТ КЛАСС </div>
+						<div class="calc__popup__text">
+							<span class="calc__popup__text--bold">Архитектура</span> – индивидуальный авторский проект известного архитектора (масштаб известности может ограничится субъектом РФ)<br>
+							<span class="calc__popup__text--bold">Потолки</span> – более 3 м. в «чистоте»<br>
+							<span class="calc__popup__text--bold">Внутренняя отделка общественных помещений</span> – эксклюзивная отделка в соответствии с дизайн проектом<br>
+							<span class="calc__popup__text--bold">S квартир</span> (студии – от 60, 2-х – от 80, 3-х – от 120 , 4-х – от 250 кв.м.)<br>
+							<span class="calc__popup__text--bold">Входные группы и дверные блоки</span> – металлические двери с домофоном в подъездах с надежной замковой группой (секретность, броне накладки), встроенные видео- глазки, холл, рецепшн, металлические сейф двери квартир с наружной и внутренней отделкой с 4-х сторонним запиранием в квартирах<br>
+							<span class="calc__popup__text--bold">Придомовая территория и безопасность</span> – благоустроенная, конструктивно выделенная территория с согласованным на основании проекта огороженным периметром,  ландшафтный дизайн, малые архитектурные формы, консьерж, электромагнитный замок, собственная служба охраны,  стационарные посты на въездах во двор, на паркинг, на входе в дом, передвижной патруль по периметру дома, видеонаблюдение на входе в дом и по периметру дома, придомовой территории, на лестницах и лестничных клетках, перед входом в квартиру. Пожарная безопасность – установка систем сплинкерного пожаротушения, система оповещения при пожаре и задымлении с выводом информации на единый диспетчерский пункт с дублированием на пост охраны. Круглосуточная диспетчеризация всех инженерных сетей и систем. Система быстрого информирования и реагирования   на сбои и аварии, система уведомления о доступе на территорию 3-х лиц – гость-консьерж- житель.<br>
+							<span class="calc__popup__text--bold">Инфраструктура дома</span> – разветвленная сеть инфраструктуры для жильцов дома, доступ посторонним по клубным картам/приглашениям владельцев квартир, дополнительно -  персональное сервисное обслуживание, дополнительные опции инфраструктуры<br>
+						</div>
+					</div>
+				</div>
+				<div id="calc_popup_2" class="calc__popup">
+					<div class="calc__popup__close">×</div>
+					<div class="calc__popup__wrap">
+						<div class="calc__popup__text">
+							<span class="calc__popup__text--bold">Требует кап.ремонта</span> - по определению (стены и углы требуют выравнивания, необходима полная/частичная замена инженерных коммуникаций (электрических, водяных) + радиаторов отопления, демонтаж старой/монтаж новой кафельной плитки, санфаянса  в "мокрых зонах",  необходима полная/частичная замена полов (выравнивание, демонтажстарого/монтаж нового покрытия), требуется замена окон, дверей, необходимо выравнивание потолка/демонтаж - монтаж натяжного/гипсокартонного и пр. видов и т.д. В общем - начать и закончить).
+						</div>
+						<div class="calc__popup__text">
+							<span class="calc__popup__text--bold">Жилое состояние/"Бабушкин ремонт"</span> - можно определить так - нуждается в кап. ремонте, но до лучших времен "жить можно" - чисто, ухожено, зачастую новые обои "в цветочек" и бюджетный кафель с санузле с поправкой  "простенько, но без вкуса" на неподготовленную поверхность кривых стен. 
+						</div>
+						<div class="calc__popup__text">
+							<span class="calc__popup__text--bold">Косметический ремонт не повредит</span> - в общем то все нормально (во всяком случее объем необходимой отделки не глобален) - стены и углы в основном ровные, инженерные коммуникации, окна  в замене не нуждаются и т.д. Требуется замена обоев/обновление окраски стен, замена полового покрытия, зачастую замена дверей, унитаза + обновление потолочного покрытия. 
+						</div>
+						<div class="calc__popup__text">
+							<span class="calc__popup__text--bold">После качественного капитального ремонта</span> -  по определению (все ОК, особенно в случаях, когда цветовая дифференциация и эргономика помещений Вас не раздражает). Тем не менее, если присутствует не соответствие Вашему  вкусу,  деньги на превращение квартиры в квартиру уже затрачены, качество на высоте и, соответственно, цена будет честной ценой, не зависимо от Ваших эстетических предпочтений. 
+						</div>
+					</div>
+				</div>
+
+				<div id="calc1_pict_1" class="calc__pict">
+					<img class="calcpage__img calcpage__img--1" src="img/cities/1.jpg" alt="">
+					<img class="calcpage__img calcpage__img--2" src="img/cities/2.jpg" alt="">
+					<img class="calcpage__img calcpage__img--3" src="img/cities/3.jpg" alt="">
+					<img class="calcpage__img calcpage__img--4" src="img/cities/4.jpg" alt="">
+					<img class="calcpage__img calcpage__img--5" src="img/cities/5.jpg" alt="">
+					<img class="calcpage__img calcpage__img--6" src="img/cities/6.jpg" alt="">
+					<img class="calcpage__img calcpage__img--7" src="img/cities/7.jpg" alt="">
+					<img class="calcpage__img calcpage__img--8" src="img/cities/8.jpg" alt="">
+					<img class="calcpage__img calcpage__img--9" src="img/cities/9.jpg" alt="">
+					<img class="calcpage__img calcpage__img--10" src="img/cities/10.jpg" alt="">
+					<img class="calcpage__img calcpage__img--11" src="img/cities/11.jpg" alt="">
+					<img class="calcpage__img calcpage__img--12" src="img/cities/12.jpg" alt="">
+					<img class="calcpage__img calcpage__img--13" src="img/cities/13.jpg" alt="">
+					<img class="calcpage__img calcpage__img--14" src="img/cities/14.jpg" alt="">
+					<img class="calcpage__img calcpage__img--15" src="img/cities/15.jpg" alt="">
+					<img class="calcpage__img calcpage__img--16" src="img/cities/16.jpg" alt="">
+					<img class="calcpage__img calcpage__img--17" src="img/cities/17.jpg" alt="">
+					<img class="calcpage__img calcpage__img--18" src="img/cities/18.jpg" alt="">
+					<img class="calcpage__img calcpage__img--19" src="img/cities/19.jpg" alt="">
+					<img class="calcpage__img calcpage__img--20" src="img/cities/20.jpg" alt="">
+					<img class="calcpage__img calcpage__img--21" src="img/cities/21.jpg" alt="">
+					<img class="calcpage__img calcpage__img--22" src="img/cities/22.jpg" alt="">
+					<img class="calcpage__img calcpage__img--23" src="img/cities/23.jpg" alt="">
+				</div>
+
+				<!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste necessitatibus voluptatum molestias libero inventore nesciunt magnam culpa dolorum voluptate alias? -->
+
+				<div class="calc__line">
+
+					<div class="calc__title">Город:</div>
+					<div id="calc1__cityID" class="calc__city-id"></div>
+					<div class="calc__select">
+						<div class="calc__current"></div>
+						<!-- <div class="calc__arrow">▼</div> -->
+						<div id="city_list" class="calc__list">
+							<div class="calc__li" >1</div>
+							<div class="calc__li" >2</div>
+							<div class="calc__li" >3</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__title">Улица:</div>
+					<div class="calc__select">
+						<input id="calc1_search" class="calc__street" type="text">
+						<div class="calc__current calc__current--street"></div>
+						<div id="street_list" class="calc__list">
+							<div class="calc__li" >Город не выбран</div>
+						</div>
+					</div>
+
+				</div>
+
+
+				<!-- <div class="calc__line">
+
+					<div class="calc__title">Район:</div>
+
+				</div> -->
+
+				<div id="calc1_pict_2" class="calc__pict">
+					<img class="calc__img calc__img--1" src="img/calc/1.jpg" alt="">
+					<img class="calc__img calc__img--2" src="img/calc/2.jpg" alt="">
+					<img class="calc__img calc__img--3" src="img/calc/3.jpg" alt="">
+					<img class="calc__img calc__img--4" src="img/calc/4.jpg" alt="">
+					<img class="calc__img calc__img--5" src="img/calc/5.jpg" alt="">
+					<img class="calc__img calc__img--6" src="img/calc/6.jpg" alt="">
+					<img class="calc__img calc__img--7" src="img/calc/7.jpg" alt="">
+					<img class="calc__img calc__img--8" src="img/calc/8.jpg" alt="">
+					<img class="calc__img calc__img--9" src="img/calc/9.jpg" alt="">
+					<img class="calc__img calc__img--10" src="img/calc/10.jpg" alt="">
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__title">Тип дома:</div>
+					<div class="calc__select">
+						<div class="calc__current"></div>
+						<div id="type_list" class="calc__list">
+							<div class="calc__li" >1</div>
+							<div class="calc__li" >2</div>
+							<div class="calc__li" >3</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__title"><div id="calc_note_1" class="calc__note">?</div>Статус дома:</div>
+					<div class="calc__select">
+						<div class="calc__current"></div>
+						<div id="status_list" class="calc__list">
+							<div class="calc__li" >1</div>
+							<div class="calc__li" >2</div>
+							<div class="calc__li" >3</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__title">Отопление:</div>
+					<div class="calc__select">
+						<div class="calc__current"></div>
+						<div id="otoplenie_list" class="calc__list">
+							<div class="calc__li" >1</div>
+							<div class="calc__li" >2</div>
+							<div class="calc__li" >3</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__title">Параметры квартиры:</div>
+					<div class="calc__select">
+						<div class="calc__current"></div>
+						<div id="param_list" class="calc__list">
+							<div class="calc__li" >1</div>
+							<div class="calc__li" >2</div>
+							<div class="calc__li" >3</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__title">Площадь квартиры без балкона / лоджии (кв.м.):</div>
+					<div class="calc__select calc__select--noarrow">
+						<input id="calc_1_square" type="text" class="calc__input">
+					</div>
+
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__title">Этаж:</div>
+					<div class="calc__select">
+						<div class="calc__current"></div>
+						<div id="floor_list" class="calc__list">
+							<div class="calc__li" >1</div>
+							<div class="calc__li" >2</div>
+							<div class="calc__li" >3</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__title"><div id="calc_note_2" class="calc__note">?</div>Состояние:</div>
+					<div class="calc__select">
+						<div class="calc__current"></div>
+						<div id="condition_list" class="calc__list">
+							<div class="calc__li" >Не выбран тип дома</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="calc__space"></div>
+
+				<div class="calc__send">
+
+					<div id="calc1_btn" class="calc__btn calc__btn--calc">Рассчитать</div>
+
+				</div>
+
+				<div class="calc__space"></div>
+				<div class="calc__space"></div>
+				<div class="calc__space calc__space--border"></div>
+
+				<div class="calc__line calc__line--itog">
+
+					<div class="calc__title calc__title--itog">Расчетная стоимость квартиры:</div>
+
+					<div id="calc1_result_1" class="calc__result calc__result--1"></div>
+
+				</div>
+
+				<div class="calc__line calc__line--itog">
+
+					<div class="calc__title calc__title--itog">Ликвидационная стоимость:</div>
+
+					<div id="calc1_result_2" class="calc__result calc__result--2"></div>
+
+				</div>
+
+				<div class="calc__space"></div>
+
+
+			</div>
+			<!-- /.calc--1 -->
+
+
+			<div id="calc_2" class="calc--2 calc">
+
+				<div class="calc__close"></div>
+
+				<h2 class="calc__h2">Калькулятор оценки стоимости земельного&nbsp;участка и дома</h2>
+
+				<div class="calc__remark">Внимание! Расчеты калькулятора носят ознакомительный характер! Минимальная погрешность возможна исключительно при полном совпадении заложенных параметров</div>
+
+				<div class="calc__space"></div>
+				<div class="calc__space"></div>
+				<div class="calc__space calc__space--border"></div>
+				<div class="calc__space"></div>
+
+				<div id="calc2_pict_1" class="calc__pict">
+					<img class="calcpage__img calcpage__img--1" src="img/cities/1.jpg" alt="">
+					<img class="calcpage__img calcpage__img--2" src="img/cities/2.jpg" alt="">
+					<img class="calcpage__img calcpage__img--3" src="img/cities/3.jpg" alt="">
+					<img class="calcpage__img calcpage__img--4" src="img/cities/4.jpg" alt="">
+					<img class="calcpage__img calcpage__img--5" src="img/cities/5.jpg" alt="">
+					<img class="calcpage__img calcpage__img--6" src="img/cities/6.jpg" alt="">
+					<img class="calcpage__img calcpage__img--7" src="img/cities/7.jpg" alt="">
+					<img class="calcpage__img calcpage__img--8" src="img/cities/8.jpg" alt="">
+					<img class="calcpage__img calcpage__img--9" src="img/cities/9.jpg" alt="">
+					<img class="calcpage__img calcpage__img--10" src="img/cities/10.jpg" alt="">
+					<img class="calcpage__img calcpage__img--11" src="img/cities/11.jpg" alt="">
+					<img class="calcpage__img calcpage__img--12" src="img/cities/12.jpg" alt="">
+					<img class="calcpage__img calcpage__img--13" src="img/cities/13.jpg" alt="">
+					<img class="calcpage__img calcpage__img--14" src="img/cities/14.jpg" alt="">
+					<img class="calcpage__img calcpage__img--15" src="img/cities/15.jpg" alt="">
+					<img class="calcpage__img calcpage__img--16" src="img/cities/16.jpg" alt="">
+					<img class="calcpage__img calcpage__img--17" src="img/cities/17.jpg" alt="">
+					<img class="calcpage__img calcpage__img--18" src="img/cities/18.jpg" alt="">
+					<img class="calcpage__img calcpage__img--19" src="img/cities/19.jpg" alt="">
+					<img class="calcpage__img calcpage__img--20" src="img/cities/20.jpg" alt="">
+					<img class="calcpage__img calcpage__img--21" src="img/cities/21.jpg" alt="">
+					<img class="calcpage__img calcpage__img--22" src="img/cities/22.jpg" alt="">
+					<img class="calcpage__img calcpage__img--23" src="img/cities/23.jpg" alt="">
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__title">Город/район:</div>
+					<div id="calc2__cityID" class="calc__city-id"></div>
+					<div class="calc__select">
+						<div class="calc__current"></div>
+						<!-- <div class="calc__arrow">▼</div> -->
+						<div id="calc_2_city_list" class="calc__list">
+							<div class="calc__li" >1</div>
+							<div class="calc__li" >2</div>
+							<div class="calc__li" >3</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__title">Улица/поселок/СНТ:</div>
+					<div class="calc__select">
+						<input id="calc2_search" class="calc__street" type="text">
+						<div id="calc_2_current-street" class="calc__current calc__current--street"></div>
+						<div id="calc_2_street_list" class="calc__list">
+							<div class="calc__li" >Город не выбран</div>
+						</div>
+					</div>
+
+					<!-- <div class="calc__title">Улица:</div>
+					<div class="calc__select">
+						<input id="calc1_search" class="calc__street" type="text">
+						<div class="calc__current calc__current--street"></div>
+						<div id="street_list" class="calc__list">
+							<div class="calc__li" >Город не выбран</div>
+						</div>
+					</div> -->
+
+				</div>
+
+				<div id="calc2_pict_2" class="calc__pict">
+					<img class="calcpage__img calcpage__img--1" src="img/border/1.jpg" alt="">
+					<img class="calcpage__img calcpage__img--2" src="img/border/2.jpg" alt="">
+					<img class="calcpage__img calcpage__img--3" src="img/border/3.jpg" alt="">
+					<img class="calcpage__img calcpage__img--4" src="img/border/4.jpg" alt="">
+					<img class="calcpage__img calcpage__img--5" src="img/border/5.jpg" alt="">
+					<img class="calcpage__img calcpage__img--6" src="img/border/6.jpg" alt="">
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__title">Огораживание участка:</div>
+					<div class="calc__select">
+						<div class="calc__current"></div>
+						<div id="calc_2_border_list" class="calc__list">
+							<div class="calc__li" >1</div>
+							<div class="calc__li" >2</div>
+							<div class="calc__li" >3</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div id="calc2_pict_3" class="calc__pict">
+					<img class="calcpage__img calcpage__img--1" src="img/green/1.jpg" alt="">
+					<img class="calcpage__img calcpage__img--2" src="img/green/2.jpg" alt="">
+					<img class="calcpage__img calcpage__img--3" src="img/green/3.jpg" alt="">
+					<img class="calcpage__img calcpage__img--4" src="img/green/4.jpg" alt="">
+					<img class="calcpage__img calcpage__img--5" src="img/green/5.jpg" alt="">
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__title">Благоустройство территории:</div>
+					<div class="calc__select">
+						<div class="calc__current"></div>
+						<div id="calc_2_green_list" class="calc__list">
+							<div class="calc__li" >1</div>
+							<div class="calc__li" >2</div>
+							<div class="calc__li" >3</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__title">Произведенные затраты на подвод коммунальных линий (руб.):</div>
+					<div class="calc__select calc__select--noarrow">
+						<input id="calc_2_network" type="text" class="calc__input">
+					</div>
+
+				</div>
+
+				<div id="calc2_pict_4" class="calc__pict">
+					<img class="calcpage__img calcpage__img--1" src="img/perimeter.jpg" alt="">
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__title">Длина периметра участка:</div>
+					<div class="calc__select calc__select--noarrow">
+						<input id="calc_2_perimeter" type="text" class="calc__input">
+					</div>
+
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__title">Площадь земельного участка (сот.):</div>
+					<div class="calc__select calc__select--noarrow">
+						<input id="calc_2_square" type="text" class="calc__input">
+					</div>
+
+				</div>
+
+				<div class="calc__space"></div>
+				<div class="calc__space"></div>
+				<div class="calc__space calc__space--border"></div>
+				<div class="calc__space"></div>
+
+
+				<div class="calc__line">
+
+					<div class="calc__title">Длина дома по основанию:</div>
+					<div class="calc__select calc__select--noarrow">
+						<input id="calc_2_dlina" type="text" class="calc__input">
+					</div>
+
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__title">Ширина дома по основанию:</div>
+					<div class="calc__select calc__select--noarrow">
+						<input id="calc_2_shirina" type="text" class="calc__input">
+					</div>
+
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__title">Фундамент:</div>
+					<div class="calc__select">
+						<div class="calc__current"></div>
+						<div id="calc_2_homebase_list" class="calc__list">
+							<div class="calc__li" >1</div>
+							<div class="calc__li" >2</div>
+							<div class="calc__li" >3</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__title">Тип дома:</div>
+					<div class="calc__select">
+						<div class="calc__current"></div>
+						<div id="calc_2_hometype_list" class="calc__list">
+							<div class="calc__li" >1</div>
+							<div class="calc__li" >2</div>
+							<div class="calc__li" >3</div>
+						</div>
+					</div>
+
+				</div>
+				
+				<div class="calc__line">
+
+					<div class="calc__title">Межэтажные перекрытия:</div>
+					<div class="calc__select">
+						<div class="calc__current"></div>
+						<div id="calc_2_overlap_list" class="calc__list">
+							<div class="calc__li" >1</div>
+							<div class="calc__li" >2</div>
+							<div class="calc__li" >3</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__title">Стены:</div>
+					<div class="calc__select">
+						<div class="calc__current"></div>
+						<div id="calc_2_walls_list" class="calc__list">
+							<div class="calc__li" >1</div>
+							<div class="calc__li" >2</div>
+							<div class="calc__li" >3</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__title">Наружная отделка:</div>
+					<div class="calc__select">
+						<div class="calc__current"></div>
+						<div id="calc_2_outsidetrim_list" class="calc__list">
+							<div class="calc__li" >1</div>
+							<div class="calc__li" >2</div>
+							<div class="calc__li" >3</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__title">Крыша:</div>
+					<div class="calc__select">
+						<div class="calc__current"></div>
+						<div id="calc_2_roof_list" class="calc__list">
+							<div class="calc__li" >1</div>
+							<div class="calc__li" >2</div>
+							<div class="calc__li" >3</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__title">Внутренняя отделка:</div>
+					<div class="calc__select">
+						<div class="calc__current"></div>
+						<div id="calc_2_insidetrim_list" class="calc__list">
+							<div class="calc__li" >1</div>
+							<div class="calc__li" >2</div>
+							<div class="calc__li" >3</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__title">Отопление:</div>
+					<div class="calc__select">
+						<div class="calc__current"></div>
+						<div id="calc_2_warm_list" class="calc__list">
+							<div class="calc__li" >1</div>
+							<div class="calc__li" >2</div>
+							<div class="calc__li" >3</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__title">Класс отделки:</div>
+					<div class="calc__select">
+						<div class="calc__current"></div>
+						<div id="calc_2_class_list" class="calc__list">
+							<div class="calc__li" >1</div>
+							<div class="calc__li" >2</div>
+							<div class="calc__li" >3</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="calc__space"></div>
+
+				<div class="calc__send">
+
+					<div id="calc2_btn" class="calc__btn calc__btn--calc">Рассчитать</div>
+
+				</div>
+
+				<div class="calc__space"></div>
+				<div class="calc__space"></div>
+				<div class="calc__space calc__space--border"></div>
+
+				<div class="calc__line calc__line--itog">
+
+					<div class="calc__title calc__title--itog">Расчетная стоимость земельного участка:</div>
+
+					<div id="calc2_result_1" class="calc__result"></div>
+
+				</div>
+
+				<div class="calc__line calc__line--itog">
+
+					<div class="calc__title calc__title--itog">Расчетная стоимость дома:</div>
+
+					<div id="calc2_result_2" class="calc__result"></div>
+
+				</div>
+
+				<div class="calc__line calc__line--itog">
+
+					<div class="calc__title calc__title--itog">Расчетная стоимость дома с участком:</div>
+
+					<div id="calc2_result_3" class="calc__result"></div>
+
+				</div>
+
+				<div class="calc__line calc__line--itog">
+
+					<div class="calc__title calc__title--itog">Ликвидационная стоимость дома с участком:</div>
+
+					<div id="calc2_result_4" class="calc__result"></div>
+
+				</div>
+
+				<div class="calc__space"></div>
+
+
+
+
+
+
+
+
+			</div>
+			<!-- /.calc--2 -->
+
+
+
+
+
+
+			<div id="calc_3" class="calc--3 calc">
+
+				<div class="calc__close"></div>
+
+				<h2 class="calc__h2">Калькулятор ремонта квартиры</h2>
+
+				<div class="calc__remark">Внимание! Расчеты калькулятора носят ознакомительный характер! Минимальная погрешность возможна исключительно при полном совпадении заложенных параметров</div>
+
+				<div class="calc__space"></div>
+				<div class="calc__space"></div>
+				<div class="calc__space calc__space--border"></div>
+				<div class="calc__space"></div>
+
+				<div id="calc3_popup_1" class="calc__popup">
+
+					<div class="calc__popup__close">×</div>
+					<div class="calc__popup__wrap">
+
+						<div class="calc__popup__text">
+							Капитальный ремонт - выравнивание стен и углов, полная замена инженерных коммуникаций (электрических, водяных) + радиаторов отопления, демонтаж старой/монтаж новой кафельной плитки, замена санфаянса  в "мокрых зонах",  полная замена полов до лаг (где они есть, где нет - зачистка до бетона, включая демонтаж напольной плитки), стяжка по железобитонным перекрытиям (с выравниванием пола по всему объекту), замена покрытия, замена окон, дверей,  выравнивание потолка/демонтаж - монтаж натяжного/гипсокартонного и пр. видов и т.д.
+						</div>
+						<div class="calc__popup__text">
+							Косметический ремонт - замена обоев/обновление окраски стен с зачисткой старого покрытия, шпаклеванием, ошкуриванием и грунтованием, замена полового покрытия (ламинат, линолеум, плитка),  замена дверей, унитаза + обновление потолочного покрытия.
+						</div>
+
+					</div>
+				</div>
+
+				<div id="calc3_popup_2" class="calc__popup">
+
+					<div class="calc__popup__close">×</div>
+					<div class="calc__popup__wrap">
+
+						<div class="calc__popup__text">
+							Вставьте необходимые значения в зависимости от выбранного вида ремонта (общая площадь квартиры, площадь санузлов, площадь за вычетом санузлов).
+						</div>
+
+					</div>
+				</div>
+
+				<div id="calc3_pict_1" class="calc__pict">
+					<img class="calcpage__img calcpage__img--1" src="img/calc/2.jpg" alt="">
+					<img class="calcpage__img calcpage__img--2" src="img/calc/3.jpg" alt="">
+					<img class="calcpage__img calcpage__img--3" src="img/calc/4.jpg" alt="">
+					<img class="calcpage__img calcpage__img--4" src="img/calc/5.jpg" alt="">
+					<img class="calcpage__img calcpage__img--5" src="img/calc/6.jpg" alt="">
+					<img class="calcpage__img calcpage__img--6" src="img/calc/7.jpg" alt="">
+					<img class="calcpage__img calcpage__img--7" src="img/calc/8.jpg" alt="">
+					<img class="calcpage__img calcpage__img--8" src="img/calc/9.jpg" alt="">
+					<img class="calcpage__img calcpage__img--9" src="img/calc/10.jpg" alt="">
+					<!-- <img class="calcpage__img calcpage__img--10" src="img/calc/11.jpg" alt=""> -->
+
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__title">Тип дома:</div>
+					<div class="calc__select">
+						<div class="calc__current"></div>
+						<div id="calc_3_hometype_list" class="calc__list">
+							<div class="calc__li" >1</div>
+							<div class="calc__li" >2</div>
+							<div class="calc__li" >3</div>
+						</div>
+					</div>
+
+				</div>
+
+
+
+				<div class="calc__line">
+
+					<div class="calc__title"><div id="calc3_note_1" class="calc__note">?</div>Вид ремонта:</div>
+					<div class="calc__select">
+						<div class="calc__current"></div>
+						<div id="calc_3_remontkind_list" class="calc__list">
+							<div class="calc__li" >1</div>
+							<div class="calc__li" >2</div>
+							<div class="calc__li" >3</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__title">Тип ремонта:</div>
+					<div class="calc__select">
+						<div class="calc__current"></div>
+						<div id="calc_3_remonttype_list" class="calc__list">
+							<div class="calc__li" >1</div>
+							<div class="calc__li" >2</div>
+							<div class="calc__li" >3</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="calc__line">
+
+					<div class="calc__title"><div id="calc3_note_2" class="calc__note">?</div>Площадь:</div>
+					<div class="calc__select calc__select--noarrow">
+						<input id="calc_3_square" type="text" class="calc__input">
+					</div>
+
+				</div>
+
+				<div class="calc__space"></div>
+
+				<div class="calc__send">
+
+					<div id="calc3_btn" class="calc__btn calc__btn--calc">Рассчитать</div>
+
+				</div>
+
+				<div class="calc__space"></div>
+				<div class="calc__space"></div>
+				<div class="calc__space calc__space--border"></div>
+
+				<div class="calc__line calc__line--itog">
+
+					<div class="calc__title calc__title--itog">Расчетная стоимость ремонта:</div>
+
+					<div id="calc3_result_1" class="calc__result"></div>
+
+				</div>
+
+				<div class="calc__space"></div>
+
+			</div>
+			<!-- /.calc--3 -->
+
+		</div>
+
+	</div>
+	<!-- /.sale -->
+
+	<div id="footer" class="footer"></div>
+	<!-- /.footer -->
+
+</body>
+</html>

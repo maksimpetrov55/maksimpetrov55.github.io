@@ -1,0 +1,60 @@
+
+
+
+.calcpage
+    position: relative
+
+    &__wrap
+        position: relative
+        margin: 0 auto
+        display: flex
+        justify-content: space-around
+        padding: 110px 0 80px 0
+        @media ( max-width: 1310px )
+            flex-wrap: wrap
+            justify-content: center
+
+    &__img
+        position: relative
+        width: 100%
+        height: 100%
+        display: none
+
+        &--show
+            display: block
+
+    &__choice
+        position: relative
+        margin: 0 auto
+        display: flex
+        justify-content: center
+        padding: 100px 0 0 0
+        @media ( max-width: 991px )
+            flex-wrap: wrap
+
+    &__appear
+        width: 100%
+        max-width: 300px
+        height: 100px
+        background: #eee
+        border-radius: 12px
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        cursor: pointer
+        margin: 10px 20px
+        transition-duration: 0.3s
+        letter-spacing: 0.3px
+        line-height: 1.4
+
+        &--active
+            background: #2dd673
+
+        &:hover
+            background: #2dd673
+            transform: translateY(-5px)
+            box-shadow: 0 5px 20px 0px rgba(0,0,0,0.1)
+
+        &:active
+            opacity: 0.2

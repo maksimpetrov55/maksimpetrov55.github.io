@@ -8,7 +8,7 @@
 
     <div class="form__text">Заполните форму и мы свяжемся с вами в ближайшее время!</div>
 
-    <form method="POST" action="!mail.php" class="form__form">
+    <form id="form_main" method="POST" action="!mail.php" class="form__form">
 
         <!-- <div class="form__title">Ваше Имя</div> -->
 
@@ -20,6 +20,8 @@
 
         <input name="form_email" type="email" class="form__input" required placeholder="Ваш email *">
 
+        <textarea name="form_text" type="text" class="form__input form__input--hidden"></textarea>
+
         <div class="form__note">* – поля обязательны для заполнения</div>
 
     </form>
@@ -28,8 +30,17 @@
 
 </div>
 
+
+
+
 <script>
     $(function(){
         $(".form__input--phone").mask("+7 (999) 999-99-99", {placeholder: "__________" });
     });
+</script>
+
+<script>
+	$('.form__btn').click(function(){
+		$( "#form_main" ).submit();
+	});
 </script>

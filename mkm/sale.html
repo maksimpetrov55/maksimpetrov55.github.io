@@ -8,16 +8,21 @@
 	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
 	<link rel="icon" href="img/favicon.png" type="image/png">
 	
-	<link rel="stylesheet" href="css/main.css?v3">
+	<link rel="stylesheet" href="css/main.css?v5">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/scripts.js?v3"></script>
+	<script src="js/scripts.js?v5"></script>
+	<script src="js/calc.js"></script>
+	<script src="js/calc_4.js"></script>
+	<script src="js/arrays_4.js"></script>
 	<script src="js/jquery.maskedinput.min.js"></script>
 
 </head>
 <body>
 
 	<div class="blackout"></div>
+
+
 
 	<script>
 		$(document).ready(function() {
@@ -64,6 +69,20 @@
 		});
 	</script>
 
+	<div id="tnks" class="tnks">
+		<div class="tnks__wrap">
+
+			<div class="tnks__text tnks__text--bold">Спасибо!</div>
+		
+			<div class="tnks__text">Ваша заявка принята в работу, мы свяжемся с вами в ближайшее время</div>
+		
+			<div class="tnks__close">Отлично</div>
+		
+		</div>
+		
+	</div>
+	<!-- /.tnks -->
+
 	<div class="form" id="form"></div>
 	<!-- /.form -->
 
@@ -71,7 +90,7 @@
 	<!-- /.header -->
 
 	<div class="g-wall">
-		<img class="g-wall__img" src="img/walls/7.jpg" alt="">
+		<img class="g-wall__img" src="img/walls/11.jpg" alt="">
 	</div>
 
 	<div class="sale">
@@ -82,7 +101,7 @@
 
 			<div class="sale__left">
 
-				<div class="sale__title">Полезные советы при самостоятельной продаже объектов недвижимости</div>
+				<div class="sale__title">Полезные советы при самостоятельной продаже объектов&nbsp;недвижимости</div>
 
 				<div class="sale__tips">
 					✔ – независимо от Ваших намерений, уточните <a class="g-link" href="calcs.html">реальную рыночную стоимость Вашего объекта</a>. При завышенной цене Вам будут звонить разве что риелторы, при заниженной - ...  а зачем продавать дешевле? 
@@ -111,7 +130,198 @@
 
 			</div>
 
-			<div class="sale__right"></div>
+			<div class="sale__right">
+
+				<div id="calc_4" class="calc--4 calc">
+
+					<div class="calc__close"></div>
+
+					<h2 class="calc__h2">Калькулятор услуг</h2>
+
+					<div class="calc__remark">Выберите подходящую услугу</div>
+
+					<div class="calc__space"></div>
+					<div class="calc__space"></div>
+					<div class="calc__space calc__space--border"></div>
+					<div class="calc__space"></div>
+
+					<div id="calc4_popup_1" class="calc__popup">
+
+						<div class="calc__popup__close">×</div>
+						<div class="calc__popup__wrap">
+	
+							<div class="calc__popup__text">*Рассчет реальной рыночной стоимости Вашего объекта в текущем времени с учетом состояния самого объекта, расположения, типа дома, состояния дома, подъезда и т.д.</div>
+							<div class="calc__popup__text">*Предоставление данных о стоимости ремонтно-отделочных работ (среднерыночная стоимость материалов и работ). </div>
+							<div class="calc__popup__text">*Это не оценка недвижимости, проводимая аккредитованными организациями для банков  - это оценка реальной стоимости, на которую Вы можете расчитывать при продаже</div>
+
+						</div>
+					</div>
+
+					<div id="calc4_popup_2" class="calc__popup">
+
+						<div class="calc__popup__close">×</div>
+						<div class="calc__popup__wrap">
+	
+							<div class="calc__popup__text">ПРЯМАЯ сделка - без встречной покупки, без ипотеки, без использования материнского капитала, без несовершеннолетних собственников</div>
+
+						</div>
+					</div>
+
+					<div id="calc4_popup_3" class="calc__popup">
+
+						<div class="calc__popup__close">×</div>
+						<div class="calc__popup__wrap">
+	
+							<div class="calc__popup__text">СТАНДАРТНЫЙ ПАКЕТ (КВАРТИРА) - (предварительная оценка - размещение объявления на рекламных площадках - подбор покупателя - полное сопровождение сделки)</div>
+							<div class="calc__popup__text">СТАНДАРТНЫЙ ПАКЕТ (ДОМ/КОТТЕДЖ/ТАУНХАУС) (предварительная оценка - размещение объявления на рекламных площадках - подбор покупателя - полное сопровождение сделки)</div>
+							<div class="calc__popup__text">РАСШИРЕННЫЙ ПАКЕТ (КВАРТИРА) (предварительная оценка - организация подготовки объекта к продаже (организация уборки, косметического и мелкого ремонта) -  размещение объявления на рекламных площадках - подбор покупателя - полное сопровождение сделки.</div>
+							<div class="calc__popup__text">РАСШИРЕННЫЙ ПАКЕТ (ДОМ/КОТТЕДЖ/ТАУНХАУС) (предварительная оценка - организация подготовки объекта к продаже (организация уборки, косметического и мелкого ремонта) -  размещение объявления на рекламных площадках - подбор покупателя - полное сопровождение сделки.</div>
+
+						</div>
+					</div>
+
+					<div class="calc__line">
+
+						<div class="calc__title"><div id="calc4_note_1" class="calc__note">?</div>Оценить рыночную стоимость объекта:</div>
+						<div class="calc__select">
+							<div class="calc__current"></div>
+							<div id="calc_4_price_list" class="calc__list">
+								<div class="calc__li" >1</div>
+								<div class="calc__li" >2</div>
+								<div class="calc__li" >3</div>
+							</div>
+						</div>
+	
+					</div>
+
+					<div class="calc__line">
+
+						<div class="calc__title">Пакет услуг по подготовке объекта к продаже:</div>
+						<div class="calc__select">
+							<div class="calc__current"></div>
+							<div id="calc_4_paketsale_list" class="calc__list">
+								<div class="calc__li" >1</div>
+								<div class="calc__li" >2</div>
+								<div class="calc__li" >3</div>
+							</div>
+						</div>
+	
+					</div>
+
+					<div class="calc__line">
+
+						<div class="calc__title">Подготовка договоров (задатка, купли-продажи):</div>
+						<div class="calc__select">
+							<div class="calc__current"></div>
+							<div id="calc_4_documents_list" class="calc__list">
+								<div class="calc__li" >1</div>
+								<div class="calc__li" >2</div>
+								<div class="calc__li" >3</div>
+							</div>
+						</div>
+	
+					</div>
+
+					<div class="calc__line">
+
+						<div class="calc__title"><div id="calc4_note_2" class="calc__note">?</div>Юр. сопровождение:</div>
+						<div class="calc__select">
+							<div class="calc__current"></div>
+							<div id="calc_4_ur_list" class="calc__list">
+								<div class="calc__li" >1</div>
+								<div class="calc__li" >2</div>
+								<div class="calc__li" >3</div>
+							</div>
+						</div>
+	
+					</div>
+
+					<div class="calc__line">
+
+						<div class="calc__title">Организация подготовки объекта к продаже:</div>
+						<div class="calc__select">
+							<div class="calc__current"></div>
+							<div id="calc_4_preparesale_list" class="calc__list">
+								<div class="calc__li" >1</div>
+								<div class="calc__li" >2</div>
+								<div class="calc__li" >3</div>
+							</div>
+						</div>
+	
+					</div>
+
+					<div class="calc__line">
+
+						<div class="calc__title"><div id="calc4_note_3" class="calc__note">?</div>Организация продажи объекта:</div>
+						<div class="calc__select">
+							<div class="calc__current"></div>
+							<div id="calc_4_sale_list" class="calc__list">
+								<div class="calc__li" >1</div>
+								<div class="calc__li" >2</div>
+								<div class="calc__li" >3</div>
+							</div>
+						</div>
+	
+					</div>
+
+					<div class="calc__line calc__line--itog">
+	
+						<div class="calc__title calc__title--itog">Стоимость выбранных услуг:</div>
+	
+						<div id="calc4_result_1" class="calc__result"></div>
+	
+					</div>
+
+
+					<div class="calc__space"></div>
+
+					<div class="calc__send">
+	
+						<div id="calc4_btn" class="calc__btn calc__btn--calc">Рассчитать</div>
+	
+					</div>
+	
+					<div class="calc__space"></div>
+
+					<form id="calc4_form" class="calc__form" action="!mail.php" method="POST">
+
+						<div class="calc__line">
+							<div class="calc__title">Ваше имя:</div>
+							<input class="calc__forminput" type="text" name="form_name" id="">
+						</div>
+
+						<div class="calc__line">
+							<div class="calc__title">Ваш телeфон:</div>
+							<input class="calc__forminput calc__forminput--mask" type="text" name="form_phone" id="">
+						</div>
+
+						<textarea id="calc4_textarea1" name="form_text_1" type="text" class="calc__forminput form__input--hidden"></textarea>
+						<!-- <textarea id="calc4_textarea2" name="form_text_2" type="text" class="calc__forminput form__input--hidden"></textarea>
+						<textarea id="calc4_textarea3" name="form_text_3" type="text" class="calc__forminput form__input--hidden"></textarea>
+						<textarea id="calc4_textarea4" name="form_text_4" type="text" class="calc__forminput form__input--hidden"></textarea>
+						<textarea id="calc4_textarea5" name="form_text_5" type="text" class="calc__forminput form__input--hidden"></textarea>
+						<textarea id="calc4_textarea6" name="form_text_6" type="text" class="calc__forminput form__input--hidden"></textarea> -->
+
+
+					</form>
+
+					<div class="calc__space"></div>
+
+					<div class="calc__send">
+	
+						<div id="calc4_btn_mail" class="calc__btn calc__btn--calc calc__btn--mail">Отправить заявку</div>
+	
+					</div>
+	
+					<div class="calc__space"></div>
+					<div class="calc__space"></div>
+					<div class="calc__space"></div>
+
+
+				</div>
+				<!-- calc--4 -->
+
+			</div>
 
 		</div>
 

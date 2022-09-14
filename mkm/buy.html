@@ -12,6 +12,9 @@
 
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/scripts.js?v3"></script>
+	<script src="js/calc.js"></script>
+	<script src="js/calc_5.js"></script>
+	<script src="js/arrays_5.js"></script>
 	<script src="js/jquery.maskedinput.min.js"></script>
 
 </head>
@@ -64,6 +67,20 @@
 		});
 	</script>
 
+	<div id="tnks" class="tnks">
+		<div class="tnks__wrap">
+
+			<div class="tnks__text tnks__text--bold">Спасибо!</div>
+		
+			<div class="tnks__text">Ваша заявка принята в работу, мы свяжемся с вами в ближайшее время</div>
+		
+			<div class="tnks__close">Отлично</div>
+		
+		</div>
+		
+	</div>
+	<!-- /.tnks -->
+
 	<div class="form" id="form"></div>
 	<!-- /.form -->
 
@@ -107,7 +124,294 @@
 
 			</div>
 
-			<div class="buy__right"></div>
+			<div class="buy__right">
+
+				<div id="calc_5" class="calc--5 calc">
+
+					<div class="calc__close"></div>
+
+					<h2 class="calc__h2">Калькулятор услуг</h2>
+
+					<div class="calc__remark">Выберите подходящую услугу</div>
+
+					<div class="calc__space"></div>
+					<div class="calc__space"></div>
+					<div class="calc__space calc__space--border"></div>
+					<div class="calc__space"></div>
+
+					<div id="calc5_popup_1" class="calc__popup">
+
+						<div class="calc__popup__close">×</div>
+						<div class="calc__popup__wrap">
+
+														
+							<div class="calc__popup__text">* ИПОТЕКА ПОД КЛЮЧ - формирование и отправка заявки на одобрение ипотеки в банки, помощь в заполнении анкет, получение решения по ипотечной заявке, предоставление банку информации по выбранному объекту, организация оценки объекта (включая стоимость самой оценки)</div>
+
+							<div class="calc__popup__text">* ПОЛУЧЕНИЕ ОДОБРЕНИЯ ИПОТЕКИ - формирование и отправка заявки на одобрение ипотеки в банки, помощь в заполнении анкет, получение решения по ипотечной заявке</div>
+
+						</div>
+					</div>
+
+					<div id="calc5_popup_2" class="calc__popup">
+
+						<div class="calc__popup__close">×</div>
+						<div class="calc__popup__wrap">
+
+							<div class="calc__popup__text">*Рассчет реальной рыночной стоимости выбранных Вами объектов в текущем времени с учетом состояния объекта, расположения, типа дома, состояния дома, подъезда и т.д.</div>
+							<div class="calc__popup__text">*Предоставление данных о стоимости ремонтно-отделочных работ (среднерыночная стоимость материалов и работ). </div>
+							<div class="calc__popup__text">*Это не оценка недвижимости, проводимая аккредитованными организациями для банков  - это оценка Ваших полных затрат при покупке конкретного объекта недвижимости</div>
+
+						</div>
+					</div>
+
+					<div id="calc5_popup_3" class="calc__popup">
+
+						<div class="calc__popup__close">×</div>
+						<div class="calc__popup__wrap">
+
+							<div class="calc__popup__text">ПРЯМАЯ сделка - без встречной покупки, без ипотеки, без использования материнского капитала, без несовершеннолетних собственников</div>
+
+						</div>
+					</div>
+
+					<div id="calc5_popup_4" class="calc__popup">
+
+						<div class="calc__popup__close">×</div>
+						<div class="calc__popup__wrap">
+
+							<div class="calc__popup__text">* Вариант 1 - подбор, организация показа вариантов квартир, подходящих  под Ваши запросы + предоставление данных по текущей рыночной стоимости объектов и расчетной стоимости ремонтно-отделочных работ.</div>
+							<div class="calc__popup__text">* Вариант 2 - подбор, организация показа вариантов  квартир, подходящих  под Ваши запросы + предоставление данных по текущей рыночной стоимости объектов + предоставление сметы на ремонтно-отделочные работы по выбранному варианту + разработка визуализаций (картинок) будущих интерьерных решений и 3D модели по выбранному варианту (не более 10 рендеров)</div>
+							<div class="calc__popup__text">* Вариант 3 - подбор, организация показа вариантов  квартир в новостройке + предоставление сметы на ремонтно-отделочные работы</div>
+							<div class="calc__popup__text">* Вариант 4 - подбор, организация показа вариантов домов, подходящих под Вами запросы + предоставление данных по текущей рыночной стоимости объектов и расчетной стоимости ремонтно-отделочных работ. </div>
+							<div class="calc__popup__text">* Вариант 5  - подбор, организация показа вариантов домов, подходящих  под Ваши запросы, предоставление данных по текущей рыночной стоимости + предоставление сметы на ремонтно-отделочные работы по выбранному варианту + разработка визуализаций (картинок) будущих интерьерных решений и 3D модели по выбранному варианту (не более 20 рендеров)</div>
+
+						</div>
+					</div>
+
+					<div id="calc5_popup_5" class="calc__popup">
+
+						<div class="calc__popup__close">×</div>
+						<div class="calc__popup__wrap">
+
+							<div class="calc__popup__text">Вместе с Вами нарисуем будущее после перепланировки и ремонтно-отделочных работ с расставленной мебелью и бытовой техникой. Кроме самого восприятия, визуализация поможет избежать ошибок в ремонте, отделке, меблировке, т.е. логично, что появляется возможность снижения полной стоимости Ваших затрат </div>
+
+						</div>
+					</div>
+
+					<div id="calc5_popup_6" class="calc__popup">
+
+						<div class="calc__popup__close">×</div>
+						<div class="calc__popup__wrap">
+
+							<div class="calc__popup__text">У Вас появится возможность спрогнозировать затраты + Вам будет проще разговаривать с ремонтниками и  отделочниками на языке цифр</div>
+
+						</div>
+					</div>
+
+					<div id="calc5_popup_7" class="calc__popup">
+
+						<div class="calc__popup__close">×</div>
+						<div class="calc__popup__wrap">
+
+							<div class="calc__popup__text">*Выбрать из вариантов.</div>
+							<div class="calc__popup__text">В каждый из пакетов по "вторичке" входит подбор объектов, предоставление данных по текущей рыночной стоимости объектов + предоставление сметы на ремонтно-отделочные работы по одному из выбранных вариантов + разработка визуализаций (картинок) будущих интерьерных решений и 3D модели по одному из выбранных вариантов объекта (не более 10 видов)</div>
+							<div class="calc__popup__text">В пакет "первички" входит подбор, предоставление сметы на ремонтно-отделочные работы по выбранному варианту + предоставление стандартной визуализации (картинок) будущих интерьерных решений и 3D модели по одному из выбранных вариантов объекта (не более 10 видов). * Пакет "первички" бесплатный с условием внесения депозита в размере 5000 р. (возвращается в день сдачи документов на регистрацию/не возвращается при отказе Заказчика от проведения сделки)</div>
+
+						</div>
+					</div>
+
+					<div class="calc__line">
+
+						<div class="calc__title"><div id="calc5_note_1" class="calc__note">?</div>Помощь в оформлении ипотеки:</div>
+						<div class="calc__select">
+							<div class="calc__current"></div>
+							<div id="calc_5_ipoteka_list" class="calc__list">
+								<div class="calc__li" >1</div>
+								<div class="calc__li" >2</div>
+								<div class="calc__li" >3</div>
+							</div>
+						</div>
+	
+					</div>
+
+					<div class="calc__line">
+
+						<div class="calc__title"><div id="calc5_note_2" class="calc__note">?</div>Оценка рыночной стоимости объекта:</div>
+						<div class="calc__select">
+							<div class="calc__current"></div>
+							<div id="calc_5_stoimost_list" class="calc__list">
+								<div class="calc__li" >1</div>
+								<div class="calc__li" >2</div>
+								<div class="calc__li" >3</div>
+							</div>
+						</div>
+	
+					</div>
+
+					<div class="calc__line">
+
+						<div class="calc__title">Подготовка договоров:</div>
+						<div class="calc__select">
+							<div class="calc__current"></div>
+							<div id="calc_5_dogovor_list" class="calc__list">
+								<div class="calc__li" >1</div>
+								<div class="calc__li" >2</div>
+								<div class="calc__li" >3</div>
+							</div>
+						</div>
+	
+					</div>
+
+					<div class="calc__line">
+
+						<div class="calc__title"><div id="calc5_note_3" class="calc__note">?</div>Юр. сопровождение:</div>
+						<div class="calc__select">
+							<div class="calc__current"></div>
+							<div id="calc_5_ur_list" class="calc__list">
+								<div class="calc__li" >1</div>
+								<div class="calc__li" >2</div>
+								<div class="calc__li" >3</div>
+							</div>
+						</div>
+	
+					</div>
+
+					<div class="calc__line">
+
+						<div class="calc__title"><div id="calc5_note_4" class="calc__note">?</div>Подобор объекта под покупку:</div>
+						<div class="calc__select">
+							<div class="calc__current"></div>
+							<div id="calc_5_podbor_list" class="calc__list">
+								<div class="calc__li" >1</div>
+								<div class="calc__li" >2</div>
+								<div class="calc__li" >3</div>
+							</div>
+						</div>
+	
+					</div>
+
+					<div class="calc__line">
+
+						<div class="calc__title"><div id="calc5_note_5" class="calc__note">?</div>Визуализация интерьеров (вписать кол-во кв.м. объекта):</div>
+						<div class="calc__select calc__select--noarrow">
+							<input id="calc_5_visual" type="text" class="calc__input">
+						</div>
+
+					</div>
+
+					<div class="calc__line">
+
+						<div class="calc__title"><div id="calc5_note_6" class="calc__note">?</div>Калькуляция (осмечивание) ремонтно отделочных работ:</div>
+						<div class="calc__select">
+							<div class="calc__current"></div>
+							<div id="calc_5_smeta_list" class="calc__list">
+								<div class="calc__li" >1</div>
+								<div class="calc__li" >2</div>
+								<div class="calc__li" >3</div>
+							</div>
+						</div>
+	
+					</div>
+
+					<div class="calc__line">
+
+						<div class="calc__title">Организация проведения ремонтно отделочных работ:</div>
+						<div class="calc__select">
+							<div class="calc__current"></div>
+							<div id="calc_5_remont_list" class="calc__list">
+								<div class="calc__li" >1</div>
+								<div class="calc__li" >2</div>
+								<div class="calc__li" >3</div>
+							</div>
+						</div>
+	
+					</div>
+
+					<div class="calc__line">
+
+						<div class="calc__title"><div id="calc5_note_7" class="calc__note">?</div>Жилье под ключ:</div>
+						<div class="calc__select">
+							<div class="calc__current"></div>
+							<div id="calc_5_podkluch_list" class="calc__list">
+								<div class="calc__li" >1</div>
+								<div class="calc__li" >2</div>
+								<div class="calc__li" >3</div>
+							</div>
+						</div>
+	
+					</div>
+
+					<div class="calc__line">
+
+						<div class="calc__title">Иногородним/переселенцам:</div>
+						<div class="calc__select">
+							<div class="calc__current"></div>
+							<div id="calc_5_inogorod_list" class="calc__list">
+								<div class="calc__li" >1</div>
+								<div class="calc__li" >2</div>
+								<div class="calc__li" >3</div>
+							</div>
+						</div>
+	
+					</div>
+
+					<div class="calc__line calc__line--itog">
+	
+						<div class="calc__title calc__title--itog">Стоимость выбранных услуг:</div>
+	
+						<div id="calc5_result_1" class="calc__result"></div>
+	
+					</div>
+
+
+					<div class="calc__space"></div>
+
+					<div class="calc__send">
+	
+						<div id="calc5_btn" class="calc__btn calc__btn--calc">Рассчитать</div>
+	
+					</div>
+	
+					<div class="calc__space"></div>
+
+					<form id="calc5_form" class="calc__form" action="!mail.php" method="POST">
+
+						<div class="calc__line">
+							<div class="calc__title">Ваше имя:</div>
+							<input class="calc__forminput" type="text" name="form_name">
+						</div>
+
+						<div class="calc__line">
+							<div class="calc__title">Ваш телeфон:</div>
+							<input class="calc__forminput calc__forminput--mask" type="text" name="form_phone">
+						</div>
+
+						<textarea id="calc5_textarea1" name="form_text_1" type="text" class="calc__forminput form__input--hidden"></textarea>
+						<!-- <textarea id="calc5_textarea2" name="form_text_2" type="text" class="calc__forminput form__input--hidden"></textarea>
+						<textarea id="calc5_textarea3" name="form_text_3" type="text" class="calc__forminput form__input--hidden"></textarea>
+						<textarea id="calc5_textarea4" name="form_text_4" type="text" class="calc__forminput form__input--hidden"></textarea>
+						<textarea id="calc5_textarea5" name="form_text_5" type="text" class="calc__forminput form__input--hidden"></textarea>
+						<textarea id="calc5_textarea6" name="form_text_6" type="text" class="calc__forminput form__input--hidden"></textarea> -->
+
+					</form>
+
+					<div class="calc__space"></div>
+
+					<div class="calc__send">
+	
+						<div id="calc5_btn_mail" class="calc__btn calc__btn--calc calc__btn--mail">Отправить заявку</div>
+	
+					</div>
+	
+					<div class="calc__space"></div>
+					<div class="calc__space"></div>
+					<div class="calc__space"></div>
+
+
+				</div>
+				<!-- calc--5 -->
+
+			</div>
 
 		</div>
 

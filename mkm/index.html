@@ -9,10 +9,10 @@
 	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
 	<link rel="icon" href="img/favicon.png" type="image/png">
 	
-	<link rel="stylesheet" href="css/main.css?v3">
+	<link rel="stylesheet" href="css/main.css?v4">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/scripts.js?v3"></script>
+	<script src="js/scripts.js?v4"></script>
 	<script src="js/jquery.maskedinput.min.js"></script>
 
 </head>
@@ -31,9 +31,11 @@
 						$("#form").append(html);
 					}
 				});
-			}, 500 );
+			}, 1 );
 		});
 	</script>
+	
+	<div id="form"></div>
 
 	<script>
 		$(document).ready(function() {
@@ -46,7 +48,7 @@
 						$("#header").append(html);
 					}
 				});
-			}, 500 );
+			}, 1 );
 		});
 	</script>
 
@@ -61,9 +63,23 @@
 						$("#footer").append(html);
 					}
 				});
-			}, 500 );
+			}, 1 );
 		});
 	</script>
+
+	<div id="tnks" class="tnks">
+		<div class="tnks__wrap">
+
+			<div class="tnks__text tnks__text--bold">Спасибо!</div>
+		
+			<div class="tnks__text">Ваша заявка принята в работу, мы свяжемся с вами в ближайшее время</div>
+		
+			<div class="tnks__close">Отлично</div>
+		
+		</div>
+		
+	</div>
+	<!-- /.tnks -->
 
 	<div class="form" id="form"></div>
 	<!-- /.form -->
@@ -113,7 +129,7 @@
 				<img src="img/home/home3.jpg" alt="" class="wants__img">
 				<div class="wants__title">Чего хотят продавцы и покупатели?</div>
 				<div class="wants__text">- Продать дороже, купить дешевле - но что является критерием нормальной цены? - Воспользуйтесь калькуляторами стоимости квартир, домов, земельных участков в г. Калининграде и области.</div>
-				<a class="wants__link" href="calcs.html">Подробнее...</a>
+				<a class="wants__link" href="calcs.html">Узнать стоимость за минуту</a>
 			</div>
 			<div class="wants__block">
 				<img src="img/home/home4.jpg" alt="" class="wants__img">
