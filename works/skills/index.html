@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Web Mockup</title>
@@ -8,15 +9,23 @@
 	<link rel="stylesheet" href="css/main.css">
 
 	<script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/patterns.js"></script>
 	<script src="js/scripts.js"></script>
-
 
 </head>
 <body>
 
+    <a href="../admin" class="admin">🔒ADMIN</a>
 
     <div class="calc">
-
+        
+        <div class="calc__step">
+            <div class="calc__block"></div>
+            <div class="calc__title">Выбор шаблона</div>
+            <select name="" id="calc_pattern" class="calc__select">
+                
+            </select>
+        </div>
         
         <div class="calc__step">
             <div class="calc__block"></div>
@@ -28,24 +37,14 @@
             <div class="calc__block"></div>
             <div class="calc__title">Параметры</div>
             <div class="calc__skills">
-                <div class="calc__line">
+                <!-- <div class="calc__line">
+                    <div class="calc__del">x</div>
                     <input type="text" class="calc__input calc__input--text" value="Здоровье"><div class="calc__control"><div class="calc__minus">–</div><input type="text" class="calc__input calc__input--small" disabled data-score="0" value="1"><div class="calc__plus">+</div></div>
                 </div>
                 <div class="calc__line">
+                    <div class="calc__del">x</div>
                     <input type="text" class="calc__input calc__input--text" value="Сила"><div class="calc__control"><div class="calc__minus">–</div><input type="text" class="calc__input calc__input--small" disabled data-score="0" value="1"><div class="calc__plus">+</div></div>
-                </div>
-                <div class="calc__line">
-                    <input type="text" class="calc__input calc__input--text" value="Интеллект"><div class="calc__control"><div class="calc__minus">–</div><input type="text" class="calc__input calc__input--small" disabled data-score="0" value="1"><div class="calc__plus">+</div></div>
-                </div>
-                <div class="calc__line">
-                    <input type="text" class="calc__input calc__input--text" value="Ловкость"><div class="calc__control"><div class="calc__minus">–</div><input type="text" class="calc__input calc__input--small" disabled data-score="0" value="1"><div class="calc__plus">+</div></div>
-                </div>
-                <div class="calc__line">
-                    <input type="text" class="calc__input calc__input--text" value="Сила Воли"><div class="calc__control"><div class="calc__minus">–</div><input type="text" class="calc__input calc__input--small" disabled data-score="0" value="1"><div class="calc__plus">+</div></div>
-                </div>
-                <div class="calc__line">
-                    <input type="text" class="calc__input calc__input--text" value="Удача"><div class="calc__control"><div class="calc__minus">–</div><input type="text" class="calc__input calc__input--small" disabled data-score="0" value="1"><div class="calc__plus">+</div></div>
-                </div>
+                </div> -->
             </div>
 
             <div class="calc__add">+ добавить строку</div>
@@ -57,7 +56,13 @@
         <div class="calc__step">
             <div class="calc__block"></div>
             <div class="calc__title">Градация</div>
-            <textarea name="" id="" class="calc__textarea">1=1;2=2;4=3</textarea>
+            <textarea name="" id="calc_grad" class="calc__textarea">1=1;2=2;4=3</textarea>
+        </div>
+
+
+        <div class="calc__step">
+            <div class="calc__title">Код расчета</div>
+            <input id="calc_code" class="calc__input calc__input--code" type="text">
         </div>
         
 
