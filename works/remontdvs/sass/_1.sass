@@ -1,0 +1,266 @@
+
+
+body
+    position: relative
+    background: #3a3a43
+
+.calc
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: sans-serif
+    position: relative
+    background: #fff
+    width: 100%
+    max-width: 940px
+    padding: 40px
+    margin: 30px auto
+    @media ( max-width: 768px )
+        padding: 40px 10px
+    @media ( max-width: 430px )
+        padding: 40px 4px
+    @media ( max-width: 340px )
+        padding: 30px 1px
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button
+        -webkit-appearance: none
+    
+
+    *
+        padding: 0
+        margin: 0
+        box-sizing: border-box
+        font-family: sans-serif
+        position: relative
+
+    &__choice
+        display: flex
+        justify-content: space-between
+        margin: 0 0 50px 0
+        flex-wrap: wrap
+
+    &__radio
+        display: none
+        &:checked + .calc__label
+            background: #DE0101
+            color: #fff
+
+    &__label
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        padding: 5px
+        text-transform: uppercase
+        background: #404550
+        width: 22%
+        height: 90px
+        color: #fff
+        font-size: 21px
+        font-weight: 600
+        user-select: none
+        cursor: pointer
+        transition-duration: 0.2s
+        border-radius: 2px
+        will-change: transform
+        @media ( max-width: 530px )
+            font-size: 18px
+            width: 48%
+            margin: 0 0 10px 0
+            height: 70px 
+        @media ( max-width: 430px )
+            font-size: 16px
+        &--danet
+            width: 35%
+            margin: 0 2% 0 0
+            height: 34px
+            font-size: 14px
+            text-transform: none
+            font-weight: normal
+            background: #D9D9D9
+            color: #000
+            @media ( max-width: 530px )
+                width: 47%
+        &--line
+            font-size: 18px
+            width: 100%
+            height: 40px
+            margin: 0 0 10px 0
+            @media ( max-width: 530px )
+                height: 50px
+            @media ( max-width: 430px )
+                font-size: 16px
+        &--car
+            width: 46%
+            font-size: 18px
+            height: 40px
+            text-transform: none
+            @media ( max-width: 340px )
+                width: 48%
+        &:hover
+            transform: scale(0.95)
+        &:active
+            opacity: 0.5
+
+    &__services
+        margin: 0 0 50px 0
+
+    &__line
+        display: none
+        justify-content: space-between
+        align-items: center
+        margin: 0 0 10px 0
+
+    &__danet
+        display: flex
+        width: 100%
+        justify-content: flex-end
+
+    &__title
+        font-size: 17px
+        line-height: 1
+        width: 62%
+        @media ( max-width: 630px )
+            font-size: 15px
+        @media ( max-width: 530px )
+            width: 59%
+        @media ( max-width: 430px )
+            font-size: 13px
+        @media ( max-width: 340px )
+            font-size: 12px
+
+    &__price
+        font-size: 17px
+        line-height: 1.1
+        width: 17%
+        text-align: center
+        @media ( max-width: 630px )
+            font-size: 15px
+        @media ( max-width: 530px )
+            width: 22%
+        @media ( max-width: 430px )
+            font-size: 13px
+            width: 23%
+        @media ( max-width: 340px )
+            width: 25%
+            letter-spacing: -0.5px
+            font-size: 12px
+
+    &__amount
+        width: 16%
+        display: flex
+        justify-content: flex-end
+        @media ( max-width: 768px )
+            width: 13%
+        @media ( max-width: 630px )
+            width: 16%
+
+    &__heads
+        display: flex
+        justify-content: space-between
+        margin: 0 0 20px 0
+
+    &__head
+        text-align: center
+        font-size: 18px
+        text-transform: uppercase
+        font-weight: 600
+        @media ( max-width: 530px )
+            font-size: 16px
+        @media ( max-width: 430px )
+            font-size: 14px
+        @media ( max-width: 340px )
+            font-size: 12px
+        &--62
+            width: 62%
+            @media ( max-width: 530px )
+                width: 59%
+        &--17
+            width: 17%
+            @media ( max-width: 530px )
+                width: 22%
+            @media ( max-width: 430px )
+                width: 23%
+        &--16
+            width: 16%
+
+    &__input
+        border: none
+        background: #D9D9D9
+        width: 72%
+        margin: 0 2% 0 0
+        font-size: 17px
+        height: 34px
+        text-align: center
+        padding: 0 10px
+        &--disabled
+            background: #fff
+            color: #fff
+        
+    &__itog
+        text-align: center
+        height: 40px
+        color: #fff
+        background: #DE0101
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 20px
+        margin: 0 0 30px 0
+        span
+            margin: 0 0 0 10px
+
+    &__note
+        font-weight: 900
+        text-align: center
+        line-height: 1.3
+        font-size: 17px
+        @media ( max-width: 430px )
+            font-size: 14px
+
+    &__form
+        margin: 40px 0 40px 0
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+
+    &__forminp
+        width: 28%
+        height: 56px
+        padding: 5px 15px
+        border: 2px solid #FFB022
+        border-radius: 2px
+        font-size: 17px
+        @media ( max-width: 530px )
+            width: 100%
+            margin: 0 0 10px 0
+            text-align: center
+
+    &__submit
+        display: block
+        width: 36%
+        height: 56px
+        padding: 5px 15px
+        border: 2px solid #FFB022
+        background: #FFB022
+        color: #fff
+        text-transform: uppercase
+        border-radius: 2px
+        font-size: 18px
+        transition-duration: 0.2s
+        will-change: transform
+        cursor: pointer
+        @media ( max-width: 530px )
+            width: 100%
+        &:hover
+            transform: scale(0.95)
+        &:active
+            opacity: 0.5
+
+    &__textarea
+        display: none
+        margin: 30px 0 0 0
+        width: 100%
+        height: 200px
+

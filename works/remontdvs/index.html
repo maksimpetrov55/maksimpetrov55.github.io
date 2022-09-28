@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css?v1">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>	
+	<script src="js/table.js"></script>	
+	<script src="js/scripts.js?v1"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div class="calc__choice">
+			<input type="radio" name="calc_type" id="calc_type_1" class="calc__radio" value="1" checked>
+			<label for="calc_type_1" class="calc__label">ГБЦ</label>
+
+			<input type="radio" name="calc_type" id="calc_type_2" class="calc__radio" value="2">
+			<label for="calc_type_2" class="calc__label">Блок цилиндров</label>
+
+			<input type="radio" name="calc_type" id="calc_type_3" class="calc__radio" value="3">
+			<label for="calc_type_3" class="calc__label">Коленвал</label>
+
+			<input type="radio" name="calc_type" id="calc_type_4" class="calc__radio" value="4">
+			<label for="calc_type_4" class="calc__label">Ремонт постелей</label>
+		</div>
+
+		<div class="calc__choice calc__choice--more">
+			<input type="radio" name="calc_gbc" id="calc_gbc_1" class="calc__radio" value="1" checked>
+			<label for="calc_gbc_1" class="calc__label calc__label--line">Тестирование системы охлаждения</label>
+
+			<input type="radio" name="calc_gbc" id="calc_gbc_2" class="calc__radio" value="2">
+			<label for="calc_gbc_2" class="calc__label calc__label--line">Шлифование гбц, коллектора&nbsp;и&nbsp;др.</label>
+
+			<input type="radio" name="calc_gbc" id="calc_gbc_3" class="calc__radio" value="3">
+			<label for="calc_gbc_3" class="calc__label calc__label--line">Работы по обработке клапанов и седел клапанов</label>
+
+			<input type="radio" name="calc_gbc" id="calc_gbc_4" class="calc__radio" value="4">
+			<label for="calc_gbc_4" class="calc__label calc__label--line">Восстановление гбц&nbsp;и&nbsp;бц</label>
+			<div class="calc__ctrl"></div>
+		</div>
+
+		<div class="calc__choice">
+			<input type="radio" name="calc_car" id="calc_car_1" class="calc__radio" value="1" checked>
+			<label for="calc_car_1" class="calc__label calc__label--car">Легковой а/м</label>
+
+			<input type="radio" name="calc_car" id="calc_car_2" class="calc__radio" value="2">
+			<label for="calc_car_2" class="calc__label calc__label--car">Грузовой а/м</label>
+		</div>
+
+
+		<div class="calc__heads">
+			<div class="calc__head calc__head--62">Услуга</div>
+			<div class="calc__head calc__head--17">Цена</div>
+			<div class="calc__head calc__head--16">Количество</div>
+		</div>
+		<div class="calc__services">
+			
+		</div>
+
+		<div class="calc__itog">
+			<b>ИТОГО:</b> 
+			<span id="calc_itog">125 руб.</span>
+		</div>
+
+		<div class="calc__note">
+			Данный расчет стоимости предварительный и может отличаться от окончательного, для уточнения стоимости, оставьте свои контактные данные
+		</div>
+
+		<form class="calc__form" method="POST" action="!mail.php">
+
+			<input name="calc_name" class="calc__forminp" type="text" placeholder="Ваше Имя">
+
+			<input name="calc_phone" class="calc__forminp calc__forminp--phone" type="text" placeholder="Ваш Телефон">
+
+			<button class="calc__submit" type="submit">Заказать консультацию</button>
+
+			<textarea name="calc_data" class="calc__textarea" id="calc_textarea"></textarea>
+
+		</form>
+
+		
+
+	</div>
+
+
+
+</body>
+</html>
