@@ -1,0 +1,394 @@
+
+.test
+    width: 100%
+    height: 200px
+    background: #006eff
+    margin: 0 0 30px 0
+
+.menu
+    padding: 10px 10px
+
+    &__avatar
+        width: 100px
+        height: 100px
+        background: #fff
+        display: block
+        border-radius: 100px
+        margin: 0 0 20px 0
+
+    &__name
+        color: #fff
+        text-transform: uppercase
+        font-size: 14px
+
+    &__list
+        margin: 50px 0 30px 0
+        border-bottom: 1px solid #aaaaaa44
+
+    &__link
+        color: #fff
+        margin: 0 0 30px 0
+        display: flex
+        font-size: 14px
+        align-items: center
+        user-select: none
+        will-change: transform
+        transition-duration: 0.2s
+        &:active
+            opacity: 0.6
+            transform: scale(0.9)
+
+    &__icon
+        display: inline-block
+        width: 20px
+        height: 20px
+        margin: 0 10px
+        fill: #fff
+        svg
+            position: relative
+            width: 100%
+            height: 100%
+        
+.header
+    display: flex
+    align-items: center
+    font-weight: 600
+
+.news
+
+    &__card
+        width: 100%
+        margin: 0 0 20px 0
+        
+    &__img
+        display: block
+        background: #c4d4d3
+        width: 100%
+        height: 280px
+        border-radius: 20px
+
+    &__bottom
+        margin: 5px 0 0 0
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+
+    &__title
+        margin: 5px 0 0 0
+        font-size: 14px
+        font-weight: 600
+
+    &__stats
+        font-size: 12px
+
+    &__date
+        font-size: 12px
+
+    &__btn
+        width: 32px
+        height: 32px
+        border-radius: 30px
+        background: #fff
+        display: flex
+        justify-content: center
+        align-items: center
+        box-shadow: 0 5px 15px 1px rgba(0,0,0,0.1)
+        position: absolute
+        z-index: 29
+        will-change: transform
+        transition-duration: 0.2s
+        &:active
+            opacity: 0.6
+            transform: scale(0.9)
+        svg
+            width: 40%
+            height: 40%
+            fill: #777
+        &--like
+            top: 230px
+            left: 20px
+        &--bookmark
+            top: 230px
+            left: 60px
+        &--share
+            top: 230px
+            right: 20px
+
+
+.sales
+
+    &__card
+        width: 100%
+        height: 160px
+        margin: 0 0 20px 0
+        border-radius: 20px
+        box-shadow: 0 5px 15px 1px rgba(0,0,0,0.1)
+        padding: 15px
+        border: 1px solid #eee
+
+    &__img
+        display: block
+        border-radius: 14px
+        height: 100px
+        background: #7bcd8e
+
+    &__title
+        font-size: 15px
+        font-weight: 600
+        margin: 10px 0 0 0
+        text-align: center
+
+.partner
+
+    &__wrap
+        padding: 0 2%
+        width: 100%
+        height: 100%
+
+    &__img
+        width: 100%
+        height: 120px
+        border-radius: 14px
+        background: #7bcd8e
+        margin: 0 0 20px 0
+
+    &__title
+        font-size: 16px
+        font-weight: 600
+        text-align: center
+        margin: 0 0 10px 0
+
+    &__text
+        font-size: 15px
+        text-align: center
+
+    &__code
+        position: absolute
+        width: 100%
+        bottom: -10px
+        left: 0
+        height: 40%
+        max-height: 250px
+        min-height: 120px
+        box-shadow: 0 -8px 15px 0 rgba(0,0,0,0.15)
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 30px
+        font-weight: 600
+        text-transform: uppercase
+
+.politic
+
+    &__title
+        font-size: 16px
+        font-weight: 600
+        margin: 10px 0 20px 0
+
+    &__text
+        margin: 10px 0 0 0
+        text-align: justify
+
+.pay
+
+    &__card
+        width: 100%
+        height: 100px
+        margin: 0 0 20px 0
+        border-radius: 20px
+        box-shadow: 0 5px 15px 1px rgba(0,0,0,0.1)
+        padding: 15px 25px
+        border: 1px solid #eee
+        display: flex
+        align-items: center
+        text-decoration: none
+        justify-content: space-between
+
+    &__title
+        font-size: 15px
+    
+    &__icon
+        width: 40px
+        height: 40px
+        background: #eee
+        border-radius: 50px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 0 20px 0 0
+        padding: 0 0 0 2px
+        svg
+            height: 50%
+            width: 50%
+            fill: #0000ee
+
+    &__arrow
+        width: 40px
+        height: 60px
+        background: #fff
+        display: flex
+        justify-content: center
+        align-items: center
+        svg
+            height: 50%
+            width: 50%
+            fill: #ccc
+
+    &__input
+        text-align: center
+        font-size: 15px
+        color: #0000ee
+        border: none
+        outline: none
+
+.form
+
+    &__wrap
+        width: 100%
+        height: 100%
+        overflow: auto
+        padding: 0 2%
+
+    &__title
+        font-size: 16px
+        font-weight: 600
+        margin: 10px 0 5px 0
+        &--label
+
+
+    &__text
+        font-size: 14px
+        &--label
+
+
+    &__body
+        margin: 20px 0 0 0
+        width: 100%
+
+    &__input
+        border-radius: 6px
+        height: 44px
+        padding: 0 10px
+        margin: 0 0 10px 0
+        font-size: 14px
+        border: 1px solid #aaa
+        width: 100%
+
+    &__area
+        width: 100%
+        border-radius: 6px
+        padding: 10px
+        height: 100px
+        margin: 0 0 10px 0
+        border: 1px solid #aaa
+
+    &__note
+        font-size: 13px
+
+    &__file
+        display: none
+
+    &__label
+        margin: 10px 0 0 0
+        height: 100px
+        padding: 0px 10px
+        width: 100%
+        border-radius: 6px
+        display: block
+        border: 1px solid #aaa
+
+    &__icon
+        position: absolute
+        right: 10px
+        top: 10px
+        width: 40px
+        height: 40px
+        svg
+            width: 100%
+            height: 100%
+            fill: #aaa
+
+    &__attachment
+        position: absolute
+        bottom: 10px
+
+    &__submit
+        width: 100%
+        margin: 10px 0 0 0
+        height: 44px
+        border-radius: 6px
+        font-size: 16px
+        text-transform: uppercase
+        background: #6bab36
+        border: none
+        color: #fff
+        will-change: transform
+        transition-duration: 0.2s
+        &:active
+            opacity: 0.6
+            transform: scale(0.9)
+
+    &__checkbox
+        width: 16px
+        height: 16px
+        margin: 0 5px 0 0
+
+    &__agree
+        font-size: 14px
+        display: flex
+        align-items: center
+        justify-content: center
+        user-select: none
+        margin: 10px auto 0 auto
+
+.stats
+
+    &__choice
+        margin: 0 auto 20px auto
+        width: 100%
+        display: flex
+        justify-content: center
+
+    &__radio
+        display: none
+        &:checked + .stats__label
+            border-bottom: 2px solid #c200ee
+            color: #c200ee
+
+    &__label
+        text-transform: uppercase
+        font-size: 12px
+        padding: 10px 5px
+        margin: 0 5px
+        color: #aaa
+        font-weight: 600
+        user-select: none
+
+    &__screen
+
+    &__date
+        font-size: 14px
+        text-align: center
+        margin: 0 0 20px 0
+        
+    &__card
+        width: 100%
+        height: 100px
+        margin: 0 0 20px 0
+        border-radius: 20px
+        box-shadow: 0 5px 15px 1px rgba(0,0,0,0.1)
+        padding: 15px 25px
+        border: 1px solid #eee
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        text-decoration: none
+        justify-content: center
+
+    &__value
+        font-weight: 600
+        font-size: 18px
+        margin: 10px 0 0 0
+
+    &__title
