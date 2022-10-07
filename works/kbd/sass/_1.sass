@@ -39,11 +39,225 @@ body
             position: absolute
             transform: scale(0)
             z-index: 1
-        &--login
+        &--pass
             transition-duration: 0.4s
             z-index: 229
             padding: 0
             background: #fff
+        &--logo
+            background: #fff
+            z-index: 629
+            padding: 0
+            background: #fff
+            transition-duration: 0
+        &--login
+            z-index: 429
+            padding: 4% 2%
+            background: #fff
+            justify-content: flex-end
+        &--forget
+            z-index: 409
+            padding: 4% 2%
+            background: #fff
+            justify-content: flex-end
+        &--words
+            z-index: 509
+            padding: 4% 2%
+            background: #fff
+
+    &__logo
+        width: 40%
+
+    &__block
+        width: 100%
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        &--1
+            
+        &--2
+            display: none
+        &--3
+            display: none
+
+
+    &__words
+        width: 240px
+        font-weight: 700
+        font-size: 24px
+        margin: 11px auto
+        text-shadow: 0 0 1px rgba(0,0,0,1)
+        &--1
+            font-size: 32px
+            text-align: center
+            text-transform: uppercase
+        &--2
+            width: 234px
+            text-transform: uppercase
+            font-size: 20px
+        &--3
+            text-align: center
+            text-transform: uppercase
+            font-size: 20px
+        &--4
+            text-align: center
+            font-size: 30px
+            text-transform: uppercase
+        &--5
+            width: 90%
+        &--6
+            font-size: 40px
+            text-transform: uppercase
+        &--7
+            font-size: 40px
+            width: 140px
+        &--8
+            font-size: 32px
+            text-align: center
+            text-transform: uppercase
+        &--9
+            width: 234px
+            text-transform: uppercase
+            font-size: 20px
+        &--10
+            width: 250px
+            font-size: 18px
+            margin: 11px 0  11px auto
+            text-transform: uppercase
+        &--11
+            font-size: 40px
+            text-transform: uppercase
+            width: 90%
+        &--12
+            font-size: 40px
+            text-transform: uppercase
+            width: 300px
+            margin: 11px 0  11px auto
+        &--13
+            text-align: center
+            font-size: 32px
+            text-align: right
+        &--14
+            text-align: right
+            width: 280px
+            font-size: 30px
+            text-transform: uppercase
+            margin: 11px auto 11px 0
+        &--15
+            width: 120px
+        &--16
+        &--17
+            margin: 11px auto 11px 0
+            text-transform: uppercase
+            font-size: 26px
+            width: 260px
+        &--18
+            text-transform: uppercase
+            font-size: 20px
+        &--19
+            text-transform: uppercase
+            margin: 11px 0 11px auto
+            width: 150px
+        &--20
+            text-transform: uppercase
+            margin: 11px 0 11px auto
+            width: 250px
+        &--21
+            text-transform: uppercase
+            margin: 11px 0 11px auto
+            width: 300px
+            font-size: 28px
+
+    &__blink
+        animation: blink 1.5s infinite
+        position: absolute
+        bottom: 15px
+        font-size: 14px
+
+    &__head
+        font-size: 28px
+        font-weight: 900
+        color: #4A3A51
+        text-transform: uppercase
+        margin: 0 auto
+        max-width: 250px
+        text-align: center
+        line-height: 1.2
+        opacity: 0
+
+    &__purple
+        font-size: 28px
+        width: 100%
+        margin: 0 0 30px 0
+        font-weight: 900
+        text-transform: uppercase
+        background-image: linear-gradient(to left, #b60061, #ac26ea)
+        color: transparent
+        background-clip: text
+
+    &__box
+        width: 100%
+        border-radius: 15px
+        height: 80px
+        padding: 8px 16px
+        display: flex
+        align-items: center
+        box-shadow: 0 5px 15px 3px rgba(0,0,0,0.3)
+        margin: 0 0 20px 0
+
+    &__svg
+        width: 50px
+        height: 50px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 0 20px 0 0
+        color: #aaa
+
+    &__mark
+        top: 8px
+        left: 80px
+        position: absolute
+        font-size: 11px
+
+    &__input
+        border: none
+        outline: none
+        font-size: 16px
+        width: 100%
+
+    &__button
+        background: #C940DF
+        height: 80px
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 16px
+        width: 100%
+        border-radius: 15px
+        box-shadow: 0 5px 15px 3px rgba(0,0,0,0.3)
+        margin: 0 0 30px 0
+        font-weight: 600
+        user-select: none
+        will-change: transform
+        transition-duration: 0.2s
+        cursor: pointer
+        &:active
+            opacity: 0.6
+            transform: scale(0.9)
+
+    &__forget
+        font-size: 14px
+        font-weight: 600
+        user-select: none
+        will-change: transform
+        transition-duration: 0.2s
+        cursor: pointer
+        &:active
+            opacity: 0.6
+            transform: scale(0.9)
 
     &__title
         font-size: 18px
@@ -52,7 +266,7 @@ body
         font-size: 36px
         text-align: center
         letter-spacing: 7px
-        width: 100%
+        width: 94%
         border: 1px solid #ccc
         color: #111
         font-weight: 900
@@ -171,6 +385,11 @@ body
             position: relative
             width: 100%
             height: 100%
+        &--active
+            span
+                color: #B60CBA !important
+        &--active + .calc__name
+            color: #B60CBA !important
 
     &__name
         text-align: center
@@ -193,11 +412,12 @@ body
         z-index: 199
         position: absolute
         width: 50%
-        background: #6c0084
+        background: #B60CBA
         height: 100%
         transform: translateX(-140%)
         transition-duration: 0.3s
         box-shadow: 0 0 20px 3px rgba(0,0,0,0.5)
+        border-radius: 0 0 100px 0
         &--slide
             transform: translateX(0)
             
@@ -206,3 +426,21 @@ body
         height: 100%
         overflow: auto
         padding: 0 2%
+
+
+
+
+
+
+
+
+
+
+@keyframes blink
+    0%
+        opacity: 1
+    50%
+        opacity: 0
+    100%
+        opacity: 1
+        

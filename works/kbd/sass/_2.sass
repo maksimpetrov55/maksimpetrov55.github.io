@@ -8,6 +8,21 @@
 .menu
     padding: 10px 10px
 
+    &__dark
+        position: absolute
+        right: 10px
+        top: 10px
+        cursor: pointer
+        user-select: none
+        will-change: transform
+        transition-duration: 0.2s
+        &:active
+            opacity: 0.6
+            transform: scale(0.9)
+        span
+            font-size: 30px
+            color: #fff
+
     &__avatar
         width: 100px
         height: 100px
@@ -39,10 +54,14 @@
             transform: scale(0.9)
 
     &__icon
-        display: inline-block
+        display: inline-flex
+        justify-content: center
+        align-items: center
         width: 20px
         height: 20px
-        margin: 0 10px
+        margin: 0 10px 0 0
+        font-weight: 300
+        font-size: 22px
         fill: #fff
         svg
             position: relative
@@ -53,6 +72,68 @@
     display: flex
     align-items: center
     font-weight: 600
+    justify-content: space-between
+
+    &__dots
+        will-change: transform
+        transition-duration: 0.2s
+        cursor: pointer
+        user-select: none
+        &:active
+            opacity: 0.6
+            transform: scale(0.9)
+        span
+            color: #aaa
+
+    &__window
+        position: absolute
+        width: 190px
+        height: 170px
+        background: #fff
+        z-index: 199
+        right: 10px
+        top: 10px
+        border-radius: 4px
+        box-shadow: 0 5px 5px 1px rgba(0,0,0,0.1)
+        padding: 10px
+        display: none
+        flex-direction: column
+        justify-content: space-between
+        &--show
+            display: flex
+
+    &__link
+        font-size: 14px
+        display: block
+        text-decoration: none
+        color: #000
+        margin: 10px 0
+        font-weight: 400
+        will-change: transform
+        transition-duration: 0.2s
+        cursor: pointer
+        user-select: none
+        &:active
+            opacity: 0.6
+            transform: scale(0.9)
+        span
+            color: #aaa
+
+    &__remind
+        display: none
+        position: absolute
+        right: 50px
+        cursor: pointer
+        will-change: transform
+        transition-duration: 0.2s
+        &--show
+            display: block
+        &:active
+            opacity: 0.6
+            transform: scale(0.9)
+        span
+            color: #D5A0EE
+
 
 .news
 
@@ -115,6 +196,51 @@
             top: 230px
             right: 20px
 
+    &__baloon
+        font-size: 16px
+        position: absolute
+        right: 13%
+        bottom: 100px
+        width: 90%
+        max-width: 270px
+        border: 2px solid #222
+        padding: 10px 10px 25px 10px
+        border-radius: 14px 14px 0px 14px 
+        transition-duration: 0.3
+        background: #fff
+        &::before
+            content: ""
+            display: block
+            position: absolute
+            width: 40px
+            height: 40px
+            background: #fff
+            border-radius: 0 0 7px 0
+            right: -17px
+            bottom: -22px
+            transform: rotate(45deg)
+            border-right: 2px solid #222
+            border-bottom: 2px solid #222
+        &::after
+            content: ""
+            display: block
+            position: absolute
+            width: 30px
+            height: 60px
+            background: #fff
+            right: -32px
+            bottom: -24px
+            border-left: 2px solid #222
+            // border-bottom: 2px solid #222
+        &--hide
+            transform: scale(0)
+            opacity: 0
+            
+
+    &__link
+        display: block
+        font-size: 14px
+        margin: 15px 0 0 0 
 
 .sales
 
@@ -392,3 +518,139 @@
         margin: 10px 0 0 0
 
     &__title
+
+
+.top
+
+    &__card
+        width: 100%
+        height: 60px
+        margin: 0 0 20px 0
+        border-radius: 8px
+        box-shadow: 0 5px 15px 1px rgba(0,0,0,0.1)
+        padding: 15px 25px
+        border: 1px solid #eee
+        display: flex
+        align-items: center
+        text-decoration: none
+        justify-content: space-between
+
+    &__title
+        font-size: 15px
+        display: inline-block
+
+    &__number
+        font-size: 20px
+        font-weight: 600
+        display: inline-block
+        margin: 0 10px 0 0 
+
+    &__value
+        font-size: 20px
+        font-weight: 600
+
+.remind
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    display: none
+    justify-content: center
+    align-items: center
+    z-index: 999
+    &--show
+        display: flex
+
+    &__black
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: #00000077
+
+    &__window
+        background: #fff
+        width: 98%
+        max-width: 500px
+        //height: 200px
+        border-radius: 10px
+        padding: 20px 10px
+
+    &__title
+        font-size: 18px
+        font-weight: 600
+        margin: 0 0 20px 0
+        text-align: center
+
+    &__text
+        font-size: 15px
+        text-align: center
+        max-width: 400px
+        margin: 0 auto 10px auto
+
+    &__btn
+        margin: 10px auto
+        width: 90%
+        background: #B60CBA
+        height: 40px
+        border-radius: 10px
+        display: flex
+        justify-content: center
+        align-items: center
+        color: #fff
+        user-select: none
+        cursor: pointer
+        will-change: transform
+        transition-duration: 0.2s
+        &:active
+            opacity: 0.6
+            transform: scale(0.9)
+
+.slider
+    width: 100%
+    display: flex
+    justify-content: center
+
+    &__fade
+        background: #fff
+        z-index: +1
+        opacity: 0.7
+        width: 100%
+        position: absolute
+        height: 50px
+        display: flex
+        justify-content: center
+        &--top
+            top: 10px
+        &--bot
+            bottom: 10px
+        &--cent
+            background: transparent
+            top: 50%
+            margin: -25px 0 0 0
+
+    &__border
+        width: 48px
+        margin: 0 5px
+        height: 100%
+        border-bottom: 2px solid #111
+        border-top: 2px solid #111
+
+    &__body
+        width: 60px
+
+    &__card
+        padding: 10px 5px
+
+    &__digit
+        width: 30px
+        height: 30px
+        //background: #000
+        color: #111
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 0 auto
+        font-size: 15px
