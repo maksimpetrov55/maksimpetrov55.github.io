@@ -1,0 +1,126 @@
+
+
+body
+    position: relative
+    background: #3a3a43
+
+.slide
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: sans-serif
+    position: fixed
+    top: 0
+    left: 0
+    width: 300px
+    transition-duration: 0.4s
+    transform: translateX(-500px)
+    opacity: 0
+    background: #ffffff
+    height: 100%
+    z-index: 199
+    &--open
+        opacity: 1
+        transform: translateX(0px)
+
+    *
+        padding: 0
+        margin: 0
+        box-sizing: border-box
+        font-family: sans-serif
+        position: relative
+
+    &__body
+        width: 100%
+        background: #fff
+        padding: 30px 10px 30px 10px
+
+    &__close
+        position: absolute
+        top: 5px
+        right: 5px
+        width: 20px
+        height: 20px
+        font-size: 20px
+        display: flex
+        justify-content: center
+        align-items: center
+        transition-duration: 0.3s
+        will-change: transform
+        user-select: none
+        cursor: pointer
+        &:hover
+            transform: scale(0.8)
+            color: #f00
+
+    &__button
+        font-size: 24px
+        color: #fff
+        position: fixed
+        top: 40px
+        left: 20px
+        width: 30px
+        height: 30px
+        display: flex
+        justify-content: center
+        align-items: center
+        transition-duration: 0.3s
+        will-change: transform
+        user-select: none
+        cursor: pointer
+        z-index: 99
+        animation: bounce 2s 1s infinite
+        &:hover
+            transform: scale(0.9)
+
+    &__link
+        display: block
+        padding: 8px 0 8px 0
+        text-decoration: none
+        color: #111
+        transition-duration: 0.3s
+        &:hover
+            padding: 8px 0 8px 15px
+            color: #4d6bff
+
+
+
+
+
+
+// @keyframes bounce
+//     0%
+//         transform: translateX(0px) translateY(0px)
+//     10%
+//         transform: translateX(5px) translateY(0px)
+//     20%
+//         transform: translateX(-5px) translateY(0px)
+//     30%
+//         transform: translateX(0px) translateY(0px)  
+//     40%
+//         transform: translateX(0px) translateY(5px)
+//     50%
+//         transform: translateX(0px) translateY(-5px)
+//     60%
+//         transform: translateX(0px) translateY(0px)
+        
+
+@keyframes bounce 
+    0%
+        transform: rotate(0deg) scale(1)
+    10%
+        transform: rotate(-10deg) scale(1)
+    20%
+        transform: rotate(10deg) scale(0.9)
+    30%
+        transform: rotate(-10deg) scale(0.9)
+    40%
+        transform: rotate(10deg) scale(1.1)
+    50%
+        transform: rotate(0deg) scale(1.1)
+    60%
+        transform: rotate(0deg) scale(1)    
+    100% 
+        transform: rotate(0deg) scale(1)
+
+   
