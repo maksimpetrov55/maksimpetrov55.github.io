@@ -133,13 +133,13 @@ body {
   letter-spacing: 1px;
   text-align: center;
   margin: 0 0 20px 0;
-  font-weight: 400;
+  font-weight: 600;
   color: #465177;
   text-transform: uppercase;
 }
 .calc__title--itog {
   letter-spacing: 0;
-  font-size: 20px;
+  font-size: 18px;
 }
 @media (max-width: 480px) {
   .calc__title {
