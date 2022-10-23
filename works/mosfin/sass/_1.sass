@@ -1,0 +1,292 @@
+$color1: #001642
+$color2: #465177
+
+
+body
+    position: relative
+    background: #fff
+
+    
+
+.calc
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: sans-serif
+    position: relative
+    width: 100%
+    max-width: 1140px
+    padding: 40px 0
+    background: #fff
+    margin: 0 auto
+
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button 
+        -webkit-appearance: none
+        margin: 0
+
+
+    *
+        padding: 0
+        margin: 0
+        box-sizing: border-box
+        font-family: "Playfair Display", serif
+        position: relative
+
+    &__head
+        font-family: "Playfair Display", serif
+        text-align: center
+        font-weight: 900
+        font-size: 30px
+        line-height: 53px
+        text-transform: uppercase
+        line-height: 1.2
+        margin: 0 auto 50px auto
+        max-width: 800px
+        @media ( max-width: 480px )
+            font-size: 24px
+
+    &__wrap
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        @media ( max-width: 900px )
+            flex-wrap: wrap
+
+    &__left
+        width: 69%
+        @media ( max-width: 900px )
+            width: 100%
+
+    &__right
+        width: 29%
+        box-shadow: 0 0px 12px 1px rgba(0,0,0,0.1)
+        margin: 3% 0.5% 3% 0
+        padding: 80px 10px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        @media ( max-width: 900px )
+            width: 100%
+        
+    &__summ
+        font-size: 24px
+        text-align: center
+        span
+            font-size: 36px
+            font-weight: 900
+            letter-spacing: 1px
+        &--bold
+            font-size: 28px
+            font-weight: 900
+            letter-spacing: 0px
+            text-transform: uppercase
+
+
+    &__button
+        user-select: none
+        cursor: pointer
+        transition-duration: 0.3s
+        background: $color1
+        width: 90%
+        height: 44px
+        border-radius: 2px
+        margin: 30px auto 0 auto
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        color: #fff
+        text-transform: uppercase
+        font-size: 20px
+        will-change: transform
+        @media ( max-width: 900px )
+            max-width: 260px
+        &:hover
+            background: #072156
+            transform: scale(0.9)
+        &:active
+            opacity: 0.2
+
+    &__block
+        margin: 40px 0
+
+    &__title
+        font-family: "Playfair Display", serif
+        font-size: 22px
+        letter-spacing: 1px
+        text-align: center
+        margin: 0 0 20px 0
+        font-weight: 400
+        color: $color2
+        text-transform: uppercase
+        &--itog
+            letter-spacing: 0
+            font-size: 20px
+        @media ( max-width: 480px )
+            font-size: 18px
+            letter-spacing: 1px
+
+    &__slider
+        padding: 10px 15px 10px 10px
+        height: 40px
+        //background: #000
+        display: flex
+        align-items: center
+        &--tarif
+            //height: 100px
+            div
+                //height: 100%
+
+    &__scale
+        display: flex
+        justify-content: space-between
+        padding: 0px 16px 0px 14px
+        color: #ccc
+        &--names
+            margin: 10px 0
+            font-weight: 900
+            font-size: 18px
+            color: $color1
+            //justify-content: center
+
+    &__name
+        white-space: nowrap
+        text-align: center
+        cursor: pointer
+        transition-duration: 0.3s
+        will-change: transform
+        user-select: none
+        @media ( max-width: 480px )
+            font-size: 14px
+        &:hover
+            color: $color2
+            transform: scale(0.9)
+        &--docs2
+            position: absolute
+            left: 23.5%
+        &--docs3
+            position: absolute
+            left: 47.5%
+            @media ( max-width: 480px )
+                left: 46%
+        &--docs4
+            position: absolute
+            left: 71%
+            @media ( max-width: 480px )
+                left: 69%
+        &--people2
+            position: absolute
+            left: 20%
+            @media ( max-width: 480px )
+                left: 20.4%
+        &--people3
+            position: absolute
+            left: 39.1%
+        &--people4
+            position: absolute
+            left: 58.3%
+            @media ( max-width: 480px )
+                left: 57.5%
+        &--people5
+            position: absolute
+            left: 77%
+            @media ( max-width: 480px )
+                left: 75.3%
+        &--tarif2
+            position: absolute
+            left: 31%
+            @media ( max-width: 900px )
+                left: 43%
+            @media ( max-width: 480px )
+                left: 37%
+
+    &__people
+        display: block
+        margin: 10px auto
+        width: 100px
+        text-align: center
+        font-size: 24px
+        padding: 6px
+        border: 1px solid #ddd
+        box-shadow: 0 8px 12px 1px rgba(0,0,0,0.1)
+
+    &__checks
+        margin: 40px 0 0 0
+        display: flex
+        flex-wrap: wrap
+
+    &__checkbox
+        display: none
+        &:checked + .calc__label::before
+            content: "✔"
+            
+    &__label
+        font-size: 17px
+        display: flex
+        //align-items: center
+        cursor: pointer
+        user-select: none
+        width: 50%
+        margin: 0 0 20px 0
+        @media ( max-width: 480px )
+            width: 100%
+        &::before
+            content: ""
+            display: inline-flex
+            flex-shrink: 0
+            justify-content: center
+            align-items: center
+            width: 20px
+            height: 20px
+            margin: 0 10px 0 0
+            border: 1px solid #aaa
+            border-radius: 2px 
+
+    &__space
+        height: 1px
+        margin: 40px 10px
+        border-bottom: 1px dashed #ccc 
+
+
+
+
+
+
+
+
+
+.ui-slider
+    //position: absolute !important
+    width: calc( 100% - 8px )
+    left: 4px
+    bottom: -1px
+    background: #ddd !important
+    height: 7px !important
+    border: none !important
+
+.ui-slider-range
+    background: transparent !important
+
+.ui-slider-handle
+    border-radius: 2px !important
+    background: $color1 !important
+    border: none !important
+    width: 22px !important
+    height: 22px !important
+    outline: none !important
+    margin-top: -3px !important
+    cursor: pointer !important
+    box-shadow: 0 3px 10px 0px rgba(0,0,0,0.1)
+    // transition-duration: 0.2s
+    // will-change: transform
+    // &:hover
+    //     transform: scale(1.1)
+    // &::after
+    //     content: "▼"
+    //     position: absolute
+    //     bottom: -14px
+    //     left: 0
+    //     width: 100%
+    //     text-align: center
+    //     color: $color1

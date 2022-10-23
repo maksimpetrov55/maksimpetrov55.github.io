@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css?v1">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
+	<script src="js/scripts.js?v1"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+
+		<div class="calc__head">КАЛЬКУЛЯТОР РАСЧЁТА СТОИМОСТИ НА БУХГАЛТЕРСКОЕ ОБСЛУЖИВАНИЕ</div>
+
+		<div class="calc__wrap">
+			<div class="calc__left">
+
+				<div class="calc__block">
+					<div class="calc__title">Система налогообложения</div>
+	
+					<input style="display: none;" class="" type="number" id="result-polzunok1">
+					<div class="calc__slider">
+						<div id="polzunok1"></div>
+					</div>
+					<div class="calc__scale">
+						<div>|</div>
+						<div>|</div>
+						<div>|</div>
+					</div>
+					<div class="calc__scale calc__scale--names">
+						<div data-block="1" data-position="1" class="calc__name">УСН 6%</div>
+						<div data-block="1" data-position="2" class="calc__name">УСН 15%</div>
+						<div data-block="1" data-position="3" class="calc__name">ОСНО</div>
+					</div>
+				</div>
+	
+				<div class="calc__block">
+					<div class="calc__title">Комплектов документов в месяц</div>
+	
+					<input style="display: none;" class="" type="number" id="result-polzunok2">
+					<div class="calc__slider">
+						<div id="polzunok2"></div>
+					</div>
+					<div class="calc__scale">
+						<div>|</div>
+						<div>|</div>
+						<div>|</div>
+						<div>|</div>
+						<div>|</div>
+					</div>
+					<div class="calc__scale calc__scale--names">
+						<div data-block="2" data-position="1" class="calc__name">до 20</div>
+						<div data-block="2" data-position="2" class="calc__name calc__name--docs2">до 40</div>
+						<div data-block="2" data-position="3" class="calc__name calc__name--docs3">до 60</div>
+						<div data-block="2" data-position="4" class="calc__name calc__name--docs4">до 100</div>
+						<div data-block="2" data-position="5" class="calc__name">> 100</div>
+					</div>
+				</div>
+	
+				<div class="calc__block">
+					<div class="calc__title">Количество сотрудников</div>
+	
+					<input class="calc__people" type="number" id="result-polzunok3">
+					<div class="calc__slider">
+						<div id="polzunok3"></div>
+					</div>
+					<div class="calc__scale">
+						<div>|</div>
+						<div>|</div>
+						<div>|</div>
+						<div>|</div>
+						<div>|</div>
+						<div>|</div>
+					</div>
+					<div class="calc__scale calc__scale--people calc__scale--names">
+						<div data-block="3" data-position="0" class="calc__name calc__name--people">0</div>
+						<div data-block="3" data-position="30" class="calc__name calc__name--people2">30</div>
+						<div data-block="3" data-position="60" class="calc__name calc__name--people3">60</div>
+						<div data-block="3" data-position="90" class="calc__name calc__name--people4">90</div>
+						<div data-block="3" data-position="120" class="calc__name calc__name--people5">120</div>
+						<div data-block="3" data-position="150" class="calc__name calc__name--people">> 150</div>
+					</div>
+				</div>
+
+				<div class="calc__block">
+					<div class="calc__title">Особенности учета</div>
+	
+					<div class="calc__checks">
+						<input class="calc__checkbox" type="checkbox" name="calc_check" id="calc_check_1" value="1000">
+						<label class="calc__label" for="calc_check_1">Использование льгот / раздельный учет</label>
+
+						<input class="calc__checkbox" type="checkbox" name="calc_check" id="calc_check_2" value="1000">
+						<label class="calc__label" for="calc_check_2">Экспортные / импортные операции / операции с валютой, до 10 операций в месяц</label>
+
+						<input class="calc__checkbox" type="checkbox" name="calc_check" id="calc_check_3" value="1000">
+						<label class="calc__label" for="calc_check_3">Зарегистрированные обособленные подразделения, филиалы</label>
+
+						<input class="calc__checkbox" type="checkbox" name="calc_check" id="calc_check_4" value="1000">
+						<label class="calc__label" for="calc_check_4">Экспортные / импортные операции / операции с валютой, 10-30 операций в месяц</label>
+
+						<input class="calc__checkbox" type="checkbox" name="calc_check" id="calc_check_5" value="1000">
+						<label class="calc__label" for="calc_check_5">ККМ, эквайринг</label>
+
+						<input class="calc__checkbox" type="checkbox" name="calc_check" id="calc_check_6" value="1000">
+						<label class="calc__label" for="calc_check_6">Экспортные / импортные операции / операции с валютой, более 30 операций в месяц</label>
+
+						<input class="calc__checkbox" type="checkbox" name="calc_check" id="calc_check_7" value="1000">
+						<label class="calc__label" for="calc_check_7">1С: Комплексная автоматизация</label>
+
+						<input class="calc__checkbox" type="checkbox" name="calc_check" id="calc_check_8" value="1000">
+						<label class="calc__label" for="calc_check_8">Договоры комиссии / агентские</label>
+					</div>
+				</div>
+	
+			</div>
+	
+			<div class="calc__right">
+				<div class="calc__title calc__title--itog">ТАРИФ ОБСЛУЖИВАНИЯ</div>
+
+				<input style="display: none;" class="" type="number" id="result-polzunok4">
+				<div class="calc__slider calc__slider--tarif">
+					<div id="polzunok4"></div>
+				</div>
+				<div class="calc__scale">
+					<div>|</div>
+					<div>|</div>
+					<div>|</div>
+				</div>
+				<div class="calc__scale calc__scale--people calc__scale--names">
+					<div data-block="4" data-position="1" class="calc__name calc__name--tarif">Лайт</div>
+					<div data-block="4" data-position="2" class="calc__name calc__name--tarif2">Оптимальный</div>
+					<div data-block="4" data-position="3" class="calc__name calc__name--tarif">Статус</div>
+				</div>
+					
+				<div class="calc__space"></div>
+
+				<div class="calc__title calc__title--itog">СТОИМОСТЬ ОБСЛУЖИВАНИЯ</div>
+				<div class="calc__summ"><span id="calc_summ">15000</span> руб/мес</div>
+				<div class="calc__button">Оставить заявку</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+</body>
+</html>
