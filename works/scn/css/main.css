@@ -11,13 +11,13 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 300px;
-  transition-duration: 0.4s;
-  transform: translateX(-500px);
+  width: 100%;
+  transition-duration: 0.2s;
+  transform: translateX(-100%);
   opacity: 0;
-  background: #ffffff;
+  background: rgba(0, 0, 0, 0.3333333333);
   height: 100%;
-  z-index: 199;
+  z-index: 999;
 }
 .slide--open {
   opacity: 1;
@@ -32,6 +32,7 @@ body {
 }
 .slide__body {
   width: 100%;
+  max-width: 300px;
   background: #fff;
   padding: 30px 10px 30px 10px;
 }
