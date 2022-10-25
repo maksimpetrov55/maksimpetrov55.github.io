@@ -68,7 +68,7 @@ $(document).ready(function() {
 		value: 1,
 		step: 1,
 		min: 1,
-		max: 3,
+		max: 2,
 		slide : function(event, ui) {
 			$("#result-polzunok4").val(ui.value);
             calculate();
@@ -158,7 +158,6 @@ $(document).ready(function() {
 
         if ( calc_slider_4 == 1 ) { var calc_tarif = 1; }
         if ( calc_slider_4 == 2 ) { var calc_tarif = 1.5; }
-        if ( calc_slider_4 == 3 ) { var calc_tarif = 2; }
 
         if ( calc_summ == "Договорная" ) {
             $('.calc__summ').html("Договорная");
