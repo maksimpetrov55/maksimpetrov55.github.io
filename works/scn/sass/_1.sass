@@ -35,6 +35,7 @@ body
         max-width: 300px
         background: #fff
         padding: 30px 10px 30px 10px
+        box-shadow: 0 10px 15px 1px rgba(0,0,0,0.2)
 
     &__close
         position: absolute
@@ -58,10 +59,12 @@ body
         font-size: 24px
         color: #fff
         position: fixed
-        top: 40px
-        left: 20px
-        width: 30px
-        height: 30px
+        top: 50%
+        left: 0px
+        width: 12px
+        height: 80px
+        background: #ccc
+        border-radius: 0 1px 1px 0
         display: flex
         justify-content: center
         align-items: center
@@ -70,9 +73,30 @@ body
         user-select: none
         cursor: pointer
         z-index: 99
-        animation: bounce 2s 1s infinite
+        animation: bounce 3s 1s infinite
+        &::after
+            content: ""
+            display: block
+            position: absolute
+            width: 2px
+            //padding: 0 0 0 2px
+            height: 70px
+            top: 5px
+            background: #00000077
+            left: 3px
+        &::before
+            content: ""
+            display: block
+            position: absolute
+            width: 2px
+            //padding: 0 0 0 2px
+            height: 70px
+            top: 5px
+            background: #00000077
+            left: 7px
         &:hover
-            transform: scale(0.9)
+            transform: scale(1.1)
+            background: #fffd6d
 
     &__link
         display: block
@@ -106,22 +130,39 @@ body
 //         transform: translateX(0px) translateY(0px)
         
 
-@keyframes bounce 
-    0%
-        transform: rotate(0deg) scale(1)
-    10%
-        transform: rotate(-10deg) scale(1)
-    20%
-        transform: rotate(10deg) scale(0.9)
-    30%
-        transform: rotate(-10deg) scale(0.9)
-    40%
-        transform: rotate(10deg) scale(1.1)
-    50%
-        transform: rotate(0deg) scale(1.1)
-    60%
-        transform: rotate(0deg) scale(1)    
-    100% 
-        transform: rotate(0deg) scale(1)
+// @keyframes bounce 
+//     0%
+//         transform: rotate(0deg) scale(1)
+//     10%
+//         transform: rotate(-10deg) scale(1)
+//     20%
+//         transform: rotate(10deg) scale(0.9)
+//     30%
+//         transform: rotate(-10deg) scale(0.9)
+//     40%
+//         transform: rotate(10deg) scale(1.1)
+//     50%
+//         transform: rotate(0deg) scale(1.1)
+//     60%
+//         transform: rotate(0deg) scale(1)    
+//     100% 
+//         transform: rotate(0deg) scale(1)
 
    
+@keyframes bounce 
+    0%
+        transform: scale(1)
+    5%
+        transform: scale(1)
+    10%
+        transform: scale(0.9)
+    15%
+        transform: scale(0.9)
+    20%
+        transform: scale(1.1)
+    25%
+        transform: scale(1.1)
+    30%
+        transform: scale(1)    
+    100% 
+        transform: scale(1)
