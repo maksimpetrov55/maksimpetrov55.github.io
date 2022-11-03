@@ -166,12 +166,13 @@ $(document).ready(function() {
         //     $('.calc__black').toggleClass("calc__black--show");
         // });
 
-        var calc_url_base = location.host;
+        var calc_url_base = location.href.split("?")[0];
+
         //var calc_url_hash = location.hash.split("?")[0];
         var calc_url_check = location.search;
 
         if ( calc_url_check == "" || calc_url_check == "/" ){
-            location.href = '/?summ=5000.00&from=USD&to=RUB';
+            location.href = calc_url_base + '?summ=5000.00&from=USD&to=RUB';
         }
 
         var calc_url = location.search.split('?')[1].split('&');
@@ -265,28 +266,28 @@ $(document).ready(function() {
             let calc_input = $('#calc_input_in').val();
             let calc_valute_from = $(this).children().text();
             let calc_valute_to = $('.calc__switch--2').find(".calc__button--selected").text();
-            let calc_valute_link = '/?summ=' + calc_input + '&from=' + calc_valute_from + '&to=' + calc_valute_to;
+            let calc_valute_link = calc_url_base + '?summ=' + calc_input + '&from=' + calc_valute_from + '&to=' + calc_valute_to;
             $(this).attr("href", calc_valute_link);
         });
         $('.calc__list--2').find('.calc__valute').each(function(){
             let calc_input = $('#calc_input_in').val();
             let calc_valute_from = $('.calc__switch--1').find(".calc__button--selected").text();
             let calc_valute_to = $(this).children().text();
-            let calc_valute_link = '/?summ=' + calc_input + '&from=' + calc_valute_from + '&to=' + calc_valute_to;
+            let calc_valute_link = calc_url_base + '?summ=' + calc_input + '&from=' + calc_valute_from + '&to=' + calc_valute_to;
             $(this).attr("href", calc_valute_link);
         });
         $('.calc__switch--1').find('.calc__button').each(function(){
             let calc_input = $('#calc_input_in').val();
             let calc_valute_from = $(this).text();
             let calc_valute_to = $('.calc__switch--2').find(".calc__button--selected").text();
-            let calc_valute_link = '/?summ=' + calc_input + '&from=' + calc_valute_from + '&to=' + calc_valute_to;
+            let calc_valute_link = calc_url_base + '?summ=' + calc_input + '&from=' + calc_valute_from + '&to=' + calc_valute_to;
             $(this).attr("href", calc_valute_link);
         });
         $('.calc__switch--2').find('.calc__button').each(function(){
             let calc_input = $('#calc_input_in').val();
             let calc_valute_from = $('.calc__switch--1').find(".calc__button--selected").text();
             let calc_valute_to = $(this).text(); 
-            let calc_valute_link = '/?summ=' + calc_input + '&from=' + calc_valute_from + '&to=' + calc_valute_to;
+            let calc_valute_link = calc_url_base + '?summ=' + calc_input + '&from=' + calc_valute_from + '&to=' + calc_valute_to;
             $(this).attr("href", calc_valute_link);
         });
 
@@ -295,7 +296,7 @@ $(document).ready(function() {
             let calc_input = $('#calc_input_in').val();
             let calc_input_from = $('.calc__switch--1').find(".calc__button--selected").text();
             let calc_input_to = $('.calc__switch--2').find(".calc__button--selected").text();
-            let calc_input_link = '/?summ=' + calc_input + '&from=' + calc_input_from + '&to=' + calc_input_to;
+            let calc_input_link = calc_url_base + '?summ=' + calc_input + '&from=' + calc_input_from + '&to=' + calc_input_to;
             location.href = calc_input_link;
         });
 
@@ -304,7 +305,7 @@ $(document).ready(function() {
             let calc_input = $(this).val() / $('#calc_rates').find('#' + calc_valute).text() * $('#calc_rates').find('#' + calc_url_from).text();
             let calc_input_from = $('.calc__switch--1').find(".calc__button--selected").text();
             let calc_input_to = $('.calc__switch--2').find(".calc__button--selected").text();
-            let calc_input_link = '/?summ=' + calc_input.toFixed(2) + '&from=' + calc_input_from + '&to=' + calc_input_to;
+            let calc_input_link = calc_url_base + '?summ=' + calc_input.toFixed(2) + '&from=' + calc_input_from + '&to=' + calc_input_to;
             location.href = calc_input_link;
         });
 
