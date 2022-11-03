@@ -171,9 +171,9 @@ $(document).ready(function() {
         //var calc_url_hash = location.hash.split("?")[0];
         var calc_url_check = location.search;
 
-        if ( calc_url_check == "" || calc_url_check == "/" ){
-            location.href = calc_url_base + '?summ=5000.00&from=USD&to=RUB';
-        }
+        // if ( calc_url_check == "" || calc_url_check == "/" ){
+        //     location.href = calc_url_base + '?summ=5000.00&from=USD&to=RUB';
+        // }
 
         var calc_url = location.search.split('?')[1].split('&');
         var calc_url_summ = calc_url[0].split('=')[1];
@@ -243,70 +243,130 @@ $(document).ready(function() {
         $('.calc__date').text( 'По данным ЦБ РФ на ' + date_DD + "." + date_MM + "." + date_YY );
 
         
-
-
         $('#calc_input_in').val( (+calc_url_summ).toFixed(2) );
+        calculate();
 
-        var calc_base = calc_url_summ / $('#calc_rates').find('#' + calc_url_from).text();
-        var calc_out = calc_base * $('#calc_rates').find('#' + calc_url_to).text();
+        function calculate() {
+            var calc_base = calc_url_summ / $('#calc_rates').find('#' + calc_url_from).text();
+            var calc_out = calc_base * $('#calc_rates').find('#' + calc_url_to).text();
+            $('#calc_input_out').val( calc_out.toFixed(2) );
+        }
 
-        $('#calc_input_out').val( calc_out.toFixed(2) );
+        
 
         //var calc_link = '/?summ=' + 7000 + '&from=' + 'USD' + '&to=' + 'RUB';
 
         // $('.calc__button').attr("href", calc_link);
         
-        $('.calc__another').text( $('#calc_input_in').val() + ' ' + calc_name_1_padej + ' в других валютах:' );
+        
 
+        $('.calc__another').text( $('#calc_input_in').val() + ' ' + calc_name_1_padej + ' в других валютах:' );
         $('#calc_bottom_EUR').val( ($('#calc_input_in').val() / $('#calc_rates').find('#' + calc_url_from).text() * $('#calc_rates').find('#EUR').text()).toFixed(2) );
         $('#calc_bottom_USD').val( ($('#calc_input_in').val() / $('#calc_rates').find('#' + calc_url_from).text() * $('#calc_rates').find('#USD').text()).toFixed(2) );
+        
 
 
-        $('.calc__list--1').find('.calc__valute').each(function(){
-            let calc_input = $('#calc_input_in').val();
-            let calc_valute_from = $(this).children().text();
-            let calc_valute_to = $('.calc__switch--2').find(".calc__button--selected").text();
-            let calc_valute_link = calc_url_base + '?summ=' + calc_input + '&from=' + calc_valute_from + '&to=' + calc_valute_to;
-            $(this).attr("href", calc_valute_link);
-        });
-        $('.calc__list--2').find('.calc__valute').each(function(){
-            let calc_input = $('#calc_input_in').val();
-            let calc_valute_from = $('.calc__switch--1').find(".calc__button--selected").text();
-            let calc_valute_to = $(this).children().text();
-            let calc_valute_link = calc_url_base + '?summ=' + calc_input + '&from=' + calc_valute_from + '&to=' + calc_valute_to;
-            $(this).attr("href", calc_valute_link);
-        });
-        $('.calc__switch--1').find('.calc__button').each(function(){
-            let calc_input = $('#calc_input_in').val();
-            let calc_valute_from = $(this).text();
-            let calc_valute_to = $('.calc__switch--2').find(".calc__button--selected").text();
-            let calc_valute_link = calc_url_base + '?summ=' + calc_input + '&from=' + calc_valute_from + '&to=' + calc_valute_to;
-            $(this).attr("href", calc_valute_link);
-        });
-        $('.calc__switch--2').find('.calc__button').each(function(){
-            let calc_input = $('#calc_input_in').val();
-            let calc_valute_from = $('.calc__switch--1').find(".calc__button--selected").text();
-            let calc_valute_to = $(this).text(); 
-            let calc_valute_link = calc_url_base + '?summ=' + calc_input + '&from=' + calc_valute_from + '&to=' + calc_valute_to;
-            $(this).attr("href", calc_valute_link);
+        calc_links();
+        function calc_links() {
+            $('.calc__list--1').find('.calc__valute').each(function(){
+                let calc_input = $('#calc_input_in').val();
+                let calc_valute_from = $(this).children().text();
+                let calc_valute_to = $('.calc__switch--2').find(".calc__button--selected").text();
+                let calc_valute_link = calc_url_base + '?summ=' + calc_input + '&from=' + calc_valute_from + '&to=' + calc_valute_to;
+                $(this).attr("href", calc_valute_link);
+            });
+            $('.calc__list--2').find('.calc__valute').each(function(){
+                let calc_input = $('#calc_input_in').val();
+                let calc_valute_from = $('.calc__switch--1').find(".calc__button--selected").text();
+                let calc_valute_to = $(this).children().text();
+                let calc_valute_link = calc_url_base + '?summ=' + calc_input + '&from=' + calc_valute_from + '&to=' + calc_valute_to;
+                $(this).attr("href", calc_valute_link);
+            });
+            $('.calc__switch--1').find('.calc__button').each(function(){
+                let calc_input = $('#calc_input_in').val();
+                let calc_valute_from = $(this).text();
+                let calc_valute_to = $('.calc__switch--2').find(".calc__button--selected").text();
+                let calc_valute_link = calc_url_base + '?summ=' + calc_input + '&from=' + calc_valute_from + '&to=' + calc_valute_to;
+                $(this).attr("href", calc_valute_link);
+            });
+            $('.calc__switch--2').find('.calc__button').each(function(){
+                let calc_input = $('#calc_input_in').val();
+                let calc_valute_from = $('.calc__switch--1').find(".calc__button--selected").text();
+                let calc_valute_to = $(this).text(); 
+                let calc_valute_link = calc_url_base + '?summ=' + calc_input + '&from=' + calc_valute_from + '&to=' + calc_valute_to;
+                $(this).attr("href", calc_valute_link);
+            });
+        }
+        
+
+        $('.calc__input--main').on("input",function(){
+            if ( $(this).attr("id") == "calc_input_in" ) {
+                var calc_input_base = $(this).val() / $('#calc_rates').find('#' + calc_url_from).text();
+                var calc_input_out = calc_input_base * $('#calc_rates').find('#' + calc_url_to).text();
+                $('#calc_input_out').val( calc_input_out.toFixed(2) );
+            } else {
+                var calc_input_base = $(this).val() / $('#calc_rates').find('#' + calc_url_to).text();
+                var calc_input_in = calc_input_base * $('#calc_rates').find('#' + calc_url_from).text();
+                $('#calc_input_in').val( calc_input_in.toFixed(2) );
+            }
+            $('#calc_bottom_EUR').val( ($('#calc_input_in').val() / $('#calc_rates').find('#' + calc_url_from).text() * $('#calc_rates').find('#EUR').text()).toFixed(2) );
+            $('#calc_bottom_USD').val( ($('#calc_input_in').val() / $('#calc_rates').find('#' + calc_url_from).text() * $('#calc_rates').find('#USD').text()).toFixed(2) );
+            $('.calc__another').text( $('#calc_input_in').val() + ' ' + calc_name_1_padej + ' в других валютах:' );
         });
 
 
-        $('.calc__input--main').change(function(){
+        $('.calc__input--bottom').on("input",function(){
+            if ( $(this).attr("id") == "calc_bottom_EUR" ) {
+                var calc_bottom_base = $(this).val() / $('#calc_rates').find('#EUR').text();
+                var calc_bottom_out = calc_bottom_base * $('#calc_rates').find('#' + calc_url_from).text();
+                $('#calc_input_in').val( calc_bottom_out.toFixed(2) );
+
+                var calc_input_base = $('#calc_input_in').val() / $('#calc_rates').find('#' + calc_url_from).text();
+                var calc_input_out = calc_input_base * $('#calc_rates').find('#' + calc_url_to).text();
+                $('#calc_input_out').val( calc_input_out.toFixed(2) );
+                $('#calc_bottom_USD').val( (calc_input_base * $('#calc_rates').find('#USD').text()).toFixed(2) );
+            } else {
+                var calc_bottom_base = $(this).val() / $('#calc_rates').find('#USD').text();
+                var calc_bottom_in = calc_bottom_base * $('#calc_rates').find('#' + calc_url_from).text();
+                $('#calc_input_in').val( calc_bottom_in.toFixed(2) );
+                
+                var calc_input_base = $('#calc_input_in').val() / $('#calc_rates').find('#' + calc_url_from).text();
+                var calc_input_out = calc_input_base * $('#calc_rates').find('#' + calc_url_to).text();
+                $('#calc_input_out').val( calc_input_out.toFixed(2) );
+                $('#calc_bottom_EUR').val( (calc_input_base * $('#calc_rates').find('#EUR').text()).toFixed(2) );
+            }
+            $('.calc__another').text( $('#calc_input_in').val() + ' ' + calc_name_1_padej + ' в других валютах:' );
+        });
+
+
+        $('.calc__input--main').on("change",function(){
             let calc_input = $('#calc_input_in').val();
             let calc_input_from = $('.calc__switch--1').find(".calc__button--selected").text();
             let calc_input_to = $('.calc__switch--2').find(".calc__button--selected").text();
-            let calc_input_link = calc_url_base + '?summ=' + calc_input + '&from=' + calc_input_from + '&to=' + calc_input_to;
-            location.href = calc_input_link;
+            let calc_input_link = '?summ=' + calc_input + '&from=' + calc_input_from + '&to=' + calc_input_to;
+
+            //window.location.search = calc_input_link;
+            //location.href = calc_input_link;
+
+            var refresh1 = window.location.protocol + "//" + window.location.host + window.location.pathname + calc_input_link;    
+            window.history.pushState({ path: refresh1 }, '', refresh1);
+            //calculate();
+            calc_links();
         });
 
-        $('.calc__input--bottom').change(function(){
+        $('.calc__input--bottom').on("change",function(){
             let calc_valute = $(this).attr("data-valute");
             let calc_input = $(this).val() / $('#calc_rates').find('#' + calc_valute).text() * $('#calc_rates').find('#' + calc_url_from).text();
             let calc_input_from = $('.calc__switch--1').find(".calc__button--selected").text();
             let calc_input_to = $('.calc__switch--2').find(".calc__button--selected").text();
-            let calc_input_link = calc_url_base + '?summ=' + calc_input.toFixed(2) + '&from=' + calc_input_from + '&to=' + calc_input_to;
-            location.href = calc_input_link;
+            let calc_input_link = '?summ=' + calc_input.toFixed(2) + '&from=' + calc_input_from + '&to=' + calc_input_to;
+
+            //location.href = calc_input_link;
+
+            var refresh2 = window.location.protocol + "//" + window.location.host + window.location.pathname + calc_input_link;    
+            window.history.pushState({ path: refresh2 }, '', refresh2);
+            //calculate_bottom();
+            calc_links();
         });
 
         // console.log(
