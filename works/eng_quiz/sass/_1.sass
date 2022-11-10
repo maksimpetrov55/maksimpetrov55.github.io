@@ -1,0 +1,443 @@
+
+
+body
+    margin: 0
+    position: relative
+    background: #eee
+    min-height: 100vh
+    min-width: 100vw
+
+.calc
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: sans-serif
+    position: absolute
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 1089
+    transform: scale(1)
+    opacity: 1
+    transition-duration: 0.2s
+    &--none
+        transform: scale(2)
+        opacity: 0
+        animation: away 0.1s 
+        animation-delay: 1s
+        animation-fill-mode: both
+
+    *
+        padding: 0
+        margin: 0
+        box-sizing: border-box
+        font-family: sans-serif
+        position: relative
+
+    &__black
+        background: #000000
+        opacity: 0.6
+        position: absolute
+        width: 100%
+        height: 120%
+        z-index: 1099
+
+    &__close
+        position: absolute
+        width: 40px
+        height: 40px
+        right: 0
+        top: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 20px
+        z-index: 1119
+        color: #f00
+        will-change: transform
+        transition-duration: 0.2s
+        cursor: pointer
+        user-select: none
+        &:hover
+            transform: scale(0.85)
+        &:active
+            opacity: 0.5
+
+    &__body
+        border-radius: 10px
+        width: 98%
+        max-width: 900px
+        height: 500px
+        background: #fff
+        z-index: 1109
+        overflow: hidden
+        box-shadow: 0 10px 20px 2px rgba(0,0,0,0.1)
+        @media ( max-width: 900px )
+            max-width: 600px
+            height: 700px
+        
+    &__step
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        padding: 50px 4%
+        transform: scale(1)
+        opacity: 1
+        transition-duration: 0.2s
+        @media ( max-width: 900px )
+            flex-wrap: wrap
+            justify-content: center
+        &--first
+            justify-content: center
+            flex-direction: column
+            padding: 0 0 5% 30%
+            @media ( max-width: 900px )
+                padding: 0 5% 10% 25%
+                align-items: flex-end
+            @media ( max-width: 400px )
+                align-items: center
+                justify-content: flex-start
+                padding: 20% 4% 4% 4%
+        &--none
+            transform: scale(0)
+            opacity: 0
+        &--final
+            justify-content: center
+            flex-direction: column
+            @media ( max-width: 900px )
+                justify-content: space-between
+
+    &__bg
+        width: 100%
+        display: block
+        height: 120%
+        position: absolute
+        bottom: -120px
+        left: -50px
+        @media ( max-width: 900px )
+            bottom: 0
+            height: 70%
+            width: 120%
+            left: -100px
+        @media ( max-width: 540px )
+            width: 130%
+        @media ( max-width: 450px )
+            width: 150%
+        @media ( max-width: 400px )
+            left: 50px
+            width: 270%
+            height: 100%
+            bottom: -200px
+        @media ( max-width: 350px )
+            width: 310%
+            left: 0
+        
+
+    &__title
+        &--first
+            font-size: 30px
+            max-width: 500px
+            text-align: center
+            margin: 0 0 20px 0 
+            @media ( max-width: 900px )
+                font-size: 26px
+            @media ( max-width: 440px )
+                font-size: 22px
+            @media ( max-width: 400px )
+                margin: 0
+        &--final
+            font-size: 22px
+            text-align: center
+            margin: 0 0 20px 0
+            @media ( max-width: 900px )
+                font-size: 18px
+        &--mistakes
+            margin: 0 0 10px 0
+            font-size: 18px
+
+    &__btn
+        margin: 20px auto 0 auto
+        background: #fff
+        border: 2px solid #86aac7
+        width: 200px
+        height: 44px
+        display: flex
+        justify-content: center
+        align-items: center
+        color: #668aa7
+        font-weight: 400
+        letter-spacing: 1px
+        text-transform: uppercase
+        border-radius: 50px
+        will-change: transform
+        transition-duration: 0.2s
+        cursor: pointer
+        user-select: none
+        &:hover
+            transform: scale(0.95)
+            //background: #dde2ec
+            border: 2px solid #86aac7
+            color: #668aa7
+        &:active
+            opacity: 0.5
+
+    &__left
+        width: 48%
+        @media ( max-width: 900px )
+            width: 100%
+            max-width: 450px
+
+    &__right
+        width: 48%
+        @media ( max-width: 900px )
+            width: 100%
+            max-width: 450px
+
+    &__image
+        width: 100%
+        border-radius: 8px
+        display: block
+        background: #000
+        //border: 3px solid #676fa9
+
+    &__number
+        width: 80px
+        height: 36px
+        border: 2px solid #111
+        border-radius: 50px
+        color: #111
+        margin: 0 0 0 -40px
+        //margin: 0 10px 0 0
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        font-size: 18px
+        position: absolute
+        top: 10px
+        left: 50%
+        
+    &__ask
+        text-align: center
+        font-weight: 600
+        font-size: 22px
+        margin: 0 0 20px 0
+        display: flex
+        align-items: center
+        justify-content: center
+        @media ( max-width: 440px )
+            font-size: 18px
+
+    &__choice
+        margin: 20px 0 0 0
+
+    &__radio
+        display: none
+        &:checked + .calc__label
+            background: #ffd6d6
+            border: 2px solid #ff7d7d
+        &:checked + .calc__label::before
+            content: "✖"
+            color: #ff2d2d
+        &--right:checked + .calc__label
+            background: #e3ffce
+            border: 2px solid #159d00
+        &--right:checked + .calc__label::before
+            content: "✔"
+            color: #159d00
+            
+
+    &__label
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 44px
+        margin: 0 0 10px 0
+        border: 2px solid #86aac7
+        width: 100%
+        font-size: 18px
+        padding: 0 36px
+        will-change: transform
+        transition-duration: 0.2s
+        cursor: pointer
+        user-select: none
+        @media ( max-width: 440px )
+            font-size: 16px
+        &--glow
+            background: #e3ffce
+            border: 2px solid #159d00
+        &:hover
+            transform: scale(0.95)
+        &:active
+            opacity: 0.5
+        &::before
+            content: ""
+            position: absolute
+            left: 10px
+            height: 100%
+            display: flex
+            align-items: center
+            padding: 0 0 3px 0
+            color: #105d9b
+            font-weight: 900
+
+    &__control
+        width: 100%
+        height: 50px
+        position: absolute
+        bottom: 0
+        left: 0
+        background: #eee
+        transform: scale(1)
+        opacity: 1
+        transition-duration: 0.2s
+        &--none
+            transform: scale(0)
+            opacity: 0
+ 
+    &__next
+        width: 120px
+        height: 40px
+        right: 4%
+        position: absolute
+        top: 5px
+        border-radius: 8px
+        font-weight: 600
+        border: 1px solid #aaa
+        background: #fff
+        will-change: transform
+        transition-duration: 0.2s
+        cursor: pointer
+        user-select: none
+        &:hover
+            transform: scale(0.95)
+        &:active
+            opacity: 0.5
+
+    &__back
+        width: 120px
+        height: 40px
+        left: 4%
+        position: absolute
+        top: 5px
+        border-radius: 8px
+        font-weight: 600
+        border: 1px solid #aaa
+        background: #fff
+        will-change: transform
+        transition-duration: 0.2s
+        cursor: pointer
+        user-select: none
+        &:hover
+            transform: scale(0.95)
+        &:active
+            opacity: 0.5
+
+    &__count
+        position: absolute
+        left: 0
+        top: 0
+        z-index: 1119
+
+    &__itog
+        margin: 0 0 20px 0
+        font-size: 26px
+        font-weight: 600
+
+    &__edu 
+        display: flex
+        justify-content: space-between
+        width: 100%
+        max-width: 600px
+        margin: 10px 0 30px 0
+        @media ( max-width: 900px )
+            flex-wrap: wrap
+            justify-content: center
+
+    &__link
+        width: 48%
+        text-align: center
+        justify-content: center
+        display: flex
+        align-items: center
+        padding: 5px 10px
+        border: 2px solid #86aac7
+        border-radius: 8px
+        text-decoration: none
+        color: #668aa7
+        will-change: transform
+        transition-duration: 0.2s
+        cursor: pointer
+        user-select: none
+        @media ( max-width: 900px )
+            margin: 0 0 10px 0
+            width: 100%
+            max-width: 300px
+            height: 54px
+        &:hover
+            transform: scale(0.95)
+        &:active
+            opacity: 0.5
+
+    &__again
+        margin: 0 0 0 -56px
+        color: #668aa7
+        position: absolute
+        width: 112px
+        left: 50%
+        bottom: 20px
+        will-change: transform
+        transition-duration: 0.2s
+        cursor: pointer
+        user-select: none
+        text-align: center
+        &:hover
+            transform: scale(0.95)
+        &:active
+            opacity: 0.5
+
+    &__mistakes
+        width: 100%
+        margin: 0 0 20px 0
+        padding: 0 0 20px 0
+        border-bottom: 2px dashed #ccc
+        //display: flex
+        //flex-wrap: wrap
+        //justify-content: center
+        
+    &__line
+        display: flex
+        justify-content: center
+        margin: 5px 10px 5px 10px
+        align-items: center
+
+    &__wrong
+        display: inline-block
+        text-align: right
+        // border: 2px solid #ff7d7d
+        // color: #c43030
+        background: #ffa2a2
+        padding: 4px 10px
+        border-radius: 4px
+        margin: 0 5px
+
+    &__correct
+        display: inline-block
+        background: #9aff51
+        padding: 4px 6px
+        border-radius: 4px
+        margin: 0 5px
+
+
+@keyframes away
+    0%
+        transform: scale(1)
+    100%
+        transform: scale(0)
+        

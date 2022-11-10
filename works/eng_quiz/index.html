@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css?v1">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js?v1"></script>	
+
+</head>
+<body>
+
+	<div class="go">go</div>
+
+	<div class="calc">
+
+		<div class="calc__black"></div>
+
+		<div class="calc__body">
+
+			<div style="display: none;" class="calc__count">0</div>
+
+			<div class="calc__close">✖</div>
+
+			<div class="calc__step calc__step--first">
+
+				<img src="img/bg2.png" alt="" class="calc__bg">
+
+				<div class="calc__title calc__title--first">Знаете ли вы как сказать популярную фразу по‑английски?</div>
+
+				<div class="calc__btn">Начать</div>
+
+			</div>
+
+			<div data-number="1" class="calc__step calc__step--1 calc__step--none">
+				<div class="calc__number">1 / 12</div>
+				<div class="calc__left"><img src="img/1.png" alt="" class="calc__image"></div>
+				<div class="calc__right">
+					<div class="calc__ask">Я в дороге/пути:</div>
+					<div class="calc__choice">
+						<input type="radio" name="calc_choice_1" id="calc_choice_1_1" class="calc__radio" value="0">
+						<label class="calc__label" for="calc_choice_1_1">I’m on the road</label>
+						<input type="radio" name="calc_choice_1" id="calc_choice_1_2" class="calc__radio" value="0">
+						<label class="calc__label" for="calc_choice_1_2">I’m in the way</label>
+						<input type="radio" name="calc_choice_1" id="calc_choice_1_3" class="calc__radio calc__radio--right" value="1">
+						<label class="calc__label" for="calc_choice_1_3">I’m on my way</label>
+					</div>
+				</div>
+			</div>
+
+			<div data-number="2" class="calc__step calc__step--2 calc__step--none">
+				<div class="calc__number">2 / 12</div>
+				<div class="calc__left"><img src="img/2.png" alt="" class="calc__image"></div>
+				<div class="calc__right">
+					<div class="calc__ask">Я опаздываю:</div>
+					<div class="calc__choice">
+						<input type="radio" name="calc_choice_2" id="calc_choice_2_1" class="calc__radio calc__radio--right" value="1">
+						<label class="calc__label" for="calc_choice_2_1">I’m running late</label>
+						<input type="radio" name="calc_choice_2" id="calc_choice_2_2" class="calc__radio" value="0">
+						<label class="calc__label" for="calc_choice_2_2">I’m lating</label>
+						<input type="radio" name="calc_choice_2" id="calc_choice_2_3" class="calc__radio" value="0">
+						<label class="calc__label" for="calc_choice_2_3">I’m going late</label>
+					</div>
+				</div>
+			</div>
+
+			<div data-number="3" class="calc__step calc__step--3 calc__step--none">
+				<div class="calc__number">3 / 12</div>
+				<div class="calc__left"><img src="img/3.png" alt="" class="calc__image"></div>
+				<div class="calc__right">
+					<div class="calc__ask">Я опоздаю на 5 минут:</div>
+					<div class="calc__choice">
+						<input type="radio" name="calc_choice_3" id="calc_choice_3_1" class="calc__radio" value="0">
+						<label class="calc__label" for="calc_choice_3_1">I’ll be late for 5 minutes</label>
+						<input type="radio" name="calc_choice_3" id="calc_choice_3_2" class="calc__radio calc__radio--right" value="1">
+						<label class="calc__label" for="calc_choice_3_2">I’ll be 5 minutes late</label>
+						<input type="radio" name="calc_choice_3" id="calc_choice_3_3" class="calc__radio" value="0">
+						<label class="calc__label" for="calc_choice_3_3">I’ll be late 5 minutes</label>
+					</div>
+				</div>
+			</div>
+
+			<div data-number="4" class="calc__step calc__step--4 calc__step--none">
+				<div class="calc__number">4 / 12</div>
+				<div class="calc__left"><img src="img/4.png" alt="" class="calc__image"></div>
+				<div class="calc__right">
+					<div class="calc__ask">Мне нужно быть там вовремя:</div>
+					<div class="calc__choice">
+						<input type="radio" name="calc_choice_4" id="calc_choice_4_1" class="calc__radio" value="0">
+						<label class="calc__label" for="calc_choice_4_1">I must be there in time</label>
+						<input type="radio" name="calc_choice_4" id="calc_choice_4_2" class="calc__radio calc__radio--right" value="1">
+						<label class="calc__label" for="calc_choice_4_2">I must be there on time</label>
+						<input type="radio" name="calc_choice_4" id="calc_choice_4_3" class="calc__radio" value="0">
+						<label class="calc__label" for="calc_choice_4_3">I must be there at time</label>
+					</div>
+				</div>
+			</div>
+
+			<div data-number="5" class="calc__step calc__step--5 calc__step--none">
+				<div class="calc__number">5 / 12</div>
+				<div class="calc__left"><img src="img/5.png" alt="" class="calc__image"></div>
+				<div class="calc__right">
+					<div class="calc__ask">Я на встрече:</div>
+					<div class="calc__choice">
+						<input type="radio" name="calc_choice_5" id="calc_choice_5_1" class="calc__radio" value="0">
+						<label class="calc__label" for="calc_choice_5_1">I’m on a meeting</label>
+						<input type="radio" name="calc_choice_5" id="calc_choice_5_2" class="calc__radio" value="0">
+						<label class="calc__label" for="calc_choice_5_2">I’m at a meeting</label>
+						<input type="radio" name="calc_choice_5" id="calc_choice_5_3" class="calc__radio calc__radio--right" value="1">
+						<label class="calc__label" for="calc_choice_5_3">I’m in a meeting</label>
+					</div>
+				</div>
+			</div>
+
+			<div data-number="6" class="calc__step calc__step--6 calc__step--none">
+				<div class="calc__number">6 / 12</div>
+				<div class="calc__left"><img src="img/6.png" alt="" class="calc__image"></div>
+				<div class="calc__right">
+					<div class="calc__ask">Я застрял(а) в пробке:</div>
+					<div class="calc__choice">
+						<input type="radio" name="calc_choice_6" id="calc_choice_6_1" class="calc__radio" value="0">
+						<label class="calc__label" for="calc_choice_6_1">I got lost in traffic</label>
+						<input type="radio" name="calc_choice_6" id="calc_choice_6_2" class="calc__radio calc__radio--right" value="1">
+						<label class="calc__label" for="calc_choice_6_2">I got stuck in traffic</label>
+						<input type="radio" name="calc_choice_6" id="calc_choice_6_3" class="calc__radio" value="0">
+						<label class="calc__label" for="calc_choice_6_3">I got in the traffic</label>
+					</div>
+				</div>
+			</div>
+
+			<div data-number="7" class="calc__step calc__step--7 calc__step--none">
+				<div class="calc__number">7 / 12</div>
+				<div class="calc__left"><img src="img/7.jpg" alt="" class="calc__image"></div>
+				<div class="calc__right">
+					<div class="calc__ask">Я работаю удалённо:</div>
+					<div class="calc__choice">
+						<input type="radio" name="calc_choice_7" id="calc_choice_7_1" class="calc__radio calc__radio--right" value="1">
+						<label class="calc__label" for="calc_choice_7_1">I work remotely</label>
+						<input type="radio" name="calc_choice_7" id="calc_choice_7_2" class="calc__radio" value="0">
+						<label class="calc__label" for="calc_choice_7_2">I work out of the office</label>
+						<input type="radio" name="calc_choice_7" id="calc_choice_7_3" class="calc__radio" value="0">
+						<label class="calc__label" for="calc_choice_7_3">I work on remote</label>
+					</div>
+				</div>
+			</div>
+
+			<div data-number="8" class="calc__step calc__step--8 calc__step--none">
+				<div class="calc__number">8 / 12</div>
+				<div class="calc__left"><img src="img/8.jpg" alt="" class="calc__image"></div>
+				<div class="calc__right">
+					<div class="calc__ask">Я у друзей (в гостях):</div>
+					<div class="calc__choice">
+						<input type="radio" name="calc_choice_8" id="calc_choice_8_1" class="calc__radio" value="0">
+						<label class="calc__label" for="calc_choice_8_1">I’m with my friends</label>
+						<input type="radio" name="calc_choice_8" id="calc_choice_8_2" class="calc__radio" value="0">
+						<label class="calc__label" for="calc_choice_8_2">I’m in my friends’ home</label>
+						<input type="radio" name="calc_choice_8" id="calc_choice_8_3" class="calc__radio calc__radio--right" value="1">
+						<label class="calc__label" for="calc_choice_8_3">I’m at my friends’</label>
+					</div>
+				</div>
+			</div>
+
+			<div data-number="9" class="calc__step calc__step--9 calc__step--none">
+				<div class="calc__number">9 / 12</div>
+				<div class="calc__left"><img src="img/9.jpg" alt="" class="calc__image"></div>
+				<div class="calc__right">
+					<div class="calc__ask">Я сидел(а) дома:</div>
+					<div class="calc__choice">
+						<input type="radio" name="calc_choice_9" id="calc_choice_9_1" class="calc__radio" value="0">
+						<label class="calc__label" for="calc_choice_9_1">I sat at home</label>
+						<input type="radio" name="calc_choice_9" id="calc_choice_9_2" class="calc__radio" value="0">
+						<label class="calc__label" for="calc_choice_9_2">I was in</label>
+						<input type="radio" name="calc_choice_9" id="calc_choice_9_3" class="calc__radio calc__radio--right" value="1">
+						<label class="calc__label" for="calc_choice_9_3">I stayed in</label>
+					</div>
+				</div>
+			</div>
+
+			<div data-number="10" class="calc__step calc__step--10 calc__step--none">
+				<div class="calc__number">10 / 12</div>
+				<div class="calc__left"><img src="img/10.jpg" alt="" class="calc__image"></div>
+				<div class="calc__right">
+					<div class="calc__ask">Я в хороших отношениях с моей сестрой:</div>
+					<div class="calc__choice">
+						<input type="radio" name="calc_choice_10" id="calc_choice_10_1" class="calc__radio" value="0">
+						<label class="calc__label" for="calc_choice_10_1">I’m in good relationships with my sister</label>
+						<input type="radio" name="calc_choice_10" id="calc_choice_10_2" class="calc__radio" value="0">
+						<label class="calc__label" for="calc_choice_10_2">I’m on good relations with my sister</label>
+						<input type="radio" name="calc_choice_10" id="calc_choice_10_3" class="calc__radio calc__radio--right" value="1">
+						<label class="calc__label" for="calc_choice_10_3">I’m on good terms with my sister</label>
+					</div>
+				</div>
+			</div>
+
+			<div data-number="11" class="calc__step calc__step--11 calc__step--none">
+				<div class="calc__number">11 / 12</div>
+				<div class="calc__left"><img src="img/11.png" alt="" class="calc__image"></div>
+				<div class="calc__right">
+					<div class="calc__ask">Вы могли бы говорить погромче?</div>
+					<div class="calc__choice">
+						<input type="radio" name="calc_choice_11" id="calc_choice_11_1" class="calc__radio" value="0">
+						<label class="calc__label" for="calc_choice_11_1">Could you speak louder?</label>
+						<input type="radio" name="calc_choice_11" id="calc_choice_11_2" class="calc__radio calc__radio--right" value="1">
+						<label class="calc__label" for="calc_choice_11_2">Could you speak up?</label>
+						<input type="radio" name="calc_choice_11" id="calc_choice_11_3" class="calc__radio" value="0">
+						<label class="calc__label" for="calc_choice_11_3">Could you speak stronger?</label>
+					</div>
+				</div>
+			</div>
+
+			<div data-number="12" class="calc__step calc__step--12 calc__step--none">
+				<div class="calc__number">12 / 12</div>
+				<div class="calc__left"><img src="img/12.png" alt="" class="calc__image"></div>
+				<div class="calc__right">
+					<div class="calc__ask">Потише, пожалуйста (= не шумите):</div>
+					<div class="calc__choice">
+						<input type="radio" name="calc_choice_12" id="calc_choice_12_1" class="calc__radio calc__radio--right" value="1">
+						<label class="calc__label" for="calc_choice_12_1">Please keep it down</label>
+						<input type="radio" name="calc_choice_12" id="calc_choice_12_2" class="calc__radio" value="0">
+						<label class="calc__label" for="calc_choice_12_2">Please keep it quitter</label>
+						<input type="radio" name="calc_choice_12" id="calc_choice_12_3" class="calc__radio" value="0">
+						<label class="calc__label" for="calc_choice_12_3">Please keep it softer</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="calc__step calc__step--final calc__step--none">
+				<div class="calc__itog">12 / 12</div>
+
+				<!-- <div class="calc__title calc__title--mistakes">Предложения с ошибкой</div>
+				<div class="calc__mistakes">
+					<div class="calc__line">
+						<div class="calc__numb">#1</div>
+						<div class="calc__wrong">Please keep it quitter</div>
+						<div class="calc__correct">Please keep it down</div>
+					</div>
+
+				</div> -->
+
+				<div class="calc__title calc__title--final">
+					Ого, отличный результат!<br>
+					Чтобы не останавливаться на достигнутом, вы&nbsp;можете:
+				</div>
+
+				<div class="calc__edu">
+					<a href="https://youyouenglish.tilda.ws/#rec436742831" target="_blank" class="calc__link">повысить свой уровень</a>
+
+					<a href="https://youyouenglish.tilda.ws/#rec485125813" target="_blank" class="calc__link">тренировать свой разговорный английский в разговорном клубе</a>
+				</div>
+
+				<div class="calc__again">Посмотреть вопросы снова</div>
+			</div>
+			
+
+			<div class="calc__control calc__control--none">
+				<button class="calc__back">Назад</button>
+				<button class="calc__next">Далее</button>
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+</body>
+</html>
