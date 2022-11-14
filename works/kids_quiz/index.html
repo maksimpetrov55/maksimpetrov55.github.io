@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css?v1">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js?v1"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="quiz">
+
+		<div class="quiz__body">
+
+			<div class="quiz__step quiz__step--age">
+
+				<div class="quiz__title quiz__title--age">Выберите возраст</div>
+				<div class="quiz__age">
+					<select name="quiz_age" id="quiz_age" class="quiz__select">
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+					</select>
+				</div>
+				<div class="quiz__confirm">Начать тест</div>
+
+			</div>
+
+			<div id="quiz_block_3" class="quiz__block" style="display: none;">
+				<div class="quiz__step quiz__step--hidden">
+
+					<!-- <div class="quiz__count">1/3</div> -->
+					<div class="quiz__title">1. Выбери такой же</div>
+					<div class="quiz__picture">
+						<img class="quiz__img" src="img/3/1_main.jpg" alt="">
+					</div>
+					<div class="quiz__title">Варианты ответов:</div>
+					<div class="quiz__choice">
+						<input class="quiz__radio" type="radio" name="quiz_3_1" id="quiz_3_1_1" value="0">
+						<label class="quiz__label" for="quiz_3_1_1"><div class="quiz__mark">1</div><img class="quiz__answer" src="img/3/1_1.jpg" alt=""></label>
+	
+						<input class="quiz__radio" type="radio" name="quiz_3_1" id="quiz_3_1_2" value="0">
+						<label class="quiz__label" for="quiz_3_1_2"><div class="quiz__mark">2</div><img class="quiz__answer" src="img/3/1_2.jpg" alt=""></label>
+	
+						<input class="quiz__radio" type="radio" name="quiz_3_1" id="quiz_3_1_3" value="0">
+						<label class="quiz__label" for="quiz_3_1_3"><div class="quiz__mark">3</div><img class="quiz__answer" src="img/3/1_3.jpg" alt=""></label>
+	
+						<input class="quiz__radio" type="radio" name="quiz_3_1" id="quiz_3_1_4" value="1">
+						<label class="quiz__label" for="quiz_3_1_4"><div class="quiz__mark">4</div><img class="quiz__answer" src="img/3/1_4.jpg" alt=""></label>
+					</div>
+					<div class="quiz__note">Пожалуйста выберите ответ</div>
+					<div data-step="1" class="quiz__buttons">
+						<div class="quiz__back">Назад</div>
+						<div class="quiz__next">Вперед</div>
+					</div>
+	
+				</div>
+	
+				<div class="quiz__step quiz__step--hidden">
+	
+					<!-- <div class="quiz__count">2/3</div> -->
+					<div class="quiz__title">2. Выбери часть, чтобы собрать коврик</div>
+					<div class="quiz__picture">
+						<img class="quiz__img" src="img/3/2_main.png" alt="">
+					</div>
+					<div class="quiz__title">Варианты ответов:</div>
+					<div class="quiz__choice">
+						<input class="quiz__radio" type="radio" name="quiz_3_2" id="quiz_3_2_1" value="0">
+						<label class="quiz__label" for="quiz_3_2_1"><div class="quiz__mark">1</div><img class="quiz__answer" src="img/3/2_1.png" alt=""></label>
+	
+						<input class="quiz__radio" type="radio" name="quiz_3_2" id="quiz_3_2_2" value="1">
+						<label class="quiz__label" for="quiz_3_2_2"><div class="quiz__mark">2</div><img class="quiz__answer" src="img/3/2_2.png" alt=""></label>
+	
+						<input class="quiz__radio" type="radio" name="quiz_3_2" id="quiz_3_2_3" value="0">
+						<label class="quiz__label" for="quiz_3_2_3"><div class="quiz__mark">3</div><img class="quiz__answer" src="img/3/2_3.png" alt=""></label>
+	
+					</div>
+					<div class="quiz__note">Пожалуйста выберите ответ</div>
+					<div data-step="2" class="quiz__buttons">
+						<div class="quiz__back">Назад</div>
+						<div class="quiz__next">Вперед</div>
+					</div>
+	
+				</div>
+	
+				<div class="quiz__step quiz__step--hidden">
+	
+					<!-- <div class="quiz__count">3/3</div> -->
+					<div class="quiz__title">3. К кому придёт маленький китёнок?</div>
+					<div class="quiz__picture">
+						<img class="quiz__img" src="img/3/3_main.png" alt="">
+					</div>
+					<div class="quiz__title">Варианты ответов:</div>
+					<div class="quiz__choice">
+						<input class="quiz__radio" type="radio" name="quiz_3_3" id="quiz_3_3_1" value="0">
+						<label class="quiz__label" for="quiz_3_3_1"><div class="quiz__mark">1</div><img class="quiz__answer" src="img/3/3_1.jpg" alt=""></label>
+	
+						<input class="quiz__radio" type="radio" name="quiz_3_3" id="quiz_3_3_2" value="1">
+						<label class="quiz__label" for="quiz_3_3_2"><div class="quiz__mark">2</div><img class="quiz__answer" src="img/3/3_2.jpg" alt=""></label>
+	
+						<input class="quiz__radio" type="radio" name="quiz_3_3" id="quiz_3_3_3" value="0">
+						<label class="quiz__label" for="quiz_3_3_3"><div class="quiz__mark">3</div><img class="quiz__answer" src="img/3/3_3.jpg" alt=""></label>
+	
+					</div>
+					<div class="quiz__note">Пожалуйста выберите ответ</div>
+					<div data-step="3" class="quiz__buttons">
+						<div class="quiz__back">Назад</div>
+						<div class="quiz__next">Вперед</div>
+					</div>
+	
+				</div>
+			</div>
+
+			<div id="quiz_block_4" class="quiz__block" style="display: none;">
+				<div class="quiz__step quiz__step--hidden">
+			
+					<!-- <div class="quiz__count">1/3</div> -->
+					<div class="quiz__title">1. Найди недостающий пазл</div>
+					<div class="quiz__picture">
+						<img class="quiz__img" src="img/4/1_main.png" alt="">
+					</div>
+					<div class="quiz__title">Варианты ответов:</div>
+					<div class="quiz__choice">
+						<input class="quiz__radio" type="radio" name="quiz_4_1" id="quiz_4_1_1" value="1">
+						<label class="quiz__label" for="quiz_4_1_1"><img class="quiz__answer" src="img/4/1_1.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_4_1" id="quiz_4_1_2" value="0">
+						<label class="quiz__label" for="quiz_4_1_2"><img class="quiz__answer" src="img/4/1_2.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_4_1" id="quiz_4_1_3" value="0">
+						<label class="quiz__label" for="quiz_4_1_3"><img class="quiz__answer" src="img/4/1_3.png" alt=""></label>
+			
+					</div>
+					<div class="quiz__note">Пожалуйста выберите ответ</div>
+					<div data-step="1" class="quiz__buttons">
+						<div class="quiz__back">Назад</div>
+						<div class="quiz__next">Вперед</div>
+					</div>
+			
+				</div>
+			
+				<div class="quiz__step quiz__step--hidden">
+			
+					<!-- <div class="quiz__count">2/3</div> -->
+					<div class="quiz__title">2. Какой путь надо выбрать зайчику, чтобы дойти до морковки?</div>
+					<div class="quiz__picture">
+						<img class="quiz__img" src="img/4/2_main.png" alt="">
+					</div>
+					<div class="quiz__title">Варианты ответов:</div>
+					<div class="quiz__choice">
+						<input class="quiz__radio" type="radio" name="quiz_4_2" id="quiz_4_2_1" value="1">
+						<label class="quiz__label quiz__label--small" for="quiz_4_2_1"><img src="img/dig/1.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_4_2" id="quiz_4_2_2" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_4_2_2"><img src="img/dig/2.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_4_2" id="quiz_4_2_3" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_4_2_3"><img src="img/dig/3.png" alt=""></label>
+			
+			
+					</div>
+					<div class="quiz__note">Пожалуйста выберите ответ</div>
+					<div data-step="2" class="quiz__buttons">
+						<div class="quiz__back">Назад</div>
+						<div class="quiz__next">Вперед</div>
+					</div>
+			
+				</div>
+			
+				<div class="quiz__step quiz__step--hidden">
+			
+					<!-- <div class="quiz__count">3/3</div> -->
+					<div class="quiz__title">3. Какой путь надо выбрать щенку, чтобы дойти до косточки?</div>
+					<div class="quiz__picture">
+						<img class="quiz__img" src="img/4/3_main.png" alt="">
+					</div>
+					<div class="quiz__title">Варианты ответов:</div>
+					<div class="quiz__choice">
+						<input class="quiz__radio" type="radio" name="quiz_4_3" id="quiz_4_3_1" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_4_3_1"><img src="img/dig/1.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_4_3" id="quiz_4_3_2" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_4_3_2"><img src="img/dig/2.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_4_3" id="quiz_4_3_3" value="1">
+						<label class="quiz__label quiz__label--small" for="quiz_4_3_3"><img src="img/dig/3.png" alt=""></label>
+			
+					</div>
+					<div class="quiz__note">Пожалуйста выберите ответ</div>
+					<div data-step="3" class="quiz__buttons">
+						<div class="quiz__back">Назад</div>
+						<div class="quiz__next">Вперед</div>
+					</div>
+			
+				</div>
+			</div>
+
+			<div id="quiz_block_5" class="quiz__block" style="display: none;">
+				<div class="quiz__step quiz__step--hidden">
+			
+					<!-- <div class="quiz__count">1/3</div> -->
+					<div class="quiz__title">1.	К какому микробу пойдёт в гости желтый пузырь (В)</div>
+					<div class="quiz__picture">
+						<img class="quiz__img" src="img/5/1_main.png" alt="">
+					</div>
+					<div class="quiz__title">Варианты ответов:</div>
+					<div class="quiz__choice">
+						<input class="quiz__radio" type="radio" name="quiz_5_1" id="quiz_5_1_1" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_5_1_1"><img src="img/dig/1.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_5_1" id="quiz_5_1_2" value="1">
+						<label class="quiz__label quiz__label--small" for="quiz_5_1_2"><img src="img/dig/2.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_5_1" id="quiz_5_1_3" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_5_1_3"><img src="img/dig/3.png" alt=""></label>
+			
+					</div>
+					<div class="quiz__note">Пожалуйста выберите ответ</div>
+					<div data-step="1" class="quiz__buttons">
+						<div class="quiz__back">Назад</div>
+						<div class="quiz__next">Вперед</div>
+					</div>
+			
+				</div>
+			
+				<div class="quiz__step quiz__step--hidden">
+			
+					<!-- <div class="quiz__count">2/3</div> -->
+					<div class="quiz__title">2.	К кому идет в гости рыжий кот (В)</div>
+					<div class="quiz__picture">
+						<img class="quiz__img" src="img/5/2_main.png" alt="">
+					</div>
+					<div class="quiz__title">Варианты ответов:</div>
+					<div class="quiz__choice">
+						<input class="quiz__radio" type="radio" name="quiz_5_2" id="quiz_5_2_1" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_5_2_1"><img src="img/dig/1.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_5_2" id="quiz_5_2_2" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_5_2_2"><img src="img/dig/2.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_5_2" id="quiz_5_2_3" value="1">
+						<label class="quiz__label quiz__label--small" for="quiz_5_2_3"><img src="img/dig/3.png" alt=""></label>
+			
+					</div>
+					<div class="quiz__note">Пожалуйста выберите ответ</div>
+					<div data-step="2" class="quiz__buttons">
+						<div class="quiz__back">Назад</div>
+						<div class="quiz__next">Вперед</div>
+					</div>
+			
+				</div>
+			
+				<div class="quiz__step quiz__step--hidden">
+			
+					<!-- <div class="quiz__count">3/3</div> -->
+					<div class="quiz__title">3.	Кто без пары?</div>
+					<div class="quiz__picture">
+						<img class="quiz__img" src="img/5/3_main.png" alt="">
+					</div>
+					<div class="quiz__title">Варианты ответов:</div>
+					<div class="quiz__choice">
+						<input class="quiz__radio" type="radio" name="quiz_5_3" id="quiz_5_3_1" value="0">
+						<label class="quiz__label" for="quiz_5_3_1"><div class="quiz__mark">1</div><img class="quiz__answer" src="img/5/1.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_5_3" id="quiz_5_3_2" value="0">
+						<label class="quiz__label" for="quiz_5_3_2"><div class="quiz__mark">2</div><img class="quiz__answer" src="img/5/2.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_5_3" id="quiz_5_3_3" value="0">
+						<label class="quiz__label" for="quiz_5_3_3"><div class="quiz__mark">3</div><img class="quiz__answer" src="img/5/3.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_5_3" id="quiz_5_3_4" value="0">
+						<label class="quiz__label" for="quiz_5_3_4"><div class="quiz__mark">4</div><img class="quiz__answer" src="img/5/4.png" alt=""></label>
+						
+						<input class="quiz__radio" type="radio" name="quiz_5_3" id="quiz_5_3_5" value="0">
+						<label class="quiz__label" for="quiz_5_3_5"><div class="quiz__mark">5</div><img class="quiz__answer" src="img/5/5.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_5_3" id="quiz_5_3_6" value="0">
+						<label class="quiz__label" for="quiz_5_3_6"><div class="quiz__mark">6</div><img class="quiz__answer" src="img/5/6.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_5_3" id="quiz_5_3_7" value="0">
+						<label class="quiz__label" for="quiz_5_3_7"><div class="quiz__mark">7</div><img class="quiz__answer" src="img/5/7.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_5_3" id="quiz_5_3_8" value="1">
+						<label class="quiz__label" for="quiz_5_3_8"><div class="quiz__mark">8</div><img class="quiz__answer" src="img/5/8.png" alt=""></label>
+					</div>
+					<div class="quiz__note">Пожалуйста выберите ответ</div>
+					<div data-step="3" class="quiz__buttons">
+						<div class="quiz__back">Назад</div>
+						<div class="quiz__next">Вперед</div>
+					</div>
+			
+				</div>
+			</div>
+
+			<div id="quiz_block_6" class="quiz__block" style="display: none;">
+				<div class="quiz__step quiz__step--hidden">
+			
+					<!-- <div class="quiz__count">1/3</div> -->
+					<div class="quiz__title">1.	Какой Дед Мороз принесёт подарки ребятам?</div>
+					<div class="quiz__picture">
+						<img class="quiz__img" src="img/6/1_main.png" alt="">
+					</div>
+					<div class="quiz__title">Варианты ответов:</div>
+					<div class="quiz__choice">
+						<input class="quiz__radio" type="radio" name="quiz_6_1" id="quiz_6_1_1" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_6_1_1"><img src="img/dig/a.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_6_1" id="quiz_6_1_2" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_6_1_2"><img src="img/dig/b.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_6_1" id="quiz_6_1_3" value="1">
+						<label class="quiz__label quiz__label--small" for="quiz_6_1_3"><img src="img/dig/c.png" alt=""></label>
+			
+					</div>
+					<div class="quiz__note">Пожалуйста выберите ответ</div>
+					<div data-step="1" class="quiz__buttons">
+						<div class="quiz__back">Назад</div>
+						<div class="quiz__next">Вперед</div>
+					</div>
+			
+				</div>
+			
+				<div class="quiz__step quiz__step--hidden">
+			
+					<!-- <div class="quiz__count">2/3</div> -->
+					<div class="quiz__title">2.	Найди цыплятам их маму.</div>
+					<div class="quiz__picture">
+						<img class="quiz__img" src="img/6/2_main.png" alt="">
+					</div>
+					<div class="quiz__title">Варианты ответов:</div>
+					<div class="quiz__choice">
+						<input class="quiz__radio" type="radio" name="quiz_6_2" id="quiz_6_2_1" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_6_2_1"><img src="img/dig/a.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_6_2" id="quiz_6_2_2" value="1">
+						<label class="quiz__label quiz__label--small" for="quiz_6_2_2"><img src="img/dig/b.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_6_2" id="quiz_6_2_3" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_6_2_3"><img src="img/dig/c.png" alt=""></label>
+			
+					</div>
+					<div class="quiz__note">Пожалуйста выберите ответ</div>
+					<div data-step="2" class="quiz__buttons">
+						<div class="quiz__back">Назад</div>
+						<div class="quiz__next">Вперед</div>
+					</div>
+			
+				</div>
+			
+				<div class="quiz__step quiz__step--hidden">
+			
+					<!-- <div class="quiz__count">3/3</div> -->
+					<div class="quiz__title">3.	Вставь правильный кусочек на место красного квадрата</div>
+					<div class="quiz__picture">
+						<img class="quiz__img" src="img/6/3_main.png" alt="">
+					</div>
+					<div class="quiz__title">Варианты ответов:</div>
+					<div class="quiz__choice">
+						<input class="quiz__radio" type="radio" name="quiz_6_3" id="quiz_6_3_1" value="0">
+						<label class="quiz__label" for="quiz_6_3_1"><div class="quiz__mark">1</div><img class="quiz__answer" src="img/6/1.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_6_3" id="quiz_6_3_2" value="0">
+						<label class="quiz__label" for="quiz_6_3_2"><div class="quiz__mark">2</div><img class="quiz__answer" src="img/6/2.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_6_3" id="quiz_6_3_3" value="0">
+						<label class="quiz__label" for="quiz_6_3_3"><div class="quiz__mark">3</div><img class="quiz__answer" src="img/6/3.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_6_3" id="quiz_6_3_4" value="1">
+						<label class="quiz__label" for="quiz_6_3_4"><div class="quiz__mark">4</div><img class="quiz__answer" src="img/6/4.png" alt=""></label>
+						
+					</div>
+					<div class="quiz__note">Пожалуйста выберите ответ</div>
+					<div data-step="3" class="quiz__buttons">
+						<div class="quiz__back">Назад</div>
+						<div class="quiz__next">Вперед</div>
+					</div>
+			
+				</div>
+			</div>
+
+			<div id="quiz_block_7" class="quiz__block" style="display: none;">
+				<div class="quiz__step quiz__step--hidden">
+			
+					<!-- <div class="quiz__count">1/3</div> -->
+					<div class="quiz__title">1.	Какой Дед Мороз понесёт мешок с подарками?</div>
+					<div class="quiz__picture">
+						<img class="quiz__img" src="img/7/1_main.png" alt="">
+					</div>
+					<div class="quiz__title">Варианты ответов:</div>
+					<div class="quiz__choice">
+						<input class="quiz__radio" type="radio" name="quiz_7_1" id="quiz_7_1_1" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_7_1_1"><img src="img/dig/a.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_7_1" id="quiz_7_1_2" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_7_1_2"><img src="img/dig/b.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_7_1" id="quiz_7_1_3" value="1">
+						<label class="quiz__label quiz__label--small" for="quiz_7_1_3"><img src="img/dig/c.png" alt=""></label>
+			
+					</div>
+					<div class="quiz__note">Пожалуйста выберите ответ</div>
+					<div data-step="1" class="quiz__buttons">
+						<div class="quiz__back">Назад</div>
+						<div class="quiz__next">Вперед</div>
+					</div>
+			
+				</div>
+			
+				<div class="quiz__step quiz__step--hidden">
+			
+					<!-- <div class="quiz__count">2/3</div> -->
+					<div class="quiz__title">2.	По какому пути мама-рыба сможет доплыть доплыть до своих деток?</div>
+					<div class="quiz__picture">
+						<img class="quiz__img" src="img/7/2_main.png" alt="">
+					</div>
+					<div class="quiz__title">Варианты ответов:</div>
+					<div class="quiz__choice">
+						<input class="quiz__radio" type="radio" name="quiz_7_2" id="quiz_7_2_1" value="1">
+						<label class="quiz__label quiz__label--small" for="quiz_7_2_1"><img src="img/dig/a.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_7_2" id="quiz_7_2_2" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_7_2_2"><img src="img/dig/b.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_7_2" id="quiz_7_2_3" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_7_2_3"><img src="img/dig/c.png" alt=""></label>
+			
+					</div>
+					<div class="quiz__note">Пожалуйста выберите ответ</div>
+					<div data-step="2" class="quiz__buttons">
+						<div class="quiz__back">Назад</div>
+						<div class="quiz__next">Вперед</div>
+					</div>
+			
+				</div>
+			
+				<div class="quiz__step quiz__step--hidden">
+			
+					<!-- <div class="quiz__count">3/3</div> -->
+					<div class="quiz__title">3.	Найди картинку без пары</div>
+					<div class="quiz__picture">
+						<img class="quiz__img" src="img/7/3_main.png" alt="">
+					</div>
+					<div class="quiz__title">Варианты ответов:</div>
+					<div class="quiz__choice">
+						<input class="quiz__radio" type="radio" name="quiz_7_3" id="quiz_7_3_1" value="1">
+						<label class="quiz__label" for="quiz_7_3_1"><div class="quiz__mark">1</div><img class="quiz__answer" src="img/7/1.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_7_3" id="quiz_7_3_2" value="0">
+						<label class="quiz__label" for="quiz_7_3_2"><div class="quiz__mark">2</div><img class="quiz__answer" src="img/7/2.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_7_3" id="quiz_7_3_3" value="0">
+						<label class="quiz__label" for="quiz_7_3_3"><div class="quiz__mark">3</div><img class="quiz__answer" src="img/7/3.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_7_3" id="quiz_7_3_4" value="0">
+						<label class="quiz__label" for="quiz_7_3_4"><div class="quiz__mark">4</div><img class="quiz__answer" src="img/7/4.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_7_3" id="quiz_7_3_5" value="0">
+						<label class="quiz__label" for="quiz_7_3_5"><div class="quiz__mark">5</div><img class="quiz__answer" src="img/7/5.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_7_3" id="quiz_7_3_6" value="0">
+						<label class="quiz__label" for="quiz_7_3_6"><div class="quiz__mark">6</div><img class="quiz__answer" src="img/7/6.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_7_3" id="quiz_7_3_7" value="0">
+						<label class="quiz__label" for="quiz_7_3_7"><div class="quiz__mark">7</div><img class="quiz__answer" src="img/7/7.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_7_3" id="quiz_7_3_8" value="0">
+						<label class="quiz__label" for="quiz_7_3_8"><div class="quiz__mark">8</div><img class="quiz__answer" src="img/7/8.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_7_3" id="quiz_7_3_9" value="0">
+						<label class="quiz__label" for="quiz_7_3_9"><div class="quiz__mark">9</div><img class="quiz__answer" src="img/7/9.png" alt=""></label>
+						
+					</div>
+					<div class="quiz__note">Пожалуйста выберите ответ</div>
+					<div data-step="3" class="quiz__buttons">
+						<div class="quiz__back">Назад</div>
+						<div class="quiz__next">Вперед</div>
+					</div>
+			
+				</div>
+			</div>
+
+			<div id="quiz_block_8" class="quiz__block" style="display: none;">
+				<div class="quiz__step quiz__step--hidden">
+			
+					<!-- <div class="quiz__count">1/3</div> -->
+					<div class="quiz__title">1.	Найди тень.</div>
+					<div class="quiz__picture">
+						<img class="quiz__img" src="img/8/1_main.png" alt="">
+					</div>
+					<div class="quiz__title">Варианты ответов:</div>
+					<div class="quiz__choice">
+						<input class="quiz__radio" type="radio" name="quiz_8_1" id="quiz_8_1_1" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_8_1_1"><img src="img/dig/1.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_8_1" id="quiz_8_1_2" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_8_1_2"><img src="img/dig/2.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_8_1" id="quiz_8_1_3" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_8_1_3"><img src="img/dig/3.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_8_1" id="quiz_8_1_4" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_8_1_4"><img src="img/dig/4.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_8_1" id="quiz_8_1_5" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_8_1_5"><img src="img/dig/5.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_8_1" id="quiz_8_1_6" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_8_1_6"><img src="img/dig/6.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_8_1" id="quiz_8_1_7" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_8_1_7"><img src="img/dig/7.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_8_1" id="quiz_8_1_8" value="1">
+						<label class="quiz__label quiz__label--small" for="quiz_8_1_8"><img src="img/dig/8.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_8_1" id="quiz_8_1_9" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_8_1_9"><img src="img/dig/9.png" alt=""></label>
+			
+					</div>
+					<div class="quiz__note">Пожалуйста выберите ответ</div>
+					<div data-step="1" class="quiz__buttons">
+						<div class="quiz__back">Назад</div>
+						<div class="quiz__next">Вперед</div>
+					</div>
+			
+				</div>
+			
+				<div class="quiz__step quiz__step--hidden">
+			
+					<!-- <div class="quiz__count">2/3</div> -->
+					<div class="quiz__title">2.	Какая пчела прилетит в голубую часть улея?</div>
+					<div class="quiz__picture">
+						<img class="quiz__img" src="img/8/2_main.png" alt="">
+					</div>
+					<div class="quiz__title">Варианты ответов:</div>
+					<div class="quiz__choice">
+						<input class="quiz__radio" type="radio" name="quiz_8_2" id="quiz_8_2_1" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_8_2_1"><img src="img/dig/1.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_8_2" id="quiz_8_2_2" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_8_2_2"><img src="img/dig/2.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_8_2" id="quiz_8_2_3" value="1">
+						<label class="quiz__label quiz__label--small" for="quiz_8_2_3"><img src="img/dig/3.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_8_2" id="quiz_8_2_4" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_8_2_4"><img src="img/dig/4.png" alt=""></label>
+			
+					</div>
+					<div class="quiz__note">Пожалуйста выберите ответ</div>
+					<div data-step="2" class="quiz__buttons">
+						<div class="quiz__back">Назад</div>
+						<div class="quiz__next">Вперед</div>
+					</div>
+			
+				</div>
+			
+				<div class="quiz__step quiz__step--hidden">
+			
+					<!-- <div class="quiz__count">3/3</div> -->
+					<div class="quiz__title">3.	Найди тень.</div>
+					<div class="quiz__picture">
+						<img class="quiz__img" src="img/8/3_main.png" alt="">
+					</div>
+					<div class="quiz__title">Варианты ответов:</div>
+					<div class="quiz__choice">
+						<input class="quiz__radio" type="radio" name="quiz_8_3" id="quiz_8_3_1" value="1">
+						<label class="quiz__label" for="quiz_8_3_1"><div class="quiz__mark">1</div><img class="quiz__answer" src="img/8/1.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_8_3" id="quiz_8_3_2" value="0">
+						<label class="quiz__label" for="quiz_8_3_2"><div class="quiz__mark">2</div><img class="quiz__answer" src="img/8/2.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_8_3" id="quiz_8_3_3" value="0">
+						<label class="quiz__label" for="quiz_8_3_3"><div class="quiz__mark">3</div><img class="quiz__answer" src="img/8/3.png" alt=""></label>
+						
+					</div>
+					<div class="quiz__note">Пожалуйста выберите ответ</div>
+					<div data-step="3" class="quiz__buttons">
+						<div class="quiz__back">Назад</div>
+						<div class="quiz__next">Вперед</div>
+					</div>
+			
+				</div>
+			</div>
+			
+			<div id="quiz_block_9" class="quiz__block" style="display: none;">
+				<div class="quiz__step quiz__step--hidden">
+			
+					<!-- <div class="quiz__count">1/3</div> -->
+					<div class="quiz__title">1.	Найди пирата, который отличается от остальных</div>
+					<div class="quiz__picture">
+						<img class="quiz__img" src="img/9/1_main.png" alt="">
+					</div>
+					<div class="quiz__title">Варианты ответов:</div>
+					<div class="quiz__choice">
+						<input class="quiz__radio" type="radio" name="quiz_9_1" id="quiz_9_1_1" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_9_1_1">Сэм</label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_9_1" id="quiz_9_1_2" value="1">
+						<label class="quiz__label quiz__label--small" for="quiz_9_1_2">Генри</label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_9_1" id="quiz_9_1_3" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_9_1_3">Питер</label>
+			
+					</div>
+					<div class="quiz__note">Пожалуйста выберите ответ</div>
+					<div data-step="1" class="quiz__buttons">
+						<div class="quiz__back">Назад</div>
+						<div class="quiz__next">Вперед</div>
+					</div>
+			
+				</div>
+			
+				<div class="quiz__step quiz__step--hidden">
+			
+					<!-- <div class="quiz__count">2/3</div> -->
+					<div class="quiz__title">2.	Какая деталь НЕ относится к пиратскому флагу?</div>
+					<div class="quiz__picture">
+						<img class="quiz__img" src="img/9/2_main.png" alt="">
+					</div>
+					<div class="quiz__title">Варианты ответов:</div>
+					<div class="quiz__choice">
+						<input class="quiz__radio" type="radio" name="quiz_9_2" id="quiz_9_2_1" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_9_2_1"><img src="img/dig/1.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_9_2" id="quiz_9_2_2" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_9_2_2"><img src="img/dig/2.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_9_2" id="quiz_9_2_3" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_9_2_3"><img src="img/dig/3.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_9_2" id="quiz_9_2_4" value="1">
+						<label class="quiz__label quiz__label--small" for="quiz_9_2_4"><img src="img/dig/4.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_9_2" id="quiz_9_2_5" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_9_2_5"><img src="img/dig/5.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_9_2" id="quiz_9_2_6" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_9_2_6"><img src="img/dig/6.png" alt=""></label>
+			
+					</div>
+					<div class="quiz__note">Пожалуйста выберите ответ</div>
+					<div data-step="2" class="quiz__buttons">
+						<div class="quiz__back">Назад</div>
+						<div class="quiz__next">Вперед</div>
+					</div>
+			
+				</div>
+			
+				<div class="quiz__step quiz__step--hidden">
+			
+					<!-- <div class="quiz__count">3/3</div> -->
+					<div class="quiz__title">3.	Кто спрятался на картинке?</div>
+					<div class="quiz__picture">
+						<img class="quiz__img" src="img/9/3_main.png" alt="">
+					</div>
+					<div class="quiz__title">Варианты ответов:</div>
+					<div class="quiz__choice">
+						<input class="quiz__radio" type="radio" name="quiz_9_3" id="quiz_9_3_1" value="0">
+						<label class="quiz__label" for="quiz_9_3_1"><div class="quiz__mark">1</div>Паук</label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_9_3" id="quiz_9_3_2" value="1">
+						<label class="quiz__label" for="quiz_9_3_2"><div class="quiz__mark">2</div>Змея</label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_9_3" id="quiz_9_3_3" value="0">
+						<label class="quiz__label" for="quiz_9_3_3"><div class="quiz__mark">3</div>Птица</label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_9_3" id="quiz_9_3_4" value="0">
+						<label class="quiz__label" for="quiz_9_3_4"><div class="quiz__mark">3</div>Рыба</label>
+						
+					</div>
+					<div class="quiz__note">Пожалуйста выберите ответ</div>
+					<div data-step="3" class="quiz__buttons">
+						<div class="quiz__back">Назад</div>
+						<div class="quiz__next">Вперед</div>
+					</div>
+			
+				</div>
+			</div>
+
+			<div id="quiz_block_10" class="quiz__block" style="display: none;">
+				<div class="quiz__step quiz__step--hidden">
+			
+					<!-- <div class="quiz__count">1/3</div> -->
+					<div class="quiz__title">1.	Сколько отличий на картинках?</div>
+					<div class="quiz__picture">
+						<img class="quiz__img" src="img/10/1_main.png" alt="">
+					</div>
+					<div class="quiz__title">Варианты ответов:</div>
+					<div class="quiz__choice">
+						<input class="quiz__radio" type="radio" name="quiz_10_1" id="quiz_10_1_1" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_10_1_1">8</label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_10_1" id="quiz_10_1_2" value="1">
+						<label class="quiz__label quiz__label--small" for="quiz_10_1_2">10</label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_10_1" id="quiz_10_1_3" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_10_1_3">12</label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_10_1" id="quiz_10_1_4" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_10_1_4">15</label>
+			
+					</div>
+					<div class="quiz__note">Пожалуйста выберите ответ</div>
+					<div data-step="1" class="quiz__buttons">
+						<div class="quiz__back">Назад</div>
+						<div class="quiz__next">Вперед</div>
+					</div>
+			
+				</div>
+			
+				<div class="quiz__step quiz__step--hidden">
+			
+					<!-- <div class="quiz__count">2/3</div> -->
+					<div class="quiz__title">2.	Какая буква пропущена в тексте?</div>
+					<div class="quiz__picture">
+						<img class="quiz__img" src="img/10/2_main.png" alt="">
+					</div>
+					<div class="quiz__title">Варианты ответов:</div>
+					<div class="quiz__choice">
+						<input class="quiz__radio" type="radio" name="quiz_10_2" id="quiz_10_2_1" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_10_2_1">«н»</label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_10_2" id="quiz_10_2_2" value="1">
+						<label class="quiz__label quiz__label--small" for="quiz_10_2_2">«з»</label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_10_2" id="quiz_10_2_3" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_10_2_3">«с»</label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_10_2" id="quiz_10_2_4" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_10_2_4">«ь»</label>
+			
+					</div>
+					<div class="quiz__note">Пожалуйста выберите ответ</div>
+					<div data-step="2" class="quiz__buttons">
+						<div class="quiz__back">Назад</div>
+						<div class="quiz__next">Вперед</div>
+					</div>
+			
+				</div>
+			
+				<div class="quiz__step quiz__step--hidden">
+			
+					<!-- <div class="quiz__count">3/3</div> -->
+					<div class="quiz__title">3.	Какая буква НЕ пряталась на рисунке?</div>
+					<div class="quiz__picture">
+						<img class="quiz__img" src="img/10/3_main.png" alt="">
+					</div>
+					<div class="quiz__title">Варианты ответов:</div>
+					<div class="quiz__choice">
+						<input class="quiz__radio" type="radio" name="quiz_10_3" id="quiz_10_3_1" value="0">
+						<label class="quiz__label" for="quiz_10_3_1"><div class="quiz__mark">1</div>«д»</label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_10_3" id="quiz_10_3_2" value="1">
+						<label class="quiz__label" for="quiz_10_3_2"><div class="quiz__mark">2</div>«н»</label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_10_3" id="quiz_10_3_3" value="0">
+						<label class="quiz__label" for="quiz_10_3_3"><div class="quiz__mark">3</div>«л»</label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_10_3" id="quiz_10_3_4" value="0">
+						<label class="quiz__label" for="quiz_10_3_4"><div class="quiz__mark">3</div>«а»</label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_10_3" id="quiz_10_3_5" value="0">
+						<label class="quiz__label" for="quiz_10_3_5"><div class="quiz__mark">3</div>«к»</label>
+						
+					</div>
+					<div class="quiz__note">Пожалуйста выберите ответ</div>
+					<div data-step="3" class="quiz__buttons">
+						<div class="quiz__back">Назад</div>
+						<div class="quiz__next">Вперед</div>
+					</div>
+			
+				</div>
+			</div>
+			
+			<div id="quiz_block_11" class="quiz__block" style="display: none;">
+				<div class="quiz__step quiz__step--hidden">
+			
+					<!-- <div class="quiz__count">1/3</div> -->
+					<div class="quiz__title">1.	Сколько дельфинов на рисунке?</div>
+					<div class="quiz__picture">
+						<img class="quiz__img" src="img/11/1_main.png" alt="">
+					</div>
+					<div class="quiz__title">Варианты ответов:</div>
+					<div class="quiz__choice">
+						<input class="quiz__radio" type="radio" name="quiz_11_1" id="quiz_11_1_1" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_11_1_1">9</label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_11_1" id="quiz_11_1_2" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_11_1_2">12</label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_11_1" id="quiz_11_1_3" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_11_1_3">17</label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_11_1" id="quiz_11_1_4" value="1">
+						<label class="quiz__label quiz__label--small" for="quiz_11_1_4">19</label>
+			
+					</div>
+					<div class="quiz__note">Пожалуйста выберите ответ</div>
+					<div data-step="1" class="quiz__buttons">
+						<div class="quiz__back">Назад</div>
+						<div class="quiz__next">Вперед</div>
+					</div>
+			
+				</div>
+			
+				<div class="quiz__step quiz__step--hidden">
+			
+					<!-- <div class="quiz__count">2/3</div> -->
+					<div class="quiz__title">2.	Сколько насекомых спряталось в строчках?</div>
+					<div class="quiz__picture">
+						<img class="quiz__img" src="img/11/2_main.png" alt="">
+					</div>
+					<div class="quiz__title">Варианты ответов:</div>
+					<div class="quiz__choice">
+						<input class="quiz__radio" type="radio" name="quiz_11_2" id="quiz_11_2_1" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_11_2_1">4</label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_11_2" id="quiz_11_2_2" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_11_2_2">6</label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_11_2" id="quiz_11_2_3" value="1">
+						<label class="quiz__label quiz__label--small" for="quiz_11_2_3">8</label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_11_2" id="quiz_11_2_4" value="0">
+						<label class="quiz__label quiz__label--small" for="quiz_11_2_4">10</label>
+			
+					</div>
+					<div class="quiz__note">Пожалуйста выберите ответ</div>
+					<div data-step="2" class="quiz__buttons">
+						<div class="quiz__back">Назад</div>
+						<div class="quiz__next">Вперед</div>
+					</div>
+			
+				</div>
+			
+				<div class="quiz__step quiz__step--hidden">
+			
+					<!-- <div class="quiz__count">3/3</div> -->
+					<div class="quiz__title">3.	Выбери нужную деталь.</div>
+					<div class="quiz__picture">
+						<img class="quiz__img" src="img/11/3_main.png" alt="">
+					</div>
+					<div class="quiz__title">Варианты ответов:</div>
+					<div class="quiz__choice">
+						<input class="quiz__radio" type="radio" name="quiz_11_3" id="quiz_11_3_1" value="0">
+						<label class="quiz__label" for="quiz_11_3_1"><div class="quiz__mark">1</div><img class="quiz__answer" src="img/11/1.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_11_3" id="quiz_11_3_2" value="0">
+						<label class="quiz__label" for="quiz_11_3_2"><div class="quiz__mark">2</div><img class="quiz__answer" src="img/11/2.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_11_3" id="quiz_11_3_3" value="1">
+						<label class="quiz__label" for="quiz_11_3_3"><div class="quiz__mark">3</div><img class="quiz__answer" src="img/11/3.png" alt=""></label>
+			
+						<input class="quiz__radio" type="radio" name="quiz_11_3" id="quiz_11_3_4" value="0">
+						<label class="quiz__label" for="quiz_11_3_4"><div class="quiz__mark">4</div><img class="quiz__answer" src="img/11/4.png" alt=""></label>
+						
+					</div>
+					<div class="quiz__note">Пожалуйста выберите ответ</div>
+					<div data-step="3" class="quiz__buttons">
+						<div class="quiz__back">Назад</div>
+						<div class="quiz__next">Вперед</div>
+					</div>
+			
+				</div>
+			</div>
+
+			<div class="quiz__step quiz__step--result quiz__step--hidden">
+
+				<div class="quiz__title quiz__title--age">Правильных ответов:</div>
+				<div class="quiz__itog"></div>
+
+				<div class="quiz__repeat">Пройти заново</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,288 @@
+
+
+body
+    position: relative
+    background: #eee
+    padding: 0
+    margin: 0
+
+.quiz
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: "Comfortaa", sans-serif
+    position: relative
+    width: 100%
+    margin: 0 auto
+    @media ( max-width: 768px )
+        background: #fff
+
+    *
+        padding: 0
+        margin: 0
+        box-sizing: border-box
+        font-family: "Comfortaa", sans-serif
+        position: relative
+    
+    select
+        -webkit-appearance: none
+        -moz-appearance: none
+        text-indent: 1px
+        text-overflow: ''
+
+    &__body
+        width: 100%
+        //height: 800px
+        max-width: 500px
+        padding: 40px 30px 40px 30px
+        background: #fff
+        margin: 50px auto
+        border-radius: 15px
+        box-shadow: 0 10px 20px 1px rgba(0,0,0,0.1)
+        @media ( max-width: 768px )
+            box-shadow: none
+            margin: 0px auto 0px auto
+            padding: 40px 30px 50px 30px
+        @media ( max-width: 500px )
+            padding: 40px 5px 50px 5px
+
+    &__step
+        min-height: 500px
+        &--age
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+        &--result
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+        &--hidden
+            display: none
+        
+    &__age
+        width: 100%
+        max-width: 130px
+        height: 50px
+        margin: 0px auto
+        display: flex
+        justify-content: center
+        border: 3px solid #5d5f94
+        border-radius: 10px
+        &::before
+            content: "▼"
+            display: block
+            position: absolute
+            top: 13px
+            right: 8px
+            color: #aaa
+
+
+    &__select
+        width: 90%
+        height: 100%
+        font-size: 24px
+        display: block
+        text-align: center
+        border: none
+        font-weight: 700
+        outline: none
+        background: transparent
+
+    &__confirm,
+    &__repeat
+        position: absolute
+        bottom: 0px
+        margin: 30px auto 10px auto
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 260px
+        height: 50px
+        background: #30b959
+        color: #fff
+        font-size: 18px
+        border-radius: 10px
+        user-select: none
+        font-weight: 700
+        text-transform: uppercase
+        transition-duration: 0.2s
+        cursor: pointer
+        &:hover
+            background: #0e9f3a
+            color: #fff
+            letter-spacing: 3px
+        &:active
+            opacity: 0.2
+
+    &__itog
+        font-size: 46px
+        font-weight: 700
+        margin: 20px 0 40px 0
+
+    &__count
+        text-align: center
+        font-weight: 400
+        font-size: 18px
+        margin: 0 0 30px 0
+        color: #aaa
+        letter-spacing: 4px
+
+    &__title
+        font-size: 20px
+        font-weight: 700
+        text-align: center
+        margin: 0 0 20px 0
+        color: #5d5f94
+        &--age
+            font-size: 32px
+            text-transform: uppercase
+            line-height: 1.4
+            padding: 0 20px
+            margin: 0 0 15px 0
+
+    &__picture
+        background: #fff
+        display: flex
+        justify-content: center
+        margin: 0 0 30px
+
+    &__img
+        position: relative
+        display: block
+        border-radius: 10px
+        width: 100%
+        max-width: 420px
+        // min-width: 300px
+
+    &__radio
+        display: none
+        &:checked + .quiz__label
+            border: 2px solid #367dff
+            box-shadow: 0 0 0px 2px #367dff
+        &:checked + .quiz__label > .quiz__mark
+            background: #367dff
+            color: #fff
+
+    &__choice
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+
+    &__label
+        width: 200px
+        height: 180px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 10px
+        font-size: 22px
+        font-weight: 700
+        border: 2px solid #ddd
+        border-radius: 10px
+        transition-duration: 0.2s
+        user-select: none
+        cursor: pointer
+        //overflow: hidden
+        @media ( max-width: 450px )
+            width: 46%
+            margin: 10px 2%
+        @media ( max-width: 360px )
+            height: 150px
+        @media ( max-width: 340px )
+            margin: 8px 5px
+        &--small
+            width: 31%
+            margin: 10px 1%
+            height: 140px
+            @media ( max-width: 370px )
+                height: 120px
+        img
+            position: relative
+            display: block
+            // @media ( max-width: 450px )
+            //     height: 80%
+
+    &__answer
+        // opacity: 0
+        // transform: translateX(999px)
+        // transition-duration: 0.3s
+        // &--show
+        //     opacity: 1
+        //     transform: translateX(0)
+        
+    &__mark
+        position: absolute
+        transition-duration: 0.2s
+        z-index: 99
+        left: -2px
+        top: -2px
+        border-radius: 10px 4px 4px 4px
+        background: #ddd
+        color: #000
+        font-weight: 700
+        width: 24px
+        height: 24px
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 16px
+
+    &__note
+        display: none
+        color: #ff1919
+        font-weight: 700
+        font-weight: 18
+        text-align: center
+        margin: 10px 0
+        &--show
+            display: block
+
+    &__buttons
+        width: 100%
+        margin: 30px 0 0 0
+        display: flex
+        justify-content: center
+
+    &__back,
+    &__next
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 200px
+        height: 44px
+        margin: 0 10px
+        background: #eee
+        color: #ccc
+        border-radius: 10px
+        user-select: none
+        transition-duration: 0.2s
+        cursor: pointer
+        @media ( max-width: 450px )
+            width: 46%
+            margin: 0 2%
+        @media ( max-width: 340px )
+            margin: 0 5px
+        
+
+    &__back--active,
+    &__next--active
+        background: #d2eaf7
+        color: #000
+        &:hover
+            background: #7fa1ff
+            color: #fff
+            letter-spacing: 2px
+        &:active
+            opacity: 0.2
+
+    &__next--finish
+        background: #30b959
+        color: #fff
+        &:hover
+            background: #0e9f3a
+            color: #fff
+            letter-spacing: 2px
+        &:active
+            opacity: 0.2
