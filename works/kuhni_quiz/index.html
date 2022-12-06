@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css?v1">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js?v1"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="quiz">
+
+		<div class="quiz__body">
+
+			<div class="quiz__left">
+
+				<div class="quiz__progress">
+					<p>Расчет пройден на 20%</p>
+					<div style="width: 20%" class="quiz__bar"></div>
+				</div>
+
+				<div id="quiz_step_1" data-step="1" class="quiz__step quiz__step--show">
+
+					<div>
+						<div class="quiz__header">1. Выберите форму вашей кухни</div>
+
+						<div class="quiz__choice quiz__choice--row2">
+	
+							<label for="quiz_1_1" class="quiz__label quiz__label--pad">
+								<input type="radio" name="quiz_1" id="quiz_1_1" class="quiz__radio" value="Прямая">
+								<div class="quiz__picture">
+									<img src="img/plan1.png" alt="">
+								</div>
+								<div class="quiz__dot"></div>
+								<div class="quiz__title">Прямая</div>
+							</label>
+	
+							<label for="quiz_1_2" class="quiz__label quiz__label--pad">
+								<input type="radio" name="quiz_1" id="quiz_1_2" class="quiz__radio" value="Угловая">
+								<div class="quiz__picture">
+									<img src="img/plan2.png" alt="">
+								</div>
+								<div class="quiz__dot"></div>
+								<div class="quiz__title">Угловая</div>
+							</label>
+	
+							<label for="quiz_1_3" class="quiz__label quiz__label--pad">
+								<input type="radio" name="quiz_1" id="quiz_1_3" class="quiz__radio" value="П-образная">
+								<div class="quiz__picture">
+									<img src="img/plan3.png" alt="">
+								</div>
+								<div class="quiz__dot"></div>
+								<div class="quiz__title">П-образная</div>
+							</label>
+	
+							<label for="quiz_1_4" class="quiz__label">
+								<input type="radio" name="quiz_1" id="quiz_1_4" class="quiz__radio" value="С островом">
+								<div class="quiz__picture">
+									<img src="img/plan4.png" alt="">
+								</div>
+								<div class="quiz__dot"></div>
+								<div class="quiz__title">С островом</div>
+							</label>
+	
+							<label for="quiz_1_5" class="quiz__label quiz__label--100p">
+								<input type="radio" name="quiz_1" id="quiz_1_5" class="quiz__radio" value="Другая">
+								<div class="quiz__dot"></div>
+								<div class="quiz__title">Другая</div>
+							</label>
+	
+						</div>
+					</div>
+
+					<div class="quiz__buttons quiz__buttons--1">
+						<div class="quiz__note">Выберите ответ</div>
+						<button style="display: none;" class="quiz__back">Назад</button>
+						<button class="quiz__next quiz__next--disabled">Далее</button>
+					</div>
+
+				</div>
+				<!-- /.quiz__step -->
+
+				<div id="quiz_step_2" data-step="2" class="quiz__step">
+					
+					<div>
+						<div class="quiz__header">2. Если знаете, опишите размеры</div>
+
+						<div class="quiz__flex quiz__flex--jcsb quiz__flex--size">
+	
+							<img style="display: none;" src="img/2_1.png" alt="" class="quiz__image quiz__image--1">
+							<img style="display: none;" src="img/2_2.png" alt="" class="quiz__image quiz__image--2">
+							<img style="display: none;" src="img/2_3.png" alt="" class="quiz__image quiz__image--3">
+							<img style="display: none;" src="img/2_4.png" alt="" class="quiz__image quiz__image--4">
+	
+							<div class="quiz__choice quiz__choice--size">
+	
+								<label for="quiz_2_1" class="quiz__label quiz__label--size">
+	
+									<div class="quiz__line">
+										<input type="radio" name="quiz_2" id="quiz_2_1" class="quiz__radio" value="Размеры">
+										<div class="quiz__dot quiz__dot--size"></div>
+										<div class="quiz__title quiz__title--size">Сторона А:</div>
+										<input id="quiz_size_A" type="text" class="quiz__input" placeholder="Введите в см">
+									</div>
+	
+									<div class="quiz__line quiz__line--B">
+										<div class="quiz__title quiz__title--size">Сторона B:</div>
+										<input id="quiz_size_B" type="text" class="quiz__input" placeholder="Введите в см">
+									</div>
+	
+									<div class="quiz__line quiz__line--C">
+										<div class="quiz__title quiz__title--size">Сторона C:</div>
+										<input id="quiz_size_C" type="text" class="quiz__input" placeholder="Введите в см">
+									</div>
+								</label>
+	
+								<label for="quiz_2_2" class="quiz__label quiz__label--size">
+									<div class="quiz__line">
+										<input type="radio" name="quiz_2" id="quiz_2_2" class="quiz__radio" value="Не знаю размеров">
+										<div class="quiz__dot quiz__dot--size"></div>
+										<div class="quiz__title quiz__title--size">Не знаю размеров</div>
+									</div>
+								</label>
+		
+							</div>
+	
+						</div>
+					</div>
+
+					<div class="quiz__buttons quiz__buttons--2">
+						<div class="quiz__note">Выберите ответ</div>
+						<button class="quiz__back">Назад</button>
+						<button class="quiz__next quiz__next--disabled">Далее</button>
+					</div>
+
+				</div>
+				<!-- /.quiz__step -->
+
+				<div id="quiz_step_3" data-step="3" class="quiz__step">
+
+					<div class="quiz__header">3. Выберите, что планируется из встроенной техники</div>
+
+					<div class="quiz__choice quiz__choice--row2">
+
+						<label for="quiz_3_1" class="quiz__label">
+							<input type="checkbox" name="quiz_3" id="quiz_3_1" class="quiz__radio" value="Встроенная духовка внизу">
+							<div class="quiz__picture">
+								<img src="img/3_1.png" alt="">
+							</div>
+							<div class="quiz__flex">
+								<div class="quiz__dot quiz__dot--check"></div>
+								<div class="quiz__title">Встроенная духовка внизу</div>
+							</div>
+						</label>
+
+						<label for="quiz_3_2" class="quiz__label">
+							<input type="checkbox" name="quiz_3" id="quiz_3_2" class="quiz__radio" value="Встроенная духовка в пенале">
+							<div class="quiz__picture">
+								<img src="img/3_2.png" alt="">
+							</div>
+							<div class="quiz__flex">
+								<div class="quiz__dot quiz__dot--check"></div>
+								<div class="quiz__title">Встроенная духовка в пенале</div>
+							</div>
+						</label>
+
+						<label for="quiz_3_3" class="quiz__label">
+							<input type="checkbox" name="quiz_3" id="quiz_3_3" class="quiz__radio" value="Встроенный холодильник">
+							<div class="quiz__picture">
+								<img src="img/3_3.png" alt="">
+							</div>
+							<div class="quiz__flex">
+								<div class="quiz__dot quiz__dot--check"></div>
+								<div class="quiz__title">Встроенный холодильник</div>
+							</div>
+						</label>
+
+						<label for="quiz_3_4" class="quiz__label">
+							<input type="checkbox" name="quiz_3" id="quiz_3_4" class="quiz__radio" value="Встроенная посудомойка">
+							<div class="quiz__picture">
+								<img src="img/3_4.png" alt="">
+							</div>
+							<div class="quiz__flex">
+								<div class="quiz__dot quiz__dot--check"></div>
+								<div class="quiz__title">Встроенная посудомойка</div>
+							</div>
+						</label>
+
+						<label for="quiz_3_5" class="quiz__label">
+							<input type="checkbox" name="quiz_3" id="quiz_3_5" class="quiz__radio" value="Встроенная вытяжка">
+							<div class="quiz__picture">
+								<img src="img/3_5.png" alt="">
+							</div>
+							<div class="quiz__flex">
+								<div class="quiz__dot quiz__dot--check"></div>
+								<div class="quiz__title">Встроенная вытяжка</div>
+							</div>
+						</label>
+
+						<label for="quiz_3_6" class="quiz__label quiz__label--none">
+							<input type="checkbox" name="quiz_3" id="quiz_3_6" class="quiz__radio" value="Ничего">
+							<div class="quiz__flex">
+								<div class="quiz__dot"></div>
+								<div class="quiz__title">Ничего из перечисленного</div>
+							</div>
+						</label>
+
+						<label for="quiz_3_6" class="quiz__label quiz__label--none"></label>
+
+						<label for="quiz_3_6" class="quiz__label quiz__label--none"></label>
+
+					</div>
+
+					<div class="quiz__buttons quiz__buttons--3">
+						<div class="quiz__note">Выберите ответ</div>
+						<button style="display: none;" class="quiz__back">Назад</button>
+						<button class="quiz__next quiz__next--disabled">Далее</button>
+					</div>
+
+				</div>
+				<!-- /.quiz__step -->
+
+				<div id="quiz_step_4" data-step="4" class="quiz__step">
+
+					<div>
+						<div class="quiz__header">4. Выберете стиль, который Вам больше нравится</div>
+
+						<div class="quiz__descr">Цвета выберем позже</div>
+	
+						<div class="quiz__choice quiz__choice--row2">
+	
+							<label for="quiz_4_1" class="quiz__label quiz__label--pad">
+								<input type="radio" name="quiz_4" id="quiz_4_1" class="quiz__radio" value="Лофт">
+								<div class="quiz__picture">
+									<img src="img/4_1.png" alt="">
+								</div>
+								<div class="quiz__dot"></div>
+								<div class="quiz__title">Лофт</div>
+							</label>
+	
+							<label for="quiz_4_2" class="quiz__label quiz__label--pad">
+								<input type="radio" name="quiz_4" id="quiz_4_2" class="quiz__radio" value="Современный">
+								<div class="quiz__picture">
+									<img src="img/4_2.png" alt="">
+								</div>
+								<div class="quiz__dot"></div>
+								<div class="quiz__title">Современный</div>
+							</label>
+	
+							<label for="quiz_4_3" class="quiz__label">
+								<input type="radio" name="quiz_4" id="quiz_4_3" class="quiz__radio" value="Неоклассика">
+								<div class="quiz__picture">
+									<img src="img/4_3.png" alt="">
+								</div>
+								<div class="quiz__dot"></div>
+								<div class="quiz__title">Неоклассика</div>
+							</label>
+	
+						</div>
+					</div>
+
+					<div class="quiz__buttons quiz__buttons--4">
+						<div class="quiz__note">Выберите ответ</div>
+						<button style="display: none;" class="quiz__back">Назад</button>
+						<button class="quiz__next quiz__next--disabled">Далее</button>
+					</div>
+
+				</div>
+				<!-- /.quiz__step -->
+					
+
+				<div id="quiz_step_5" data-step="5" class="quiz__step">
+
+					<div>
+						<div class="quiz__header">5. Выберите комфортный бюджет, чтобы мы смогли предложить лучший вариант</div>
+
+						<div class="quiz__descr">Без учета техники</div>
+	
+						<div class="quiz__choice quiz__choice--row2">
+	
+							<label for="quiz_5_1" class="quiz__label quiz__label--summ">
+								<input type="radio" name="quiz_5" id="quiz_5_1" class="quiz__radio" value="до 150 000 рублей">
+								<div class="quiz__flex">
+									<div class="quiz__dot"></div>
+									<div class="quiz__title">до 150 000 рублей</div>
+								</div>
+							</label>
+	
+							<label for="quiz_5_2" class="quiz__label quiz__label--summ">
+								<input type="radio" name="quiz_5" id="quiz_5_2" class="quiz__radio" value="до 300 000 рублей">
+								<div class="quiz__flex">
+									<div class="quiz__dot"></div>
+									<div class="quiz__title">до 300 000 рублей</div>
+								</div>
+							</label>
+	
+							<label for="quiz_5_3" class="quiz__label quiz__label--summ">
+								<input type="radio" name="quiz_5" id="quiz_5_3" class="quiz__radio" value="до 500 000 рублей">
+								<div class="quiz__flex">
+									<div class="quiz__dot"></div>
+									<div class="quiz__title">до 500 000 рублей</div>
+								</div>
+							</label>
+	
+						</div>
+					</div>
+
+					<div class="quiz__buttons quiz__buttons--5">
+						<div class="quiz__note">Выберите ответ</div>
+						<button style="display: none;" class="quiz__back">Назад</button>
+						<button class="quiz__complete quiz__next--disabled">Далее</button>
+					</div>
+
+				</div>
+				<!-- /.quiz__step -->
+
+				<div id="quiz_step_final" data-step="final" class="quiz__step quiz__step--final">
+
+					<div class="quiz__header">Готово. Ваши ответы получены и мы уже приступили к расчету!</div>
+
+					<div class="quiz__descr">Укажите, куда вам удобнее получить результат?</div>
+
+					<div class="quiz__choice quiz__choice--row3">
+
+						<input type="radio" name="quiz_type" id="quiz_type_1" class="quiz__type">
+						<label class="quiz__connect" for="quiz_type_1">
+							<img class="quiz__frontimg" src="img/whatsapp_1.png" alt="">
+							<img class="quiz__backimg" src="img/whatsapp_2.png" alt="">
+						</label>
+
+						<input type="radio" name="quiz_type" id="quiz_type_2" class="quiz__type">
+						<label class="quiz__connect" for="quiz_type_2">
+							<img class="quiz__frontimg" src="img/telegram_1.png" alt="">
+							<img class="quiz__backimg" src="img/telegram_2.png" alt="">
+						</label>
+
+						<input type="radio" name="quiz_type" id="quiz_type_3" class="quiz__type">
+						<label class="quiz__connect" for="quiz_type_3">
+							<img class="quiz__frontimg" src="img/call_1.png" alt="">
+							<img class="quiz__backimg" src="img/call_2.png" alt="">
+						</label>
+
+					</div>
+
+					<div class="quiz__phone">
+						<input type="text" class="" placeholder="Введите Ваш телефон">
+					</div>
+					
+					<div class="quiz__buttons quiz__buttons--final">
+						<button class="quiz__getresult">Получить результат</button>
+						<div class="quiz__frame">
+							<button class="quiz__return">Назад</button>
+							<div style="margin: 10px 0 0 0" class="quiz__text quiz__text--agreement">Нажимая на кнопку, вы соглашаетесь с условиями политики конфиденциальности</div>
+						</div>
+					</div>
+
+					<img src="img/iphone.png" alt="" class="quiz__iphone">
+
+				</div>
+				<!-- /.quiz__step -->
+
+
+			</div>
+			<div class="quiz__right">
+				
+				<div class="quiz__person">
+					<img src="img/person.png" alt="">
+				</div>
+
+				<div class="quiz__name">
+					<div class="quiz__text quiz__text--name">Елизавета</div>
+					<div class="quiz__text">Дизайнер-конструктор</div>
+				</div>
+
+				<div class="quiz__bottom">
+
+					<div class="quiz__text quiz__text--gift">Вы получите:</div>
+
+					<div class="quiz__gift">
+
+						<div class="quiz__flex">
+							<img src="img/kitchen.png" alt="" class="quiz__kitchen">
+							<div>
+								<div class="quiz__text">Расчет стоимости кухни</div>
+								<div class="quiz__text quiz__text--blue">+ дизайн-проект в&nbsp;подарок</div>
+							</div>
+							<img src="img/gift.png" alt="" class="quiz__icon">
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+</body>
+</html>
