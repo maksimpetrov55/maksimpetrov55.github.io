@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Mockup</title>
+
+	<link rel="stylesheet" href="css/main.css?v1">
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/scripts.js?v1"></script>	
+
+</head>
+<body>
+
+
+
+	<div class="calc">
+		<div class="calc__wrap">
+			<div class="calc__box">
+				<div class="calc__title">Длина строения (м)</div>
+				<div class="calc__flex">
+					<select name="" id="calc_select_1" class="calc__select">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+					</select>
+				</div>
+			</div>
+	
+			<div class="calc__box">
+				<div class="calc__title">Ширина строения (м)</div>
+				<div class="calc__flex">
+					<select name="" id="calc_select_2" class="calc__select">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+					</select>
+				</div>
+			</div>
+	
+			<div class="calc__box">
+				<div class="calc__title">Высота строения (м)</div>
+				<div class="calc__flex">
+					<select name="" id="calc_select_3" class="calc__select">
+						<option value="1.0">1</option>
+						<option value="1.5">1,5</option>
+						<option value="2.0">2</option>
+						<option value="2.5">2,5</option>
+						<option value="3.0">3</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="calc__box">
+				<div class="calc__title">Тип строения</div>
+				<div class="calc__flex">
+					<select name="" id="calc_select_4" class="calc__select">
+						<option value="1">Дом</option>
+						<option value="2">Баня</option>
+						<option value="3">Беседка</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="calc__box calc__box--long">
+				<div class="calc__title">Тип грунта</div>
+				<div class="calc__flex">
+					<select name="" id="calc_select_5" class="calc__select">
+						<option value="1">Пылеватые породы</option>
+						<option value="2">Рыхлая почва с большим содержанием песка и глины</option>
+						<option value="3">Песок мелкой фракции, гравий с глинистыми включениями</option>
+						<option value="4">Галька с некоторым содержанием глины</option>
+						<option value="5">Песок средней фракции</option>
+						<option value="6">Глина, песок крупной фракции</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="calc__box calc__box--long">
+				<div class="calc__title">Материал строения</div>
+				<div class="calc__flex">
+					<select name="" id="calc_select_6" class="calc__select">
+						<option value="1">Каркасные стены с утеплителем</option>
+						<option value="2">Стены из бревен и бруса</option>
+					</select>
+				</div>
+			</div>
+
+			
+
+			<div class="calc__bottom">
+
+				<div class="calc__result">
+
+					<div class="calc__h2">Расчет</div>
+				
+					<div class="calc__line calc__line--border">
+						<div class="calc__text">Площадь стен</div>
+						<div class="calc__separate"></div>
+						<div id="calc_wall_square" class="calc__value"></div>
+					</div>
+					<div class="calc__line">
+						<div class="calc__text">Масса стен</div>
+						<div class="calc__separate"></div>
+						<div id="calc_wall_mass" class="calc__value"></div>
+					</div>
+					<div class="calc__line">
+						<div class="calc__text">Масса дополнительных элементов</div>
+						<div class="calc__separate"></div>
+						<div id="calc_elem_mass" class="calc__value"></div>
+					</div>
+					<div class="calc__line">
+						<div class="calc__text">Общая масса</div>
+						<div class="calc__separate"></div>
+						<div id="calc_full_mass" class="calc__value"></div>
+					</div>
+					<div class="calc__line calc__line--long">
+						<div class="calc__text calc__text--long">Максимальная нагрузка на&nbsp;основную опорную точку загубленной в&nbsp;грунт&nbsp;сваи</div>
+						<div class="calc__separate"></div>
+						<div id="calc_pressure" class="calc__value"></div>
+					</div>
+					<div class="calc__line">
+						<div class="calc__text">Количество свай</div>
+						<div class="calc__separate"></div>
+						<div id="calc_col_amount" class="calc__value"></div>
+					</div>
+					<div class="calc__line">
+						<div class="calc__text">Диаметр свай</div>
+						<div class="calc__separate"></div>
+						<div id="calc_col_diameter" class="calc__value"></div>
+					</div>
+					<div class="calc__line">
+						<div class="calc__text">Длина свай</div>
+						<div class="calc__separate"></div>
+						<div id="calc_col_length" class="calc__value"></div>
+					</div>
+
+					<form action="" class="calc__order">
+						<div class="calc__note">Заполните форму и мы свяжемся с вами в&nbsp;ближайшее&nbsp;время!</div>
+
+						<input name="calc_name" type="text" class="calc__input" placeholder="Ваше Имя">
+						<input name="calc_phone" type="text" class="calc__input" placeholder="Ваш Телефон">
+						<input name="" type="submit" class="calc__input calc__input--submit" value="Оставить заявку">
+
+						<textarea name="calc_data" id="calc_data" style="display: none; width: 100%; height: 100px;"></textarea>
+
+					</form>
+
+				</div>
+
+			</div>
+
+			<!-- <div class="calc__h2">Оставить заявку</div> -->
+
+
+
+		</div>
+
+	</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,261 @@
+body {
+  position: relative;
+  background: #3a3a43;
+}
+
+.calc {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  position: relative;
+  width: 100%;
+  max-width: 1240px;
+  padding: 40px 20px;
+  background: #fff;
+  margin: 40px auto;
+}
+.calc * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+  position: relative;
+}
+.calc__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.calc__box {
+  width: 31%;
+  margin: 0 0 30px 0;
+}
+@media (max-width: 991px) {
+  .calc__box {
+    width: 49%;
+  }
+}
+@media (max-width: 600px) {
+  .calc__box {
+    margin: 0 0 20px 0;
+  }
+}
+@media (max-width: 400px) {
+  .calc__box {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .calc__box--long {
+    width: 100%;
+  }
+}
+.calc__title {
+  flex-shrink: 0;
+}
+.calc__flex {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 0 0;
+  align-items: center;
+}
+.calc__select {
+  width: 100%;
+  height: 44px;
+  border: 2px solid #00a02b;
+  border-radius: 4px;
+  font-size: 18px;
+  padding: 0 5px;
+}
+@media (max-width: 600px) {
+  .calc__select {
+    font-size: 16px;
+  }
+}
+.calc__sign {
+  width: 25px;
+  flex-shrink: 0;
+  padding: 0 0 0 10px;
+  font-size: 18px;
+}
+.calc__h2 {
+  font-size: 22px;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  margin: 40px 0 40px 0;
+  text-transform: uppercase;
+}
+@media (max-width: 400px) {
+  .calc__h2 {
+    margin: 25px 0;
+  }
+}
+.calc__bottom {
+  margin: 20px 0 0 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.calc__result {
+  width: 80%;
+  background: #fff;
+  border: 1px solid #ddd;
+  margin: 20px auto;
+  border-radius: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  box-shadow: 0 8px 15px 1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+@media (max-width: 1100px) {
+  .calc__result {
+    width: 100%;
+  }
+}
+.calc__line {
+  width: 100%;
+  padding: 0 7%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 991px) {
+  .calc__line {
+    padding: 0 3%;
+  }
+}
+@media (max-width: 400px) {
+  .calc__line {
+    display: block;
+    text-align: center;
+    border-top: 1px dotted #aaa;
+    margin: 0 auto;
+    padding: 10px 5%;
+  }
+}
+@media (max-width: 768px) {
+  .calc__line--long {
+    align-items: flex-end;
+  }
+}
+@media (max-width: 400px) {
+  .calc__line--border {
+    border: none;
+  }
+}
+.calc__text {
+  flex-shrink: 0;
+}
+@media (max-width: 500px) {
+  .calc__text {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .calc__text--long {
+    flex-shrink: 1;
+    min-width: 72%;
+  }
+}
+@media (max-width: 480px) {
+  .calc__text--long {
+    min-width: 61%;
+  }
+}
+.calc__value {
+  flex-shrink: 0;
+}
+@media (max-width: 500px) {
+  .calc__value {
+    font-size: 15px;
+  }
+}
+@media (max-width: 400px) {
+  .calc__value {
+    font-weight: 600;
+    margin: 5px 0 0 0;
+  }
+}
+.calc__separate {
+  width: 100%;
+  margin: 0 8px;
+  border-bottom: 2px dotted #aaa;
+}
+@media (max-width: 400px) {
+  .calc__separate {
+    display: none;
+  }
+}
+.calc__order {
+  background: #eee;
+  width: 100%;
+  margin: 50px 0 0 0;
+  padding: 30px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 400px) {
+  .calc__order {
+    margin: 30px 0 0 0;
+    padding: 30px 4%;
+  }
+}
+.calc__input {
+  background: #fff;
+  padding: 0 10px;
+  font-size: 16px;
+  height: 44px;
+  width: 31%;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+}
+@media (max-width: 700px) {
+  .calc__input {
+    width: 49%;
+    margin: 5px 0;
+  }
+}
+@media (max-width: 500px) {
+  .calc__input {
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .calc__input {
+    font-size: 15px;
+  }
+}
+.calc__input--submit {
+  background: #00a02b;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 17px;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+@media (max-width: 700px) {
+  .calc__input--submit {
+    margin: 5px auto;
+  }
+}
+.calc__input--submit:hover {
+  opacity: 0.8;
+}
+.calc__input--submit:active {
+  opacity: 0.5;
+}
+.calc__note {
+  width: 100%;
+  text-align: center;
+  margin: 0 0 20px 0;
+  color: #777;
+}
+@media (max-width: 400px) {
+  .calc__note {
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=main.css.map */
